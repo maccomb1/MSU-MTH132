@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter Title</title>
+<chapter xml:id="ch-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Derivative</title>
 
   <introduction>
     <p> Text before the first section. </p>
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
-
+  <xi:include href="./ch-derivative-s/sec-derivative-defn.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-rules.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-trig.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-expChain.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-implicit.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-inverse.ptx" />
+  
+  
 </chapter>

@@ -10,6 +10,8 @@
 
   <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
   <xi:include  href="./ch-limits-s/sec-limit-alg.ptx" />
+  <xi:include  href="./ch-limits-s/sec-limit-continuity.ptx" />
+  <xi:include  href="./ch-limits-s/sec-limit-ivt.ptx" />
   
 
 </chapter>
