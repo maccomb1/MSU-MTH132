@@ -25,7 +25,7 @@
   </introduction>
 
   <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
-  <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
+  <xi:include  href="./ch-limits-s/sec-limit-alg.ptx" />
   
 
 </chapter>
