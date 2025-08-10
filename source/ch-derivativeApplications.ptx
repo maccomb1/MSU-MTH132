@@ -8,6 +8,14 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-motion.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-related.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-linear.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-extrema.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-mvt.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-curve.ptx" />
+<xi:include href="./ch-derivativeApplication-s/sec-derivApp-opt.ptx" />
 
+
+  
 </chapter>
