@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Chapter Title</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-section-name.ptx" />
+
+</chapter>
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch-limits" >
+  <title>Limits and Continuity</title>
+
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
+  <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
+  
+
+</chapter>
