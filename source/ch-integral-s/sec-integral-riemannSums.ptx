@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-integral-antiderivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Antiderivatives</title>
+<section xml:id="sec-integral-riemannSums" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Riemann Sums and Areas</title>
 
   <p> Text of section. </p>
 
