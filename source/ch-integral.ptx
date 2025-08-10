@@ -8,6 +8,12 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-antiderivatives.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-riemannSums.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-defInt.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-FTC.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-net.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-usub.ptx" />
+  
 
 </chapter>
