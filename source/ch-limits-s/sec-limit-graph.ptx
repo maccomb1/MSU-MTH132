@@ -28,10 +28,43 @@
     </discussion>
   </definition>
 
-  <figure xml:id="fig-limit-graph">
-    <caption>Reading a limit from a graph.</caption>
-    <image source="1-5-Limit.png"/>
-  </figure>
+<figure xml:id="fig-limit-graph">
+  <caption>Reading a limit from a graph: <m>\displaystyle\lim_{x\to a} f(x)=L</m>.</caption>
+  <image width="60%" xml:id="limit-graph">
+<latex-image>
+\begin{tikzpicture}
+  % axes
+  \draw[->] (0,0) -- (8.2,0) node[below right] {$x$};
+  \draw[->] (0,0) -- (0,5.5) node[above left] {$y$};
+
+  % parameters
+  \def\xa{5.5}   % a
+  \def\Ly{3}     % L
+
+  % curve y=f(x) (sample smooth curve through (a,L))
+  \draw[very thick,blue,smooth]
+    plot coordinates {(0.3,0.8) (1.0,1.2) (2.0,1.6) (3.2,2.0) (4.4,2.6)
+                      (5.0,2.8) (5.5,3.0) (6.0,3.3) (6.8,4.0) (7.6,5.0)};
+
+  % dashed guide lines
+  \draw[densely dashed] (0,\Ly) -- (\xa,\Ly);
+  \draw[densely dashed] (\xa,0) -- (\xa,\Ly);
+
+  % highlight (a,L)
+  \filldraw[blue] (\xa,\Ly) circle (2.2pt);
+
+  % label f(x)
+  \node[blue,above right] at (6.3,3.4) {$y=f(x)$};
+
+  % label L on y-axis
+  \node[left] at (0,\Ly) {$L$};
+
+  % label a on x-axis
+  \node[below] at (\xa,0) {$a$};
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
 
   <paragraph>
     If substituting <m>x=a</m> produces a legitimate value, then the limit equals <m>f(a)</m>
