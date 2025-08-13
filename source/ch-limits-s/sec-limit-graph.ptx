@@ -1,75 +1,424 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="sec-graphical-limits">
-  <title>Limits from Graphs and One-Sided/Infinite Behavior</title>
+  <title>Limits from Graphs and Notation</title>
+
+  <subsection>
+    <title>Definition of Limits</title>
+
 
   <p>
-    This section develops an intuitive and graphical understanding of limits. We
-    describe what it means for <m>\displaystyle\lim_{x\to a} f(x) = L</m>, how to read limits
-    from graphs and tables, and how one-sided and infinite limits explain vertical
-    asymptotes.
+    The key technical tool in the previous section was the idea of a limiting value approached by approximations.
+We need limits for all the definitions of calculus, so we must understand them clearly. 
   </p>
 
   <definition xml:id="def-limit-intuitive">
     <title>Limit (intuitive)</title>
     <statement>
       <p>
-        For a function <m>f(x)</m> and numbers <m>a</m> and <m>L</m>, we say
-        <m>\displaystyle\lim_{x\to a} f(x) = L</m> if the values <m>f(x)</m> can be made
-        arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently close to
-        (but not equal to) <m>a</m>.
-      </p>
+      Consider a function <m>f(x)</m> and numbers <m>L</m>, <m>a</m>.
+      Then the <term>limit</term> of <m>f(x)</m> equals <m>L</m> as <m>x</m> approaches <m>a</m>,
+      in symbols <m>\displaystyle\lim_{x\to a} f(x)=L</m>, whenever <m>f(x)</m> can be forced
+      arbitrarily close to <m>L</m> by making <m>x</m> sufficiently close to (but not equal to) <m>a</m>. 
+      If we cannot make <m>f(x)</m> as close to a single value as we would like as <m>x</m> approaches <m>a</m>,
+      then we say that <m>f</m> does not have a limit as <m>x</m> approaches <m>a</m>.
+    </p>
     </statement>
-    <discussion>
-      <p>
-        Informally: if we sample inputs approaching <m>a</m> (e.g. <m>a+0.1</m>, <m>a+0.01</m>, …),
-        then the outputs approach <m>L</m>. The value <m>f(a)</m> need not equal <m>L</m> and
-        might even be undefined.
-      </p>
-    </discussion>
   </definition>
+
+  <p>
+    That is, <m>f(x)</m> approximates <m>L</m> to within any desired error tolerance,
+    for all values of <m>x</m> within some small distance from <m>a</m> (but <m>x \neq a</m>).
+    One more way to say it: if we make a table of <m>f(x)</m> for any sample values of <m>x</m> 
+    getting closer and closer to <m>a</m> (such as <m>x = a+0.1</m>, <m>a+0.01</m>, etc.),
+    then the values of <m>f(x)</m> will get as close as we like to <m>L</m>
+    (though they might never quite reach <m>L</m>). 
+  </p>
+
+  <p>
+    Graphically:
+  </p>
+
+
 
 <figure xml:id="fig-limit-graph">
   <caption>Reading a limit from a graph: <m>\displaystyle\lim_{x\to a} f(x)=L</m>.</caption>
   <image width="60%" xml:id="limit-graph">
 <latex-image>
 \begin{tikzpicture}
-  % axes
-  \draw[->] (0,0) -- (8.2,0) node[below right] {$x$};
-  \draw[->] (0,0) -- (0,5.5) node[above left] {$y$};
-
-  % parameters
-  \def\xa{5.5}   % a
-  \def\Ly{3}     % L
-
-  % curve y=f(x) (sample smooth curve through (a,L))
-  \draw[very thick,blue,smooth]
-    plot coordinates {(0.3,0.8) (1.0,1.2) (2.0,1.6) (3.2,2.0) (4.4,2.6)
-                      (5.0,2.8) (5.5,3.0) (6.0,3.3) (6.8,4.0) (7.6,5.0)};
-
-  % dashed guide lines
-  \draw[densely dashed] (0,\Ly) -- (\xa,\Ly);
-  \draw[densely dashed] (\xa,0) -- (\xa,\Ly);
-
-  % highlight (a,L)
-  \filldraw[blue] (\xa,\Ly) circle (2.2pt);
-
-  % label f(x)
-  \node[blue,above right] at (6.3,3.4) {$y=f(x)$};
-
-  % label L on y-axis
-  \node[left] at (0,\Ly) {$L$};
-
-  % label a on x-axis
-  \node[below] at (\xa,0) {$a$};
+	% axes
+	\draw[->] (0,0) -- (8.2,0) node[above] {$x$};
+	\draw[->] (0,0) -- (0,5.5) node[right] {$y$};
+	
+	% parameters
+	\def\xa{5.5}   % a
+	\def\Ly{3}     % L
+	
+	% curve y=f(x) (sample smooth curve through (a,L))
+	\draw[very thick,blue,smooth]
+	plot coordinates {(0.3,0.8) (1.0,1.2) (2.0,1.6) (3.2,2.0) (4.4,2.6)
+		(5.0,2.8) (5.5,3.0) (6.0,3.3) (6.8,4.0) (7.6,5.0)};
+	
+	% dashed guide lines
+	\draw[densely dashed] (0,\Ly) -- (\xa,\Ly);
+	\draw[densely dashed] (\xa,0) -- (\xa,\Ly);
+	
+	% highlight (a,L)
+	\filldraw[blue] (\xa,\Ly) circle (2.2pt);
+	
+	% label f(x)
+	\node[blue,above left] at (6.8,4.0) {$y=f(x)$};
+	
+	% label L on y-axis
+	\node[left] at (0,\Ly) {$L$};
+	
+	% label a on x-axis
+	\node[below] at (\xa,0) {$a$};
+	
+	\draw[->, very thick] (0,2.5)--(0,2.9);
+	\draw[->, very thick] (0,3.5)--(0,3.1);
+	\draw[->, very thick] (5,0)--(5.4,0);
+	\draw[->, very thick] (6,0)--(5.6,0);
 \end{tikzpicture}
 </latex-image>
   </image>
 </figure>
+</subsection>
 
-  <paragraph>
+<example xml:id="ex-0001">
+<title>Limits of Two Functions</title>
+<statement>
+        <p>
+          For each of the following functions,
+          we'd like to know whether or not the function has a limit at the stated <m>a</m>-values.
+          Use both numerical and algebraic approaches to investigate and,
+          if possible, estimate or determine the value of the limit.
+          Compare the results with a careful graph of the function on an interval containing the points of interest.
+        </p>
+
+        <p>
+          <ol marker="a." cols="2">
+            <li>
+              <m>f(x) = \frac{4-x^2}{x+2}</m>;
+              <m>a = -1</m>, <m>a = -2</m>
+            </li>
+
+            <li>
+              <m>g(x) = \sin\left(\frac{\pi}{x}\right)</m>;
+              <m>a = 3</m>, <m>a = 0</m>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+              <p>
+               a. We first construct a graph of <m>f</m> along with tables of values near <m>a = -1</m> and <m>a = -2</m>.
+ 
+                  <sidebyside widths="24% 24% 42%" valign="middle">
+
+                    <table xml:id="table-1-F-1-2-Ex1f">
+                      <title>Values of <m>f</m> near <m>x=-1</m>.</title>
+                      <tabular>
+                        <row bottom="minor" halign="center">
+                          <cell><m>x</m></cell>
+                          <cell><m>f(x)</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-0.9</m></cell>
+                          <cell><m>2.9</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-0.99</m></cell>
+                          <cell><m>2.99</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-0.999</m></cell>
+                          <cell><m>2.999</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-0.9999</m></cell>
+                          <cell><m>2.9999</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.1</m></cell>
+                          <cell><m>3.1</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.01</m></cell>
+                          <cell><m>3.01</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.001</m></cell>
+                          <cell><m>3.001</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.0001</m></cell>
+                          <cell><m>3.0001</m></cell>
+                        </row>
+                      </tabular>
+
+                    </table>
+          <!--  -->
+                    <table xml:id="table-2-F-1-2-Ex1f">
+                      <title>Values of <m>f</m> near <m>x=-2</m>.</title>
+                      <tabular>
+                        <row bottom="minor" halign="center">
+                          <cell><m>x</m></cell>
+                          <cell><m>f(x)</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.9</m></cell>
+                          <cell><m>3.9</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.99</m></cell>
+                          <cell><m>3.99</m></cell>
+                        </row>
+                        <row>
+                          <cell><m>-1.999</m></cell>
+                          <cell><m>3.999</m></cell>
+                        </row>
+                        <row>
+                        <cell><m>-1.9999</m></cell>
+                        <cell><m>3.9999</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>-2.1</m></cell>
+                        <cell><m>4.1</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>-2.01</m></cell>
+                        <cell><m>4.01</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>-2.001</m></cell>
+                        <cell><m>4.001</m></cell>
+                      </row>
+                      <row>
+                        <cell><m>-2.0001</m></cell>
+                        <cell><m>4.0001</m></cell>
+                      </row>
+                    </tabular>
+
+                  </table>
+          <!--  -->
+                  <figure xml:id="plot-F-1-2-Ex1f">
+                    <caption>Plot of <m>f(x)</m> on <m>[-4,2]</m>.</caption>
+                    <image source="images/1_2_Ex1f"/>
+                  </figure>
+                </sidebyside>
+        </p>
+        <p>
+          From <xref ref="table-1-F-1-2-Ex1f">Table</xref>,
+          it appears that we can make <m>f</m> as close as we want to 3 by taking <m>x</m> sufficiently close to <m>-1</m>,
+          which suggests that <m>\lim_{x \to -1} f(x) = 3</m>.
+          This is also consistent with the graph of <m>f</m>.
+          To see this a bit more rigorously and from an algebraic point of view,
+          consider the formula for <m>f</m>:
+          <m>f(x) = \frac{4-x^2}{x+2}</m>.
+          As <m>x \to -1</m>,
+          <m>(4-x^2) \to (4 - (-1)^2) = 3</m>,
+          and <m>(x+2) \to (-1 + 2) = 1</m>, so as <m>x \to -1</m>,
+          the numerator of <m>f</m> tends to 3 and the denominator tends to 1, hence <m>\lim_{x \to -1} f(x) = \frac{3}{1} = 3</m>.
+        </p>
+
+        <p>
+          The situation is more complicated when <m>x \to -2</m>,
+          because <m>f(-2)</m> is not defined.
+          If we try to use a similar algebraic argument regarding the numerator and denominator,
+          we observe that as <m>x \to -2</m>,
+          <m>(4-x^2) \to (4 - (-2)^2) = 0</m>,
+          and <m>(x+2) \to (-2 + 2) = 0</m>, so as <m>x \to -2</m>,
+          the numerator and denominator of <m>f</m> both tend to 0.
+          We call <m>0/0</m> an <em>indeterminate form</em>.
+              <idx><h>indeterminate form</h></idx>
+          This tells us that there is more work to do to try to determine the limit's value.
+          From <xref ref="table-2-F-1-2-Ex1f">Table</xref>
+          and <xref ref="plot-F-1-2-Ex1f">Figure</xref>,
+          it appears that <m>f</m> should have a limit of <m>4</m> at <m>x = -2</m>.
+        </p>
+
+        <p>
+          To see algebraically why this is the case, observe that
+          <md>
+            <mrow>\lim_{x \to -2} f(x) = \amp  \lim_{x \to -2} \frac{4-x^2}{x+2}</mrow>
+            <mrow>= \amp  \lim_{x \to -2} \frac{(2-x)(2+x)}{x+2}</mrow>
+          </md>.
+        </p>
+
+        <p>
+          It is important to observe that,
+          since we are taking the limit as <m>x \to -2</m>,
+          we are considering <m>x</m> values that are close,
+          but not equal, to <m>-2</m>.
+          Because we never actually allow <m>x</m> to equal <m>-2</m>,
+          the quotient <m>\frac{2+x}{x+2}</m> has value 1 for every possible value of <m>x</m>.
+          Thus, we can simplify the most recent expression above,
+          and find that
+          <me>
+            \lim_{x \to -2} f(x) = \lim_{x \to -2} 2-x
+          </me>.
+          This limit is now easy to determine,
+          and its value clearly is <m>4</m>.
+          Thus, from several points of view we've seen that <m>\lim_{x \to -2} f(x) = 4</m>.
+        </p>
+
+        <p>
+          b. Next we turn to the function <m>g</m>,
+          and construct two tables and a graph.
+        </p>
+
+        <sidebyside widths="23% 23% 42%" valign="middle">
+
+          <table xml:id="table-1-F-1-2-Ex1g">
+            <title>Values of <m>g</m> near <m>x=3</m>.</title>
+            <tabular>
+              <row bottom="minor" halign="center">
+                <cell><m>x</m></cell>
+                <cell><m>g(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>2.9</m></cell>
+                <cell><m>0.88351</m></cell>
+              </row>
+              <row>
+                <cell><m>2.99</m></cell>
+                <cell><m>0.86777</m></cell>
+              </row>
+              <row>
+                <cell><m>2.999</m></cell>
+                <cell><m>0.86620</m></cell>
+              </row>
+              <row>
+                <cell><m>2.9999</m></cell>
+                <cell><m>0.86604</m></cell>
+              </row>
+              <row>
+                <cell><m>3.1</m></cell>
+                <cell><m>0.84864</m></cell>
+              </row>
+              <row>
+                <cell><m>3.01</m></cell>
+                <cell><m>0.86428</m></cell>
+              </row>
+              <row>
+                <cell><m>3.001</m></cell>
+                <cell><m>0.86585</m></cell>
+              </row>
+              <row>
+                <cell><m>3.0001</m></cell>
+                <cell><m>0.86601</m></cell>
+              </row>
+            </tabular>
+
+          </table>
+          <!--  -->
+          <table xml:id="table-2-F-1-2-Ex1g">
+            <title>Values of <m>g</m> near <m>x=0</m>.</title>
+            <tabular>
+              <row bottom="minor" halign="center">
+                <cell><m>x</m></cell>
+                <cell><m>g(x)</m></cell>
+              </row>
+              <row>
+                <cell><m>-0.1</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>-0.01</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>-0.001</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>-0.0001</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>0.1</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>0.01</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>0.001</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+              <row>
+                <cell><m>0.0001</m></cell>
+                <cell><m>0</m></cell>
+              </row>
+            </tabular>
+
+          </table>
+          <!--  -->
+          <figure xml:id="plot-F-1-2-Ex1g">
+            <caption>Plot of <m>g(x)</m> on <m>[-4,4]</m>.</caption>
+            <image source="images/1_2_Ex1g"/>
+          </figure>
+        </sidebyside>
+
+        <p>
+          First, as <m>x \to 3</m>, it appears from the table values
+          that the function is approaching a number between <m>0.86601</m> and <m>0.86604</m>.
+          From the graph it appears that <m>g(x) \to g(3)</m> as <m>x \to 3</m>.
+          The exact value of <m>g(3) = \sin(\frac{\pi}{3})</m> is <m>\frac{\sqrt{3}}{2}</m>,
+          which is approximately 0.8660254038.
+          This is convincing evidence that
+          <me>
+            \lim_{x \to 3} g(x) = \frac{\sqrt{3}}{2}
+          </me>.
+        </p>
+
+        <p>
+          As <m>x \to 0</m>, we observe that
+          <m>\frac{\pi}{x}</m> does not behave in an elementary way.
+          When <m>x</m> is positive and approaching zero,
+          we are dividing by smaller and smaller positive values,
+          and <m>\frac{\pi}{x}</m> increases without bound.
+          When <m>x</m> is negative and approaching zero,
+          <m>\frac{\pi}{x}</m> decreases without bound.
+          In this sense, as we get close to <m>x = 0</m>,
+          the inputs to the sine function are growing rapidly,
+          and this leads to increasingly rapid oscillations in the graph of <m>g</m> betweem <m>1</m> and <m>-1</m>.
+          If we plot the function
+          <m>g(x) = \sin\left(\frac{\pi}{x}\right)</m> with a graphing utility and then zoom in on <m>x = 0</m>,
+          we see that the function never settles down to a single value near the origin,
+          which suggests that <m>g</m> does not have a limit at <m>x = 0</m>.
+        </p>
+
+        <p>
+          How do we reconcile the graph with the righthand table above,
+          which seems to suggest that the limit of <m>g</m> as <m>x</m> approaches <m>0</m> may in fact be <m>0</m>?
+          The data misleads us because of the special nature of the sequence of input values <m>\{0.1, 0.01, 0.001, \ldots\}</m>.
+          When we evaluate <m>g(10^{-k})</m>,
+          we get <m>g(10^{-k}) = \sin\left(\frac{\pi}{10^{-k}}\right) = \sin(10^k \pi) = 0</m> for each positive integer value of <m>k</m>.
+          But if we take a different sequence of values approaching zero,
+          say <m>\{0.3, 0.03, 0.003, \ldots\}</m>, then we find that
+          <me>
+            g(3 \cdot 10^{-k}) = \sin\left(\frac{\pi}{3 \cdot 10^{-k}}\right) = \sin\left(\frac{10^k \pi}{3}\right) = \frac{\sqrt{3}}{2} \approx 0.866025
+          </me>.
+        </p>
+
+        <p>
+          That sequence of function values suggests that the value of the limit is <m>\frac{\sqrt{3}}{2}</m>.
+          Clearly the function cannot have two different values for the limit,
+          so <m>g</m> has no limit as <m>x \to 0</m>.
+        </p>        
+
+    </solution>
+    </example>
+
+
+
+
+  <p>
     If substituting <m>x=a</m> produces a legitimate value, then the limit equals <m>f(a)</m>
     and the function is <term>continuous</term> at <m>x=a</m>.
-  </paragraph>
+  </p>
 
   <example xml:id="ex-limit-continuous">
     <title>A continuous example</title>
