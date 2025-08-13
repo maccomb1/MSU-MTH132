@@ -1,8 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="sec-graphical-limits">
+  <title>Limits from Graphs and One-Sided/Infinite Behavior</title>
 
-<section xml:id="sec-limit-graph" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Limits from Graphs and Notation</title>
+  <p>
+    This section develops an intuitive and graphical understanding of limits. We
+    describe what it means for <m>\displaystyle\lim_{x\to a} f(x) = L</m>, how to read limits
+    from graphs and tables, and how one-sided and infinite limits explain vertical
+    asymptotes.
+  </p>
 
-  <p> Text of section. </p>
+  <definition xml:id="def-limit-intuitive">
+    <title>Limit (intuitive)</title>
+    <statement>
+      <p>
+        For a function <m>f(x)</m> and numbers <m>a</m> and <m>L</m>, we say
+        <m>\displaystyle\lim_{x\to a} f(x) = L</m> if the values <m>f(x)</m> can be made
+        arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently close to
+        (but not equal to) <m>a</m>.
+      </p>
+    </statement>
+    <discussion>
+      <p>
+        Informally: if we sample inputs approaching <m>a</m> (e.g. <m>a+0.1</m>, <m>a+0.01</m>, …),
+        then the outputs approach <m>L</m>. The value <m>f(a)</m> need not equal <m>L</m> and
+        might even be undefined.
+      </p>
+    </discussion>
+  </definition>
 
+  <figure xml:id="fig-limit-graph">
+    <caption>Reading a limit from a graph.</caption>
+    <image source="1-5-Limit.png"/>
+  </figure>
+
+  <paragraph>
+    If substituting <m>x=a</m> produces a legitimate value, then the limit equals <m>f(a)</m>
+    and the function is <term>continuous</term> at <m>x=a</m>.
+  </paragraph>
+
+  <example xml:id="ex-limit-continuous">
+    <title>A continuous example</title>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 5} x^2 = 25</m> because <m>x^2</m> is continuous at <m>x=5</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Writing <m>x=5+h</m> with small <m>h</m>, we have
+        <m>x^2=(5+h)^2=25+10h+h^2</m>, which can be made as close to <m>25</m> as desired by
+        taking <m>h</m> small (positive or negative).
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="ex-limit-does-not-exist">
+    <title>When a limit does not exist</title>
+    <statement>
+      <p>
+        Consider the sign function <m>\operatorname{sgn}(x)=\dfrac{x}{|x|}</m> for <m>x\ne 0</m>,
+        undefined at <m>x=0</m>.
+      </p>
+    </statement>
+    <figure>
+      <caption>The graph of <m>\operatorname{sgn}(x)</m>.</caption>
+      <image source="1-5-Sgn.png"/>
+    </figure>
+    <solution>
+      <p>
+        As <m>x\to 0^+</m>, <m>\operatorname{sgn}(x)=1</m>, while as <m>x\to 0^-</m>,
+        <m>\operatorname{sgn}(x)=-1</m>. There is no single limiting value at <m>0</m>, so
+        <m>\lim_{x\to 0} \operatorname{sgn}(x)</m> does not exist.
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="ex-removable-hole">
+    <title>Limit exists though the function is undefined at <m>a</m></title>
+    <statement>
+      <p>
+        Evaluate <m>\displaystyle \lim_{x\to 1} \dfrac{x^2-1}{x-1}</m>.
+      </p>
+    </statement>
+    <figure>
+      <caption>A removable discontinuity at <m>x=1</m>.</caption>
+      <image source="1-5-Removable-2.png"/>
+    </figure>
+    <solution>
+      <p>
+        Factor and cancel: <m>\dfrac{x^2-1}{x-1}=\dfrac{(x-1)(x+1)}{x-1}=x+1</m> for
+        <m>x\ne 1</m>. Since <m>x+1</m> is continuous,
+        <m>\displaystyle \lim_{x\to 1} \dfrac{x^2-1}{x-1} = \lim_{x\to 1}(x+1)=2</m>.
+      </p>
+    </solution>
+  </example>
+
+  <definition xml:id="def-one-sided">
+    <title>One-sided limits</title>
+    <statement>
+      <p>
+        The right-hand limit <m>\displaystyle \lim_{x\to a^+} f(x)=L</m> means
+        <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x&gt;a</m>
+        sufficiently close to <m>a</m>. The left-hand limit
+        <m>\displaystyle \lim_{x\to a^-} f(x)=L</m> is defined similarly using <m>x&lt;a</m>.
+      </p>
+    </statement>
+    <discussion>
+      <p>
+        The (two-sided) limit <m>\lim_{x\to a} f(x)</m> exists and equals <m>L</m> if and only if
+        both one-sided limits exist and are equal to <m>L</m>.
+      </p>
+    </discussion>
+  </definition>
+
+  <definition xml:id="def-infinite-limit">
+    <title>Infinite limits and vertical asymptotes</title>
+    <statement>
+      <p>
+        We write <m>\displaystyle \lim_{x\to a} f(x)=\infty</m> to indicate that the values
+        of <m>f(x)</m> grow beyond any bound as <m>x</m> approaches <m>a</m> (from either side).
+        Likewise, <m>\displaystyle \lim_{x\to a} f(x)=-\infty</m> indicates unbounded
+        decrease. Such behavior signals a vertical asymptote at <m>x=a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <figure xml:id="fig-absx-reciprocal">
+    <caption><m>y=\dfrac{1}{|x|}</m> has an infinite limit at <m>x=0</m>.</caption>
+    <image source="1-5-Asymp.png"/>
+  </figure>
+
+  <example xml:id="ex-one-sided-infinite">
+    <title>One-sided infinite limits for <m>\dfrac{1}{x}</m></title>
+    <figure>
+      <caption><m>y=\dfrac{1}{x}</m> has opposite behavior on each side of <m>x=0</m>.</caption>
+      <image source="1-5-Asymp-2.png"/>
+    </figure>
+    <solution>
+      <p>
+        <m>\displaystyle \lim_{x\to 0^-}\dfrac{1}{x}=-\infty</m> and
+        <m>\displaystyle \lim_{x\to 0^+}\dfrac{1}{x}=\infty</m>.
+      </p>
+    </solution>
+  </example>
+
+  <example xml:id="ex-vertical-asymptotes-signs">
+    <title>Determining vertical asymptotes and their signs</title>
+    <statement>
+      <p>
+        Analyze <m>\displaystyle f(x)=\dfrac{2x-4}{x^2-4x+3}=\dfrac{2(x-2)}{(x-1)(x-3)}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Zeros occur where the numerator vanishes: <m>x=2</m>. The denominator vanishes at
+        <m>x=1</m> and <m>x=3</m>, producing vertical asymptotes there (no common factors).
+        Sign analysis shows:
+      </p>
+      <ul>
+        <li><m>\displaystyle \lim_{x\to 1^-} f(x)=-\infty</m>, <m>\displaystyle \lim_{x\to 1^+} f(x)=\infty</m>.</li>
+        <li><m>\displaystyle \lim_{x\to 3^-} f(x)=-\infty</m>, <m>\displaystyle \lim_{x\to 3^+} f(x)=\infty</m>.</li>
+      </ul>
+    </solution>
+    <figure>
+      <caption>Graph of <m>f(x)=\dfrac{2(x-2)}{(x-1)(x-3)}</m> with vertical asymptotes.</caption>
+      <image source="1-5-Asymp-3.png"/>
+    </figure>
+    <remark>
+      <p>
+        If <m>f(x)=\dfrac{2x-2}{x^2-4x+3}=\dfrac{2(x-1)}{(x-1)(x-3)}</m>, then the common factor cancels:
+        there is a removable discontinuity (a hole) at <m>x=1</m>, not a vertical asymptote.
+      </p>
+    </remark>
+  </example>
+
+  <exercises xml:id="exercises-graphical-limits">
+    <title>Practice</title>
+    <exercise>
+      <statement>
+        <p>From a graph of a function with a hole at <m>x=4</m> but approaching height <m>3</m>, determine <m>\lim_{x\to 4} f(x)</m> and whether <m>f</m> is continuous at <m>4</m>.</p>
+      </statement>
+      <hint>
+        <p>Recall that limits depend on nearby values, not on <m>f(4)</m>.</p>
+      </hint>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>Decide whether <m>\lim_{x\to 0} \dfrac{|x|}{x}</m> exists. Justify using one-sided limits.</p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>Find the vertical asymptotes and one-sided behavior of <m>g(x)=\dfrac{3x+6}{x^2-9}</m>.</p>
+      </statement>
+    </exercise>
+  </exercises>
 </section>
