@@ -115,8 +115,7 @@
   </latex>
 
   <html>
-    <!-- disable URL footnotes in HTML output -->
-    <url-footnotes>false</url-footnotes>
+    <css theme="denver" palette="leaves" />
     <!-- A possible attribute for the html tag above is @short-answer-responses, with values either "always" or "graded".  As in: -->
     <!--<html short-answer-responses="always">-->
 
