@@ -188,14 +188,11 @@ We need limits for all the definitions of calculus, so we must understand them c
 
 
 <p>
-We have seen a few problems where a limit exists, but in fact, as the 2004 movie <c>Mean Girls</c> teaches us, sometimes
+We have seen a few problems where a limit exists, but in fact, as the 2004 movie <em>Mean Girls</em> teaches us, sometimes
 </p>
 
 <figure>
-  <image source="NoLimit.gif">
-    <description>
-      Animated GIF reference to the 2004 movie Mean Girls.
-    </description>
+  <image source="images/NoLimit.gif">
   </image>
   <caption>
     The limit does not exist GIF
