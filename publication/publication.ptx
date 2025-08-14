@@ -10,6 +10,8 @@
 <!-- make from the default values.                                        -->
 
 <publication>
+
+
   <common>
     <!-- Level at which are html files generated (chapter/section/etc): -->
       <!--<chunking level="1" />-->
@@ -113,6 +115,8 @@
   </latex>
 
   <html>
+    <!-- disable URL footnotes in HTML output -->
+    <url-footnotes>false</url-footnotes>
     <!-- A possible attribute for the html tag above is @short-answer-responses, with values either "always" or "graded".  As in: -->
     <!--<html short-answer-responses="always">-->
 

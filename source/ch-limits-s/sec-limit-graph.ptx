@@ -85,27 +85,30 @@ We need limits for all the definitions of calculus, so we must understand them c
 </subsection>
 
 <example xml:id="ex-0001">
-<title>Limits of Two Functions</title>
+<title>Our First Limit</title>
 <statement>
         <p>
-          For each of the following functions,
-          we'd like to know whether or not the function has a limit at the stated <m>a</m>-values.
-          Use both numerical and algebraic approaches to investigate and,
-          if possible, estimate or determine the value of the limit.
-          Compare the results with a careful graph of the function on an interval containing the points of interest.
-        </p>
+          Consider the function <m>f(x) = \dfrac{x^3-2x^2+x-2}{x-2}</m>
+          
+          <ol marker="(a)">
+            <li><p>Using a calculator, evaluate the function at the indicated <m>x</m>-values and fill in the corresponding entries in the table.</p> 
 
-        <p>
-          <ol marker="a." cols="2">
-            <li>
-              <m>f(x) = \frac{4-x^2}{x+2}</m>;
-              <m>a = -1</m>, <m>a = -2</m>
+              <me>
+                \begin{array}{|c|c|c|c|c|c|c|c|}
+            \hline
+            x \amp 1 \amp 1.9 \amp 1.99 \amp 2 \amp 2.01 \amp 2.1 \amp 3 \\
+            \hline
+            f(x) \amp  \amp  \amp  \amp \text{Undefined} \amp  \amp  \amp  \\
+            \hline
+            \end{array}
+              </me>
+              
+          
             </li>
 
-            <li>
-              <m>g(x) = \sin\left(\frac{\pi}{x}\right)</m>;
-              <m>a = 3</m>, <m>a = 0</m>
-            </li>
+            <li>Based on the intuitive limit definition guess the limit value <m>\displaystyle\lim_{x\to 2} \dfrac{x^3-2x^2+x-2}{x-2}</m></li>
+            <li>View <url href="https://www.example.com" visual="https://www.example.com">the graph of <m>f(x)</m> in Desmos</url>. Use words to explain to another student how the table relates to the graph and how the limit can 
+            be determined from the graph.</li>
           </ol>
         </p>
       </statement>
@@ -116,7 +119,6 @@ We need limits for all the definitions of calculus, so we must understand them c
                   <sidebyside widths="24% 24% 42%" valign="middle">
 
                     <table xml:id="table-1-F-1-2-Ex1f">
-                      <title>Values of <m>f</m> near <m>x=-1</m>.</title>
                       <tabular>
                         <row bottom="minor" halign="center">
                           <cell><m>x</m></cell>
