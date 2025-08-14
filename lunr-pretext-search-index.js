@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Limits from Graphs and Notation",
-  "body": " Limits from Graphs and Notation   Definition of Limits  The key technical tool in the previous section was the idea of a limiting value approached by approximations. We need limits for all the definitions of calculus, so we must understand them clearly.   Limit (intuitive)   Consider a function and numbers , . Then the limit of equals as approaches , in symbols , whenever can be forced arbitrarily close to by making sufficiently close to (but not equal to) . If we cannot make as close to a single value as we would like as approaches , then we say that does not have a limit as approaches .    That is, approximates to within any desired error tolerance, for all values of within some small distance from (but ). One more way to say it: if we make a table of for any sample values of getting closer and closer to (such as , , etc.), then the values of will get as close as we like to (though they might never quite reach ).  Graphically:   Reading a limit from a graph: .        Evaluating limits Definition of Limits  Let's make sure the definition makes sense. Here is a nice first problem to attempt.   Our First Limit   Consider the function   Using a calculator, evaluate the function at the indicated -values and fill in the corresponding entries in the table.    Based on the intuitive limit definition guess the limit value  View the graph of in Desmos . Use words to explain to another student how the table relates to the graph and how the limit can be determined from the graph.       Check Your Answers:         As approaches from either the left or the right, the output values get closer and closer to . Although is undefined (there is a hole in the graph), the limit still exists and equals .   Step by Step Video Solution:        Some limits are easy because we can plug in to get the limiting value , in which case we say is continuous at . Graphically, as in the above figure , this means the curve has no jump or hole at .   A Nice Continuous Example   Evaluate .    Full Written Solution:  Since our function is continuous around (we can draw the parabola without lifting our pencil), we can simply plug into to get the answer .  More Rigorous Solution:  Algebraically, if is close enough to , say for some small (close to ), then which is forced as close as we like to if is small enough to 0 (either positive or negative).    We have seen a few problems where a limit exists, but in fact, as the 2004 movie Mean Girls teaches us, sometimes     The limit does not exist GIF   One way this can occur is if does not approach a single limiting value as approaches . In such cases, we declare that the limit does not exist , and the symbol has no meaning. Now let's see such an example.   When a limit does not exist   Consider the sign function for , undefined at .    The graph of .     As , , while as , . There is no single limiting value at , so does not exist.      Limit exists though the function is undefined at   Evaluate .    A removable discontinuity at .     Factor and cancel: for . Since is continuous, .     One-sided limits   The right-hand limit means can be made arbitrarily close to by taking sufficiently close to . The left-hand limit is defined similarly using .    The (two-sided) limit exists and equals if and only if both one-sided limits exist and are equal to .     Infinite limits and vertical asymptotes   We write to indicate that the values of grow beyond any bound as approaches (from either side). Likewise, indicates unbounded decrease. Such behavior signals a vertical asymptote at .     has an infinite limit at .     One-sided infinite limits for   has opposite behavior on each side of .      and .     Determining vertical asymptotes and their signs   Analyze .    Zeros occur where the numerator vanishes: . The denominator vanishes at and , producing vertical asymptotes there (no common factors). Sign analysis shows:   , .  , .     Graph of with vertical asymptotes.     If , then the common factor cancels: there is a removable discontinuity (a hole) at , not a vertical asymptote.     Practice    From a graph of a function with a hole at but approaching height , determine and whether is continuous at .    Recall that limits depend on nearby values, not on .      Decide whether exists. Justify using one-sided limits.      Find the vertical asymptotes and one-sided behavior of .     "
+  "body": " Limits from Graphs and Notation   Definition of Limits  The key technical tool in the previous section was the idea of a limiting value approached by approximations. We need limits for all the definitions of calculus, so we must understand them clearly.   Limit (intuitive)   Consider a function and numbers , . Then the limit of equals as approaches , in symbols , whenever can be forced arbitrarily close to by making sufficiently close to (but not equal to) . If we cannot make as close to a single value as we would like as approaches , then we say that does not have a limit as approaches .    That is, approximates to within any desired error tolerance, for all values of within some small distance from (but ). One more way to say it: if we make a table of for any sample values of getting closer and closer to (such as , , etc.), then the values of will get as close as we like to (though they might never quite reach ).  Graphically:   Reading a limit from a graph: .        Evaluating limits Definition of Limits  Let's make sure the definition makes sense. Here is a nice first problem to attempt.   Our First Limit   Consider the function   Using a calculator, evaluate the function at the indicated -values and fill in the corresponding entries in the table.    Based on the intuitive limit definition guess the limit value  View the graph of in Desmos . Use words to explain to another student how the table relates to the graph and how the limit can be determined from the graph.       Check Your Answers:         As approaches from either the left or the right, the output values get closer and closer to . Although is undefined (there is a hole in the graph), the limit still exists and equals .   Step by Step Video Solution:        Some limits are easy because we can plug in to get the limiting value , in which case we say is continuous at . Graphically, as in the above figure , this means the curve has no jump or hole at .   A Nice Continuous Example   Evaluate .    Full Written Solution:  Since our function is continuous around (we can draw the parabola without lifting our pencil), we can simply plug into to get the answer .  More Rigorous Solution:  Algebraically, if is close enough to , say for some small (close to ), then which is forced as close as we like to if is small enough to 0 (either positive or negative).    We have seen a few problems where a limit exists, but in fact, as the 2004 movie Mean Girls teaches us, sometimes     The limit does not exist GIF   One way this can occur is if does not approach a single limiting value as approaches . In such cases, we declare that the limit does not exist , and the symbol has no meaning. Now let's see such an example.   When a limit does not exist   Consider the sign function , defined by   With the graph:   The sign function .      Determine the limit     Near , the function cannot be forced close to any single output value. That is, , since no matter how close gets to , there are some (namely negative) for which is far from ; and similarly is not , nor , nor any other value. In such cases, it is most appropriate to simply say does not exist.     An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:  Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .     One-sided and infinite limits    Limit exists though the function is undefined at   Evaluate .    A removable discontinuity at .     Factor and cancel: for . Since is continuous, .     One-sided limits   The right-hand limit means can be made arbitrarily close to by taking sufficiently close to . The left-hand limit is defined similarly using .    The (two-sided) limit exists and equals if and only if both one-sided limits exist and are equal to .     Infinite limits and vertical asymptotes   We write to indicate that the values of grow beyond any bound as approaches (from either side). Likewise, indicates unbounded decrease. Such behavior signals a vertical asymptote at .     has an infinite limit at .     One-sided infinite limits for   has opposite behavior on each side of .      and .     Determining vertical asymptotes and their signs   Analyze .    Zeros occur where the numerator vanishes: . The denominator vanishes at and , producing vertical asymptotes there (no common factors). Sign analysis shows:   , .  , .     Graph of with vertical asymptotes.     If , then the common factor cancels: there is a removable discontinuity (a hole) at , not a vertical asymptote.     Practice    From a graph of a function with a hole at but approaching height , determine and whether is continuous at .    Recall that limits depend on nearby values, not on .      Decide whether exists. Justify using one-sided limits.      Find the vertical asymptotes and one-sided behavior of .     "
 },
 {
   "id": "def-limit-intuitive",
@@ -79,14 +79,23 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.1.6",
   "title": "When a limit does not exist.",
-  "body": " When a limit does not exist   Consider the sign function for , undefined at .    The graph of .     As , , while as , . There is no single limiting value at , so does not exist.   "
+  "body": " When a limit does not exist   Consider the sign function , defined by   With the graph:   The sign function .      Determine the limit     Near , the function cannot be forced close to any single output value. That is, , since no matter how close gets to , there are some (namely negative) for which is far from ; and similarly is not , nor , nor any other value. In such cases, it is most appropriate to simply say does not exist.   "
+},
+{
+  "id": "sec-graphical-limits-3-10",
+  "level": "2",
+  "url": "sec-graphical-limits.html#sec-graphical-limits-3-10",
+  "type": "Remark",
+  "number": "1.1.8",
+  "title": "",
+  "body": " An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:  Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .  "
 },
 {
   "id": "ex-removable-hole",
   "level": "2",
   "url": "sec-graphical-limits.html#ex-removable-hole",
   "type": "Example",
-  "number": "1.1.8",
+  "number": "1.1.9",
   "title": "Limit exists though the function is undefined at <span class=\"process-math\">\\(a\\)<\/span>.",
   "body": " Limit exists though the function is undefined at   Evaluate .    A removable discontinuity at .     Factor and cancel: for . Since is continuous, .   "
 },
@@ -95,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#def-one-sided",
   "type": "Definition",
-  "number": "1.1.10",
+  "number": "1.1.11",
   "title": "One-sided limits.",
   "body": " One-sided limits   The right-hand limit means can be made arbitrarily close to by taking sufficiently close to . The left-hand limit is defined similarly using .    The (two-sided) limit exists and equals if and only if both one-sided limits exist and are equal to .   "
 },
@@ -104,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#def-infinite-limit",
   "type": "Definition",
-  "number": "1.1.11",
+  "number": "1.1.12",
   "title": "Infinite limits and vertical asymptotes.",
   "body": " Infinite limits and vertical asymptotes   We write to indicate that the values of grow beyond any bound as approaches (from either side). Likewise, indicates unbounded decrease. Such behavior signals a vertical asymptote at .   "
 },
@@ -113,7 +122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#fig-absx-reciprocal",
   "type": "Figure",
-  "number": "1.1.12",
+  "number": "1.1.13",
   "title": "",
   "body": " has an infinite limit at .   "
 },
@@ -122,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#ex-one-sided-infinite",
   "type": "Example",
-  "number": "1.1.13",
+  "number": "1.1.14",
   "title": "One-sided infinite limits for <span class=\"process-math\">\\(\\dfrac{1}{x}\\)<\/span>.",
   "body": " One-sided infinite limits for   has opposite behavior on each side of .      and .   "
 },
@@ -131,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#ex-vertical-asymptotes-signs",
   "type": "Example",
-  "number": "1.1.15",
+  "number": "1.1.16",
   "title": "Determining vertical asymptotes and their signs.",
   "body": " Determining vertical asymptotes and their signs   Analyze .    Zeros occur where the numerator vanishes: . The denominator vanishes at and , producing vertical asymptotes there (no common factors). Sign analysis shows:   , .  , .     Graph of with vertical asymptotes.     If , then the common factor cancels: there is a removable discontinuity (a hole) at , not a vertical asymptote.   "
 },
@@ -140,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#exercises-graphical-limits-2",
   "type": "Exercise",
-  "number": "1.1.3.1",
+  "number": "1.1.4.1",
   "title": "",
   "body": "  From a graph of a function with a hole at but approaching height , determine and whether is continuous at .    Recall that limits depend on nearby values, not on .   "
 },
@@ -149,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#exercises-graphical-limits-3",
   "type": "Exercise",
-  "number": "1.1.3.2",
+  "number": "1.1.4.2",
   "title": "",
   "body": "  Decide whether exists. Justify using one-sided limits.   "
 },
@@ -158,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#exercises-graphical-limits-4",
   "type": "Exercise",
-  "number": "1.1.3.3",
+  "number": "1.1.4.3",
   "title": "",
   "body": "  Find the vertical asymptotes and one-sided behavior of .   "
 },
