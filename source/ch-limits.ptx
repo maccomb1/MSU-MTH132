@@ -3,11 +3,12 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ch-limits" >
   <title>Limits and Continuity</title>
 
-
+<!-- 
   <introduction>
     <p> Text before the first section. </p>
   </introduction>
-
+-->
+  
   <xi:include  href="./ch-limits-s/sec-limit-graph.ptx" />
   <xi:include  href="./ch-limits-s/sec-limit-alg.ptx" />
   <xi:include  href="./ch-limits-s/sec-limit-continuity.ptx" />

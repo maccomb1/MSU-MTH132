@@ -3,10 +3,12 @@
 <chapter xml:id="ch-derivativeApplications" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of the Derivative</title>
 
+  <!-- 
   <introduction>
     <p> Text before the first section. </p>
   </introduction>
-
+-->
+  
   <!-- include sections -->
 <xi:include href="./ch-derivativeApplication-s/sec-derivApp-motion.ptx" />
 <xi:include href="./ch-derivativeApplication-s/sec-derivApp-related.ptx" />

@@ -2,28 +2,43 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="sec-graphical-limits">
   <title>Limits from Graphs and Notation</title>
 
-  <subsection>
-    <title>Definition of Limits</title>
+<objectives>
+  <ul>
+    <li>Understand the intuitive definition of a limit and how to express it using mathematical notation.</li>
+    <li>Determine limits from tables of values and from the graph of a function.</li>
+    <li>Recognize when a limit exists, and identify cases where the limit does not exist.</li>
+    <li>Interpret and compute one-sided limits, and explain how they relate to the existence of two-sided limits.</li>
+    <li>Understand the meaning of infinite limits and how they relate to vertical asymptotes.</li>
+    <li>Locate vertical asymptotes and describe a function’s behavior on both sides of each asymptote.</li>
+  </ul>
+</objectives>
 
 
-  <p>
-    The key technical tool in the previous section was the idea of a limiting value approached by approximations.
-We need limits for all the definitions of calculus, so we must understand them clearly. 
-  </p>
+  <subsection xml:id="ssec-defn-limits">
+      <title>Definition of Limits</title>
 
-  <definition xml:id="def-limit-intuitive">
-    <title>Limit (intuitive)</title>
-    <statement>
-      <p>
-      Consider a function <m>f(x)</m> and numbers <m>L</m>, <m>a</m>.
-      Then the <term>limit</term> of <m>f(x)</m> equals <m>L</m> as <m>x</m> approaches <m>a</m>,
-      in symbols <m>\displaystyle\lim_{x\to a} f(x)=L</m>, whenever <m>f(x)</m> can be forced
-      arbitrarily close to <m>L</m> by making <m>x</m> sufficiently close to (but not equal to) <m>a</m>. 
-      If we cannot make <m>f(x)</m> as close to a single value as we would like as <m>x</m> approaches <m>a</m>,
-      then we say that <m>f</m> does not have a limit as <m>x</m> approaches <m>a</m>.
-    </p>
-    </statement>
-  </definition>
+
+<p>
+The concept of a limit is one of the cornerstones of calculus. Limits allow us to describe precisely what happens to a function’s values as the input 
+approaches a particular number—whether or not the function is even defined at that point. 
+They provide the language for defining continuity, derivatives, and integrals, and they help us capture “approaching” behavior that can’t be 
+expressed by direct substitution alone. 
+Before moving on to more formal ideas, we start with an intuitive definition of a limit.
+</p>
+
+            <definition xml:id="def-limit-intuitive">
+                <title>Limit (intuitive)</title>
+                    <statement>
+                          <p>
+                                Consider a function <m>f(x)</m> and numbers <m>L</m>, <m>a</m>.
+                                      Then the <term>limit</term> of <m>f(x)</m> equals <m>L</m> as <m>x</m> approaches <m>a</m>,
+                                            in symbols <m>\displaystyle\lim_{x\to a} f(x)=L</m>, whenever <m>f(x)</m> can be forced
+                                                  arbitrarily close to <m>L</m> by making <m>x</m> sufficiently close to (but not equal to) <m>a</m>. 
+                                                        If we cannot make <m>f(x)</m> as close to a single value as we would like as <m>x</m> approaches <m>a</m>,
+                                                              then we say that <m>f</m> does not have a limit as <m>x</m> approaches <m>a</m>.
+                                                                  </p>
+                                                                      </statement>
+                                                                        </definition>
 
   <p>
     That is, <m>f(x)</m> approximates <m>L</m> to within any desired error tolerance,
@@ -85,8 +100,8 @@ We need limits for all the definitions of calculus, so we must understand them c
 </subsection>
 
 
-<subsection>
-    <title>Evaluating limits Definition of Limits</title>
+<subsection xml:id="ssec-eval-limits">
+    <title>Evaluating Limits</title>
 
     <p> Let's make sure the definition makes sense. Here is a nice first problem to attempt.</p>
 
@@ -191,13 +206,15 @@ We need limits for all the definitions of calculus, so we must understand them c
 We have seen a few problems where a limit exists, but in fact, as the 2004 movie <em>Mean Girls</em> teaches us, sometimes
 </p>
 
+<sidebyside width = "70%">
 <figure>
-  <image source="images/NoLimit.gif">
+  <image width = "100%" source="images/NoLimit.gif">
   </image>
   <caption>
     The limit does not exist GIF
   </caption>
 </figure>
+</sidebyside>
 
 <p>
   One way this can occur is if <m>f(x)</m> does not approach a single limiting value as <m>x</m> approaches <m>a</m>. 
@@ -210,150 +227,538 @@ We have seen a few problems where a limit exists, but in fact, as the 2004 movie
     <title>When a limit does not exist</title>
     <statement>
       <p>
-        Consider the sign function <m>\operatorname{sgn}(x)=\dfrac{x}{|x|}</m> for <m>x\ne 0</m>,
-        undefined at <m>x=0</m>.
+        Consider the <term>sign function</term>, defined by  
+        <me>
+          \text{sgn}(x)  =  \dfrac x{|x|}  = \left\{\begin{array}{ccl} 
+          +1 \amp \text{ for $x \gt 0$}\\
+          -1 \amp \text{ for $x \lt 0$}
+          \end{array}\right.
+        </me>
       </p>
+      <p>Which when graphed looks like: </p>
+
+
+      <sidebyside width="80%">
+        
+<figure xml:id="fig-sgn-tikz">
+    <caption>The sign function <m>\text{sgn}(x)</m>.</caption>
+      <image width="100%" xml:id="sgn-tikz">
+        <latex-image>
+        \begin{tikzpicture}
+          % Axes
+            \draw[->] (-3,0) -- (3,0) node[below right] {$x$};
+              \draw[->] (0,-2) -- (0,2) node[left] {$y$};
+              
+                \draw[thick] (0,1) -- (3,1);
+                
+                  \draw[thick] (-3,-1) -- (0,-1);
+                  
+                    % Open circles at x = 0 (undefined there)
+                      \filldraw[white] (0,1) circle (2pt);
+                        \draw (0,1) circle (2pt);
+                        
+                          \filldraw[white] (0,-1) circle (2pt);
+                            \draw (0,-1) circle (2pt);
+                            
+                              % Tick labels for y = ±1 (optional)
+                                \node[left] at (-0.1,1) {$1$};
+                                  \node[right] at (0.1,-1) {$-1$};
+                                  
+                                    % Function label (optional)
+                                      \node[right] at (1.8,1.25) {$y=\operatorname{sgn}(x)$};
+                                      \end{tikzpicture}
+                                        </latex-image>
+                                        </image>
+                                        
+                                        </figure>
+                                        
+      </sidebyside>
+
+
+  <p>
+    Determine the limit <m>\displaystyle\lim_{x\to 0} \text{sgn}(x)</m>
+  </p>
+
     </statement>
-    <figure>
-      <caption>The graph of <m>\operatorname{sgn}(x)</m>.</caption>
-      <image source="1-5-Sgn.png"/>
-    </figure>
     <solution>
       <p>
-        As <m>x\to 0^+</m>, <m>\operatorname{sgn}(x)=1</m>, while as <m>x\to 0^-</m>,
-        <m>\operatorname{sgn}(x)=-1</m>. There is no single limiting value at <m>0</m>, so
-        <m>\lim_{x\to 0} \operatorname{sgn}(x)</m> does not exist.
+        Near <m>x = 0</m>, the function cannot be forced close to any single output value. 
+        That is, <m>\displaystyle\lim_{x \to 0} \operatorname{sgn}(x) \neq 1</m>, since no matter how close <m>x</m> gets to <m>0</m>, 
+        there are some <m>x</m> (namely negative) for which <m>\operatorname{sgn}(x)</m> is far from <m>1</m>; 
+        and similarly <m>\displaystyle\lim_{x \to 0} \operatorname{sgn}(x)</m> is not <m>-1</m>, nor <m>0</m>, nor any other value. 
+        In such cases, it is most appropriate to simply say <m>\displaystyle\lim_{x \to 0} \operatorname{sgn}(x)</m> does not exist.
       </p>
     </solution>
   </example>
 
+<remark>
+<p>
+An important feature of <m>\displaystyle \lim_{x \to a} f(x)</m> is that it does not depend on <m>f(a)</m>, even if <m>f(a)</m> is undefined: 
+the limit only notices values of <m>f(x)</m> for <m>x \neq a</m>. As a quick mini example, define <m>g(x) = 1</m> for <m>x \neq 3</m>, and <m>g(3) = 2</m>, having the graph:
+</p>
 
+<figure xml:id="fig-removable-discontinuity-tikz">
+  <caption>The function <m>g(x)=1</m> for <m>x\neq 3</m> with <m>g(3)=2</m> (a removable discontinuity at <m>x=3</m>).</caption>
+  <image width="90%" xml:id="g-removable-tikz">
+    <latex-image>
+\begin{tikzpicture}
+  % Axes
+  \draw[->] (-0.5,0) -- (6.5,0) node[below right] {$x$};
+  \draw[->] (0,-0.5) -- (0,3.0) node[above left] {$y$};
+
+  % y = 1 everywhere (we just draw a segment covering the visible window)
+  \draw[thick] (0.2,1) -- (6.2,1);
+
+  % Open circle at (3,1) since g is undefined there for the "1" value
+  \filldraw[white] (3,1) circle (2.2pt);
+  \draw (3,1) circle (2.2pt);
+
+  % Defined value g(3) = 2 as a filled point
+  \fill (3,2) circle (2.2pt);
+
+  % Optional tick marks / labels
+  \draw (3,0.08) -- (3,-0.08) node[below] {$3$};
+  \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+  \draw (0.08,2) -- (-0.08,2) node[left] {$2$};
+
+  % Optional annotations
+  %\node[above right] at (1.2,1.05) {$y=1$ for $x\neq 3$};
+  %\node[right] at (3.1,2) {$g(3)=2$};
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+<p>
+Then <m>\displaystyle \lim_{x \to 3} g(x) = 1</m>, since if <m>x</m> is close enough to (but unequal to) <m>3</m>, 
+then <m>g(x)</m> is arbitrarily close to <m>L = 1</m> (in fact <m>g(x) = L</m>). 
+Again, <m>\displaystyle \lim_{x \to 3} g(x) \neq g(3) = 2</m>, and <m>g(x)</m> is not continuous at <m>x = 3</m>.
+</p>
+
+</remark>
 
  </subsection>
 
 
+<subsection xml:id="ssec-one-sided-limits">
+    <title>One-sided Limits</title>
+
+<p>
+Sometimes, the behavior of a function as you approach a point depends on which direction you come from. 
+For example, a graph might approach one value when moving in from the left, but a completely different value when coming in from the right like in <xref ref="ex-limit-does-not-exist">Example</xref>. 
+</p>
+
+<p>
+  And so, let's define another type of limit:
+</p>
+
+
+<definition xml:id="def-one-sided-limits">
+  <title>One-Sided Limits</title>
+  <statement>
+    <p>
+ <term>One-sided limits</term> (from the right or left) consider only values of <m>x</m> on one side of <m>a</m>.
+      The limit of <m>f(x)</m> equals <m>L</m> as <m>x</m> approaches <m>a</m> from the right,
+      denoted <m>\displaystyle\lim_{x\to a^{+}} f(x) = L</m>, whenever <m>f(x)</m> can be made arbitrarily close to <m>L</m> 
+      by taking <m>x</m> sufficiently close to (but <em>greater</em> than) <m>a</m>.
+      The limit from the left, denoted <m>\displaystyle\lim_{x\to a^{-}} f(x) = L</m>, is defined similarly, except with <m>x</m> <em>less</em> than <m>a</m>.
+    </p>
+  </statement>
+</definition>
+
+
+<remark xml:id="rmk-one-sided-equality">
+  <p>
+    If we have the ordinary limit <m>\displaystyle\lim_{x\to a} f(x) = L</m>, then the left and right limits must both have the same value <m>L</m>.
+    In the <xref ref="ex-limit-continuous">Example</xref> above, we have <m>\displaystyle\lim_{x\to 5^+} x^2 = \lim_{x\to 5^-} x^2 = 5^2</m>.</p>
+  <p> 
+    However in <xref ref="ex-limit-does-not-exist">Example</xref> we have, <m>\displaystyle\lim_{x\to 0^+} \operatorname{sgn}(x) = 1</m> and <m>\lim_{x\to 0^-} \operatorname{sgn}(x) = -1</m>,
+    even though <m>\displaystyle\lim_{x\to 0} \operatorname{sgn}(x)</m> does not exist.
+  </p>
+</remark>
+
+<p>
+  In fact, we can make our first Theorem from this idea 
+</p>
+
+<theorem xml:id="thm-two-sided-iff-one-sided">
+  <statement>
+    <p>
+      For a function <m>f</m> and real number <m>a</m>, the (two-sided) limit exists if and only if both one-sided limits exist and are equal. Precisely,
+    </p>
+    <p>
+      <m>\displaystyle \lim_{x\to a} f(x) = L</m> if and only if 
+      <m> \left(\displaystyle \lim_{x\to a^-} f(x) = L \;\text{ and }\; \displaystyle \lim_{x\to a^+} f(x) = L\right).</m>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      A full proof of this theorem requires the formal <m>\varepsilon</m>–<m>\delta</m> definition of a limit and is beyond the scope of this course. 
+      You will encounter this level of rigor in MTH 320, where you will learn how to construct proofs of results like this one from first principles.
+    </p>
+  </proof>
+</theorem>
 
 
 
+    
+</subsection>
 
-  <example xml:id="ex-removable-hole">
-    <title>Limit exists though the function is undefined at <m>a</m></title>
+<subsection xml:id="ssec-inf-limits">
+    <title>Infinite Limits</title>
+
+<p>
+Up to this point, most of the limits we’ve encountered have approached a finite number. 
+However, some functions behave very differently: as you get closer to certain <m>x</m>-values, the function’s values grow 
+without bound—either shooting up toward positive infinity or diving down toward negative infinity. In these cases, 
+the function doesn’t have a finite limit, but the way it “blows up” is still predictable. 
+</p>
+
+<definition xml:id="def-infinite-limits">
+  <title>Infinite Limits and Vertical Asymptotes</title>
+  <statement>
+    <p>
+      We define <term>infinite limits</term> as follows: 
+      <m>\displaystyle\lim_{x\to a} f(x) = \infty</m> means that <m>f(x)</m> can be made larger than any real number
+      (for example, <m>f(x) &gt; 1000</m>) by taking <m>x</m> sufficiently close to (but not equal to) <m>a</m>.
+    </p>
+    <p>
+      Similarly <m>\displaystyle\lim_{x\to a} f(x) = -\infty</m> means that <m>f(x)</m> can be made smaller than any real number 
+      (for example, <m>f(x) &lt; -9547</m>) by taking <m>x</m> sufficiently close to (but not equal to) <m>a</m>.
+    </p>
+    <p>
+      Such behavior signals a <term>vertical asymptote</term> at <m>x=a</m>.
+    </p>
+  </statement>
+</definition>
+
+<remark xml:id="rmk-infinity-meaning">
+  <p>
+    The symbol <m>\infty</m> (and likewise <m>-\infty</m>) has no meaning by itself; it is simply a way of saying that <m>f(x)</m> can be made as large as desired.
+  </p>
+</remark>
+
+
+
+  <example xml:id="ex-inf-lim">
     <statement>
       <p>
-        Evaluate <m>\displaystyle \lim_{x\to 1} \dfrac{x^2-1}{x-1}</m>.
+        Consider the function   
+        <m>
+          f(x) = \dfrac{1}{|x|} 
+        </m>. 
       </p>
+      <p>Which when graphed looks like: </p>
+
+<figure xml:id="fig-inv-abs">
+  <caption>The graph of <m>y = \dfrac{1}{|x|}</m>.</caption>
+  <image width="90%" xml:id="inv-abs-tikz">
+    <latex-image>
+\begin{tikzpicture}
+  % Axes
+  \draw[->] (-6,0) -- (6.2,0) node[below right] {$x$};
+  \draw[->] (0,-1) -- (0,8.2) node[right] {$y$};
+
+  % Ticks
+  \foreach \x in {-6,-5,...,-1,1,2,...,6} 
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {\small \x};
+  \foreach \y in {0,1,...,8} 
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {\small \y};
+
+  \draw[thick, domain=-6:-0.125, samples=300] plot (\x, {1/abs(\x)});
+  \draw[thick, domain=0.125:6,  samples=300] plot (\x, {1/abs(\x)});
+
+  % Label
+  \node[above right] at (2,0.6) {$y=\dfrac{1}{|x|}$};
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+  <p>
+    Answer the following questions. 
+  </p>
+
+     <ol marker="(a)">
+            <li>Using the graph of <m>f(x)</m> evaluate <m>\displaystyle\lim_{x\to 0} f(x)</m> and explain your reasoning.</li>
+
+            <li>Try now without the graph (using only the equation of <m>f(x)</m>) to evaluate <m>\displaystyle\lim_{x\to 0} f(x)</m> and explain your reasoning. </li>
+          </ol>
+
+
+
+
     </statement>
-    <figure>
-      <caption>A removable discontinuity at <m>x=1</m>.</caption>
-      <image source="1-5-Removable-2.png"/>
-    </figure>
     <solution>
-      <p>
-        Factor and cancel: <m>\dfrac{x^2-1}{x-1}=\dfrac{(x-1)(x+1)}{x-1}=x+1</m> for
-        <m>x\ne 1</m>. Since <m>x+1</m> is continuous,
-        <m>\displaystyle \lim_{x\to 1} \dfrac{x^2-1}{x-1} = \lim_{x\to 1}(x+1)=2</m>.
-      </p>
+     <ol marker="(a)">
+            <li>
+              <p>
+              Looking at the graph <m>y = \dfrac{1}{|x|}</m>, we can notice two key features near <m>x = 0</m>:
+              </p>
+
+              <ul>
+                <li>The graph is in two pieces — one in quadrant II (for <m>x &lt; 0</m>) and one in quadrant I (for <m>x &gt; 0</m>).</li>
+                <li>Both pieces shoot straight up as they get close to <m>x = 0</m>.</li>
+              </ul>
+              <p>
+              This means the function grows beyond any large number we can choose when <m>x</m> is close enough to <m>0</m>. 
+              And so we know <m>\displaystyle\lim_{x\to 0} f(x)=\infty</m> 
+              </p>
+            </li>
+
+            <li>
+              <p>
+              As <m>x</m> gets very close to <m>0</m>, <m>|x|</m> gets very small — like <m>0.1</m>, <m>0.01</m>, <m>0.001</m>, and so on. 
+              Dividing <m>1</m> by a very small positive number gives a very large positive number (for example, <m>\frac{1}{0.1} = 10</m>, <m>\frac{1}{0.01} = 100</m>, <m>\frac{1}{0.001} = 1000</m>).
+              In general, we can shorthand this fact as <m>\left(\frac 1{\text{tiny}}=\text{huge}\right)</m>.
+              </p>
+            </li>
+      </ol>
     </solution>
   </example>
 
-  <definition xml:id="def-one-sided">
-    <title>One-sided limits</title>
-    <statement>
-      <p>
-        The right-hand limit <m>\displaystyle \lim_{x\to a^+} f(x)=L</m> means
-        <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x&gt;a</m>
-        sufficiently close to <m>a</m>. The left-hand limit
-        <m>\displaystyle \lim_{x\to a^-} f(x)=L</m> is defined similarly using <m>x&lt;a</m>.
-      </p>
-    </statement>
-    <discussion>
-      <p>
-        The (two-sided) limit <m>\lim_{x\to a} f(x)</m> exists and equals <m>L</m> if and only if
-        both one-sided limits exist and are equal to <m>L</m>.
-      </p>
-    </discussion>
-  </definition>
+  <problem xml:id="prob-limit-inf-1overx">
+  <statement>
+    <p>
+      True or False: <m>\displaystyle \lim_{x \to 0} \frac{1}{x} = \infty</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <alert>False.</alert> The two one-sided limits behave differently: 
+      <m>\displaystyle \lim_{x \to 0^+} \frac{1}{x} = \infty</m> but 
+      <m>\displaystyle \lim_{x \to 0^-} \frac{1}{x} = -\infty</m>. 
+      Because the left and right limits are not equal, the two-sided limit 
+      <m>\displaystyle \lim_{x \to 0} \frac{1}{x}</m> does not exist.
+    </p>
+  </solution>
+</problem>
 
-  <definition xml:id="def-infinite-limit">
-    <title>Infinite limits and vertical asymptotes</title>
-    <statement>
-      <p>
-        We write <m>\displaystyle \lim_{x\to a} f(x)=\infty</m> to indicate that the values
-        of <m>f(x)</m> grow beyond any bound as <m>x</m> approaches <m>a</m> (from either side).
-        Likewise, <m>\displaystyle \lim_{x\to a} f(x)=-\infty</m> indicates unbounded
-        decrease. Such behavior signals a vertical asymptote at <m>x=a</m>.
-      </p>
-    </statement>
-  </definition>
+<p><alert>Note:</alert> Be careful to read problems in this class carefully! Here is problem that is quite similar looking but has a different result. </p> 
 
-  <figure xml:id="fig-absx-reciprocal">
-    <caption><m>y=\dfrac{1}{|x|}</m> has an infinite limit at <m>x=0</m>.</caption>
-    <image source="1-5-Asymp.png"/>
-  </figure>
+<problem xml:id="prob-VA-1overx">
+  <statement>
+    <p>
+      True or False:  <m>f(x) = \dfrac{1}{x}</m> has a vertical asymptote at <m>x = 0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <alert>True.</alert> As <m>x</m> approaches <m>0</m> from the right, 
+      <m>\dfrac{1}{x} \to \infty</m>, and as <m>x</m> approaches <m>0</m> from the left, 
+      <m>\dfrac{1}{x} \to -\infty</m>. This unbounded behavior around 
+      <m>x=0</m> means the line <m>x=0</m> is a vertical asymptote.
+    </p>
+  </solution>
+</problem>
 
-  <example xml:id="ex-one-sided-infinite">
-    <title>One-sided infinite limits for <m>\dfrac{1}{x}</m></title>
-    <figure>
-      <caption><m>y=\dfrac{1}{x}</m> has opposite behavior on each side of <m>x=0</m>.</caption>
-      <image source="1-5-Asymp-2.png"/>
-    </figure>
-    <solution>
-      <p>
-        <m>\displaystyle \lim_{x\to 0^-}\dfrac{1}{x}=-\infty</m> and
-        <m>\displaystyle \lim_{x\to 0^+}\dfrac{1}{x}=\infty</m>.
-      </p>
-    </solution>
-  </example>
+
+
+</subsection>
+
+<subsection xml:id="ssec-locating-va">
+  <title>Locating Vertical Asymptotes</title>
+  
+  <p>
+  A vertical asymptote occurs at a value of <m>x</m> where a function grows without bound (positively or negatively) as <m>x</m> approaches that value. 
+  This often happens when the function’s formula has a denominator that becomes zero while the numerator stays nonzero, making the function’s value extremely large 
+  in magnitude near that point. 
+  </p>
+
+  <insight xml:id="strat-locating-va">
+    <title>How to Locate Vertical Asymptotes</title>
+    
+    <p>
+      To locate possible vertical asymptotes, we look for values of <m>x</m> that make the denominator zero but do not also make the numerator zero. 
+      Once we have these candidates, 
+      we check the one-sided limits to determine whether the function increases toward <m>\infty</m> or decreases toward <m>-\infty</m> on each side.
+    </p>
+  </insight>
+
+  <p>
+    Now let's see it in action with an example
+  </p>
 
   <example xml:id="ex-vertical-asymptotes-signs">
-    <title>Determining vertical asymptotes and their signs</title>
     <statement>
       <p>
-        Analyze <m>\displaystyle f(x)=\dfrac{2x-4}{x^2-4x+3}=\dfrac{2(x-2)}{(x-1)(x-3)}</m>.
+        Consider the function <m>\displaystyle f(x)=\dfrac{2x-4}{x^2-4x+3}</m>.
       </p>
+      <ol marker="(a)">
+            <li>
+              Locate the vertical asymptotes for <m>f(x)</m>.
+            </li>
+            <li>
+              For each vertical asymptote, describe the behavior of <m>f(x)</m> as <m>x</m> approaches from both the left and the right.
+            </li>
+      </ol>
     </statement>
-    <solution>
-      <p>
-        Zeros occur where the numerator vanishes: <m>x=2</m>. The denominator vanishes at
-        <m>x=1</m> and <m>x=3</m>, producing vertical asymptotes there (no common factors).
-        Sign analysis shows:
-      </p>
-      <ul>
-        <li><m>\displaystyle \lim_{x\to 1^-} f(x)=-\infty</m>, <m>\displaystyle \lim_{x\to 1^+} f(x)=\infty</m>.</li>
-        <li><m>\displaystyle \lim_{x\to 3^-} f(x)=-\infty</m>, <m>\displaystyle \lim_{x\to 3^+} f(x)=\infty</m>.</li>
-      </ul>
+   <solution>
+        <p>
+          <alert>Check Your Answers:</alert>
+        </p>
+          <ol marker="(a)">
+            <li>
+              The vertical asymptotes are at <m>x=1</m> and <m>x=3</m>.
+            </li>
+
+            <li> <p>Here is the function's behavior around each asymptote:</p>
+              <me>
+                \begin{array}{rlrl}
+                \displaystyle\lim_{x\to 1^-} f(x) \amp = -\infty \amp
+                \displaystyle\lim_{x\to 3^-} f(x) \amp = -\infty \\
+                \displaystyle\lim_{x\to 1^+} f(x) \amp = \infty \amp
+                \displaystyle\lim_{x\to 3^+} f(x) \amp = \infty 
+                \end{array}
+              </me>
+            </li>
+            
+          </ol>
+          
+          <p><alert>Step by Step Video Solution:</alert></p>
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+
     </solution>
-    <figure>
-      <caption>Graph of <m>f(x)=\dfrac{2(x-2)}{(x-1)(x-3)}</m> with vertical asymptotes.</caption>
-      <image source="1-5-Asymp-3.png"/>
-    </figure>
-    <remark>
-      <p>
-        If <m>f(x)=\dfrac{2x-2}{x^2-4x+3}=\dfrac{2(x-1)}{(x-1)(x-3)}</m>, then the common factor cancels:
-        there is a removable discontinuity (a hole) at <m>x=1</m>, not a vertical asymptote.
-      </p>
-    </remark>
   </example>
 
-  <exercises xml:id="exercises-graphical-limits">
-    <title>Practice</title>
-    <exercise>
+<p>And lastly, a true/false problem on the same subject</p>
+
+<problem xml:id="prob-hole-vs-asymptote">
+  <statement>
+    <p>
+      True or False: The function <m>\displaystyle f(x) = \frac{2x - 2}{x^{2} - 4x + 3} </m> has a vertical asymptote at <m>x = 1</m>.
+    </p>
+  </statement>
+  <solution>
+    <p><alert>False.</alert> Factoring numerator and denominator we get
+        <me>
+        f(x) \;=\; \frac{2(x-1)}{(x-1)(x-3)} ,
+        </me>
+        Notice that if we try to naively plug in <m>x=1</m> we get 0 in both the numerator and denominator. From <xref ref="strat-locating-va">Remark</xref>
+        we should suspect that this will not yield a vertical asymptote. 
+        </p>
+        <p> 
+          To verify we can plug in numbers close to <m>x=1</m> on either side to see what is happening to <m>f(x)</m>. 
+        </p>
+        <me>
+          \begin{array}{rl}
+            f(0.99) \amp \approx -0.995\\
+            f(1.01) \amp \approx  -1.005
+          \end{array}
+        </me>
+        <p> 
+        From this we suspect <m>\displaystyle \lim_{x\to 1}f(x)= -1</m>. And in fact if we simplify
+        <me>
+        f(x) = \dfrac{2(x-1)}{(x-1)(x-3)} = \dfrac{2}{x-3}
+        </me>
+        and then plug in <m>x=1</m> into the simplified function we get <m>\dfrac{2}{1-3} = -1</m>. We will learn in the next section that this will turn out 
+        to be a good strategy for evaluating limits. And so, <m>x=1</m> does not yield a vertical asymptote.
+      </p>
+  </solution>
+</problem>
+  
+
+</subsection>
+
+
+<exercises xml:id="exercises-limits">
+  <title>Practice / Study Problems</title>
+  
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+    <introduction>
+      <p>
+        Determine weather each statement is true or false and explain your reasoning
+      </p>
+    </introduction>
+  
+    <exercise xml:id="prob-tf-limit-value-vs-function">
       <statement>
-        <p>From a graph of a function with a hole at <m>x=4</m> but approaching height <m>3</m>, determine <m>\lim_{x\to 4} f(x)</m> and whether <m>f</m> is continuous at <m>4</m>.</p>
+        <p>True or False: If <m>\displaystyle \lim_{x\to 4} f(x) = 7</m>, then <m>f(4)=7</m>.</p>
       </statement>
-      <hint>
-        <p>Recall that limits depend on nearby values, not on <m>f(4)</m>.</p>
-      </hint>
+      <solution>
+        <p><alert>False.</alert> A limit describes nearby behavior; the function value at the point can differ (or be undefined).</p>
+      </solution>
     </exercise>
-    <exercise>
+
+    <exercise xml:id="prob-tf-onesided-implies-twosided">
       <statement>
-        <p>Decide whether <m>\lim_{x\to 0} \dfrac{|x|}{x}</m> exists. Justify using one-sided limits.</p>
+        <p>True or False: If <m>\displaystyle \lim_{x\to 2^-} f(x) = 3</m> and <m>\displaystyle \lim_{x\to 2^+} f(x) = 3</m>, then <m>\displaystyle \lim_{x\to 2} f(x) = 3</m>.</p>
       </statement>
+      <solution>
+        <p><alert>True.</alert> Equality of both one-sided limits guarantees the two-sided limit exists and has that value.</p>
+      </solution>
     </exercise>
-    <exercise>
+
+    <exercise xml:id="prob-tf-infinite-limit-value-defined">
       <statement>
-        <p>Find the vertical asymptotes and one-sided behavior of <m>g(x)=\dfrac{3x+6}{x^2-9}</m>.</p>
+        <p>True or False: If <m>\displaystyle \lim_{x\to a} f(x) = \infty</m>, then <m>f(a)</m> is undefined.</p>
       </statement>
+      <solution>
+        <p><alert>False.</alert> The limit concerns values near <m>a</m>; <m>f(a)</m> may be anything (defined or not) without affecting the infinite limit.</p>
+      </solution>
     </exercise>
-  </exercises>
+
+<exercise xml:id="prob-tf-twosided-dne-implies-onesided-dne">
+  <statement>
+    <p>True or False: If <m>\displaystyle \lim_{x\to a} f(x)</m> does not exist, then both <m>\displaystyle \lim_{x\to a^-} f(x)</m> and <m>\displaystyle \lim_{x\to a^+} f(x)</m> do not exist.</p>
+  </statement>
+  <solution>
+    <p><alert>False.</alert> One-sided limits may exist but differ; that difference causes the two-sided limit to fail.</p>
+  </solution>
+</exercise>
+
+
+<exercise xml:id="prob-tf-va-implies-infinite-onesided">
+  <statement>
+    <p>True or False: If <m>x=3</m> is a vertical asymptote, then at least one of <m>\displaystyle \lim_{x\to 3^-} f(x)</m> or <m>\displaystyle \lim_{x\to 3^+} f(x)</m> is infinite.</p>
+  </statement>
+  <solution>
+    <p><alert>True.</alert> A vertical asymptote is characterized by unbounded behavior from one or both sides.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="prob-tf-neg-infty-description">
+  <statement>
+    <p>True or False: If the graph decreases without bound as <m>x\to 1^-</m>, then <m>\displaystyle \lim_{x\to 1^-} f(x) = -\infty</m>.</p>
+  </statement>
+  <solution>
+    <p><alert>True.</alert> “Decreases without bound” means the values become arbitrarily negative.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="prob-tf-one-over-xsq">
+  <statement>
+    <p>True or False: <m>\displaystyle \lim_{x\to 0} \frac{1}{x^2} = \infty</m>.</p>
+  </statement>
+  <solution>
+    <p><alert>True.</alert> Values grow beyond any bound from either side since <m>x^2&gt;0</m> for <m>x\neq 0</m>.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="prob-tf-2x-over-xsqminus9">
+  <statement>
+    <p>True or False: If <m>f(x)=\dfrac{2x}{x^2-9}</m>, then <m>x=3</m> is a vertical asymptote.</p>
+  </statement>
+  <solution>
+    <p><alert>True.</alert> <m>x^2-9=(x-3)(x+3)</m>; the numerator is nonzero at <m>x=3</m>, so <m>x=3</m> is a VA.</p>
+  </solution>
+</exercise>
+
+<exercise xml:id="prob-tf-denominator-zero-always-va">
+  <statement>
+    <p>True or False: If a rational function’s denominator is zero at <m>x=a</m>, then the function must have a vertical asymptote at <m>x=a</m>.</p>
+  </statement>
+  <solution>
+    <p><alert>False.</alert> A common factor in numerator and denominator could cancel instead like in <xref ref="prob-hole-vs-asymptote">Problem</xref>.</p>
+  </solution>
+</exercise>
+
+  </exercisegroup>
+</exercises>
+
+
 </section>

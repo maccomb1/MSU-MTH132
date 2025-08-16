@@ -6,7 +6,7 @@
 
   <book xml:id="my-great-book">
     <title>Calculus 1</title>
-    <subtitle>MSU's MTH 132 Custom Book</subtitle>
+    <subtitle>MSU MTH132</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />

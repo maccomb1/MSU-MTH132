@@ -3,10 +3,12 @@
 <chapter xml:id="ch-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Derivative</title>
 
+  <!-- 
   <introduction>
     <p> Text before the first section. </p>
   </introduction>
-
+-->
+  
   <!-- include sections -->
   <xi:include href="./ch-derivative-s/sec-derivative-defn.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-rules.ptx" />
