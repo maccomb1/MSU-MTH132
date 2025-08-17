@@ -5,35 +5,62 @@
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <bibinfo>
-  
+
     <author>
-      <personname>R. Maccombs and P. Magyar</personname>
+      <personname>R. Maccombs TEST</personname>
+      <department>Department of Mathematics</department>
+      <institution>Michigan State University</institution>
+    </author>    
+    <author>
+      <personname>P. Magyar</personname>
       <department>Department of Mathematics</department>
       <institution>Michigan State University</institution>
     </author>
+
     <date>
       <today />
     </date>
 
+    <!-- 
     <website>
       <url href="https://pretextbook.org">My Website</url>
     </website>
 
+
     <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
+      <year>2025<ndash />2025</year>
+      <holder>Ryan Maccombs</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
-  
+
+      -->
   </bibinfo>
 
   <titlepage>
     <titlepage-items/>
+       <p>
+      This book was authored in <pretext />.
+    </p>
   </titlepage>
 
+  <!-- 
   <colophon xml:id="front-colophon">
     <colophon-items/>
   </colophon>
+  -->
+
+  <preface >
+    <title>Students: How to Use this Book</title>
+    <p>Still need to write </p>
+  </preface>
+
+  <preface >
+    <title>Instructors: How to Use this Book</title>
+    <p>Still need to write </p>
+  </preface>
+
+
+    
 </frontmatter>
 

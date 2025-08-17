@@ -16,8 +16,20 @@
 
   <!-- <index> <title>Index</title> <index-list/> </index> -->
 
+  <!-- 
   <colophon>
     <p> This book was authored in <pretext />. </p>
   </colophon>
+  -->
+
+  <appendix>
+    <title>Quiz / Exam Formula Sheet</title>
+    <p>
+      This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond. 
+    </p>
+
+    <p>Test <m>\displaystyle\int_a^b f(x)~dx</m> </p>
+  </appendix>
+
 </backmatter>
 
