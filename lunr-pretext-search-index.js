@@ -1,13 +1,22 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "front-colophon",
+  "id": "frontmatter-3",
   "level": "1",
-  "url": "front-colophon.html",
-  "type": "Colophon",
+  "url": "frontmatter-3.html",
+  "type": "Preface",
   "number": "",
-  "title": "Colophon",
-  "body": "  "
+  "title": "Students: How to Use this Book",
+  "body": " Students: How to Use this Book  Still need to write  "
+},
+{
+  "id": "frontmatter-4",
+  "level": "1",
+  "url": "frontmatter-4.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Instructors: How to Use this Book",
+  "body": " Instructors: How to Use this Book  Still need to write  "
 },
 {
   "id": "sec-graphical-limits",
@@ -481,10 +490,10 @@ var ptx_lunr_docs = [
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": " This book was authored in PreTeXt .  "
+  "type": "Appendix",
+  "number": "A",
+  "title": "Quiz \/ Exam Formula Sheet",
+  "body": " Quiz \/ Exam Formula Sheet  This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond.  Test   "
 }
 ]
 
