@@ -7,7 +7,7 @@
   <bibinfo>
 
     <author>
-      <personname>R. Maccombs TEST2</personname>
+      <personname>R. Maccombs</personname>
       <department>Department of Mathematics</department>
       <institution>Michigan State University</institution>
     </author>    
@@ -21,12 +21,12 @@
       <today />
     </date>
 
-    <!-- 
+
     <website>
-      <url href="https://pretextbook.org">My Website</url>
+      <url href="https://132.msumath.com">https://132.msumath.com</url>
     </website>
 
-
+    <!-- 
     <copyright>
       <year>2025<ndash />2025</year>
       <holder>Ryan Maccombs</holder>
