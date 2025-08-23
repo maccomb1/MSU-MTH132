@@ -1,8 +1,366 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<section xml:id="sec-limit-alg" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="sec-limit-laws">
   <title>Limit Laws and Algebraic Techniques</title>
 
-  <p> Text of section. Coming Next! </p>
+  <objectives>
+    <ul>
+      <li>State and apply the basic <term>Limit Laws</term> (sum, difference, constant multiple, product, quotient, power, root).</li>
+      <li>Recognize when direct substitution can be used to evaluate a limit and when it leads to meaningless expressions.</li>
+      <li>Evaluate limits that initially give meaningless expressions by algebraic manipulation </li>
+      <li>Analyze limits of piecewise-defined functions by considering one-sided limits.</li>
+      <li>Apply the <term>Squeeze Theorem</term> to evaluate limits of functions bounded above and below.</li>
+    </ul>
+  </objectives>
 
+  <subsection xml:id="ssec-limit-laws">
+    <title>Operations on Limits</title>
+
+    <p>
+      Some general combination rules make most limit computations routine. 
+    </p>
+
+<theorem xml:id="thm-limit-laws">
+<title>Limit Laws</title>
+<statement>
+<p>
+Suppose we know that both <m>\displaystyle \lim_{x\to a} f(x)</m> and <m>\displaystyle \lim_{x\to a} g(x)</m> exist. Then we have the following Limit Laws:
+</p>
+<ul>
+<li><em>Sum:</em> <m>\displaystyle \lim_{x\to a} (f(x) + g(x)) = \lim_{x\to a} f(x) + \lim_{x\to a} g(x)</m>.</li>
+<li><em>Difference:</em> <m>\displaystyle \lim_{x\to a} (f(x) - g(x)) = \lim_{x\to a} f(x) - \lim_{x\to a} g(x)</m>.</li>
+<li><em>Constant Multiple:</em> <m>\displaystyle \lim_{x\to a} (c f(x)) = c \cdot \lim_{x\to a} f(x)</m>, for a constant <m>c</m>.</li>
+<li><em>Product:</em> <m>\displaystyle \lim_{x\to a} f(x) g(x) = (\lim_{x\to a} f(x))(\lim_{x\to a} g(x))</m>.</li>
+<li><em>Quotient:</em> <m>\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)} = \frac{\lim_{x\to a} f(x)}{\lim_{x\to a} g(x)}</m>, provided <m>\lim_{x\to a} g(x) \
+eq 0</m>.</li>
+<li><em>Power:</em> <m>\displaystyle \lim_{x\to a} (f(x))^n = (\lim_{x\to a} f(x))^n</m>, for a whole number <m>n</m>.</li>
+<li><em>Root:</em> <m>\displaystyle \lim_{x\to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x\to a} f(x)}</m>, for a whole number<fn>If <m>n</m> is even, we assume <m>\displaystyle\lim_{x\to a} f(x) &gt; 0</m></fn> <m>n</m>.</li>
+</ul>
+<p>
+These all have the form: “The limit of an operation equals the operation applied to the limits.” These Laws are also valid for one-sided limits.
+</p>
+</statement>
+<proof>
+<p>
+A full proof of these laws requires high-level mathematics and the formal <m>\varepsilon</m>–<m>\delta</m> definition of limits (beyond the scope of this course). 
+Rigorous proofs like this can be found in MSU's MTH 320 Real Analysis course. 
+For those who would like a glimpse a Real Analysis proof, see <url href="https://www.youtube.com/watch?v=eZ13wOvSg64">this video proving the Limit Sum Law</url> 
+
+</p>
+</proof>
+</theorem>
+
+
+<problem xml:id="prob-limit-laws-simple">
+<statement>
+<p>
+Suppose <m>\displaystyle\lim_{x\to 5} f(x) = 2</m> and <m>\displaystyle\lim_{x\to 5} g(x) = 3</m>. Find <m>\displaystyle\lim_{x\to 5} \left(2f(x) - (g(x))^2\right)</m>.
+</p>
+</statement>
+<solution>
+<p>
+Using the Difference, Constant Multiple, and Power Limit Laws:
+</p>
+<me>
+2\cdot \lim_{x\to 5} f(x) - \left(\lim_{x\to 5} g(x)\right)^2 = 2(2) - (3)^2 = 4 - 9 = -5.
+</me>
+</solution>
+</problem>
+
+  </subsection>
+
+  <subsection xml:id="ssec-plugging-in">
+    <title>Limits by Plugging In</title>
+
+    <p>
+      Assuming the Limit Laws and the Basic Limits <m>\displaystyle\lim_{x\to a} x = a</m> and <m>\displaystyle\lim_{x\to a} c = c</m>, we can prove that most functions are continuous, meaning the limit can be obtained by direct substitution.
+    </p>
+
+    <example xml:id="ex-limit-plug-in">
+      <title>A Limit by Substitution</title>
+      <statement>
+        <p>
+          Compute <m>\displaystyle \lim_{x\to 2} \frac{1-\sqrt{x}}{1+x}</m> using the Limit Laws.
+        </p>
+      </statement>
+      <solution>
+        <p><alert>Step by Step:</alert></p>
+        <me>
+          \begin{array}{rcll}
+           \displaystyle\lim_{x\to 2} \frac{1-\sqrt{x}}{1+x}
+          \amp=\amp 
+            \displaystyle\frac{\displaystyle\lim_{x\to 2}\,1{-}\sqrt{x}}{\displaystyle\lim_{x\to 2}\,1+x}
+          \amp \text{ by the Quotient Law
+          }
+          \\[2em]
+          \amp=\amp 
+            \displaystyle\frac{\displaystyle\lim_{x\to 2}\,1-\displaystyle\lim_{x\to 2}\sqrt{x}}{\displaystyle\lim_{x\to 2}1\,+\,\displaystyle\lim_{x\to 2}x}
+          \amp \text{ by the Sum and Difference Laws}\!\!\!
+          \\[2em]
+          \amp=\amp 
+            \displaystyle\frac{\displaystyle\lim_{x\to 2}\,1-\sqrt{\displaystyle\lim_{x\to 2}x}}{\displaystyle\lim_{x\to 2}1\,+\,\displaystyle\lim_{x\to 2}x}
+          \amp \text{ by the Root Law}
+          \\[2em]
+          \amp=\amp 
+            \displaystyle\frac{1{-}\sqrt{2}}{1\,{+}\,2}
+          \ =\ \frac{1{-}\sqrt{2}}{3}
+          \amp \text{ by the Basic Limits.}
+          \end{array}
+        </me>
+        <p>
+          Thus the correct limit is obtained simply by substituting <m>x=2</m>.
+        </p>
+        <p>
+          <alert>Note:</alert> The Quotient Law requires that the denominator have a non-zero limit. 
+          We tentatively proceed with the computation and find the denominator to be 3, 
+          which retrospectively justifies the quotient step.
+        </p>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        Substituting <m>x=a</m> usually gives the correct limit unless it leads to a meaningless expression such as <m>\tfrac{0}{0}</m> or <m>\sqrt{-1}</m> (complex values are not considered in this course).
+      </p>
+    </remark>
+
+    <p>
+      In <xref ref="sec-derivative-trig">Section</xref> and <xref ref="sec-derivative-expChain">Section</xref>, we will verify that trigonometric functions 
+ like <m>\sin(x)</m> and <m>\tan(x)</m> are also continuous when defined, 
+and the same holds for functions like <m>2^x</m> and <m>\log(x)</m>. 
+Thus, this principle works for pretty much all reasonable functions.
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="ssec-canceling-zeros">
+    <title>Limits by Canceling Zeros</title>
+
+    <p>
+      Some of the most important limits are those where substitution gives a meaningless expression like <m>\tfrac{0}{0}</m>. To compute these, we must cancel vanishing factors until the expression can be evaluated.
+      This often requires algebraic manipulation such as factoring or multiplying by a conjugate.
+    </p>
+
+    <example xml:id="ex-canceling-zeros">
+      <title>Canceling Factors</title>
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \lim_{x\to 2} \frac{x^2-4x+4}{x^2-x-2}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Direct substitution gives the meaningless expression <m>\tfrac{0}{0}</m>, so we must simplify the expression first. Factor numerator and denominator:
+        </p>
+        <me>
+          \begin{array}{rcl}
+           \displaystyle\lim_{x\to 2}\frac{(x-2)^2}{(x-2)(x+1)} \amp=\amp \displaystyle\lim_{x\to 2} \frac{x-2}{x+1} \\
+          \amp=\amp \frac{0}{3} = 0.
+          \end{array}
+        </me>
+
+          <remark>
+        <p> 
+Please note that this example is consistent with what we saw in the previous section. 
+Here is a Desmos graph of the function, along with a table of values near <m>x=2</m>. </p>
+
+<url href="https://www.desmos.com/calculator/swij6khoz5"> 
+<sidebyside width = "90%">
+<figure>
+  <caption>
+    Graph of <m>f(x)=\dfrac{x^2-4x+4}{x^2-x-2}</m>
+  </caption>
+  <image width = "100%" source="images/LimitOfFunction01.gif">
+  </image>
+</figure>
+</sidebyside>
+</url>
+
+<p> 
+Keep in mind, however, that on quizzes and exams you may not have access to a calculator — in those cases the algebraic method will be our primary tool for solving such problems.
+
+ </p>
+ </remark>
+      </solution>
+    </example>
+
+    <example xml:id="ex-conjugate">
+      <title>Using a Conjugate</title>
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \lim_{x\to 9} \frac{x-9}{\sqrt{x}-3}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Direct substitution gives the meaningless expression <m>\tfrac{0}{0}</m>, so we must simplify the expression first. 
+        </p>
+<p>
+  Multiply numerator and denominator by the conjugate <m>\sqrt{x}+3</m>:
+</p>
+<me>
+  \displaystyle\lim_{x\to 9}\frac{x-9}{\sqrt{x}-3}\cdot\frac{\sqrt{x}+3}{\sqrt{x}+3}
+  = \lim_{x\to 9}\frac{(x-9)(\sqrt{x}+3)}{(\sqrt{x})^2-3^2}
+</me>
+
+<p>
+  Simplify the denominator using the difference of squares:
+</p>
+<me>
+  \displaystyle\lim_{x\to 9}\frac{(x-9)(\sqrt{x}+3)}{x-9}
+</me>>
+
+<p>
+  Now cancel the common factor <m>x-9</m>:
+</p>
+<me>
+  \displaystyle\lim_{x\to 9} (\sqrt{x}+3) = 6.
+</me>
+  <remark>
+<p>
+  Again, this algebraic approach is important, but you can also explore the behavior graphically or with tables. 
+  View it here: <url href="https://www.desmos.com/calculator/ldglp9hhbw" visual="">Desmos Graph</url>.
+</p>
+</remark>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-cases">
+    <title>Limits by Cases</title>
+
+    <p>
+      Piecewise functions often require evaluating limits separately from the left and right. For example, the absolute value function <m>|x|</m> requires case analysis.
+    </p>
+
+    <example xml:id="ex-abs-value">
+      <title>Absolute Value Example</title>
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \lim_{x\to 2} \frac{|x^2-4|}{x-2}</m>.
+        </p>
+      </statement>
+<solution>
+  <p>
+    We analyze the sign of the expression inside the absolute value. Note that
+    <m>x^2 - 4 = (x-2)(x+2)</m>.
+  </p>
+
+  <p>
+    For <m>x &lt; 2</m> (values just to the left of <m>2</m>), we have <m>x-2 &lt; 0</m> while
+    <m>x+2 &gt; 0</m>, so their product is negative:
+    <m>(x-2)(x+2) &lt; 0</m>. Hence
+    <m>\lvert x^2 - 4 \rvert = -\bigl(x^2 - 4\bigr) = -(x-2)(x+2)</m>.
+  </p>
+
+  <p>Compute the left–hand limit by simplifying (for <m>x \neq 2</m>):</p>
+  <me>
+    \lim_{x\to 2^-}\frac{|x^2-4|}{x-2}
+    \;=\;\lim_{x\to 2^-}\frac{-(x-2)(x+2)}{x-2}
+    \;=\;\lim_{x\to 2^-}\bigl(-(x+2)\bigr)
+    \;=\;-4.
+  </me>
+
+  <p>
+    For <m>x &gt; 2</m> (values just to the right of <m>2</m>), both factors are positive:
+    <m>x-2 &gt; 0</m> and <m>x+2 &gt; 0</m>, so <m>(x-2)(x+2) &gt; 0</m>. Therefore
+    <m>\lvert x^2 - 4 \rvert = x^2 - 4 = (x-2)(x+2)</m>.
+  </p>
+
+  <p>Compute the right–hand limit similarly (for <m>x \neq 2</m>):</p>
+  <me>
+    \lim_{x\to 2^+}\frac{|x^2-4|}{x-2}
+    \;=\;\lim_{x\to 2^+}\frac{(x-2)(x+2)}{x-2}
+    \;=\;\lim_{x\to 2^+}(x+2)
+    \;=\;4.
+  </me>
+
+  <p>
+    The one–sided limits are different (<m>-4</m> vs. <m>4</m>), so the two–sided limit
+    <m>\displaystyle\lim_{x\to 2}\frac{|x^2-4|}{x-2}</m> does not exist.
+  </p>
+
+  <remark>
+    <p>
+      It is legitimate to cancel the factor <m>x-2</m> in the simplified expressions because
+      we only consider <m>x</m> near (but not equal to) <m>2</m>. If helpful, you can also
+      confirm this behavior numerically with a table of values approaching <m>2</m> from each
+      side or by inspecting a graph.
+    </p>
+  </remark>
+</solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-squeeze">
+    <title>Limits by Squeezing</title>
+
+    <p>
+      Some limits are difficult because the function oscillates or behaves erratically near the point. In such cases we use inequalities to bound the function above and below.
+    </p>
+
+    <example xml:id="ex-squeeze-1">
+      <title>Squeezing Example</title>
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \lim_{x\to 1} x + 4(x-1)^2\sin(\tfrac{1}{x-1})</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>-1 \leq \sin(\theta) \leq 1</m>,
+        </p>
+        <me>
+          x - 4(x-1)^2 \leq x + 4(x-1)^2\sin\!\left(\tfrac{1}{x-1}\right) \leq x+4(x-1)^2.
+        </me>
+        <p>
+          Both bounds approach 1 as <m>x\to 1</m>, so by the Squeeze Theorem the limit is 1.
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-squeeze">
+      <title>Squeeze Theorem</title>
+      <statement>
+        <p>
+          Suppose <m>g(x) \leq f(x) \leq h(x)</m> for all <m>x</m> near <m>a</m> (except possibly <m>x=a</m>), and <m>\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L</m>. Then <m>\lim_{x\to a} f(x) = L</m>.
+        </p>
+      </statement>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="ssec-oscillations">
+    <title>Oscillating Functions</title>
+
+    <p>
+      Some functions oscillate so wildly near a point that the limit does not exist. For example, consider:
+    </p>
+
+    <example xml:id="ex-sin-pi-over-x">
+      <title>Wild Oscillations</title>
+      <statement>
+        <p>
+          Consider <m>\displaystyle \lim_{x\to 0} \sin\left(\frac{\pi}{x}\right)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function oscillates infinitely often as <m>x\to 0</m>, so it cannot be forced close to any single value. Thus the limit does not exist.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-xsin">
+      <title>Oscillation with Decay</title>
+      <statement>
+        <p>
+          Consider <m>\displaystyle \lim_{x\to 0} x\sin\left(\tfrac{\pi}{x}\right)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>-1 \leq \sin(\tfrac{\pi}{x}) \leq 1</m>, we have <m>-|x| \leq x\sin(\tfrac{\pi}{x}) \leq |x|</m>. Both bounds approach 0, so by the Squeeze Theorem the limit equals 0.
+        </p>
+      </solution>
+    </example>
+  </subsection>
 </section>

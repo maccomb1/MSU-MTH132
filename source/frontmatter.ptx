@@ -4,6 +4,9 @@
 <!-- works. -->
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <title>Introduction</title>
+  
+  
   <bibinfo>
 
     <author>
@@ -49,6 +52,20 @@
     <colophon-items/>
   </colophon>
   -->
+
+  <preface >
+    <title>Algebra Review: Core Tools for Calculus</title>
+    <p>Still need to write </p>
+  </preface>
+
+  <preface>
+    <title>Quiz / Exam Formula Sheet</title>
+    <p>
+      This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond. 
+    </p>
+
+    <p>Test <m>\displaystyle\int_a^b f(x)~dx</m> </p>
+  </preface>
 
   <preface >
     <title>Students: How to Use this Book</title>
