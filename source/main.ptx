@@ -19,8 +19,8 @@
     
 
 
-    <!-- Include backmatter 
+    <!-- Include backmatter     -->
     <xi:include href="./backmatter.ptx" />
-    -->
+
   </book>
 </pretext>

@@ -169,7 +169,7 @@ Here is a Desmos graph of the function, along with a table of values near <m>x=2
   <caption>
     Graph of <m>f(x)=\dfrac{x^2-4x+4}{x^2-x-2}</m>
   </caption>
-  <image width = "100%" source="images/LimitOfFunction01.gif">
+  <image width = "100%" source="images/LimitOfFunction001.gif">
   </image>
 </figure>
 </sidebyside>
@@ -217,7 +217,7 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
 </me>
   <remark>
 <p>
-  Again, this algebraic approach is important, but you can also explore the behavior graphically or with tables. 
+  Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. 
   View it here: <url href="https://www.desmos.com/calculator/ldglp9hhbw" visual="">Desmos Graph</url>.
 </p>
 </remark>
@@ -229,7 +229,9 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
     <title>Limits by Cases</title>
 
     <p>
-      Piecewise functions often require evaluating limits separately from the left and right. For example, the absolute value function <m>|x|</m> requires case analysis.
+      As we learned in <xref ref="sec-graphical-limits">Section</xref>, piecewise functions often require evaluating limits separately from the left and right. 
+      One key example of this is the absolute value function <m>|x|</m>, which by <xref ref="def-absolute-value">its definition</xref> is really a piecewise function. 
+      Therefore limits involving absolute values often require a case-by-case analysis.
     </p>
 
     <example xml:id="ex-abs-value">
@@ -239,64 +241,81 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
           Evaluate <m>\displaystyle \lim_{x\to 2} \frac{|x^2-4|}{x-2}</m>.
         </p>
       </statement>
-<solution>
-  <p>
-    We analyze the sign of the expression inside the absolute value. Note that
-    <m>x^2 - 4 = (x-2)(x+2)</m>.
-  </p>
+      <solution>
+        <p>
+          <alert>Check Your Answers:</alert>
+        </p>
+        <p> 
+          <m>\displaystyle \lim_{x\to 2} \frac{|x^2-4|}{x-2}</m> does not exist, because the left-hand and right-hand limits are different.
+        </p>
+          <p><alert>Step by Step Video Solution:</alert></p>
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+          <p>
+  Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. 
+  View it here: <url href="https://www.desmos.com/calculator/stajfp6rnn" visual="">Desmos Graph</url>.
+</p>
 
-  <p>
-    For <m>x &lt; 2</m> (values just to the left of <m>2</m>), we have <m>x-2 &lt; 0</m> while
-    <m>x+2 &gt; 0</m>, so their product is negative:
-    <m>(x-2)(x+2) &lt; 0</m>. Hence
-    <m>\lvert x^2 - 4 \rvert = -\bigl(x^2 - 4\bigr) = -(x-2)(x+2)</m>.
-  </p>
 
-  <p>Compute the left–hand limit by simplifying (for <m>x \neq 2</m>):</p>
-  <me>
-    \lim_{x\to 2^-}\frac{|x^2-4|}{x-2}
-    \;=\;\lim_{x\to 2^-}\frac{-(x-2)(x+2)}{x-2}
-    \;=\;\lim_{x\to 2^-}\bigl(-(x+2)\bigr)
-    \;=\;-4.
-  </me>
-
-  <p>
-    For <m>x &gt; 2</m> (values just to the right of <m>2</m>), both factors are positive:
-    <m>x-2 &gt; 0</m> and <m>x+2 &gt; 0</m>, so <m>(x-2)(x+2) &gt; 0</m>. Therefore
-    <m>\lvert x^2 - 4 \rvert = x^2 - 4 = (x-2)(x+2)</m>.
-  </p>
-
-  <p>Compute the right–hand limit similarly (for <m>x \neq 2</m>):</p>
-  <me>
-    \lim_{x\to 2^+}\frac{|x^2-4|}{x-2}
-    \;=\;\lim_{x\to 2^+}\frac{(x-2)(x+2)}{x-2}
-    \;=\;\lim_{x\to 2^+}(x+2)
-    \;=\;4.
-  </me>
-
-  <p>
-    The one–sided limits are different (<m>-4</m> vs. <m>4</m>), so the two–sided limit
-    <m>\displaystyle\lim_{x\to 2}\frac{|x^2-4|}{x-2}</m> does not exist.
-  </p>
-
-  <remark>
-    <p>
-      It is legitimate to cancel the factor <m>x-2</m> in the simplified expressions because
-      we only consider <m>x</m> near (but not equal to) <m>2</m>. If helpful, you can also
-      confirm this behavior numerically with a table of values approaching <m>2</m> from each
-      side or by inspecting a graph.
-    </p>
-  </remark>
-</solution>
+    </solution>
     </example>
   </subsection>
 
   <subsection xml:id="ssec-squeeze">
     <title>Limits by Squeezing</title>
 
-    <p>
-      Some limits are difficult because the function oscillates or behaves erratically near the point. In such cases we use inequalities to bound the function above and below.
-    </p>
+
+<p>
+  Some limits <m>\displaystyle\lim_{x\to a} f(x)</m> are difficult to evaluate because the function
+  <m>f(x)</m> behaves erratically near <m>x=a</m>. For example:
+</p>
+
+<me>
+  \lim_{x\to 1} \Bigl(x + 4(x-1)^2 \sin\!\bigl(\tfrac{1}{x-1}\bigr)\Bigr).
+</me>
+
+<p>
+  The graph shows the unusual behavior, oscillating faster and faster near <m>x=1</m>
+  because <m>\sin(\theta)</m> completes infinitely many periods as
+  <m>\theta = \tfrac{1}{x-1}</m> becomes larger.
+</p>
+
+
+
+<sidebyside width = "90%">
+<figure xml:id="fig-squeeze-oscillation">
+
+  <caption>
+     The function <m>y = x + 4(x-1)^2\sin\!\bigl(1/(x-1)\bigr)</m> (solid) squeezed between
+    <m>y = x \pm 4(x-1)^2</m> (dashed).
+  </caption>
+  <image width = "100%" source="images/0102-g1.PNG">
+  </image>
+</figure>
+</sidebyside>
+
+
+<p>
+  However, we can still find the limit using the <term>Squeeze Theorem</term>, which applies when
+  <m>f(x)</m> is squeezed between two other functions. </p> 
+
+
+
+    <theorem xml:id="thm-squeeze">
+      <title>Squeeze Theorem</title>
+      <statement>
+        <p>
+          Suppose <m>g(x) \leq f(x) \leq h(x)</m> for all <m>x</m> near <m>a</m> (except possibly <m>x=a</m>), and <m>\displaystyle\lim_{x\to a} g(x) = \displaystyle\lim_{x\to a} h(x) = L</m>. Then <m>\displaystyle\lim_{x\to a} f(x) = L</m>.
+        </p>
+      </statement>
+    </theorem>
+ 
+
+  <p> 
+    Now let's apply the Squeeze Theorem to our example
+  </p>
 
     <example xml:id="ex-squeeze-1">
       <title>Squeezing Example</title>
@@ -305,62 +324,180 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
           Evaluate <m>\displaystyle \lim_{x\to 1} x + 4(x-1)^2\sin(\tfrac{1}{x-1})</m>.
         </p>
       </statement>
-      <solution>
-        <p>
-          Since <m>-1 \leq \sin(\theta) \leq 1</m>,
-        </p>
-        <me>
-          x - 4(x-1)^2 \leq x + 4(x-1)^2\sin\!\left(\tfrac{1}{x-1}\right) \leq x+4(x-1)^2.
-        </me>
-        <p>
-          Both bounds approach 1 as <m>x\to 1</m>, so by the Squeeze Theorem the limit is 1.
-        </p>
-      </solution>
+<solution>
+  <p>
+    First note the expression is defined for <m>x \neq 1</m>, which is fine for a limit:
+    we only need values of <m>x</m> near (but not equal to) <m>1</m>.
+  </p>
+
+  <p>
+    Start from the basic bound true for every real <m>\theta</m>:
+  </p>
+  <me>
+    -1 \;\le\; \sin(\theta) \;\le\; 1.
+  </me>
+
+  <p>
+    Substitute <m>\theta = \tfrac{1}{x-1}</m> (valid when <m>x \neq 1</m>):
+  </p>
+  <me>
+    -1 \;\le\; \sin\!\Bigl(\tfrac{1}{x-1}\Bigr) \;\le\; 1.
+  </me>
+
+  <p>
+    Multiply the entire inequality by <m>4(x-1)^2</m>. Because
+    <m>4(x-1)^2 \ge 0</m> for all <m>x</m>, the direction of the inequalities
+    is preserved (multiplying by a nonnegative number does not flip signs):
+  </p>
+  <me>
+    -\,4(x-1)^2 \;\le\; 4(x-1)^2 \sin\!\Bigl(\tfrac{1}{x-1}\Bigr) \;\le\; 4(x-1)^2.
+  </me>
+
+  <p>
+    Now add <m>x</m> to each part of the inequality. Adding the same quantity to
+    all three parts preserves the inequalities:
+  </p>
+  <me>
+    x - 4(x-1)^2 \;\le\; x + 4(x-1)^2 \sin\!\Bigl(\tfrac{1}{x-1}\Bigr) \;\le\; x + 4(x-1)^2.
+  </me>
+
+  <p>
+    Define the “floor” and “ceiling” functions
+    <m>g(x)=x-4(x-1)^2</m> and <m>h(x)=x+4(x-1)^2</m>. Compute their limits
+    using substitution:
+  </p>
+  <me>
+    \lim_{x\to 1} g(x)
+    \;=\; \lim_{x\to 1}\!\Bigl(x - 4(x-1)^2\Bigr)
+    \;=\; 1
+  </me>
+  <me>
+    \lim_{x\to 1} h(x)
+    \;=\; \lim_{x\to 1}\!\Bigl(x + 4(x-1)^2\Bigr)
+    \;=\; 1
+  </me>
+
+  <p>
+    Since for all <m>x</m> near (but not equal to) <m>1</m> we have
+    <m>g(x) \le x + 4(x-1)^2 \sin\!\bigl(\tfrac{1}{x-1}\bigr) \le h(x)</m>,
+    and both bounding limits equal <m>1</m>, the Squeeze Theorem gives:
+  </p>
+  <me>
+    \lim_{x\to 1} \Bigl(x + 4(x-1)^2 \sin\!\bigl(\tfrac{1}{x-1}\bigr)\Bigr) \;=\; 1.
+  </me>
+
+</solution>
     </example>
 
-    <theorem xml:id="thm-squeeze">
-      <title>Squeeze Theorem</title>
-      <statement>
-        <p>
-          Suppose <m>g(x) \leq f(x) \leq h(x)</m> for all <m>x</m> near <m>a</m> (except possibly <m>x=a</m>), and <m>\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L</m>. Then <m>\lim_{x\to a} f(x) = L</m>.
-        </p>
-      </statement>
-    </theorem>
-  </subsection>
+    </subsection>
 
-  <subsection xml:id="ssec-oscillations">
-    <title>Oscillating Functions</title>
+<exercises xml:id="tf-exercises-limits">
+  <title>Practice / Study Problems</title>
+  
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+    <introduction>
+      <p>
+        Determine weather each statement is true or false and explain your reasoning
+      </p>
+    </introduction>
 
-    <p>
-      Some functions oscillate so wildly near a point that the limit does not exist. For example, consider:
-    </p>
+ <exercise>
+    <statement><p>
+      If <m>\displaystyle\lim_{x\to 2} f(x) = 5</m> and <m>\displaystyle\lim_{x\to 2} g(x) = 7</m>, then <m>\displaystyle\lim_{x\to 2}(f(x)+g(x))=12</m>.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> By the Sum Law: <m>\displaystyle\lim_{x\to 2}(f(x)+g(x))=\displaystyle\lim_{x\to 2} f(x)+\displaystyle\lim_{x\to 2} g(x)=5+7=12</m>.</p>
+    </solution>
+  </exercise>
 
-    <example xml:id="ex-sin-pi-over-x">
-      <title>Wild Oscillations</title>
-      <statement>
-        <p>
-          Consider <m>\displaystyle \lim_{x\to 0} \sin\left(\frac{\pi}{x}\right)</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The function oscillates infinitely often as <m>x\to 0</m>, so it cannot be forced close to any single value. Thus the limit does not exist.
-        </p>
-      </solution>
-    </example>
+  <exercise>
+    <statement><p>
+      If <m>\displaystyle\lim_{x\to 3} f(x) = 5</m>, then <m>f(3) = 5</m>.
+    </p></statement>
+    <solution>
+      <p><alert>False.</alert> A limit concerns nearby values, not necessarily the value at the point. 
+        For example, consider <xref ref="ex-canceling-zeros">Example</xref>. The limit exists even though the function itself is not defined 
+        at the point.</p>
+    </solution>
+  </exercise>
 
-    <example xml:id="ex-xsin">
-      <title>Oscillation with Decay</title>
-      <statement>
-        <p>
-          Consider <m>\displaystyle \lim_{x\to 0} x\sin\left(\tfrac{\pi}{x}\right)</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Since <m>-1 \leq \sin(\tfrac{\pi}{x}) \leq 1</m>, we have <m>-|x| \leq x\sin(\tfrac{\pi}{x}) \leq |x|</m>. Both bounds approach 0, so by the Squeeze Theorem the limit equals 0.
-        </p>
-      </solution>
-    </example>
-  </subsection>
+  <exercise>
+    <statement><p>
+      <m>\displaystyle\lim_{x\to 1}\dfrac{x^2-1}{x-1} = 2</m>.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> Factor and cancel: <m>\dfrac{(x-1)(x+1)}{x-1}=x+1</m> for <m>x\neq 1</m>, so <m>\displaystyle\lim_{x\to 1}(x+1)=2</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      The Limit Laws can always be applied, even if one of the limits does not exist.
+    </p></statement>
+    <solution>
+      <p><alert>False.</alert> Each Limit Law requires the relevant limits to exist. If one does not exist, the law cannot be applied.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      If <m>\displaystyle\lim_{x\to 2} f(x)=0</m> and <m>\displaystyle\lim_{x\to 2} g(x)=0</m>, then <m>\displaystyle\lim_{x\to 2}\dfrac{f(x)}{g(x)}</m> must equal 1.
+    </p></statement>
+    <solution>
+      <p><alert>False.</alert> The form <m>\tfrac{0}{0}</m> is meaningless. 
+        For example, <m>f(x)=x-2</m>, <m>g(x)=2(x-2)</m> give <m>\displaystyle\lim_{x\to 2}\dfrac{f(x)}{g(x)}=\tfrac{1}{2}</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      If <m>f(x)</m> is a polynomial, then <m>\displaystyle\lim_{x\to a} f(x) = f(a)</m> for every real number <m>a</m>.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> Polynomials are continuous. We can apply the limit laws to substitute as discussed previously in this section. So <m>\displaystyle\lim_{x\to a} f(x)=f(a)</m> for all <m>a</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      <m>\displaystyle\lim_{x\to 0}\dfrac{|x|}{x}</m> does not exist.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> <m>\displaystyle\lim_{x\to 0^-}\dfrac{|x|}{x}=-1</m> and <m>\displaystyle\lim_{x\to 0^+}\dfrac{|x|}{x}=1</m>, so the two-sided limit does not exist.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      <m>\displaystyle\lim_{x\to 1}\dfrac{x^2-4}{x-2} = -3</m>.
+    </p></statement>
+    <solution>
+      <p><alert>False.</alert> Simplify to <m>x+2</m>, so <m>\displaystyle\lim_{x\to 1}(x+2)=3</m>, not <m>-3</m>.</p>
+    </solution>
+  </exercise>
+
+
+  <exercise>
+    <statement><p>
+      <m>\displaystyle\lim_{x\to 0} x\sin(\tfrac{1}{x}) = 0</m>.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> By the Squeeze Theorem: <m>-|x|\leq x\sin(\tfrac{1}{x})\leq |x|</m>, and both bounds go to 0 as <m>x\to 0</m>.</p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement><p>
+      The Squeeze Theorem can be used to evaluate <m>\displaystyle\lim_{x\to 0} x^2\cos(\tfrac{1}{x})</m>.
+    </p></statement>
+    <solution>
+      <p><alert>True.</alert> Since <m>-1\leq \cos(\tfrac{1}{x})\leq 1</m>, multiplying by <m>x^2\ge 0</m> gives <m>-x^2 \leq x^2\cos(\tfrac{1}{x}) \leq x^2</m>. Both bounds go to 0, so <m>\displaystyle\lim_{x\to 0} x^2\cos(\tfrac{1}{x})=0</m>.</p>
+    </solution>
+  </exercise>
+
+</exercisegroup>
+
+</exercises>
+
 </section>
