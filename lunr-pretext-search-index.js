@@ -6,31 +6,13 @@ var ptx_lunr_docs = [
   "url": "frontmatter-4.html",
   "type": "Preface",
   "number": "",
-  "title": "Algebra Review: Core Tools for Calculus",
-  "body": " Algebra Review: Core Tools for Calculus  Still need to write  "
+  "title": "Students: How to Use this Book",
+  "body": " Students: How to Use this Book  Still need to write  "
 },
 {
   "id": "frontmatter-5",
   "level": "1",
   "url": "frontmatter-5.html",
-  "type": "Preface",
-  "number": "",
-  "title": "Quiz \/ Exam Formula Sheet",
-  "body": " Quiz \/ Exam Formula Sheet  This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond.  Test   "
-},
-{
-  "id": "frontmatter-6",
-  "level": "1",
-  "url": "frontmatter-6.html",
-  "type": "Preface",
-  "number": "",
-  "title": "Students: How to Use this Book",
-  "body": " Students: How to Use this Book  Still need to write  "
-},
-{
-  "id": "frontmatter-7",
-  "level": "1",
-  "url": "frontmatter-7.html",
   "type": "Preface",
   "number": "",
   "title": "Instructors: How to Use this Book",
@@ -313,7 +295,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Limit Laws and Algebraic Techniques",
-  "body": " Limit Laws and Algebraic Techniques    State and apply the basic Limit Laws (sum, difference, constant multiple, product, quotient, power, root).  Recognize when direct substitution can be used to evaluate a limit and when it leads to meaningless expressions.  Evaluate limits that initially give meaningless expressions by algebraic manipulation  Analyze limits of piecewise-defined functions by considering one-sided limits.  Apply the Squeeze Theorem to evaluate limits of functions bounded above and below.     Operations on Limits  Some general combination rules make most limit computations routine.   Limit Laws   Suppose we know that both and exist. Then we have the following Limit Laws:   Sum:  .  Difference:  .  Constant Multiple:  , for a constant .  Product:  .  Quotient:  , provided .  Power:  , for a whole number .  Root:  , for a whole number If is even, we assume  .   These all have the form: “The limit of an operation equals the operation applied to the limits.” These Laws are also valid for one-sided limits.    A full proof of these laws requires high-level mathematics and the formal – definition of limits (beyond the scope of this course). Rigorous proofs like this can be found in MSU's MTH 320 Real Analysis course. For those who would like a glimpse a Real Analysis proof, see this video proving the Limit Sum Law       Suppose and . Find .    Using the Difference, Constant Multiple, and Power Limit Laws:       Limits by Plugging In  Assuming the Limit Laws and the Basic Limits and , we can prove that most functions are continuous, meaning the limit can be obtained by direct substitution.   A Limit by Substitution   Compute using the Limit Laws.    Step by Step:   Thus the correct limit is obtained simply by substituting .   Note: The Quotient Law requires that the denominator have a non-zero limit. We tentatively proceed with the computation and find the denominator to be 3, which retrospectively justifies the quotient step.     Substituting usually gives the correct limit unless it leads to a meaningless expression such as or (complex values are not considered in this course).   In Section and Section , we will verify that trigonometric functions like and are also continuous when defined, and the same holds for functions like and . Thus, this principle works for pretty much all reasonable functions.    Limits by Canceling Zeros  Some of the most important limits are those where substitution gives a meaningless expression like . To compute these, we must cancel vanishing factors until the expression can be evaluated. This often requires algebraic manipulation such as factoring or multiplying by a conjugate.   Canceling Factors   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first. Factor numerator and denominator:    Please note that this example is consistent with what we saw in the previous section. Here is a Desmos graph of the function, along with a table of values near .     Graph of        Keep in mind, however, that on quizzes and exams you may not have access to a calculator — in those cases the algebraic method will be our primary tool for solving such problems.      Using a Conjugate   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first.  Multiply numerator and denominator by the conjugate :   Simplify the denominator using the difference of squares:  > Now cancel the common factor :    Again, this algebraic approach is important, but you can also explore the behavior graphically or with tables. View it here: Desmos Graph .       Limits by Cases  Piecewise functions often require evaluating limits separately from the left and right. For example, the absolute value function requires case analysis.   Absolute Value Example   Evaluate .    We analyze the sign of the expression inside the absolute value. Note that .  For (values just to the left of ), we have while , so their product is negative: . Hence .  Compute the left–hand limit by simplifying (for ):   For (values just to the right of ), both factors are positive: and , so . Therefore .  Compute the right–hand limit similarly (for ):   The one–sided limits are different ( vs. ), so the two–sided limit does not exist.   It is legitimate to cancel the factor in the simplified expressions because we only consider near (but not equal to) . If helpful, you can also confirm this behavior numerically with a table of values approaching from each side or by inspecting a graph.       Limits by Squeezing  Some limits are difficult because the function oscillates or behaves erratically near the point. In such cases we use inequalities to bound the function above and below.   Squeezing Example   Evaluate .    Since ,   Both bounds approach 1 as , so by the Squeeze Theorem the limit is 1.     Squeeze Theorem   Suppose for all near (except possibly ), and . Then .      Oscillating Functions  Some functions oscillate so wildly near a point that the limit does not exist. For example, consider:   Wild Oscillations   Consider .    The function oscillates infinitely often as , so it cannot be forced close to any single value. Thus the limit does not exist.     Oscillation with Decay   Consider .    Since , we have . Both bounds approach 0, so by the Squeeze Theorem the limit equals 0.     "
+  "body": " Limit Laws and Algebraic Techniques    State and apply the basic Limit Laws (sum, difference, constant multiple, product, quotient, power, root).  Recognize when direct substitution can be used to evaluate a limit and when it leads to meaningless expressions.  Evaluate limits that initially give meaningless expressions by algebraic manipulation  Analyze limits of piecewise-defined functions by considering one-sided limits.  Apply the Squeeze Theorem to evaluate limits of functions bounded above and below.     Operations on Limits  Some general combination rules make most limit computations routine.   Limit Laws   Suppose we know that both and exist. Then we have the following Limit Laws:   Sum:  .  Difference:  .  Constant Multiple:  , for a constant .  Product:  .  Quotient:  , provided .  Power:  , for a whole number .  Root:  , for a whole number If is even, we assume  .   These all have the form: “The limit of an operation equals the operation applied to the limits.” These Laws are also valid for one-sided limits.    A full proof of these laws requires high-level mathematics and the formal – definition of limits (beyond the scope of this course). Rigorous proofs like this can be found in MSU's MTH 320 Real Analysis course. For those who would like a glimpse a Real Analysis proof, see this video proving the Limit Sum Law       Suppose and . Find .    Using the Difference, Constant Multiple, and Power Limit Laws:       Limits by Plugging In  Assuming the Limit Laws and the Basic Limits and , we can prove that most functions are continuous, meaning the limit can be obtained by direct substitution.   A Limit by Substitution   Compute using the Limit Laws.    Step by Step:   Thus the correct limit is obtained simply by substituting .   Note: The Quotient Law requires that the denominator have a non-zero limit. We tentatively proceed with the computation and find the denominator to be 3, which retrospectively justifies the quotient step.     Substituting usually gives the correct limit unless it leads to a meaningless expression such as or (complex values are not considered in this course).   In Section and Section , we will verify that trigonometric functions like and are also continuous when defined, and the same holds for functions like and . Thus, this principle works for pretty much all reasonable functions.    Limits by Canceling Zeros  Some of the most important limits are those where substitution gives a meaningless expression like . To compute these, we must cancel vanishing factors until the expression can be evaluated. This often requires algebraic manipulation such as factoring or multiplying by a conjugate.   Canceling Factors   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first. Factor numerator and denominator:    Please note that this example is consistent with what we saw in the previous section. Here is a Desmos graph of the function, along with a table of values near .     Graph of        Keep in mind, however, that on quizzes and exams you may not have access to a calculator — in those cases the algebraic method will be our primary tool for solving such problems.      Using a Conjugate   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first.  Multiply numerator and denominator by the conjugate :   Simplify the denominator using the difference of squares:  > Now cancel the common factor :    Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. View it here: Desmos Graph .       Limits by Cases  As we learned in Section , piecewise functions often require evaluating limits separately from the left and right. One key example of this is the absolute value function , which by its definition is really a piecewise function. Therefore limits involving absolute values often require a case-by-case analysis.   Absolute Value Example   Evaluate .     Check Your Answers:    does not exist, because the left-hand and right-hand limits are different.  Step by Step Video Solution:      Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. View it here: Desmos Graph .      Limits by Squeezing  Some limits are difficult to evaluate because the function behaves erratically near . For example:   The graph shows the unusual behavior, oscillating faster and faster near because completes infinitely many periods as becomes larger.    The function (solid) squeezed between (dashed).      However, we can still find the limit using the Squeeze Theorem , which applies when is squeezed between two other functions.   Squeeze Theorem   Suppose for all near (except possibly ), and . Then .    Now let's apply the Squeeze Theorem to our example   Squeezing Example   Evaluate .    First note the expression is defined for , which is fine for a limit: we only need values of near (but not equal to) .  Start from the basic bound true for every real :   Substitute (valid when ):   Multiply the entire inequality by . Because for all , the direction of the inequalities is preserved (multiplying by a nonnegative number does not flip signs):   Now add to each part of the inequality. Adding the same quantity to all three parts preserves the inequalities:   Define the “floor” and “ceiling” functions and . Compute their limits using substitution:    Since for all near (but not equal to) we have , and both bounding limits equal , the Squeeze Theorem gives:       Practice \/ Study Problems   Some True\/False Problems   Determine weather each statement is true or false and explain your reasoning    If and , then .   True. By the Sum Law: .     If , then .   False. A limit concerns nearby values, not necessarily the value at the point. For example, consider Example . The limit exists even though the function itself is not defined at the point.      .   True. Factor and cancel: for , so .     The Limit Laws can always be applied, even if one of the limits does not exist.   False. Each Limit Law requires the relevant limits to exist. If one does not exist, the law cannot be applied.     If and , then must equal 1.   False. The form is meaningless. For example, , give .     If is a polynomial, then for every real number .   True. Polynomials are continuous. We can apply the limit laws to substitute as discussed previously in this section. So for all .      does not exist.   True.  and , so the two-sided limit does not exist.      .   False. Simplify to , so , not .      .   True. By the Squeeze Theorem: , and both bounds go to 0 as .     The Squeeze Theorem can be used to evaluate .   True. Since , multiplying by gives . Both bounds go to 0, so .      "
 },
 {
   "id": "sec-limit-laws-2",
@@ -376,7 +358,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.2.8",
   "title": "Using a Conjugate.",
-  "body": " Using a Conjugate   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first.  Multiply numerator and denominator by the conjugate :   Simplify the denominator using the difference of squares:  > Now cancel the common factor :    Again, this algebraic approach is important, but you can also explore the behavior graphically or with tables. View it here: Desmos Graph .    "
+  "body": " Using a Conjugate   Evaluate .    Direct substitution gives the meaningless expression , so we must simplify the expression first.  Multiply numerator and denominator by the conjugate :   Simplify the denominator using the difference of squares:  > Now cancel the common factor :    Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. View it here: Desmos Graph .    "
 },
 {
   "id": "ex-abs-value",
@@ -385,43 +367,133 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.2.10",
   "title": "Absolute Value Example.",
-  "body": " Absolute Value Example   Evaluate .    We analyze the sign of the expression inside the absolute value. Note that .  For (values just to the left of ), we have while , so their product is negative: . Hence .  Compute the left–hand limit by simplifying (for ):   For (values just to the right of ), both factors are positive: and , so . Therefore .  Compute the right–hand limit similarly (for ):   The one–sided limits are different ( vs. ), so the two–sided limit does not exist.   It is legitimate to cancel the factor in the simplified expressions because we only consider near (but not equal to) . If helpful, you can also confirm this behavior numerically with a table of values approaching from each side or by inspecting a graph.    "
+  "body": " Absolute Value Example   Evaluate .     Check Your Answers:    does not exist, because the left-hand and right-hand limits are different.  Step by Step Video Solution:      Again, this algebraic approach is important, but we can also explore the behavior graphically or with tables. View it here: Desmos Graph .   "
 },
 {
-  "id": "ex-squeeze-1",
+  "id": "fig-squeeze-oscillation",
   "level": "2",
-  "url": "sec-limit-laws.html#ex-squeeze-1",
-  "type": "Example",
-  "number": "1.2.12",
-  "title": "Squeezing Example.",
-  "body": " Squeezing Example   Evaluate .    Since ,   Both bounds approach 1 as , so by the Squeeze Theorem the limit is 1.   "
+  "url": "sec-limit-laws.html#fig-squeeze-oscillation",
+  "type": "Figure",
+  "number": "1.2.11",
+  "title": "",
+  "body": " The function (solid) squeezed between (dashed).    "
+},
+{
+  "id": "ssec-squeeze-6",
+  "level": "2",
+  "url": "sec-limit-laws.html#ssec-squeeze-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Squeeze Theorem "
 },
 {
   "id": "thm-squeeze",
   "level": "2",
   "url": "sec-limit-laws.html#thm-squeeze",
   "type": "Theorem",
-  "number": "1.2.13",
+  "number": "1.2.12",
   "title": "Squeeze Theorem.",
   "body": " Squeeze Theorem   Suppose for all near (except possibly ), and . Then .   "
 },
 {
-  "id": "ex-sin-pi-over-x",
+  "id": "ex-squeeze-1",
   "level": "2",
-  "url": "sec-limit-laws.html#ex-sin-pi-over-x",
+  "url": "sec-limit-laws.html#ex-squeeze-1",
   "type": "Example",
-  "number": "1.2.14",
-  "title": "Wild Oscillations.",
-  "body": " Wild Oscillations   Consider .    The function oscillates infinitely often as , so it cannot be forced close to any single value. Thus the limit does not exist.   "
+  "number": "1.2.13",
+  "title": "Squeezing Example.",
+  "body": " Squeezing Example   Evaluate .    First note the expression is defined for , which is fine for a limit: we only need values of near (but not equal to) .  Start from the basic bound true for every real :   Substitute (valid when ):   Multiply the entire inequality by . Because for all , the direction of the inequalities is preserved (multiplying by a nonnegative number does not flip signs):   Now add to each part of the inequality. Adding the same quantity to all three parts preserves the inequalities:   Define the “floor” and “ceiling” functions and . Compute their limits using substitution:    Since for all near (but not equal to) we have , and both bounding limits equal , the Squeeze Theorem gives:    "
 },
 {
-  "id": "ex-xsin",
+  "id": "tf-exercises-limits-2-3",
   "level": "2",
-  "url": "sec-limit-laws.html#ex-xsin",
-  "type": "Example",
-  "number": "1.2.15",
-  "title": "Oscillation with Decay.",
-  "body": " Oscillation with Decay   Consider .    Since , we have . Both bounds approach 0, so by the Squeeze Theorem the limit equals 0.   "
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-3",
+  "type": "Exercise",
+  "number": "1.2.6.1",
+  "title": "",
+  "body": " If and , then .   True. By the Sum Law: .   "
+},
+{
+  "id": "tf-exercises-limits-2-4",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-4",
+  "type": "Exercise",
+  "number": "1.2.6.2",
+  "title": "",
+  "body": " If , then .   False. A limit concerns nearby values, not necessarily the value at the point. For example, consider Example . The limit exists even though the function itself is not defined at the point.   "
+},
+{
+  "id": "tf-exercises-limits-2-5",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-5",
+  "type": "Exercise",
+  "number": "1.2.6.3",
+  "title": "",
+  "body": "  .   True. Factor and cancel: for , so .   "
+},
+{
+  "id": "tf-exercises-limits-2-6",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-6",
+  "type": "Exercise",
+  "number": "1.2.6.4",
+  "title": "",
+  "body": " The Limit Laws can always be applied, even if one of the limits does not exist.   False. Each Limit Law requires the relevant limits to exist. If one does not exist, the law cannot be applied.   "
+},
+{
+  "id": "tf-exercises-limits-2-7",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-7",
+  "type": "Exercise",
+  "number": "1.2.6.5",
+  "title": "",
+  "body": " If and , then must equal 1.   False. The form is meaningless. For example, , give .   "
+},
+{
+  "id": "tf-exercises-limits-2-8",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-8",
+  "type": "Exercise",
+  "number": "1.2.6.6",
+  "title": "",
+  "body": " If is a polynomial, then for every real number .   True. Polynomials are continuous. We can apply the limit laws to substitute as discussed previously in this section. So for all .   "
+},
+{
+  "id": "tf-exercises-limits-2-9",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-9",
+  "type": "Exercise",
+  "number": "1.2.6.7",
+  "title": "",
+  "body": "  does not exist.   True.  and , so the two-sided limit does not exist.   "
+},
+{
+  "id": "tf-exercises-limits-2-10",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-10",
+  "type": "Exercise",
+  "number": "1.2.6.8",
+  "title": "",
+  "body": "  .   False. Simplify to , so , not .   "
+},
+{
+  "id": "tf-exercises-limits-2-11",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-11",
+  "type": "Exercise",
+  "number": "1.2.6.9",
+  "title": "",
+  "body": "  .   True. By the Squeeze Theorem: , and both bounds go to 0 as .   "
+},
+{
+  "id": "tf-exercises-limits-2-12",
+  "level": "2",
+  "url": "sec-limit-laws.html#tf-exercises-limits-2-12",
+  "type": "Exercise",
+  "number": "1.2.6.10",
+  "title": "",
+  "body": " The Squeeze Theorem can be used to evaluate .   True. Since , multiplying by gives . Both bounds go to 0, so .   "
 },
 {
   "id": "sec-limit-continuity",
@@ -611,6 +683,33 @@ var ptx_lunr_docs = [
   "number": "4.6",
   "title": "Substitution Rule for Integration",
   "body": " Substitution Rule for Integration  Text of section.  "
+},
+{
+  "id": "backmatter-2",
+  "level": "1",
+  "url": "backmatter-2.html",
+  "type": "Appendix",
+  "number": "A",
+  "title": "Quiz \/ Exam Formula Sheet",
+  "body": " Quiz \/ Exam Formula Sheet  This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond.  Test   "
+},
+{
+  "id": "backmatter-3",
+  "level": "1",
+  "url": "backmatter-3.html",
+  "type": "Appendix",
+  "number": "B",
+  "title": "Algebra Review: Core Tools for Calculus",
+  "body": " Algebra Review: Core Tools for Calculus   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.    "
+},
+{
+  "id": "def-absolute-value",
+  "level": "2",
+  "url": "backmatter-3.html#def-absolute-value",
+  "type": "Definition",
+  "number": "B.0.1",
+  "title": "Absolute Value.",
+  "body": " Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.   "
 }
 ]
 
