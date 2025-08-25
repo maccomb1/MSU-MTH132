@@ -3,6 +3,667 @@
 <section xml:id="sec-limit-continuity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Continuity</title>
 
-  <p> Text of section. </p>
+<objectives>
+  <ul>
+    <li>
+      Understand the formal definition of continuity at a point and on an interval, 
+      and connect it to the intuitive “draw without lifting your pencil” idea.
+    </li>
+    <li>
+      Identify and classify discontinuities as removable, jump, infinite, or essential, based on their definitions
+      and interpret their graphical representations.
+    </li>
+    <li>
+      Test piecewise functions for continuity at transition points and determine parameter values 
+      that make them continuous.
+    </li>
+    <li>
+      Determine the domain of continuity for functions involving rational expressions, square roots, 
+      and other common operations.
+    </li>
+    <li>
+      Apply the Composition Law to evaluate limits of compositions of continuous functions.
+    </li>
+  </ul>
+</objectives>
+
+
+
+  <subsection xml:id="ssec-defn-continuity">
+    <title>Definition and Overview</title>
+    <p>
+      One of the most basic features of a function is whether it is <term>continuous</term>. 
+      Roughly, this means that a small change in <m>x</m> always leads to a fairly small change in <m>f(x)</m>, 
+      without instantaneous jumps. In physical terms, the position of a particle moving in space is continuous, 
+      but the position displayed in a video could have a gap, making the position function jump discontinuously. 
+    </p>
+
+    <definition>
+      <statement>
+        <p>A function <m>f(x)</m> is <term>continuous</term> at <m>x=a</m> whenever
+        <me>\displaystyle\lim_{x\to a} f(x) = f(a).</me></p>
+      </statement>
+    </definition>
+
+    <p>
+    Graphically, a function is continuous if the curve <m>y=f(x)</m> passes through the point <m>(a,f(a))</m> without any jumps or holes. 
+    This matches the intuitive idea of continuity — you can draw the graph near <m>x=a</m> without lifting your pencil.
+    </p>
+
+    <p>
+      We say <m>f(x)</m> is <term>continuous on an interval</term> whenever it is continuous at each point of the interval. 
+      For endpoints of a closed interval <m>[a,b]</m>, we require one-sided limits: 
+      <m>\displaystyle\lim_{x\to a^+} f(x) = f(a)</m> and <m>\displaystyle\lim_{x\to b^-} f(x) = f(b)</m>.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Removable Discontinuity</title>
+    <definition>
+      <statement>
+        <p>
+          A function has a <term>removable discontinuity</term> at <m>x=a</m> if 
+          <m>\displaystyle\lim_{x\to a} f(x)</m> exists but <m>f(a)</m> is either undefined 
+          or does not equal that limit.
+        </p>
+      </statement>
+
+<p> Graphically, a removable discontinuity appears as a hole in the curve <m>y=f(x)</m> at <m>x=a</m>. 
+  The discontinuity is "removable" because we can redefine <m>f(a)</m> to equal the limit, making the function continuous at <m>x=a</m>.
+</p>
+<figure xml:id="discont-removable-pair">
+  <caption>
+    Two examples of removable discontinuities: one where <m>f(a)</m> is undefined, 
+    and one where the value <m>f(a)</m> does not equal the limit.
+  </caption>
+  <sidebyside widths="45% 45%">
+    <image source="images/1-8-Discont-i.png" />
+    <image source="images/1-8-Discont-ii.png" />
+  </sidebyside>
+</figure>
+    </definition>
+
+
+<example xml:id="ex-removable-cancel">
+  <statement>
+    <p>
+      Revisit <xref ref="ex-canceling-zeros"/>. Verify that the function <m>f(x)=\dfrac{x^2-4x+4}{x^2-x-2}</m> has a 
+      removable discontinuity at <m>x=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      At <m>x=2</m>, both the numerator and denominator vanish, giving us the <m>\tfrac00</m> 
+      meaningless expression so the function 
+      is undefined. However, we can verify again that <m>\displaystyle\lim_{x\to 2} f(x) </m> exists (is equal to <m>0</m>). This matches the definition of a 
+      removable discontinuity. Moreover we can view the picture in <xref ref="ex-canceling-zeros"/> to see visually the hole in the graph at <m>x=2</m>.
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-removable-conjugate">
+  <statement>
+    <p>
+      Revisit <xref ref="ex-conjugate"/>. Verify that this function <m>f(x)=\dfrac{x-9}{\sqrt{x}-3}</m> has a 
+      removable discontinuity at <m>x=9</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      At <m>x=9</m>, both the numerator and denominator vanish, giving the 
+      undefined form <m>\tfrac{0}{0}</m>. However, multiplying numerator and 
+      denominator by the conjugate simplifies the expression to <m>\sqrt{x}+3</m>, 
+      which is continuous everywhere. Taking the limit, we find
+      <me>\lim_{x\to 9}\frac{x-9}{\sqrt{x}-3} = \lim_{x\to 9} (\sqrt{x}+3) = 6.</me>
+      Thus, although <m>f(9)</m> is undefined, the limit exists and equals 6. 
+      This is exactly the definition of a removable discontinuity, and the graph 
+      shows a “hole” at <m>x=9</m>.
+    </p>
+  </solution>
+</example>
+
+
+</subsection>
+
+  <subsection>
+    <title>Jump Discontinuity</title>
+    <definition>
+      <statement>
+        <p>
+          A function has a <term>jump discontinuity</term> at <m>x=a</m> if the left and right limits exist but are unequal:
+          <me>\displaystyle\lim_{x\to a^-} f(x) \neq \lim_{x\to a^+} f(x).</me>
+        </p>
+      </statement>
+
+      <p> Graphically, a jump discontinuity appears as a sudden jump in the curve <m>y=f(x)</m> at <m>x=a</m>. </p>
+
+
+    <figure xml:id="discont-jump">
+      <caption>A jump discontinuity where left and right limits differ.</caption>
+      <image source="images/1-8-Discont-iii.png" width="60%"/>
+    </figure>
+    </definition>
+
+
+<example xml:id="ex-jump-abs-value">
+  <statement>
+    <p>
+      Revisit <xref ref="ex-abs-value"/>. Verify that the function 
+      <m>f(x)=\dfrac{|x^2-4|}{x-2}</m> has a 
+      <term>jump discontinuity</term> at <m>x=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Notice that <m>x^2-4=(x-2)(x+2)</m>. For <m>x&gt;2</m>, the absolute value 
+      simplifies to <m>|x^2-4|=(x-2)(x+2)</m>, so 
+      <m>f(x)=\dfrac{(x-2)(x+2)}{x-2}=x+2</m>. For <m>x&lt;2</m>, we instead get 
+      <m>|x^2-4|=-(x-2)(x+2)</m>, so 
+      <m>f(x)=\dfrac{-(x-2)(x+2)}{x-2}=-(x+2)</m>. 
+    </p>
+    <p>
+      Thus the left-hand limit is 
+      <me>\lim_{x\to 2^-} f(x) = \lim_{x\to 2^-} (-(x+2)) = -4,</me> 
+      while the right-hand limit is 
+      <me>\lim_{x\to 2^+} f(x) = \lim_{x\to 2^+} (x+2) = 4.</me> 
+      Since these limits are not equal, the two-sided limit does not exist. 
+      This confirms that <m>f</m> has a jump discontinuity at <m>x=2</m>.
+    </p>
+  </solution>
+</example>
+
+
+  </subsection>
+
+  <subsection>
+    <title>Infinite Discontinuity</title>
+    <definition>
+      <statement>
+        <p>
+          A function has an <term>infinite discontinuity</term> at <m>x=a</m> if one or both one-sided limits diverge to infinity:
+          <me>\lim_{x\to a^\pm} f(x) = \pm\infty.</me>
+        </p>
+      </statement>
+      <p> Graphically, an infinite discontinuity appears as a vertical asymptote in the curve <m>y=f(x)</m> at <m>x=a</m>. </p>
+    <figure xml:id="discont-infinite">
+      <caption>A discontinuity caused by a vertical asymptote.</caption>
+      <image source="images/1-8-Discont-iv.png" width="60%"/>
+    </figure>
+
+
+    </definition>
+
+<example xml:id="ex-infinite-abs">
+  <statement>
+    <p>
+      Revisit <xref ref="ex-inf-lim"/>. Verify that the function 
+      <m>f(x)=\dfrac{1}{|x|}</m> has an 
+      <term>infinite discontinuity</term> at <m>x=0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The function <m>f(x)=\tfrac{1}{|x|}</m> is undefined at <m>x=0</m>. 
+      As <m>x\to 0^+</m>, <m>|x|=x</m>, so <m>f(x)=\tfrac{1}{x}\to +\infty</m>. 
+      As <m>x\to 0^−</m>, <m>|x|=-x</m>, so <m>f(x)=\tfrac{1}{-x}=\tfrac{1}{|x|}\to +\infty</m>. 
+      In both directions the function grows beyond all bounds, so
+      <me>\lim_{x\to 0} \tfrac{1}{|x|}=+\infty.</me>
+    </p>
+    <p>
+      Thus, <m>f(x)</m> has an infinite discontinuity at <m>x=0</m>. 
+      Graphically, this appears as a vertical asymptote along the <m>y</m>-axis.
+    </p>
+  </solution>
+</example>
+
+      </subsection>
+  <subsection>
+    <title>Essential Discontinuity</title>
+    <definition>
+      <statement>
+        <p>
+          A function has an <term>essential discontinuity</term> at <m>x=a</m> if one or both one-sided limits fail to exist in any sense. 
+        </p>
+      </statement>
+
+      <p> Graphically, an essential discontinuity quite often appears as a wild oscillation in the curve <m>y=f(x)</m> at <m>x=a</m>. </p>
+    <figure xml:id="discont-essential" >
+      <caption>An essential discontinuity where one-sided limits fail to exist.</caption>
+      <image source="images/1-8-Discont-v.png" width="60%"/>
+    </figure>
+
+
+</definition>
+
+<example xml:id="ex-essential-sinx-over-x">
+  <statement>
+    <p>
+      Consider the function <m>f(x)=\sin\!\left(\tfrac{1}{x}\right)</m>. 
+      Show that <m>f(x)</m> has an <term>essential discontinuity</term> at <m>x=0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The function is not defined at <m>x=0</m>. As <m>x</m> approaches 0, 
+      the reciprocal <m>\tfrac{1}{x}</m> grows without bound in magnitude. 
+      Since <m>\sin(\theta)</m> oscillates between <m>-1</m> and <m>1</m> for all 
+      values of <m>\theta</m>, the outputs <m>\sin\!\left(\tfrac{1}{x}\right)</m> 
+      continue to oscillate rapidly between <m>-1</m> and <m>1</m> as 
+      <m>x\to 0</m>.
+    </p>
+    <p>
+      No single limiting value can be assigned: the left-hand and right-hand 
+      limits both fail to exist because of these wild oscillations. 
+      By definition, this is an <term>essential discontinuity</term> at <m>x=0</m>.
+    </p>
+    <p>
+      Graphically, the curve appears to “wiggle infinitely fast” near the 
+      vertical line <m>x=0</m>, matching the intuition for an essential discontinuity.
+    </p>
+  </solution>
+</example>
+
+
+  </subsection>
+
+  <subsection>
+    <title>Continuity of Piecewise Functions</title>
+<p>
+  For a function defined by cases, whose graph consists of several continuous pieces, 
+  the function is continuous provided the pieces join together at the transition 
+  points where the cases meet.
+</p>
+
+
+<example xml:id="ex-piecewise-ap">
+  <statement>
+    <p>
+      Consider the piecewise function
+    </p>
+    <me>
+      f(x) =
+      \begin{cases}
+        x^2 - 1 &amp; \text{for } x &lt; 2, \\[6pt]
+        kx - 3 &amp; \text{for } x \geq 2.
+      \end{cases}
+    </me>
+    <p>
+      Find the value of <m>k</m> that makes <m>f(x)</m> continuous at <m>x=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To check continuity at <m>x=2</m>, we need three things: 
+      (1) the function is defined at <m>x=2</m>, 
+      (2) the limit <m>\displaystyle\lim_{x\to 2} f(x)</m> exists, 
+      and (3) the limit equals <m>f(2)</m>.
+    </p>
+
+    <p>
+      First, <m>f(2)=k(2)-3=2k-3</m>, so the function is defined at <m>x=2</m> 
+      for any value of <m>k</m>.
+    </p>
+
+    <p>
+      Next, compute the one-sided limits. For <m>x\to 2^−</m>, we use the left-hand 
+      piece <m>x^2-1</m>:
+      <me>\lim_{x\to 2^-} f(x) = \lim_{x\to 2^-} (x^2-1) = 2^2-1=3.</me>
+      For <m>x\to 2^+</m>, we use the right-hand piece <m>kx-3</m>:
+      <me>\lim_{x\to 2^+} f(x) = \lim_{x\to 2^+} (kx-3) = 2k-3.</me>
+    </p>
+
+    <p>
+      For the limit to exist, these must be equal:
+      <me>3 = 2k - 3.</me>
+      Solving gives <m>2k=6</m>, so <m>k=3</m>.
+    </p>
+
+    <p>
+      Finally, with <m>k=3</m> we have <m>f(2)=3</m>, which matches the limit. 
+      Therefore <m>f(x)</m> is continuous at <m>x=2</m> when <m>k=3</m>.
+    </p>
+  </solution>
+</example>
+
+
+
+
+    <example>
+  <statement>
+    <p>
+      Suppose a weight is winched from the ground at a constant speed 
+      for 8 seconds, is dropped, and lands 2 seconds later.
+    </p>
+    <p>
+      Then the height <m>s(t)</m> in feet at time <m>t</m> seconds is given by
+    </p>
+    <me>
+      s(t) = 
+      \begin{cases}
+        vt &amp; \text{for } t \in [0,8), \\[6pt]
+        64 - 16(t-8)^2 &amp; \text{for } t \in [8,10].
+      \end{cases}
+    </me>
+    <p>
+      How fast should the winch haul upward?
+    </p>
+  </statement>
+<solution>
+  <p>
+    The function <m>s(t)</m> is defined in two pieces. 
+    The first piece, <m>s(t)=vt</m>, describes the weight being lifted upward 
+    from the ground at a constant speed <m>v</m> feet per second, for 
+    times <m>0 \leq t &lt; 8</m>.
+  </p>
+
+  <p>
+    The second piece, <m>s(t)=64-16(t-8)^2</m>, describes what happens once the 
+    weight is released at <m>t=8</m>. Recall that a dropped object falls 
+    <m>16t^2</m> feet in <m>t</m> seconds. Since the fall begins at 
+    <m>t=8</m>, we measure the time of fall as <m>(t-8)</m>. 
+    Thus, after <m>(t-8)</m> seconds of falling, the weight will have fallen 
+    <m>16(t-8)^2</m> feet. The weight was released from a height of 64 feet, 
+    so its position after <m>t=8</m> seconds is given by 
+    <m>64 - 16(t-8)^2</m>.
+  </p>
+
+  <p>
+    To find the correct speed <m>v</m> of the winch, we need the two pieces of 
+    the function to “meet up” at <m>t=8</m>. That means the height from the 
+    lifting phase at <m>t=8</m> must equal the height from the falling phase 
+    at <m>t=8</m>. Using the lifting phase we get <m>s(8)=v\cdot 8</m>. 
+    Using the falling phase we get 
+    <m>s(8)=64-16(8-8)^2=64</m>. 
+    Setting these equal gives
+    <me>v \cdot 8 = 64 \quad \Longrightarrow \quad v = \tfrac{64}{8} = 8 \text{ ft/sec}.</me>
+  </p>
+
+  <p>
+    Finally, let us check continuity explicitly at <m>t=8</m>. 
+    From the left-hand side, 
+    <me>\lim_{t \to 8^-} s(t) = \lim_{t \to 8^-} vt = 8 \cdot 8 = 64.</me>
+    From the right-hand side,
+    <me>\lim_{t \to 8^+} s(t) = \lim_{t \to 8^+} \big(64 - 16(t-8)^2\big) = 64.</me>
+    Since both one-sided limits equal 64, the two-sided limit exists and equals 64. 
+    Moreover, this matches the value of the function at that point, 
+    <m>s(8)=64</m>. Therefore the function is continuous at <m>t=8</m>.
+  </p>
+</solution>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Domain of Continuity</title>
+    <p>
+      Almost all functions defined by formulas are continuous, except at points where they are undefined. This follows from our methods for computing limits.
+    </p>
+    <example>
+      <statement>
+        <p>Find where <m>g(x)=\dfrac{(x^2-3x+1)\sqrt{x+1}}{x-3}</m> is continuous.</p>
+      </statement>
+<solution>
+  <p>
+    First, let’s analyze the rational factor outside the square root. 
+    Using the Limit Laws from <xref ref="sec-limit-laws"/> repeatedly, we compute:
+  </p>
+
+  <me>
+    \lim_{x\to a} \frac{x^2-3x+1}{x-3} 
+    = \dfrac{a^2 - 3a + 1}{a - 3},
+  </me>
+
+  <p>
+    as long as the denominator does not vanish. 
+    In other words, this step is valid provided <m>a \neq 3</m>.
+  </p>
+
+  <p>
+    Next, consider the square root factor. 
+    By the Limit Laws,
+  </p>
+
+  <me>
+    \lim_{x\to a} \sqrt{x+1} = \sqrt{a+1},
+  </me>
+
+  <p>
+    but this only makes sense when the inside of the square root is nonnegative. 
+    Thus we require <m>a+1 \geq 0</m>, or equivalently <m>a > -1</m> 
+    (strict inequality if we want the square root defined for all nearby <m>x</m>).
+  </p>
+
+  <p>
+  We now combine the two factors to evaluate the overall limit:
+</p>
+
+<me>
+  \lim_{x\to a} \dfrac{(x^2 - 3x + 1)\sqrt{x+1}}{x-3}.
+</me>
+
+<p>
+  By the Limit Laws, the limit of a product equals the product of the limits,
+  provided each individual limit exists. So we can separate this into two pieces:
+</p>
+
+<me>
+  \left(\lim_{x\to a} \dfrac{x^2-3x+1}{x-3}\right)\cdot
+  \left(\lim_{x\to a} \sqrt{x+1}\right).
+</me>
+
+<p>
+  We already computed each factor individually: the rational expression simplifies to
+  <m>\dfrac{a^2 - 3a + 1}{a - 3}</m> (valid when <m>a \neq 3</m>), and the square root tends to
+  <m>\sqrt{a+1}</m> (valid when <m>a > -1</m>).
+</p>
+
+<me>
+  \dfrac{(a^2 - 3a + 1)\sqrt{a+1}}{a-3}.
+</me>
+
+<p>
+  Thus, whenever both conditions (<m>a \neq 3</m> and <m>a > -1</m>) are satisfied,
+  this is the value of the limit.
+</p>
+
+  <p>Let’s now examine the exceptional cases:</p>
+
+  <ul>
+    <li>
+      <p>
+        <m>a &lt; -1</m>: The square root <m>\sqrt{x+1}</m> is undefined, 
+        so the function is not continuous.
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>a = -1</m>: The square root is defined, and since this is the left endpoint 
+        of the domain, continuity only requires the right-hand limit. 
+        Indeed, <m>\lim_{x \to -1^+} g(x) = g(-1)</m>, so the function is continuous 
+        at <m>a=-1</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>a = 3</m>: The denominator vanishes, and the graph has a vertical asymptote. 
+        This corresponds to an infinite discontinuity (type (iv)).
+      </p>
+    </li>
+  </ul>
+
+  <p>
+    Putting this all together, we conclude that <m>g(x)</m> is continuous everywhere 
+    in its domain, which consists of the intervals
+  </p>
+
+  <me>
+    [-1, 3) \cup (3, \infty).
+  </me>
+
+  <p>The graph below illustrates this behavior:</p>
+
+  <sidebyside width="80%">
+  <figure xml:id="fun-graph">
+    <caption>Graph of <m>g(x)</m> showing its domain of continuity.</caption>
+    <image source="images/1-8-Fun.png" />
+  </figure>
+   </sidebyside>
+</solution>
+    </example>
+
+  </subsection>
+
+  <subsection>
+    <title>Compositions of Continuous Functions</title>
+    <theorem>
+      <title>Composition Law</title>
+      <statement>
+        <p>If <m>\displaystyle\lim_{x\to a} g(x)=b</m> and <m>f</m> is continuous at <m>x=b</m>, then
+        <me>\lim_{x\to a} f(g(x)) = f(\lim_{x\to a} g(x)).</me></p>
+      </statement>
+    <proof>
+  <p>
+    A full <m>\epsilon</m>–<m>\delta</m> proof is omitted here; it uses techniques developed
+    in a proof‑based course such as MTH320.
+  </p>
+    </proof>
+  </theorem>
+
+<example xml:id="ex-composition-sin">
+  <statement>
+    <p>
+      Evaluate 
+      <me>\displaystyle \lim_{x\to 1} \sin\!\left(\frac{x^2-1}{x-1}\right).</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, observe that the inside function is 
+      <m>g(x)=\dfrac{x^2-1}{x-1}</m>. 
+      Direct substitution gives <m>\tfrac{0}{0}</m>, so we simplify:
+    </p>
+
+    <me>
+      \frac{x^2-1}{x-1} = \frac{(x-1)(x+1)}{x-1} = x+1, \quad x\neq 1.
+    </me>
+
+    <p>
+      Thus, as <m>x \to 1</m>,
+      <me>\lim_{x\to 1} g(x) = \lim_{x\to 1} (x+1) = 2.</me>
+    </p>
+
+    <p>
+      Since the outer function is <m>f(u)=\sin(u)</m>, which is continuous everywhere, 
+      we may apply the Composition Law:
+    </p>
+
+    <me>
+      \lim_{x\to 1} \sin\!\left(\frac{x^2-1}{x-1}\right) 
+      = \sin\!\Big(\lim_{x\to 1} \frac{x^2-1}{x-1}\Big)
+      = \sin(2).
+    </me>
+
+    <p>
+      Therefore, the limit is <m>\sin(2)</m>.
+    </p>
+  </solution>
+</example>
+
+
+  </subsection>
+
+
+<exercises xml:id="tf-exercises-continuity">
+  <title>Practice / Study Problems</title>
+  
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+    <introduction>
+      <p>
+        Determine weather each statement is true or false and explain your reasoning
+      </p>
+    </introduction>
+
+<exercise>
+  <statement><p>If <m>f</m> is continuous at <m>x=2</m>, then <m>\displaystyle\lim_{x\to 2} f(x)=f(2)</m>.</p></statement>
+  <solution><p><alert>True.</alert> This is exactly the definition of continuity at a point.</p></solution>
+</exercise>
+
+<exercise>
+  <statement><p>The function <m>f(x)=\dfrac{x^2-4}{x-2}</m> has a removable discontinuity at <m>x=2</m>.</p></statement>
+  <solution>
+    <p><alert>True.</alert> At <m>x=2</m>, numerator and denominator both vanish, giving <m>\tfrac{0}{0}</m>. 
+    Simplifying, <m>f(x)=x+2</m> for <m>x\neq 2</m>, so <m>\displaystyle\lim_{x\to 2} f(x)=4</m>. 
+    Since <m>f(2)</m> is undefined, the discontinuity is removable.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>If <m>\displaystyle\lim_{x\to 3^-} f(x)=2</m> and <m>\displaystyle\lim_{x\to 3^+} f(x)=5</m>, then <m>f</m> has a jump discontinuity at <m>x=3</m>.</p></statement>
+  <solution>
+    <p><alert>True.</alert> The left and right limits both exist but are unequal, which is the definition of a jump discontinuity.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>The function <m>f(x)=\sqrt{x-1}</m> is continuous for all real numbers.</p></statement>
+  <solution>
+    <p><alert>False.</alert> The function is only defined for <m>x\geq 1</m>. It is continuous on its domain <m>[1,\infty)</m>, but not for all real numbers.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>If <m>f</m> and <m>g</m> are both continuous at <m>x=a</m>, then <m>f+g</m> is also continuous at <m>x=a</m>.</p></statement>
+  <solution>
+    <p><alert>True.</alert> Can verify using the limit laws and definition of continuity.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>The piecewise function <m>f(x)=\begin{cases} x+1 &amp; x&lt;2 \\ 3x-1 &amp; x\geq 2 \end{cases}</m> is continuous at <m>x=2</m>.</p></statement>
+  <solution>
+    <p><alert>False.</alert> <m>\displaystyle\lim_{x\to 2^-} f(x)=3</m> while <m>\displaystyle\lim_{x\to 2^+} f(x)=5</m>. 
+    Since the one-sided limits are unequal, the function has a jump discontinuity at <m>x=2</m>.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>If <m>\displaystyle\lim_{x\to a} f(x)</m> exists, then <m>f</m> must be continuous at <m>x=a</m>.</p></statement>
+  <solution>
+    <p><alert>False.</alert> Continuity also requires that <m>f(a)</m> is defined and equals the limit. 
+    A function can have a removable discontinuity where the limit exists but the function is undefined (or defined to a different value).</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>The function <m>f(x)=\dfrac{1}{x^2}</m> has an infinite discontinuity at <m>x=0</m>.</p></statement>
+  <solution>
+    <p><alert>True.</alert> As <m>x\to 0^\pm</m>, <m>f(x)\to +\infty</m>. 
+    The graph has a vertical asymptote at <m>x=0</m>, so this is an infinite discontinuity.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>The domain of continuity of <m>f(x)=\dfrac{\sqrt{x}}{x-1}</m> is <m>(0,1)\cup(1,\infty)</m>.</p></statement>
+ <solution>
+    <p><alert>False.</alert> The square root requires <m>x\ge 0</m>, and the denominator excludes <m>x=1</m>. 
+    Thus the domain is <m>[0,\infty)\setminus\{1\}</m>. At the endpoint <m>x=0</m>, we have <m>f(0)=0</m> and</p>
+    <me>\displaystyle\lim_{x\to 0^+}\frac{\sqrt{x}}{x-1}=0=f(0).</me>
+    <p>So the function is continuous at <m>x=0</m> (one-sided at the endpoint). Therefore the domain of continuity is 
+    <m>[0,1)\cup(1,\infty)</m>, not <m>(0,1)\cup(1,\infty)</m>.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement><p>If <m>\displaystyle\lim_{x\to a^-} f(x)=\infty</m> and <m>\displaystyle\lim_{x\to a^+} f(x)=-\infty</m>, then <m>f</m> has an essential discontinuity at <m>x=a</m>.</p></statement>
+  <solution>
+    <p><alert>False.</alert> When one-sided limits are infinite (even if they diverge differently), 
+    this is classified as an infinite discontinuity, not an essential discontinuity.</p>
+  </solution>
+</exercise>
+
+</exercisegroup>
+</exercises> 
+
+
 
 </section>

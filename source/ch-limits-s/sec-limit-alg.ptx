@@ -389,6 +389,28 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
 </solution>
     </example>
 
+<remark>
+  <p>
+    Trigonometric functions are especially good candidates for the Squeeze Theorem, 
+    since they have natural bounds. For example,
+  </p>
+  <me>
+    -1 \leq \sin(\theta) \leq 1
+  </me>
+  <p>
+    and
+  </p>
+  <me>
+    -1 \leq \cos(\theta) \leq 1.
+  </me>
+  <p>
+    These inequalities allow us to evaluate many limits involving 
+    trigonometric functions by “squeezing” them between simpler functions.
+  </p>
+</remark>
+
+
+
     </subsection>
 
 <exercises xml:id="tf-exercises-limits">
