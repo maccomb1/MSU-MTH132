@@ -58,12 +58,129 @@
 
   <preface >
     <title>Students: How to Use this Book</title>
-    <p>Still need to write </p>
+    
+    
+  <p>Welcome to <c>MTH 132: Calculus I</c>. This book has been created to guide you through the course, to support your in-class learning, and to give you a resource for independent study and practice.</p>
+
+  <p><alert>Structure of the Book</alert></p>
+  <p>The book is divided into chapters and sections that match the topics of the course. Each section may contain:</p>
+  <ul>
+    <li><term>Definitions</term> of important concepts.</li>
+    <li><term>Theorems</term> that summarize key results.</li>
+    <li><term>Examples</term> to illustrate ideas and methods.</li>
+    <li><term>Exercises</term> for you to practice and check understanding.</li>
+    <li><term>Remarks</term> and <term>alerts</term> that highlight common pitfalls or important insights.</li>
+  </ul>
+
+  <p><alert>How to Approach Each Section</alert></p>
+  <p>Here are some suggestions for making the most of each section:</p>
+  <ul>
+    <li><em>Before class:</em> Skim the definitions, theorems, and examples. Preview the exercises.</li>
+    <li><em>During class:</em> Focus on interactive examples and problem-solving activities with your peers and instructor.</li>
+    <li><em>After class:</em> Revisit the examples, complete the exercises, and check solutions or hints when provided.</li>
+  </ul>
+
+  <p><alert>Exercises and Practice</alert></p>
+  <p>Exercises are a central part of learning calculus. You will find:</p>
+  <ul>
+    <li><em>Conceptual checks</em> to test your understanding of definitions and theorems.</li>
+    <li><em>Computational practice</em> to build fluency with calculations and algebraic techniques.</li>
+    <li><em>Applications</em> that connect calculus to real-world situations.</li>
+  </ul>
+  <p>Some exercises will resemble questions on WeBWorK, quizzes, or exams, while others are meant for practice and exploration.</p>
+
+<p><alert>Technology and Tools</alert></p>
+<p>This book makes use of graphs, figures, and sometimes interactive elements (such as Desmos activities). 
+  A scientific calculator or graphing tool may be helpful, especially when you are first learning new concepts. 
+  However, calculators should not become a crutch—the main goal is to understand the ideas and be able to carry out the work by hand. 
+  Be aware that calculator use may be restricted or not allowed at all on quizzes and exams, 
+  so practicing without a calculator is important preparation.</p>
+
+  <p><alert>Connections to Course Materials</alert></p>
+  <p>This book works alongside other course resources:</p>
+  <ul>
+    <li><c>D2L</c> for announcements, grades, and course structure.</li>
+    <li><c>WeBWorK</c> for online homework practice.</li>
+    <li>Recitations and weekly reviews for collaborative practice.</li>
+    <li>Quizzes and exams for formal assessment.</li>
+  </ul>
+
+  <p><alert>Study Strategies</alert></p>
+  <p>Some tips for success:</p>
+  <ul>
+    <li>Practice actively: work through examples, don’t just read them.</li>
+    <li>Collaborate with classmates and discuss your reasoning.</li>
+    <li>Always show your work and leave answers in exact form when possible.</li>
+    <li>Interpret results and think about what they mean in context.</li>
+  </ul>
+
+  <p><alert>Accessibility and Flexibility</alert></p>
+  <p>This book has been designed with accessibility in mind. Figures include alt text, and the content can be navigated electronically or in print. Use whichever format supports your learning best.</p>
+
+  <p><alert>Final Encouragement</alert></p>
+  <p>Remember: this book is a tool, not just a reference. Stay engaged, practice often, and combine it with the support of your instructors, TAs, and the Math Learning Center. With steady effort, you will succeed in calculus.</p>
+
   </preface>
 
   <preface >
     <title>Instructors: How to Use this Book</title>
-    <p>Still need to write </p>
+
+      <p>This text is both a student resource and a teaching tool for <c>MTH 132: Calculus I</c>. It aligns with course goals, departmental pacing, and assessments such as weekly reviews, quizzes, and exams. The notes below suggest ways to integrate sections, examples, and exercises into your teaching while maintaining consistency across the course.</p>
+
+  <p><alert>Structure and Organization</alert></p>
+  <p>The chapters and sections mirror the course calendar. Within each section you will find:</p>
+  <ul>
+    <li><term>Definitions</term> and <term>Theorems</term> that frame the main ideas.</li>
+    <li><term>Examples</term> that model reasoning, computation, and interpretation.</li>
+    <li><term>Exercises</term> spanning conceptual checks, skill practice, and applications.</li>
+    <li><term>Remarks</term> and <term>alerts</term> highlighting pitfalls and teaching notes.</li>
+  </ul>
+  <p>Examples and exercises are selected to build toward the techniques and habits needed for quizzes and department-wide exams.</p>
+
+  <p><alert>Using the Book in Class</alert></p>
+  <p>Suggestions for weaving the text into lessons:</p>
+  <ul>
+    <li><em>Lead with ideas:</em> foreground the definition or theorem and its intuition before procedural steps.</li>
+    <li><em>Model reasoning:</em> work through examples that showcase setup, algebra, and interpretation.</li>
+    <li><em>Guided practice:</em> assign short in-class problems that mirror examples, leaving space for collaboration.</li>
+    <li><em>Bridge to recitation:</em> point out which exercise sets are best suited for group work later in the week.</li>
+  </ul>
+
+  <p><alert>Technology and Tools</alert></p>
+  <p>This book includes graphs, figures, and sometimes interactive elements (such as Desmos activities). These can be effective for building intuition, especially early on. Calculators and graphing tools may be used by students when first learning new content, but they should not become a substitute for understanding. Remind students that calculator use is often restricted—or entirely prohibited—on quizzes and exams (policies vary by semester). Encourage them to practice without calculators so they are prepared for assessments.</p>
+
+  <p><alert>Supporting Student Learning</alert></p>
+  <p>Help students get the most out of the text by making expectations explicit:</p>
+  <ul>
+    <li>Ask students to preview definitions and theorems before class.</li>
+    <li>Encourage them to revisit worked examples after class, comparing their solutions to the text.</li>
+    <li>Promote group work in recitations and study sessions, emphasizing clear explanation of reasoning.</li>
+    <li>Stress the importance of exact form, proper notation, and interpretation of results.</li>
+  </ul>
+
+  <p><alert>Flexibility for Teaching Styles</alert></p>
+  <p>The text can be used with different instructional approaches:</p>
+  <ul>
+    <li><em>Lecture-forward:</em> select a small set of worked examples and reserve time for guided practice.</li>
+    <li><em>Activity-based:</em> begin with targeted problems, then synthesize with definitions and theorems.</li>
+    <li><em>Flipped:</em> assign readings or videos outside class and use class time for problem-solving and Q&amp;A.</li>
+  </ul>
+  <p>Supplement with your own examples or applications while keeping alignment with shared course goals.</p>
+
+  <p><alert>Connections to Course Infrastructure</alert></p>
+  <p>Integrate this book with other course resources:</p>
+  <ul>
+    <li><c>D2L</c> for announcements, scheduling, and gradebook access.</li>
+    <li><c>WeBWorK</c> for online practice aligned with section skills.</li>
+    <li>Recitations and weekly reviews for structured collaboration.</li>
+    <li>Departmental quizzes and exams for common assessment standards.</li>
+  </ul>
+
+  <p><alert>Final Notes</alert></p>
+  <p>This book provides a shared framework for consistency across all sections of <c>MTH 132</c>. Adapt examples and presentation to fit your teaching style while keeping notation, core content, and expectations uniform. Model the same habits we want students to adopt: show work clearly, use precise language, and interpret results in context.</p>
+
+
+
   </preface>
 
 

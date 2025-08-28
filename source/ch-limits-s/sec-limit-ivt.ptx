@@ -16,10 +16,9 @@
 
 
 <figure xml:id="fig-ivt-illustration">
-  <caption>Illustration of the Intermediate Value Theorem: a continuous function on <m>[a,b]</m>, a value <m>r</m> between <m>f(a)</m> and <m>f(b)</m>, and a point <m>c</m> with <m>f(c)=r</m>.</caption>
-  <description>
-    A coordinate plane showing a smooth curve on the interval [a,b]. A horizontal line at y=r crosses the curve at a point c strictly between a and b. Vertical guides mark a and b, and labeled points indicate f(a), f(b), and f(c)=r.
-  </description>
+  <caption>Illustration of the Intermediate Value Theorem: a continuous function on <m>[a,b]</m>, a value <m>r</m> 
+    between <m>f(a)</m> and <m>f(b)</m>, and at least one point <m>c</m> with <m>f(c)=r</m>.</caption>
+
   <image width="80%">
     <latex-image>
 \begin{tikzpicture}[scale=1.0, line cap=round, line join=round, >=stealth]
@@ -71,17 +70,32 @@
   \draw[thick] (0.5,-0.08) -- (5.5,-0.08);
   \draw[thick] (0.5,-0.08) -- (0.5,-0.18);
   \draw[thick] (5.5,-0.08) -- (5.5,-0.18);
-  \node[below] at (3.0,-0.18) {$[a,b]$};
+  
 \end{tikzpicture}
     </latex-image>
   </image>
-</figure>
-
+</figure>  
 </theorem>
 
+<remark>
 <p>This says that as the function value <m>f(x)</m> goes continuously from 
 <m>f(a)</m> to <m>f(b)</m>, perhaps rising and falling many times, it must pass 
 through every value <m>r</m> between <m>f(a)</m> and <m>f(b)</m>.</p>
+</remark>
+
+<example xml:id="ex-ivt-first">
+  <title>Applying the Intermediate Value Theorem</title>
+  <statement>
+    <p>Let <m>f(x)=x^3+x-1</m>. Show that there exists a number <m>c\in(0,1)</m> such that <m>f(c)=0</m>.</p>
+  </statement>
+  <solution>
+    <p>The function <m>f(x)=x^3+x-1</m> is a polynomial, hence continuous on every interval, in particular on <m>[0,1]</m>.</p>
+    <p>Evaluate the endpoints: <m>f(0)=0^3+0-1=-1</m> and <m>f(1)=1^3+1-1=1</m>. Thus <m>f(0)=-1&lt;0&lt;1=f(1)</m>, so the value <m>0</m> lies between <m>f(0)</m> and <m>f(1)</m>.</p>
+    <p>By the Intermediate Value Theorem, there exists <m>c\in(0,1)</m> such that <m>f(c)=0</m>. 
+      So although we do not know the exact value of <m>c</m> we know that is must exist and what interval it is in. </p>
+  </solution>
+</example>
+
 
 <p>Note that this is <alert>not</alert> necessarily true for a discontinuous function like 
 <m>g(x)</m> in the graph above: taking <m>[a,b]=[2,4]</m>, we have 
@@ -93,19 +107,6 @@ there is a vertical asymptote discontinuity at <m>t=3</m>, and there is
 with <m>g(0)\approx -0.33</m>, <m>g(1)\approx 0.72</m>, and <m>g(0)&lt;0&lt;g(1)</m>, 
 so the Theorem says there must be some <m>c\in(0,1)</m> with <m>g(c)=0</m>. 
 This is just the <m>x</m>-intercept visible in the graph.</p>
-
-
-<example xml:id="ex-ivt-first">
-  <statement>
-    <p>Let <m>f(x)=x^3+x-1</m>. Show that there exists a number <m>c\in(0,1)</m> such that <m>f(c)=0</m>.</p>
-  </statement>
-  <solution>
-    <p>The function <m>f(x)=x^3+x-1</m> is a polynomial, hence continuous on every interval, in particular on <m>[0,1]</m>.</p>
-    <p>Evaluate the endpoints: <m>f(0)=0^3+0-1=-1</m> and <m>f(1)=1^3+1-1=1</m>. Thus <m>f(0)=-1&lt;0&lt;1=f(1)</m>, so the value <m>0</m> lies between <m>f(0)</m> and <m>f(1)</m>.</p>
-    <p>By the Intermediate Value Theorem, there exists <m>c\in(0,1)</m> such that <m>f(c)=0</m>. (We have shown existence of a root; we are not claiming a formula for <m>c</m>.)</p>
-  </solution>
-</example>
-
 
 <example>
   <statement>
@@ -120,6 +121,13 @@ This is just the <m>x</m>-intercept visible in the graph.</p>
     <m>c\in(0,\pi)</m> with <m>f(c)=0</m>, meaning <m>\cos(c)=c</m>.</p>
   </solution>
 </example>
+
+
+
+
+
+
+
 </section>
 
 
