@@ -3,78 +3,72 @@
 <section xml:id="sec-limit-ivt" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Intermediate Value Theorem</title>
 
+<objectives>
+  <ul>
+    <li>State the Intermediate Value Theorem and explain in your own words what it guarantees about continuous functions.</li>
+    <li>Apply the IVT to demonstrate that an equation has a solution within a given interval, even without finding the exact solution.</li>
+    <li>Recognize situations where the IVT cannot be applied, such as when a function is not continuous on the entire interval.</li>
+    <li>Interpret the IVT graphically and numerically, understanding how it ensures intermediate values are attained.</li>
+  </ul>
+</objectives>
+
+
+  <p>
+    One of the most important applications of continuity is the 
+    <term>Intermediate Value Theorem</term> (IVT). 
+    This theorem provides a way to guarantee the existence of solutions 
+    to equations, even when we cannot solve them exactly. 
+    It also explains why continuous functions must pass through 
+    all intermediate values between two function outputs.
+  </p>
+
+
 <theorem xml:id="thm-IVT">
-  <title>Intermediate Value Theorem</title>
+  <title>Intermediate Value Theorem (IVT)</title>
   <statement>
     <p>If <m>f(x)</m> is continuous for <m>x</m> in the interval <m>[a,b]</m>, 
     and <m>r</m> is between <m>f(a)</m> and <m>f(b)</m>, meaning either 
-    <m>f(a) &lt; r &lt; f(b)</m> or <m>f(a) &gt; r &gt; f(b)</m>, then there is a value 
+    <m>f(a) &lt; r &lt; f(b)</m> or <m>f(a) &gt; r &gt; f(b)</m>, then there is at least one (but possibly more) value of 
     <m>c \in (a,b)</m><fn>Here <m>c</m> lies in the open interval <m>(a,b)</m>, 
     between <m>a</m> and <m>b</m> but excluding both endpoints: <m>a&lt;c&lt;b</m>.</fn> 
     such that <m>f(c)=r</m>.</p>
   </statement>
 
-
+<sidebyside width="70%">
+  
 <figure xml:id="fig-ivt-illustration">
   <caption>Illustration of the Intermediate Value Theorem: a continuous function on <m>[a,b]</m>, a value <m>r</m> 
     between <m>f(a)</m> and <m>f(b)</m>, and at least one point <m>c</m> with <m>f(c)=r</m>.</caption>
 
-  <image width="80%">
+  <image xml:id="ivt-ill">
     <latex-image>
-\begin{tikzpicture}[scale=1.0, line cap=round, line join=round, >=stealth]
-  % Axes
-  \draw[->] (-0.2,0) -- (6.2,0) node[below right] {$x$};
-  \draw[->] (0,-0.2) -- (0,3.6) node[left] {$y$};
-
-  % Parameters (placed as coordinates for clarity)
-  % We'll use a=0.5, b=5.5, r=1.8, and choose a smooth curve passing through (c,r) with c=3.2.
-  % Curve: piecewise-specified via smooth plot so that it's clearly continuous.
-  \draw[very thick, blue]
-    plot[smooth] coordinates {
-      (0.5,0.8)  % f(a)
-      (1.2,1.6)
-      (1.5,2.6)
-      (2.0,2.1)
-      (2.4,1.2)
-      (3.2,1.8)  % chosen point where f(c) = r
-      (3.8,2.2)
-      (4.2,2.7)
-      (5.5,2.1)  % f(b)
-    };
-
-  % Interval endpoints a and b on x-axis
-  \draw[dashed] (0.5,0) -- (0.5,0.8);
-  \draw[dashed] (5.5,0) -- (5.5,2.1);
-  \filldraw[blue] (0.5,0.8) circle (1.6pt);
-  \filldraw[blue] (5.5,2.1) circle (1.6pt);
-  \node[below] at (0.5,0) {$a$};
-  \node[below] at (5.5,0) {$b$};
-
-  % Labels for f(a) and f(b)
-  \node[left]  at (0,0.8) {$f(a)$};
-  \node[left]  at (0,2.1) {$f(b)$};
-  \draw[dotted] (0,0.8) -- (0.5,0.8);
-  \draw[dotted] (0,2.1) -- (5.5,2.1);
-
-  % Horizontal line y = r
-  \draw[red, thick] (-0.05,1.8) -- (6.05,1.8);
-  \node[right, red] at (6.05,1.8) {$y=r$};
-
-  % Intersection point c (chosen explicitly on the curve)
-  \draw[dashed] (3.2,0) -- (3.2,1.8);
-  \filldraw[red] (3.2,1.8) circle (2pt);
-  \node[below] at (3.2,0) {$c$};
-  \node[above right, red] at (3.2,1.8) {$f(c)=r$};
-
-  % Bracket to emphasize the closed interval [a,b]
-  \draw[thick] (0.5,-0.08) -- (5.5,-0.08);
-  \draw[thick] (0.5,-0.08) -- (0.5,-0.18);
-  \draw[thick] (5.5,-0.08) -- (5.5,-0.18);
-  
-\end{tikzpicture}
+      \begin{tikzpicture}[scale=.3]
+		
+		\draw[blue, thick, domain=1:17, samples=200, smooth] plot ({\x}, {7*sin(\x/2 r) + 1.5*(\x) +2 -0.05*(\x)^2});
+		
+		\draw [blue] (6,6) node {$f(x)$};
+		
+		\draw[dashed] ({1}, {7*sin(1/2 r) + 1.5*(1) +2 -0.05*(1)^2}) node[blue] {$\bullet$} -- (1,0) node[below] {$a$};
+		\draw[dashed] ({1}, {7*sin(1/2 r) + 1.5*(1) +2 -0.05*(1)^2}) --  (0,{7*sin(1/2 r) + 1.5*(1) +2 -0.05*(1)^2}) node[left] {$f(a)$};
+		
+		\draw[dashed] ({17}, {7*sin(17/2 r) + 1.5*(17) +2 -0.05*(17)^2}) node[blue] {$\bullet$} -- (17,0) node[below] {$b$};
+		\draw[dashed] ({17}, {7*sin(17/2 r) + 1.5*(17) +2 -0.05*(17)^2}) -- (0,{7*sin(17/2 r) + 1.5*(17) +2 -0.05*(17)^2}) node[left] {$f(b)$};
+		
+		\draw[dashed] ({13.12}, {15}) node[red] {$\bullet$} -- (13.12,0) node[below] {$c$};
+		
+		\draw[thick, red] (20,15) -- (-.2,15) node[left] {$y=r$};
+		
+		
+		\draw [->] (-2,0) -- (20,0) node[above] {$x$};
+		\draw [->] (0,-2) -- (0,23) node[right] {$y$};
+	\end{tikzpicture}
     </latex-image>
   </image>
-</figure>  
+</figure>
+</sidebyside>
+
+
+
 </theorem>
 
 <remark>
@@ -83,8 +77,13 @@
 through every value <m>r</m> between <m>f(a)</m> and <m>f(b)</m>.</p>
 </remark>
 
+ <p>
+    Let's see how the theorem works in practice.
+  </p>
+
+
 <example xml:id="ex-ivt-first">
-  <title>Applying the Intermediate Value Theorem</title>
+  <title>Applying the IVT</title>
   <statement>
     <p>Let <m>f(x)=x^3+x-1</m>. Show that there exists a number <m>c\in(0,1)</m> such that <m>f(c)=0</m>.</p>
   </statement>
@@ -96,17 +95,71 @@ through every value <m>r</m> between <m>f(a)</m> and <m>f(b)</m>.</p>
   </solution>
 </example>
 
+  <p>
+    In the previous example, everything worked out neatly: the function was continuous on the interval 
+    and the target value fell between the two endpoint values. But if continuity is broken, 
+    the Intermediate Value Theorem no longer applies. The next example illustrates this.
+  </p>
 
-<p>Note that this is <alert>not</alert> necessarily true for a discontinuous function like 
-<m>g(x)</m> in the graph above: taking <m>[a,b]=[2,4]</m>, we have 
-<m>g(2)\approx 1.7</m>, <m>g(4)\approx 11.2</m>, and <m>g(2)&lt;7&lt;g(4)</m>, but 
-there is a vertical asymptote discontinuity at <m>t=3</m>, and there is 
-<alert>no</alert> <m>c\in (2,4)</m> with <m>g(c)=7</m>.</p>
+<example xml:id="ex-ivt-rational">
+  <statement>
+    <p>
+      Consider the function:     
+    <m>
+      \quad f(x) = \dfrac{x-1}{x-5}
+    </m>
+    </p>
+    <ol marker="(a)">
+      <li>Does <m>f(x)</m> take on the value <m>2</m> somewhere in the interval <m>[1,6]</m>?</li>
+      <li>Can the Intermediate Value Theorem be applied to justify your answer to (a)? Why or why not?</li>
+    </ol>
+  </statement>
 
-<p>However, <m>g(x)</m> <alert>is</alert> continuous over the interval <m>[0,1]</m>, 
-with <m>g(0)\approx -0.33</m>, <m>g(1)\approx 0.72</m>, and <m>g(0)&lt;0&lt;g(1)</m>, 
-so the Theorem says there must be some <m>c\in(0,1)</m> with <m>g(c)=0</m>. 
-This is just the <m>x</m>-intercept visible in the graph.</p>
+
+
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          Solve <m>f(x)=2</m>:
+        </p>
+        <p></p>
+  
+        <m>
+          \begin{align*}
+          \dfrac{x-1}{x-5} \amp = 2 \\
+          \Longrightarrow\quad x-1 \amp = 2(x-5) \\
+          \Longrightarrow\quad x-1 \amp = 2x-10 \\
+           x \amp = 9.
+        \end{align*}
+        </m>
+      
+ 
+        <p>
+          Since <m>9 \notin [1,6]</m>, the equation <m>f(x)=2</m> has no solution in <m>[1,6]</m>. So <alert>No</alert>, <m>f(x)</m> does not take the value <m>2</m> on <m>[1,6]</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <alert>No</alert> — the Intermediate Value Theorem (IVT) requires continuity on a closed interval. 
+          The function <m>f</m> is not continuous on <m>[1,6]</m> because it has a vertical asymptote at <m>x=5</m> (the denominator is zero there).
+        </p>
+        <p>
+          So even though <m>f(1)=0</m> and <m>f(6)=5</m>, and the value <m>2</m> lies between <m>0</m> and <m>5</m>,
+          because <m>f(x)</m> is not continuous on the entire interval <m>[1,6]</m> the Intermediate Value Theorem cannot be applied.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</example>
+
+
+  <p>
+    Finally, let's look at a famous equation where the IVT guarantees the existence of a solution, 
+    even though we cannot solve it with algebra alone.
+  </p>
 
 <example>
   <statement>
@@ -114,17 +167,242 @@ This is just the <m>x</m>-intercept visible in the graph.</p>
     <m>\cos(x)=x</m>.</p>
   </statement>
   <solution>
-    <p>We have no easy way of solving this equation, but writing 
-    <m>f(x)=\cos(x)-x</m>, we know that <m>f(0)=1</m>, 
-    <m>f(\pi)=-1-\pi</m>, and <m>f(0)&gt;0&gt;f(\pi)</m>. 
-    Since <m>f(x)</m> is continuous, the Theorem guarantees some 
-    <m>c\in(0,\pi)</m> with <m>f(c)=0</m>, meaning <m>\cos(c)=c</m>.</p>
+    <p>
+      There is no simple algebraic way to solve <m>\cos(x)=x</m> directly. 
+      Instead, define a new function 
+    </p>
+    <me>
+      f(x) = \cos(x) - x.
+    </me>
+    <p>
+      Then solving <m>\cos(x)=x</m> is equivalent to finding a root of <m>f(x)</m>, 
+      that is, some <m>c</m> with <m>f(c)=0</m>.
+    </p>
+
+    <p>
+      First check some values of <m>f(x)</m> on the interval <m>[0,\pi]</m>:
+    </p>
+    <ul>
+      <li><m>f(0) = \cos(0) - 0 = 1 - 0 = 1 &gt; 0</m>.</li>
+      <li><m>f(\pi) = \cos(\pi) - \pi = -1 - \pi &lt; 0</m>.</li>
+    </ul>
+
+    <p>
+      Thus, <m>f(0) &gt; 0</m> and <m>f(\pi) &lt; 0</m>, so the function values 
+      change sign between <m>x=0</m> and <m>x=\pi</m>.
+    </p>
+
+    <p>
+      Next, recall that <m>f(x) = \cos(x) - x</m> is continuous: 
+      the cosine function is continuous everywhere, and <m>x</m> is also continuous, 
+      so their difference is continuous.
+    </p>
+
+    <p>
+      By the Intermediate Value Theorem, if a continuous function takes on values of 
+      opposite signs at the endpoints of an interval, then it must equal zero 
+      for some number between those endpoints. Therefore, there exists 
+      <m>c \in (0,\pi)</m> such that <m>f(c)=0</m>.
+    </p>
+
+    <p>
+      In other words, there is some number <m>c</m> with 
+      <m>\cos(c) = c</m>. (In fact, numerically <m>c \approx 0.739</m>, 
+      but the IVT only guarantees existence, not the exact value.)
+    </p>
   </solution>
 </example>
 
 
+<p>
+  The Intermediate Value Theorem is powerful because it guarantees the existence of solutions 
+  even when we cannot compute them exactly. Without needing advanced tools or calculators, 
+  we can still be certain that roots and crossing points must lie within specific intervals — 
+  giving us both confidence and direction in solving problems that might otherwise feel impossible.
+</p>
 
+<exercises xml:id="exercises-ivt">
+  <title>Practice / Study Problems</title>
 
+  <exercisegroup>
+    <title>Some True/False Questions</title>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and explain your reasoning
+      </p>
+    </introduction>
+
+    <exercise>
+      <statement><p>
+        The IVT can be used to show that <m>x^3+2x-5=0</m> has a solution in the interval <m>[1,2]</m>.
+      </p></statement>
+      <solution>
+        <p><alert>True.</alert> Let <m>f(x)=x^3+2x-5</m> (a polynomial, hence continuous). Then
+        <m>f(1)=1+2-5=-2&lt;0</m> and <m>f(2)=8+4-5=7&gt;0</m>. Since 0 lies between <m>f(1)</m> and <m>f(2)</m>, the IVT guarantees a root <m>c\in(1,2)</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        The IVT tells us exactly where a solution occurs and gives us the formula for the solution.
+      </p></statement>
+      <solution>
+        <p><alert>False.</alert> The IVT guarantees <em>existence</em> of at least one solution in an interval but does not locate it exactly or provide a formula.</p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        If <m>f</m> is continuous on <m>[0,2]</m> and <m>f(0)=-1</m>, <m>f(2)=3</m>, then <m>f(x)=0</m> for some <m>x \in (0,2)</m>.
+      </p></statement>
+      <solution>
+        <p><alert>True.</alert> Continuity on <m>[0,2]</m> and opposite signs at the endpoints imply, by IVT, that some <m>c\in(0,2)</m> satisfies <m>f(c)=0</m>.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <title>Multiple Choice</title>
+    <introduction>
+      <p>
+        For each question, choose the single best answer from the options provided.
+      </p>
+    </introduction>
+
+    <exercise>
+      <statement>
+        <p>
+          Which of the following best describes what the IVT guarantees?
+        </p>
+        <ol marker="A">
+          <li>The exact solution of <m>f(x)=r</m>.</li>
+          <li>The existence of at least one solution to <m>f(x)=r</m> in <m>(a,b)</m>, if <m>f</m> is continuous.</li>
+          <li>The maximum value of <m>f</m> on <m>[a,b]</m>.</li>
+          <li>The slope of the tangent line to <m>f</m>.</li>
+        </ol>
+      </statement>
+      <solution>
+        <p><alert>Answer:</alert> B. The IVT guarantees existence (not exact location or value) provided continuity on <m>[a,b]</m> and that <m>r</m> lies between <m>f(a)</m> and <m>f(b)</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>f(x)=x^2-2</m>. On which interval can the IVT be used to show a solution to <m>f(x)=0</m> exists?
+        </p>
+        <ol marker="A">
+          <li><m>[0,1]</m></li>
+          <li><m>[1,2]</m></li>
+          <li><m>[2,3]</m></li>
+          <li><m>[-3,-2]</m></li>
+        </ol>
+      </statement>
+      <solution>
+        <p><alert>Answer:</alert> B. <m>f(1)=-1&lt;0</m>, <m>f(2)=2&gt;0</m> so a root lies in <m>(1,2)</m>. The other intervals have no sign change.</p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          The IVT can be used to show that <m>\cos(x)=x</m> has a solution in which interval?
+        </p>
+        <ol marker="A">
+          <li><m>[0,1]</m></li>
+          <li><m>[1,2]</m></li>
+          <li><m>[2,3]</m></li>
+          <li><m>[3,4]</m></li>
+        </ol>
+      </statement>
+      <solution>
+        <p><alert>Answer:</alert> A. For <m>f(x)=\cos x - x</m>, <m>f(0)=1&gt;0</m> and <m>f(1)=\cos(1)-1&lt;0</m>; continuity gives a root in <m>(0,1)</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Which of the following is <em>not</em> an application of the IVT?
+        </p>
+        <ol marker="A">
+          <li>Proving an equation has a solution in an interval.</li>
+          <li>Guaranteeing that a continuous function crosses a certain horizontal line.</li>
+          <li>Finding the exact numerical value of a solution.</li>
+          <li>Explaining why a temperature must have reached 70°F if it rose from 65°F to 75°F.</li>
+        </ol>
+      </statement>
+      <solution>
+        <p><alert>Answer:</alert> C. IVT does not give exact values; it guarantees existence.</p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+
+  <exercisegroup>
+    <title>Written Response</title>
+    <introduction>
+      <p>
+        Answer each question in complete sentences, showing your reasoning and any supporting work. 
+      </p>
+    </introduction>
+
+    <exercise>
+      <statement><p>
+        Use the IVT to prove that the equation <m>x^3-7x+5=0</m> has a solution in the interval <m>(0,2)</m>.
+      </p></statement>
+      <solution>
+        <p>
+          Let <m>f(x)=x^3-7x+5</m> (continuous). Compute <m>f(0)=5&gt;0</m> and <m>f(2)=8-14+5=-1&lt;0</m>. Since 0 lies between these values, the IVT guarantees a root <m>c\in(0,2)</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        Explain why the function <m>f(x)=\dfrac{1}{x}</m> does not satisfy the conditions of the IVT on <m>[-1,1]</m>.
+      </p></statement>
+      <solution>
+        <p>
+          <m>f</m> is not defined at <m>x=0</m> and hence not continuous on the closed interval <m>[-1,1]</m>. The IVT requires continuity on the entire interval.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        A function <m>f</m> is continuous on <m>[0,5]</m>, with <m>f(0)=-2</m> and <m>f(5)=7</m>. Use the IVT to explain why <m>f(x)=3</m> must have a solution in <m>(0,5)</m>.
+      </p></statement>
+      <solution>
+        <p>
+          Since <m>3</m> lies between <m>-2</m> and <m>7</m>, and <m>f</m> is continuous on <m>[0,5]</m>, the IVT guarantees <m>c\in(0,5)</m> with <m>f(c)=3</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        Suppose a car's speed (a continuous function of time) was 40 mph at 2:00 pm and 65 mph at 2:10 pm. Explain, using the IVT, why there must have been a time when the car's speed was exactly 55 mph.
+      </p></statement>
+      <solution>
+        <p>
+          Let <m>v(t)</m> be speed, continuous on <m>[2{:}00,2{:}10]</m>. Since <m>55</m> lies between <m>40</m> and <m>65</m>, the IVT implies some time <m>c</m> in that interval with <m>v(c)=55</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement><p>
+        Why does the IVT not apply to the function <m>f(x)=\dfrac{x^2-1}{x-1}</m> on <m>[0,2]</m>, even though <m>f(0)=1</m> and <m>f(2)=3</m>?
+      </p></statement>
+      <solution>
+        <p>
+          The given formula is undefined at <m>x=1</m> (removable discontinuity), so the function is not continuous on the entire closed interval <m>[0,2]</m>. 
+          Thus the hypotheses of the IVT are not met.
+        </p>
+      </solution>
+    </exercise>
+  </exercisegroup>
+</exercises>
 
 
 
