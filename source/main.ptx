@@ -12,6 +12,9 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
+
+
+    <xi:include href="./ch-precalc.ptx" />
     <xi:include href="./ch-limits.ptx" />
     <xi:include href="./ch-derivative.ptx" />
     <xi:include href="./ch-derivativeApplications.ptx" />
