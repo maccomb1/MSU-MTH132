@@ -33,29 +33,6 @@
 
 
 
-<appendix>
-
-    <title>Algebra Review: Core Tools for Calculus</title>
-
-    <definition xml:id="def-absolute-value">
-  <title>Absolute Value</title>
-  <statement>
-    <p>
-      For any real number <m>A</m>, the <term>absolute value</term> of <m>A</m>, written <m>|A|</m>, is defined by
-    </p>
-    <me>
-      |A| = \begin{cases}
-        A, \amp \text{if } A \geq 0, \\\\
-        -A, \amp \text{if } A \le 0.
-      \end{cases}
-    </me>
-    <p>
-      Geometrically, <m>|A|</m> represents the distance from <m>A</m> to <m>0</m> on the number line.
-    </p>
-  </statement>
-</definition>
-
-  </appendix>
 
 
 </backmatter>
