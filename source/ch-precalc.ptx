@@ -11,8 +11,9 @@
   
   <!-- include sections -->
   <xi:include href="./ch-precalc-s/sec-precalc-fractions.ptx" />
-  <xi:include href="./ch-precalc-s/sec-precalc-trig.ptx" />
   <xi:include href="./ch-precalc-s/sec-precalc-absval.ptx" />
+  <xi:include href="./ch-precalc-s/sec-precalc-explogs.ptx" />
+  <xi:include href="./ch-precalc-s/sec-precalc-trig.ptx" />
   <xi:include href="./ch-precalc-s/sec-precalc-div.ptx" />
   
 
