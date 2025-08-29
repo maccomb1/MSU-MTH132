@@ -19,6 +19,60 @@ var ptx_lunr_docs = [
   "body": " Instructors: How to Use this Book  This text is both a student resource and a teaching tool for MTH 132: Calculus I . It aligns with course goals, departmental pacing, and assessments such as weekly reviews, quizzes, and exams. The notes below suggest ways to integrate sections, examples, and exercises into your teaching while maintaining consistency across the course.  Structure and Organization  The chapters and sections mirror the course calendar. Within each section you will find:   Definitions and Theorems that frame the main ideas.  Examples that model reasoning, computation, and interpretation.  Exercises spanning conceptual checks, skill practice, and applications.  Remarks and alerts highlighting pitfalls and teaching notes.   Examples and exercises are selected to build toward the techniques and habits needed for quizzes and department-wide exams.  Using the Book in Class  Suggestions for weaving the text into lessons:   Lead with ideas: foreground the definition or theorem and its intuition before procedural steps.  Model reasoning: work through examples that showcase setup, algebra, and interpretation.  Guided practice: assign short in-class problems that mirror examples, leaving space for collaboration.  Bridge to recitation: point out which exercise sets are best suited for group work later in the week.   Technology and Tools  This book includes graphs, figures, and sometimes interactive elements (such as Desmos activities). These can be effective for building intuition, especially early on. Calculators and graphing tools may be used by students when first learning new content, but they should not become a substitute for understanding. Remind students that calculator use is often restricted—or entirely prohibited—on quizzes and exams (policies vary by semester). Encourage them to practice without calculators so they are prepared for assessments.  Supporting Student Learning  Help students get the most out of the text by making expectations explicit:   Ask students to preview definitions and theorems before class.  Encourage them to revisit worked examples after class, comparing their solutions to the text.  Promote group work in recitations and study sessions, emphasizing clear explanation of reasoning.  Stress the importance of exact form, proper notation, and interpretation of results.   Flexibility for Teaching Styles  The text can be used with different instructional approaches:   Lecture-forward: select a small set of worked examples and reserve time for guided practice.  Activity-based: begin with targeted problems, then synthesize with definitions and theorems.  Flipped: assign readings or videos outside class and use class time for problem-solving and Q&A.   Supplement with your own examples or applications while keeping alignment with shared course goals.  Connections to Course Infrastructure  Integrate this book with other course resources:   D2L for announcements, scheduling, and gradebook access.  WeBWorK for online practice aligned with section skills.  Recitations and weekly reviews for structured collaboration.  Departmental quizzes and exams for common assessment standards.   Final Notes  This book provides a shared framework for consistency across all sections of MTH 132 . Adapt examples and presentation to fit your teaching style while keeping notation, core content, and expectations uniform. Model the same habits we want students to adopt: show work clearly, use precise language, and interpret results in context.  "
 },
 {
+  "id": "sec-precalc-fractions",
+  "level": "1",
+  "url": "sec-precalc-fractions.html",
+  "type": "Section",
+  "number": "0.1",
+  "title": "Fractions",
+  "body": " Fractions  Text of section.  "
+},
+{
+  "id": "sec-precalc-absval",
+  "level": "1",
+  "url": "sec-precalc-absval.html",
+  "type": "Section",
+  "number": "0.2",
+  "title": "Absolute Values",
+  "body": " Absolute Values  Text of section.   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.    "
+},
+{
+  "id": "def-absolute-value",
+  "level": "2",
+  "url": "sec-precalc-absval.html#def-absolute-value",
+  "type": "Definition",
+  "number": "0.2.1",
+  "title": "Absolute Value.",
+  "body": " Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.   "
+},
+{
+  "id": "sec-precalc-explogs",
+  "level": "1",
+  "url": "sec-precalc-explogs.html",
+  "type": "Section",
+  "number": "0.3",
+  "title": "Exponentials and Logs",
+  "body": " Exponentials and Logs  Text of section.  "
+},
+{
+  "id": "sec-precalc-trig",
+  "level": "1",
+  "url": "sec-precalc-trig.html",
+  "type": "Section",
+  "number": "0.4",
+  "title": "Trig",
+  "body": " Trig  Text of section.  "
+},
+{
+  "id": "sec-precalc-div",
+  "level": "1",
+  "url": "sec-precalc-div.html",
+  "type": "Section",
+  "number": "0.5",
+  "title": "Polynomial Division",
+  "body": " Polynomial Division  Text of section.  "
+},
+{
   "id": "sec-graphical-limits",
   "level": "1",
   "url": "sec-graphical-limits.html",
@@ -212,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-limit-value-vs-function",
   "type": "Exercise",
-  "number": "1.1.6.1",
+  "number": "1",
   "title": "",
   "body": "  True or False: If , then .    False. A limit describes nearby behavior; the function value at the point can differ (or be undefined).   "
 },
@@ -221,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-onesided-implies-twosided",
   "type": "Exercise",
-  "number": "1.1.6.2",
+  "number": "2",
   "title": "",
   "body": "  True or False: If and , then .    True. Equality of both one-sided limits guarantees the two-sided limit exists and has that value.   "
 },
@@ -230,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-infinite-limit-value-defined",
   "type": "Exercise",
-  "number": "1.1.6.3",
+  "number": "3",
   "title": "",
   "body": "  True or False: If , then is undefined.    False. The limit concerns values near ; may be anything (defined or not) without affecting the infinite limit.   "
 },
@@ -239,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-twosided-dne-implies-onesided-dne",
   "type": "Exercise",
-  "number": "1.1.6.4",
+  "number": "4",
   "title": "",
   "body": "  True or False: If does not exist, then both and do not exist.    False. One-sided limits may exist but differ; that difference causes the two-sided limit to fail.   "
 },
@@ -248,7 +302,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-va-implies-infinite-onesided",
   "type": "Exercise",
-  "number": "1.1.6.5",
+  "number": "5",
   "title": "",
   "body": "  True or False: If is a vertical asymptote, then at least one of or is infinite.    True. A vertical asymptote is characterized by unbounded behavior from one or both sides.   "
 },
@@ -257,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-neg-infty-description",
   "type": "Exercise",
-  "number": "1.1.6.6",
+  "number": "6",
   "title": "",
   "body": "  True or False: If the graph decreases without bound as , then .    True. “Decreases without bound” means the values become arbitrarily negative.   "
 },
@@ -266,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-one-over-xsq",
   "type": "Exercise",
-  "number": "1.1.6.7",
+  "number": "7",
   "title": "",
   "body": "  True or False: .    True. Values grow beyond any bound from either side since for .   "
 },
@@ -275,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-2x-over-xsqminus9",
   "type": "Exercise",
-  "number": "1.1.6.8",
+  "number": "8",
   "title": "",
   "body": "  True or False: If , then is a vertical asymptote.    True.  ; the numerator is nonzero at , so is a VA.   "
 },
@@ -284,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-tf-denominator-zero-always-va",
   "type": "Exercise",
-  "number": "1.1.6.9",
+  "number": "9",
   "title": "",
   "body": "  True or False: If a rational function’s denominator is zero at , then the function must have a vertical asymptote at .    False. A common factor in numerator and denominator could cancel instead like in Problem .   "
 },
@@ -419,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-3",
   "type": "Exercise",
-  "number": "1.2.6.1",
+  "number": "1",
   "title": "",
   "body": " If and , then .   True. By the Sum Law: .   "
 },
@@ -428,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-4",
   "type": "Exercise",
-  "number": "1.2.6.2",
+  "number": "2",
   "title": "",
   "body": " If , then .   False. A limit concerns nearby values, not necessarily the value at the point. For example, consider Example . The limit exists even though the function itself is not defined at the point.   "
 },
@@ -437,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-5",
   "type": "Exercise",
-  "number": "1.2.6.3",
+  "number": "3",
   "title": "",
   "body": "  .   True. Factor and cancel: for , so .   "
 },
@@ -446,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-6",
   "type": "Exercise",
-  "number": "1.2.6.4",
+  "number": "4",
   "title": "",
   "body": " The Limit Laws can always be applied, even if one of the limits does not exist.   False. Each Limit Law requires the relevant limits to exist. If one does not exist, the law cannot be applied.   "
 },
@@ -455,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-7",
   "type": "Exercise",
-  "number": "1.2.6.5",
+  "number": "5",
   "title": "",
   "body": " If and , then must equal 1.   False. The form is meaningless. For example, , give .   "
 },
@@ -464,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-8",
   "type": "Exercise",
-  "number": "1.2.6.6",
+  "number": "6",
   "title": "",
   "body": " If is a polynomial, then for every real number .   True. Polynomials are continuous. We can apply the limit laws to substitute as discussed previously in this section. So for all .   "
 },
@@ -473,7 +527,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-9",
   "type": "Exercise",
-  "number": "1.2.6.7",
+  "number": "7",
   "title": "",
   "body": "  does not exist.   True.  and , so the two-sided limit does not exist.   "
 },
@@ -482,7 +536,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-10",
   "type": "Exercise",
-  "number": "1.2.6.8",
+  "number": "8",
   "title": "",
   "body": "  .   False. Simplify to , so , not .   "
 },
@@ -491,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-11",
   "type": "Exercise",
-  "number": "1.2.6.9",
+  "number": "9",
   "title": "",
   "body": "  .   True. By the Squeeze Theorem: , and both bounds go to 0 as .   "
 },
@@ -500,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-laws.html#tf-exercises-limits-2-12",
   "type": "Exercise",
-  "number": "1.2.6.10",
+  "number": "10",
   "title": "",
   "body": " The Squeeze Theorem can be used to evaluate .   True. Since , multiplying by gives . Both bounds go to 0, so .   "
 },
@@ -680,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-3",
   "type": "Exercise",
-  "number": "1.3.9.1",
+  "number": "1",
   "title": "",
   "body": " If is continuous at , then .  True. This is exactly the definition of continuity at a point.  "
 },
@@ -689,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-4",
   "type": "Exercise",
-  "number": "1.3.9.2",
+  "number": "2",
   "title": "",
   "body": " The function has a removable discontinuity at .   True. At , numerator and denominator both vanish, giving . Simplifying, for , so . Since is undefined, the discontinuity is removable.   "
 },
@@ -698,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-5",
   "type": "Exercise",
-  "number": "1.3.9.3",
+  "number": "3",
   "title": "",
   "body": " If and , then has a jump discontinuity at .   True. The left and right limits both exist but are unequal, which is the definition of a jump discontinuity.   "
 },
@@ -707,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-6",
   "type": "Exercise",
-  "number": "1.3.9.4",
+  "number": "4",
   "title": "",
   "body": " The function is continuous for all real numbers.   False. The function is only defined for . It is continuous on its domain , but not for all real numbers.   "
 },
@@ -716,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-7",
   "type": "Exercise",
-  "number": "1.3.9.5",
+  "number": "5",
   "title": "",
   "body": " If and are both continuous at , then is also continuous at .   True. Can verify using the limit laws and definition of continuity.   "
 },
@@ -725,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-8",
   "type": "Exercise",
-  "number": "1.3.9.6",
+  "number": "6",
   "title": "",
   "body": " The piecewise function is continuous at .   False.  while . Since the one-sided limits are unequal, the function has a jump discontinuity at .   "
 },
@@ -734,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-9",
   "type": "Exercise",
-  "number": "1.3.9.7",
+  "number": "7",
   "title": "",
   "body": " If exists, then must be continuous at .   False. Continuity also requires that is defined and equals the limit. A function can have a removable discontinuity where the limit exists but the function is undefined (or defined to a different value).   "
 },
@@ -743,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-10",
   "type": "Exercise",
-  "number": "1.3.9.8",
+  "number": "8",
   "title": "",
   "body": " The function has an infinite discontinuity at .   True. As , . The graph has a vertical asymptote at , so this is an infinite discontinuity.   "
 },
@@ -752,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-11",
   "type": "Exercise",
-  "number": "1.3.9.9",
+  "number": "9",
   "title": "",
   "body": " The domain of continuity of is .   False. The square root requires , and the denominator excludes . Thus the domain is . At the endpoint , we have and   So the function is continuous at (one-sided at the endpoint). Therefore the domain of continuity is , not .   "
 },
@@ -761,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-limit-continuity.html#tf-exercises-continuity-2-12",
   "type": "Exercise",
-  "number": "1.3.9.10",
+  "number": "10",
   "title": "",
   "body": " If and , then has an essential discontinuity at .   False. When one-sided limits are infinite (even if they diverge differently), this is classified as an infinite discontinuity, not an essential discontinuity.   "
 },
@@ -1133,24 +1187,6 @@ var ptx_lunr_docs = [
   "number": "A",
   "title": "Quiz \/ Exam Formula Sheet",
   "body": " Quiz \/ Exam Formula Sheet  This is a copy of the formulas that are available for you on our formula sheet for 2025 and beyond.  Test   "
-},
-{
-  "id": "backmatter-3",
-  "level": "1",
-  "url": "backmatter-3.html",
-  "type": "Appendix",
-  "number": "B",
-  "title": "Algebra Review: Core Tools for Calculus",
-  "body": " Algebra Review: Core Tools for Calculus   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.    "
-},
-{
-  "id": "def-absolute-value",
-  "level": "2",
-  "url": "backmatter-3.html#def-absolute-value",
-  "type": "Definition",
-  "number": "B.0.1",
-  "title": "Absolute Value.",
-  "body": " Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.   "
 }
 ]
 
