@@ -79,7 +79,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "0.2",
   "title": "Absolute Values",
-  "body": " Absolute Values  Text of section.   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.    "
+  "body": " Absolute Values    Simplify absolute value expressions  Graph absolute value functions  Solve absolute value equations     Why do we need this?  Absolute value functions and equations play an important role throughout MTH 132. They arise when evaluating limits, analyzing domains and ranges of functions, and computing derivatives. They are especially important in integral problems that involve total distance traveled or total area between curves. The examples below highlight how absolute value expressions and equations connect to later topics in the course.   Section - Evaluating limits like in Example .  REPLACE -- Find the domain and range of  REPLACE -- Total Distance traveled.     Important Definitions and Theorems   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.     If then or .       If then .     Instructional Videos  Click on the following links to access helpful instructional videos:   Absolute values as distance  Graphing Absolute Value Functions    Now that you have seen the main ideas and watched videos on each topic, it's time to practice on your own. Take a look at the practice absolute value quiz [NEED TO UPDATE\/IMPROVE] , which includes problems for you to try along with answers provided at the end. Remember, the most important part is showing the steps and reasoning that lead to each answer. That's where your learning really happens!  "
+},
+{
+  "id": "abs-objectives",
+  "level": "2",
+  "url": "sec-precalc-absval.html#abs-objectives",
+  "type": "Objectives",
+  "number": "0.2",
+  "title": "",
+  "body": "  Simplify absolute value expressions  Graph absolute value functions  Solve absolute value equations   "
 },
 {
   "id": "def-absolute-value",
@@ -89,6 +98,33 @@ var ptx_lunr_docs = [
   "number": "0.2.1",
   "title": "Absolute Value.",
   "body": " Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.   "
+},
+{
+  "id": "abs-defs-3",
+  "level": "2",
+  "url": "sec-precalc-absval.html#abs-defs-3",
+  "type": "Theorem",
+  "number": "0.2.2",
+  "title": "",
+  "body": " If then or .  "
+},
+{
+  "id": "abs-defs-4",
+  "level": "2",
+  "url": "sec-precalc-absval.html#abs-defs-4",
+  "type": "Theorem",
+  "number": "0.2.3",
+  "title": "",
+  "body": "  "
+},
+{
+  "id": "abs-defs-5",
+  "level": "2",
+  "url": "sec-precalc-absval.html#abs-defs-5",
+  "type": "Theorem",
+  "number": "0.2.4",
+  "title": "",
+  "body": " If then .  "
 },
 {
   "id": "sec-precalc-explogs",
