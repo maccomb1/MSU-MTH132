@@ -25,7 +25,52 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "0.1",
   "title": "Fractions",
-  "body": " Fractions  Text of section.  "
+  "body": " Fractions    Practice adding, subtracting, multiplying, and dividing fractions  Strengthen skills in factoring expressions  Learn how and why to multiply by a conjugate     Why do we need this?  These algebra skills appear repeatedly in MTH 132, especially when simplifying expressions before taking limits, identifying asymptotes, or working with derivatives and integrals. The examples below show how fraction manipulation, factoring, and conjugates arise in later sections of the course.   Section - Finding vertical asymptotes like in Example .  Section - Evaluating limits like in Example .  REPLACE -- Use the limit definition to calculate the derivative of .  REPLACE -- Find the intervals on which is increasing, decreasing, concave up, and concave down.  REPLACE -- Evaluate the integral     Important Definitions and Theorems   Fraction Operations   Addition:  Subtraction:  Multiplication:  Division:     Factoring — Difference of Squares     The -method for factoring trinomials  To factor :   Compute .  Find two factors of whose sum is .  Split the middle term into two terms with these numbers as coefficients.  Factor by grouping.     Conjugates  Expressions and are conjugates .  Mini Example: For instance, and are conjugates.     Instructional Videos  Click on the following links to access helpful instructional videos:   Multiplying by a Conjugate  Multiply and Simplify Rational Expressions  Simplifying Rational Expression  Simplifying Rational Expressions using the ac-method  Adding\/Subtracting and Simplifying Rational Expressions    Now that you have seen the main ideas and watched videos on each topic, it's time to practice on your own. Take a look at the practice fractions quiz , which includes problems for you to try along with answers provided at the end. Remember, the most important part is showing the steps and reasoning that lead to each answer. That's where your learning really happens!  "
+},
+{
+  "id": "sec-precalc-fractions-2",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-precalc-fractions-2",
+  "type": "Objectives",
+  "number": "0.1",
+  "title": "",
+  "body": "  Practice adding, subtracting, multiplying, and dividing fractions  Strengthen skills in factoring expressions  Learn how and why to multiply by a conjugate   "
+},
+{
+  "id": "sec-fractions-defs-2",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-defs-2",
+  "type": "Definition",
+  "number": "0.1.1",
+  "title": "Fraction Operations.",
+  "body": " Fraction Operations   Addition:  Subtraction:  Multiplication:  Division:   "
+},
+{
+  "id": "sec-fractions-defs-3",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-defs-3",
+  "type": "Theorem",
+  "number": "0.1.2",
+  "title": "Factoring — Difference of Squares.",
+  "body": " Factoring — Difference of Squares   "
+},
+{
+  "id": "sec-fractions-defs-4",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-defs-4",
+  "type": "Theorem",
+  "number": "0.1.3",
+  "title": "The <span class=\"process-math\">\\(ac\\)<\/span>-method for factoring trinomials.",
+  "body": " The -method for factoring trinomials  To factor :   Compute .  Find two factors of whose sum is .  Split the middle term into two terms with these numbers as coefficients.  Factor by grouping.   "
+},
+{
+  "id": "sec-fractions-defs-5",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-defs-5",
+  "type": "Definition",
+  "number": "0.1.4",
+  "title": "Conjugates.",
+  "body": " Conjugates  Expressions and are conjugates .  Mini Example: For instance, and are conjugates.  "
 },
 {
   "id": "sec-precalc-absval",
