@@ -24,8 +24,8 @@ var ptx_lunr_docs = [
   "url": "sec-precalc-fractions.html",
   "type": "Section",
   "number": "0.1",
-  "title": "Fractions",
-  "body": " Fractions    Practice adding, subtracting, multiplying, and dividing fractions  Strengthen skills in factoring expressions  Learn how and why to multiply by a conjugate     Why do we need this?  These algebra skills appear repeatedly in MTH 132, especially when simplifying expressions before taking limits, identifying asymptotes, or working with derivatives and integrals. The examples below show how fraction manipulation, factoring, and conjugates arise in later sections of the course.   Section - Finding vertical asymptotes like in Example .  Section - Evaluating limits like in Example .  REPLACE -- Use the limit definition to calculate the derivative of .  REPLACE -- Find the intervals on which is increasing, decreasing, concave up, and concave down.  REPLACE -- Evaluate the integral     Important Definitions and Theorems   Fraction Operations   Addition:  Subtraction:  Multiplication:  Division:     Factoring — Difference of Squares     The -method for factoring trinomials  To factor :   Compute .  Find two factors of whose sum is .  Split the middle term into two terms with these numbers as coefficients.  Factor by grouping.     Conjugates  Expressions and are conjugates .  Mini Example: For instance, and are conjugates.     Instructional Videos  Click on the following links to access helpful instructional videos:   Multiplying by a Conjugate  Multiply and Simplify Rational Expressions  Simplifying Rational Expression  Simplifying Rational Expressions using the ac-method  Adding\/Subtracting and Simplifying Rational Expressions    Now that you have seen the main ideas and watched videos on each topic, it's time to practice on your own. Take a look at the practice fractions quiz , which includes problems for you to try along with answers provided at the end. Remember, the most important part is showing the steps and reasoning that lead to each answer. That's where your learning really happens!  "
+  "title": "Fractions and Factoring",
+  "body": " Fractions and Factoring    Practice adding, subtracting, multiplying, and dividing fractions and rational expressions.  Strengthen skills in factoring expressions (difference of squares and the -method).  Learn how and why to multiply by a conjugate (rationalizing numerators\/denominators).  Recognize and exclude forbidden values (division by zero) when simplifying.  Rewrite expressions to prepare for limits, derivatives, and integrals.     Overview  This review packs the algebra you'll use constantly in MTH132: operating with fractions, factoring, and using conjugates to simplify messy expressions. You'll find a quick list of key techniques, short review videos, and practice problems to confirm you're ready.  What to do here   Skim the Important Definitions and Theorems to refresh techniques you'll be using.  Watch the Curated Videos on any topics that you need help with.  Try the Practice Problems to check mastery before moving on.     Important Definitions and Theorems   Fraction Operations   Addition:  Subtraction:  Multiplication:  Division:     Factoring — Difference of Squares     The -method for factoring trinomials  To factor :   Compute .  Find two factors of whose sum is .  Split the middle term into two terms with these numbers as coefficients.  Factor by grouping.     Conjugates  Expressions and are conjugates .  Mini Example: For instance, and are conjugates.     Curated Videos  Short refreshers you can watch on demand:   Multiplying by a Conjugate  Multiply and Simplify Rational Expressions  Simplifying Rational Expression  Simplifying Rational Expressions using the ac-method  Adding\/Subtracting and Simplifying Rational Expressions     Practice Problems  Now that you’ve reviewed the techniques and watched the videos, test yourself. Try the problems    Simplify the expression as much as possible:           Factor the numerator  using the -method.   , so . We need two numbers that multiply to and add to : and .  Split the middle term and factor by grouping:        Factor the denominator  as a difference of squares:     Rewrite the fraction with factors and cancel the common factor  (noting the domain restrictions where the original denominator is zero):     Conclusion. The simplified form is        Simplify the expression as much as possible:         Factor the numerator  .  Look for two numbers that multiply to (the constant term) and add to (the coefficient of ). These are and . So:     Factor the denominator  .  Look for two numbers that multiply to and add to . These are and . So:     Write the fraction with factors:     Check for common factors. None of the factors cancel, so this is as simplified as it gets.    Conclusion. The simplified form is .        Simplify the expression as much as possible:          Combine the terms in the numerator.  To combine and , use a common denominator of :     Rewrite the entire fraction.     Simplify the numerator using the conjugate.  Multiply top and bottom by the conjugate to eliminate the radical in :     Simplify the numerator product.      Factor out from .   so the fraction becomes:     Cancel the common factor  (with the restriction ):     Simplify the denominator.  Expand :   So the expression becomes:     Conclusion. A simplified form is        Simplify the expression as much as possible:         Factor the quadratic denominator  :     Simplify the first fraction by canceling the common factor     Add the two fractions now that they have the same denominator:     Conclusion. The simplified form is .     The LCD method gives you the same answer.       Simplify the expression as much as possible:         Multiply numerator and denominator by the conjugate of the denominator, :     Simplify the denominator using the difference of squares formula:   So the denominator becomes .    Cancel the common factor      Conclusion. The simplified form is .        Simplify the expression as much as possible:         Factor the denominators.     Use the LCD  and rewrite each fraction.   Therefore     Expand and simplify the numerator.     Cancel common factors and conclude.         Rationalize the denominator in:         Multiply numerator and denominator by the conjugate of the denominator, :     Simplify the denominator using the difference of squares:     Combine numerator and denominator:     Simplify the negative sign by factoring out from the numerator:     Conclusion. The rationalized form is .        Take . Simplify the quotient:  until the cancels from the denominator.         Substitute the definition of  into the difference quotient:     Multiply numerator and denominator by the conjugate of the numerator, :     Apply the difference of squares identity to the numerator:     Rewrite the fraction. The numerator becomes , so:     Cancel the factor of (as long as ):     Conclusion. The simplified form is .       Remember: The important thing is to be able to create and understand the complete solutions to these problems. Please re-read the definitions, theorems, and examples in the notes as many times as necessary to gain a full understanding. Feel free to email your instructor or visit the MLC if you have questions. Typically on quizzes and exams the answer is worth very few points. The majority of the points are awarded on the work needed to get to the answer.    "
 },
 {
   "id": "sec-precalc-fractions-2",
@@ -34,7 +34,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "0.1",
   "title": "",
-  "body": "  Practice adding, subtracting, multiplying, and dividing fractions  Strengthen skills in factoring expressions  Learn how and why to multiply by a conjugate   "
+  "body": "  Practice adding, subtracting, multiplying, and dividing fractions and rational expressions.  Strengthen skills in factoring expressions (difference of squares and the -method).  Learn how and why to multiply by a conjugate (rationalizing numerators\/denominators).  Recognize and exclude forbidden values (division by zero) when simplifying.  Rewrite expressions to prepare for limits, derivatives, and integrals.   "
 },
 {
   "id": "sec-fractions-defs-2",
@@ -71,6 +71,87 @@ var ptx_lunr_docs = [
   "number": "0.1.4",
   "title": "Conjugates.",
   "body": " Conjugates  Expressions and are conjugates .  Mini Example: For instance, and are conjugates.  "
+},
+{
+  "id": "sec-fractions-practice-3",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-practice-3",
+  "type": "Example",
+  "number": "0.1.5",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:           Factor the numerator  using the -method.   , so . We need two numbers that multiply to and add to : and .  Split the middle term and factor by grouping:        Factor the denominator  as a difference of squares:     Rewrite the fraction with factors and cancel the common factor  (noting the domain restrictions where the original denominator is zero):     Conclusion. The simplified form is     "
+},
+{
+  "id": "sec-fractions-practice-4",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-practice-4",
+  "type": "Example",
+  "number": "0.1.6",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:         Factor the numerator  .  Look for two numbers that multiply to (the constant term) and add to (the coefficient of ). These are and . So:     Factor the denominator  .  Look for two numbers that multiply to and add to . These are and . So:     Write the fraction with factors:     Check for common factors. None of the factors cancel, so this is as simplified as it gets.    Conclusion. The simplified form is .     "
+},
+{
+  "id": "sec-fractions-practice-5",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-practice-5",
+  "type": "Example",
+  "number": "0.1.7",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:          Combine the terms in the numerator.  To combine and , use a common denominator of :     Rewrite the entire fraction.     Simplify the numerator using the conjugate.  Multiply top and bottom by the conjugate to eliminate the radical in :     Simplify the numerator product.      Factor out from .   so the fraction becomes:     Cancel the common factor  (with the restriction ):     Simplify the denominator.  Expand :   So the expression becomes:     Conclusion. A simplified form is     "
+},
+{
+  "id": "ex-fractions-simplify-4",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#ex-fractions-simplify-4",
+  "type": "Example",
+  "number": "0.1.8",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:         Factor the quadratic denominator  :     Simplify the first fraction by canceling the common factor     Add the two fractions now that they have the same denominator:     Conclusion. The simplified form is .     The LCD method gives you the same answer.    "
+},
+{
+  "id": "ex-fractions-simplify-5",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#ex-fractions-simplify-5",
+  "type": "Example",
+  "number": "0.1.10",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:         Multiply numerator and denominator by the conjugate of the denominator, :     Simplify the denominator using the difference of squares formula:   So the denominator becomes .    Cancel the common factor      Conclusion. The simplified form is .     "
+},
+{
+  "id": "ex-fractions-simplify-6",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#ex-fractions-simplify-6",
+  "type": "Example",
+  "number": "0.1.11",
+  "title": "",
+  "body": "  Simplify the expression as much as possible:         Factor the denominators.     Use the LCD  and rewrite each fraction.   Therefore     Expand and simplify the numerator.     Cancel common factors and conclude.      "
+},
+{
+  "id": "ex-fractions-simplify-7",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#ex-fractions-simplify-7",
+  "type": "Example",
+  "number": "0.1.12",
+  "title": "",
+  "body": "  Rationalize the denominator in:         Multiply numerator and denominator by the conjugate of the denominator, :     Simplify the denominator using the difference of squares:     Combine numerator and denominator:     Simplify the negative sign by factoring out from the numerator:     Conclusion. The rationalized form is .     "
+},
+{
+  "id": "ex-fractions-simplify-8",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#ex-fractions-simplify-8",
+  "type": "Example",
+  "number": "0.1.13",
+  "title": "",
+  "body": "  Take . Simplify the quotient:  until the cancels from the denominator.         Substitute the definition of  into the difference quotient:     Multiply numerator and denominator by the conjugate of the numerator, :     Apply the difference of squares identity to the numerator:     Rewrite the fraction. The numerator becomes , so:     Cancel the factor of (as long as ):     Conclusion. The simplified form is .     "
+},
+{
+  "id": "sec-fractions-practice-11",
+  "level": "2",
+  "url": "sec-precalc-fractions.html#sec-fractions-practice-11",
+  "type": "Remark",
+  "number": "0.1.14",
+  "title": "",
+  "body": " Remember: The important thing is to be able to create and understand the complete solutions to these problems. Please re-read the definitions, theorems, and examples in the notes as many times as necessary to gain a full understanding. Feel free to email your instructor or visit the MLC if you have questions. Typically on quizzes and exams the answer is worth very few points. The majority of the points are awarded on the work needed to get to the answer.  "
 },
 {
   "id": "sec-precalc-absval",
