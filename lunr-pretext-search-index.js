@@ -160,7 +160,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "0.2",
   "title": "Absolute Values",
-  "body": " Absolute Values    Simplify absolute value expressions  Graph absolute value functions  Solve absolute value equations     Why do we need this?  Absolute value functions and equations play an important role throughout MTH 132. They arise when evaluating limits, analyzing domains and ranges of functions, and computing derivatives. They are especially important in integral problems that involve total distance traveled or total area between curves. The examples below highlight how absolute value expressions and equations connect to later topics in the course.   Section - Evaluating limits like in Example .  REPLACE -- Find the domain and range of  REPLACE -- Total Distance traveled.     Important Definitions and Theorems   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.     If then or .       If then .     Instructional Videos  Click on the following links to access helpful instructional videos:   Absolute values as distance  Graphing Absolute Value Functions    Now that you have seen the main ideas and watched videos on each topic, it's time to practice on your own. Take a look at the practice absolute value quiz [NEED TO UPDATE\/IMPROVE] , which includes problems for you to try along with answers provided at the end. Remember, the most important part is showing the steps and reasoning that lead to each answer. That's where your learning really happens!  "
+  "body": " Absolute Values    Simplify absolute value expressions  Graph absolute value functions  Solve absolute value equations     Overview  This review focuses on the core ideas of absolute value that you will use again and again in MTH132. Absolute value measures distance, so learning how to simplify expressions, graph functions, and solve equations with absolute values will build intuition for piecewise behavior. You'll also see how these ideas appear later in the course when working with limits, derivatives, and integrals. To get started, you'll find key definitions, short review videos, and practice problems that let you check your understanding and strengthen your skills.  What to do here   Skim the Important Definitions and Theorems to refresh techniques you'll be using.  Watch the Curated Videos on any topics that you need help with.  Try the Practice Problems to check mastery before moving on.     Important Definitions and Theorems   Absolute Value   For any real number , the absolute value of , written , is defined by   Geometrically, represents the distance from to on the number line.     If then or .       If then .     Curated Videos  Click on the following links to access helpful instructional videos:   Absolute values as distance  Graphing Absolute Value Functions     Practice Problems  Now that you've reviewed the techniques and watched the videos, test yourself. Try the problems    Solve the absolute value equation: .         Use the property: if with , then or . Here , .      Conclusion.  or .       Solve the absolute value equation: .         Isolate the absolute value:     Split into two linear equations:    Conclusion.  or .       Find when crosses the -axis.      This is the same as Example , since the -intercepts occur when .     Find the domain and range of . Then sketch a picture of its graph.     Sketch available via: Desmos Graph of      Domain. Absolute value is defined for all real inputs; imposes no restriction. Thus the domain is all real numbers.    Vertex and shape. The base graph is a -shape with vertex at . Replacing by shifts the graph left by 2; then reflects across the -axis and shifts up by 3, giving a vertex at and opening downward.    Range. Because the graph opens downward and achieves its maximum value at the vertex, the greatest value is (at ) and values extend arbitrarily low. Hence the range is .    Intercepts. Solve to get , so and or . Thus the -intercepts are and ; the -intercept is .    Sketch guidance. Plot the vertex at , mark the intercepts, and draw two line segments from the vertex to the intercepts. Sketch available via: Desmos Graph of       Remember: The important thing is to be able to create and understand the complete solutions to these problems. Please re-read the definitions, theorems, and examples in the notes as many times as necessary to gain a full understanding. Feel free to email your instructor or visit the MLC if you have questions. Typically on quizzes and exams the answer is worth very few points. The majority of the points are awarded on the work needed to get to the answer.    "
 },
 {
   "id": "abs-objectives",
@@ -206,6 +206,51 @@ var ptx_lunr_docs = [
   "number": "0.2.4",
   "title": "",
   "body": " If then .  "
+},
+{
+  "id": "ex-abs-eq-1",
+  "level": "2",
+  "url": "sec-precalc-absval.html#ex-abs-eq-1",
+  "type": "Example",
+  "number": "0.2.5",
+  "title": "",
+  "body": "  Solve the absolute value equation: .         Use the property: if with , then or . Here , .      Conclusion.  or .    "
+},
+{
+  "id": "ex-abs-eq-2",
+  "level": "2",
+  "url": "sec-precalc-absval.html#ex-abs-eq-2",
+  "type": "Example",
+  "number": "0.2.6",
+  "title": "",
+  "body": "  Solve the absolute value equation: .         Isolate the absolute value:     Split into two linear equations:    Conclusion.  or .    "
+},
+{
+  "id": "ex-abs-xint",
+  "level": "2",
+  "url": "sec-precalc-absval.html#ex-abs-xint",
+  "type": "Example",
+  "number": "0.2.7",
+  "title": "",
+  "body": "  Find when crosses the -axis.      This is the same as Example , since the -intercepts occur when .  "
+},
+{
+  "id": "ex-abs-domain-range",
+  "level": "2",
+  "url": "sec-precalc-absval.html#ex-abs-domain-range",
+  "type": "Example",
+  "number": "0.2.8",
+  "title": "",
+  "body": "  Find the domain and range of . Then sketch a picture of its graph.     Sketch available via: Desmos Graph of      Domain. Absolute value is defined for all real inputs; imposes no restriction. Thus the domain is all real numbers.    Vertex and shape. The base graph is a -shape with vertex at . Replacing by shifts the graph left by 2; then reflects across the -axis and shifts up by 3, giving a vertex at and opening downward.    Range. Because the graph opens downward and achieves its maximum value at the vertex, the greatest value is (at ) and values extend arbitrarily low. Hence the range is .    Intercepts. Solve to get , so and or . Thus the -intercepts are and ; the -intercept is .    Sketch guidance. Plot the vertex at , mark the intercepts, and draw two line segments from the vertex to the intercepts. Sketch available via: Desmos Graph of     "
+},
+{
+  "id": "sec-absval-practice-7",
+  "level": "2",
+  "url": "sec-precalc-absval.html#sec-absval-practice-7",
+  "type": "Remark",
+  "number": "0.2.9",
+  "title": "",
+  "body": " Remember: The important thing is to be able to create and understand the complete solutions to these problems. Please re-read the definitions, theorems, and examples in the notes as many times as necessary to gain a full understanding. Feel free to email your instructor or visit the MLC if you have questions. Typically on quizzes and exams the answer is worth very few points. The majority of the points are awarded on the work needed to get to the answer.  "
 },
 {
   "id": "sec-precalc-explogs",
