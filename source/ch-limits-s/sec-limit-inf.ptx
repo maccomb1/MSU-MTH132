@@ -1,0 +1,594 @@
+<section xml:id="limits-infinity-horizontal-asymptotes">
+  <title>Limits at Infinity: Horizontal Asymptotes</title>
+
+  <objectives>
+    <ul>
+      <li>
+        Interpret limits as <m>x\to\infty</m> and <m>x\to-\infty</m>
+        graphically as long-term behavior of a function.
+      </li>
+      <li>
+        Identify horizontal asymptotes using limits at infinity.
+      </li>
+      <li>
+        Evaluate limits at infinity using dominant term analysis for
+        rational and algebraic functions.
+      </li>
+      <li>
+        Apply the Squeeze Theorem to evaluate limits at infinity involving
+        bounded functions.
+      </li>
+      <li>
+        Explain the meaning of a limit at infinity in an applied context.
+      </li>
+    </ul>
+  </objectives>
+
+  <p>
+    To understand the behavior of a graph far to the left or far to the right
+    on the <m>x</m>-axis, we introduce limits in which <m>x</m> becomes
+    arbitrarily large in the positive or negative direction. These limits
+    describe how a function behaves near the ends of its graph.
+  </p>
+
+  <definition xml:id="def-limit-at-infinity">
+    <statement>
+      <p>
+        Let <m>f</m> be a function and let <m>L</m> be a real number.
+      </p>
+      <ul>
+        <li>
+          <p>
+            <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that <m>f(x)</m> can be made
+            arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently large.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle\lim_{x\to-\infty} f(x)=L</m> means that <m>f(x)</m> can be made
+            arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently negative.
+          </p>
+        </li>
+      </ul>
+    </statement>
+  </definition>
+
+  <p>
+    Graphically, if <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then the graph of
+    <m>y=f(x)</m> approaches the horizontal line <m>y=L</m> toward the right.
+    This line is called a <emph>horizontal asymptote</emph>. A similar
+    interpretation applies toward the left when
+    <m>\displaystyle\lim_{x\to-\infty} f(x)=L</m>.
+  </p>
+
+  <subsection xml:id="graphs-limits-infinity">
+    <title>Visualizing Limits at Infinity</title>
+
+    <p>
+      Limits at infinity are often easiest to understand by looking at graphs.
+      While algebra tells us what happens analytically, graphs help us see how
+      the function behaves for very large values of <m>x</m>.
+    </p>
+
+<figure xml:id="fig-horizontal-asymptote">
+  <caption>
+    A function approaching the horizontal asymptote <m>y=L</m> as
+    <m>x\to\infty</m>.
+  </caption>
+
+      <image source="images/asymp01.png" width="90%"/>
+  
+
+
+
+</figure>
+
+
+    <p>
+      Even if the graph crosses the horizontal asymptote many times, the key
+      idea is that the function values remain close to <m>L</m> once <m>x</m>
+      is sufficiently large.
+    </p>
+
+    <figure xml:id="fig-no-horizontal-asymptote">
+      <caption>
+        A function that increases without bound and does not approach a
+        horizontal asymptote.
+      </caption>
+      <image source="no-horizontal-asymptote.png"/>
+    </figure>
+
+    <p>
+      When <me>\lim_{x\to\infty} f(x)=\infty</me> or <m>-\infty</m>, the graph does
+      not level off, and no horizontal asymptote exists on that end.
+    </p>
+  </subsection>
+
+  <subsection xml:id="power-functions-infinity">
+    <title>Basic Limits at Infinity</title>
+
+    <p>
+      The most fundamental limits at infinity come from power functions.
+      If <m>p&gt;0</m>, then
+    </p>
+
+    <me>
+      \lim_{x\to\infty} x^p = \infty,
+      \qquad
+      \lim_{x\to\infty} \frac{1}{x^p} = 0.
+    </me>
+
+    <p>
+      These limits explain why higher powers of <m>x</m> dominate lower powers,
+      constants, and reciprocal terms as <m>x\to\infty</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="dominant-terms">
+    <title>Dominant Terms and Rational Functions</title>
+
+    <p>
+      For functions made from sums and quotients of powers of <m>x</m>, limits
+      at infinity are determined by the terms with the highest powers. These
+      are called the <emph>dominant terms</emph>.
+    </p>
+
+    <example xml:id="ex-rational-zero-asymptote">
+      <statement>
+        <p>
+          Determine whether
+          <m>f(x)=\dfrac{x^2-6x+9}{x^3-6x^2+11x-6}</m>
+          has a horizontal asymptote.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The dominant term in the numerator is <m>x^2</m>, and the dominant
+          term in the denominator is <m>x^3</m>. For large <m>x</m>,
+        </p>
+
+        <me>
+          f(x) \approx \frac{x^2}{x^3} = \frac{1}{x}.
+        </me>
+
+        <p>
+          Since <m>\displaystyle\lim_{x\to\pm\infty} \frac{1}{x}=0</m>, the graph approaches
+          the horizontal asymptote <m>y=0</m> on both ends.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-rational-constant-asymptote">
+      <statement>
+        <p>
+          Find the horizontal asymptote of
+          <m>f(x)=\dfrac{3x^2-x+9}{5x^2+2x-6}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The dominant terms are <m>3x^2</m> and <m>5x^2</m>, so
+        </p>
+
+        <me>
+          \lim_{x\to\pm\infty} f(x)=\frac{3}{5}.
+        </me>
+
+        <p>
+          The graph approaches the horizontal line <m>y=\frac35</m> on both
+          ends.
+        </p>
+      </solution>
+    </example>
+
+<example xml:id="ex-algebraic-dominant-terms">
+  <statement>
+    <p>
+      Determine the behavior of
+    </p>
+
+    <me>
+      f(x)= \dfrac{x^2+3x^{7/2}-x^{-5}}{9x\sqrt{x} + 4x^2\sqrt{x}}
+    </me>
+
+    <p>
+      as <m>x\to\pm\infty</m>, and decide whether a horizontal asymptote exists.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      First rewrite all terms using powers of <m>x</m>. In the denominator,
+    </p>
+
+    <me>
+      9x\sqrt{x}=9x^{3/2},
+      \qquad
+      4x^2\sqrt{x}=4x^{5/2}.
+    </me>
+
+    <p>
+      The dominant term in the numerator is <m>3x^{7/2}</m>, and the dominant
+      term in the denominator is <m>4x^{5/2}</m>. For large values of <m>x</m>,
+      the function behaves like
+    </p>
+
+    <me>
+      f(x) \approx \frac{3x^{7/2}}{4x^{5/2}}.
+    </me>
+
+    <p>
+      Simplifying,
+    </p>
+
+    <me>
+      \frac{3x^{7/2}}{4x^{5/2}} = \frac34 x.
+    </me>
+
+    <p>
+      Since <m>\lim_{x\to\infty} \frac34 x = \infty</m>, we conclude that
+    </p>
+
+    <me>
+      \lim_{x\to\infty} f(x)=\infty.
+    </me>
+
+    <p>
+      Therefore, this function does not have a horizontal asymptote.
+      Instead, the approximation <m>f(x)\approx \frac34 x</m> shows that
+      the right end of the graph grows roughly like a line with slope
+      <m>\frac34</m>.
+    </p>
+
+    <p>
+      The function is not defined for <m>x&lt;0</m> (because of the square roots), so there is no left-end
+      behavior to consider.
+    </p>
+  </solution>
+</example>
+
+
+  </subsection>
+
+  <subsection xml:id="squeeze-theorem-infinity">
+    <title>Squeeze Theorem at Infinity</title>
+
+    <p>
+      The Squeeze Theorem can also be applied to limits at infinity when a
+      function is trapped between two simpler functions.
+    </p>
+
+    <theorem xml:id="thm-squeeze-infinity">
+      <statement>
+        <p>
+          If <m>g(x)\le f(x)\le h(x)</m> for all sufficiently large <m>x</m>
+          and
+        </p>
+        <me>
+          \lim_{x\to\infty} g(x)=\lim_{x\to\infty} h(x)=L,
+        </me>
+        <p>
+          then <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-sin-over-x">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle\lim_{x\to\infty} \dfrac{\sin(x)}{x}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>-1\le\sin(x)\le1</m>, dividing by <m>x&gt;0</m> gives
+        </p>
+
+        <me>
+          -\frac{1}{x} \le \frac{\sin(x)}{x} \le \frac{1}{x}.
+        </me>
+
+        <p>
+          Both bounds approach <m>0</m> as <m>x\to\infty</m>. By the Squeeze
+          Theorem,
+        </p>
+
+        <me>
+          \lim_{x\to\infty} \frac{\sin(x)}{x} = 0.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="application-limits-infinity">
+    <title>An Application of Limits at Infinity</title>
+
+    <p>
+      Limits at infinity are useful whenever a quantity approaches a stable
+      long-term value. In these situations, a horizontal asymptote represents
+      an equilibrium.
+    </p>
+
+    <example xml:id="ex-application-concentration">
+      <statement>
+        <p>
+          The concentration <m>C(t)</m> of a medication in a patient’s
+          bloodstream <m>t</m> hours after administration is modeled by
+        </p>
+
+        <me>
+          C(t)=\frac{5t}{t+10}.
+        </me>
+
+        <p>
+          Evaluate and interpret <m>\displaystyle\lim_{t\to\infty} C(t)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Comparing dominant terms gives
+        </p>
+
+        <me>
+          \lim_{t\to\infty} \frac{5t}{t+10} = 5.
+        </me>
+
+        <p>
+          This means the concentration approaches <m>5</m> (in the given
+          units) over time. The value <m>5</m> represents the long-term level
+          of medication in the bloodstream.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="non-algebraic-limits-infinity">
+  <title>Limits at Infinity Beyond Algebraic Functions</title>
+
+  <p>
+    Not all limits at infinity can be evaluated using dominant term analysis
+    or algebraic simplification. Some functions require ideas from other areas
+    of mathematics, and others cannot be evaluated until we develop additional
+    calculus tools later in the course.
+  </p>
+
+  <example xml:id="ex-arctan-asymptotes">
+    <statement>
+      <p>
+        Consider the function <m>f(x)=\arctan(x)</m>.
+        Evaluate <m>\displaystyle\lim_{x\to\infty} f(x)</m> and
+        <m>\displaystyle\lim_{x\to-\infty} f(x)</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The inverse tangent function has a restricted range:
+      </p>
+
+      <me>
+        -\frac{\pi}{2} &lt; \arctan(x) &lt; \frac{\pi}{2}
+        \quad\text{for all } x.
+      </me>
+
+      <p>
+        From trigonometry, as <m>x\to\infty</m>, the angle whose tangent is
+        <m>x</m> approaches <m>\frac{\pi}{2}</m>, and as <m>x\to-\infty</m>,
+        it approaches <m>-\frac{\pi}{2}</m>.
+      </p>
+
+      <me>
+        \lim_{x\to\infty} \arctan(x)=\frac{\pi}{2},
+        \qquad
+        \lim_{x\to-\infty} \arctan(x)=-\frac{\pi}{2}.
+      </me>
+
+      <p>
+        This function has two different horizontal asymptotes:
+        <m>y=\frac{\pi}{2}</m> to the right and
+        <m>y=-\frac{\pi}{2}</m> to the left.
+      </p>
+
+      <p>
+        Notice that dominant term analysis does not apply here, since
+        <m>\arctan(x)</m> is not an algebraic function. Instead, the limits are
+        determined by the trigonometric meaning of the function.
+      </p>
+    </solution>
+  </example>
+
+  <remark xml:id="rem-limits-future-tools">
+    <p>
+      There are many functions whose limits at infinity cannot yet be evaluated
+      with the techniques in this section. For example, consider
+      <m>\displaystyle \frac{e^x}{x}</m>.
+    </p>
+
+    <p>
+      Although both the numerator and denominator grow without bound as
+      <m>x\to\infty</m>, the dominant-term ideas developed here do not apply.
+      Evaluating limits of this type requires additional tools, such as
+      L’Hôpital’s Rule, which will be introduced later in the course.
+    </p>
+
+    <p>
+      For now, it is enough to recognize when a limit can be evaluated using
+      algebraic methods and when it cannot.
+    </p>
+  </remark>
+</subsection>
+
+
+
+
+<exercises xml:id="exercises-limits-infinity-tf">
+  <title>Practice / Study Problems</title>
+
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and explain your reasoning
+      </p>
+    </introduction>
+
+    <exercise xml:id="tf-infinity-01">
+      <statement>
+        <p>
+          If <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then <m>f(x)=L</m> for all sufficiently large <m>x</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> The statement <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that
+          <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently large.
+          It does not require <m>f(x)</m> to equal <m>L</m> for any value of <m>x</m>.
+        </p>
+        <p>
+          For example, <m>f(x)=\dfrac{1}{x}</m> satisfies <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>,
+          but <m>\dfrac{1}{x}\neq 0</m> for any finite <m>x</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-infinity-03">
+      <statement>
+        <p>
+          If <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then <m>\displaystyle\lim_{x\to\infty} \bigl(f(x)+3\bigr)=L+3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> This follows from the Limit Laws for limits at infinity:
+          adding a constant shifts the limiting value by the same constant.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-infinity-06">
+      <statement>
+        <p>
+          If <m>\deg(\text{numerator}) &lt; \deg(\text{denominator})</m> for a rational function
+          <m>f(x)=\dfrac{p(x)}{q(x)}</m>, then <m>\displaystyle\lim_{x\to\pm\infty} f(x)=0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> If the denominator has higher degree, then the denominator grows faster in magnitude than
+          the numerator as <m>|x|\to\infty</m>, so the quotient approaches <m>0</m>.
+        </p>
+        <p>
+          One way to justify this is to divide numerator and denominator by the highest power of <m>x</m> in the
+          denominator. Every term in the numerator becomes a power of <m>\dfrac{1}{x}</m> (or higher), which goes to
+          <m>0</m> as <m>x\to\pm\infty</m>, while the denominator approaches a nonzero constant.
+        </p>
+      </solution>
+    </exercise>
+
+<exercise xml:id="tf-infinity-left-right">
+  <statement>
+    <p>
+      If <m>\displaystyle\lim_{x\to\infty} f(x)=5</m>, then
+      <m>\displaystyle\lim_{x\to-\infty} f(x)=5</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <emph>False.</emph> Limits as <m>x\to\infty</m> and <m>x\to-\infty</m>
+      describe the behavior of a function on different ends of the graph and
+      are independent of one another.
+    </p>
+    <p>
+      For example, the function <m>f(x)=\arctan(x)</m> satisfies
+      <m>\displaystyle\lim_{x\to\infty} f(x)=\frac{\pi}{2}</m> and
+      <m>\displaystyle\lim_{x\to-\infty} f(x)=-\frac{\pi}{2}</m>, which are
+      not equal.
+    </p>
+  </solution>
+</exercise>
+
+    <exercise xml:id="tf-infinity-07">
+      <statement>
+        <p>
+          For <m>f(x)=\dfrac{x^2+3x^{7/2}-x^{-5}}{9x\sqrt{x}+4x^2\sqrt{x}}</m>, the function has a horizontal asymptote as <m>x\to\infty</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> Rewrite the denominator using powers:
+          <m>9x\sqrt{x}=9x^{3/2}</m> and <m>4x^2\sqrt{x}=4x^{5/2}</m>.
+          The dominant term in the numerator is <m>3x^{7/2}</m> and in the denominator is <m>4x^{5/2}</m>.
+        </p>
+        <p>
+          Therefore, for large <m>x</m>,
+        </p>
+        <me>
+          f(x)\approx \frac{3x^{7/2}}{4x^{5/2}}=\frac34 x,
+        </me>
+        <p>
+          so <m>\displaystyle\lim_{x\to\infty} f(x)=\infty</m>. Since the function does not approach a finite number,
+          it has no horizontal asymptote as <m>x\to\infty</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-infinity-08">
+      <statement>
+        <p>
+          If a function satisfies <m>-\dfrac{1000}{x} \le f(x) \le \dfrac{1000}{x}</m> for all <m>x&gt;0</m>,
+          then <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> Since <m>\displaystyle\lim_{x\to\infty}\frac{1000}{x}=0</m> and
+          <m>\displaystyle\lim_{x\to\infty}-\frac{1000}{x}=0</m>, the Squeeze Theorem implies that
+          <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-infinity-09">
+      <statement>
+        <p>
+          <m>\displaystyle\lim_{x\to\infty} \dfrac{\cos(x)}{x}</m> does not exist because <m>\cos(x)</m> oscillates.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> Although <m>\cos(x)</m> oscillates, it is bounded:
+          <m>-1\le \cos(x)\le 1</m> for all <m>x</m>. For <m>x&gt;0</m>, dividing by <m>x</m> gives
+        </p>
+        <me>
+          -\frac{1}{x}\le \frac{\cos(x)}{x}\le \frac{1}{x}.
+        </me>
+        <p>
+          Both bounds approach <m>0</m> as <m>x\to\infty</m>, so by the Squeeze Theorem,
+          <m>\displaystyle\lim_{x\to\infty} \dfrac{\cos(x)}{x}=0</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-infinity-10">
+      <statement>
+        <p>
+          If <m>\displaystyle\lim_{x\to\infty} f(x)=\infty</m>, then <m>y=f(x)</m> has no horizontal asymptote to the right.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> A horizontal asymptote to the right would require
+          <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> for some finite real number <m>L</m>.
+          If instead the function grows without bound so that <m>\displaystyle\lim_{x\to\infty} f(x)=\infty</m>,
+          then it cannot approach any horizontal line <m>y=L</m>.
+        </p>
+      </solution>
+    </exercise>
+
+  </exercisegroup>
+</exercises>
+
+
+
+</section>
