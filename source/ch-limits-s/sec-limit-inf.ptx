@@ -95,7 +95,7 @@
         A function that increases without bound and does not approach a
         horizontal asymptote.
       </caption>
-      <image source="no-horizontal-asymptote.png"/>
+     <image source="images/asymp02.png" width="90%"/>
     </figure>
 
     <p>
@@ -309,6 +309,51 @@
       an equilibrium.
     </p>
 
+<example xml:id="ex-application-population">
+  <statement>
+    <p>
+      The population <m>P(t)</m> of a species of fish in a lake <m>t</m> years
+      after conservation measures are introduced is modeled by
+    </p>
+
+    <me>
+      P(t)=\frac{1200t}{t+20}.
+    </me>
+
+    <p>
+      Evaluate and interpret <m>\displaystyle\lim_{t\to\infty} P(t)</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      To evaluate the limit, we compare dominant terms in the numerator and
+      denominator.
+    </p>
+
+    <me>
+      \lim_{t\to\infty} \frac{1200t}{t+20}
+      =
+      \lim_{t\to\infty} \frac{1200t}{t}
+      =
+      1200.
+    </me>
+
+    <p>
+      This means that as time passes, the population approaches
+      <m>1200</m> fish.
+    </p>
+
+    <p>
+      In context, the value <m>1200</m> represents the long-term sustainable
+      population of the lake. The population increases over time but does not
+      exceed this level, which corresponds to the horizontal asymptote
+      <m>y=1200</m>.
+    </p>
+  </solution>
+</example>
+
+
     <example xml:id="ex-application-concentration">
       <statement>
         <p>
@@ -317,7 +362,7 @@
         </p>
 
         <me>
-          C(t)=\frac{5t}{t+10}.
+          C(t)=\frac{2500t+4000}{2t^2+40t+100}.
         </me>
 
         <p>
@@ -326,21 +371,37 @@
       </statement>
 
       <solution>
-        <p>
-          Comparing dominant terms gives
-        </p>
+  <p>
+      To evaluate the limit, we compare the dominant terms in the numerator and
+      denominator.
+    </p>
 
-        <me>
-          \lim_{t\to\infty} \frac{5t}{t+10} = 5.
-        </me>
+    <p>
+      The dominant term in the numerator is <m>2500t</m>, while the dominant
+      term in the denominator is <m>2t^2</m>. For large values of <m>t</m>,
+    </p>
 
-        <p>
-          This means the concentration approaches <m>5</m> (in the given
-          units) over time. The value <m>5</m> represents the long-term level
-          of medication in the bloodstream.
-        </p>
+    <me>
+      C(t)\approx \frac{2500t}{2t^2}=\frac{1250}{t}.
+    </me>
+
+    <p>
+      Since <m>\displaystyle\lim_{t\to\infty} \frac{1250}{t}=0</m>, we conclude
+      that
+    </p>
+
+    <me>
+      \lim_{t\to\infty} C(t)=0.
+    </me>
+
+<p>
+  This means the concentration approaches <m>0</m> over time. In context,
+  this indicates that the medication is gradually eliminated from the
+  bloodstream, and no medication remains in the long term.
+</p>
       </solution>
     </example>
+
   </subsection>
 
 <subsection xml:id="non-algebraic-limits-infinity">
@@ -417,6 +478,27 @@
       algebraic methods and when it cannot.
     </p>
   </remark>
+
+
+    <exercise xml:id="test001">
+      <statement>
+        <p>
+          If <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then <m>f(x)=L</m> for all sufficiently large <m>x</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> The statement <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that
+          <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently large.
+          It does not require <m>f(x)</m> to equal <m>L</m> for any value of <m>x</m>.
+        </p>
+        <p>
+          For example, <m>f(x)=\dfrac{1}{x}</m> satisfies <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>,
+          but <m>\dfrac{1}{x}\neq 0</m> for any finite <m>x</m>.
+        </p>
+      </solution>
+    </exercise>
+
 </subsection>
 
 

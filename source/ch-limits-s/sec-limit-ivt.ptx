@@ -215,10 +215,10 @@ through every value <m>r</m> between <m>f(a)</m> and <m>f(b)</m>.</p>
 
 
 <p>
-  The Intermediate Value Theorem is powerful because it guarantees the existence of solutions 
-  even when we cannot compute them exactly. Without needing advanced tools or calculators, 
-  we can still be certain that roots and crossing points must lie within specific intervals — 
-  giving us both confidence and direction in solving problems that might otherwise feel impossible.
+The Intermediate Value Theorem is powerful because it guarantees the existence of solutions even when 
+they cannot be computed exactly. Without relying on advanced tools or calculators, it allows us to conclude 
+that roots and crossing points must lie within specific intervals. This gives us both confidence and direction 
+when working with problems that might otherwise seem inaccessible.
 </p>
 
 <exercises xml:id="exercises-ivt">

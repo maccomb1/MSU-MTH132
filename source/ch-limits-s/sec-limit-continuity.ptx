@@ -263,6 +263,22 @@
   </solution>
 </example>
 
+<remark xml:id="rem-essential-discontinuity-scope">
+  <p>
+    In this course, students are <emph>not</emph> expected to determine whether
+    a function has an essential discontinuity by analyzing its formula alone.
+    Identifying essential discontinuities rigorously from an equation requires
+    tools from real analysis, which are developed in courses such as
+    MTH 320.
+  </p>
+
+  <p>
+    For MTH 132, essential discontinuities are included primarily so that
+    you recognize that they exist and can identify them <emph>from a graph</emph>.
+    You will not be asked to classify or prove essential discontinuities using
+    algebraic or analytic arguments on quizzes or exams.
+  </p>
+</remark>
 
   </subsection>
 
