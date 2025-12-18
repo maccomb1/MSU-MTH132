@@ -10,12 +10,19 @@
 -->
   
   <!-- include sections -->
+  <xi:include href="./ch-derivative-s/sec-derivative-intro.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-defn.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-rules.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-trig.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-expChain.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-implicit.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-inverse.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-applications.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-rrates.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-lalh.ptx" />
+  
+  
+  
   
   
 </chapter>
