@@ -1,5 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US" xml:id="sec-limit-ww">
+  <title>Additional Worked-Out Problems</title>
+    <subsection xml:id="subsec-limit-gl">
+      <title><xref ref="sec-graphical-limits"/> Limits from Graphs and Notation</title>
+      <p> test
+      </p>
+    </subsection>
 
-  <paragraphs xml:id="ch-foo-notes">
-    <title>Additional Notes</title>
-    <p>NOT USED</p>
-  </paragraphs>
+    <subsection xml:id="subsec-limit-alg">
+      <title><xref ref="sec-limit-laws"/> Limit Laws and Algebraic Techniques</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+    <subsection xml:id="subsec-limit-inf">
+      <title><xref ref="sec-limit-inf"/> Limits at Infinity: Horizontal Asymptotes</title>
+      <p> test
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-limit-cont">
+      <title><xref ref="sec-limit-continuity"/> Continuity</title>
+      <p> test
+      </p>
+    </subsection>
+
+    <subsection xml:id="subsec-limit-ivt">
+      <title><xref ref="sec-limit-ivt"/> Intermediate Value Theorem</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+
+</section>

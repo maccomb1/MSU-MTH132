@@ -1,8 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-derivative-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction and Motivation</title>
+  <title>Introduction and Motivation for Derivatives</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>
+        Describe average rate of change and interpret it as a secant slope.
+      </li>
+      <li>
+        Explain instantaneous velocity as a limit of average velocities.
+      </li>
+      <li>
+        Connect instantaneous rate of change to the slope of a tangent line.
+      </li>
+      <li>
+        Estimate an instantaneous rate of change using tables and nearby average rates.
+      </li>
+    </ul>
+  </objectives>
+
+  <p>
+    Derivatives begin with a simple question: how fast is something changing <emph>right now</emph>?
+    You already know how to compute an <emph>average</emph> rate of change over a time interval.
+    The derivative is what happens when we shrink that interval smaller and smaller and look at the limiting behavior.
+  </p>
+
+  <subsection xml:id="instantaneous-velocity">
+    <title>Instantaneous Velocity</title>
+
+    <p>
+      Suppose a particle moves along a line so that at time <m>t</m> it is at position <m>f(t)</m>.
+      Over the time interval from <m>t=a</m> to <m>t=b</m>, the change in position is <m>f(b)-f(a)</m>,
+      so the average velocity is
+    </p>
+
+    <me>
+      \displaystyle v_{\text{avg}}=\frac{f(b)-f(a)}{b-a}.
+    </me>
+
+    <p>
+      Instantaneous velocity at time <m>t=a</m> is not computed from a single moment.
+      Instead, we look at the average velocity from <m>a</m> to <m>a+h</m> and then take a limit as <m>h\to 0</m>:
+    </p>
+
+    <me>
+      \displaystyle v=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+    </me>
+
+    <remark xml:id="rem-velocity-speed">
+      <p>
+        Velocity can be positive or negative depending on direction. Speed is the absolute value of velocity.
+      </p>
+    </remark>
+
+    <example xml:id="ex-falling-stone">
+      <statement>
+        <p>
+          A stone dropped from a bridge has position (in feet below the bridge) approximately
+          <m>f(t)=16t^2</m> after <m>t</m> seconds.
+        </p>
+        <p>
+          (a) Compute the average velocity on <m>[3,4]</m>.
+          (b) Estimate the instantaneous velocity at <m>t=3</m> using a table of average velocities.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          (a) The average velocity from <m>t=3</m> to <m>t=4</m> is
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle v_{\text{avg}}
+\amp=\amp \displaystyle \frac{f(4)-f(3)}{4-3}
+\\[0.8em]
+\amp=\amp \displaystyle \frac{16(4^2)-16(3^2)}{1}
+\\[0.8em]
+\amp=\amp \displaystyle 112.
+\end{array}
+        </me>
+
+        <p>
+          (b) To estimate the instantaneous velocity at <m>t=3</m>, compute the average velocity from <m>3</m> to <m>3+h</m>
+          for smaller and smaller values of <m>h</m>.
+        </p>
+
+        <table xml:id="tab-falling-stone-avg-vel">
+          <caption>Average velocity from <m>t=3</m> to <m>t=3+h</m> for <m>f(t)=16t^2</m>.</caption>
+          <tabular>
+            <row header="yes">
+              <cell><m>h</m></cell>
+              <cell><m>1</m></cell>
+              <cell><m>0.1</m></cell>
+              <cell><m>0.01</m></cell>
+              <cell><m>0.001</m></cell>
+              <cell><m>0.0001</m></cell>
+              <cell><m>0.00001</m></cell>
+            </row>
+            <row>
+              <cell><m>v_{\text{avg}}</m></cell>
+              <cell><m>112</m></cell>
+              <cell><m>97.6</m></cell>
+              <cell><m>96.16</m></cell>
+              <cell><m>96.016</m></cell>
+              <cell><m>96.0016</m></cell>
+              <cell><m>96.00016</m></cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>
+          The values approach <m>96</m>, so we define the instantaneous velocity at <m>t=3</m> to be <m>96</m> ft/sec.
+          We can also verify this by simplifying the average velocity algebraically.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle v_{\text{avg}}
+\amp=\amp \displaystyle \frac{f(3+h)-f(3)}{(3+h)-3}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{16(3+h)^2-16(3^2)}{h}
+\\[0.9em]
+\amp=\amp \displaystyle 16\cdot\frac{(3+h)^2-3^2}{h}
+\\[0.9em]
+\amp=\amp \displaystyle 16\cdot\frac{(9+6h+h^2)-9}{h}
+\\[0.9em]
+\amp=\amp \displaystyle 16\cdot\frac{6h+h^2}{h}
+\\[0.9em]
+\amp=\amp \displaystyle 16(6+h)
+\\[0.9em]
+\amp=\amp \displaystyle 96+16h.
+\end{array}
+        </me>
+
+        <p>
+          Taking the limit as <m>h\to 0</m> gives
+          <m>\displaystyle v=\lim_{h\to 0}(96+16h)=96</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="secant-and-tangent">
+    <title>Secant Slopes and Tangent Slopes</title>
+
+    <p>
+      There is also a geometric interpretation. The slope of a secant line through
+      <m>(a,f(a))</m> and <m>(b,f(b))</m> is
+    </p>
+
+    <me>
+      \displaystyle m_{\text{sec}}=\frac{f(b)-f(a)}{b-a}.
+    </me>
+
+    <p>
+      This is the same formula as the average rate of change. When <m>b=a+h</m>, the secant slope is
+      <m>\displaystyle \frac{f(a+h)-f(a)}{h}</m>.
+      As <m>h\to 0</m>, the secant line approaches the tangent line at <m>x=a</m>, and the secant slopes approach the tangent slope.
+    </p>
+
+    <figure xml:id="fig-secant-to-tangent">
+      <caption>
+        Secant lines approaching a tangent line as the second point moves toward <m>x=a</m>.
+      </caption>
+      <image width="90%" xml:id="secant-tangent-tikz">
+      </image>
+    </figure>
+
+    <p>
+      The tangent slope at <m>x=a</m> is the limit of the secant slopes:
+    </p>
+
+    <me>
+      \displaystyle m=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+    </me>
+
+    <p>
+      This is the same limit that defines instantaneous velocity, which is why derivatives describe both slopes on graphs and rates of change in applications.
+    </p>
+  </subsection>
+
+  <subsection xml:id="temperature-model">
+    <title>A Trigonometric Model and Estimating Rates</title>
+
+    <p>
+      Derivatives are also used to interpret how quickly a modeled quantity is changing.
+      For example, suppose the average daily temperature over a year is modeled by
+    </p>
+
+    <me>
+      \displaystyle T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
+      \quad\text{degrees F on day } x.
+    </me>
+
+    <example xml:id="ex-temperature-average-rates">
+      <statement>
+        <p>
+          Estimate how quickly the weather is warming at <m>x=100</m> (about April 10) in degrees/day.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          We approximate the instantaneous rate of change at <m>x=100</m> using nearby average rates.
+          For example, on the interval <m>[100,110]</m>,
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle r_1
+\amp=\amp \displaystyle \frac{T(110)-T(100)}{110-100}
+\\[1.1em]
+\amp=\amp \displaystyle \frac{\bigl(55-40\cos(\frac{2\pi}{365}\cdot 110)\bigr)-\bigl(55-40\cos(\frac{2\pi}{365}\cdot 100)\bigr)}{10}
+\\[1.1em]
+\amp\approx\amp \displaystyle 0.668.
+\end{array}
+        </me>
+
+        <p>
+          On the interval <m>[90,100]</m>, we similarly get an estimate <m>r_2\approx 0.686</m>.
+          A reasonable estimate for the instantaneous rate is the average of these two:
+        </p>
+
+        <me>
+          \displaystyle r\approx \frac{1}{2}(r_1+r_2)\approx 0.677.
+        </me>
+
+        <p>
+          Interpreting this in context, the model predicts warming of about <m>0.7</m> degrees F per day near day <m>100</m>.
+        </p>
+      </solution>
+    </example>
+
+    <figure xml:id="fig-temperature-model">
+      <caption>
+        A sinusoidal temperature model. Near a chosen day, a nearby secant slope estimates the instantaneous rate of change.
+      </caption>
+      <image width="90%" xml:id="temperature-model-tikz">
+      </image>
+    </figure>
+
+    <p>
+      In the next sections, we will turn these ideas into a precise definition and learn techniques for computing derivatives efficiently.
+    </p>
+  </subsection>
 
 </section>

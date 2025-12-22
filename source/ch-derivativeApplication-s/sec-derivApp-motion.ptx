@@ -3,6 +3,316 @@
 <section xml:id="sec-derivApp-motion" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Motion in Physics</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Translate between physical, geometric, numerical, and algebraic meanings of the derivative.</li>
+      <li>Interpret motion quantities <m>s(t)</m>, <m>v(t)</m>, <m>a(t)</m>, and <m>j(t)</m> using derivatives.</li>
+      <li>Use graphs and tables to estimate rates of change and interpret what they mean in context.</li>
+    </ul>
+  </objectives>
 
+  <subsection xml:id="conceptual-levels">
+    <title>Conceptual Levels of the Derivative</title>
+
+    <p>
+      Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning.
+      Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting
+      where our tools apply, then translate the result back to the original context.
+    </p>
+
+    <p>
+      Our key concept so far has been the <term>derivative</term>. For a function <m>y=f(x)</m>, the derivative has several
+      complementary meanings.
+    </p>
+
+    <ul>
+      <li>
+        <emph>Physical:</emph> <m>\displaystyle \frac{dy}{dx}=f'(x)</m> is the rate of change of <m>y</m> with respect to <m>x</m>.
+        For a specific input <m>a</m>, <m>f'(a)</m> describes how fast <m>f(x)</m> changes near <m>x=a</m>.
+      </li>
+      <li>
+        <emph>Geometric:</emph> <m>f'(a)</m> is the slope of the tangent line to the graph <m>y=f(x)</m> at <m>(a,f(a))</m>.
+      </li>
+      <li>
+        <emph>Numerical:</emph> we approximate the derivative using a difference quotient
+        <me>
+          f'(a)\cong \frac{\Delta f}{\Delta x}=\frac{f(a+h)-f(a)}{h},
+        </me>
+        where <m>h</m> is small. As <m>\Delta x=h\to 0</m>, the average rate of change approaches the instantaneous rate of change.
+      </li>
+      <li>
+        <emph>Algebraic:</emph> we compute derivatives from formulas using derivative rules and known basic derivatives.
+        Occasionally we return to the definition
+        <me>
+          f'(a)=\displaystyle \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
+        </me>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="functions-of-motion">
+    <title>Functions of Motion</title>
+
+    <p>
+      Many applications of derivatives involve motion. In this subsection, all quantities are functions of time <m>t</m>.
+    </p>
+
+    <ul>
+      <li>
+        <emph>Position</emph> (or displacement) <m>s(t)</m>: distance past a reference point (for example, in feet) at time <m>t</m> seconds.
+      </li>
+      <li>
+        <emph>Velocity</emph> <m>v(t)=\displaystyle \frac{ds}{dt}=s'(t)</m>: the rate of change of position (ft/sec). Velocity may be negative.
+        <emph>Speed</emph> is <m>|v(t)|</m>.
+      </li>
+      <li>
+        <emph>Acceleration</emph> <m>a(t)=\displaystyle \frac{dv}{dt}=\frac{d^2 s}{dt^2}=s''(t)</m>:
+        the rate of change of velocity (ft/sec<sup>2</sup>).
+        A useful benchmark is <term>one gee</term>, about <m>32</m> ft/sec<sup>2</sup>, the free-fall acceleration near Earth’s surface.
+      </li>
+      <li>
+        <emph>Jerk</emph> <m>j(t)=\displaystyle \frac{da}{dt}=\frac{d^3 s}{dt^3}=s'''(t)</m>:
+        the rate of change of acceleration (ft/sec<sup>3</sup>).
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="car-stopping">
+    <title>Car Stopping</title>
+
+    <p>
+      Consider a car whose speedometer data is represented by the velocity graph below.
+      Remember: velocity is the derivative of position, so the <emph>level</emph> of <m>v(t)</m> is the <emph>slope</emph> of <m>s(t)</m>.
+    </p>
+
+    <figure xml:id="fig-stop-v-1">
+      <caption>Velocity data <m>v(t)</m> from a car’s speedometer.</caption>
+      <image source="2-7-Stop-V-1.png" width="85%"/>
+    </figure>
+
+    <p>
+      Since <m>v(t)=s'(t)</m>, a constant velocity corresponds to a distance graph with constant slope.
+      If the velocity suddenly drops to zero, the distance graph becomes flat.
+    </p>
+
+    <figure xml:id="fig-stop-s-1">
+      <caption>Distance <m>s(t)</m> consistent with the velocity graph.</caption>
+      <image source="2-7-Stop-S-1.png" width="80%"/>
+    </figure>
+
+    <p>
+      Acceleration is the derivative of velocity, <m>a(t)=v'(t)</m>, so the <emph>slope</emph> of the velocity graph becomes the
+      <emph>level</emph> of the acceleration graph. The transition is very steep, so the average acceleration over that short time is large.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle a
+\amp\approx\amp \displaystyle \frac{\Delta v}{\Delta t}
+\\[0.8em]
+\amp=\amp \displaystyle \frac{0-60}{2.1-2}
+\\[0.8em]
+\amp=\amp \displaystyle -600\ \text{ft/sec}^2.
+\end{array}
+    </me>
+
+    <figure xml:id="fig-stop-a-1">
+      <caption>Acceleration <m>a(t)</m> is near zero except during the sudden stop.</caption>
+      <image source="2-7-Stop-A-1.png" width="80%"/>
+    </figure>
+
+    <remark xml:id="rem-crash-interpretation">
+      <p>
+        These graphs describe a car going from about 40 mph to 0 in about 0.1 seconds. That is not normal braking.
+        It indicates a crash. The deceleration is roughly <m>\displaystyle \frac{600}{32}\approx 19</m> gees for a brief moment,
+        which would feel like many times your weight pressing into the seatbelt.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="braking-techniques">
+    <title>Braking Techniques and Jerk</title>
+
+    <p>
+      Now imagine braking steadily at a traffic light, slowing at a constant rate until the car stops.
+      Here the velocity decreases linearly, and the acceleration is roughly constant.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \frac{\Delta v}{\Delta t}
+\amp=\amp \displaystyle \frac{0-60}{4-0}
+\\[0.8em]
+\amp=\amp \displaystyle -15\ \text{ft/sec}^2.
+\end{array}
+    </me>
+
+    <figure xml:id="fig-stop-a-v-s-2">
+      <caption>
+        A steady stop: acceleration is roughly constant (left), velocity decreases linearly (middle), and distance levels off smoothly (right).
+      </caption>
+      <image source="2-7-Stop-A-2.png" width="30%"/>
+      <image source="2-7-Stop-V-2.png" width="30%"/>
+      <image source="2-7-Stop-S-2.png" width="30%"/>
+    </figure>
+
+    <p>
+      Even if the deceleration is not large, an abrupt change in acceleration produces a noticeable jolt.
+      That jolt corresponds to a large value of jerk for a brief moment.
+    </p>
+
+    <p>
+      To reduce jerk, the acceleration should change gradually: squeeze the brake down and release it smoothly.
+      This makes the acceleration graph rise and fall instead of jumping suddenly.
+    </p>
+
+    <figure xml:id="fig-stop-a-v-s-3">
+      <caption>
+        Smoother braking reduces jerk, but it may require a longer stopping time to keep peak deceleration reasonable.
+      </caption>
+      <image source="2-7-Stop-A-3.png" width="30%"/>
+      <image source="2-7-Stop-V-3.png" width="30%"/>
+      <image source="2-7-Stop-S-3.png" width="30%"/>
+    </figure>
+
+    <remark xml:id="rem-braking-tradeoff">
+      <p>
+        Smoother changes in acceleration often require a longer stopping distance and time.
+        In driving terms: if you want a gentle stop without a jolt, you usually need to begin braking earlier.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="ballistic-equation">
+    <title>The Ballistic Equation</title>
+
+    <p>
+      A basic model for vertical motion under constant gravity is the <term>ballistic equation</term>:
+    </p>
+
+    <me>
+      s(t)=s_0+v_0 t-\frac12 g t^2.
+    </me>
+
+    <p>
+      Here <m>s_0</m> is the initial height, <m>v_0</m> is the initial velocity, and <m>g</m> is a positive constant representing the strength of gravity.
+      Differentiating reveals the relationships among position, velocity, acceleration, and jerk.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle v(t)
+\amp=\amp \displaystyle s'(t)
+\\[0.6em]
+\amp=\amp \displaystyle (s_0)'+(v_0 t)'-\left(\frac12 g t^2\right)'
+\\[0.9em]
+\amp=\amp \displaystyle 0+v_0-g t
+\\[0.6em]
+\amp=\amp \displaystyle v_0-g t,
+\\[1.2em]
+\displaystyle a(t)
+\amp=\amp \displaystyle v'(t)
+\\[0.6em]
+\amp=\amp \displaystyle -g,
+\\[1.2em]
+\displaystyle j(t)
+\amp=\amp \displaystyle a'(t)
+\\[0.6em]
+\amp=\amp \displaystyle 0.
+\end{array}
+    </me>
+
+    <example xml:id="ex-throw-ball-4-seconds">
+      <statement>
+        <p>
+          Under standard gravity <m>g=32</m> ft/sec<sup>2</sup>, suppose a ball is thrown straight up from height
+          <m>s_0=5</m> ft. How large must <m>v_0</m> be so that the ball hits the ground after <m>4</m> seconds?
+          How high does it go?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The model is
+          <m>s(t)=5+v_0 t-16t^2</m>.
+          Landing at <m>t=4</m> means <m>s(4)=0</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 0
+\amp=\amp \displaystyle s(4)
+\\[0.6em]
+\amp=\amp \displaystyle 5+4v_0-16(4^2)
+\\[0.8em]
+\amp=\amp \displaystyle 5+4v_0-256,
+\end{array}
+        </me>
+
+        <p>
+          so <m>4v_0=251</m> and therefore <m>v_0=62.75</m> ft/sec.
+        </p>
+
+        <p>
+          The velocity is <m>v(t)=s'(t)=62.75-32t</m>. The ball reaches its highest point when <m>v(t)=0</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 0
+\amp=\amp \displaystyle 62.75-32t
+\\[0.8em]
+\amp\Rightarrow\amp \displaystyle t=\frac{62.75}{32}\approx 1.96\ \text{sec}.
+\end{array}
+        </me>
+
+        <p>
+          The height at that time is
+          <m>s(1.96)\approx 5+62.75(1.96)-16(1.96)^2\approx 66.5</m> ft.
+        </p>
+
+        <p>
+          For <m>t&lt;1.96</m> the velocity is positive (the ball rises). For <m>t&gt;1.96</m> the velocity is negative (the ball falls).
+        </p>
+      </solution>
+    </example>
+
+    <remark xml:id="rem-trajectory-vs-height">
+      <p>
+        The graph of <m>s(t)</m> is a downward-opening parabola in <m>t</m>, representing height over time.
+        It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="practice-conceptual-translation">
+    <title>Practice: Translating Between Levels</title>
+
+    <exercise xml:id="ex-translation-1">
+      <statement>
+        <p>
+          A position graph <m>s(t)</m> is increasing and concave down on an interval. Describe what this says about the signs of
+          <m>v(t)=s'(t)</m> and <m>a(t)=s''(t)</m> on that interval.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-translation-2">
+      <statement>
+        <p>
+          A velocity graph <m>v(t)</m> is above the <m>t</m>-axis and decreasing. What can you conclude about the motion of the object?
+          Include a statement about speed and acceleration.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-translation-3">
+      <statement>
+        <p>
+          Suppose a car’s acceleration graph has a sharp jump at a moment in time. What does this suggest about the jerk?
+          Give a real-world interpretation.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
 </section>

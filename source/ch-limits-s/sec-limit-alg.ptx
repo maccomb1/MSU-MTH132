@@ -413,6 +413,23 @@ Keep in mind, however, that on quizzes and exams you may not have access to a ca
 
     </subsection>
 
+<subsection xml:id="additional-worked-problems-link">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-limit-alg">
+        Additional Examples for Limit Laws and Algebraic Techniques  
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
 <exercises xml:id="tf-exercises-limits">
   <title>Practice / Study Problems</title>
   

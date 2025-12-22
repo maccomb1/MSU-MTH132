@@ -587,6 +587,21 @@
 
   </subsection>
 
+  <subsection xml:id="additional-cont">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-limit-cont">
+        Additional Examples for Continuity
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
 
 <exercises xml:id="tf-exercises-continuity">
   <title>Practice / Study Problems</title>

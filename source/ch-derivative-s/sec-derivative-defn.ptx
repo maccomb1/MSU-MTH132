@@ -3,6 +3,442 @@
 <section xml:id="sec-derivative-defn" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Definition of the Derivative</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Compute the derivative <m>f'(a)</m> using the limit definition.</li>
+      <li>Interpret the derivative as an instantaneous rate of change and as the slope of a tangent line.</li>
+      <li>Rewrite the derivative definition using either <m>h\to 0</m> or <m>x\to a</m>.</li>
+      <li>Define the derivative function <m>f'(x)</m> and interpret it as a new function.</li>
+      <li>Recognize common situations where a derivative fails to exist (corners, cusps, vertical tangents, discontinuities).</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-derivative-definition">
+    <title>Definition of the Derivative</title>
+
+    <p>
+      In earlier sections, we saw that instantaneous velocity can be obtained as a limit of average velocities over
+      shorter and shorter time increments. Likewise, the slope of a tangent line can be obtained as a limit of secant
+      slopes as the secant point moves closer and closer to the point of tangency.
+    </p>
+
+    <p>
+      Both ideas measure an instantaneous rate of change. For a general function <m>f(x)</m>, we define its instantaneous
+      rate of change at <m>x=a</m> using the following limit.
+    </p>
+
+    <definition xml:id="def-derivative-at-a">
+      <title>Derivative at a Point</title>
+      <statement>
+        <p>
+          The <term>derivative</term> of a function <m>f(x)</m> at <m>x=a</m>, denoted <m>f'(a)</m>, is defined by
+        </p>
+        <me>
+          \displaystyle
+          f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h},
+        </me>
+        <p>
+          provided the limit exists.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Here <m>f(a+h)-f(a)</m> is the change in the output, and <m>h</m> is the change in the input.
+      The quotient <m>\displaystyle\frac{f(a+h)-f(a)}{h}</m> is the average rate of change over the interval
+      from <m>a</m> to <m>a+h</m>, and the derivative is the limit as the increment <m>h</m> shrinks to 0.
+    </p>
+
+    <p>
+      Another common form comes from substituting <m>x=a+h</m> (so that <m>h=x-a</m>):
+    </p>
+
+    <me>
+      \displaystyle
+      f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}.
+    </me>
+
+    <p>
+      Geometrically, if <m>f'(a)</m> exists, then it is the slope of the tangent line to <m>y=f(x)</m> at the point
+      <m>(a,f(a))</m>. The tangent line has equation
+    </p>
+
+    <me>
+      y=f(a)+f'(a)(x-a).
+    </me>
+
+    <remark xml:id="rem-differentiable-language">
+      <p>
+        If the limit defining <m>f'(a)</m> exists, we say <m>f</m> is <term>differentiable</term> at <m>x=a</m>.
+        If the limit does not exist, then <m>f'(a)</m> is undefined and <m>f</m> is not differentiable at <m>x=a</m>.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="ssec-derivative-computation">
+    <title>Computing Derivatives from the Definition</title>
+
+    <p>
+      A derivative is always a limit of a difference quotient, so direct substitution usually produces the meaningless
+      expression <m>\tfrac{0}{0}</m>. The goal is to simplify the difference quotient until the limit can be evaluated.
+    </p>
+
+    <example xml:id="ex-derivative-reciprocal">
+      <title>A Rational Example</title>
+      <statement>
+        <p>
+          Find <m>f'(2)</m> for <m>f(x)=\dfrac{1}{x+1}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><alert>Step by Step:</alert></p>
+        <me>
+\begin{array}{rcll}
+\displaystyle f'(2)
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{f(2+h)-f(2)}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{\frac{1}{(2+h)+1}-\frac{1}{2+1}}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}{h}\left(\frac{1}{h+3}-\frac{1}{3}\right)
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}{h}\left(\frac{3-(h+3)}{3(h+3)}\right)
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{-h}{3h(h+3)}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{-1}{3(h+3)}
+\ =\ -\frac{1}{9}.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-derivative-sqrt">
+      <title>A Radical Example</title>
+      <statement>
+        <p>
+          Find <m>f'(2)</m> for <m>f(x)=\sqrt{x}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We multiply by the conjugate to eliminate the radical in the numerator.
+        </p>
+        <me>
+\begin{array}{rcll}
+\displaystyle f'(2)
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt{2+h}-\sqrt{2}}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt{2+h}-\sqrt{2}}{h}\cdot
+\frac{\sqrt{2+h}+\sqrt{2}}{\sqrt{2+h}+\sqrt{2}}
+\\[1.6em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{(2+h)-2}{h(\sqrt{2+h}+\sqrt{2})}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}{\sqrt{2+h}+\sqrt{2}}
+\ =\ \frac{1}{2\sqrt{2}}.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-derivative-cuberoot">
+      <title>A Cube Root Example</title>
+      <statement>
+        <p>
+          Find <m>f'(x)</m> for <m>f(x)=\sqrt[3]{x}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Here we use the identity <m>(a-b)(a^2+ab+b^2)=a^3-b^3</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f'(x)
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt[3]{x+h}-\sqrt[3]{x}}{h}
+\\[1.4em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt[3]{x+h}-\sqrt[3]{x}}{h}\cdot
+\frac{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
+{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
+\\[1.8em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{(x+h)-x}
+{h\left(\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2\right)}
+\\[1.6em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}
+{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
+\\[1.6em]
+\amp=\amp \displaystyle\frac{1}{3\left(\sqrt[3]{x}\right)^2}.
+\end{array}
+        </me>
+
+        <p>
+          This example is a good preview of why we will soon develop derivative rules: computing derivatives from the
+          limit definition can become algebraically heavy.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-derivative-function">
+    <title>The Derivative Function</title>
+
+    <p>
+      The derivative at a point <m>f'(a)</m> is a single number. But we can compute the derivative for many input values,
+      producing a new function.
+    </p>
+
+    <definition xml:id="def-derivative-function">
+      <title>Derivative Function</title>
+      <statement>
+        <p>
+          The <term>derivative function</term> of <m>f</m>, denoted <m>f'</m>, is defined by
+        </p>
+        <me>
+          \displaystyle
+          f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h},
+        </me>
+        <p>
+          for all <m>x</m> where this limit exists.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-derivative-function-quadratic">
+      <title>Computing a Derivative Function</title>
+      <statement>
+        <p>
+          Let <m>f(x)=x(x-2)</m>. Find <m>f'(x)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><alert>Step by Step:</alert></p>
+        <me>
+\begin{array}{rcl}
+\displaystyle f'(x)
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{(x+h)(x+h-2)-x(x-2)}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{x^2+2xh+h^2-2x-2h-x^2+2x}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\frac{2xh-2h+h^2}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0}\left(2x-2+h\right)
+\ =\ 2x-2.
+\end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-derivative-fail">
+    <title>When the Derivative Fails to Exist</title>
+
+    <p>
+      Even if a function is defined at a point, the derivative may fail to exist there. Graphically, this happens when
+      the curve does not have a single well-defined tangent line.
+    </p>
+
+    <p>
+      Common ways differentiability can fail include:
+    </p>
+
+    <ul>
+      <li><emph>Corner:</emph> the left-hand and right-hand slopes are finite but different.</li>
+      <li><emph>Cusp:</emph> the left-hand and right-hand slopes become infinite with opposite signs.</li>
+      <li><emph>Vertical tangent:</emph> slopes become infinite (unbounded) with the same sign.</li>
+      <li><emph>Discontinuity:</emph> if a function is not continuous at a point, then it cannot be differentiable there.</li>
+    </ul>
+
+    <example xml:id="ex-left-right-derivative-exists">
+      <title>One-Sided Derivatives Agree</title>
+      <statement>
+        <p>
+          Let
+        </p>
+        <me>
+          f(x)=
+          \begin{cases}
+            2x-1, &amp; x\le 1,\\
+            x^2, &amp; x\ge 1.
+          \end{cases}
+        </me>
+        <p>
+          Show that <m>f'(1)</m> exists and find its value.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We compute the right-hand and left-hand derivatives.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle\lim_{h\to 0^+}\frac{f(1+h)-f(1)}{h}
+\amp=\amp \displaystyle\lim_{h\to 0^+}\frac{(1+h)^2-1}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0^+}\frac{h(2+h)}{h}
+\ =\ 2,
+\end{array}
+        </me>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle\lim_{h\to 0^-}\frac{f(1+h)-f(1)}{h}
+\amp=\amp \displaystyle\lim_{h\to 0^-}\frac{(2(1+h)-1)-1}{h}
+\\[1.2em]
+\amp=\amp \displaystyle\lim_{h\to 0^-}\frac{2h}{h}
+\ =\ 2.
+\end{array}
+        </me>
+
+        <p>
+          Since the one-sided derivatives agree, <m>f'(1)=2</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-corner-abs">
+      <title>A Corner</title>
+      <statement>
+        <p>
+          Consider <m>g(x)=|x|</m>. Explain why <m>g'(0)</m> does not exist.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          For <m>x&gt;0</m>, <m>|x|=x</m>, so the slope near 0 from the right is 1. For <m>x&lt;0</m>, <m>|x|=-x</m>,
+          so the slope near 0 from the left is <m>-1</m>. The left-hand and right-hand derivatives are not equal, so
+          the derivative at 0 does not exist. Graphically, the curve has a corner at the origin.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-vertical-tangent-cuberoot">
+      <title>A Vertical Tangent</title>
+      <statement>
+        <p>
+          Consider <m>h(x)=\sqrt[3]{x}</m>. Explain why the derivative at <m>x=0</m> fails to exist as a finite number.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          From the derivative function computed earlier,
+          <m>\displaystyle h'(x)=\frac{1}{3(\sqrt[3]{x})^2}</m>.
+          As <m>x\to 0</m>, the denominator approaches 0, so the slopes become unbounded.
+          Graphically, the curve has a vertical tangent at the origin, so there is no finite tangent slope at <m>x=0</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-discontinuous-not-differentiable">
+      <title>A Discontinuity</title>
+      <statement>
+        <p>
+          Suppose <m>p(x)</m> has a jump discontinuity at <m>x=a</m>. Explain why <m>p'(a)</m> cannot exist.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          If <m>p'(a)</m> existed, then <m>p</m> would be differentiable at <m>a</m>, and differentiability forces continuity.
+          But a jump discontinuity means <m>p</m> is not continuous at <m>a</m>. Therefore <m>p'(a)</m> cannot exist.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-diff-implies-continuity">
+    <title>Differentiability Implies Continuity</title>
+
+    <theorem xml:id="thm-diff-implies-cont">
+      <title>Differentiability Implies Continuity</title>
+      <statement>
+        <p>
+          If <m>f</m> is differentiable at <m>x=a</m>, then <m>f</m> is continuous at <m>x=a</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-contrapositive">
+      <p>
+        The contrapositive is often the useful version in practice:
+        if <m>f</m> is not continuous at <m>x=a</m>, then <m>f</m> is not differentiable at <m>x=a</m>.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="ssec-derivative-practice-tf">
+    <title>Practice / Study Problems</title>
+
+    <exercises xml:id="exercises-derivative-tf">
+      <exercisegroup>
+        <title>Some True/False Problems</title>
+        <introduction>
+          <p>
+            Determine whether each statement is true or false and explain your reasoning.
+          </p>
+        </introduction>
+
+        <exercise xml:id="tf-deriv-01">
+          <statement><p>If <m>f</m> is differentiable at <m>x=a</m>, then <m>f</m> is continuous at <m>x=a</m>.</p></statement>
+          <solution><p><emph>True.</emph> Differentiability implies continuity.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-02">
+          <statement><p>If <m>f</m> is continuous at <m>x=a</m>, then <m>f</m> is differentiable at <m>x=a</m>.</p></statement>
+          <solution><p><emph>False.</emph> A corner (like <m>|x|</m> at 0) is continuous but not differentiable.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-03">
+          <statement><p>The derivative <m>f'(a)</m> is the limit of slopes of secant lines through <m>(a,f(a))</m>.</p></statement>
+          <solution><p><emph>True.</emph> That is exactly what the difference quotient represents.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-04">
+          <statement><p>If <m>\displaystyle f'(a)=0</m>, then <m>f(a)</m> must be a local maximum or minimum.</p></statement>
+          <solution><p><emph>False.</emph> Horizontal tangent does not guarantee an extremum.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-05">
+          <statement><p>If the left-hand derivative and right-hand derivative at <m>a</m> are equal, then <m>f'(a)</m> exists.</p></statement>
+          <solution><p><emph>True.</emph> Agreement of the one-sided derivative limits gives the two-sided derivative limit.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-06">
+          <statement><p>If a graph has a corner at <m>x=a</m>, then <m>f'(a)</m> does not exist.</p></statement>
+          <solution><p><emph>True.</emph> The one-sided slopes are different.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-07">
+          <statement><p>A vertical tangent at <m>x=a</m> means <m>f'(a)=0</m>.</p></statement>
+          <solution><p><emph>False.</emph> A vertical tangent corresponds to unbounded slope, not zero slope.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-08">
+          <statement><p>If <m>f</m> is discontinuous at <m>x=a</m>, then <m>f'(a)</m> does not exist.</p></statement>
+          <solution><p><emph>True.</emph> Discontinuity prevents differentiability.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-09">
+          <statement><p>The derivative function <m>f'(x)</m> is defined for every <m>x</m> where <m>f(x)</m> is defined.</p></statement>
+          <solution><p><emph>False.</emph> A function can be defined but not differentiable at some points.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-10">
+          <statement><p>If <m>\displaystyle f'(x)&gt;0</m> for all <m>x</m> in an interval, then <m>f</m> is increasing on that interval.</p></statement>
+          <solution><p><emph>True.</emph> Positive derivative corresponds to increasing behavior.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-11">
+          <statement><p>For <m>f(x)=c</m> (a constant function), we have <m>\displaystyle f'(a)=0</m> for every <m>a</m>.</p></statement>
+          <solution><p><emph>True.</emph> The output does not change as the input changes.</p></solution>
+        </exercise>
+
+        <exercise xml:id="tf-deriv-12">
+          <statement><p>If two functions have the same derivative on an interval, then they differ by a constant on that interval.</p></statement>
+          <solution><p><emph>True.</emph> This idea will be justified more formally later, but it matches the meaning of “same rate of change.”</p></solution>
+        </exercise>
+
+      </exercisegroup>
+    </exercises>
+  </subsection>
 
 </section>

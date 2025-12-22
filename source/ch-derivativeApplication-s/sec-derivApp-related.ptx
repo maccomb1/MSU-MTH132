@@ -3,6 +3,455 @@
 <section xml:id="sec-derivApp-related" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Related Rates</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Set up a related rates problem by identifying variables, constants, current values, and known rates.</li>
+      <li>Write a geometric relationship among variables, then differentiate with respect to time using the Chain Rule.</li>
+      <li>Compute an unknown rate at a specific instant by substituting current values only at the end.</li>
+      <li>Check answers for sign and real-world plausibility, including unit consistency.</li>
+    </ul>
+  </objectives>
 
+  <subsection xml:id="pulley-example">
+    <title>Pulley Example</title>
+
+    <p>
+      Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand,
+      which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at
+      <m>2</m> ft/sec, how fast will the weight rise?
+    </p>
+
+    <p>
+      This is a <term>related rates</term> problem: we want an unknown rate of change from a known rate, using a geometric relationship.
+      Start by drawing a picture and labeling constants and variables. Let <m>h(t)</m> be the horizontal distance from the weight to your hand,
+      and let <m>r(t)</m> be the length of the rope segment from the pulley to your hand.
+      The problem gives the current value <m>h(0)=15</m> and the current rate <m>h'(0)=2</m> (ft/sec). We want <m>r'(0)</m>.
+    </p>
+
+    <figure xml:id="fig-pulley">
+      <caption>Pulley setup with variables <m>h(t)</m> and <m>r(t)</m>.</caption>
+      <image source="2-8-Pulley.png" width="75%"/>
+    </figure>
+
+    <p>
+      The vertical distance from your hand up to the pulley is constant: <m>10-3=7</m> ft. By the Pythagorean Theorem,
+      the geometry implies
+      <me>
+        r(t)^2=h(t)^2+7^2=h(t)^2+49.
+      </me>
+    </p>
+
+    <p>
+      One approach is to solve for <m>r(t)</m> and then differentiate.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle r(t) 
+\amp=\amp \displaystyle \sqrt{h(t)^2+49}
+\\[0.9em]
+\displaystyle r'(t)
+\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot \left(h(t)^2+49\right)'
+\\[0.9em]
+\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot 2h(t)h'(t)
+\\[0.9em]
+\amp=\amp \displaystyle \frac{h(t)h'(t)}{\sqrt{h(t)^2+49}}.
+\end{array}
+    </me>
+
+    <p>
+      Now substitute the current values:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle r'(0)
+\amp=\amp \displaystyle \frac{h(0)\,h'(0)}{\sqrt{h(0)^2+49}}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{(15)(2)}{\sqrt{15^2+49}}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{30}{\sqrt{274}}
+\approx 1.8\ \text{ft/sec}.
+\end{array}
+    </me>
+
+    <p>
+      The weight rises at the same rate that the rope segment <m>r(t)</m> increases, so the weight rises at about
+      <m>1.8</m> ft/sec at that instant.
+    </p>
+
+    <remark xml:id="rem-plug-in-last">
+      <p>
+        Plug in the current values only at the <emph>last</emph> step. If you substitute before differentiating,
+        you turn variables into constants and their derivatives become zero.
+      </p>
+    </remark>
+
+    <p>
+      We can also do this more directly by implicitly differentiating the relationship <m>r(t)^2=h(t)^2+49</m>.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \left(r(t)^2\right)'
+\amp=\amp \displaystyle \left(h(t)^2+49\right)'
+\\[0.9em]
+\displaystyle 2r(t)r'(t)
+\amp=\amp \displaystyle 2h(t)h'(t)
+\\[0.9em]
+\displaystyle r'(t)
+\amp=\amp \displaystyle \frac{h(t)h'(t)}{r(t)}.
+\end{array}
+    </me>
+
+    <p>
+      Since <m>r(0)=\sqrt{h(0)^2+49}=\sqrt{274}</m>, this gives the same numerical result as above.
+    </p>
+  </subsection>
+
+  <subsection xml:id="method-related-rates">
+    <title>A Method for Related Rates Problems</title>
+
+    <ol>
+      <li>
+        Draw a picture labeled with:
+        <ul>
+          <li>numerical constant values,</li>
+          <li>letter variables and their current values,</li>
+          <li>arrows showing known current rates (derivatives),</li>
+          <li>an arrow for the unknown target rate you want.</li>
+        </ul>
+      </li>
+      <li>
+        Write an equation relating the variables using geometry (or a known formula).
+      </li>
+      <li>
+        Assume each variable depends on time <m>t</m>, then differentiate both sides with respect to <m>t</m>.
+        Use the Chain Rule whenever a variable appears inside a power, root, trig function, etc.
+        Solve for the target derivative if needed.
+      </li>
+      <li>
+        Substitute the current values and current rates to compute the target rate.
+      </li>
+    </ol>
+  </subsection>
+
+  <subsection xml:id="spill-radius-example">
+    <title>Spill Radius Example</title>
+
+    <p>
+      A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of
+      <m>2</m> m<sup>2</sup>/min, how quickly is the puddle widening at that instant?
+    </p>
+
+    <figure xml:id="fig-puddle">
+      <caption>A growing circular puddle with radius <m>r(t)</m> and area <m>A(t)</m>.</caption>
+      <image source="2-8-Puddle.png" width="55%"/>
+    </figure>
+
+    <p>
+      Let <m>r(t)</m> be the puddle’s radius and <m>A(t)</m> its area. A diameter of 1 m means the current radius is
+      <m>r(0)=\frac12</m>. The given rate is <m>A'(0)=2</m> m<sup>2</sup>/min. We want <m>r'(0)</m>.
+    </p>
+
+    <p>
+      The geometric relationship is
+      <me>
+        A(t)=\pi r(t)^2.
+      </me>
+      Differentiate both sides with respect to time:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle A'(t)
+\amp=\amp \displaystyle \pi\left(r(t)^2\right)'
+\\[0.9em]
+\amp=\amp \displaystyle 2\pi r(t)r'(t).
+\end{array}
+    </me>
+
+    <p>
+      Solve for the target rate and substitute the current values:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle r'(t)
+\amp=\amp \displaystyle \frac{A'(t)}{2\pi r(t)}
+\\[0.9em]
+\displaystyle r'(0)
+\amp=\amp \displaystyle \frac{A'(0)}{2\pi r(0)}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{2}{2\pi(\frac12)}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{2}{\pi}
+\approx 0.64\ \text{m/min}.
+\end{array}
+    </me>
+
+    <remark xml:id="rem-puddle-plausible">
+      <p>
+        Always check plausibility. A radius increase of about 0.6 m per minute can be reasonable, depending on flow rate and surface.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="searchlight-example">
+    <title>Searchlight Example</title>
+
+    <p>
+      A searchlight shines along a wall 20 meters away. If the light is currently <m>30^\circ</m> away from pointing directly at the wall
+      and the light is rotating at <m>5^\circ</m> per second, what is the speed of the bright spot moving along the wall at that instant?
+    </p>
+
+    <figure xml:id="fig-searchlight">
+      <caption>The spotlight position <m>s(t)</m> depends on the angle <m>\theta(t)</m>.</caption>
+      <image source="2-8-Searchlight.png" width="55%"/>
+    </figure>
+
+    <p>
+      Let <m>\theta(t)</m> be the angle and <m>s(t)</m> the distance of the spot from the point on the wall closest to the light.
+      The geometry gives
+      <me>
+        \tan(\theta(t))=\frac{s(t)}{20},
+      </me>
+      so
+      <me>
+        s(t)=20\tan(\theta(t)).
+      </me>
+    </p>
+
+    <p>
+      Differentiate with respect to time:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle s'(t)
+\amp=\amp \displaystyle 20\left(\tan(\theta(t))\right)'\,\theta'(t)
+\\[0.9em]
+\amp=\amp \displaystyle 20\sec^2(\theta(t))\,\theta'(t).
+\end{array}
+    </me>
+
+    <p>
+      Trig derivatives require radians. Convert the current angle and angular speed:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \theta(0)
+\amp=\amp \displaystyle 30^\circ
+\ =\ 30\left(\frac{2\pi}{360}\right)
+\ =\ \frac{\pi}{6}\ \text{rad},
+\\[1.0em]
+\displaystyle \theta'(0)
+\amp=\amp \displaystyle 5^\circ/\text{sec}
+\ =\ 5\left(\frac{2\pi}{360}\right)
+\ =\ \frac{\pi}{36}\ \text{rad/sec}.
+\end{array}
+    </me>
+
+    <p>
+      Now compute:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle s'(0)
+\amp=\amp \displaystyle 20\sec^2\!\left(\frac{\pi}{6}\right)\cdot \frac{\pi}{36}.
+\end{array}
+    </me>
+
+    <p>
+      Since <m>\cos(\pi/6)=\sqrt{3}/2</m>, we have <m>\sec^2(\pi/6)=\left(\frac{2}{\sqrt{3}}\right)^2=\frac{4}{3}</m>, so
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle s'(0)
+\amp=\amp \displaystyle 20\cdot \frac{4}{3}\cdot \frac{\pi}{36}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{20\pi}{27}
+\approx 2.3\ \text{m/sec}.
+\end{array}
+    </me>
+
+    <remark xml:id="rem-sign-speed">
+      <p>
+        The problem asks for <emph>speed</emph>, so report <m>|s'(0)|</m>. If the rotation direction were opposite,
+        the derivative would change sign but the speed would be the same.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-radians-required">
+      <p>
+        If you mistakenly use <m>\theta'(0)=5</m> in degrees/sec inside the derivative formula, the numerical answer will be wrong.
+        Convert to radians/sec before substituting.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="flashlight-examples">
+    <title>Flashlight Examples</title>
+
+    <p>
+      A flashlight shines a cone of light straight toward a wall. The lit region on the wall is a circle.
+      What is the rate of change of the lit circular area if:
+      (a) the flashlight moves toward the wall at 2 m/sec; (b) the flashlight stays 5 m from the wall, but the focus narrows so the total angle decreases at
+      <m>10^\circ</m> per second?
+    </p>
+
+    <subsubsection xml:id="flashlight-a">
+      <title>Case (a): Moving Toward the Wall</title>
+
+      <figure xml:id="fig-flashlight-a">
+        <caption>As the flashlight moves, similar triangles relate the radius to the distance <m>\ell(t)</m>.</caption>
+        <image source="2-8-Flashlight-2.png" width="88%"/>
+      </figure>
+
+      <p>
+        Let <m>\ell(t)</m> be the distance from the wall, <m>r(t)</m> the radius of the lit circle, and <m>A(t)</m> its area.
+        We are given <m>\ell(0)=5</m>, <m>\ell'(0)=-2</m>, and <m>r(0)=\frac12</m>.
+        Similar triangles show <m>\frac{r(t)}{\ell(t)}=\frac{1/2}{5}=\frac{1}{10}</m>, so
+        <m>r(t)=\frac{1}{10}\ell(t)</m>, and therefore
+        <m>A(t)=\pi r(t)^2=\frac{\pi}{100}\ell(t)^2</m>.
+      </p>
+
+      <p>
+        Differentiate and substitute:
+      </p>
+
+      <me>
+\begin{array}{rcl}
+\displaystyle A'(t)
+\amp=\amp \displaystyle \frac{\pi}{100}\left(\ell(t)^2\right)'
+\\[0.9em]
+\amp=\amp \displaystyle \frac{\pi}{50}\ell(t)\,\ell'(t),
+\\[1.2em]
+\displaystyle A'(0)
+\amp=\amp \displaystyle \frac{\pi}{50}\ell(0)\,\ell'(0)
+\\[0.9em]
+\amp=\amp \displaystyle \frac{\pi}{50}(5)(-2)
+\\[0.9em]
+\amp=\amp \displaystyle -\frac{\pi}{5}\ \text{m}^2/\text{s}
+\approx -0.63\ \text{m}^2/\text{s}.
+\end{array}
+      </me>
+
+      <p>
+        The negative sign matches the situation: as the flashlight moves closer, the circle on the wall shrinks.
+      </p>
+    </subsubsection>
+
+    <subsubsection xml:id="flashlight-b">
+      <title>Case (b): Narrowing the Beam</title>
+
+      <p>
+        Now the distance is constant at 5 m, but the beam angle changes. Let <m>\theta(t)</m> be the total cone angle and
+        let <m>r(t)</m> be the radius of the lit circle.
+        The right triangle in the diagram uses the half-angle <m>\theta(t)/2</m>:
+      </p>
+
+      <me>
+\begin{array}{rcl}
+\displaystyle \tan\!\left(\frac{\theta(t)}{2}\right)
+\amp=\amp \displaystyle \frac{r(t)}{5},
+\\[0.9em]
+\displaystyle r(t)
+\amp=\amp \displaystyle 5\tan\!\left(\frac{\theta(t)}{2}\right),
+\\[0.9em]
+\displaystyle A(t)
+\amp=\amp \displaystyle \pi r(t)^2
+\ =\ 25\pi \tan^2\!\left(\frac{\theta(t)}{2}\right).
+\end{array}
+      </me>
+
+      <p>
+        Differentiate using the Chain Rule:
+      </p>
+
+      <me>
+\begin{array}{rcl}
+\displaystyle A'(t)
+\amp=\amp \displaystyle 25\pi \left(\tan^2\!\left(\frac{\theta(t)}{2}\right)\right)'
+\\[0.9em]
+\amp=\amp \displaystyle 50\pi \tan\!\left(\frac{\theta(t)}{2}\right)\left(\tan\!\left(\frac{\theta(t)}{2}\right)\right)'\cdot \left(\frac{\theta(t)}{2}\right)'
+\\[0.9em]
+\amp=\amp \displaystyle 50\pi \tan\!\left(\frac{\theta(t)}{2}\right)\sec^2\!\left(\frac{\theta(t)}{2}\right)\cdot \frac{\theta'(t)}{2}.
+\end{array}
+      </me>
+
+      <p>
+        We are given <m>\theta'(0)=-10^\circ/\text{sec}</m>, so <m>\theta'(0)/2=-5^\circ/\text{sec}</m>.
+        Convert to radians/sec:
+        <m>\displaystyle \frac{\theta'(0)}{2}=-5\left(\frac{2\pi}{360}\right)=-\frac{\pi}{36}</m>.
+      </p>
+
+      <p>
+        We are not given <m>\theta(0)</m>, but we are given <m>r(0)=\frac12</m> and distance 5 m, so
+        <m>\tan(\theta(0)/2)=\frac{(1/2)}{5}=\frac{1}{10}</m>.
+        Also, using the same right triangle, the adjacent side is 5 and the opposite side is <m>1/2</m>,
+        so the hypotenuse squared is <m>5^2+(1/2)^2=25+\frac14=\frac{101}{4}</m>, giving
+        <m>\sec^2(\theta(0)/2)=\frac{\text{hyp}^2}{\text{adj}^2}=\frac{101/4}{25}=\frac{101}{100}</m>.
+      </p>
+
+      <p>
+        Substitute into the derivative formula:
+      </p>
+
+      <me>
+\begin{array}{rcl}
+\displaystyle A'(0)
+\amp=\amp \displaystyle 50\pi\left(\frac{1}{10}\right)\left(\frac{101}{100}\right)\left(-\frac{\pi}{36}\right)
+\\[0.9em]
+\amp=\amp \displaystyle -\frac{101}{720}\pi^2
+\approx -1.38\ \text{m}^2/\text{s}.
+\end{array}
+      </me>
+
+      <p>
+        The sign makes sense: the beam narrows, so the lit area decreases.
+      </p>
+
+      <remark xml:id="rem-angle-size-check">
+        <p>
+          A quick check: <m>\theta(0)=2\arctan(1/10)\approx 11^\circ</m>. If the angle is decreasing at about
+          <m>10^\circ</m>/sec, the circle can shrink very quickly at that instant, so a relatively large negative
+          area rate is plausible.
+        </p>
+      </remark>
+    </subsubsection>
+  </subsection>
+
+  <subsection xml:id="practice-related-rates">
+    <title>Practice Problems</title>
+
+    <exercise xml:id="ex-rr-1">
+      <statement>
+        <p>
+          In the pulley example, explain why substituting <m>h(0)=15</m> into <m>r(t)^2=h(t)^2+49</m> before differentiating
+          leads to an incorrect conclusion about <m>r'(0)</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-rr-2">
+      <statement>
+        <p>
+          A circular disk has radius <m>r(t)</m> and area <m>A(t)=\pi r(t)^2</m>. If <m>r'(t)</m> is constant and positive,
+          describe how the sign and size of <m>A'(t)</m> change as <m>r(t)</m> grows.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-rr-3">
+      <statement>
+        <p>
+          In the searchlight example, identify which step requires converting degrees to radians, and explain why that conversion is essential.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
 </section>

@@ -3,6 +3,350 @@
 <section xml:id="sec-derivative-expChain" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Exponential Functions and the Chain Rule</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>
+        Students should understand and apply the Chain Rule:
+        <ul>
+          <li>
+            Using tabular values for <m>f</m> and <m>g</m> (constructing tables of values for composite derivatives).
+          </li>
+          <li>
+            Through formulas to solve problems algebraically.
+          </li>
+          <li>
+            By interpreting the behavior of composite functions and their slopes graphically, identifying how changes in the inner function <m>g(x)</m> affect the slope of <m>f(g(x))</m>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Students should be able to apply the derivative rules for <m>e^x</m>, <m>a^x</m>, and <m>\ln x</m> in simple to moderately complicated problems, including those requiring the product, quotient, or chain rule.
+      </li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="rules-exp-log">
+    <title>Key Derivative Rules</title>
+
+    <theorem xml:id="thm-derivative-exponential">
+      <title>Derivative of <m>e^x</m></title>
+      <statement>
+        <p>
+          The exponential function <m>e^x</m> is its own derivative:
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(e^x\bigr)=e^x.
+        </me>
+      </statement>
+    </theorem>
+
+    <theorem xml:id="thm-derivative-ln">
+      <title>Derivative of <m>\ln x</m></title>
+      <statement>
+        <p>
+          For <m>x&gt;0</m>,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\ln x\bigr)=\frac{1}{x}.
+        </me>
+      </statement>
+      <remark>
+        <p>
+          We will justify this formula in the next section. For now, we use it as a rule.
+        </p>
+      </remark>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="chain-rule">
+    <title>The Chain Rule</title>
+
+    <theorem xml:id="thm-chain-rule">
+      <title>Chain Rule</title>
+      <statement>
+        <p>
+          If <m>f</m> and <m>g</m> are differentiable and <m>y=f(g(x))</m>, then
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(f(g(x))\bigr)=f'(g(x))\cdot g'(x).
+        </me>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-chain-idea">
+      <p>
+        Intuitively, a small change in <m>x</m> produces a change in <m>g(x)</m>, and that change in <m>g(x)</m>
+        produces a change in <m>f(g(x))</m>. The Chain Rule multiplies these “rates of change along the way.”
+      </p>
+    </remark>
+
+    <example xml:id="ex-chain-table">
+      <title>Chain Rule from a Table</title>
+      <statement>
+        <p>
+          Let <m>f</m> and <m>g</m> be differentiable functions with values given in the table below.
+        </p>
+
+        <table xml:id="tbl-fg-values">
+          <tabular>
+            <row header="yes">
+              <cell><m>x</m></cell>
+              <cell><m>f(x)</m></cell>
+              <cell><m>f'(x)</m></cell>
+              <cell><m>g(x)</m></cell>
+              <cell><m>g'(x)</m></cell>
+            </row>
+            <row>
+              <cell><m>1</m></cell>
+              <cell><m>5</m></cell>
+              <cell><m>4</m></cell>
+              <cell><m>2</m></cell>
+              <cell><m>-1</m></cell>
+            </row>
+            <row>
+              <cell><m>2</m></cell>
+              <cell><m>3</m></cell>
+              <cell><m>-2</m></cell>
+              <cell><m>4</m></cell>
+              <cell><m>3</m></cell>
+            </row>
+            <row>
+              <cell><m>3</m></cell>
+              <cell><m>-1</m></cell>
+              <cell><m>6</m></cell>
+              <cell><m>1</m></cell>
+              <cell><m>7</m></cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>
+          Using the Chain Rule, find:
+        </p>
+        <ol>
+          <li><m>\displaystyle \frac{d}{dx}\bigl[f(g(x))\bigr]</m> at <m>x=1</m></li>
+          <li><m>\displaystyle \frac{d}{dx}\bigl[g(f(x))\bigr]</m> at <m>x=2</m></li>
+        </ol>
+      </statement>
+
+      <solution>
+        <p>
+          (1) By the Chain Rule,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl[f(g(x))\bigr]=f'(g(x))\cdot g'(x).
+        </me>
+        <p>
+          At <m>x=1</m>, the table gives <m>g(1)=2</m> and <m>g'(1)=-1</m>. We also need <m>f'(2)</m>, and the table gives <m>f'(2)=-2</m>.
+          Therefore,
+        </p>
+        <me>
+          \displaystyle \left.\frac{d}{dx}\bigl[f(g(x))\bigr]\right|_{x=1}=f'(2)\cdot(-1)=(-2)(-1)=2.
+        </me>
+
+        <p>
+          (2) By the Chain Rule,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl[g(f(x))\bigr]=g'(f(x))\cdot f'(x).
+        </me>
+        <p>
+          At <m>x=2</m>, the table gives <m>f(2)=3</m> and <m>f'(2)=-2</m>. We also need <m>g'(3)</m>, and the table gives <m>g'(3)=7</m>.
+          Therefore,
+        </p>
+        <me>
+          \displaystyle \left.\frac{d}{dx}\bigl[g(f(x))\bigr]\right|_{x=2}=g'(3)\cdot(-2)=7(-2)=-14.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="exp-a-to-x">
+    <title>Derivatives of Exponential Functions <m>a^x</m></title>
+
+    <theorem xml:id="thm-derivative-a-to-x">
+      <title>Derivative of <m>a^x</m></title>
+      <statement>
+        <p>
+          If <m>a&gt;0</m> and <m>a\neq 1</m>, then
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(a^x\bigr)=a^x\ln(a).
+        </me>
+      </statement>
+      <proof>
+        <p>
+          Write <m>a^x</m> in terms of <m>e^x</m>:
+        </p>
+        <me>
+          \displaystyle a^x=e^{x\ln(a)}.
+        </me>
+        <p>
+          Differentiate using the Chain Rule and the fact that <m>\displaystyle \frac{d}{dx}(e^u)=e^u\cdot u'</m>.
+        </p>
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(a^x\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}\Bigl(e^{x\ln(a)}\Bigr)
+\\[0.8em]
+\amp=\amp \displaystyle e^{x\ln(a)}\cdot \frac{d}{dx}\bigl(x\ln(a)\bigr)
+\\[0.8em]
+\amp=\amp \displaystyle e^{x\ln(a)}\cdot \ln(a)
+\\[0.8em]
+\amp=\amp \displaystyle a^x\ln(a).
+\end{array}
+        </me>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="sample-problems-exp-chain">
+    <title>Sample Problems</title>
+
+    <example xml:id="ex-straightforward-derivatives">
+      <title>Straightforward Derivatives</title>
+      <statement>
+        <p>
+          Find the derivative of each function:
+        </p>
+        <ol>
+          <li><m>f(x)=x^e+e^x</m></li>
+          <li><m>g(x)=\sin\!\left(\dfrac{e^x}{1+e^x}\right)</m></li>
+        </ol>
+      </statement>
+
+      <solution>
+        <p>
+          (1) Since <m>e</m> is a constant, <m>x^e</m> is a power function. Using the Power Rule and <m>\displaystyle (e^x)'=e^x</m>,
+        </p>
+        <me>
+          \displaystyle f'(x)=e\,x^{e-1}+e^x.
+        </me>
+
+        <p>
+          (2) Let <m>u(x)=\dfrac{e^x}{1+e^x}</m>. Then <m>g(x)=\sin(u(x))</m>, so by the Chain Rule,
+        </p>
+        <me>
+          \displaystyle g'(x)=\cos(u(x))\cdot u'(x).
+        </me>
+        <p>
+          Compute <m>u'(x)</m> using the Quotient Rule (or product plus chain rule):
+        </p>
+        <me>
+\begin{array}{rcl}
+\displaystyle u'(x)
+\amp=\amp \displaystyle \frac{(e^x)(1+e^x)-(e^x)(e^x)}{(1+e^x)^2}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{e^x}{(1+e^x)^2}.
+\end{array}
+        </me>
+        <p>
+          Therefore,
+        </p>
+        <me>
+          \displaystyle g'(x)=\cos\!\left(\frac{e^x}{1+e^x}\right)\cdot \frac{e^x}{(1+e^x)^2}.
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-no-slope-2">
+      <title>No Tangent Line with a Given Slope</title>
+      <statement>
+        <p>
+          Show that the curve <m>y=2e^x+3x+5x^3</m> has no tangent line with slope <m>2</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          A tangent line has slope 2 exactly when <m>\displaystyle y'(x)=2</m>.
+          Differentiate:
+        </p>
+        <me>
+          \displaystyle y'(x)=2e^x+3+15x^2.
+        </me>
+        <p>
+          Now observe that <m>e^x&gt;0</m> for all <m>x</m> and <m>15x^2\ge 0</m>, so
+        </p>
+        <me>
+          \displaystyle y'(x)=2e^x+3+15x^2 \gt 3.
+        </me>
+        <p>
+          In particular, <m>y'(x)\neq 2</m> for any <m>x</m>. Therefore the curve has no tangent line with slope 2.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="challenge-problems-exp-chain">
+    <title>More Challenging and Conceptual Problems</title>
+
+    <activity xml:id="act-quotient-rule-proof">
+      <title>Deriving the Quotient Rule from Product and Chain Rules</title>
+      <statement>
+        <p>
+          Writing <m>\displaystyle \frac{f(x)}{g(x)}</m> in the form <m>f(x)\cdot[g(x)]^{-1}</m>, use the Product Rule and the Chain Rule
+          to prove the Quotient Rule.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>h(x)=\dfrac{f(x)}{g(x)}=f(x)\cdot (g(x))^{-1}</m>, where <m>g(x)\neq 0</m>.
+          By the Product Rule,
+        </p>
+        <me>
+          \displaystyle h'(x)=f'(x)\,(g(x))^{-1}+f(x)\,\frac{d}{dx}\bigl[(g(x))^{-1}\bigr].
+        </me>
+        <p>
+          Now apply the Chain Rule to <m>(g(x))^{-1}</m>. If <m>u(x)=g(x)</m> and <m>\phi(u)=u^{-1}</m>, then
+          <m>\phi'(u)=-u^{-2}</m>, so
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl[(g(x))^{-1}\bigr]=-(g(x))^{-2}\,g'(x).
+        </me>
+        <p>
+          Substitute and simplify:
+        </p>
+        <me>
+\begin{array}{rcl}
+\displaystyle h'(x)
+\amp=\amp \displaystyle \frac{f'(x)}{g(x)}-f(x)\frac{g'(x)}{(g(x))^2}
+\\[0.9em]
+\amp=\amp \displaystyle \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}.
+\end{array}
+        </me>
+        <p>
+          This is the Quotient Rule.
+        </p>
+      </solution>
+    </activity>
+
+    <example xml:id="ex-compositions-with-exp">
+      <title>Compositions Involving Exponentials</title>
+      <statement>
+        <p>
+          Suppose <m>f</m> is differentiable on <m>\mathbb{R}</m>, and let <m>F(x)=f(e^x)</m> and <m>G(x)=e^{f(x)}</m>.
+          Compute <m>F'(x)</m> and <m>G'(x)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For <m>F(x)=f(e^x)</m>, apply the Chain Rule with inner function <m>e^x</m>:
+        </p>
+        <me>
+          \displaystyle F'(x)=f'(e^x)\cdot e^x.
+        </me>
+
+        <p>
+          For <m>G(x)=e^{f(x)}</m>, use the Chain Rule with inner function <m>f(x)</m>:
+        </p>
+        <me>
+          \displaystyle G'(x)=e^{f(x)}\cdot f'(x).
+        </me>
+      </solution>
+    </example>
+  </subsection>
 
 </section>

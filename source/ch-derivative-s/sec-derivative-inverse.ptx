@@ -3,6 +3,458 @@
 <section xml:id="sec-derivative-inverse" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Inverse Functions and Their Derivatives</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>
+        Students should recognize that implicit differentiation can be used to find derivatives of inverse functions.
+      </li>
+      <li>
+        Students should be able to apply the implicit differentiation technique in moderately complicated problems,
+        including those requiring the use of the product, quotient, or chain rule.
+      </li>
+      <li>
+        Students should be able to apply the derivative rules for <m>\arcsin(x)</m>, <m>\arccos(x)</m>, and <m>\arctan(x)</m>
+        in simple to moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.
+      </li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="implicit-inverse-idea">
+    <title>Implicit Differentiation and Inverse Functions</title>
+
+    <p>
+      Implicit differentiation is especially useful for discovering derivative formulas for inverse functions.
+      The general strategy is:
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          Start with an inverse relationship (for example, <m>y=\arcsin(x)</m> means <m>\sin(y)=x</m>).
+        </p>
+      </li>
+      <li>
+        <p>
+          Differentiate both sides with respect to <m>x</m>, treating <m>y</m> as a function of <m>x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Solve for <m>y'</m>, then rewrite the result in terms of <m>x</m>.
+        </p>
+      </li>
+    </ul>
+
+    <remark xml:id="rem-implicit-formulas">
+      <p>
+        We can use this method to derive formulas for
+        <m>(\arcsin(x))'</m>, <m>(\arccos(x))'</m>, <m>(\arctan(x))'</m>, and also <m>(\ln x)'</m>
+        (the logarithm proof is often placed in a separate section).
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="inverse-trig-derivatives">
+    <title>Derivative Formulas for Inverse Trigonometric Functions</title>
+
+    <theorem xml:id="thm-derivative-arcsin">
+      <title>Derivative of <m>\arcsin(x)</m></title>
+      <statement>
+        <p>
+          For <m>-1&lt;x&lt;1</m>,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\arcsin(x)\bigr)=\frac{1}{\sqrt{1-x^2}}.
+        </me>
+      </statement>
+      <proof>
+        <p>
+          Let <m>y=\arcsin(x)</m>. Then <m>\sin(y)=x</m>.
+          Differentiate both sides with respect to <m>x</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(\sin(y)\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}(x)
+\\[1.2em]
+\displaystyle \cos(y)\,y'
+\amp=\amp \displaystyle 1
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle \frac{1}{\cos(y)}.
+\end{array}
+        </me>
+
+        <p>
+          Now rewrite <m>\cos(y)</m> in terms of <m>x</m>. Since <m>\sin(y)=x</m> and <m>y=\arcsin(x)</m> has range
+          <m>\displaystyle -\frac{\pi}{2}\le y\le \frac{\pi}{2}</m>, we have <m>\cos(y)\ge 0</m>, so
+        </p>
+
+        <me>
+          \displaystyle \cos(y)=\sqrt{1-\sin^2(y)}=\sqrt{1-x^2}.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          \displaystyle y'=\frac{1}{\sqrt{1-x^2}}.
+        </me>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="thm-derivative-arccos">
+      <title>Derivative of <m>\arccos(x)</m></title>
+      <statement>
+        <p>
+          For <m>-1&lt;x&lt;1</m>,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\arccos(x)\bigr)=-\frac{1}{\sqrt{1-x^2}}.
+        </me>
+      </statement>
+      <proof>
+        <p>
+          Let <m>y=\arccos(x)</m>. Then <m>\cos(y)=x</m>. Differentiate:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(\cos(y)\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}(x)
+\\[1.2em]
+\displaystyle -\sin(y)\,y'
+\amp=\amp \displaystyle 1
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle -\frac{1}{\sin(y)}.
+\end{array}
+        </me>
+
+        <p>
+          Since <m>\cos(y)=x</m> and <m>0\le y\le \pi</m>, we have <m>\sin(y)\ge 0</m>, and
+        </p>
+
+        <me>
+          \displaystyle \sin(y)=\sqrt{1-\cos^2(y)}=\sqrt{1-x^2}.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          \displaystyle y'=-\frac{1}{\sqrt{1-x^2}}.
+        </me>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="thm-derivative-arctan">
+      <title>Derivative of <m>\arctan(x)</m></title>
+      <statement>
+        <p>
+          For all real <m>x</m>,
+        </p>
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\arctan(x)\bigr)=\frac{1}{1+x^2}.
+        </me>
+      </statement>
+      <proof>
+        <p>
+          Let <m>y=\arctan(x)</m>, so <m>\tan(y)=x</m>. Differentiate:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(\tan(y)\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}(x)
+\\[1.2em]
+\displaystyle \sec^2(y)\,y'
+\amp=\amp \displaystyle 1
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle \frac{1}{\sec^2(y)}.
+\end{array}
+        </me>
+
+        <p>
+          Use the identity <m>\sec^2(y)=1+\tan^2(y)</m> and <m>\tan(y)=x</m>:
+        </p>
+
+        <me>
+          \displaystyle y'=\frac{1}{1+x^2}.
+        </me>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="sample-problems-inverse-trig">
+    <title>Straightforward Problems</title>
+
+    <example xml:id="ex-deriv-ln-sin-arcsin">
+      <statement>
+        <p>
+          Find <m>\displaystyle \frac{d}{dx}\bigl(\ln(\sin x)\bigr)</m> and <m>\displaystyle \frac{d}{dx}\bigl(\arcsin(5x)\bigr)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For <m>\ln(\sin x)</m>, use the Chain Rule with outer function <m>\ln(u)</m> and inner function <m>u=\sin x</m>:
+        </p>
+
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\ln(\sin x)\bigr)
+          =\frac{1}{\sin x}\cdot \cos x
+          =\frac{\cos x}{\sin x}.
+        </me>
+
+        <p>
+          For <m>\arcsin(5x)</m>, use the Chain Rule and the derivative of <m>\arcsin(x)</m>:
+        </p>
+
+        <me>
+          \displaystyle \frac{d}{dx}\bigl(\arcsin(5x)\bigr)
+          =\frac{1}{\sqrt{1-(5x)^2}}\cdot 5
+          =\frac{5}{\sqrt{1-25x^2}}.
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-domain-derivative-sqrt-ln">
+      <statement>
+        <p>
+          Determine the domain and find the derivative of <m>f(x)=\sqrt{2+\ln x}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For the expression to be defined, we need <m>x&gt;0</m> (so <m>\ln x</m> exists) and also <m>2+\ln x\ge 0</m>.
+          Solve <m>2+\ln x\ge 0</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 2+\ln x \ge 0
+\amp\Longleftrightarrow\amp \displaystyle \ln x \ge -2
+\\[0.8em]
+\amp\Longleftrightarrow\amp \displaystyle x \ge e^{-2}.
+\end{array}
+        </me>
+
+        <p>
+          So the domain is <m>\displaystyle [e^{-2},\infty)</m>.
+        </p>
+
+        <p>
+          Differentiate using the Chain Rule:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f(x)
+\amp=\amp \displaystyle (2+\ln x)^{1/2}
+\\[0.8em]
+\displaystyle f'(x)
+\amp=\amp \displaystyle \frac{1}{2}(2+\ln x)^{-1/2}\cdot \frac{d}{dx}(2+\ln x)
+\\[1.2em]
+\amp=\amp \displaystyle \frac{1}{2}(2+\ln x)^{-1/2}\cdot \frac{1}{x}
+\\[1.2em]
+\amp=\amp \displaystyle \frac{1}{2x\sqrt{2+\ln x}}.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-arctan-slope-point">
+      <statement>
+        <p>
+          Find a point on the curve <m>y=\arctan(x)</m> where the slope is <m>\displaystyle \frac{1}{10}</m>.
+          Is there more than one answer?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Since <m>\displaystyle \frac{d}{dx}\bigl(\arctan(x)\bigr)=\frac{1}{1+x^2}</m>, we want
+        </p>
+
+        <me>
+          \displaystyle \frac{1}{1+x^2}=\frac{1}{10}.
+        </me>
+
+        <p>
+          Solve for <m>x</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 1+x^2
+\amp=\amp \displaystyle 10
+\\[0.8em]
+\displaystyle x^2
+\amp=\amp \displaystyle 9
+\\[0.8em]
+\displaystyle x
+\amp=\amp \displaystyle \pm 3.
+\end{array}
+        </me>
+
+        <p>
+          So there are two points. When <m>x=3</m>, <m>y=\arctan(3)</m>, and when <m>x=-3</m>, <m>y=\arctan(-3)=-\arctan(3)</m>.
+          Therefore the slope is <m>\displaystyle \frac{1}{10}</m> at
+        </p>
+
+        <me>
+          \displaystyle (3,\arctan(3)) \quad \text{and} \quad (-3,-\arctan(3)).
+        </me>
+
+        <p>
+          Yes, there is more than one answer because <m>\displaystyle \frac{1}{1+x^2}</m> depends on <m>x^2</m>,
+          so it has the same value at <m>x</m> and <m>-x</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="conceptual-problems-inverse-trig">
+    <title>More Challenging and Conceptual Problems</title>
+
+    <example xml:id="ex-cos-ln-x2">
+      <statement>
+        <p>
+          If <m>f(x)=\cos(\ln(x^2))</m>, find <m>f'(1)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Use the Chain Rule. Let <m>u(x)=\ln(x^2)</m>, so <m>f(x)=\cos(u(x))</m>.
+        </p>
+
+        <p>
+          First compute <m>u'(x)</m>. Since <m>\ln(x^2)</m> is <m>\ln(\,x^2\,)</m>, apply the Chain Rule:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle u'(x)
+\amp=\amp \displaystyle \frac{1}{x^2}\cdot 2x
+\\[0.8em]
+\amp=\amp \displaystyle \frac{2}{x}.
+\end{array}
+        </me>
+
+        <p>
+          Now differentiate <m>f(x)=\cos(u(x))</m>:
+        </p>
+
+        <me>
+          \displaystyle f'(x)=-\sin(\ln(x^2))\cdot \frac{2}{x}.
+        </me>
+
+        <p>
+          Evaluate at <m>x=1</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f'(1)
+\amp=\amp \displaystyle -\sin(\ln(1^2))\cdot 2
+\\[0.8em]
+\amp=\amp \displaystyle -\sin(0)\cdot 2
+\\[0.8em]
+\amp=\amp \displaystyle 0.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-c-value">
+      <statement>
+        <p>
+          Suppose <m>f(x)=cx+\ln(\cos x)</m>, where <m>c</m> is a constant. For what value of <m>c</m> do we have
+          <m>f'(\pi/4)=6</m>?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f'(x)
+\amp=\amp \displaystyle c+\frac{d}{dx}\bigl(\ln(\cos x)\bigr)
+\\[1.2em]
+\amp=\amp \displaystyle c+\frac{1}{\cos x}\cdot (-\sin x)
+\\[1.2em]
+\amp=\amp \displaystyle c-\tan x.
+\end{array}
+        </me>
+
+        <p>
+          Evaluate at <m>\displaystyle x=\frac{\pi}{4}</m> where <m>\tan(\pi/4)=1</m>:
+        </p>
+
+        <me>
+          \displaystyle f'\!\left(\frac{\pi}{4}\right)=c-1.
+        </me>
+
+        <p>
+          Set this equal to 6:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle c-1
+\amp=\amp \displaystyle 6
+\\[0.8em]
+\displaystyle c
+\amp=\amp \displaystyle 7.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-inverse-derivative-general">
+      <statement>
+        <p>
+          Suppose that <m>f</m> is differentiable, <m>f(2)=3</m>, and <m>f'(2)=5</m>. Find <m>(f^{-1})'(3)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>y=f^{-1}(x)</m>. Then <m>f(y)=x</m>. Differentiate both sides with respect to <m>x</m>:
+        </p>
+
+        <me>
+          \displaystyle f'(y)\,y'=1.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          \displaystyle y'=\frac{1}{f'(y)}.
+        </me>
+
+        <p>
+          Now evaluate at <m>x=3</m>. Since <m>y=f^{-1}(x)</m>, we have <m>y=f^{-1}(3)=2</m> because <m>f(2)=3</m>.
+          Thus,
+        </p>
+
+        <me>
+          \displaystyle (f^{-1})'(3)=\frac{1}{f'(2)}=\frac{1}{5}.
+        </me>
+      </solution>
+    </example>
+  </subsection>
 
 </section>

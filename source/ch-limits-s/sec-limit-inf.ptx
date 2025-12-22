@@ -1,4 +1,4 @@
-<section xml:id="limits-infinity-horizontal-asymptotes">
+<section xml:id="sec-limit-inf">
   <title>Limits at Infinity: Horizontal Asymptotes</title>
 
   <objectives>
@@ -480,28 +480,23 @@
   </remark>
 
 
-    <exercise xml:id="test001">
-      <statement>
-        <p>
-          If <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then <m>f(x)=L</m> for all sufficiently large <m>x</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <emph>False.</emph> The statement <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that
-          <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently large.
-          It does not require <m>f(x)</m> to equal <m>L</m> for any value of <m>x</m>.
-        </p>
-        <p>
-          For example, <m>f(x)=\dfrac{1}{x}</m> satisfies <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>,
-          but <m>\dfrac{1}{x}\neq 0</m> for any finite <m>x</m>.
-        </p>
-      </solution>
-    </exercise>
-
 </subsection>
 
+  <subsection xml:id="additional-limit-inf">
+  <title>Additional Worked-Out Examples</title>
 
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-limit-inf">
+        Additional Examples for Limits at Infinity: Horizontal Asymptotes
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
 
 
 <exercises xml:id="exercises-limits-infinity-tf">

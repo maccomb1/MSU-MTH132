@@ -3,6 +3,458 @@
 <section xml:id="sec-derivative-implicit" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Implicit Differentiation</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Students should know when they should apply implicit differentiation.</li>
+      <li>
+        Students should be able to apply the implicit differentiation technique in simple to slightly complicated problems,
+        including those requiring the use of the product, quotient, or chain rule.
+      </li>
+      <li>Students should be able to interpret the results of implicit differentiation as the slope of a curve.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="implicit-diff-definition">
+    <title>Key Idea: Implicit Differentiation</title>
+
+    <definition xml:id="def-implicit-differentiation">
+      <title>Implicit Differentiation</title>
+      <statement>
+        <p>
+          <term>Implicit differentiation</term> consists of differentiating both sides of an equation with respect to <m>x</m>
+          and then solving the resulting equation for <m>y'</m>.
+        </p>
+        <p>
+          In the examples and exercises of this section, it is assumed that the given equation determines <m>y</m> implicitly
+          as a differentiable function of <m>x</m>, so that implicit differentiation applies.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-implicit-why">
+      <p>
+        The key feature is that <m>y</m> depends on <m>x</m>, even if the equation does not explicitly solve for <m>y</m>.
+        So whenever you differentiate an expression containing <m>y</m>, you must use the Chain Rule and include a factor of <m>y'</m>.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="implicit-diff-straightforward">
+    <title>Straightforward Examples</title>
+
+    <example xml:id="ex-implicit-ln">
+      <title>Implicit Differentiation with a Logarithm</title>
+      <statement>
+        <p>
+          Given the equation <m>x\ln(y)+y^2=4x</m>, find <m>\displaystyle \frac{dy}{dx}</m> using implicit differentiation.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate both sides with respect to <m>x</m>. The left side requires the Product Rule on <m>x\ln(y)</m>
+          and the Chain Rule on <m>\ln(y)</m> and <m>y^2</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(x\ln(y)\bigr)+\frac{d}{dx}\bigl(y^2\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}(4x)
+\\[1.2em]
+\displaystyle \Bigl(1\cdot \ln(y)+x\cdot \frac{1}{y}\,y'\Bigr)+2y\,y'
+\amp=\amp \displaystyle 4.
+\end{array}
+        </me>
+
+        <p>
+          Now solve for <m>y'</m> by collecting terms with <m>y'</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{x}{y}\,y'+2y\,y'
+\amp=\amp \displaystyle 4-\ln(y)
+\\[1.2em]
+\displaystyle y'\left(\frac{x}{y}+2y\right)
+\amp=\amp \displaystyle 4-\ln(y)
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle \frac{4-\ln(y)}{\frac{x}{y}+2y}.
+\end{array}
+        </me>
+
+        <p>
+          A common simplification is to multiply top and bottom by <m>y</m>:
+        </p>
+
+        <me>
+          \displaystyle y'=\frac{y(4-\ln(y))}{x+2y^2}.
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-implicit-astroid-like">
+      <title>Horizontal Tangent in the First Quadrant</title>
+      <statement>
+        <p>
+          Find <m>y'</m> if <m>y^3+x^3=6xy</m>. At what point in the first quadrant is the tangent line to this curve horizontal?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate both sides with respect to <m>x</m>. On the right side, use the Product Rule on <m>6xy</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}(y^3)+\frac{d}{dx}(x^3)
+\amp=\amp \displaystyle \frac{d}{dx}(6xy)
+\\[1.2em]
+\displaystyle 3y^2y'+3x^2
+\amp=\amp \displaystyle 6\bigl(xy'+y\bigr)
+\\[1.2em]
+\displaystyle 3y^2y'+3x^2
+\amp=\amp \displaystyle 6xy'+6y.
+\end{array}
+        </me>
+
+        <p>
+          Solve for <m>y'</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 3y^2y'-6xy'
+\amp=\amp \displaystyle 6y-3x^2
+\\[1.2em]
+\displaystyle y'(3y^2-6x)
+\amp=\amp \displaystyle 3(2y-x^2)
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle \frac{3(2y-x^2)}{3y^2-6x}
+\ =\ \frac{2y-x^2}{y^2-2x}.
+\end{array}
+        </me>
+
+        <p>
+          A horizontal tangent occurs when <m>\displaystyle y'=0</m>, which requires the numerator to be zero (and the denominator nonzero):
+        </p>
+
+        <me>
+          \displaystyle 2y-x^2=0 \quad\Longrightarrow\quad y=\frac{x^2}{2}.
+        </me>
+
+        <p>
+          Substitute <m>\displaystyle y=\frac{x^2}{2}</m> into the original equation <m>y^3+x^3=6xy</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \left(\frac{x^2}{2}\right)^3+x^3
+\amp=\amp \displaystyle 6x\left(\frac{x^2}{2}\right)
+\\[1.2em]
+\displaystyle \frac{x^6}{8}+x^3
+\amp=\amp \displaystyle 3x^3
+\\[1.2em]
+\displaystyle \frac{x^6}{8}
+\amp=\amp \displaystyle 2x^3.
+\end{array}
+        </me>
+
+        <p>
+          In the first quadrant, <m>x&gt;0</m>, so divide by <m>x^3</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{x^3}{8}
+\amp=\amp \displaystyle 2
+\\[0.8em]
+\displaystyle x^3
+\amp=\amp \displaystyle 16
+\\[0.8em]
+\displaystyle x
+\amp=\amp \displaystyle \sqrt[3]{16}.
+\end{array}
+        </me>
+
+        <p>
+          Then
+          <m>\displaystyle y=\frac{x^2}{2}=\frac{(\sqrt[3]{16})^2}{2}=\frac{\sqrt[3]{256}}{2}</m>.
+          So the point in the first quadrant where the tangent is horizontal is
+        </p>
+
+        <me>
+          \displaystyle \left(\sqrt[3]{16},\,\frac{(\sqrt[3]{16})^2}{2}\right).
+        </me>
+
+        <p>
+          (This point is valid as long as <m>y^2-2x\neq 0</m>, which you can check holds here.)
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-implicit-tangent-line">
+      <title>Tangent Line from an Implicit Equation</title>
+      <statement>
+        <p>
+          Find an equation of the tangent line to the curve <m>y e^{\sin x}=x\cos y</m> at the point <m>(0,0)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate both sides with respect to <m>x</m>. Use the Product Rule on both sides.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(ye^{\sin x}\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}\bigl(x\cos y\bigr)
+\\[1.4em]
+\displaystyle y'e^{\sin x}+y\cdot e^{\sin x}\cdot(\cos x)
+\amp=\amp \displaystyle 1\cdot \cos y + x\cdot \frac{d}{dx}(\cos y)
+\\[1.4em]
+\displaystyle y'e^{\sin x}+y e^{\sin x}\cos x
+\amp=\amp \displaystyle \cos y + x\cdot\bigl(-\sin y\bigr)\,y'.
+\end{array}
+        </me>
+
+        <p>
+          Now substitute <m>(x,y)=(0,0)</m>. Note <m>\sin(0)=0</m>, <m>e^0=1</m>, <m>\cos(0)=1</m>, and <m>\sin(0)=0</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle y'(1)+0
+\amp=\amp \displaystyle 1+0
+\\[0.8em]
+\displaystyle y'
+\amp=\amp \displaystyle 1.
+\end{array}
+        </me>
+
+        <p>
+          The slope at <m>(0,0)</m> is 1, so the tangent line is
+        </p>
+
+        <me>
+          \displaystyle y=x.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="implicit-diff-conceptual">
+    <title>More Challenging and Conceptual Problems</title>
+
+    <example xml:id="ex-intercepts-tangent">
+      <title>Intercept Form and a Constant Sum</title>
+      <statement>
+        <p>
+          Show that the sum of the <m>x</m>- and <m>y</m>-intercepts of any tangent line to the curve
+          <m>\sqrt{x}+\sqrt{y}=\sqrt{c}</m> is equal to <m>c</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate implicitly:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\bigl(\sqrt{x}\bigr)+\frac{d}{dx}\bigl(\sqrt{y}\bigr)
+\amp=\amp \displaystyle \frac{d}{dx}\bigl(\sqrt{c}\bigr)
+\\[1.2em]
+\displaystyle \frac{1}{2\sqrt{x}}+\frac{1}{2\sqrt{y}}\,y'
+\amp=\amp \displaystyle 0
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle -\frac{\sqrt{y}}{\sqrt{x}}.
+\end{array}
+        </me>
+
+        <p>
+          At a point <m>(a,b)</m> on the curve, the slope is
+          <m>\displaystyle m=-\frac{\sqrt{b}}{\sqrt{a}}</m>.
+          The tangent line is
+          <m>\displaystyle y-b=m(x-a)</m>.
+        </p>
+
+        <p>
+          Find the intercepts. The <m>x</m>-intercept occurs when <m>y=0</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle 0-b
+\amp=\amp \displaystyle m(x-a)
+\\[0.8em]
+\displaystyle x
+\amp=\amp \displaystyle a-\frac{b}{m}
+\ =\ a+b\frac{\sqrt{a}}{\sqrt{b}}
+\ =\ a+\sqrt{ab}.
+\end{array}
+        </me>
+
+        <p>
+          So the <m>x</m>-intercept is <m>a+\sqrt{ab}</m>. The <m>y</m>-intercept occurs when <m>x=0</m>:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle y-b
+\amp=\amp \displaystyle m(0-a)
+\\[0.8em]
+\displaystyle y
+\amp=\amp \displaystyle b-am
+\ =\ b+a\frac{\sqrt{b}}{\sqrt{a}}
+\ =\ b+\sqrt{ab}.
+\end{array}
+        </me>
+
+        <p>
+          Thus the sum of intercepts is
+          <m>\displaystyle (a+\sqrt{ab})+(b+\sqrt{ab})=a+b+2\sqrt{ab}=(\sqrt{a}+\sqrt{b})^2</m>.
+        </p>
+
+        <p>
+          Since <m>(a,b)</m> lies on <m>\sqrt{x}+\sqrt{y}=\sqrt{c}</m>, we have <m>\sqrt{a}+\sqrt{b}=\sqrt{c}</m>, so
+          <m>(\sqrt{a}+\sqrt{b})^2=c</m>. Therefore the sum of the intercepts is always <m>c</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-ellipse-parallel">
+      <title>Parallel Tangents on an Ellipse</title>
+      <statement>
+        <p>
+          Consider the ellipse given by <m>x^2-xy+y^2=3</m>. Find the points where the ellipse crosses the <m>x</m>-axis
+          and show that the tangent lines at these points are parallel.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Points on the <m>x</m>-axis have <m>y=0</m>. Substitute into the equation:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle x^2-x(0)+0^2
+\amp=\amp \displaystyle 3
+\\[0.8em]
+\displaystyle x^2
+\amp=\amp \displaystyle 3
+\\[0.8em]
+\displaystyle x
+\amp=\amp \displaystyle \pm \sqrt{3}.
+\end{array}
+        </me>
+
+        <p>
+          So the ellipse crosses the <m>x</m>-axis at <m>(\sqrt{3},0)</m> and <m>(-\sqrt{3},0)</m>.
+        </p>
+
+        <p>
+          Differentiate implicitly:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)
+\amp=\amp \displaystyle \frac{d}{dx}(3)
+\\[1.2em]
+\displaystyle 2x-\bigl(xy'+y\bigr)+2y\,y'
+\amp=\amp \displaystyle 0
+\\[1.2em]
+\displaystyle 2x-y-xy'+2y\,y'
+\amp=\amp \displaystyle 0
+\\[1.2em]
+\displaystyle y'(-x+2y)
+\amp=\amp \displaystyle y-2x
+\\[1.2em]
+\displaystyle y'
+\amp=\amp \displaystyle \frac{y-2x}{-x+2y}.
+\end{array}
+        </me>
+
+        <p>
+          At points on the <m>x</m>-axis, <m>y=0</m>, so
+        </p>
+
+        <me>
+          \displaystyle y'=\frac{-2x}{-x}=2
+          \qquad (x\neq 0).
+        </me>
+
+        <p>
+          In particular, the slope at both <m>(\sqrt{3},0)</m> and <m>(-\sqrt{3},0)</m> is 2, so the tangent lines are parallel.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-when-implicit-needed">
+      <title>When Do We Need Implicit Differentiation?</title>
+      <statement>
+        <p>
+          Explain how to determine when implicit differentiation is needed to find <m>y'</m>, as opposed to using
+          the standard differentiation methods covered earlier. Provide an example where implicit differentiation is required
+          and one where it is not.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Implicit differentiation is needed when <m>y</m> is not given explicitly as a function of <m>x</m>, or when the equation
+          mixes <m>x</m> and <m>y</m> in a way that makes solving for <m>y</m> difficult or undesirable. In these cases, we treat <m>y</m>
+          as a function of <m>x</m> and differentiate both sides with respect to <m>x</m>, remembering that derivatives of expressions involving
+          <m>y</m> must include a factor of <m>y'</m>.
+        </p>
+
+        <p>
+          For example, the equation <m>x^2+y^2=25</m> defines a circle. Solving for <m>y</m> gives
+          <m>y=\pm\sqrt{25-x^2}</m>, which is possible but splits into two functions. Implicit differentiation gives
+          <m>\displaystyle 2x+2y\,y'=0</m>, so <m>\displaystyle y'=-\frac{x}{y}</m>, which works on the whole circle
+          (except where <m>y=0</m>).
+        </p>
+
+        <p>
+          On the other hand, if <m>y</m> is already given explicitly, such as <m>y=(x^2+1)^5</m>, then standard differentiation rules apply directly
+          and there is no need for implicit differentiation. In this example, the Chain Rule gives
+          <m>\displaystyle y'=5(x^2+1)^4\cdot 2x</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-geom-meaning-slope">
+      <title>Geometric Meaning of <m>y'=5</m></title>
+      <statement>
+        <p>
+          A student uses implicit differentiation on a curve and finds that <m>y'=5</m> at the point <m>(x,y)=(1,2)</m>.
+          Explain the geometric meaning of this result as it relates to the graph of the curve.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The derivative <m>y'=5</m> at <m>(1,2)</m> means that the tangent line to the curve at that point has slope 5.
+          Geometrically, the curve is increasing at <m>(1,2)</m>, and near that point the graph rises about 5 units vertically
+          for every 1 unit horizontally (using the usual interpretation of slope).
+        </p>
+
+        <p>
+          Equivalently, if we zoom in close enough around <m>(1,2)</m>, the curve looks nearly like the tangent line, and that tangent line has equation
+
+
+        <me>
+          \displaystyle y-2=5(x-1).
+        </me>
+                </p>
+      </solution>
+    </example>
+  </subsection>
 
 </section>

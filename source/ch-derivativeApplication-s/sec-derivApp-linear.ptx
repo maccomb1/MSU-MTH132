@@ -3,6 +3,282 @@
 <section xml:id="sec-derivApp-linear" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Linear Approximation and L'Hopital's Rule</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>
+        Students should understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near <m>x=a</m>.
+      </li>
+      <li>
+        Students should recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.
+      </li>
+      <li>
+        Students should be able to apply the linear approximation formula
+        <m>\displaystyle L(x)=f(a)+f'(a)(x-a)</m>
+        in simple to moderately complicated problems.
+      </li>
+      <li>
+        Students should see how linearization can be used to motivate (and ultimately prove) L’Hôpital’s Rule.
+      </li>
+      <li>
+        Students should recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms
+        <m>\displaystyle \frac{0}{0}</m>
+        and
+        <m>\displaystyle \frac{\infty}{\infty}</m>.
+      </li>
+      <li>
+        Students should be able to apply L’Hôpital’s Rule in simple to moderately complicated problems, including those that require up to two applications.
+      </li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="linearization-definition">
+    <title>Linearization</title>
+
+    <definition xml:id="def-linearization">
+      <statement>
+        <p>
+          Let <m>f</m> be differentiable at <m>x=a</m>. The <term>linearization</term> of <m>f</m> at <m>x=a</m>
+          is the linear function
+        </p>
+        <me>
+          \displaystyle L(x)=f(a)+f'(a)(x-a).
+        </me>
+        <p>
+          The graph of <m>y=L(x)</m> is the tangent line to <m>y=f(x)</m> at the point <m>(a,f(a))</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The idea is that when <m>x</m> is close to <m>a</m>, the curve <m>y=f(x)</m> and its tangent line
+      have very similar values. So <m>L(x)</m> can be used to approximate <m>f(x)</m> near <m>x=a</m>.
+    </p>
+
+    <example xml:id="ex-linearization-sqrt">
+      <statement>
+        <p>
+          Find the linearization of <m>f(x)=\sqrt{x+3}</m> at <m>a=1</m>. Use it to approximate
+          <m>\sqrt{3.98}</m> and <m>\sqrt{4.05}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          First compute <m>f(1)</m> and <m>f'(1)</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f(x)
+\amp=\amp \displaystyle (x+3)^{1/2}
+\\[0.8em]
+\displaystyle f'(x)
+\amp=\amp \displaystyle \frac{1}{2}(x+3)^{-1/2}
+\\[0.8em]
+\amp=\amp \displaystyle \frac{1}{2\sqrt{x+3}}.
+\end{array}
+        </me>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle f(1)
+\amp=\amp \displaystyle \sqrt{4}=2,
+\\[0.8em]
+\displaystyle f'(1)
+\amp=\amp \displaystyle \frac{1}{2\sqrt{4}}=\frac{1}{4}.
+\end{array}
+        </me>
+
+        <p>
+          Therefore the linearization at <m>a=1</m> is
+        </p>
+
+        <me>
+          \displaystyle L(x)=2+\frac{1}{4}(x-1).
+        </me>
+
+        <p>
+          To approximate <m>\sqrt{3.98}</m>, notice that <m>\sqrt{3.98}=\sqrt{0.98+3}=f(0.98)</m>, so
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \sqrt{3.98}
+\amp=\amp \displaystyle f(0.98)
+\\[0.6em]
+\amp\approx\amp \displaystyle L(0.98)
+\\[0.6em]
+\amp=\amp \displaystyle 2+\frac{1}{4}(0.98-1)
+\\[0.6em]
+\amp=\amp \displaystyle 2-\frac{1}{4}(0.02)
+\\[0.6em]
+\amp=\amp \displaystyle 2-0.005
+\\[0.6em]
+\amp=\amp \displaystyle 1.995.
+\end{array}
+        </me>
+
+        <p>
+          Similarly, <m>\sqrt{4.05}=f(1.05)</m>, so
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \sqrt{4.05}
+\amp=\amp \displaystyle f(1.05)
+\\[0.6em]
+\amp\approx\amp \displaystyle L(1.05)
+\\[0.6em]
+\amp=\amp \displaystyle 2+\frac{1}{4}(1.05-1)
+\\[0.6em]
+\amp=\amp \displaystyle 2+\frac{1}{4}(0.05)
+\\[0.6em]
+\amp=\amp \displaystyle 2+0.0125
+\\[0.6em]
+\amp=\amp \displaystyle 2.0125.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-linearization-exp-01">
+      <statement>
+        <p>
+          Use linear approximation to estimate <m>e^{0.1}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>f(x)=e^x</m> and linearize at <m>a=0</m> (since <m>0.1</m> is close to <m>0</m>).
+          We have <m>f(0)=1</m> and <m>f'(x)=e^x</m>, so <m>f'(0)=1</m>.
+        </p>
+
+        <me>
+          \displaystyle L(x)=f(0)+f'(0)(x-0)=1+x.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          \displaystyle e^{0.1}=f(0.1)\approx L(0.1)=1+0.1=1.1.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="lhopital-statement">
+    <title>L’Hôpital’s Rule</title>
+
+    <theorem xml:id="thm-lhopital">
+      <title>L’Hôpital’s Rule (Informal Statement)</title>
+      <statement>
+        <p>
+          Suppose <m>f</m> and <m>g</m> are differentiable near <m>x=c</m> (except possibly at <m>x=c</m>), and
+          <m>g'(x)\neq 0</m> near <m>x=c</m>. If
+        </p>
+        <me>
+          \displaystyle \lim_{x\to c} f(x)=\lim_{x\to c} g(x)=0
+          \quad\text{or}\quad
+          \displaystyle \lim_{x\to c} f(x)=\lim_{x\to c} g(x)=\pm\infty,
+        </me>
+        <p>
+          then
+        </p>
+        <me>
+          \displaystyle \lim_{x\to c}\frac{f(x)}{g(x)}
+          =
+          \displaystyle \lim_{x\to c}\frac{f'(x)}{g'(x)},
+        </me>
+        <p>
+          provided the limit on the right exists (or is infinite).
+        </p>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-linearization-motivation">
+      <p>
+        One way to motivate L’Hôpital’s Rule is through linearization:
+        near a point, differentiable functions behave like their tangent lines, and tangent lines are linear.
+        This idea can be used to build an argument for why replacing <m>f</m> and <m>g</m> by <m>f'</m> and <m>g'</m>
+        can preserve the limiting ratio in indeterminate forms.
+      </p>
+    </remark>
+
+    <example xml:id="ex-lhopital-ln-over-xminus1">
+      <statement>
+        <p>
+          Compute <m>\displaystyle \lim_{x\to 1}\frac{\ln x}{x-1}</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          As <m>x\to 1</m>, we have <m>\ln x\to 0</m> and <m>x-1\to 0</m>, so this is an indeterminate form
+          <m>\displaystyle \frac{0}{0}</m>. Apply L’Hôpital’s Rule:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \lim_{x\to 1}\frac{\ln x}{x-1}
+\amp=\amp \displaystyle \lim_{x\to 1}\frac{\frac{d}{dx}(\ln x)}{\frac{d}{dx}(x-1)}
+\\[1.2em]
+\amp=\amp \displaystyle \lim_{x\to 1}\frac{\frac{1}{x}}{1}
+\\[1.2em]
+\amp=\amp \displaystyle \lim_{x\to 1}\frac{1}{x}
+\\[1.2em]
+\amp=\amp \displaystyle 1.
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-lhopital-exp-over-x2">
+      <statement>
+        <p>
+          Compute <m>\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}</m>.
+          (This requires two applications of L’Hôpital’s Rule.)
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          As <m>x\to\infty</m>, both <m>e^x</m> and <m>x^2</m> go to <m>\infty</m>, so this is an indeterminate form
+          <m>\displaystyle \frac{\infty}{\infty}</m>. Apply L’Hôpital’s Rule:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}
+\amp=\amp \displaystyle \lim_{x\to\infty}\frac{\frac{d}{dx}(e^x)}{\frac{d}{dx}(x^2)}
+\\[1.2em]
+\amp=\amp \displaystyle \lim_{x\to\infty}\frac{e^x}{2x}.
+\end{array}
+        </me>
+
+        <p>
+          This is still <m>\displaystyle \frac{\infty}{\infty}</m>, so apply L’Hôpital’s Rule again:
+        </p>
+
+        <me>
+\begin{array}{rcl}
+\displaystyle \lim_{x\to\infty}\frac{e^x}{2x}
+\amp=\amp \displaystyle \lim_{x\to\infty}\frac{\frac{d}{dx}(e^x)}{\frac{d}{dx}(2x)}
+\\[1.2em]
+\amp=\amp \displaystyle \lim_{x\to\infty}\frac{e^x}{2}
+\\[1.2em]
+\amp=\amp \displaystyle \infty.
+\end{array}
+        </me>
+
+        <p>
+          Therefore, <m>\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}=\infty</m>.
+          In words: <m>e^x</m> grows faster than <m>x^2</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
 
 </section>
