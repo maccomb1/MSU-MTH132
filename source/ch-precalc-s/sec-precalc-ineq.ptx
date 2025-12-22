@@ -3,6 +3,242 @@
 <section xml:id="sec-precalc-ineq" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Inequalities</title>
 
-  <p> Text of section. </p>
+  <p>
+    Inequalities appear throughout calculus, especially when describing domains,
+    intervals of increase or decrease, and where functions are positive or negative.
+    Unlike equations, inequalities often have many solutions.
+    In this section, we focus on a single systematic approach,
+    the test point method, which works reliably for many types of inequalities.
+  </p>
+
+  <p>
+    The key idea behind the test point method is simple.
+    We first determine where an expression could change sign,
+    then test representative points from each interval.
+    This approach emphasizes understanding over memorization
+    and reduces common algebra mistakes.
+  </p>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-ineq-overview">
+    <title>The Test Point Method: Overview</title>
+
+    <p>
+      The test point method is used to solve inequalities of the form
+      <m>f(x) &gt; 0</m>, <m>f(x) \ge 0</m>, <m>f(x) &lt; 0</m>, or <m>f(x) \le 0</m>.
+      Instead of solving directly, we analyze where the function is positive or negative.
+    </p>
+
+    <principle xml:id="pr-test-point-method">
+      <statement>
+        <p>
+          To solve an inequality using test points:
+        </p>
+        <ol>
+          <li>Rewrite the inequality so that one side is zero.</li>
+          <li>Find all values of <m>x</m> where the expression equals zero or is undefined.</li>
+          <li>Use these values to divide the number line into intervals.</li>
+          <li>Choose one test point from each interval.</li>
+          <li>Determine which intervals satisfy the inequality.</li>
+        </ol>
+      </statement>
+    </principle>
+
+    <remark>
+      <p>
+        The test point method works best when the expression is factored.
+        This is why factoring is a critical prerequisite for inequalities.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-ineq-linear">
+
+
+    <example>
+    <title>Linear Example</title>      
+      <statement>
+        <p>
+          Solve <m>2x - 4 &gt; 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Step 1: Identify where the expression equals zero.
+        </p>
+        <me>
+          2x - 4 = 0 \quad \Rightarrow \quad x = 2.
+        </me>
+
+        <p>
+          Step 2: Use <m>x = 2</m> to divide the number line into intervals.
+        </p>
+
+        <p>
+          Step 3: Test a point from each interval.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+x = 0: &amp; 2(0) - 4 = -4 &amp; \text{negative} \\
+x = 3: &amp; 2(3) - 4 = 2 &amp; \text{positive}
+\end{array}
+        </me>
+
+        <p>
+          Step 4: Choose the interval where the expression is positive.
+        </p>
+
+        <p>
+          The solution is <m>x &gt; 2</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-ineq-quadratic">
+    <title>Quadratic Inequalities</title>
+
+    <p>
+      Quadratic inequalities often change sign at two points.
+      This makes them a natural setting for the test point method.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Solve <m>x^2 - 5x + 6 \le 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Step 1: Factor the expression.
+        </p>
+        <me>
+          x^2 - 5x + 6 = (x - 2)(x - 3).
+        </me>
+
+        <p>
+          Step 2: Identify critical points.
+        </p>
+        <me>
+          x = 2, \quad x = 3.
+        </me>
+
+        <p>
+          Step 3: Test one point in each interval.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+x = 0: &amp; (0 - 2)(0 - 3) = (+) &amp; \text{positive} \\
+x = 2.5: &amp; (0.5)(-0.5) = (-) &amp; \text{negative} \\
+x = 4: &amp; (2)(1) = (+) &amp; \text{positive}
+\end{array}
+        </me>
+
+        <p>
+          Step 4: Include intervals where the expression is zero or negative.
+        </p>
+
+        <p>
+          The solution is <m>2 \le x \le 3</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+ <subsection xml:id="ssec-ineq-rational">
+  <title>Rational Inequalities</title>
+
+  <p>
+    Rational inequalities require special care because the expression may be undefined
+    for certain values of <m>x</m>.
+    These values must always be considered when dividing the number line into intervals.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Solve <m>1 - \dfrac{4}{x^2} &gt; 0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Step 1: Rewrite the inequality so it is a single rational expression.
+      </p>
+
+      <me>
+        1 - \dfrac{4}{x^2}
+        =
+        \dfrac{x^2 - 4}{x^2}.
+      </me>
+
+      <p>
+        Step 2: Identify where the expression is zero or undefined.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+x^2 - 4 = 0 &amp; \Rightarrow &amp; x = \pm 2 \\
+x^2 = 0 &amp; \Rightarrow &amp; x = 0 \text{ (undefined)}
+\end{array}
+      </me>
+
+      <p>
+        Step 3: Use these values to divide the number line into intervals.
+      </p>
+
+      <p>
+        The critical points are <m>-2</m>, <m>0</m>, and <m>2</m>.
+      </p>
+
+      <p>
+        Step 4: Choose a test point in each interval.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+x = -3: &amp; \dfrac{9 - 4}{9} = \dfrac{5}{9} &amp; \text{positive} \\
+x = -1: &amp; \dfrac{1 - 4}{1} = -3 &amp; \text{negative} \\
+x = 1:  &amp; \dfrac{1 - 4}{1} = -3 &amp; \text{negative} \\
+x = 3:  &amp; \dfrac{9 - 4}{9} = \dfrac{5}{9} &amp; \text{positive}
+\end{array}
+      </me>
+
+      <p>
+        Step 5: Select intervals where the expression is positive.
+      </p>
+
+      <p>
+        Since the inequality is strict, points where the expression equals zero
+        are not included.
+      </p>
+
+      <p>
+        The solution is
+      </p>
+
+      <p>
+        <m>x &lt; -2</m> or <m>x &gt; 2</m>.
+      </p>
+    </solution>
+  </example>
+
+  <remark>
+    <p>
+      Even though <m>x^2</m> is always nonnegative, the fraction
+      <m>\dfrac{1}{x^2}</m> is undefined at <m>x = 0</m>,
+      which must always be excluded from the solution set.
+    </p>
+  </remark>
+</subsection>
+
+  
+
+
 
 </section>

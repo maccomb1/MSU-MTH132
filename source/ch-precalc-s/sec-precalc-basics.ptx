@@ -1,8 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-precalc-basics" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Some Basics</title>
+  <title>Arithmetic Basics</title>
 
-  <p> Text of section. </p>
+  <p>
+    Before starting calculus, it is important to be comfortable with basic arithmetic and algebraic rules.
+    Many difficulties students experience in calculus come not from new ideas, but from small algebra mistakes.
+    This section reviews core skills that will be used repeatedly throughout the course.
+  </p>
+
+  <subsection xml:id="ssec-whole-numbers-signs">
+    <title>Signs</title>
+
+
+    <p>
+      We begin with rules involving negative signs.
+      These rules appear constantly when simplifying expressions, computing slopes, and working with limits.
+      Being fluent with sign changes will help prevent many common errors later on.
+    </p>
+
+       <principle xml:id="ax-sign-rules">
+      <statement>
+        <p>
+          For any real numbers <m>a</m> and <m>b</m>,
+<me>
+\begin{array}{rcl}
+-(-a) &amp; = &amp; a \\
+(-a)b &amp; = &amp; -ab \\
+(-a)(-b) &amp; = &amp; ab \\
+a - b &amp; = &amp; a + (-b) \\
+-(a - b) &amp; = &amp; b - a
+\end{array}
+</me>
+        </p>
+      </statement>
+    </principle>
+
+    <example>
+      <statement>
+        <p>Simplify <m>-(3 - 8)</m>.</p>
+      </statement>
+      <solution>
+        <me>
+          3 - 8 = -5, \qquad -(-5) = 5.
+        </me>
+      </solution>
+    </example>
+    
+  </subsection>
+
+    <subsection xml:id="ssec-fractions">
+    <title>Fractions and Rational Expressions</title>
+
+    <p>
+      Fractions appear frequently in calculus, especially in limits and derivatives.
+      Careful fraction manipulation is essential for simplifying expressions correctly.
+    </p>
+
+
+    <principle xml:id="ax-fraction-operations">
+      <statement>
+<p>
+Assume <m>a, b, c, d</m> are real numbers with <m>b \neq 0</m> and <m>d \neq 0</m>.
+</p>
+
+<me>
+\begin{array}{rcl}
+\dfrac{a}{b} &amp; = &amp; a \cdot \dfrac{1}{b} \\[0.6em]
+\dfrac{a}{b} \pm \dfrac{c}{d} &amp; = &amp; \dfrac{ad \pm bc}{bd} \\[0.6em]
+\dfrac{a}{b} \cdot \dfrac{c}{d} &amp; = &amp; \dfrac{ac}{bd} \\[0.6em]
+\dfrac{a/b}{d/c} &amp; = &amp; \dfrac{ac}{bd}
+\end{array}
+</me>
+      </statement>
+    </principle>
+
+    <example>
+      <statement>
+        <p>Simplify <m>\dfrac{2/x}{3/5}</m>.</p>
+      </statement>
+      <solution>
+        <me>
+          \frac{2}{x} \cdot \frac{5}{3} = \frac{10}{3x}.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+   <subsection xml:id="ssec-distributive">
+    <title>Distributive Law and Common Errors</title>
+
+    <p>
+      Many fraction and sign errors come from misusing the distributive law.
+      This law explains how multiplication interacts with addition and subtraction.
+      Understanding when it applies, and when it does not, is critical for algebraic simplification.
+    </p>
+
+    <principle xml:id="ax-distributive-law">
+      <statement>
+<me>
+\begin{array}{rcl}
+a(b + c) &amp; = &amp; ab + ac \\[0.6em]
+\dfrac{b + c}{a} &amp; = &amp; \dfrac{b}{a} + \dfrac{c}{a}
+\end{array}
+</me>
+      </statement>
+    </principle>
+
+ <example xml:id="ex-distributive-basic">
+    <statement>
+      <p>
+        Use the distributive law to simplify <m>3(x + 5)</m>.
+      </p>
+    </statement>
+    <solution>
+      <me>
+\begin{array}{rcl}
+3(x + 5) &amp; = &amp; 3x + 3(5) \\
+         &amp; = &amp; 3x + 15
+\end{array}
+      </me>
+    </solution>
+  </example>
+
+  <example xml:id="ex-distributive-fraction">
+    <statement>
+      <p>
+        Simplify <m>\dfrac{x + 4}{2}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Apply the distributive law to the numerator:
+      </p>
+      <me>
+\begin{array}{rcl}
+\dfrac{x + 4}{2} &amp; = &amp; \dfrac{x}{2} + \dfrac{4}{2} \\
+                 &amp; = &amp; \dfrac{x}{2} + 2
+\end{array}
+      </me>
+    </solution>
+  </example>
+
+    <remark>
+      <p>
+        The distributive law does not apply to square roots, powers, or denominators.
+      </p>
+      <me>
+        \sqrt{x^2 + 9} \neq x + 3,
+        \qquad
+        (x + 3)^2 \neq x^2 + 9,
+        \qquad
+        \frac{1}{x + 3} \neq \frac{1}{x} + \frac{1}{3}.
+      </me>
+    </remark>
+
+
+
+
+
+
+
+
+
+  </subsection>
+
+ <subsection xml:id="ssec-exponents">
+    <title>Powers and Rational Exponents</title>
+
+    <p>
+      Exponent rules allow us to rewrite and simplify expressions efficiently,
+      which is especially important when computing limits and derivatives.
+    </p>
+
+   <principle xml:id="pr-exponent-laws">
+  <statement>
+    <p>
+      Assume <m>a &gt; 0</m> and <m>m,n</m> are real numbers.
+    </p>
+
+<me>
+\begin{array}{rcl|rcl}
+a^n a^m &amp; = &amp; a^{n+m}, &amp;\hspace{1cm}
+(a^n)^m &amp; = &amp; a^{nm} \\[0.6em]
+(ab)^n &amp; = &amp; a^n b^n, &amp;
+a^{-n} &amp; = &amp; \dfrac{1}{a^n} \\[1em]
+a^{1/n} &amp; = &amp; \sqrt[n]{a}, &amp;
+a^{m/n} &amp; = &amp; \sqrt[n]{a^m} \\[0.6em]
+a^{-m/n} &amp; = &amp; \dfrac{1}{\sqrt[n]{a^m}}, &amp;
+a^0 &amp; = &amp; 1
+\end{array}
+</me>
+  </statement>
+</principle>
+
+
+
+
+    <example>
+      <statement>
+        <p>
+          Simplify <m>\dfrac{x^5}{x^2}</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \frac{x^5}{x^2} = x^{5-2} = x^3.
+        </me>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Rewrite <m>x^{3/2}</m> using a radical.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          x^{3/2} = \sqrt{x^3}.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+
+  
+  <subsection xml:id="ssec-rationalizing">
+    <title>Rationalizing the Denominator</title>
+
+
+    <p>
+      Finally, let's review rationalizing the denominator.    
+      Rationalizing removes square roots from denominators. This technique appears often in limits.
+    </p>
+
+
+    <principle xml:id="thm-rationalize">
+      <statement>
+        <me>
+          \frac{1}{\sqrt{a}} = \frac{\sqrt{a}}{a}.
+        </me>
+        <me>
+          \frac{1}{\sqrt{a} + \sqrt{b}} =
+          \frac{\sqrt{a} - \sqrt{b}}{a - b}.
+        </me>
+      </statement>
+    </principle>
+
+    <example>
+      <statement>
+        <p>
+          Rationalize <m>\dfrac{1}{\sqrt{5}}</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \frac{1}{\sqrt{5}} \cdot \frac{\sqrt{5}}{\sqrt{5}} = \frac{\sqrt{5}}{5}.
+        </me>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Rationalize <m>\dfrac{1}{\sqrt{x} + 2}</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \frac{1}{\sqrt{x} + 2} \cdot \frac{\sqrt{x} - 2}{\sqrt{x} - 2}
+          =
+          \frac{\sqrt{x} - 2}{x - 4}.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
 
 </section>
