@@ -3,7 +3,21 @@
 <section xml:id="sec-precalc-absval" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Absolute Values</title>
 
-  <p> Text of section. </p>
+  <p>
+    Absolute value equations appear frequently in algebra and calculus.
+    They are used to describe distance, error bounds, and tolerances.
+    The emphasis is on understanding what absolute value means
+    and applying that meaning systematically.
+  </p>
+
+
+
+
+
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-abs-definitions">
+    <title>Definitions of Absolute Value</title>
 
 
   <definition xml:id="def-absolute-value">
@@ -23,5 +37,189 @@
     </p>
   </statement>
 </definition>  
+
+
+
+    
+    <remark>
+      <p>
+        These two definitions describe the same quantity.
+        The distance definition is often more intuitive,
+        while the piecewise definition is more useful for algebraic manipulation.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-abs-basic-equations">
+    <title>Solving Basic Absolute Value Equations</title>
+
+    <p>
+      We begin with equations of the form <m>|A| = c</m>,
+      where <m>c</m> is a nonnegative number.
+    </p>
+
+    <principle xml:id="pr-abs-equals-constant">
+      <statement>
+        <p>
+          If <m>c &gt; 0</m>, then
+        </p>
+        <me>
+\begin{array}{rcl}
+|A| = c &amp; \Longleftrightarrow &amp; A = c \quad \text{or} \quad A = -c.
+\end{array}
+        </me>
+      </statement>
+    </principle>
+
+    <example>
+      <statement>
+        <p>
+          Solve <m>|x| = 5</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The distance from <m>x</m> to <m>0</m> is <m>5</m>.
+          This occurs at two points.
+        </p>
+        <me>
+\begin{array}{rcl}
+x = 5 \quad \text{or} \quad x = -5
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+ 
+    
+<example>
+      <statement>
+        <p>
+          Solve <m>|2x - 3| = 7</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Step 1: Write two equations.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+2x - 3 &amp; = &amp; 7 \\
+2x - 3 &amp; = &amp; -7
+\end{array}
+        </me>
+
+        <p>
+          Step 2: Solve each equation.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+2x = 10 &amp; \Rightarrow &amp; x = 5 \\[0.4em]
+2x = -4 &amp; \Rightarrow &amp; x = -2
+\end{array}
+        </me>
+
+        <p>
+          The solution set is <m>x= -2</m> or <m>x= 5</m>.
+        </p>
+      </solution>
+    </example>
+
+<example>
+  <statement>
+    <p>
+      Solve <m>|x^2 - 1| = 8</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Step 1: Use the definition of absolute value to write two equations.
+    </p>
+
+    <me>
+\begin{array}{rcl}
+x^2 - 1 &amp; = &amp; 8 \\
+x^2 - 1 &amp; = &amp; -8
+\end{array}
+    </me>
+
+    <p>
+      Step 2: Solve each equation separately.
+    </p>
+
+    <p>
+      First equation:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+x^2 - 1 &amp; = &amp; 8 \\
+x^2 &amp; = &amp; 9 \\
+x &amp; = &amp; \pm 3
+\end{array}
+    </me>
+
+    <p>
+      Second equation:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+x^2 - 1 &amp; = &amp; -8 \\
+x^2 &amp; = &amp; -7
+\end{array}
+    </me>
+
+    <p>
+      This equation has no real solutions.
+    </p>
+
+    <p>
+      Step 3: Combine the solutions.
+    </p>
+
+    <p>
+      The solution set is <m>x = -3</m> or <m>x = 3</m>.
+    </p>
+  </solution>
+</example>
+
+  </subsection>
+
+  <!-- ======================================================= -->
+
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-abs-no-solution">
+    <title>When Absolute Value Equations Have No Solution</title>
+
+    <p>
+      Absolute value is never negative.
+      This observation allows us to immediately identify equations
+      that have no solution.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Solve <m>|x - 4| = -3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since absolute value is always nonnegative,
+          this equation has no solution.
+        </p>
+
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+ 
+
 
 </section>

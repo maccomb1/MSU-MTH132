@@ -155,6 +155,29 @@ x^2 - 16 &amp; = &amp; (x - 4)(x + 4)
       </solution>
     </example>
 
+    <example>
+      <statement>
+        <p>
+          Simplify <m>\dfrac{x^2 - 9}{x - 3}</m> for <m>x \neq 3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Factor the numerator.
+        </p>
+        <me>
+\begin{array}{rcl}
+\dfrac{x^2 - 9}{x - 3}
+&amp; = &amp;
+\dfrac{(x - 3)(x + 3)}{x - 3} \\[0.6em]
+&amp; = &amp;
+x + 3
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+
     <remark>
       <p>
         The sum of squares <m>a^2 + b^2</m> does not factor over the real numbers.
@@ -217,92 +240,142 @@ x^2 - 10x + 25 &amp; = &amp; (x - 5)^2
   </subsection>
 
   <!-- ======================================================= -->
-  <subsection xml:id="ssec-factor-general-trinomials">
-    <title>Factoring General Trinomials</title>
+<subsection xml:id="ssec-factor-general-trinomials">
+  <title>Factoring General Trinomials Using the AC Method</title>
 
+  <p>
+    Not all trinomials factor easily by inspection.
+    For expressions of the form <m>ax^2 + bx + c</m>,
+    the <em>AC method</em> provides a systematic way to factor.
+    This method is especially useful when the leading coefficient
+    is not equal to 1, and it works equally well when it is.
+  </p>
+
+  <principle xml:id="pr-ac-method">
+    <statement>
+      <p>
+        To factor <m>ax^2 + bx + c</m> using the AC method:
+      </p>
+      <ol>
+        <li>Compute the product <m>ac</m>.</li>
+        <li>Find two numbers whose product is <m>ac</m> and whose sum is <m>b</m>.</li>
+        <li>Rewrite the middle term using these two numbers.</li>
+        <li>Factor by grouping.</li>
+      </ol>
+    </statement>
+  </principle>
+
+  <example>
+    <statement>
+      <p>
+        Factor <m>x^2 + 5x + 6</m> using the AC method.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Step 1: Identify <m>a</m>, <m>b</m>, and <m>c</m>.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+a = 1, &amp; b = 5, &amp; c = 6
+\end{array}
+      </me>
+
+      <p>
+        Step 2: Compute <m>ac</m>.
+      </p>
+
+      <me>
+        ac = 1 \cdot 6 = 6.
+      </me>
+
+      <p>
+        Step 3: Find two numbers that multiply to <m>6</m> and add to <m>5</m>.
+      </p>
+
+      <me>
+        2 \quad \text{and} \quad 3
+      </me>
+
+      <p>
+        Step 4: Rewrite the middle term and factor by grouping.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+x^2 + 5x + 6
+&amp; = &amp;
+x^2 + 2x + 3x + 6 \\[0.6em]
+&amp; = &amp;
+x(x + 2) + 3(x + 2) \\[0.6em]
+&amp; = &amp;
+(x + 2)(x + 3)
+\end{array}
+      </me>
+    </solution>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Factor <m>x^2 - x - 12</m> using the AC method.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Step 1: Identify <m>a</m>, <m>b</m>, and <m>c</m>.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+a = 1, &amp; b = -1, &amp; c = -12
+\end{array}
+      </me>
+
+      <p>
+        Step 2: Compute <m>ac</m>.
+      </p>
+
+      <me>
+        ac = 1 \cdot (-12) = -12.
+      </me>
+
+      <p>
+        Step 3: Find two numbers that multiply to <m>-12</m> and add to <m>-1</m>.
+      </p>
+
+      <me>
+        -4 \quad \text{and} \quad 3
+      </me>
+
+      <p>
+        Step 4: Rewrite the middle term and factor by grouping.
+      </p>
+
+      <me>
+\begin{array}{rcl}
+x^2 - x - 12
+&amp; = &amp;
+x^2 - 4x + 3x - 12 \\[0.6em]
+&amp; = &amp;
+x(x - 4) + 3(x - 4) \\[0.6em]
+&amp; = &amp;
+(x - 4)(x + 3)
+\end{array}
+      </me>
+    </solution>
+  </example>
+
+  <remark>
     <p>
-      Not all trinomials are perfect squares.
-      For expressions of the form <m>x^2 + bx + c</m>,
-      we look for two numbers whose product is <m>c</m>
-      and whose sum is <m>b</m>.
+      The AC method always works when a trinomial factors over the real numbers.
+      With practice, you may recognize factors quickly, but this method provides
+      a dependable fallback when guessing is difficult.
     </p>
-
-    <example>
-      <statement>
-        <p>
-          Factor <m>x^2 + 5x + 6</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We need two numbers that multiply to <m>6</m>
-          and add to <m>5</m>.
-        </p>
-        <me>
-\begin{array}{rcl}
-x^2 + 5x + 6 &amp; = &amp; (x + 2)(x + 3)
-\end{array}
-        </me>
-      </solution>
-    </example>
-
-    <example>
-      <statement>
-        <p>
-          Factor <m>x^2 - x - 12</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The product is <m>-12</m> and the sum is <m>-1</m>.
-        </p>
-        <me>
-\begin{array}{rcl}
-x^2 - x - 12 &amp; = &amp; (x - 4)(x + 3)
-\end{array}
-        </me>
-      </solution>
-    </example>
-  </subsection>
+  </remark>
+</subsection>
 
   <!-- ======================================================= -->
-  <subsection xml:id="ssec-factor-importance-calculus">
-    <title>Why Factoring Matters in Calculus</title>
-
-    <p>
-      In calculus, factoring is often used to cancel terms
-      before evaluating a limit.
-      Expressions that initially appear undefined can often
-      be simplified using factoring.
-    </p>
-
-    <example>
-      <statement>
-        <p>
-          Simplify <m>\dfrac{x^2 - 9}{x - 3}</m> for <m>x \neq 3</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Factor the numerator.
-        </p>
-        <me>
-\begin{array}{rcl}
-\dfrac{x^2 - 9}{x - 3}
-&amp; = &amp;
-\dfrac{(x - 3)(x + 3)}{x - 3} \\[0.6em]
-&amp; = &amp;
-x + 3
-\end{array}
-        </me>
-      </solution>
-    </example>
-
-    <remark>
-      <p>
-        This exact type of simplification appears repeatedly in limit problems.
-      </p>
-    </remark>
-  </subsection>
 
 </section>

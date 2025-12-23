@@ -53,9 +53,10 @@
   </subsection>
 
   <!-- ======================================================= -->
-  <subsection xml:id="ssec-ineq-linear">
-
-
+  <subsection xml:id="ssec-ineq-examples">
+    <title>Several Examples</title>
+    <p> Now let's see this modeled in several examples!</p>
+    
     <example>
     <title>Linear Example</title>      
       <statement>
@@ -95,18 +96,10 @@ x = 3: &amp; 2(3) - 4 = 2 &amp; \text{positive}
         </p>
       </solution>
     </example>
-  </subsection>
 
-  <!-- ======================================================= -->
-  <subsection xml:id="ssec-ineq-quadratic">
-    <title>Quadratic Inequalities</title>
-
-    <p>
-      Quadratic inequalities often change sign at two points.
-      This makes them a natural setting for the test point method.
-    </p>
 
     <example>
+    <title>Quadratic Example</title> 
       <statement>
         <p>
           Solve <m>x^2 - 5x + 6 \le 0</m>.
@@ -148,19 +141,16 @@ x = 4: &amp; (2)(1) = (+) &amp; \text{positive}
         </p>
       </solution>
     </example>
-  </subsection>
 
-  <!-- ======================================================= -->
- <subsection xml:id="ssec-ineq-rational">
-  <title>Rational Inequalities</title>
 
   <p>
     Rational inequalities require special care because the expression may be undefined
     for certain values of <m>x</m>.
-    These values must always be considered when dividing the number line into intervals.
+    As we saw in our technique, these values must always be considered when dividing the number line into intervals.
   </p>
 
   <example>
+    <title>Rational Example</title> 
     <statement>
       <p>
         Solve <m>1 - \dfrac{4}{x^2} &gt; 0</m>.
@@ -228,13 +218,6 @@ x = 3:  &amp; \dfrac{9 - 4}{9} = \dfrac{5}{9} &amp; \text{positive}
     </solution>
   </example>
 
-  <remark>
-    <p>
-      Even though <m>x^2</m> is always nonnegative, the fraction
-      <m>\dfrac{1}{x^2}</m> is undefined at <m>x = 0</m>,
-      which must always be excluded from the solution set.
-    </p>
-  </remark>
 </subsection>
 
   

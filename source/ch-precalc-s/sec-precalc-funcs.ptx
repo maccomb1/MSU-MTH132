@@ -1,8 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-precalc-funcs" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Functions</title>
+  <title>Functions and Inverses</title>
 
-  <p> Text of section. </p>
+  <p>
+   This section reviews functions, function composition, and introduces inverse functions
+    from both an algebraic and conceptual perspective.
+  </p>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-function-review">
+    <title>Functions and Notation</title>
+
+    <p>
+      A function assigns exactly one output to each input.
+      We typically write a function using function notation,
+      such as <m>f(x)</m>.
+    </p>
+
+    <definition xml:id="def-function">
+      <title>Function</title>
+      <statement>
+        <p>
+          A <term>function</term> is a rule that assigns to each input
+          <m>x</m> in its domain exactly one output, denoted <m>f(x)</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x) = 2x + 1</m>. Find <m>f(3)</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+\begin{array}{rcl}
+f(3) &amp; = &amp; 2(3) + 1 \\
+     &amp; = &amp; 7
+\end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-composition">
+    <title>Function Composition</title>
+
+    <p>
+      Function composition describes applying one function to the output of another.
+      Composition is important because inverse functions are defined
+      in terms of composition.
+    </p>
+
+    <definition xml:id="def-composition">
+      <title>Function Composition</title>
+      <statement>
+        <p>
+          If <m>f</m> and <m>g</m> are functions, the <term>composition</term>
+          of <m>f</m> with <m>g</m> is defined by
+        </p>
+        <me>
+          (f \circ g)(x) = f(g(x)).
+        </me>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Let <m>f(x) = 2x + 1</m> and <m>g(x) = x^2</m>.
+          Find <m>(f \circ g)(x)</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+\begin{array}{rcl}
+(f \circ g)(x) &amp; = &amp; f(g(x)) \\
+               &amp; = &amp; f(x^2) \\
+               &amp; = &amp; 2x^2 + 1
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        In general, <m>f \circ g</m> and <m>g \circ f</m> are not the same.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-inverses">
+    <title>Inverse Functions</title>
+
+    <p>
+      An inverse function reverses the action of a function.
+      When a function and its inverse are composed,
+      the result is the original input.
+    </p>
+
+    <definition xml:id="def-inverse-function">
+      <title>Inverse Function</title>
+      <statement>
+        <p>
+          A function <m>f</m> has an <term>inverse</term>, denoted <m>f^{-1}</m>,
+          if
+        </p>
+        <me>
+\begin{array}{rcl}
+f(f^{-1}(x)) &amp; = &amp; x
+\quad \text{and} \quad
+f^{-1}(f(x)) &amp; = &amp; x.
+\end{array}
+        </me>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        Not every function has an inverse.
+        A function must be one-to-one,
+        meaning different inputs produce different outputs.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-finding-inverses">
+    <title>Finding Inverses Algebraically</title>
+
+    <p>
+      To find an inverse function algebraically,
+      we solve the equation <m>y = f(x)</m> for <m>x</m>
+      and then interchange the roles of <m>x</m> and <m>y</m>.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the inverse of <m>f(x) = 2x + 1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Step 1: Write the equation <m>y = 2x + 1</m>.
+        </p>
+
+        <p>
+          Step 2: Solve for <m>x</m>.
+        </p>
+
+        <me>
+\begin{array}{rcl}
+y - 1 &amp; = &amp; 2x \\
+x &amp; = &amp; \dfrac{y - 1}{2}
+\end{array}
+        </me>
+
+        <p>
+          Step 3: Interchange <m>x</m> and <m>y</m>.
+        </p>
+
+        <me>
+          f^{-1}(x) = \dfrac{x - 1}{2}.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-special-inverses">
+    <title>Important Examples of Inverse Functions</title>
+
+    <p>
+      Several inverse function pairs appear repeatedly in calculus.
+      These relationships are important to recognize and remember.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          The exponential function <m>e^x</m> and the natural logarithm
+          <m>\ln(x)</m> are inverses.
+        </p>
+      </statement>
+      <solution>
+        <me>
+\begin{array}{rcl}
+e^{\ln(x)} &amp; = &amp; x \quad (x &gt; 0) \\
+\ln(e^x) &amp; = &amp; x
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Trigonometric functions also have inverses.
+          For example, <m>\sin(x)</m> and <m>\arcsin(x)</m> are inverse functions
+          when appropriate domain restrictions are used.
+        </p>
+      </statement>
+      <solution>
+        <me>
+\begin{array}{rcl}
+\sin(\arcsin(x)) &amp; = &amp; x \quad (-1 \le x \le 1) \\
+\arcsin(\sin(x)) &amp; = &amp; x \quad \left(-\dfrac{\pi}{2} \le x \le \dfrac{\pi}{2}\right)
+\end{array}
+        </me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        Inverse trigonometric functions require restricted domains
+        so that they are one-to-one.
+      </p>
+    </remark>
+  </subsection>
+
 
 </section>
