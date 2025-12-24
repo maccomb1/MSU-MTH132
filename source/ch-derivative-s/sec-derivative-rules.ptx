@@ -68,37 +68,302 @@
       The most important basic formulas are the following.
     </p>
 
-    <theorem xml:id="thm-basic-derivatives">
-      <statement>
-        <ul>
-          <li>
-            If <m>f(x)=c</m> is a constant function, then <m>\displaystyle \frac{d}{dx}(c)=0</m>.
-          </li>
-          <li>
-            If <m>f(x)=x</m>, then <m>\displaystyle \frac{d}{dx}(x)=1</m>.
-          </li>
-          <li>
-            If <m>f(x)=x^p</m> where <m>p</m> is any real number for which <m>x^p</m> is defined, then
-            <me>\displaystyle \frac{d}{dx}(x^p)=px^{p-1}.</me>
-          </li>
-        </ul>
-      </statement>
-    </theorem>
+<theorem xml:id="thm-constant-and-linear-derivatives">
+  <title>Derivatives of Constant and Linear Functions</title>
+  <statement>
+    <ul>
+      <li>
+        If <m>f(x) = c</m> is a constant function, then
+        <m>\displaystyle \frac{d}{dx}(c) = 0</m>.
+      </li>
+      <li>
+        If <m>f(x) = x</m>, then
+        <m>\displaystyle \frac{d}{dx}(x) = 1</m>.
+      </li>
+    </ul>
+  </statement>
+  <proof>
+  <p>
+    We use the limit definition of the derivative.
+  </p>
 
-    <remark xml:id="rem-power-rule-meaning">
-      <p>
-        For <m>f(x)=x^2</m>, a small input change <m>\Delta x</m> produces an output change <m>\Delta f</m> that is approximately <m>2x\,\Delta x</m>.
-        Dividing by <m>\Delta x</m> suggests <m>\displaystyle f'(x)\approx 2x</m>.
-        A similar idea applies to <m>f(x)=x^3</m>, suggesting <m>\displaystyle f'(x)\approx 3x^2</m>.
-      </p>
-    </remark>
+  <p>
+    First, suppose <m>f(x) = c</m>, where <m>c</m> is a constant.
+    By definition,
+  </p>
 
-    <figure xml:id="fig-delta-x-cubed">
+  <me>
+    \displaystyle
+    \frac{d}{dx}(c)
+    =
+    \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}.
+  </me>
+
+  <p>
+    Since <m>f(x+h) = c</m> and <m>f(x) = c</m>, the numerator is zero.
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{d}{dx}(c)
+    =
+    \lim_{h \to 0} \frac{c - c}{h}
+    =
+    \lim_{h \to 0} \frac{0}{h}
+    =
+    0.
+  </me>
+
+  <p>
+    Therefore, the derivative of a constant function is zero.
+  </p>
+
+  <p>
+    Next, suppose <m>f(x) = x</m>.
+    Using the limit definition,
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{d}{dx}(x)
+    =
+    \lim_{h \to 0} \frac{(x+h) - x}{h}.
+  </me>
+
+  <p>
+    Simplifying the numerator gives
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{d}{dx}(x)
+    =
+    \lim_{h \to 0} \frac{h}{h}
+    =
+    \lim_{h \to 0} 1
+    =
+    1.
+  </me>
+
+  <p>
+    Therefore, the derivative of <m>f(x) = x</m> is equal to <m>1</m>.
+  </p>
+
+</proof>
+
+</theorem>
+
+<theorem xml:id="thm-power-rule">
+  <title>The Power Rule</title>
+  <statement>
+    <p>
+      Let <m>p</m> be any real number for which <m>x^p</m> is defined.
+      If <m>f(x) = x^p</m>, then
+    </p>
+    <me>
+      \displaystyle \frac{d}{dx}(x^p) = p x^{p-1}.
+    </me>
+  </statement>
+<proof>
+  <p>
+    We begin with a geometric intuition.
+    For the function <m>f(x)=x^2</m>, increasing <m>x</m> by a small amount
+    <m>h = \Delta x</m> produces a change in area
+    <m>\Delta f</m> that is approximately <m>2x\,\Delta x</m>.
+  </p> 
+  <sidebyside width="80%">
+    <figure xml:id="xSquareProof">
       <caption>
-        A geometric interpretation for how the change in <m>x^2</m> and <m>x^3</m> relates to the power rule.
+        A secant line connecting the points <m>(1,f(1))</m> and <m>(7,f(7))</m>,
+        representing the average rate of change of <m>f</m> on the interval <m>[1,7]</m>.
       </caption>
-      <image source="2-3-Delta-x-cubed.png" width="90%"/>
+      <image source="images/xSquareDerivProof.png" width="100%"/>
     </figure>
+  </sidebyside>
+
+<p>
+    This suggests that
+  </p>
+
+  <me>
+    f'(x) \approx \frac{\Delta f}{\Delta x} \approx 2x.
+  </me>
+
+  <p>
+    A similar idea applies to volume.
+    For <m>f(x)=x^3</m>, the change in volume due to a small increase
+    <m>\Delta x</m> is approximately <m>3x^2\,\Delta x</m>, </p>
+  <sidebyside width="80%">
+    <figure xml:id="xCubeProof">
+      <caption>
+        A secant line connecting the points <m>(1,f(1))</m> and <m>(7,f(7))</m>,
+        representing the average rate of change of <m>f</m> on the interval <m>[1,7]</m>.
+      </caption>
+      <image source="images/xCubeDerivProof.png" width="100%"/>
+    </figure>
+  </sidebyside>
+    <p> 
+    suggesting that <m>f'(x) \approx 3x^2</m>.
+  </p>
+
+  <p>
+    More generally, for the growth of an <m>n</m>-dimensional cube with side length <m>x</m>,
+    this geometric reasoning suggests that
+    <m>f'(x)=n x^{n-1}</m>.
+    While this intuition cannot be visualized for higher dimensions,
+    it motivates the algebraic proof that follows.
+  </p>
+
+  <p>
+    We now prove the Power Rule rigorously using the limit definition of the derivative.
+    The constant and linear cases were proved earlier.
+    We focus on the case
+    <m>f(x)=x^p</m>.
+  </p>
+
+  <p>
+    The proof proceeds in stages, beginning with whole number powers.
+    Throughout, we repeatedly use the identity
+  </p>
+
+  <me>
+    a^n - b^n
+    =
+    (a-b)\big(a^{n-1}+a^{n-2}b+a^{n-3}b^2+\cdots+b^{n-1}\big),
+  </me>
+
+  <p>
+    which holds for all positive integers <m>n</m>.
+  </p>
+
+  <p>
+    <em>Step 1: Positive integer powers.</em>
+    Let <m>p=n</m> be a positive integer.
+    Using the limit definition of the derivative,
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{d}{dx}(x^n)
+    =
+    \lim_{h\to 0}\frac{(x+h)^n-x^n}{h}.
+  </me>
+
+  <p>
+    Apply the factorization identity with <m>a=x+h</m> and <m>b=x</m>.
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{(x+h)^n-x^n}{h}
+    =
+    \frac{(x+h-x)\big((x+h)^{n-1}+(x+h)^{n-2}x+\cdots+x^{n-1}\big)}{h}.
+  </me>
+
+  <p>
+    Cancel the factor of <m>h</m> to obtain
+  </p>
+
+  <me>
+    \displaystyle
+    (x+h)^{n-1}+(x+h)^{n-2}x+\cdots+x^{n-1}.
+  </me>
+
+  <p>
+    Taking the limit as <m>h\to 0</m> gives
+  </p>
+
+  <me>
+    \displaystyle
+    x^{n-1}+x^{n-1}+\cdots+x^{n-1}
+    =
+    n x^{n-1}.
+  </me>
+
+  <p>
+    Therefore, for positive integers <m>n</m>,
+  </p>
+
+  <me>
+    \displaystyle
+    \frac{d}{dx}(x^n)=n x^{n-1}.
+  </me>
+
+  <p>
+    <em>Step 2: Negative integer powers.</em>
+    Let <m>p=-n</m>, where <m>n</m> is a positive integer.
+    Then <m>x^p=\frac{1}{x^n}</m>.
+    In the derivative limit, we combine fractions and apply the same
+    factorization identity with <m>a=x</m> and <m>b=x+h</m>.
+  </p>
+
+  <p>
+    After simplification, the resulting expression reduces to
+  </p>
+
+  <me>
+    \displaystyle
+    -\frac{n x^{n-1}}{x^{2n}}
+    =
+    (-n)x^{-n-1}.
+  </me>
+
+  <p>
+    Thus, the Power Rule holds for negative integers as well.
+  </p>
+
+  <p>
+    <em>Step 3: Rational powers.</em>
+    Let <m>p=\frac{n}{m}</m>, where <m>m</m> is a positive integer
+    and <m>n</m> is any integer.
+    Then
+  </p>
+
+  <me>
+    x^p = x^{n/m} = \sqrt[m]{x^n}.
+  </me>
+
+  <p>
+    In the derivative limit, the numerator has the form
+    <m>\sqrt[m]{(x+h)^n}-\sqrt[m]{x^n}</m>.
+    As in earlier work with cube roots,
+    we multiply the numerator and denominator by
+  </p>
+
+  <me>
+    a^{m-1}+a^{m-2}b+\cdots+b^{m-1},
+  </me>
+
+  <p>
+    where <m>a=\sqrt[m]{(x+h)^n}</m> and <m>b=\sqrt[m]{x^n}</m>.
+    This eliminates the radicals and produces the numerator
+  </p>
+
+  <me>
+    a^m-b^m=(x+h)^n-x^n,
+  </me>
+
+  <p>
+    which we have already handled.
+    Simplifying the resulting limit again yields
+    <m>p x^{p-1}</m>.
+  </p>
+
+  <p>
+    Therefore, the Power Rule holds for all rational exponents.
+  </p>
+
+  <p>
+    The formula
+    <m>\frac{d}{dx}(x^p)=p x^{p-1}</m>
+    is also valid for irrational exponents such as <m>p=\sqrt{2}</m>,
+    but proving this rigorously requires more advanced theory.
+  </p>
+</proof>
+</theorem>
+
+
+
 
     <example xml:id="ex-basic-derivatives-examples">
       <statement>
