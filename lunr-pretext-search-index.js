@@ -2257,7 +2257,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Basic Differentiation Rules",
-  "body": " Basic Differentiation Rules    Interpret derivative notation in both Newton form and Leibniz form .  Use basic derivative formulas to differentiate power functions and constants.  Apply the sum, constant multiple, product, and quotient rules to compute derivatives algebraically.  Interpret higher derivatives in an applied context (velocity and acceleration).    So far, we have seen how real-world rate-of-change problems and geometric tangent-line problems lead to derivatives. In this section, we focus on computing derivatives efficiently by using algebraic rules, so we do not need to return to the limit definition every time.   Notation for the Derivative  The derivative of a function can be written in several equivalent ways. In Newton notation we write . In Leibniz notation we write , which is meant to remind us of the definition of the derivative as a limit of difference quotients:   Here is a change in the input, and is the corresponding change in the output: and . The notation does not literally mean “a quotient of two tiny numbers.” It is a single symbol that represents a limit.  For example, if , then the derivative formula can be written as   To emphasize the difference between “the derivative function” and “the derivative at a point,” we write . You may also see the notation for the derivative of , so that .    Basic Derivatives  The strategy is the same as earlier limit techniques: we establish derivatives of basic functions, then build more complicated derivatives from those. The most important basic formulas are the following.   Derivatives of Constant and Linear Functions    If is a constant function, then .  If , then .     We use the limit definition of the derivative.  First, suppose , where is a constant. By definition,   Since and , the numerator is zero.   Therefore, the derivative of a constant function is zero.  Next, suppose . Using the limit definition,   Simplifying the numerator gives   Therefore, the derivative of is equal to .     The Power Rule   Let be any real number for which is defined. If , then     We begin with a geometric intuition. For the function , increasing by a small amount produces a change in area that is approximately .    A geometric illustration of the change in area when a square of side length is increased by a small amount . The added strips show how the area grows approximately like .   A square with side length x and area x squared is shown. Light shaded strips of width Delta x are added along the top and right sides, representing the increase in area when x is increased by Delta x. The diagram visually illustrates how the change in area is approximately proportional to 2x times Delta x.     This suggests that   A similar idea applies to volume. For , the change in volume due to a small increase is approximately ,    A geometric illustration of the change in volume when a cube of side length is increased by a small amount . The added slabs show how the volume grows approximately like .   A cube with side length x and volume x cubed is shown. Light shaded slabs of thickness Delta x are added to the top, right, and back faces of the cube, representing the increase in volume when x is increased by Delta x. The diagram illustrates that the dominant contribution to the change in volume is proportional to 3x squared times Delta x.     suggesting that .  More generally, for the growth of an -dimensional cube with side length , this geometric reasoning suggests that . While this intuition cannot be visualized for higher dimensions, it motivates the algebraic proof that follows.  We now prove the Power Rule rigorously using the limit definition of the derivative. The constant and linear cases were proved earlier. We focus on the case .  The proof proceeds in stages, beginning with whole number powers. Throughout, we repeatedly use the identity   which holds for all positive integers .   Step 1: Positive integer powers. Let be a positive integer. Using the limit definition of the derivative,   Apply the factorization identity with and .   Cancel the factor of to obtain   Taking the limit as gives   Therefore, for positive integers ,    Step 2: Negative integer powers. Let , where is a positive integer. Then . In the derivative limit, we combine fractions and apply the same factorization identity with and .  After simplification, the resulting expression reduces to   Thus, the Power Rule holds for negative integers as well.   Step 3: Rational powers. Let , where is a positive integer and is any integer. Then   In the derivative limit, the numerator has the form . As in earlier work with cube roots, we multiply the numerator and denominator by   where and . This eliminates the radicals and produces the numerator   which we have already handled. Simplifying the resulting limit again yields .  Therefore, the Power Rule holds for all rational exponents.  The formula is also valid for irrational exponents such as , but proving this rigorously requires more advanced theory.      Compute each derivative:      .    Apply the power rule with .        .    First rewrite the cube root using exponent notation, then apply the power rule.        .    Rewrite the reciprocal using a negative exponent, then apply the power rule.        Derivative Rules  Once we know the derivatives of basic functions, we can differentiate combinations of functions using rules. Suppose and are differentiable at .      Sum Rule:  .   Difference Rule:  .   Constant Multiple Rule:  for any constant .   Product Rule:  .   Quotient Rule:  , where .     A proof of the Derivative Sum Rule is presented in the video below.    A proof of the Product Rule is presented in the following video.    Proofs of additional derivative rules can be found online. Your instructor would love to talk about this in office hours, and also you may want to consider a math major\/minor. These topics are covered in more detail in MTH 320.     Warning: the derivative of a product is not the product of derivatives. In general, .     Use the definition of the derivative to justify the Sum Rule: .    Start with the limit definition and separate the difference quotient into two pieces:   This step uses limit laws for sums.    The Product Rule can be motivated geometrically using an area model for a rectangle with side lengths and .   A geometric picture behind the Product Rule: the change in area comes from two edge strips plus a tiny corner piece.     When is small, the changes and are small as well. The change in area is . After dividing by and taking , the term involving vanishes, producing .     Derivative Computations    Compute .    Write and use the power rule.       Compute .     is a constant, so its derivative is .      Let . Compute .    Use the Product Rule with and .   (Optional) You can also expand first and then differentiate term-by-term. Both approaches agree.      Differentiate .    First rewrite the denominator: . Then , so   You could also use the Quotient Rule directly; both methods produce equivalent results.      A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at cm 3 \/hr.      Higher Derivatives  Because the derivative of a function is itself a function, we can differentiate again. The second derivative of is denoted , and in Leibniz notation it is written :   If represents position as a function of time, then is velocity and is acceleration.    A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec 2 ), and means the acceleration is not changing.     "
+  "body": " Basic Differentiation Rules    Interpret derivative notation in both Newton form and Leibniz form .  Use basic derivative formulas to differentiate power functions and constants.  Apply the sum, constant multiple, product, and quotient rules to compute derivatives algebraically.  Interpret higher derivatives in an applied context (velocity and acceleration).    So far, we have seen how real-world rate-of-change problems and geometric tangent-line problems lead to derivatives. In this section, we focus on computing derivatives efficiently by using algebraic rules, so we do not need to return to the limit definition every time.   Notation for the Derivative  The derivative of a function can be written in several equivalent ways. In Newton notation we write . In Leibniz notation we write , which is meant to remind us of the definition of the derivative as a limit of difference quotients:   Here is a change in the input, and is the corresponding change in the output: and . The notation does not literally mean “a quotient of two tiny numbers.” It is a single symbol that represents a limit.  For example, if , then the derivative formula can be written as   To emphasize the difference between “the derivative function” and “the derivative at a point,” we write . You may also see the notation for the derivative of , so that .    Basic Derivatives  The strategy is the same as earlier limit techniques: we establish derivatives of basic functions, then build more complicated derivatives from those. The most important basic formulas are the following.   Derivatives of Constant and Linear Functions    If is a constant function, then .  If , then .     We use the limit definition of the derivative.  First, suppose , where is a constant. By definition,   Since and , the numerator is zero.   Therefore, the derivative of a constant function is zero.  Next, suppose . Using the limit definition,   Simplifying the numerator gives   Therefore, the derivative of is equal to .     The Power Rule   Let be any real number for which is defined. If , then     We begin with a geometric intuition. For the function , increasing by a small amount produces a change in area that is approximately .    A geometric illustration of the change in area when a square of side length is increased by a small amount . The added strips show how the area grows approximately like .   A square with side length x and area x squared is shown. Light shaded strips of width Delta x are added along the top and right sides, representing the increase in area when x is increased by Delta x. The diagram visually illustrates how the change in area is approximately proportional to 2x times Delta x.     This suggests that   A similar idea applies to volume. For , the change in volume due to a small increase is approximately ,    A geometric illustration of the change in volume when a cube of side length is increased by a small amount . The added slabs show how the volume grows approximately like .   A cube with side length x and volume x cubed is shown. Light shaded slabs of thickness Delta x are added to the top, right, and back faces of the cube, representing the increase in volume when x is increased by Delta x. The diagram illustrates that the dominant contribution to the change in volume is proportional to 3x squared times Delta x.     suggesting that .  More generally, for the growth of an -dimensional cube with side length , this geometric reasoning suggests that . While this intuition cannot be visualized for higher dimensions, it motivates the algebraic proof that follows.  We now prove the Power Rule rigorously using the limit definition of the derivative. The constant and linear cases were proved earlier. We focus on the case .  The proof proceeds in stages, beginning with whole number powers. Throughout, we repeatedly use the identity   which holds for all positive integers .   Step 1: Positive integer powers. Let be a positive integer. Using the limit definition of the derivative,   Apply the factorization identity with and .   Cancel the factor of to obtain   Taking the limit as gives   Therefore, for positive integers ,    Step 2: Negative integer powers. Let , where is a positive integer. Then . In the derivative limit, we combine fractions and apply the same factorization identity with and .  After simplification, the resulting expression reduces to   Thus, the Power Rule holds for negative integers as well.   Step 3: Rational powers. Let , where is a positive integer and is any integer. Then   In the derivative limit, the numerator has the form . As in earlier work with cube roots, we multiply the numerator and denominator by   where and . This eliminates the radicals and produces the numerator   which we have already handled. Simplifying the resulting limit again yields .  Therefore, the Power Rule holds for all rational exponents.  The formula is also valid for irrational exponents such as , but proving this rigorously requires more advanced theory.      Compute each derivative:      .    Apply the power rule with .        .    First rewrite the cube root using exponent notation, then apply the power rule.        .    Rewrite the reciprocal using a negative exponent, then apply the power rule.        Derivative Rules  Once we know the derivatives of basic functions, we can differentiate combinations of functions using rules. Suppose and are differentiable at .      Sum Rule:  .   Difference Rule:  .   Constant Multiple Rule:  for any constant .   Product Rule:  .   Quotient Rule:  , where .     A proof of the Derivative Sum Rule is presented in the video below.    A proof of the Product Rule is presented in the following video.    Proofs of additional derivative rules can be found online. Your instructor would love to talk about this in office hours, and also you may want to consider a math major\/minor. These topics are covered in more detail in MTH 320.     Warning: the derivative of a product is not the product of derivatives. In general, .     Compute .    Write and use the power rule.       Compute .     is a constant, so its derivative is .      Let . Compute .    Use the Product Rule with and .   (Optional) You can also expand first and then differentiate term-by-term. Both approaches agree.      Differentiate .    First rewrite the denominator: . Then , so   You could also use the Quotient Rule directly; both methods produce equivalent results.      A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at .      Higher Derivatives  Because the derivative of a function is itself a function, we can differentiate again. The second derivative of is denoted , and in Leibniz notation it is written :   If represents position as a function of time, then is velocity and is acceleration .    A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec ).    Higher derivatives continue in the same way. The third derivative of is denoted , the fourth derivative is denoted , and in general the th derivative is written .  In Leibniz notation, these are written , , and .  As the order of the derivative increases, prime notation becomes cumbersome, so the superscript notation is preferred for higher derivatives.   "
 },
 {
   "id": "sec-derivative-rules-2",
@@ -2314,38 +2314,11 @@ var ptx_lunr_docs = [
   "body": " Warning: the derivative of a product is not the product of derivatives. In general, .  "
 },
 {
-  "id": "ex-sum-rule-proof",
-  "level": "2",
-  "url": "sec-derivative-rules.html#ex-sum-rule-proof",
-  "type": "Example",
-  "number": "2.3.8",
-  "title": "",
-  "body": "  Use the definition of the derivative to justify the Sum Rule: .    Start with the limit definition and separate the difference quotient into two pieces:   This step uses limit laws for sums.   "
-},
-{
-  "id": "fig-product-rule-rectangle",
-  "level": "2",
-  "url": "sec-derivative-rules.html#fig-product-rule-rectangle",
-  "type": "Figure",
-  "number": "2.3.9",
-  "title": "",
-  "body": " A geometric picture behind the Product Rule: the change in area comes from two edge strips plus a tiny corner piece.   "
-},
-{
-  "id": "rem-product-rule-idea",
-  "level": "2",
-  "url": "sec-derivative-rules.html#rem-product-rule-idea",
-  "type": "Remark",
-  "number": "2.3.10",
-  "title": "",
-  "body": " When is small, the changes and are small as well. The change in area is . After dividing by and taking , the term involving vanishes, producing .  "
-},
-{
   "id": "ex-derivative-sqrtx",
   "level": "2",
   "url": "sec-derivative-rules.html#ex-derivative-sqrtx",
   "type": "Example",
-  "number": "2.3.11",
+  "number": "2.3.8",
   "title": "",
   "body": "  Compute .    Write and use the power rule.    "
 },
@@ -2354,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-rules.html#ex-derivative-constant",
   "type": "Example",
-  "number": "2.3.12",
+  "number": "2.3.9",
   "title": "",
   "body": "  Compute .     is a constant, so its derivative is .   "
 },
@@ -2363,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-rules.html#ex-product-rule-algebra",
   "type": "Example",
-  "number": "2.3.13",
+  "number": "2.3.10",
   "title": "",
   "body": "  Let . Compute .    Use the Product Rule with and .   (Optional) You can also expand first and then differentiate term-by-term. Both approaches agree.   "
 },
@@ -2372,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-rules.html#ex-quotient-rule-two-ways",
   "type": "Example",
-  "number": "2.3.14",
+  "number": "2.3.11",
   "title": "",
   "body": "  Differentiate .    First rewrite the denominator: . Then , so   You could also use the Quotient Rule directly; both methods produce equivalent results.   "
 },
@@ -2381,18 +2354,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-rules.html#ex-ice-block-volume",
   "type": "Example",
-  "number": "2.3.15",
+  "number": "2.3.12",
   "title": "",
-  "body": "  A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at cm 3 \/hr.   "
+  "body": "  A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at .   "
+},
+{
+  "id": "higher-derivatives-4",
+  "level": "2",
+  "url": "sec-derivative-rules.html#higher-derivatives-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "velocity acceleration "
 },
 {
   "id": "ex-higher-derivatives-falling-stone",
   "level": "2",
   "url": "sec-derivative-rules.html#ex-higher-derivatives-falling-stone",
   "type": "Example",
-  "number": "2.3.16",
+  "number": "2.3.13",
   "title": "",
-  "body": "  A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec 2 ), and means the acceleration is not changing.   "
+  "body": "  A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec ).   "
 },
 {
   "id": "sec-derivative-trig",
@@ -2852,6 +2834,15 @@ var ptx_lunr_docs = [
   "number": "2.7.10",
   "title": "",
   "body": "  Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,    "
+},
+{
+  "id": "sec-derivative-ww",
+  "level": "1",
+  "url": "sec-derivative-ww.html",
+  "type": "Section",
+  "number": "2.8",
+  "title": "Additional Worked-Out Problems",
+  "body": " Additional Worked-Out Problems   Introduction and Motivation for Derivatives  test    Definition of the Derivative  test    Basic Differentiation Rules  test    Trigonometric Derivatives  test    Exponential Functions and the Chain Rule  test    Implicit Differentiation  test    Inverse Functions and Their Derivatives  test   "
 },
 {
   "id": "sec-derivApp-motion",
