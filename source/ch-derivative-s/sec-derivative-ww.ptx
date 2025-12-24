@@ -4,44 +4,44 @@
   <title>Additional Worked-Out Problems</title>
 
    <subsection xml:id="subsec-deriv-intro">
-      <title><xref ref="sec-derivative-intro"/>Introduction and Motivation for Derivatives</title>
+      <title><xref ref="sec-derivative-intro"/> Introduction and Motivation for Derivatives</title>
       <p> test
       </p>
     </subsection>
 
     <subsection xml:id="subsec-deriv-defn">
-      <title><xref ref="sec-derivative-defn"/>Definition of the Derivative</title>
+      <title><xref ref="sec-derivative-defn"/> Definition of the Derivative</title>
       <p> test
       </p>
     </subsection>
 
 
     <subsection xml:id="subsec-deriv-rules">
-      <title><xref ref="sec-derivative-rules"/>Basic Differentiation Rules</title>
+      <title><xref ref="sec-derivative-rules"/> Basic Differentiation Rules</title>
       <p> test
       </p>
     </subsection>
 
     <subsection xml:id="subsec-deriv-trig">
-      <title><xref ref="sec-derivative-trig"/>Trigonometric Derivatives</title>
+      <title><xref ref="sec-derivative-trig"/> Trigonometric Derivatives</title>
       <p> test
       </p>
     </subsection>
 
     <subsection xml:id="subsec-deriv-expChain">
-      <title><xref ref="sec-derivative-expChain"/>Exponential Functions and the Chain Rule</title>
+      <title><xref ref="sec-derivative-expChain"/> Exponential Functions and the Chain Rule</title>
       <p> test
       </p>
     </subsection>
 
     <subsection xml:id="subsec-deriv-implicit">
-      <title><xref ref="sec-derivative-implicit"/>Implicit Differentiation</title>
+      <title><xref ref="sec-derivative-implicit"/> Implicit Differentiation</title>
       <p> test
       </p>
     </subsection>
 
     <subsection xml:id="subsec-deriv-inverse">
-      <title><xref ref="sec-derivative-inverse"/>Inverse Functions and Their Derivatives</title>
+      <title><xref ref="sec-derivative-inverse"/> Inverse Functions and Their Derivatives</title>
       <p> test
       </p>
     </subsection>
