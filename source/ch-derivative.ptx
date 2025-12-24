@@ -17,6 +17,8 @@
   <xi:include href="./ch-derivative-s/sec-derivative-expChain.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-implicit.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-inverse.ptx" />
+  <xi:include href="./ch-derivative-s/sec-derivative-ww.ptx" />
+  
   <!-- 
   <xi:include href="./ch-derivative-s/sec-derivative-applications.ptx" />
   <xi:include href="./ch-derivative-s/sec-derivative-rrates.ptx" />

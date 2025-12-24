@@ -46,7 +46,7 @@
     </p>
 
     <p>
-      For example, if <m>f(x)=x^2</m>, then the derivative formula <m>f'(x)=2x</m> can be written as
+      For example, if <m>f(x)=x^2</m>, then the derivative formula <m>f'(x)=(x^2)'=2x</m> can be written as
     </p>
 
     <me>
@@ -171,13 +171,20 @@
     <m>h = \Delta x</m> produces a change in area
     <m>\Delta f</m> that is approximately <m>2x\,\Delta x</m>.
   </p> 
-  <sidebyside width="80%">
+  <sidebyside width="60%">
     <figure xml:id="xSquareProof">
       <caption>
-        A secant line connecting the points <m>(1,f(1))</m> and <m>(7,f(7))</m>,
-        representing the average rate of change of <m>f</m> on the interval <m>[1,7]</m>.
+        A geometric illustration of the change in area when a square of side length <m>x</m> is 
+        increased by a small amount <m>\Delta x</m>. The added strips show how the area grows 
+        approximately like <m>2x\Delta x</m>.
       </caption>
-      <image source="images/xSquareDerivProof.png" width="100%"/>
+      <image source="images/xSquareDerivProof.png" width="100%">
+      <shortdescription>
+A square with side length x and area x squared is shown. Light shaded strips of width Delta x 
+are added along the top and right sides, representing the increase in area when x is increased by Delta x. 
+The diagram visually illustrates how the change in area is approximately proportional to 2x times Delta x.
+</shortdescription>
+</image>
     </figure>
   </sidebyside>
 
@@ -193,13 +200,20 @@
     A similar idea applies to volume.
     For <m>f(x)=x^3</m>, the change in volume due to a small increase
     <m>\Delta x</m> is approximately <m>3x^2\,\Delta x</m>, </p>
-  <sidebyside width="80%">
+  <sidebyside width="60%">
     <figure xml:id="xCubeProof">
       <caption>
-        A secant line connecting the points <m>(1,f(1))</m> and <m>(7,f(7))</m>,
-        representing the average rate of change of <m>f</m> on the interval <m>[1,7]</m>.
+        A geometric illustration of the change in volume when a cube of side length <m>x</m> is increased by a small amount <m>\Delta x</m>. 
+        The added slabs show how the volume grows approximately like <m>3x^2\Delta x</m>.
       </caption>
-      <image source="images/xCubeDerivProof.png" width="100%"/>
+      <image source="images/xCubeDerivProof.png" width="100%">
+      <shortdescription>
+      A cube with side length x and volume x cubed is shown. Light shaded slabs of thickness 
+      Delta x are added to the top, right, and back faces of the cube, representing the 
+      increase in volume when x is increased by Delta x. The diagram illustrates that the 
+      dominant contribution to the change in volume is proportional to 3x squared times Delta x.
+</shortdescription>
+      </image>
     </figure>
   </sidebyside>
     <p> 
@@ -257,7 +271,7 @@
     \displaystyle
     \frac{(x+h)^n-x^n}{h}
     =
-    \frac{(x+h-x)\big((x+h)^{n-1}+(x+h)^{n-2}x+\cdots+x^{n-1}\big)}{h}.
+    \frac{(x+h-x)\big((x+h)^{n-1}+(x+h)^{n-2}x+\cdots+x^{n-1}\big)}{h}
   </me>
 
   <p>
@@ -363,43 +377,92 @@
 </theorem>
 
 
+<example xml:id="ex-basic-derivatives-examples">
+  <introduction>
+    <p>
+      Compute each derivative:
+    </p>
+  </introduction>
 
-
-    <example xml:id="ex-basic-derivatives-examples">
-      <statement>
-        <p>
-          Use the power rule to compute each derivative.
-        </p>
-        <ol>
-          <li><m>\displaystyle \frac{d}{dx}(x^{10})</m></li>
-          <li><m>\displaystyle \frac{d}{dx}\!\left(\sqrt[3]{x}\right)</m></li>
-          <li><m>\displaystyle \frac{d}{dx}\!\left(\frac{1}{x}\right)</m></li>
-        </ol>
-      </statement>
-
-      <solution>
-        <p>
-          Rewrite roots and reciprocals using exponents, then apply <m>\displaystyle \frac{d}{dx}(x^p)=px^{p-1}</m>.
-        </p>
-
-        <me>
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \frac{d}{dx}(x^{10})</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Apply the power rule with <m>p=10</m>.
+      </p>
+      <me>
 \begin{array}{rcl}
 \displaystyle \frac{d}{dx}(x^{10})
-\amp=\amp \displaystyle 10x^{9},
-\\[0.8em]
-\displaystyle \frac{d}{dx}\!\left(\sqrt[3]{x}\right)
-\amp=\amp \displaystyle \frac{d}{dx}\!\left(x^{1/3}\right)
-= \frac{1}{3}x^{-2/3}
-= \frac{1}{3\sqrt[3]{x^2}},
-\\[0.8em]
-\displaystyle \frac{d}{dx}\!\left(\frac{1}{x}\right)
-\amp=\amp \displaystyle \frac{d}{dx}\!\left(x^{-1}\right)
-= -x^{-2}
-= -\frac{1}{x^2}.
+&amp; = &amp;
+10x^{9}
 \end{array}
-        </me>
-      </solution>
-    </example>
+      </me>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \frac{d}{dx}\!\left(\sqrt[3]{x}\right)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        First rewrite the cube root using exponent notation,
+        then apply the power rule.
+      </p>
+      <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\!\left(\sqrt[3]{x}\right)
+&amp; = &amp;
+\displaystyle \frac{d}{dx}\!\left(x^{1/3}\right)
+\\[0.8em]
+&amp; = &amp;
+\displaystyle \frac{1}{3}x^{-2/3}
+\\[0.8em]
+&amp; = &amp;
+\displaystyle \frac{1}{3\sqrt[3]{x^2}}
+\end{array}
+      </me>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \frac{d}{dx}\!\left(\frac{1}{x}\right)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite the reciprocal using a negative exponent,
+        then apply the power rule.
+      </p>
+      <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dx}\!\left(\frac{1}{x}\right)
+&amp; = &amp;
+\displaystyle \frac{d}{dx}\!\left(x^{-1}\right)
+\\[0.8em]
+&amp; = &amp;
+- x^{-2}
+\\[0.8em]
+&amp; = &amp;
+-\dfrac{1}{x^2}
+\end{array}
+      </me>
+    </solution>
+  </task>
+
+</example>
+
+
+ 
+
   </subsection>
 
   <subsection xml:id="derivative-rules">
@@ -431,73 +494,35 @@
           </li>
         </ul>
       </statement>
+<proof>
+<p>
+  A proof of the Derivative Sum Rule is presented in the video below.
+</p>
+          <video youtube="vweA8peEjyQ" width="90%">
+              </video>   
+<p>
+  A proof of the Product Rule is presented in the following video.
+</p>
+          <video youtube="L5ErlC0COxI" width="90%">
+              </video>   
+<p>
+  Proofs of additional derivative rules can be found online.
+Your instructor would love to talk about this in office hours, and also you may want to consider a math major/minor. 
+These topics are covered in more detail in MTH 320.
+</p>
+  </proof>
+
+
     </theorem>
 
     <remark xml:id="rem-product-warning">
       <p>
-        Warning: the derivative of a product is <emph>not</emph> the product of derivatives.
+        Warning: the derivative of a product is <em>not</em> the product of derivatives.
         In general, <m>\displaystyle (f(x)g(x))'\neq f'(x)g'(x)</m>.
       </p>
     </remark>
 
-    <example xml:id="ex-sum-rule-proof">
-      <statement>
-        <p>
-          Use the definition of the derivative to justify the Sum Rule:
-          <m>\displaystyle (f(x)+g(x))'=f'(x)+g'(x)</m>.
-        </p>
-      </statement>
-
-      <solution>
-        <p>
-          Start with the limit definition and separate the difference quotient into two pieces:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle (f(x)+g(x))'
-\amp=\amp \displaystyle \lim_{h\to 0}\frac{(f(x+h)+g(x+h))-(f(x)+g(x))}{h}
-\\[1.1em]
-\amp=\amp \displaystyle \lim_{h\to 0}\left(\frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}\right)
-\\[1.1em]
-\amp=\amp \displaystyle \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-+\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}
-\\[1.1em]
-\amp=\amp \displaystyle f'(x)+g'(x).
-\end{array}
-        </me>
-
-        <p>
-          This step uses limit laws for sums.
-        </p>
-      </solution>
-    </example>
-
-    <p>
-      The Product Rule can be motivated geometrically using an area model for a rectangle with side lengths <m>f(x)</m> and <m>g(x)</m>.
-    </p>
-
-    <figure xml:id="fig-product-rule-rectangle">
-      <caption>
-        A geometric picture behind the Product Rule: the change in area comes from two edge strips plus a tiny corner piece.
-      </caption>
-      <image source="2-3-Rect-1.png" width="70%"/>
-    </figure>
-
-    <remark xml:id="rem-product-rule-idea">
-      <p>
-        When <m>\Delta x=h</m> is small, the changes <m>\Delta f</m> and <m>\Delta g</m> are small as well.
-        The change in area is
-        <m>\Delta(f\cdot g)=(\Delta f)\,g(x)+f(x)(\Delta g)+(\Delta f)(\Delta g)</m>.
-        After dividing by <m>\Delta x</m> and taking <m>\Delta x\to 0</m>, the term involving <m>(\Delta f)(\Delta g)</m> vanishes,
-        producing <m>\displaystyle (fg)'=f'g+fg'</m>.
-      </p>
-    </remark>
-  </subsection>
-
-  <subsection xml:id="derivative-computations">
-    <title>Derivative Computations</title>
-
+   
     <example xml:id="ex-derivative-sqrtx">
       <statement>
         <p>
@@ -631,7 +656,7 @@
         </me>
 
         <p>
-          The volume is decreasing at <m>400</m> cm<sup>3</sup>/hr.
+          The volume is decreasing at <m>400 \text{ cm}^3/\text{hr}</m>.
         </p>
       </solution>
     </example>
@@ -651,7 +676,7 @@
     </me>
 
     <p>
-      If <m>f</m> represents position as a function of time, then <m>f'(t)</m> is velocity and <m>f''(t)</m> is acceleration.
+      If <m>f</m> represents position as a function of time, then <m>f'(t)</m> is <term>velocity</term> and <m>f''(t)</m> is <term>acceleration</term>.
     </p>
 
     <example xml:id="ex-higher-derivatives-falling-stone">
@@ -684,10 +709,29 @@
 
         <p>
           Here <m>f'(t)=32t</m> is velocity (ft/sec), increasing with time.
-          The constant <m>f''(t)=32</m> is acceleration (ft/sec<sup>2</sup>), and <m>f'''(t)=0</m> means the acceleration is not changing.
+          The constant <m>f''(t)=32</m> is acceleration (ft/sec<m>^2</m>).
         </p>
       </solution>
     </example>
+
+    <p>
+      Higher derivatives continue in the same way.
+      The third derivative of <m>f</m> is denoted <m>f'''(x)</m>,
+      the fourth derivative is denoted <m>f^{(4)}(x)</m>,
+      and in general the <m>n</m>th derivative is written <m>f^{(n)}(x)</m>.
+    </p>
+    
+    <p>
+      In Leibniz notation, these are written
+      <m>\displaystyle \frac{d^3f}{dx^3}</m>,
+      <m>\displaystyle \frac{d^4f}{dx^4}</m>, and
+      <m>\displaystyle \frac{d^nf}{dx^n}</m>.
+    </p>
+
+    <p>
+      As the order of the derivative increases, prime notation becomes cumbersome,
+      so the superscript notation <m>f^{(n)}(x)</m> is preferred for higher derivatives.
+    </p>
 
   </subsection>
 
