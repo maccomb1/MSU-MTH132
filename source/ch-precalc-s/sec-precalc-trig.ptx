@@ -3,6 +3,266 @@
 <section xml:id="sec-precalc-trig" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Trig</title>
 
-  <p> Text of section. </p>
+
+  <p>
+    Trigonometric functions are fundamental tools in calculus.
+    They arise in problems involving motion, waves, oscillations, and periodic behavior,
+    and they play a key role in limits, derivatives, and integrals.
+    In this section, we review the core definitions and properties of trigonometric functions
+    that will be used throughout the course.
+  </p>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-trig-triangle">
+    <title>Right Triangle Definitions</title>
+
+    <p>
+      We begin by defining sine and cosine using right triangles.
+      These definitions apply when the angle is acute.
+    </p>
+
+    <definition xml:id="def-trig-triangle">
+      <title>Sine and Cosine (Right Triangle)</title>
+      <statement>
+        <p>
+          Given a right triangle and an acute angle <m>\theta</m>,
+        </p>
+        <me>
+          \sin(\theta) = \dfrac{\text{opposite}}{\text{hypotenuse}},
+          \qquad
+          \cos(\theta) = \dfrac{\text{adjacent}}{\text{hypotenuse}}.
+        </me>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          In a right triangle, the side opposite <m>\theta</m> has length 3,
+          the adjacent side has length 4, and the hypotenuse has length 5.
+          Find <m>\sin(\theta)</m> and <m>\cos(\theta)</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \sin(\theta) = \dfrac{3}{5},
+          \qquad
+          \cos(\theta) = \dfrac{4}{5}.
+        </me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        While these definitions are intuitive, they apply only to acute angles.
+        To extend trigonometric functions to all real numbers,
+        we use the unit circle.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-trig-unit-circle">
+    <title>The Unit Circle Definition</title>
+
+    <p>
+      The unit circle allows us to define trigonometric functions
+      for any real number and is the framework used in calculus.
+    </p>
+
+    <definition xml:id="def-unit-circle">
+      <title>Sine and Cosine (Unit Circle)</title>
+      <statement>
+        <p>
+          Consider the unit circle centered at the origin.
+          For a real number <m>t</m>, let the point on the unit circle
+          corresponding to angle <m>t</m> (measured in radians)
+          have coordinates <m>(x,y)</m>.
+          Then
+        </p>
+        <me>
+          \cos(t) = x,
+          \qquad
+          \sin(t) = y.
+        </me>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        In calculus, angles are always measured in radians.
+        This choice ensures that derivatives and limits involving
+        trigonometric functions behave correctly.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Evaluate <m>\sin(\pi/2)</m> and <m>\cos(\pi)</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \sin(\pi/2) = 1,
+          \qquad
+          \cos(\pi) = -1.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-trig-range">
+    <title>Range and Boundedness</title>
+
+    <p>
+      One of the most important properties of sine and cosine
+      in calculus is that their values are bounded.
+    </p>
+
+    <theorem xml:id="thm-sin-cos-range">
+      <title>Range of Sine and Cosine</title>
+      <statement>
+        <p>
+          For all real numbers <m>x</m>,
+        </p>
+        <me>
+          -1 \le \sin(x) \le 1,
+          \qquad
+          -1 \le \cos(x) \le 1.
+        </me>
+      </statement>
+    </theorem>
+
+    <remark>
+      <p>
+        These inequalities follow directly from the unit circle:
+        the <m>y</m>- and <m>x</m>-coordinates of points on the unit circle
+        cannot exceed 1 in magnitude.
+      </p>
+    </remark>
+
+    <p>
+      This boundedness property is used frequently in calculus,
+      especially when applying the Squeeze Theorem to evaluate limits.
+    </p>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-trig-misconceptions">
+    <title>Important Algebraic Warnings</title>
+
+    <p>
+      Trigonometric functions do <em>not</em> behave like algebraic variables.
+      In particular, common distributive or additive properties
+      do not hold.
+    </p>
+
+    <remark xml:id="rmk-trig-not-distributive">
+      <p>
+        The following identities are <em>false</em> in general:
+      </p>
+      <me>
+        \sin(AB) \neq \sin(A)\sin(B),
+        \qquad
+        \sin(A+B) \neq \sin(A) + \sin(B).
+      </me>
+      <p>
+        Similar statements are false for cosine.
+      </p>
+    </remark>
+
+    <p>
+      These misconceptions are common sources of error,
+      especially when simplifying expressions or computing limits.
+      Trigonometric functions require their own identities,
+      which we now preview.
+    </p>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-trig-identities-preview">
+    <title>Angle Sum and Double Angle Formulas</title>
+
+    <p>
+      While sine and cosine do not distribute over addition,
+      there are specific formulas that describe how they behave
+      when angles are added or multiplied.
+    </p>
+
+    <theorem xml:id="thm-angle-sum">
+      <title>Angle Sum Formulas</title>
+      <statement>
+        <me>
+          \begin{array}{rcl}
+            \sin(A+B) &amp; = &amp; \sin(A)\cos(B) + \cos(A)\sin(B) \\
+            \cos(A+B) &amp; = &amp; \cos(A)\cos(B) - \sin(A)\sin(B)
+          \end{array}
+        </me>
+      </statement>
+    </theorem>
+
+    <remark>
+      <p>
+        From these formulas, we can derive double angle identities
+        such as
+        <m>\sin(2x) = 2\sin(x)\cos(x)</m>.
+        These identities appear frequently in calculus problems,
+        especially when working with integrals and limits.
+      </p>
+    </remark>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <exercises xml:id="exercises-precalc-trig">
+    <title>Practice Problems</title>
+
+    <exercisegroup>
+      <title>Concepts and Skills</title>
+
+      <exercise>
+        <statement>
+          <p>
+            Use a right triangle to find <m>\sin(\theta)</m> and <m>\cos(\theta)</m>
+            if the adjacent side is 5 and the hypotenuse is 13.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Evaluate <m>\sin(\pi)</m>, <m>\cos(\pi/2)</m>, and <m>\cos(0)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Explain why <m>\sin(x)</m> is bounded but <m>x</m> is not.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            True or False: <m>\sin(2x) = 2\sin(x)</m>. Explain your reasoning.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Use the range of cosine to explain why
+            <m>\displaystyle\lim_{x\to 0} x\cos(1/x) = 0</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

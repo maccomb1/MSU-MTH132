@@ -181,7 +181,7 @@ x &amp; = &amp; \dfrac{y - 1}{2}
       These relationships are important to recognize and remember.
     </p>
 
-    <example>
+    <example xml:id="ex-precalc-expInv">
       <statement>
         <p>
           The exponential function <m>e^x</m> and the natural logarithm

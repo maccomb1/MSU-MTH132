@@ -3,6 +3,201 @@
 <section xml:id="sec-precalc-log" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Logarithms</title>
 
-  <p> Text of section. </p>
+
+  <p>
+    Logarithmic functions arise naturally as the inverse of exponential functions.
+    They allow us to solve equations where the variable appears in the exponent
+    and play a central role in calculus, particularly when working with growth
+    and decay models.
+  </p>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-log-def">
+    <title>Logarithms as Inverse Functions</title>
+
+    <definition xml:id="def-logarithm">
+      <title>Logarithm</title>
+      <statement>
+        <p>
+          Let <m>a &gt; 0</m> with <m>a \neq 1</m>.
+          The <term>logarithm base <m>a</m></term> of a positive number <m>x</m>
+          is defined by
+        </p>
+        <me>
+          \log_a(x) = y \quad \text{if and only if} \quad a^y = x.
+        </me>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        Logarithms undo exponentiation.
+        This definition makes precise the idea that logarithms and exponentials
+        are inverse functions.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Evaluate <m>\log_2(8)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We look for the exponent to which 2 must be raised to obtain 8.
+          Since <m>2^3 = 8</m>,
+        </p>
+        <me>
+          \log_2(8) = 3.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-natural-log">
+    <title>The Natural Logarithm</title>
+
+    <definition xml:id="def-natural-log">
+      <title>Natural Logarithm</title>
+      <statement>
+        <p>
+          The <term>natural logarithm</term>, denoted <m>\ln(x)</m>,
+          is the logarithm with base <m>e</m>:
+        </p>
+        <me>
+          \ln(x) = \log_e(x), \quad x &gt; 0.
+        </me>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        Because <m>e^x</m> and <m>\ln(x)</m> are inverse functions, we have
+      </p>
+      <me>
+        e^{\ln(x)} = x \quad (x &gt; 0),
+        \qquad
+        \ln(e^x) = x.
+      </me>
+      <p>
+        These identities are used constantly when simplifying expressions
+        and solving equations.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Simplify <m>\ln(e^{3x})</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>\ln</m> and <m>e^x</m> are inverse functions,
+        </p>
+        <me>
+          \ln(e^{3x}) = 3x.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-log-laws">
+    <title>Laws of Logarithms</title>
+
+    <p>
+      The laws of logarithms mirror the laws of exponents and allow us
+      to rewrite and simplify logarithmic expressions.
+    </p>
+
+    <theorem xml:id="thm-log-laws">
+      <title>Laws of Logarithms</title>
+      <statement>
+        <p>
+          For <m>x &gt; 0</m>, <m>y &gt; 0</m>, and <m>a &gt; 0</m> with <m>a \neq 1</m>,
+        </p>
+        <me>
+          \begin{array}{rcl}
+            \log_a(xy) &amp; = &amp; \log_a(x) + \log_a(y) \\
+            \log_a\!\left(\dfrac{x}{y}\right) &amp; = &amp; \log_a(x) - \log_a(y) \\
+            \log_a(x^r) &amp; = &amp; r \log_a(x)
+          \end{array}
+        </me>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Simplify <m>\ln(5x^2)</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \begin{array}{rcl}
+            \ln(5x^2)
+            &amp; = &amp;
+            \ln(5) + \ln(x^2) \\
+            &amp; = &amp;
+            \ln(5) + 2\ln(x)
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-solving-exp-log">
+    <title>Solving Exponential Equations Using Logarithms</title>
+
+    <p>
+      When an exponential equation cannot be rewritten with a common base,
+      logarithms provide a systematic method for solving for the variable.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Solve the equation <m>5^x = 12</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Because the bases do not match, we take the natural logarithm
+          of both sides:
+        </p>
+        <me>
+          \ln(5^x) = \ln(12).
+        </me>
+
+        <p>
+          Apply the power rule for logarithms:
+        </p>
+        <me>
+          x \ln(5) = \ln(12).
+        </me>
+
+        <p>
+          Now solve for <m>x</m>:
+        </p>
+        <me>
+          x = \dfrac{\ln(12)}{\ln(5)}.
+        </me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        Any logarithmic base may be used, but natural logarithms are preferred
+        in calculus because derivatives and integrals involving <m>\ln(x)</m>
+        and <m>e^x</m> are simpler to compute.
+      </p>
+    </remark>
+  </subsection>
+
+
 
 </section>

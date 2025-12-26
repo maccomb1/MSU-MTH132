@@ -3,28 +3,18 @@
 <section xml:id="sec-precalc-exp" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Exponentials</title>
 
-  <p>
-    Exponential functions play a central role in calculus.
-    They arise in models of population growth, radioactive decay,
-    compound interest, and many other applications.
-    In this section, we review the algebraic properties of exponents
-    and develop systematic methods for solving exponential equations.
-  </p>
 
   <p>
-    The focus here is on algebraic techniques.
-    Later in the course, these same ideas will be extended using logarithms
-    and calculus.
+    Exponential functions play a central role in calculus and its applications.
+    They model growth and decay processes such as population change,
+    compound interest, radioactive decay, and cooling.
+    In this section, we review the algebraic structure of exponential functions
+    and the key properties that will be used repeatedly throughout the course.
   </p>
 
   <!-- ======================================================= -->
   <subsection xml:id="ssec-exp-def">
-    <title>Exponential Expressions</title>
-
-    <p>
-      An exponential expression is one in which the variable appears in the exponent.
-      For example, <m>2^x</m> and <m>e^{3x}</m> are exponential expressions.
-    </p>
+    <title>What Is an Exponential Function?</title>
 
     <definition xml:id="def-exponential-function">
       <title>Exponential Function</title>
@@ -36,291 +26,208 @@
           f(x) = a^x,
         </me>
         <p>
-          where <m>a &gt; 0</m> and <m>a \neq 1</m>.
+          where <m>a &gt; 0</m> and <m>a \neq 1</m> is a constant called the <term>base</term>.
         </p>
       </statement>
     </definition>
-  </subsection>
-
-  <!-- ======================================================= -->
-  <subsection xml:id="ssec-exp-properties">
-    <title>Properties of Exponents</title>
-
-    <p>
-      Solving exponential equations relies on the fundamental properties of exponents.
-      These rules allow us to rewrite expressions in simpler or more useful forms.
-    </p>
-
-    <principle xml:id="pr-exp-laws">
-      <statement>
-        <p>
-          Assume <m>a &gt; 0</m> and <m>m,n</m> are real numbers.
-          Then the following properties hold:
-        </p>
-
-        <me>
-\begin{array}{rcl|rcl}
-a^m a^n &amp; = &amp; a^{m+n}, &amp;
-\dfrac{a^m}{a^n} &amp; = &amp; a^{m-n} \\[0.6em]
-(a^m)^n &amp; = &amp; a^{mn}, &amp;
-(ab)^n &amp; = &amp; a^n b^n \\[0.6em]
-a^0 &amp; = &amp; 1, &amp;
-a^{-n} &amp; = &amp; \dfrac{1}{a^n}
-\end{array}
-        </me>
-      </statement>
-    </principle>
 
     <remark>
       <p>
-        These properties do not apply when adding or subtracting exponential terms.
-        For example, <m>a^x + a^x \neq a^{2x}</m>.
+        In an exponential function, the variable appears in the exponent.
+        This distinguishes exponential functions from power functions such as
+        <m>x^3</m>, where the variable is the base.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Identify which of the following functions are exponential:
+          <m>2^x</m>, <m>x^2</m>, <m>5^{x-1}</m>, <m>x^x</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The exponential functions are <m>2^x</m> and <m>5^{x-1}</m>,
+          since the variable appears only in the exponent.
+          The expressions <m>x^2</m> and <m>x^x</m> are not exponential functions.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-exp-laws">
+    <title>Laws of Exponents</title>
+
+    <p>
+      The laws of exponents allow us to simplify exponential expressions
+      and are essential tools for solving equations involving exponentials.
+    </p>
+
+    <theorem xml:id="thm-exp-laws">
+      <title>Laws of Exponents</title>
+      <statement>
+        <p>
+          For <m>a &gt; 0</m> and real numbers <m>x</m> and <m>y</m>,
+        </p>
+        <me>
+          \begin{array}{rcl}
+            a^x a^y &amp; = &amp; a^{x+y} \\
+            \dfrac{a^x}{a^y} &amp; = &amp; a^{x-y} \\
+            (a^x)^y &amp; = &amp; a^{xy} \\
+            a^0 &amp; = &amp; 1
+          \end{array}
+        </me>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Simplify the expression <m>\dfrac{3^{x+2}}{3^{x-1}}</m>.
+        </p>
+      </statement>
+      <solution>
+        <me>
+          \begin{array}{rcl}
+            \dfrac{3^{x+2}}{3^{x-1}}
+            &amp; = &amp;
+            3^{(x+2)-(x-1)} \\
+            &amp; = &amp;
+            3^3 \\
+            &amp; = &amp;
+            27
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <!-- ======================================================= -->
+  <subsection xml:id="ssec-exp-equations">
+    <title>Solving Exponential Equations</title>
+
+    <p>
+      Many exponential equations can be solved by rewriting both sides
+      with the same base and then equating the exponents.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Solve the equation <m>2^{x+1} = 16</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Rewrite <m>16</m> as a power of 2:
+        </p>
+        <me>
+          16 = 2^4.
+        </me>
+        <p>
+          Then equate exponents:
+        </p>
+        <me>
+          \begin{array}{rcl}
+          2^{x+1} &amp; = &amp; 2^4 \\  
+          x + 1 &amp; = &amp; 4 \\
+            x &amp; = &amp; 3
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <remark>
+      <p>
+        When exponential equations cannot be written with the same base,
+        logarithms will be required showcased in the next section.
       </p>
     </remark>
   </subsection>
 
-<!-- ======================================================= -->
-<subsection xml:id="ssec-exp-change-base">
-  <title>Changing the Base and the Role of <m>e</m></title>
-
-  <p>
-    In algebra, exponential expressions can be written using many different bases.
-    In calculus, however, it is often convenient to rewrite exponentials
-    using base <m>e</m>.
-    This is because derivatives and integrals involving <m>e^x</m>
-    have especially simple formulas.
-  </p>
-
-  <p>
-    The idea of <em>changing the base</em> allows us to rewrite
-    any exponential expression in terms of a different base.
-    Later, logarithms will give us a systematic way to do this.
-  </p>
-
-  <principle xml:id="pr-exp-change-base">
-    <statement>
-      <p>
-        Any exponential expression <m>a^x</m> with <m>a &gt; 0</m> and <m>a \neq 1</m>
-        can be rewritten using base <m>e</m>.
-      </p>
-      <p>
-        In particular, there exists a real number <m>k</m> such that
-      </p>
-      <me>
-        a^x = e^{kx}.
-      </me>
-    </statement>
-  </principle>
-
-  <remark>
-    <p>
-      The value of <m>k</m> depends on the base <m>a</m>.
-      Later in the course, we will see that <m>k = \ln(a)</m>,
-      where <m>\ln</m> is the natural logarithm.
-    </p>
-  </remark>
-
-  <example>
-    <statement>
-      <p>
-        Rewrite <m>2^x</m> using base <m>e</m>.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        There exists a constant <m>k</m> such that
-      </p>
-      <me>
-        2^x = e^{kx}.
-      </me>
-      <p>
-        This constant is <m>k = \ln(2)</m>, so
-      </p>
-      <me>
-        2^x = e^{(\ln 2)x}.
-      </me>
-    </solution>
-  </example>
-
-  <example>
-    <statement>
-      <p>
-        Rewrite <m>5^{3x}</m> using base <m>e</m>.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Using the change of base idea,
-      </p>
-      <me>
-        5^{3x} = e^{(\ln 5)(3x)} = e^{3(\ln 5)x}.
-      </me>
-    </solution>
-  </example>
-
-  <remark>
-    <p>
-      In calculus, derivatives and integrals of <m>e^x</m>
-      are much simpler than those of <m>a^x</m> for other bases.
-      For this reason, exponential models are often rewritten
-      using base <m>e</m> before applying calculus techniques.
-    </p>
-  </remark>
-</subsection>
-
-
-
   <!-- ======================================================= -->
-  <subsection xml:id="ssec-exp-eq-same-base">
-    <title>Solving Exponential Equations with the Same Base</title>
+  <subsection xml:id="ssec-base-e">
+    <title>The Natural Base <m>e</m></title>
 
     <p>
-      The simplest exponential equations are those in which both sides
-      can be written using the same base.
-      In this case, the exponents can be set equal.
+      Among all exponential functions, one base is especially important in calculus:
+      the number <m>e</m>, approximately equal to <m>2.718</m>.
     </p>
 
-    <principle xml:id="pr-exp-equal-bases">
+    <definition xml:id="def-natural-exp">
+      <title>Natural Exponential Function</title>
       <statement>
         <p>
-          If <m>a &gt; 0</m>, <m>a \neq 1</m>, and
-        </p>
-        <me>
-          a^u = a^v,
-        </me>
-        <p>
-          then <m>u = v</m>.
+          The <term>natural exponential function</term> is defined by
+          <m>f(x) = e^x</m>.
         </p>
       </statement>
-    </principle>
+    </definition>
 
-    <example>
-      <statement>
-        <p>
-          Solve <m>2^{x+1} = 16</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Rewrite both sides with base <m>2</m>.
-        </p>
+    <remark>
+      <p>
+        The function <m>e^x</m> has the special property that its derivative
+        is equal to itself.
+        Because of this, it is often algebraically simpler to work with
+        base <m>e</m> when taking derivatives and integrals.
+      </p>
+    </remark>
 
-        <me>
-\begin{array}{rcl}
-2^{x+1} &amp; = &amp; 2^4
-\end{array}
-        </me>
+<example>
+  <statement>
+    <p>
+      Rewrite <m>5^x</m> using base <m>e</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We begin by recalling that from <xref ref="ex-precalc-expInv"/>
+      natural logarithm and the exponential function
+      are inverse functions. In particular, for any positive number <m>A</m>,
+    </p>
+    <me>
+      A = e^{\ln(A)}.
+    </me>
 
-        <p>
-          Set the exponents equal.
-        </p>
+    <p>
+      Applying this identity with <m>A = 5</m>, we can rewrite the base:
+    </p>
+    <me>
+      5 = e^{\ln(5)}.
+    </me>
 
-        <me>
-\begin{array}{rcl}
-x + 1 &amp; = &amp; 4 \\
-x &amp; = &amp; 3
-\end{array}
-        </me>
-      </solution>
-    </example>
+    <p>
+      Now substitute this expression for <m>5</m> into <m>5^x</m>:
+    </p>
+    <me>
+      5^x = \left(e^{\ln(5)}\right)^x.
+    </me>
 
-    <example>
-      <statement>
-        <p>
-          Solve <m>3^{2x-1} = 9</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Rewrite <m>9</m> using base <m>3</m>.
-        </p>
+    <p>
+      Using the exponent rule <m>(a^x)^y = a^{xy}</m>, we simplify:
+    </p>
+    <me>
+      \left(e^{\ln(5)}\right)^x = e^{x \ln(5)}.
+    </me>
 
-        <me>
-\begin{array}{rcl}
-3^{2x-1} &amp; = &amp; 3^2
-\end{array}
-        </me>
+    <p>
+      Therefore, the exponential function written in terms of base <m>e</m> is
+    </p>
+    <me>
+      5^x = e^{x \ln(5)}.
+    </me>
 
-        <p>
-          Set exponents equal.
-        </p>
+    <p>
+      Writing exponentials in this form is especially useful in calculus,
+      since derivatives and integrals involving <m>e^x</m> are simpler to compute.
+    </p>
+  </solution>
+</example>
 
-        <me>
-\begin{array}{rcl}
-2x - 1 &amp; = &amp; 2 \\
-2x &amp; = &amp; 3 \\
-x &amp; = &amp; \dfrac{3}{2}
-\end{array}
-        </me>
-      </solution>
-    </example>
   </subsection>
 
-  <!-- ======================================================= -->
-  <subsection xml:id="ssec-exp-eq-rewrite">
-    <title>Solving Exponential Equations by Rewriting</title>
-
-    <p>
-      Sometimes an equation does not initially have matching bases.
-      In these cases, we attempt to rewrite both sides using a common base.
-    </p>
-
-    <example>
-      <statement>
-        <p>
-          Solve <m>4^x = 2^{x+3}</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Rewrite <m>4</m> as a power of <m>2</m>.
-        </p>
-
-        <me>
-\begin{array}{rcl}
-(2^2)^x &amp; = &amp; 2^{x+3}
-\end{array}
-        </me>
-
-        <p>
-          Simplify and equate exponents.
-        </p>
-
-        <me>
-\begin{array}{rcl}
-2^{2x} &amp; = &amp; 2^{x+3} \\
-2x &amp; = &amp; x + 3 \\
-x &amp; = &amp; 3
-\end{array}
-        </me>
-      </solution>
-    </example>
-  </subsection>
-
-  <!-- ======================================================= -->
-  <subsection xml:id="ssec-exp-no-solution">
-    <title>When Exponential Equations Have No Solution</title>
-
-    <p>
-      Exponential functions, <m>a^x</m>, are always positive.
-      This observation can be used to identify equations with no real solution.
-    </p>
-
-    <example>
-      <statement>
-        <p>
-          Solve <m>2^x = -4</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Since <m>2^x &gt; 0</m> for all real <m>x</m>,
-          this equation has no real solution.
-        </p>
-      </solution>
-    </example>
-  </subsection>
-
-
-
+ 
+  
 </section>
