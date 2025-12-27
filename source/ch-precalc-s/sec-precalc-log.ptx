@@ -199,5 +199,38 @@
   </subsection>
 
 
+<!-- ======================================================= -->
+<subsection xml:id="ssec-precalc-videos-log">
+  <title>Supplemental Video Resources</title>
+
+  <p>
+    The following is a curated set of videos that many students find helpful.
+    They provide additional explanations and visual intuition
+    for logarithms and their relationship to exponential functions.
+  </p>
+
+  <ul>
+    <li>
+      <url href="https://www.youtube.com/watch?v=O821iMglrog">Everything about Logarithms in 5 minutes</url>
+    </li>
+    <li>
+      <url href="https://www.youtube.com/watch?v=oqHJ5xQYTEI">Logarithms Review - Exponential Form</url>
+    </li>
+    <li>
+      <url href="https://www.youtube.com/watch?v=Jtv9Lnf7Zw8">Properties of Logarithms</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/kqVpPSzkTYA?si=E09RjwsnrmQ_VIhJ">Logarithms - The Easy Way!</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/10I_TVuYLkQ?si=ROlx3MZd70h6lntK">Solving Exponential and Logarithmic Equations</url>
+    </li>
+    <li>
+      <url href="https://www.youtube.com/watch?v=m2MIpDrF7Es">What's so special about Euler's number e?</url>
+    </li>
+  </ul>
+
+</subsection>
+
 
 </section>

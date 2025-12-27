@@ -14,7 +14,7 @@
 
   <!-- ======================================================= -->
   <subsection xml:id="ssec-exp-def">
-    <title>What Is an Exponential Function?</title>
+    <title>Exponential Functions</title>
 
     <definition xml:id="def-exponential-function">
       <title>Exponential Function</title>
@@ -228,6 +228,39 @@
 
   </subsection>
 
- 
+<!-- ======================================================= -->
+<subsection xml:id="ssec-precalc-videos-exp">
+  <title>Supplemental Video Resources</title>
+
+  <p>
+    The following is a curated set of videos that many students find helpful.
+    They provide additional explanations and visual intuition
+    for exponential functions and their role in calculus.
+  </p>
+
+  <ul>
+    <li>
+      <url href="https://youtu.be/6WMZ7J0wwMI?si=6uoba0KMllKSeCuI">Introduction to exponential functions</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/7xsn79tpCsk?si=J4SUlXpxzDkyZnhX">Exponential growth and decay explained visually</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/0jp3FCsYQog?si=sQLYRj-_0FWNgGgw">Exponential and logarithmic functions as inverses</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/Q9puUgDc2BY?si=4GsqVvlTzUGViqUH">Understanding e^x and ln(x)</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/1Wrvh_KPvec?si=91oprUxMJxSHDKcK">Why base e the Natural Number</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/9tutJ5xrRwg?si=zgjZDMkb_Kt0ZtJ3">Solving exponential equations</url>
+    </li>
+  </ul>
+
+</subsection>
+
+
   
 </section>

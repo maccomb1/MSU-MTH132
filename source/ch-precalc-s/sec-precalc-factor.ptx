@@ -376,6 +376,34 @@ x(x - 4) + 3(x - 4) \\[0.6em]
   </remark>
 </subsection>
 
-  <!-- ======================================================= -->
+<!-- ======================================================= -->
+<subsection xml:id="ssec-precalc-videos-factor">
+  <title>Supplemental Video Resources</title>
+
+  <p>
+    The following is a curated set of videos that many students find helpful.
+    They provide additional explanations and worked examples
+    for common factoring techniques used throughout calculus.
+  </p>
+
+  <ul>
+    <li>
+      <url href="https://www.youtube.com/watch?v=U6FndtdgpcA">How To Factor Polynomials The Easy Way!</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/HLNSouzygw0?si=HQ5TybZC-pZLIoy3">Difference of squares explained</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/f6yhfmW41wI?si=5dM86jmyIujIX6K1">Perfect square trinomials</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/t7-JCa7phCQ?si=2Xy0aaYiORZnyqPr">Factoring by grouping</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/uVpsz-xpnPo?si=qD0Gmkpw0uIxcFKk">Factoring to simplify rational expressions</url>
+    </li>
+  </ul>
+
+</subsection>
 
 </section>

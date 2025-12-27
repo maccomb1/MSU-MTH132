@@ -225,4 +225,43 @@ e^{\ln(x)} &amp; = &amp; x \quad (x &gt; 0) \\
   </subsection>
 
 
+<!-- ======================================================= -->
+<subsection xml:id="ssec-precalc-videos-funcs">
+  <title>Supplemental Video Resources</title>
+
+  <p>
+    The following is a curated set of videos that many students find helpful.
+    They provide additional explanations and visual intuition
+    for functions, function composition, and inverse functions.
+  </p>
+
+  <ul>
+    <li>
+      <url href="https://www.youtube.com/watch?v=7JZ0IfCQ488">What is a function?</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/_e0EdFGpcvc?si=_-6PpPrh0nXfBIn3">Function notation explained</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/qPUAkMILgSY?si=hg_bNostbg1ZNFRI">Function composition</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/ZFPkQkURSxk?si=VjRJkzRCfOB6gw43">Composing functions with examples</url>
+    </li>
+    <li>
+      <url href="https://www.youtube.com/watch?v=TN4ybFiuV3k">Inverse functions and one-to-one functions</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/-l7U3dEAGa4?si=wjFYI5RQ-X-A9KzE">Finding inverse functions algebraically</url>
+    </li>
+    <li>
+      <url href="https://youtu.be/jt7p-mCC0ng?si=AYRypp5lPh_NvgI0">Inverse trigonometric functions explained</url>
+    </li>
+  </ul>
+
+</subsection>
+
+
+
+
 </section>
