@@ -21,6 +21,21 @@
       The slopes appear to match the graph of <m>\cos(x)</m>.
     </p>
 
+
+  <url href="https://www.desmos.com/calculator/czwxvlzlg0">
+      <figure>
+<caption>
+The derivative of <m>\sin(x)</m> visualized: the slope of the tangent line to <m>y=\sin(x)</m> at each point matches the value of <m>\cos(x)</m>.
+</caption>
+        <image width="100%" source="images/DerivSineVsCosine.gif">
+      <shortdescription>
+    An animated graph showing a sine curve and a cosine curve. As a point moves along the sine curve, a tangent line is drawn. 
+    The steepness of the tangent line changes and matches the height of the cosine curve at the same horizontal position.
+      </shortdescription>
+        </image>
+      </figure>
+  </url>
+
     <figure xml:id="fig-sin-cos-derivative-graph">
       <caption>
         The graph of <m>y=\sin(x)</m> and the graph of its derivative (which matches <m>y=\cos(x)</m>).
@@ -254,6 +269,25 @@
       </solution>
     </example>
   </subsection>
+
+
+<subsection xml:id="additional-worked-problems-derivTrig">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-deriv-trig">
+        Additional Examples for Trigonometric Derivatives
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
 
   <subsection xml:id="practice-trig-derivatives">
     <title>Practice Problems</title>

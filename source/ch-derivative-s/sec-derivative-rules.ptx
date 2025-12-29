@@ -735,4 +735,20 @@ These topics are covered in more detail in MTH 320.
 
   </subsection>
 
+<subsection xml:id="additional-worked-problems-derivRules">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-deriv-rules">
+        Additional Examples for Basic Differentiation Rules
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
 </section>

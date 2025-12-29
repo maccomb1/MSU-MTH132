@@ -349,4 +349,21 @@
     </example>
   </subsection>
 
+
+<subsection xml:id="additional-worked-problems-derivExp">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-deriv-expChain">
+        Additional Examples for Exponential Functions and the Chain Rule
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
 </section>
