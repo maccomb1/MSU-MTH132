@@ -10,6 +10,9 @@
       <li>Rewrite the derivative definition using either <m>h\to 0</m> or <m>x\to a</m>.</li>
       <li>Define the derivative function <m>f'(x)</m> and interpret it as a new function.</li>
       <li>Recognize common situations where a derivative fails to exist (vertical tangents, corners, discontinuities).</li>
+          <li>
+      Identify where a function is differentiable on an interval by locating vertical tangents, corners/cusps, and discontinuities.
+    </li>
     </ul>
 
 
@@ -620,7 +623,180 @@
         if <m>f</m> is not continuous at <m>x=a</m>, then <m>f</m> is not differentiable at <m>x=a</m>.
       </p>
     </remark>
+
+
+
+<p>
+  Now that we have studied the main ways a derivative can fail to exist, we will put these ideas together
+  and identify the regions where a function is differentiable (that is, where the derivative exists).
+</p>
+
   </subsection>
+
+
+
+
+<subsection xml:id="ssec-differentiable-on-interval">
+  <title>Differentiability on an Interval</title>
+
+  <definition xml:id="def-differentiable-on-interval">
+    <title>Differentiable on an Interval</title>
+    <statement>
+      <p>
+        Let <m>I</m> be an interval.
+        We say that <m>f</m> is <term>differentiable on</term> <m>I</m> if <m>f'(x)</m> exists for every point
+        <m>x</m> in <m>I</m>.
+      </p>
+      <p>
+        We say that <m>f</m> is <term>differentiable on</term> <m>(a,b)</m> if <m>f'(x)</m> exists for all
+        <m>a&lt;x&lt;b</m>.
+        We say that <m>f</m> is <term>differentiable on</term> <m>[a,b]</m> if <m>f'(x)</m> exists for all
+        <m>a&lt;x&lt;b</m> and the one-sided derivatives <m>f'(a^+)</m> and <m>f'(b^-)</m> exist.
+      </p>
+    </statement>
+  </definition>
+
+ <example xml:id="ex-differentiable-intervals-graph">
+  <title>Differentiability from a Graph</title>
+
+  <statement>
+    <p>
+      The graph below represents a function <m>f</m>.
+      Identify all values of <m>x</m> where <m>f</m> is differentiable.
+    </p>
+  </statement>
+
+  <figure>
+    <caption>
+      A function with a corner at <m>x=-1</m>, a jump discontinuity at <m>x=0</m>,
+      and a discontinuity at <m>x=2</m>.
+    </caption>
+    <image width="100%" source="images/whereDiff.png">
+      <shortdescription>
+        Graph of a piecewise function.
+        There is a sharp corner at x equals negative one.
+        The graph has a jump at x equals zero, with a filled point above and an open point at the origin.
+        A vertical dashed line at x equals two shows another discontinuity.
+        Away from these points, the graph is smooth.
+      </shortdescription>
+    </image>
+  </figure>
+
+  <solution>
+    <p>
+      A function is differentiable at a point only if it is continuous there
+      and has a well-defined tangent line.
+      We examine each notable feature of the graph.
+    </p>
+
+    <p>
+      At <m>x=-1</m>, the graph has a sharp corner.
+      The slopes approaching from the left and right are different,
+      so the derivative does not exist at this point.
+    </p>
+
+    <p>
+      At <m>x=0</m>, the graph has a jump discontinuity.
+      Because the function is not continuous at <m>x=0</m>,
+      it cannot be differentiable there.
+    </p>
+
+    <p>
+      At <m>x=2</m>, the graph has another discontinuity,
+      indicated by the vertical dashed line.
+      Since the function does not have a defined value that matches nearby behavior,
+      the derivative does not exist at <m>x=2</m>.
+    </p>
+
+    <p>
+      On all other intervals where the graph is smooth and continuous,
+      the function is differentiable.
+      Therefore, <m>f</m> is differentiable on the intervals
+    </p>
+
+    <me>
+      (-\infty,-1)\cup(-1,0)\cup(0,2)\cup(2,\infty).
+    </me>
+  </solution>
+</example>
+
+
+  <example xml:id="ex-diff-interval-piecewise">
+    <title>Determining Differentiability for a Piecewise Function</title>
+    <statement>
+      <p>
+        Let
+      </p>
+      <me>
+        f(x)=
+        \begin{cases}
+          x+1, &amp; \text{if } x&lt;0, \\
+          |x|, &amp; \text{if } 0\le x&lt;2, \\
+          x^2-1, &amp; \text{if } x\ge 2.
+        \end{cases}
+      </me>
+      <p>
+        Determine where <m>f</m> is differentiable.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        On intervals where a single formula applies, we check differentiability using what we already know:
+      </p>
+
+      <ul>
+        <li>
+          <p>
+            For <m>x&lt;0</m>, <m>f(x)=x+1</m> is differentiable for all <m>x&lt;0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>0&lt;x&lt;2</m>, <m>f(x)=|x|</m>.
+            Since <m>x&gt;0</m> on this interval, <m>|x|=x</m>, which is differentiable for <m>0&lt;x&lt;2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>x&gt;2</m>, <m>f(x)=x^2-1</m> is differentiable for all <m>x&gt;2</m>.
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        The only possible problems occur at the junction points <m>x=0</m> and <m>x=2</m>.
+      </p>
+
+      <p>
+        At <m>x=0</m>, we check continuity and one-sided derivatives.
+        We have
+        <m>\lim_{x\to 0^-}f(x)=\lim_{x\to 0^-}(x+1)=1</m>,
+        while <m>f(0)=|0|=0</m>.
+        Since the function is discontinuous at <m>x=0</m>, it cannot be differentiable there.
+      </p>
+
+      <p>
+        At <m>x=2</m>, we have <m>\lim_{x\to 2^-}f(x)=|2|=2</m> and <m>f(2)=2^2-1=3</m>,
+        so there is also a discontinuity at <m>x=2</m>.
+        Therefore <m>f</m> is not differentiable at <m>x=2</m>.
+      </p>
+
+      <p>
+        In conclusion, <m>f</m> is differentiable for all real numbers except at
+        <m>x=0</m> and <m>x=2</m>.
+        Equivalently, <m>f</m> is differentiable on the intervals
+        <m>(-\infty,0)</m>, <m>(0,2)</m>, and <m>(2,\infty)</m>.
+      </p>
+    </solution>
+  </example>
+
+</subsection>
+
+
+
+
+
 
 
 <subsection xml:id="additional-worked-problems-derivDefn">
@@ -643,72 +819,211 @@
   <subsection xml:id="ssec-derivative-practice-tf">
     <title>Practice / Study Problems</title>
 
-    <exercises xml:id="exercises-derivative-tf">
-      <exercisegroup>
-        <title>Some True/False Problems</title>
-        <introduction>
-          <p>
-            Determine whether each statement is true or false and explain your reasoning.
-          </p>
-        </introduction>
+   <exercises xml:id="exercises-derivative-defn-tf">
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and explain your reasoning.
+      </p>
+    </introduction>
 
-        <exercise xml:id="tf-deriv-01">
-          <statement><p>If <m>f</m> is differentiable at <m>x=a</m>, then <m>f</m> is continuous at <m>x=a</m>.</p></statement>
-          <solution><p><emph>True.</emph> Differentiability implies continuity.</p></solution>
-        </exercise>
+    <!-- Common ID structure: tf-derivative-defn-01, tf-derivative-defn-02, ... -->
 
-        <exercise xml:id="tf-deriv-02">
-          <statement><p>If <m>f</m> is continuous at <m>x=a</m>, then <m>f</m> is differentiable at <m>x=a</m>.</p></statement>
-          <solution><p><emph>False.</emph> A corner (like <m>|x|</m> at 0) is continuous but not differentiable.</p></solution>
-        </exercise>
+   <exercise xml:id="tf-derivative-defn-01">
+      <statement>
+        <p>
+          If <m>f(x)=x^2</m>, then <m>f'(4)=16</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> We can calculate the derivative <m>f'(x)=2x</m>, so <m>f'(4)=8</m>, not 16.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-03">
-          <statement><p>The derivative <m>f'(a)</m> is the limit of slopes of secant lines through <m>(a,f(a))</m>.</p></statement>
-          <solution><p><emph>True.</emph> That is exactly what the difference quotient represents.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-02">
+      <statement>
+        <p>
+          If <m>f(x)=3x-5</m>, then the limit definition shows that
+          <m>f'(a)=3a</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> The derivative of a linear function is constant.
+          Using the limit definition gives <m>f'(a)=3</m>, not <m>3a</m>.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-04">
-          <statement><p>If <m>\displaystyle f'(a)=0</m>, then <m>f(a)</m> must be a local maximum or minimum.</p></statement>
-          <solution><p><emph>False.</emph> Horizontal tangent does not guarantee an extremum.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-03">
+      <statement>
+        <p>
+          If <m>f(x)=\dfrac{1}{x}</m>, then <m>f'(x)=-\dfrac{1}{x^2}</m> for all <m>x\neq 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> For <m>x\neq 0</m> the derivative exists, and
+          <m>f'(x)=-\dfrac{1}{x^2}</m>.
+          This can be verified directly from the limit definition by combining the fractions
+          and simplifying the difference quotient.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-05">
-          <statement><p>If the left-hand derivative and right-hand derivative at <m>a</m> are equal, then <m>f'(a)</m> exists.</p></statement>
-          <solution><p><emph>True.</emph> Agreement of the one-sided derivative limits gives the two-sided derivative limit.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-04">
+      <statement>
+        <p>
+          The derivative function <m>f'(x)</m> assigns to each input <m>x</m>
+          the slope of the tangent line to <m>f</m> at that input.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> Where the derivative exists, it equals the slope of the tangent line
+          to the graph of <m>y=f(x)</m> at that point.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-06">
-          <statement><p>If a graph has a corner at <m>x=a</m>, then <m>f'(a)</m> does not exist.</p></statement>
-          <solution><p><emph>True.</emph> The one-sided slopes are different.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-05">
+      <statement>
+        <p>
+          The derivative function <m>f'(x)</m> can exist at some values of <m>x</m>
+          but fail to exist at others.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> Many functions are differentiable on part of their domain but not everywhere,
+          for example at corners, discontinuities, or vertical tangents.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-07">
-          <statement><p>A vertical tangent at <m>x=a</m> means <m>f'(a)=0</m>.</p></statement>
-          <solution><p><emph>False.</emph> A vertical tangent corresponds to unbounded slope, not zero slope.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-06">
+      <statement>
+        <p>
+          If <m>f</m> is differentiable at <m>x=a</m>, then the graph of <m>f</m>
+          must be smooth near <m>x=a</m> with no corners or jumps.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> Differentiability requires both continuity and a well-defined tangent line.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-08">
-          <statement><p>If <m>f</m> is discontinuous at <m>x=a</m>, then <m>f'(a)</m> does not exist.</p></statement>
-          <solution><p><emph>True.</emph> Discontinuity prevents differentiability.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-07">
+      <statement>
+        <p>
+          If <m>f</m> is continuous at <m>x=a</m>, then <m>f</m> is differentiable at <m>x=a</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> A function can be continuous but not differentiable.
+          For example, <m>f(x)=|x|</m> is continuous at <m>x=0</m> but has a corner there, so <m>f'(0)</m> does not exist.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-09">
-          <statement><p>The derivative function <m>f'(x)</m> is defined for every <m>x</m> where <m>f(x)</m> is defined.</p></statement>
-          <solution><p><emph>False.</emph> A function can be defined but not differentiable at some points.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-08">
+      <statement>
+        <p>
+          If <m>\displaystyle f'(x)&gt;0</m> for all <m>x</m> in an interval, then <m>f</m> is increasing on that interval.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> A positive derivative means tangent slopes are positive, which corresponds to increasing behavior.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-10">
-          <statement><p>If <m>\displaystyle f'(x)&gt;0</m> for all <m>x</m> in an interval, then <m>f</m> is increasing on that interval.</p></statement>
-          <solution><p><emph>True.</emph> Positive derivative (slope) corresponds to increasing behavior.</p></solution>
-        </exercise>
+    <exercise xml:id="tf-derivative-defn-09">
+      <statement>
+        <p>
+          If <m>f'(a)</m> exists, then
+          <m>\displaystyle\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}</m> must be a finite number.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> By definition, <m>f'(a)</m> is the value of this limit.
+          If the limit were infinite or did not exist, then <m>f'(a)</m> would be undefined.
+        </p>
+      </solution>
+    </exercise>
 
-        <exercise xml:id="tf-deriv-11">
-          <statement><p>For <m>f(x)=c</m> (a constant function), we have <m>\displaystyle f'(a)=0</m> for every <m>a</m>.</p></statement>
-          <solution><p><emph>True.</emph> The output does not change as the input changes.</p></solution>
-        </exercise>
 
-      </exercisegroup>
-    </exercises>
+    <exercise xml:id="tf-derivative-defn-11">
+      <statement>
+        <p>
+          A vertical tangent line corresponds to a derivative value of zero.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>False.</emph> A vertical tangent line has undefined slope.
+          This corresponds to the derivative failing to exist (the slopes become unbounded), not to a derivative of zero.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-derivative-defn-12">
+      <statement>
+        <p>
+          Algebraic simplification of the difference quotient is used to eliminate
+          the <m>\tfrac{0}{0}</m> form before taking the limit.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> Direct substitution often yields <m>\tfrac{0}{0}</m>,
+          so we simplify the difference quotient (factor, combine fractions, use conjugates, identities) to evaluate the limit.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-derivative-defn-13">
+      <statement>
+        <p>
+          The right-hand derivative <m>f'(a^+)</m> uses only values of the function
+          for inputs greater than <m>a</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> The limit <m>\displaystyle\lim_{h\to 0^+}\frac{f(a+h)-f(a)}{h}</m>
+          uses <m>h&gt;0</m>, so <m>a+h&gt;a</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-derivative-defn-14">
+      <statement>
+        <p>
+          If <m>f'(a^-)</m> and <m>f'(a^+)</m> both exist and are equal,
+          then <m>f'(a)</m> exists.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <emph>True.</emph> The derivative <m>f'(a)</m> is a two-sided limit.
+          If the one-sided limits exist and agree, then the two-sided limit exists and equals their common value.
+        </p>
+      </solution>
+    </exercise>
+
+  </exercisegroup>
+</exercises>
+
+
   </subsection>
 
 
