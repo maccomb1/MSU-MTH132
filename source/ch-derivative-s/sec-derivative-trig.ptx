@@ -36,162 +36,291 @@ The derivative of <m>\sin(x)</m> visualized: the slope of the tangent line to <m
       </figure>
   </url>
 
-    <figure xml:id="fig-sin-cos-derivative-graph">
-      <caption>
-        The graph of <m>y=\sin(x)</m> and the graph of its derivative (which matches <m>y=\cos(x)</m>).
-      </caption>
-      <image source="2-4-SinCos.png" width="90%"/>
-    </figure>
 
     <theorem xml:id="thm-derivative-sin-cos">
       <statement>
         <p>
           For all real <m>x</m> (measured in radians),
-          <m>\sin'(x)=\cos(x)</m> and <m>\cos'(x)=-\sin(x)</m>.
+          <me>(\sin(x))'=\cos(x) \quad \text{ and } \quad (\cos(x))'=-\sin(x)</me>
         </p>
       </statement>
+
+  <proof>
+    <p>
+      A full proof of these derivative formulas begins with the limit definition of the derivative applied to the sine and cosine functions.
+      Using trigonometric identities, this reduces the problem to understanding the behavior of certain key limits involving sine and cosine near zero.
+    </p>
+
+    <p>
+      The first half of this argument is presented clearly in the video
+      <url href="https://youtu.be/j1n6AMuMQso?si=rOoM1UxhMYV6VoXW">Derivatives of Sine and Cosine from First Principles</url>.
+      As you will see, completing the proof requires evaluating limits such as the limit of sine of x over x as x approaches zero, 
+      which we will develop later in this section.
+    </p>
+  </proof>
     </theorem>
 
-    <p>
-      A classical geometric argument uses the unit circle. The key idea is that when an angle increases by a very small amount,
-      the corresponding change in <m>\sin(\theta)</m> is well-approximated by the opposite side of a tiny triangle whose hypotenuse is the arc length.
-      Because radian measure equals arc length on the unit circle, this connects a difference quotient for sine to the cosine function.
-    </p>
+<p>
+  For the time being, we will take this result as given and focus on how to use 
+  it to find the derivative formulas for the other standard trigonometric functions.
+</p>
 
-    <figure xml:id="fig-sin-derivative-triangle">
-      <caption>
-        A unit-circle picture motivating <m>\sin'(x)=\cos(x)</m> via a small angle increment.
-      </caption>
-      <image source="2-4-Diff-Triangle.png" width="95%"/>
-    </figure>
-
-    <p>
-      In symbols, the derivative definition gives
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle \sin'(\theta)
-\amp=\amp \displaystyle \lim_{\Delta\theta\to 0}\frac{\sin(\theta+\Delta\theta)-\sin(\theta)}{\Delta\theta}
-\\[1.0em]
-\amp=\amp \displaystyle \cos(\theta).
-\end{array}
-    </me>
-
-    <p>
-      A similar geometric argument (or the identity <m>\cos(\theta)=\sin\!\left(\tfrac{\pi}{2}-\theta\right)</m>) shows
-      <m>\cos'(\theta)=-\sin(\theta)</m>.
-    </p>
-
-    <corollary xml:id="cor-sin-over-x-limits">
-      <statement>
-        <p>
-          The following limits are immediate consequences of the sine and cosine derivative formulas:
-        </p>
-        <ul>
-          <li><m>\displaystyle \lim_{h\to 0}\frac{\sin(h)}{h}=1</m></li>
-          <li><m>\displaystyle \lim_{h\to 0}\frac{\cos(h)-1}{h}=0</m></li>
-        </ul>
-      </statement>
-
-      <proof>
-        <p>
-          For the first limit, use the derivative of sine at zero:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle \lim_{h\to 0}\frac{\sin(h)}{h}
-\amp=\amp \displaystyle \lim_{h\to 0}\frac{\sin(0+h)-\sin(0)}{h}
-\\[1.0em]
-\amp=\amp \displaystyle \sin'(0)
-\\[0.6em]
-\amp=\amp \displaystyle \cos(0)
-\\[0.6em]
-\amp=\amp \displaystyle 1.
-\end{array}
-        </me>
-
-        <p>
-          The second follows similarly from <m>\cos'(0)=-\sin(0)=0</m>.
-        </p>
-      </proof>
-    </corollary>
-  </subsection>
+</subsection>
 
   <subsection xml:id="general-trig-derivatives">
     <title>General Trigonometric Derivatives</title>
 
+<p>
+  Now that we know the derivatives of sine and cosine, we can quickly find the derivatives of the 
+  remaining trigonometric functions by applying our basic differentiation rules, such as the Quotient Rule.
+</p>
+
+<theorem xml:id="thm-derivative-tan">
+  <statement>
     <p>
-      Once we know <m>\sin'(x)</m> and <m>\cos'(x)</m>, we can differentiate the remaining trigonometric functions by rewriting them
-      using sine and cosine together with the product and quotient rules.
+      For all real <m>x</m> such that <m>\tan(x)</m> is defined,
+      <me>
+        (\tan(x))' = \sec^2(x).
+      </me>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Recall that <m>\tan(x)=\dfrac{\sin(x)}{\cos(x)}</m>. Since <m>\cos(x)\neq 0</m> wherever <m>\tan(x)</m> is defined, we may apply the Quotient Rule.
     </p>
 
-    <example xml:id="ex-derivative-tan">
-      <statement>
-        <p>
-          Compute <m>\tan'(x)</m>.
-        </p>
-      </statement>
+    <me>
+      \begin{array}{rcl}
+        (\tan(x))'
+        &amp;=&amp;
+        \left(\dfrac{\sin(x)}{\cos(x)}\right)' \\[1em]
 
-      <solution>
-        <p>
-          Use <m>\tan(x)=\dfrac{\sin(x)}{\cos(x)}</m> and apply the Quotient Rule.
-        </p>
+        &amp;=&amp;
+        \dfrac{\cos(x)\sin'(x)-\sin(x)\cos'(x)}{\cos^2(x)} \\[1em]
 
-        <me>
-\begin{array}{rcl}
-\displaystyle \tan'(x)
-\amp=\amp \displaystyle \left(\frac{\sin(x)}{\cos(x)}\right)'
-\\[1.0em]
-\amp=\amp \displaystyle \frac{\sin'(x)\cos(x)-\sin(x)\cos'(x)}{\cos^2(x)}
-\\[1.2em]
-\amp=\amp \displaystyle \frac{\cos(x)\cos(x)-\sin(x)(-\sin(x))}{\cos^2(x)}
-\\[1.2em]
-\amp=\amp \displaystyle \frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)}
-\\[1.0em]
-\amp=\amp \displaystyle \frac{1}{\cos^2(x)}
-\\[0.8em]
-\amp=\amp \displaystyle \sec^2(x).
-\end{array}
-        </me>
-      </solution>
-    </example>
+        &amp;=&amp;
+        \dfrac{\cos(x)\cos(x)-\sin(x)(-\sin(x))}{\cos^2(x)} \\[1em]
+
+        &amp;=&amp;
+        \dfrac{\cos^2(x)+\sin^2(x)}{\cos^2(x)} \\[1em]
+
+        &amp;=&amp;
+        \dfrac{1}{\cos^2(x)} \\[1em]
+
+        &amp;=&amp;
+        \sec^2(x).
+      \end{array}
+    </me>
 
     <p>
-      The table below summarizes the standard derivatives of the six basic trigonometric functions.
+      Therefore, <m>(\tan(x))'=\sec^2(x)</m> wherever <m>\tan(x)</m> is defined.
+    </p>
+  </proof>
+</theorem>
+
+<p>
+  And similarly
+</p>
+
+<theorem xml:id="thm-derivative-sec-cot-csc">
+  <statement>
+    <p>
+      For all real <m>x</m> such that the following functions are defined,
     </p>
 
-    <table xml:id="tbl-trig-derivatives">
-      <caption>Derivatives of the six basic trigonometric functions (angles in radians).</caption>
-      <tabular>
-        <row header="yes">
-          <cell><m>f(x)</m></cell>
-          <cell><m>\sin(x)</m></cell>
-          <cell><m>\cos(x)</m></cell>
-          <cell><m>\tan(x)</m></cell>
-          <cell><m>\sec(x)</m></cell>
-          <cell><m>\csc(x)</m></cell>
-          <cell><m>\cot(x)</m></cell>
-        </row>
-        <row>
-          <cell><m>f'(x)</m></cell>
-          <cell><m>\cos(x)</m></cell>
-          <cell><m>-\sin(x)</m></cell>
-          <cell><m>\sec^2(x)</m></cell>
-          <cell><m>\tan(x)\sec(x)</m></cell>
-          <cell><m>-\cot(x)\csc(x)</m></cell>
-          <cell><m>-\csc^2(x)</m></cell>
-        </row>
-      </tabular>
-    </table>
+    <me>
+      \begin{array}{rcl}
+        (\sec(x))' &amp;=&amp; \sec(x)\tan(x), \\[0.5em]
+        (\cot(x))' &amp;=&amp; -\csc^2(x), \\[0.5em]
+        (\csc(x))' &amp;=&amp; -\csc(x)\cot(x).
+      \end{array}
+    </me>
+  </statement>
+</theorem>
 
     <remark xml:id="rem-radians-warning">
       <p>
-        These derivative formulas are valid when <m>x</m> is measured in <emph>radians</emph>, not degrees.
+        Again remember, the derivative formulas in this section are valid when <m>x</m> is measured in <emph>radians</emph>, not degrees.
       </p>
     </remark>
+
+
+  <p>
+  Now let’s take a moment to incorporate this new knowledge into ideas from earlier sections before moving on to our discussion of limits.
+</p>
+
+<example xml:id="ex-derivative-sqrt-tan">
+
+  <statement>
+    <p>
+      Find <m>f'(x)</m> if <m>f(x)=\sqrt{x}\tan(x)</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Since <m>f(x)</m> is written as a product of two functions, we apply the Product Rule.
+    </p>
+    
+    <me>
+      \begin{array}{rcl}
+        f'(x)
+        &amp;=&amp;
+        \dfrac{1}{2\sqrt{x}}\tan(x)+\sqrt{x}\sec^2(x).
+      \end{array}
+    </me>
+
+    <p>
+      This expression is an acceptable final answer, though it could be simplified further if desired.
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-derivative-cos-over-3x2">
+
+  <statement>
+    <p>
+      Evaluate <m>\dfrac{d}{dx}\!\left(\dfrac{\cos(x)}{3x^2}\right)</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Since the function is written as a quotient, we apply the Quotient Rule.
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+        \dfrac{d}{dx}\!\left(\dfrac{\cos(x)}{3x^2}\right)
+        &amp;=&amp;
+        \dfrac{(3x^2)(-\sin(x))-\cos(x)(6x)}{(3x^2)^2}\\[0.75em]
+
+        &amp;=&amp;
+        \dfrac{-3x^2\sin(x)-6x\cos(x)}{9x^4}\\[0.75em]
+
+        &amp;=&amp;
+        \dfrac{-x\sin(x)-2\cos(x)}{3x^3}.
+      \end{array}
+    </me>
+  </solution>
+</example>
+
+
+
   </subsection>
+
+
+<subsection xml:id="foundational-trig-limits">
+  <title>Two Fundamental Trigonometric Limits</title>
+
+  <p>
+    Previously in this section, we outlined the proof that the derivative of the sine function is the cosine function.
+    That argument reduces to evaluating certain key limits involving sine and cosine as the input approaches zero.
+    In this subsection, we formally establish those limits using a generic variable <m>u</m>.
+    This prepares us for the substitutions and rewrites that commonly appear in trigonometric limit problems.
+  </p>
+
+  <theorem xml:id="thm-limit-sin-u-over-u">
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{u\to 0}\frac{\sin(u)}{u}=1</m>.
+      </p>
+    </statement>
+
+    <proof>
+      <p>
+        Consider the unit circle and an angle <m>u</m> measured in radians, with <m>u \geq 0</m>.
+        Geometric arguments<fn>
+          This typically involves comparing the areas of triangles and circular sectors in the unit circle.
+          In previous semesters, the full argument has been worked through in recitation.
+          For students who are curious, Khan Academy also has a great video on this topic.
+        </fn> show that
+      </p>
+
+      <me>
+        \sin(u) \le u \le \tan(u).
+      </me>
+
+      <p>
+        Dividing all three expressions by <m>\sin(u)</m> gives
+      </p>
+
+      <me>
+        1 \le \frac{u}{\sin(u)} \le \frac{1}{\cos(u)}.
+      </me>
+
+      <p>
+        Taking reciprocals reverses the inequalities:
+      </p>
+
+      <me>
+        \cos(u) \le \frac{\sin(u)}{u} \le 1.
+      </me>
+
+      <p>
+        As <m>u\to 0</m>, we know <m>\cos(u)\to 1</m>. Since
+        <m>\frac{\sin(u)}{u}</m> is trapped between two expressions that both
+        approach <m>1</m>, the Squeeze Theorem implies
+      </p>
+
+      <me>
+        \lim_{u\to 0}\frac{\sin(u)}{u}=1.
+      </me>
+    </proof>
+  </theorem>
+
+  <theorem xml:id="thm-limit-cos-u-minus-one-over-u">
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{u\to 0}\frac{\cos(u)-1}{u}=0</m>.
+      </p>
+    </statement>
+
+    <proof>
+      <p>
+        Rewrite the expression by multiplying the numerator and denominator
+        by <m>\cos(u)+1</m>:
+      </p>
+
+      <me>
+        \frac{\cos(u)-1}{u}
+        =
+        \frac{(\cos(u)-1)(\cos(u)+1)}{u(\cos(u)+1)}
+        =
+        \frac{-\sin^2(u)}{u(\cos(u)+1)}.
+      </me>
+
+      <p>
+        Rewrite this expression to isolate the sine-over-input factor:
+      </p>
+
+      <me>
+        \frac{-\sin^2(u)}{u(\cos(u)+1)}
+        =
+        -\left(\frac{\sin(u)}{u}\right)\left(\frac{\sin(u)}{\cos(u)+1}\right).
+      </me>
+
+      <p>
+        As <m>u\to 0</m>, we have <m>\frac{\sin(u)}{u}\to 1</m>,
+        <m>\sin(u)\to 0</m>, and <m>\cos(u)+1\to 2</m>.
+        Therefore the entire product approaches <m>0</m>, and
+      </p>
+
+      <me>
+        \lim_{u\to 0}\frac{\cos(u)-1}{u}=0.
+      </me>
+    </proof>
+  </theorem>
+
+  <p>
+    These two limits supply the missing analytic step in the proof of the
+    sine and cosine derivative formulas and will be used repeatedly to
+    evaluate more complicated trigonometric limits.
+  </p>
+</subsection>
+
+
+
 
   <subsection xml:id="trig-limits-from-sin-over-x">
     <title>Limits of Trigonometric Quotients</title>
@@ -288,38 +417,4 @@ The derivative of <m>\sin(x)</m> visualized: the slope of the tangent line to <m
 </subsection>
 
 
-
-  <subsection xml:id="practice-trig-derivatives">
-    <title>Practice Problems</title>
-
-    <exercise xml:id="exer-trig-derivative-1">
-      <statement>
-        <p>Differentiate <m>f(x)=\sin(x)\cos(x)</m>.</p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="exer-trig-derivative-2">
-      <statement>
-        <p>Differentiate <m>f(x)=\tan(x)+\sec(x)</m>.</p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="exer-trig-derivative-3">
-      <statement>
-        <p>Differentiate <m>f(x)=\dfrac{\sin(x)}{1+\cos(x)}</m>.</p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="exer-trig-limit-1">
-      <statement>
-        <p>Evaluate <m>\displaystyle \lim_{x\to 0}\frac{\sin(5x)}{x}</m>.</p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="exer-trig-limit-2">
-      <statement>
-        <p>Evaluate <m>\displaystyle \lim_{x\to 0}\frac{1-\cos(2x)}{x}</m> by rewriting it using a known limit or a derivative interpretation.</p>
-      </statement>
-    </exercise>
-  </subsection>
 </section>

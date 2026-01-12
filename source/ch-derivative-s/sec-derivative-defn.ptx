@@ -17,7 +17,7 @@
     <title>Definition of the Derivative</title>
 
     <p>
-      In earlier sections, we saw that instantaneous velocity can be obtained as a limit of average velocities over
+      In the last section, we saw that instantaneous velocity can be obtained as a limit of average velocities over
       shorter and shorter time increments. Likewise, the slope of a tangent line can be obtained as a limit of secant
       slopes as the secant point moves closer and closer to the point of tangency.
     </p>
@@ -144,32 +144,65 @@
       <title>A Cube Root Example</title>
       <statement>
         <p>
-          Find <m>f'(x)</m> for <m>f(x)=\sqrt[3]{x}</m>.
+          Find <m>f'(a)</m> for <m>f(x)=\sqrt[3]{x}</m>.
         </p>
       </statement>
       <solution>
         <p>
-          Here we use the identity <m>(a-b)(a^2+ab+b^2)=a^3-b^3</m>.
+          Here we use the difference of cubes identity <m>(A-B)(A^2+AB+B^2)=A^3-B^3</m>.
         </p>
 
-        <me>
-\begin{array}{rcl}
-\displaystyle f'(x)
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt[3]{x+h}-\sqrt[3]{x}}{h}
-\\[1.4em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{\sqrt[3]{x+h}-\sqrt[3]{x}}{h}\cdot
-\frac{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
-{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
-\\[1.8em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{(x+h)-x}
-{h\left(\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2\right)}
-\\[1.6em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}
-{\left(\sqrt[3]{x+h}\right)^2+\sqrt[3]{x+h}\sqrt[3]{x}+\left(\sqrt[3]{x}\right)^2}
-\\[1.6em]
-\amp=\amp \displaystyle\frac{1}{3\left(\sqrt[3]{x}\right)^2}.
-\end{array}
-        </me>
+<md>
+  <mrow>
+    f'(a)
+    = \amp
+    \lim_{h\to 0}\frac{\sqrt[3]{a+h}-\sqrt[3]{a}}{h}
+  </mrow>
+
+  <mrow>
+    = \amp
+    \lim_{h\to 0}
+    \frac{\sqrt[3]{a+h}-\sqrt[3]{a}}{h}
+    \cdot
+    \frac{
+      \left(\sqrt[3]{a+h}\right)^2
+      +\sqrt[3]{a+h}\sqrt[3]{a}
+      +\left(\sqrt[3]{a}\right)^2
+    }{
+      \left(\sqrt[3]{a+h}\right)^2
+      +\sqrt[3]{a+h}\sqrt[3]{a}
+      +\left(\sqrt[3]{a}\right)^2
+    }
+  </mrow>
+
+  <mrow>
+    = \amp
+    \lim_{h\to 0}
+    \frac{(a+h)-a}{
+      h\left(
+        \left(\sqrt[3]{a+h}\right)^2
+        +\sqrt[3]{a+h}\sqrt[3]{a}
+        +\left(\sqrt[3]{a}\right)^2
+      \right)
+    }
+  </mrow>
+
+  <mrow>
+    = \amp
+    \lim_{h\to 0}
+    \frac{1}{
+      \left(\sqrt[3]{a+h}\right)^2
+      +\sqrt[3]{a+h}\sqrt[3]{a}
+      +\left(\sqrt[3]{a}\right)^2
+    }
+  </mrow>
+
+  <mrow>
+    = \amp
+    \frac{1}{3\left(\sqrt[3]{a}\right)^2}
+  </mrow>
+</md>
+
 
         <p>
           This example is a good preview of why we will soon develop derivative rules: computing derivatives from the
@@ -186,6 +219,37 @@
       The derivative at a point <m>f'(a)</m> is a single number. But we can compute the derivative for many input values,
       producing a new function.
     </p>
+
+<p>
+  For example, consider <m>f(x)=\sqrt[3]{x}</m> from the previous example.
+  At each value of <m>x</m>, the function has a slope.
+  Plotting these slopes as points creates a new graph,
+  which we call the graph of the <term>derivative function</term>.
+</p>
+
+
+
+
+      <url href="https://www.desmos.com/calculator/42zkvlqlkt">
+    <sidebyside width="80%">
+      <figure>
+<caption>
+  Slopes of tangent lines to <m>f(x)=\sqrt[3]{x}</m> at many values of <m>x</m>,
+  plotted as points and connected to form the graph of the derivative function.
+</caption>
+        <image width="100%" source="images/derivativeFunc.gif">
+<shortdescription>
+  Animated graph showing the cube root function with tangent lines at various points.
+  For each point, the slope of the tangent line is recorded and plotted separately.
+  As these slope values are connected, they form a new curve representing the derivative function.
+</shortdescription>
+        </image>
+      </figure>
+    </sidebyside>
+  </url>
+
+
+
 
     <definition xml:id="def-derivative-function">
       <title>Derivative Function</title>
@@ -242,9 +306,8 @@
     </p>
 
     <ul>
-      <li><emph>Corner:</emph> the left-hand and right-hand slopes are finite but different.</li>
-      <li><emph>Cusp:</emph> the left-hand and right-hand slopes become infinite with opposite signs.</li>
-      <li><emph>Vertical tangent:</emph> slopes become infinite (unbounded) with the same sign.</li>
+      <li><emph>Corner:</emph> the left-hand and right-hand slopes are different.</li>
+      <li><emph>Vertical tangent:</emph> slopes become infinite (unbounded).</li>
       <li><emph>Discontinuity:</emph> if a function is not continuous at a point, then it cannot be differentiable there.</li>
     </ul>
 
@@ -442,17 +505,12 @@
 
         <exercise xml:id="tf-deriv-10">
           <statement><p>If <m>\displaystyle f'(x)&gt;0</m> for all <m>x</m> in an interval, then <m>f</m> is increasing on that interval.</p></statement>
-          <solution><p><emph>True.</emph> Positive derivative corresponds to increasing behavior.</p></solution>
+          <solution><p><emph>True.</emph> Positive derivative (slope) corresponds to increasing behavior.</p></solution>
         </exercise>
 
         <exercise xml:id="tf-deriv-11">
           <statement><p>For <m>f(x)=c</m> (a constant function), we have <m>\displaystyle f'(a)=0</m> for every <m>a</m>.</p></statement>
           <solution><p><emph>True.</emph> The output does not change as the input changes.</p></solution>
-        </exercise>
-
-        <exercise xml:id="tf-deriv-12">
-          <statement><p>If two functions have the same derivative on an interval, then they differ by a constant on that interval.</p></statement>
-          <solution><p><emph>True.</emph> This idea will be justified more formally later, but it matches the meaning of “same rate of change.”</p></solution>
         </exercise>
 
       </exercisegroup>
