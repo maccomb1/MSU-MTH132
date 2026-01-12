@@ -9,8 +9,11 @@
       <li>Interpret the derivative as an instantaneous rate of change and as the slope of a tangent line.</li>
       <li>Rewrite the derivative definition using either <m>h\to 0</m> or <m>x\to a</m>.</li>
       <li>Define the derivative function <m>f'(x)</m> and interpret it as a new function.</li>
-      <li>Recognize common situations where a derivative fails to exist (corners, cusps, vertical tangents, discontinuities).</li>
+      <li>Recognize common situations where a derivative fails to exist (vertical tangents, corners, discontinuities).</li>
     </ul>
+
+
+
   </objectives>
 
   <subsection xml:id="ssec-derivative-definition">
@@ -231,7 +234,7 @@
 
 
       <url href="https://www.desmos.com/calculator/42zkvlqlkt">
-    <sidebyside width="80%">
+    <sidebyside width="100%">
       <figure>
 <caption>
   Slopes of tangent lines to <m>f(x)=\sqrt[3]{x}</m> at many values of <m>x</m>,
@@ -289,6 +292,33 @@
 \ =\ 2x-2.
 \end{array}
         </me>
+
+<p>
+ Graphically this is what we have accomplished
+</p>
+
+      <url href="https://www.desmos.com/calculator/8bbhwk4mrq">
+    <sidebyside width="100%">
+      <figure>
+<caption>
+  The function <m>f(x)=x(x-2)</m> with tangent lines drawn at several points.
+  The slopes of these tangent lines are labeled and shown to align with the values
+  of the derivative function <m>f'(x)=2x-2</m>.
+</caption>
+        <image width="100%" source="images/funcAndDerivative01.png">
+<shortdescription>
+  Graph showing the quadratic function f(x)=x(x-2).
+  At several points along the curve, tangent lines are drawn and their slopes are labeled
+  with values such as −4, −2, 0, 2, and 4.
+  A separate straight line representing the derivative f'(x)=2x-2 is shown, illustrating how
+  each slope of f corresponds to a point on the derivative graph.
+</shortdescription>
+        </image>
+      </figure>
+    </sidebyside>
+  </url>
+
+
       </solution>
     </example>
   </subsection>
@@ -306,106 +336,270 @@
     </p>
 
     <ul>
+      <li><emph>Vertical Tangent:</emph> slopes become infinite (unbounded).</li>
       <li><emph>Corner:</emph> the left-hand and right-hand slopes are different.</li>
-      <li><emph>Vertical tangent:</emph> slopes become infinite (unbounded).</li>
       <li><emph>Discontinuity:</emph> if a function is not continuous at a point, then it cannot be differentiable there.</li>
     </ul>
 
-    <example xml:id="ex-left-right-derivative-exists">
-      <title>One-Sided Derivatives Agree</title>
-      <statement>
-        <p>
-          Let
-        </p>
-        <me>
-          f(x)=
-          \begin{cases}
-            2x-1, &amp; x\le 1,\\
-            x^2, &amp; x\ge 1.
-          \end{cases}
-        </me>
-        <p>
-          Show that <m>f'(1)</m> exists and find its value.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We compute the right-hand and left-hand derivatives.
-        </p>
+<p>
+  We first consider what happens when a function has a vertical tangent.
+  Recall that the derivative at a point represents the slope of the tangent line.
+  Because vertical lines have undefined slope, the derivative cannot exist at any
+  point where the tangent line is vertical.
+</p>
 
-        <me>
-\begin{array}{rcl}
-\displaystyle\lim_{h\to 0^+}\frac{f(1+h)-f(1)}{h}
-\amp=\amp \displaystyle\lim_{h\to 0^+}\frac{(1+h)^2-1}{h}
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0^+}\frac{h(2+h)}{h}
-\ =\ 2,
-\end{array}
-        </me>
+<example xml:id="ex-derivative-fail-cuberoot">
+  <title>A Vertical Tangent</title>
 
-        <me>
-\begin{array}{rcl}
-\displaystyle\lim_{h\to 0^-}\frac{f(1+h)-f(1)}{h}
-\amp=\amp \displaystyle\lim_{h\to 0^-}\frac{(2(1+h)-1)-1}{h}
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0^-}\frac{2h}{h}
-\ =\ 2.
-\end{array}
-        </me>
+  <statement>
+    <p>
+      Consider the function <m>f(x)=\sqrt[3]{x}</m>, which we analyzed previously in
+      <xref ref="ex-derivative-cuberoot"/>.
+      Show that <m>f</m> has a
+      vertical tangent at <m>x=0</m>.
+    </p>
+  </statement>
 
-        <p>
-          Since the one-sided derivatives agree, <m>f'(1)=2</m>.
-        </p>
-      </solution>
-    </example>
+  <solution>
+    <p>
+      From <xref ref="ex-derivative-cuberoot"/>, the derivative of
+      <m>f(x)=\sqrt[3]{x}</m> is
+    </p>
 
-    <example xml:id="ex-corner-abs">
-      <title>A Corner</title>
-      <statement>
-        <p>
-          Consider <m>g(x)=|x|</m>. Explain why <m>g'(0)</m> does not exist.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          For <m>x&gt;0</m>, <m>|x|=x</m>, so the slope near 0 from the right is 1. For <m>x&lt;0</m>, <m>|x|=-x</m>,
-          so the slope near 0 from the left is <m>-1</m>. The left-hand and right-hand derivatives are not equal, so
-          the derivative at 0 does not exist. Graphically, the curve has a corner at the origin.
-        </p>
-      </solution>
-    </example>
+    <me>
+      \displaystyle f'(a)=\frac{1}{3(\sqrt[3]{a})^2}.
+    </me>
 
-    <example xml:id="ex-vertical-tangent-cuberoot">
-      <title>A Vertical Tangent</title>
-      <statement>
-        <p>
-          Consider <m>h(x)=\sqrt[3]{x}</m>. Explain why the derivative at <m>x=0</m> fails to exist as a finite number.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          From the derivative function computed earlier,
-          <m>\displaystyle h'(x)=\frac{1}{3(\sqrt[3]{x})^2}</m>.
-          As <m>x\to 0</m>, the denominator approaches 0, so the slopes become unbounded.
-          Graphically, the curve has a vertical tangent at the origin, so there is no finite tangent slope at <m>x=0</m>.
-        </p>
-      </solution>
-    </example>
+    <p>
+      Trying to substitute in <m>a=0</m>, the denominator
+      <m>(\sqrt[3]{a})^2</m> yields <m>0</m>, causing the derivative
+      <m>f'(x)</m> to grow without bound like we saw in <xref ref="ssec-inf-limits">our section on infinite limits</xref>.
+      In other words, the slopes of the tangent lines become arbitrarily large in magnitude.
+    </p>
 
-    <example xml:id="ex-discontinuous-not-differentiable">
-      <title>A Discontinuity</title>
-      <statement>
-        <p>
-          Suppose <m>p(x)</m> has a jump discontinuity at <m>x=a</m>. Explain why <m>p'(a)</m> cannot exist.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          If <m>p'(a)</m> existed, then <m>p</m> would be differentiable at <m>a</m>, and differentiability forces continuity.
-          But a jump discontinuity means <m>p</m> is not continuous at <m>a</m>. Therefore <m>p'(a)</m> cannot exist.
-        </p>
-      </solution>
-    </example>
+    <p>
+      Graphically, this behavior appears as the tangent lines becoming steeper and steeper
+      near <m>x=0</m>, eventually approaching a vertical line.
+      Since vertical lines have undefined slope, the derivative does not exist at
+      <m>x=0</m>.
+    </p>
+
+
+      <figure>
+<caption>
+  Graph of <m>f(x)=\sqrt[3]{x}</m> near <m>x=0</m>, showing a vertical tangent line at the origin
+  where the slope is undefined.
+</caption>
+        <image width="100%" source="images/cubeRootAt0.png">
+<shortdescription>
+  Graph of the cube root function near the origin.
+  The curve becomes very steep as it approaches zero.
+  A vertical line is drawn at zero to represent the tangent line at that point.
+  Because the tangent line is vertical, its slope is undefined and the derivative does not exist there.
+</shortdescription>
+        </image>
+      </figure>
+
+    <p>
+      Therefore, <m>f(x)=\sqrt[3]{x}</m> is not differentiable at <m>x=0</m>
+      due to the presence of a vertical tangent line.
+    </p>
+  </solution>
+</example>
+
+
+<p>
+  Next we consider two other common ways differentiability can fail: corners and discontinuities.
+  In these situations, it is helpful to introduce <emph>right-hand</emph> and <emph>left-hand</emph> derivatives,
+  defined using one-sided limits in the same spirit as one-sided limits for functions.
+  These allow us to determine whether the derivative exists by comparing the slopes approaching
+  a point from the right and from the left.
+</p>
+
+<definition xml:id="def-right-derivative">
+  <title>Right-Hand Derivative</title>
+  <statement>
+    <p>
+      Let <m>f</m> be a function and let <m>a</m> be a point in its domain.
+      The <term>right-hand derivative</term> of <m>f</m> at <m>x=a</m> is
+    </p>
+    <me>
+      \displaystyle f'(a^+)=\lim_{h\to 0^+}\frac{f(a+h)-f(a)}{h},
+    </me>
+    <p>
+      provided this limit exists.
+    </p>
+  </statement>
+</definition>
+
+<definition xml:id="def-left-derivative">
+  <title>Left-Hand Derivative</title>
+  <statement>
+    <p>
+      Let <m>f</m> be a function and let <m>a</m> be a point in its domain.
+      The <term>left-hand derivative</term> of <m>f</m> at <m>x=a</m> is
+    </p>
+    <me>
+      \displaystyle f'(a^-)=\lim_{h\to 0^-}\frac{f(a+h)-f(a)}{h},
+    </me>
+    <p>
+      provided this limit exists.
+    </p>
+  </statement>
+</definition>
+
+<remark xml:id="rem-left-right-derivative">
+  <p>
+    Remember that the derivative is defined as a limit.
+    A two-sided limit exists only when the corresponding one-sided limits both exist and agree.
+    Therefore, <m>f</m> is differentiable at <m>x=a</m> only if both
+    <m>f'(a^-)</m> and <m>f'(a^+)</m> exist and satisfy
+    <m>f'(a^-)=f'(a^+)</m>.
+    If the left-hand and right-hand derivatives do not agree, then the derivative
+    <m>f'(a)</m> does not exist.
+  </p>
+</remark>
+
+<example xml:id="ex-absvalue-not-differentiable">
+  <title>A Corner</title>
+
+  <statement>
+    <p>
+      Show that the function <m>f(x)=|x|</m> is not differentiable at <m>x=0</m>
+      by computing the left-hand and right-hand derivatives at that point.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      We compute the one-sided derivatives at <m>a=0</m>.
+      First note that <m>f(0)=|0|=0</m>.
+    </p>
+
+    <p>
+      To evaluate the limits, we recall the definition of absolute value
+      from <xref ref="def-absolute-value"/>.
+      This definition tells us how <m>|h|</m> behaves depending on whether
+      <m>h</m> is positive or negative.
+    </p>
+
+
+    <p>
+      The right-hand derivative is
+    </p>
+
+    <me>
+      \displaystyle f'(0^+)
+      =\lim_{h\to 0^+}\frac{f(0+h)-f(0)}{h}
+      =\lim_{h\to 0^+}\frac{|h|}{h}.
+    </me>
+
+    <p>
+      For <m>h&gt;0</m>, we have <m>|h|=h</m>, so
+    </p>
+
+    <me>
+      \displaystyle f'(0^+)=\lim_{h\to 0^+}\frac{h}{h}=1.
+    </me>
+
+    <p>
+      The left-hand derivative is
+    </p>
+
+    <me>
+      \displaystyle f'(0^-)
+      =\lim_{h\to 0^-}\frac{f(0+h)-f(0)}{h}
+      =\lim_{h\to 0^-}\frac{|h|}{h}.
+    </me>
+
+    <p>
+      For <m>h&lt;0</m>, we have <m>|h|=-h</m>, so
+    </p>
+
+    <me>
+      \displaystyle f'(0^-)=\lim_{h\to 0^-}\frac{-h}{h}=-1.
+    </me>
+
+    <p>
+      Since <m>f'(0^-)\neq f'(0^+)</m>, the derivative at <m>x=0</m> does not exist.
+      This corresponds graphically to a sharp corner at the origin,
+      where the slopes approaching from the left and right are different.
+    </p>
+  </solution>
+</example>
+
+
+
+<p>
+  The function <m>f(x)=|x|</m> is continuous at <m>x=0</m>,
+  yet it is not differentiable there because of a sharp corner.
+  Next, we examine a case where the function is not even continuous.
+  In this situation, the derivative must fail to exist.
+</p>
+
+
+<example xml:id="ex-derivative-fail-discontinuous">
+  <title>A Discontinuity</title>
+
+  <statement>
+    <p>
+      Consider the function
+    </p>
+    <me>
+      f(x)=
+      \begin{cases}
+        1, &amp; \text{if } x&lt;2, \\
+        3x-1, &amp; \text{if } x\ge 2.
+      \end{cases}
+    </me>
+    <p>
+      Determine whether <m>f</m> is differentiable at <m>x=2</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Using the definitions of <xref ref="def-left-derivative"/> and
+      <xref ref="def-right-derivative"/>, we compute:
+    </p>
+
+    <p>
+      The left-hand derivative at <m>x=2</m> is
+    </p>
+
+    <me>
+      \displaystyle f'(2^-)
+      =\lim_{h\to 0^-}\frac{f(2+h)-f(2)}{h}
+      =\lim_{h\to 0^-}\frac{1-5}{h}.
+    </me>
+
+    <p>
+      This limit does not exist because the numerator is constant while the denominator
+      approaches zero.
+      The right-hand derivative is
+    </p>
+
+    <me>
+      \displaystyle f'(2^+)
+      =\lim_{h\to 0^+}\frac{(3(2+h)-1)-5}{h}
+      =\lim_{h\to 0^+}\frac{3h}{h}=3.
+    </me>
+
+    <p>
+      Since the one-sided derivatives do not both exist and agree,
+      the derivative <m>f'(2)</m> does not exist.
+    </p>
+  </solution>
+</example>
+
+
+<p>
+  In all of the situations we have examined so far, differentiability has required
+  the function to behave continuously at the point in question.
+  This relationship between differentiability and continuity is fundamental
+  and can be stated precisely as a theorem.
+</p>
+
   </subsection>
 
   <subsection xml:id="ssec-diff-implies-continuity">
