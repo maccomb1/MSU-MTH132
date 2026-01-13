@@ -41,7 +41,7 @@
     <p>
       Here <m>\Delta x</m> is a change in the input, and <m>\Delta f</m> is the corresponding change in the output:
       <m>\Delta x=h</m> and <m>\Delta f=f(x+h)-f(x)</m>.
-      The notation <m>\displaystyle \frac{df}{dx}</m> does <emph>not</emph> literally mean “a quotient of two tiny numbers.”
+      The notation <m>\displaystyle \frac{df}{dx}</m> does <em>not</em> literally mean “a quotient of two tiny numbers.”
       It is a single symbol that represents a limit.
     </p>
 
@@ -484,19 +484,19 @@ The diagram visually illustrates how the change in area is approximately proport
       <statement>
         <ul>
           <li>
-            <emph>Sum Rule:</emph> <m>\displaystyle (f(x)+g(x))'=f'(x)+g'(x)</m>.
+            <em>Sum Rule:</em> <m>\displaystyle (f(x)+g(x))'=f'(x)+g'(x)</m>.
           </li>
           <li>
-            <emph>Difference Rule:</emph> <m>\displaystyle (f(x)-g(x))'=f'(x)-g'(x)</m>.
+            <em>Difference Rule:</em> <m>\displaystyle (f(x)-g(x))'=f'(x)-g'(x)</m>.
           </li>
           <li>
-            <emph>Constant Multiple Rule:</emph> <m>\displaystyle (c\,f(x))'=c\,f'(x)</m> for any constant <m>c</m>.
+            <em>Constant Multiple Rule:</em> <m>\displaystyle (c\,f(x))'=c\,f'(x)</m> for any constant <m>c</m>.
           </li>
           <li>
-            <emph>Product Rule:</emph> <m>\displaystyle (f(x)g(x))'=f'(x)g(x)+f(x)g'(x)</m>.
+            <em>Product Rule:</em> <m>\displaystyle (f(x)g(x))'=f'(x)g(x)+f(x)g'(x)</m>.
           </li>
           <li>
-            <emph>Quotient Rule:</emph>
+            <em>Quotient Rule:</em>
             <m>\displaystyle \left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}</m>, where <m>g(x)\neq 0</m>.
           </li>
         </ul>
@@ -808,95 +808,117 @@ These topics are covered in more detail in MTH 320.
 
       </introduction>
 
-      <!-- Notation and meaning -->
+<exercise xml:id="tf-deriv-rules-01">
+  <statement>
+    <p>
+      The symbols <m>f'(x)</m> and <m>\displaystyle \frac{df}{dx}</m>
+      always represent the same quantity.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Both notations represent the derivative of <m>f</m> with respect to <m>x</m>.
+      In other words, <m>f'(x)=\frac{df}{dx}</m>.
+      (They are two different notational conventions for the same derivative.)
+    </p>
+  </solution>
+</exercise>
 
-      <exercise xml:id="tf-deriv-rules-01">
-        <statement>
-          <p>
-            The symbols <m>f'(x)</m> and <m>\displaystyle \frac{df}{dx}</m>
-            always represent the same quantity.
-          </p>
-        </statement>
-      </exercise>
+<exercise xml:id="tf-deriv-rules-04">
+  <statement>
+    <p>
+      If <m>f(x)=7^\pi</m>, then <m>f'(x)=0</m> for all <m>x</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> The expression <m>7^\pi</m> is a constant (it does not depend on <m>x</m>),
+      so <m>f'(x)=0</m> for all <m>x</m>.
+    </p>
+  </solution>
+</exercise>
 
+<exercise xml:id="tf-deriv-rules-05">
+  <statement>
+    <p>
+      If <m>f(x)=kx</m>, then <m>f'(x)=k</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Using the constant multiple rule and <m>\frac{d}{dx}(x)=1</m>,
+      we get <m>f'(x)=\frac{d}{dx}(kx)=k\cdot 1=k</m>.
+    </p>
+  </solution>
+</exercise>
 
+<exercise xml:id="tf-deriv-rules-06">
+  <statement>
+    <p>
+      If <m>f(x)=\dfrac{1}{\sqrt[3]{x^2}}</m>, then <m>f'(x)=-\tfrac23 x^{-5/3}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Rewrite
+      <m>\displaystyle f(x)=\frac{1}{\sqrt[3]{x^2}}=(x^2)^{-1/3}=x^{-2/3}</m>
+      (where defined). Then apply the power rule:
+      <m>\displaystyle f'(x)=\left(x^{-2/3}\right)'=-\frac{2}{3}x^{-5/3}</m>.
+    </p>
+  </solution>
+</exercise>
 
-      <!-- Basic derivatives -->
-
-      <exercise xml:id="tf-deriv-rules-04">
-        <statement>
-          <p>
-            If <m>f(x)=7^\pi</m>, then <m>f'(x)=0</m> for all <m>x</m>.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="tf-deriv-rules-05">
-        <statement>
-          <p>
-            If <m>f(x)=kx</m>, then <m>f'(x)=k</m>.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="tf-deriv-rules-06">
-        <statement>
-          <p>
-            If <m>f(x)=\dfrac{1}{\sqrt[3]{x^2}}</m>, then <m>f'(x)=-\tfrac23 x^{-5/3}</m>.
-          </p>
-        </statement>
-      </exercise>
-
-
-
-
-
-      <!-- Product and quotient rules -->
-
-      <exercise xml:id="tf-deriv-rules-11">
-        <statement>
-          <p>
-            If <m>f'(2)=3</m> and <m>h(x)=x^2f(x)</m> then <m>h'(2)=12</m>.
-          </p>
-        </statement>
-      </exercise>
-
-
-
-      <exercise xml:id="tf-deriv-rules-14">
-        <statement>
-          <p>
-            It is always valid to simplify a quotient algebraically
-            before differentiating.
-          </p>
-        </statement>
-      </exercise>
-
-   
-
-
-
-      <!-- Higher derivatives -->
-
-      <exercise xml:id="tf-deriv-rules-18">
-        <statement>
-          <p>
-            If <m>V(x)</m> represents velocity,
-            then <m>V'(x)</m> represents acceleration.
-          </p>
-        </statement>
-      </exercise>
-
+<exercise xml:id="tf-deriv-rules-11">
+  <statement>
+    <p>
+      If <m>f'(2)=3</m> and <m>h(x)=x^2f(x)</m> then <m>h'(2)=12</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> By the Product Rule,
+      <m>h'(x)=(x^2)'f(x)+x^2f'(x)=2x\,f(x)+x^2f'(x)</m>.
+      Evaluating at <m>x=2</m> gives
+      <m>h'(2)=4f(2)+4f'(2)=4f(2)+12</m>.
+      Since <m>f(2)</m> is not given, <m>h'(2)</m> cannot be determined from the information provided,
+      and it is not necessarily <m>12</m>.
+    </p>
+  </solution>
+</exercise>
 
 
-      <exercise xml:id="tf-deriv-rules-20">
-        <statement>
-          <p>
-            The notation <m>f'''(x)</m> and <m>f^{(3)}(x)</m>
-            represent the same function.
-          </p>
-        </statement>
-      </exercise>
+<exercise xml:id="tf-deriv-rules-18">
+  <statement>
+    <p>
+      If <m>V(t)</m> represents velocity (where <m>t</m> is a time variable),
+      then <m>V'(t)</m> represents acceleration.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> When velocity is given as a function of time <m>t</m>,
+      its derivative with respect to time,
+      <m>V'(t)=\dfrac{dV}{dt}</m>,
+      measures the rate of change of velocity.
+      By definition, this rate of change is acceleration.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-deriv-rules-20">
+  <statement>
+    <p>
+      The notation <m>f'''(x)</m> and <m>f^{(3)}(x)</m>
+      represent the same function.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Both notations mean the third derivative of <m>f</m> with respect to <m>x</m>.
+    </p>
+  </solution>
+</exercise>
+
 
     </exercisegroup>
 
@@ -918,9 +940,9 @@ These topics are covered in more detail in MTH 320.
 \hline
 x &amp; A(x) &amp; A'(x) \\
 \hline
-1 &amp; 2 &amp; 3 \\
+1 &amp; 7 &amp; -3 \\
 \hline
-4 &amp; -5 &amp; 6 \\
+4 &amp; -2 &amp; 5 \\
 \hline
 \end{array}
 </me>
@@ -936,8 +958,8 @@ x &amp; A(x) &amp; A'(x) \\
     <image source="images/B-pieceLinear.png" width="100%">
 <shortdescription>
   Graph of a piecewise linear function B(x).
-  The graph consists of a line segment increasing from the point (0, −1) to (2, 3),
-  followed by a line segment decreasing from (2, 3) to (5, 0).
+  The graph consists of a line segment increasing from the point (0, 2) to (2, 4),
+  followed by a line segment decreasing from (2, 4) to (5, 1).
   The two segments meet at a sharp corner at x = 2.
 </shortdescription>
     </image>
@@ -946,13 +968,93 @@ x &amp; A(x) &amp; A'(x) \\
 </sidebyside>
 </introduction>
 
-      <exercise xml:id="tf-deriv-rules-16">
-        <statement>
-          <p>
-            If <m>f(x)=\dfrac{1}{\sqrt[3]{x^2}}</m>, then <m>f'(x)=-\tfrac23 x^{-5/3}</m>.
-          </p>
-        </statement>
-      </exercise>
+<exercise xml:id="tf-deriv-rules-21">
+  <statement>
+    <p>
+      If <m>f(x)=A(x)+B(x)</m>, then <m>f'(1)=-2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> By the Sum Rule,
+      <m>f'(1)=A'(1)+B'(1)</m>.
+      From the table, <m>A'(1)=-3</m>.
+      From the graph, <m>B</m> is increasing with slope <m>1</m> at <m>x=1</m>,
+      so <m>B'(1)=1</m>.
+    </p>
+    <p>
+      Therefore,
+      <m>f'(1)=-3+1=-2</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-deriv-rules-24">
+  <statement>
+    <p>
+      If <m>f(x)=3B(x)</m>, then <m>f'(4)=6</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> By the Constant Multiple Rule,
+      <m>f'(x)=3B'(x)</m>.
+      From the graph, <m>B</m> is decreasing with slope <m>-1</m> at <m>x=4</m>,
+      so <m>B'(4)=-1</m>.
+    </p>
+    <p>
+      Hence,
+      <m>f'(4)=3(-1)=-3</m>, not <m>6</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-deriv-rules-22">
+  <statement>
+    <p>
+      If <m>f(x)=x^2A(x)</m>, then <m>f'(1)=6</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> Use the Product Rule:
+      <m>f'(x)=2xA(x)+x^2A'(x)</m>.
+      From the table, <m>A(1)=7</m> and <m>A'(1)=-3</m>.
+    </p>
+    <p>
+      Evaluating at <m>x=1</m>,
+      <m>f'(1)=2(1)(7)+1^2(-3)=14-3=11</m>,
+      not <m>6</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-deriv-rules-23">
+  <statement>
+    <p>
+      If <m>f(x)=\dfrac{A(x)}{B(x)}</m>, then <m>f'(4)=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Apply the Quotient Rule:
+      <m>
+        f'(x)=\dfrac{A'(x)B(x)-A(x)B'(x)}{B(x)^2}.
+      </m>
+      From the table, <m>A(4)=-2</m> and <m>A'(4)=5</m>.
+      From the graph, <m>B(4)=2</m> and <m>B'(4)=-1</m>.
+    </p>
+    <p>
+      Substituting,
+      <m>
+        f'(4)=\dfrac{(5)(2)-(-2)(-1)}{2^2}
+        =\dfrac{10-2}{4}
+        =\dfrac{8}{4}
+        =2,
+      </m>.
+    </p>
+  </solution>
+</exercise>
 
 
 
