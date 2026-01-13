@@ -50,14 +50,21 @@
     </p>
 
     <me>
-      \displaystyle \frac{d}{dx}(x^2)=2x.
+      \displaystyle \frac{d}{dx}(x^2)= 2x.
     </me>
 
-    <p>
-      To emphasize the difference between “the derivative function” and “the derivative at a point,” we write
-      <m>\displaystyle f'(a)=\left.\frac{df}{dx}\right|_{x=a}</m>.
-      You may also see the notation <m>Df</m> for the derivative of <m>f</m>, so that <m>f'(x)=Df(x)</m>.
-    </p>
+<remark xml:id="rem-derivative-notation">
+  <p>
+    To emphasize the distinction between the <em>derivative function</em> and the
+    <em>derivative at a specific point</em>, we often write
+    <m>\displaystyle f'(a)=\left.\frac{df}{dx}\right|_{x=a}</m>.
+    This notation highlights that the derivative function is evaluated at
+    <m>x=a</m>.
+    You may also encounter the notation <m>Df</m> for the derivative of <m>f</m>,
+    so that <m>f'(x)=Df(x)</m>.
+  </p>
+</remark>
+
   </subsection>
 
   <subsection xml:id="basic-derivatives">
@@ -74,11 +81,11 @@
     <ul>
       <li>
         If <m>f(x) = c</m> is a constant function, then
-        <m>\displaystyle \frac{d}{dx}(c) = 0</m>.
+        <m>\displaystyle \frac{d}{dx}(c) = (c)'= 0</m>.
       </li>
       <li>
         If <m>f(x) = x</m>, then
-        <m>\displaystyle \frac{d}{dx}(x) = 1</m>.
+        <m>\displaystyle \frac{d}{dx}(x) = (x)'= 1</m>.
       </li>
     </ul>
   </statement>
@@ -161,7 +168,7 @@
       If <m>f(x) = x^p</m>, then
     </p>
     <me>
-      \displaystyle \frac{d}{dx}(x^p) = p x^{p-1}.
+      \displaystyle \frac{d}{dx}(x^p) = (x^p)'= p x^{p-1}.
     </me>
   </statement>
 <proof>
@@ -523,42 +530,72 @@ These topics are covered in more detail in MTH 320.
     </remark>
 
    
-    <example xml:id="ex-derivative-sqrtx">
-      <statement>
-        <p>
-          Compute <m>\displaystyle \frac{d}{dx}(\sqrt{x})</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Write <m>\sqrt{x}=x^{1/2}</m> and use the power rule.
-        </p>
+<example xml:id="ex-derivative-basic-power-constant">
 
-        <me>
-\begin{array}{rcl}
-\displaystyle \frac{d}{dx}(\sqrt{x})
-\amp=\amp \displaystyle \frac{d}{dx}(x^{1/2})
-\\[0.8em]
-\amp=\amp \displaystyle \frac{1}{2}x^{-1/2}
-\\[0.8em]
-\amp=\amp \displaystyle \frac{1}{2\sqrt{x}}.
-\end{array}
-        </me>
-      </solution>
-    </example>
+  <introduction>
+    <p>
+      Compute the following derivatives.
+    </p>
+  </introduction>
 
-    <example xml:id="ex-derivative-constant">
-      <statement>
-        <p>
-          Compute <m>\displaystyle \frac{d}{dx}(\sqrt{10})</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          <m>\sqrt{10}</m> is a constant, so its derivative is <m>0</m>.
-        </p>
-      </solution>
-    </example>
+  <task>
+    <statement>
+      <p>
+        Compute <m>\displaystyle \frac{d}{dx}(3\sqrt{x})</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        First rewrite the square root using exponents and apply the constant multiple rule.
+      </p>
+
+      <md>
+        <mrow>
+          \frac{d}{dx}(3\sqrt{x})
+          \amp =
+          \frac{d}{dx}\!\left(3x^{1/2}\right)
+        </mrow>
+
+        <mrow>
+          \amp =
+          3\frac{d}{dx}\!\left(x^{1/2}\right)
+        </mrow>
+
+        <mrow>
+          \amp =
+          3\left(\frac{1}{2}x^{-1/2}\right)
+        </mrow>
+
+        <mrow>
+          \amp =
+          \frac{3}{2}x^{-1/2}
+        </mrow>
+
+        <mrow>
+          \amp =
+          \frac{3}{2\sqrt{x}}.
+        </mrow>
+      </md>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Compute <m>\displaystyle \frac{d}{dx}(3\sqrt{10})</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The quantity <m>3\sqrt{10}</m> is a constant, so its derivative is <m>0</m>.
+      </p>
+    </solution>
+  </task>
+
+</example>
+
 
     <example xml:id="ex-product-rule-algebra">
       <statement>
@@ -714,24 +751,27 @@ These topics are covered in more detail in MTH 320.
       </solution>
     </example>
 
-    <p>
-      Higher derivatives continue in the same way.
-      The third derivative of <m>f</m> is denoted <m>f'''(x)</m>,
-      the fourth derivative is denoted <m>f^{(4)}(x)</m>,
-      and in general the <m>n</m>th derivative is written <m>f^{(n)}(x)</m>.
-    </p>
-    
-    <p>
-      In Leibniz notation, these are written
-      <m>\displaystyle \frac{d^3f}{dx^3}</m>,
-      <m>\displaystyle \frac{d^4f}{dx^4}</m>, and
-      <m>\displaystyle \frac{d^nf}{dx^n}</m>.
-    </p>
+<remark xml:id="rem-higher-derivatives">
+  <p>
+    Higher derivatives are defined by repeatedly differentiating.
+    The third derivative of <m>f</m> is denoted <m>f'''(x)</m>,
+    the fourth derivative is denoted <m>f^{(4)}(x)</m>,
+    and in general the <m>n</m>th derivative is written <m>f^{(n)}(x)</m>.
+  </p>
 
-    <p>
-      As the order of the derivative increases, prime notation becomes cumbersome,
-      so the superscript notation <m>f^{(n)}(x)</m> is preferred for higher derivatives.
-    </p>
+  <p>
+    In Leibniz notation, these derivatives are written
+    <m>\displaystyle \frac{d^3f}{dx^3}</m>,
+    <m>\displaystyle \frac{d^4f}{dx^4}</m>, and
+    <m>\displaystyle \frac{d^nf}{dx^n}</m>.
+  </p>
+
+  <p>
+    As the order of the derivative increases, prime notation becomes cumbersome,
+    so the superscript notation <m>f^{(n)}(x)</m> is typically preferred for higher derivatives.
+  </p>
+</remark>
+
 
   </subsection>
 
@@ -750,5 +790,179 @@ These topics are covered in more detail in MTH 320.
   </p>
 
 </subsection>
+
+
+<subsection xml:id="ssec-derivative-rules-tf">
+  <title>Practice: True/False</title>
+
+  <exercises xml:id="exercises-derivative-rules-tf">
+    <exercisegroup>
+      <title>True/False Questions</title>
+
+      <introduction>
+        <p>
+          Determine whether each statement is true or false.
+          Justify your answer using derivative rules or interpretation.
+        </p>
+
+
+      </introduction>
+
+      <!-- Notation and meaning -->
+
+      <exercise xml:id="tf-deriv-rules-01">
+        <statement>
+          <p>
+            The symbols <m>f'(x)</m> and <m>\displaystyle \frac{df}{dx}</m>
+            always represent the same quantity.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+      <!-- Basic derivatives -->
+
+      <exercise xml:id="tf-deriv-rules-04">
+        <statement>
+          <p>
+            If <m>f(x)=7^\pi</m>, then <m>f'(x)=0</m> for all <m>x</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="tf-deriv-rules-05">
+        <statement>
+          <p>
+            If <m>f(x)=kx</m>, then <m>f'(x)=k</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="tf-deriv-rules-06">
+        <statement>
+          <p>
+            If <m>f(x)=\dfrac{1}{\sqrt[3]{x^2}}</m>, then <m>f'(x)=-\tfrac23 x^{-5/3}</m>.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+
+
+      <!-- Product and quotient rules -->
+
+      <exercise xml:id="tf-deriv-rules-11">
+        <statement>
+          <p>
+            If <m>f'(2)=3</m> and <m>h(x)=x^2f(x)</m> then <m>h'(2)=12</m>.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+      <exercise xml:id="tf-deriv-rules-14">
+        <statement>
+          <p>
+            It is always valid to simplify a quotient algebraically
+            before differentiating.
+          </p>
+        </statement>
+      </exercise>
+
+   
+
+
+
+      <!-- Higher derivatives -->
+
+      <exercise xml:id="tf-deriv-rules-18">
+        <statement>
+          <p>
+            If <m>V(x)</m> represents velocity,
+            then <m>V'(x)</m> represents acceleration.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+      <exercise xml:id="tf-deriv-rules-20">
+        <statement>
+          <p>
+            The notation <m>f'''(x)</m> and <m>f^{(3)}(x)</m>
+            represent the same function.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercisegroup>
+
+
+
+
+
+  <exercisegroup>
+      <title>More True/False Questions</title>
+
+      <introduction>
+<p>
+  For this set of problems let <m>A(x)</m> and <m>B(x)</m> be differentiable functions.
+  Values of <m>A</m> are given in the table below, and <m>B</m> is shown in the accompanying graph.
+</p>
+
+
+<sidebyside widths="50% 50%">
+ 
+    <figure xml:id="fig-A-graph">
+    <caption>
+      Graph of <m>B(x)</m>.
+    </caption>
+<me>
+\begin{array}{|c|c|c|}
+\hline
+x &amp; A(x) &amp; A'(x) \\
+\hline
+1 &amp; 2 &amp; 3 \\
+\hline
+4 &amp; -5 &amp; 6 \\
+\hline
+\end{array}
+</me>
+  </figure>
+
+  <figure xml:id="fig-B-graph">
+    <caption>
+      Graph of <m>B(x)</m>.
+    </caption>
+    <image source="images/B-graph.png" width="100%">
+      <shortdescription>
+        Graph of the function B showing its behavior over an interval.
+        The graph is used to estimate values of B and its derivative.
+      </shortdescription>
+    </image>
+  </figure>
+
+</sidebyside>
+</introduction>
+
+      <exercise xml:id="tf-deriv-rules-16">
+        <statement>
+          <p>
+            If <m>f(x)=\dfrac{1}{\sqrt[3]{x^2}}</m>, then <m>f'(x)=-\tfrac23 x^{-5/3}</m>.
+          </p>
+        </statement>
+      </exercise>
+
+
+
+</exercisegroup>
+
+  </exercises>
+</subsection>
+
+
 
 </section>
