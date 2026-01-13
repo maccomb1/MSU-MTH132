@@ -909,18 +909,11 @@ These topics are covered in more detail in MTH 320.
 
       <introduction>
 <p>
-  For this set of problems let <m>A(x)</m> and <m>B(x)</m> be differentiable functions.
-  Values of <m>A</m> are given in the table below, and <m>B</m> is shown in the accompanying graph.
+  For this set of problems let <m>A(x)</m> be a differentiable function.
+  Values of <m>A</m> are given in the table below, and <m>B</m> is piecewise linear function shown in the accompanying graph.
 </p>
-
-
-<sidebyside widths="50% 50%">
- 
-    <figure xml:id="fig-A-graph">
-    <caption>
-      Graph of <m>B(x)</m>.
-    </caption>
-<me>
+<p>
+    <me>
 \begin{array}{|c|c|c|}
 \hline
 x &amp; A(x) &amp; A'(x) \\
@@ -931,17 +924,22 @@ x &amp; A(x) &amp; A'(x) \\
 \hline
 \end{array}
 </me>
-  </figure>
+</p>
+
+
+<sidebyside widths="60%">
 
   <figure xml:id="fig-B-graph">
     <caption>
-      Graph of <m>B(x)</m>.
-    </caption>
-    <image source="images/B-graph.png" width="100%">
-      <shortdescription>
-        Graph of the function B showing its behavior over an interval.
-        The graph is used to estimate values of B and its derivative.
-      </shortdescription>
+      Graph of <m>B(x)</m>,  a piecewise linear function composed of two line segments.
+</caption>
+    <image source="images/B-pieceLinear.png" width="100%">
+<shortdescription>
+  Graph of a piecewise linear function B(x).
+  The graph consists of a line segment increasing from the point (0, −1) to (2, 3),
+  followed by a line segment decreasing from (2, 3) to (5, 0).
+  The two segments meet at a sharp corner at x = 2.
+</shortdescription>
     </image>
   </figure>
 
