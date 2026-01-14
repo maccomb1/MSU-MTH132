@@ -339,9 +339,9 @@
     </p>
 
     <ul>
-      <li><emph>Vertical Tangent:</emph> slopes become infinite (unbounded).</li>
-      <li><emph>Corner:</emph> the left-hand and right-hand slopes are different.</li>
-      <li><emph>Discontinuity:</emph> if a function is not continuous at a point, then it cannot be differentiable there.</li>
+      <li><em>Vertical Tangent:</em> slopes become infinite (unbounded).</li>
+      <li><em>Corner:</em> the left-hand and right-hand slopes are different.</li>
+      <li><em>Discontinuity:</em> if a function is not continuous at a point, then it cannot be differentiable there.</li>
     </ul>
 
 <p>
@@ -413,7 +413,7 @@
 
 <p>
   Next we consider two other common ways differentiability can fail: corners and discontinuities.
-  In these situations, it is helpful to introduce <emph>right-hand</emph> and <emph>left-hand</emph> derivatives,
+  In these situations, it is helpful to introduce <em>right-hand</em> and <em>left-hand</em> derivatives,
   defined using one-sided limits in the same spirit as one-sided limits for functions.
   These allow us to determine whether the derivative exists by comparing the slopes approaching
   a point from the right and from the left.
@@ -894,10 +894,9 @@
 </subsection>
 
 
-  <subsection xml:id="ssec-derivative-practice-tf">
+   <exercises xml:id="exercises-derivative-defn-tf">
     <title>Practice / Study Problems</title>
 
-   <exercises xml:id="exercises-derivative-defn-tf">
   <exercisegroup>
     <title>Some True/False Problems</title>
     <introduction>
@@ -916,7 +915,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> We can calculate the derivative <m>f'(x)=2x</m>, so <m>f'(4)=8</m>, not 16.
+          <em>False.</em> We can calculate the derivative <m>f'(x)=2x</m>, so <m>f'(4)=8</m>, not 16.
         </p>
       </solution>
     </exercise>
@@ -930,7 +929,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> The derivative of a linear function is constant.
+          <em>False.</em> The derivative of a linear function is constant.
           Using the limit definition gives <m>f'(a)=3</m>, not <m>3a</m>.
         </p>
       </solution>
@@ -944,7 +943,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> For <m>x\neq 0</m> the derivative exists, and
+          <em>True.</em> For <m>x\neq 0</m> the derivative exists, and
           <m>f'(x)=-\dfrac{1}{x^2}</m>.
           This can be verified directly from the limit definition by combining the fractions
           and simplifying the difference quotient.
@@ -961,7 +960,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> Where the derivative exists, it equals the slope of the tangent line
+          <em>True.</em> Where the derivative exists, it equals the slope of the tangent line
           to the graph of <m>y=f(x)</m> at that point.
         </p>
       </solution>
@@ -976,7 +975,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> Many functions are differentiable on part of their domain but not everywhere,
+          <em>True.</em> Many functions are differentiable on part of their domain but not everywhere,
           for example at corners, discontinuities, or vertical tangents.
         </p>
       </solution>
@@ -991,7 +990,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> Differentiability requires both continuity and a well-defined tangent line.
+          <em>True.</em> Differentiability requires both continuity and a well-defined tangent line.
         </p>
       </solution>
     </exercise>
@@ -1004,7 +1003,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> A function can be continuous but not differentiable.
+          <em>False.</em> A function can be continuous but not differentiable.
           For example, <m>f(x)=|x|</m> is continuous at <m>x=0</m> but has a corner there, so <m>f'(0)</m> does not exist.
         </p>
       </solution>
@@ -1018,7 +1017,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> A positive derivative means tangent slopes are positive, which corresponds to increasing behavior.
+          <em>True.</em> A positive derivative means tangent slopes are positive, which corresponds to increasing behavior.
         </p>
       </solution>
     </exercise>
@@ -1032,7 +1031,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> By definition, <m>f'(a)</m> is the value of this limit.
+          <em>True.</em> By definition, <m>f'(a)</m> is the value of this limit.
           If the limit were infinite or did not exist, then <m>f'(a)</m> would be undefined.
         </p>
       </solution>
@@ -1047,7 +1046,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> A vertical tangent line has undefined slope.
+          <em>False.</em> A vertical tangent line has undefined slope.
           This corresponds to the derivative failing to exist (the slopes become unbounded), not to a derivative of zero.
         </p>
       </solution>
@@ -1062,7 +1061,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> Direct substitution often yields <m>\tfrac{0}{0}</m>,
+          <em>True.</em> Direct substitution often yields <m>\tfrac{0}{0}</m>,
           so we simplify the difference quotient (factor, combine fractions, use conjugates, identities) to evaluate the limit.
         </p>
       </solution>
@@ -1077,7 +1076,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> The limit <m>\displaystyle\lim_{h\to 0^+}\frac{f(a+h)-f(a)}{h}</m>
+          <em>True.</em> The limit <m>\displaystyle\lim_{h\to 0^+}\frac{f(a+h)-f(a)}{h}</m>
           uses <m>h&gt;0</m>, so <m>a+h&gt;a</m>.
         </p>
       </solution>
@@ -1092,7 +1091,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> The derivative <m>f'(a)</m> is a two-sided limit.
+          <em>True.</em> The derivative <m>f'(a)</m> is a two-sided limit.
           If the one-sided limits exist and agree, then the two-sided limit exists and equals their common value.
         </p>
       </solution>
@@ -1101,8 +1100,6 @@
   </exercisegroup>
 </exercises>
 
-
-  </subsection>
 
 
 </section>

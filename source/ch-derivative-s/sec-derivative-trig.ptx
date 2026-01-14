@@ -140,7 +140,7 @@ The derivative of <m>\sin(x)</m> visualized: the slope of the tangent line to <m
 
     <remark xml:id="rem-radians-warning">
       <p>
-        Again remember, the derivative formulas in this section are valid when <m>x</m> is measured in <emph>radians</emph>, not degrees.
+        Again remember, the derivative formulas in this section are valid when <m>x</m> is measured in <em>radians</em>, not degrees.
       </p>
     </remark>
 
@@ -415,6 +415,317 @@ The derivative of <m>\sin(x)</m> visualized: the slope of the tangent line to <m
   </p>
 
 </subsection>
+
+  <exercises xml:id="exercises-derivative-trig-tf">
+  <title>Practice: True/False</title>
+
+
+    <exercisegroup>
+      <title>True/False Questions</title>
+
+      <introduction>
+        <p>
+          Determine whether each statement is true or false.
+          Justify your answer.
+        </p>
+
+
+      </introduction>
+
+
+    <exercise xml:id="tf-deriv-trig-07">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}(\cos(x))=\sin(x)</m>.
+        </p>
+      </statement>
+    </exercise>
+
+
+    <exercise xml:id="tf-deriv-trig-02">
+      <statement>
+        <p>
+          If angles are measured in degrees, then <m>(\sin(x))'=\cos(x)</m>
+          still holds without modification.
+        </p>
+      </statement>
+    </exercise>
+
+
+    
+
+    
+
+
+
+  <exercise xml:id="tf-deriv-trig-comp-01">
+      <statement>
+        <p>
+          If <m>f(x)=\cos(x)\tan(x)</m>, then <m>f'(x)=\cos(x)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>True.</em> We can use either algebra or the Product Rule.
+          Since <m>\tan(x)=\dfrac{\sin(x)}{\cos(x)}</m> wherever it is defined,
+        </p>
+        <me>
+          f(x)=\cos(x)\tan(x)=\cos(x)\cdot\frac{\sin(x)}{\cos(x)}=\sin(x)
+        </me>
+        <p>
+          on the domain where <m>\tan(x)</m> is defined. Then
+          <m>f'(x)=(\sin(x))'=\cos(x)</m>.
+        </p>
+        <p>
+          Alternatively, using the Product Rule directly,
+        </p>
+        <me>
+          \begin{array}{rcl}
+            f'(x)
+            &amp;=&amp;
+            (\cos(x))'\tan(x)+\cos(x)(\tan(x))' \\[0.5em]
+            &amp;=&amp;
+            -\sin(x)\tan(x)+\cos(x)\sec^2(x) \\[0.5em]
+            &amp;=&amp;
+            -\sin(x)\dfrac{\sin(x)}{\cos(x)}+\cos(x)\dfrac{1}{\cos^2(x)} \\[0.5em]
+            &amp;=&amp;
+            =\dfrac{1-\sin^2(x)}{\cos(x)}
+            =\dfrac{\cos^2(x)}{\cos(x)}=\cos(x).
+          \end{array}
+        </me>
+      </solution>
+    </exercise>
+
+    <!-- 2. instantaneous rate of change at pi/2 -->
+
+    <exercise xml:id="tf-deriv-trig-comp-02">
+      <statement>
+        <p>
+          The instantaneous rate of change of <m>f(x)=x^2\sin(x)</m>
+          at <m>x=\dfrac{\pi}{2}</m> is <m>\pi</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>True.</em> The instantaneous rate of change at a point is the derivative at that point.
+          Use the Product Rule:
+        </p>
+        <me>
+          \begin{array}{rcl}
+            f'(x)
+            &amp;=&amp;
+            (x^2)'\sin(x)+x^2(\sin(x))' \\[0.5em]
+            &amp;=&amp;
+            2x\sin(x)+x^2\cos(x).
+          \end{array}
+        </me>
+        <p>
+          Evaluate at <m>x=\dfrac{\pi}{2}</m>:
+        </p>
+        <me>
+          \begin{array}{rcl}
+            f'\!\left(\dfrac{\pi}{2}\right)
+            &amp;=&amp;
+            2\cdot\dfrac{\pi}{2}\cdot\sin\!\left(\dfrac{\pi}{2}\right)
+            +\left(\dfrac{\pi}{2}\right)^2\cos\!\left(\dfrac{\pi}{2}\right) \\[0.5em]
+            &amp;=&amp;
+            \pi\cdot 1 + \dfrac{\pi^2}{4}\cdot 0 \\[0.5em]
+            &amp;=&amp;
+            \pi.
+          \end{array}
+        </me>
+        <p>
+          So the instantaneous rate of change at <m>x=\dfrac{\pi}{2}</m> is <m>\pi</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <!-- 3. sec(x)/tan(x) at 0 -->
+
+ <exercise xml:id="tf-deriv-trig-comp-03">
+  <statement>
+    <p>
+      The slope of the tangent line to <m>f(x)=\dfrac{\csc(x)}{\cot(x)}</m>
+      at <m>x=0</m> is <m>1</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      <em>False.</em> First rewrite <m>f(x)</m> in simpler form.
+      Since <m>\csc(x)=\dfrac{1}{\sin(x)}</m> and <m>\cot(x)=\dfrac{\cos(x)}{\sin(x)}</m>, we have
+    </p>
+
+    <me>
+      f(x)
+      =
+      \frac{\csc(x)}{\cot(x)}
+      =
+      \frac{\dfrac{1}{\sin(x)}}{\dfrac{\cos(x)}{\sin(x)}}
+      =
+      \frac{1}{\cos(x)}
+      =
+      \sec(x),
+    </me>
+
+    <p>
+      on any interval where the expressions are defined. Thus <m>f(x)=\sec(x)</m>.
+    </p>
+
+    <p>
+      Now differentiate:
+    </p>
+
+    <me>
+      f'(x) = (\sec(x))' = \sec(x)\tan(x).
+    </me>
+
+    <p>
+      Evaluate at <m>x=0</m>:
+    </p>
+
+    <me>
+      f'(0) = \sec(0)\tan(0) = 1 \cdot 0 = 0.
+    </me>
+
+    <p>
+      The slope is <m>0</m>, not <m>1</m>, so the statement is false.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-deriv-trig-31">
+  <statement>
+    <p>
+      Since <m>\displaystyle\frac{\sin(x)}{x}=1</m>, it follows that 
+      <m>\displaystyle \left(\frac{\sin(x)}{x}\right)'=0</m>.
+    </p>
+  </statement>
+<solution>
+  <p>
+    <em>False.</em> The equation <m>\sin(x)/x = 1</m> is <em>not</em> true for all <m>x</m>.
+    The expression equals <m>1</m> only in the limiting sense 
+    <m>\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}=1</m>, not as an identity.
+    Since <m>\sin(x)/x</m> is not a constant function, its derivative is not zero.
+    In fact, applying the Quotient Rule shows that 
+    <m>\left(\dfrac{\sin(x)}{x}\right)'</m> is nonzero for all <m>x\neq 0</m>.
+  </p>
+</solution>
+
+</exercise>
+
+
+
+
+<exercise xml:id="tf-trig-limits-01">
+  <statement>
+    <p>
+      <m>\displaystyle \lim_{x\to 0}\frac{\sin(x^2)}{x}=1</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> Rewrite as 
+      <m>\frac{\sin(x^2)}{x^2}\cdot x</m>.
+      Since <m>\sin(u)/u → 1</m> as <m>u→0</m>, the product becomes <m>1·0 = 0</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-trig-limits-02">
+  <statement>
+    <p>
+      <m>\displaystyle \lim_{x\to 0}\frac{\cos(x)}{x}=1</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> <m>\cos(x)/x</m> grows without bound as <m>x→0</m>.
+      The limit does not exist as a finite number.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-trig-limits-03">
+  <statement>
+    <p>
+      <m>\displaystyle \lim_{x\to 0}\frac{x}{\tan(3x)}=\dfrac13</m>.
+    </p>
+  </statement>
+<solution>
+  <p>
+    <em>True.</em> Rewrite the expression to introduce the standard limit 
+    <m>\displaystyle \lim_{u\to 0}\frac{\tan(u)}{u}=1</m>.
+  </p>
+
+  <md>
+    <mrow>
+      \lim_{x\to 0}\frac{x}{\tan(3x)}
+      \amp=
+      \lim_{x\to 0}\left(\frac{3x}{\tan(3x)}\cdot \frac{1}{3}\right)
+    </mrow>
+
+    <mrow>
+      \amp=
+      \left(\lim_{u\to 0}\frac{u}{\tan(u)}\right)\cdot \frac{1}{3}
+      \quad \text{(using the substitution } u=3x\text{)}
+    </mrow>
+
+    <mrow>
+      \amp=
+      1\cdot \frac{1}{3}
+    </mrow>
+
+    <mrow>
+      \amp=
+      \frac{1}{3}.
+    </mrow>
+  </md>
+
+  <p>
+    Therefore the statement is true.
+  </p>
+</solution>
+
+</exercise>
+
+
+
+<exercise xml:id="tf-trig-limits-06">
+  <statement>
+    <p>
+      <m>\displaystyle \lim_{x\to 0}\frac{\sin(5x)}{\sin(2x)}=\frac52</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Replace each term with <m>\sin(kx)/(kx)</m>:
+      <m>\frac{\sin(5x)}{5x}\cdot\frac{2x}{\sin(2x)}\cdot \frac52 → 1·1·\frac52</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-trig-limits-07">
+  <statement>
+    <p>
+      <m>\displaystyle \lim_{x\to 0}\frac{\cos(x)-1}{\sin(x)}=0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Use the identity 
+      <m>\cos(x)-1 = -2\sin^2(x/2)</m>.
+      Then the expression becomes 
+      <m>-2\sin(x/2)\cdot\frac{\sin(x/2)}{\sin(x)}</m>, which tends to <m>0</m>.
+    </p>
+  </solution>
+</exercise>
+
+
+
+      </exercisegroup>
+    </exercises>
+ 
 
 
 </section>

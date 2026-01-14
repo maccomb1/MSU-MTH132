@@ -486,7 +486,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> The average rate of change on <m>[2,5]</m> is
+      <em>True.</em> The average rate of change on <m>[2,5]</m> is
     </p>
     <me>
       \displaystyle \frac{f(5)-f(2)}{5-2}
@@ -506,7 +506,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> On <m>[a,b]</m>,
+      <em>True.</em> On <m>[a,b]</m>,
     </p>
     <me>
       \displaystyle \frac{f(b)-f(a)}{b-a}
@@ -529,7 +529,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True</emph> (for <m>h\neq 0</m>). Compute
+      <em>True</em> (for <m>h\neq 0</m>). Compute
     </p>
     <me>
       \displaystyle \frac{f(a+h)-f(a)}{(a+h)-a}
@@ -558,7 +558,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> By the definition of the slope of the tangent line,
+      <em>True.</em> By the definition of the slope of the tangent line,
     </p>
     <me>
       \displaystyle m=\lim_{h\to 0}\frac{f(3+h)-f(3)}{h}
@@ -589,7 +589,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> Using the definition,
+      <em>True.</em> Using the definition,
     </p>
     <me>
       \displaystyle m=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}
@@ -615,7 +615,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> Instantaneous velocity at <m>t=2</m> is defined by
+      <em>True.</em> Instantaneous velocity at <m>t=2</m> is defined by
     </p>
     <me>
       \displaystyle v=\lim_{h\to 0}\frac{f(2+h)-f(2)}{h}
@@ -654,7 +654,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>False.</emph> Compute
+      <em>False.</em> Compute
     </p>
     <me>
       \displaystyle \lim_{h\to 0}\frac{\sqrt{4+h}-2}{h}.
@@ -690,7 +690,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> The instantaneous rate of change is defined as a limit of average rates of change as
+      <em>True.</em> The instantaneous rate of change is defined as a limit of average rates of change as
       <m>h\to 0</m>.
       If two average rates from small values of <m>h</m> are close, that suggests the values are stabilizing,
       and the shared value is a reasonable estimate of the limiting value.
@@ -706,7 +706,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>False.</emph> A table provides approximate values of average velocity for small but nonzero time steps.
+      <em>False.</em> A table provides approximate values of average velocity for small but nonzero time steps.
       Unless we compute the actual limit, the value from the table is only an estimate of the instantaneous velocity.
     </p>
   </solution>
@@ -721,7 +721,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> Instantaneous velocity is the instantaneous rate of change of position.
+      <em>True.</em> Instantaneous velocity is the instantaneous rate of change of position.
       If <m>v&lt;0</m> at a moment, then position is decreasing at that moment, meaning the object is moving in the negative direction.
     </p>
   </solution>
@@ -736,7 +736,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> The slope of the secant line through <m>(a,f(a))</m> and <m>(a+h,f(a+h))</m> is
+      <em>True.</em> The slope of the secant line through <m>(a,f(a))</m> and <m>(a+h,f(a+h))</m> is
       <m>\dfrac{f(a+h)-f(a)}{h}</m>.
       The slope of the tangent line is defined as the limit of these secant slopes as <m>h\to 0</m>.
     </p>
@@ -752,7 +752,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>False.</emph> Secant slopes can increase as the second point approaches <m>a</m> and still approach a finite limit.
+      <em>False.</em> Secant slopes can increase as the second point approaches <m>a</m> and still approach a finite limit.
       For example, for <m>f(x)=x^2</m> at <m>a=0</m>, the secant slopes
       <m>\dfrac{f(h)-f(0)}{h}=\dfrac{h^2}{h}=h</m> increase as <m>h</m> increases, but as <m>h\to 0</m> the slopes approach <m>0</m>, which is finite.
     </p>
@@ -768,7 +768,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> The expression
+      <em>True.</em> The expression
       <m>\displaystyle\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}</m>
       is the slope of the tangent line at <m>x=a</m>, provided it exists.
       If that slope equals <m>0</m>, then the tangent line has slope <m>0</m>, which means it is horizontal.
@@ -785,7 +785,7 @@ the instantaneous velocity.
   </statement>
   <solution>
     <p>
-      <emph>True.</emph> The average rate of change depends only on endpoint values, but instantaneous rate of change depends on local behavior.
+      <em>True.</em> The average rate of change depends only on endpoint values, but instantaneous rate of change depends on local behavior.
       For example, on <m>[0,2]</m> let
       <m>f(x)=x</m> and <m>g(x)=x+\sin(\pi x)</m>.
       Then <m>f(0)=g(0)=0</m> and <m>f(2)=g(2)=2</m>, so both have the same average rate of change:

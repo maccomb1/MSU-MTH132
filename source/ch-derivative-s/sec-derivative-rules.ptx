@@ -792,10 +792,10 @@ These topics are covered in more detail in MTH 320.
 </subsection>
 
 
-<subsection xml:id="ssec-derivative-rules-tf">
+  <exercises xml:id="exercises-derivative-rules-tf">
   <title>Practice: True/False</title>
 
-  <exercises xml:id="exercises-derivative-rules-tf">
+
     <exercisegroup>
       <title>True/False Questions</title>
 
@@ -1050,18 +1050,43 @@ x &amp; A(x) &amp; A'(x) \\
         f'(4)=\dfrac{(5)(2)-(-2)(-1)}{2^2}
         =\dfrac{10-2}{4}
         =\dfrac{8}{4}
-        =2,
-      </m>.
+        =2
+      </m>
     </p>
   </solution>
 </exercise>
 
+<exercise xml:id="tf-deriv-rules-25">
+  <statement>
+    <p>
+      If <m>f(x)=A(x)B(x)</m>, then <m>f</m> is increasing when <m>x=4</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> Apply the Product Rule:
+      <m>
+        f'(x)=A'(x)B(x)+A(x)B'(x).
+      </m>
+      From the table, <m>A(4)=-2</m> and <m>A'(4)=5</m>.
+      From the graph, <m>B(4)=2</m> and <m>B'(4)=-1</m>.
+    </p>
+    <p>
+      Substituting,
+      <m>
+        f'(4)=(5)(2)+(-2)(-1)
+        =10+2
+        =12
+      </m>
+    </p>
+    <p> Since <m>f</m> has a positive derivative (a.k.a. slope) we know that it is increasing at <m>x=4</m>.</p>
+  </solution>
+</exercise>
 
 
 </exercisegroup>
 
   </exercises>
-</subsection>
 
 
 
