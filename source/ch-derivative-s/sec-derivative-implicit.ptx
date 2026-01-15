@@ -14,6 +14,231 @@
     </ul>
   </objectives>
 
+  <p>
+    In earlier sections, we found tangent lines and rates of change by differentiating functions written in the form
+    <m>y=f(x)</m>. However, many important curves are not given as explicit functions of <m>x</m>.
+    Instead, they are described by equations that relate <m>x</m> and <m>y</m> implicitly.
+    In this section, we develop a technique called <emph>implicit differentiation</emph> that allows us to
+    compute derivatives directly from such equations.
+  </p>
+
+<subsection xml:id="ssec-explicit-vs-implicit">
+    <title>Explicit versus Implicit Functions</title>
+
+    <p>
+      Consider the circle defined by the equation <m>x^2+y^2=25</m>.
+      If we wish to find the slope of the tangent line at the point <m>(3,4)</m>,
+      we immediately face a difficulty: there is no function specified in the form <m>y=f(x)</m>.
+
+
+      <sidebyside width="60%">
+        <figure xml:id="fig-implicit-circle-tangent">
+  <caption>
+    Tangent line to the circle <m>x^2 + y^2 = 25</m> at the point <m>(3,4)</m>.
+  </caption>
+
+  <image source="images/impDiff01.PNG" width="60%">
+    <shortdescription>
+      A coordinate plane showing the circle defined by x squared plus y squared equals 25.
+      The circle is centered at the origin with radius 5.
+      A dashed line represents the tangent line at the point (3,4),
+      touching the circle at exactly one point.
+      The point of tangency is marked, and the tangent line slopes downward to the right.
+    </shortdescription>
+  </image>
+</figure>
+      </sidebyside>
+    </p>
+
+    <p>
+      One possible approach is to make the equation explicit by solving for <m>y</m>. Let's consider this method first
+    </p>
+
+<example xml:id="ex-explicit-circle-tangent">
+
+  <statement>
+    <p>
+      Find the equation of the tangent line to the circle
+      <m>x^2+y^2=25</m> at the point <m>(3,4)</m> by first solving for
+      <m>y=f(x)</m>.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      We begin by solving the equation of the circle for <m>y</m>:
+    </p>
+
+    <me>
+      y = \pm\sqrt{25-x^2}.
+    </me>
+
+    <p>
+      This shows that the circle is the union of two function graphs.
+      Since the point <m>(3,4)</m> lies on the upper semicircle, we use
+      <m>y=\sqrt{25-x^2}</m>.
+    </p>
+
+    <p>
+      Differentiate using the Chain Rule:
+    </p>
+
+    <me>
+      \frac{dy}{dx}
+      =
+      \frac{d}{dx}(25-x^2)^{1/2}
+      =
+      \frac12(25-x^2)^{-1/2}(-2x)
+      =
+      -\frac{x}{\sqrt{25-x^2}}.
+    </me>
+
+    <p>
+      Evaluating at <m>x=3</m> gives
+      <m>\frac{dy}{dx}=-\frac34</m>.
+      Using point-slope form, the equation of the tangent line is
+    </p>
+
+    <me>
+      y = -\frac34(x-3)+4.
+    </me>
+  </solution>
+</example>
+
+
+<remark xml:id="rem-implicit-motivation">
+  <p>
+    While solving an equation for <m>y</m> can sometimes allow us to apply standard
+    differentiation rules, this approach is often inconvenient and may even be
+    impossible. In many equations, even relatively simple ones, such as <m>e^{y}=x+y</m>, the variable <m>y</m>
+    appears in multiple locations and cannot be isolated as an explicit function
+    of <m>x</m>.
+  </p>
+
+  <p>
+    Implicit differentiation avoids this difficulty by treating <m>y</m> as a
+    function of <m>x</m> and differentiating both sides of the equation directly,
+    using the Chain Rule wherever <m>y</m> appears.
+  </p>
+</remark>
+  </subsection>
+
+   <subsection xml:id="ssec-implicit-diff-circle">
+    <title>Implicit Differentiation in Action</title>
+
+    <p>
+      Instead of solving for <m>y</m>, we assume that <m>y=y(x)</m> is an unknown function of <m>x</m>
+      that satisfies the equation <m>x^2+y^2=25</m>.
+      We then differentiate both sides with respect to <m>x</m>.
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+        \frac{d}{dx}(x^2+y^2) &amp;=&amp; \frac{d}{dx}(25) \\[0.6em]
+        2x + 2y\frac{dy}{dx} &amp;=&amp; 0.
+      \end{array}
+    </me>
+
+    <p>
+      The derivative of <m>y^2</m> requires the Chain Rule, since <m>y</m> is itself a function of <m>x</m>.
+      Solving for <m>\frac{dy}{dx}</m> gives
+    </p>
+
+    <me>
+      \frac{dy}{dx} = -\frac{x}{y}.
+    </me>
+
+    <p>
+      This formula applies to both the upper and lower semicircles.
+      At <m>(3,4)</m>, the slope is <m>-\frac34</m>,
+      while at <m>(3,-4)</m> the slope is <m>\frac34</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-second-derivative-implicit">
+    <title>Higher Derivatives via Implicit Differentiation</title>
+
+    <p>
+      Implicit differentiation can also be used to compute higher derivatives.
+      Starting from
+      <m>\frac{dy}{dx}=-\frac{x}{y}</m>,
+      we differentiate again with respect to <m>x</m>.
+    </p>
+
+    <me>
+      y''(x)
+      =
+      \left(-\frac{x}{y}\right)'
+      =
+      -\frac{y - x\frac{dy}{dx}}{y^2}.
+    </me>
+
+    <p>
+      Substituting <m>\frac{dy}{dx}=-\frac{x}{y}</m> and using <m>x^2+y^2=25</m> yields
+    </p>
+
+    <me>
+      y''(x) = -\frac{25}{y^3}.
+    </me>
+  </subsection>
+
+  <subsection xml:id="ssec-implicit-non-solvable">
+    <title>When Explicit Formulas Are Not Practical</title>
+
+    <p>
+      Some curves cannot be easily written as explicit functions.
+      An important example is the <emph>Folium of Descartes</emph>, defined by
+      <m>x^3+y^3=9xy</m>.
+      Over certain intervals, this curve consists of multiple overlapping function graphs.
+    </p>
+
+    <p>
+      Even in such cases, implicit differentiation works smoothly.
+      Assuming <m>y=y(x)</m> and differentiating both sides gives
+    </p>
+
+    <me>
+      3x^2 + 3y^2\frac{dy}{dx} = 9y + 9x\frac{dy}{dx}.
+    </me>
+
+    <p>
+      Solving for <m>\frac{dy}{dx}</m> yields
+    </p>
+
+    <me>
+      \frac{dy}{dx} = \frac{9y - 3x^2}{3y^2 - 9x}.
+    </me>
+
+    <p>
+      At the point <m>(2,4)</m>, the slope of the tangent line is <m>\frac45</m>,
+      giving the tangent line
+      <m>y=\frac45(x-2)+4</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-implicit-method">
+    <title>A General Method for Implicit Differentiation</title>
+
+    <p>
+      When given an equation involving <m>x</m> and <m>y</m>, proceed as follows:
+    </p>
+
+    <ol>
+      <li>
+        Assume <m>x</m> is the independent variable and <m>y=y(x)</m>.
+        Differentiate both sides of the equation with respect to <m>x</m>,
+        using the Chain Rule whenever a derivative of <m>y</m> appears.
+      </li>
+      <li>
+        Solve the resulting equation for <m>\frac{dy}{dx}</m>.
+      </li>
+      <li>
+        To find a specific slope at <m>x=a</m>, substitute the known values of
+        <m>x=a</m> and <m>y=y(a)</m>.
+      </li>
+    </ol>
+  </subsection>
+
   <subsection xml:id="implicit-diff-definition">
     <title>Key Idea: Implicit Differentiation</title>
 

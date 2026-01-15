@@ -233,15 +233,26 @@
 
 
     <theorem xml:id="thm-chain-rule">
-      <title>The Chain Rule</title>
-      <statement>
-        <p>
-          If <m>f</m> and <m>g</m> are differentiable functions, then their composition <m>f(g(x))</m> is differentiable and
-        </p>
-        <me>
-          (f(g(x)))' = f'(g(x)) \cdot g'(x).
-        </me>
-      </statement>
+            <title>The Chain Rule</title>
+  <statement>
+    <p>
+      If <m>f</m> and <m>g</m> are differentiable functions, then their composition <m>f(g(x))</m> is differentiable and
+    </p>
+
+    <me>
+      (f(g(x)))' = f'(g(x)) \cdot g'(x).
+    </me>
+
+    <p>
+      In Leibniz notation, if we let <m>u=g(x)</m>, then
+    </p>
+
+    <me>
+      \frac{df}{dx}
+      =
+      \frac{df}{du}\cdot\frac{du}{dx}
+    </me>
+  </statement>
 
   <proof>
     <p>
@@ -285,15 +296,16 @@
 
       <solution>
         <p>
-          Apply the Chain Rule and Quotient rule. Let <m>u=\dfrac{e^x}{1+e^x}</m>, then <m>f(x)=\sin(u)</m>.
-        </p>
+          Apply the Chain Rule and Quotient rule. Let <m>u=\dfrac{e^x}{1+e^x}</m>, then <m>f(u)=\sin(u)</m> and <m>f'(u)=\cos(u)</m> so: 
 
-        <md>
-          <mrow>f'(x) = \cos(u)\,u'</mrow>
-          <mrow>u' = \dfrac{e^x(1+e^x) - e^x(e^x)}{(1+e^x)^2}</mrow>
-          <mrow>\phantom{u'} = \dfrac{e^x}{(1+e^x)^2}</mrow>
-          <mrow>g'(x) = \cos\!\left(\dfrac{e^x}{1+e^x}\right)\cdot \dfrac{e^x}{(1+e^x)^2}</mrow>
-        </md>
+
+        <me>
+          u' = \dfrac{e^x(1+e^x) - e^x(e^x)}{(1+e^x)^2} = \dfrac{e^x}{(1+e^x)^2}
+        </me>
+
+          Therefore <m>f'(x) = \cos\!\left(\dfrac{e^x}{1+e^x}\right)\cdot \dfrac{e^x}{(1+e^x)^2}</m>
+        </p>
+        
       </solution>
     </example>
 
@@ -671,12 +683,13 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
        is not differentiable at <m>x=1</m>.
     </p>
 
+<sidebyside widths="60%">    
 <figure xml:id="fig-chain-rule-graphs">
   <caption>
-    Graphs of <m>f(x)</m> and <m>g(x)</m> used to illustrate behavior of composite functions.
+    Graphs of two functions <m>f(x)</m> and <m>g(x)</m>.
   </caption>
 
-  <image source="images/chainRuleGraphs01.png" width="100%">
+  <image source="images/chainRuleGraphs01.png">
     <shortdescription>
       A coordinate plane showing two piecewise linear functions.
       The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3).
@@ -686,19 +699,45 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
     </shortdescription>
   </image>
 </figure>
-
+</sidebyside>
 
   </statement>
-  <solution>
-    <p>
-      <em>True.</em>
-      We have <m>f'(x)=2x\,e^{x^2}</m>.
-      Compare growth by taking a ratio for <m>x&gt;0</m>:
-      <m>\dfrac{f'(x)}{e^x}=2x\,e^{x^2-x}=2x\,e^{x(x-1)}</m>.
-      As <m>x\to\infty</m>, the exponent <m>x^2-x\to\infty</m>, so the ratio goes to infinity.
-      Therefore <m>f'(x)</m> grows faster than <m>e^x</m>.
-    </p>
-  </solution>
+<solution>
+  <p>
+    <em>False.</em> The fact that <m>f</m> is not differentiable at <m>x=1</m> does not automatically mean that
+    the composite <m>f(g(x))</m> is not differentiable at <m>x=1</m>.
+  </p>
+
+  <p>
+    In fact, we can compute the derivative using the Chain Rule.
+    The slope of <m>g</m> is constant:
+  </p>
+
+  <me>
+    g'(x)=\frac{3-1.5}{3-0}=\frac{1.5}{3}=\frac12.
+  </me>
+
+  <p>
+    For <m>x&gt;1</m>, the graph of <m>f</m> is the line segment from <m>(1,1.5)</m> to <m>(3,1)</m>, so its slope is
+  </p>
+
+  <me>
+    f'(x)=\frac{1-1.5}{3-1}=\frac{-0.5}{2}=-\frac14
+  </me>
+
+  <p>
+    on that segment, including at <m>x=2</m>. Therefore,
+  </p>
+
+  <me>
+    (f(g(x)))'\big|_{x=1}=f'(g(1))\,g'(1)=f'(2)\cdot\frac12=\left(-\frac14\right)\left(\frac12\right)=-\frac18.
+  </me>
+
+  <p>
+    So <m>f(g(x))</m> <em>is</em> differentiable at <m>x=1</m>.
+  </p>
+</solution>
+
 </exercise>
 
     </exercisegroup>
