@@ -3,34 +3,83 @@
 <section xml:id="sec-derivative-inverse" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Inverse Functions and Their Derivatives</title>
 
-  <objectives>
-    <ul>
-      <li>
-        Students should recognize that implicit differentiation can be used to find derivatives of inverse functions.
-      </li>
-      <li>
-        Students should be able to apply the implicit differentiation technique in moderately complicated problems,
-        including those requiring the use of the product, quotient, or chain rule.
-      </li>
-      <li>
-        Students should be able to apply the derivative rules for <m>\arcsin(x)</m>, <m>\arccos(x)</m>, and <m>\arctan(x)</m>
-        in simple to moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.
-      </li>
-    </ul>
-  </objectives>
+<objectives>
+  <ul>
+    <li>Use implicit differentiation to derive the formula for the derivative of an inverse function.</li>
 
-  <subsection xml:id="implicit-inverse-idea">
-    <title>Implicit Differentiation and Inverse Functions</title>
+    <li>Compute derivatives of functions involving logarithmic, trigonometric, and inverse trigonometric functions.</li>
+
+    <li>Interpret derivative values of inverse functions geometrically as slopes of tangent lines.</li>
+  </ul>
+</objectives>
+
+<p>
+  This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions
+  and particularly the inverse trigonometric functions.
+  If you feel a bit out of practice with inverse functions or trigonometric functions, it may be helpful
+  to revisit those ideas before diving into the calculus. A strong foundation makes the new material much more approachable.
+
+
+<ul>
+  <li>
+    <p><xref ref="ssec-inverses">Review section on function inverses</xref></p>
+  </li>
+  <li>
+    <p><xref ref="ssec-trig-triangle">Review section on trigonometric functions</xref></p>
+  </li>
+</ul>
+</p>
+
+<subsection xml:id="derivative-inverse-motivating-example">
+    <title>Motivating Example and Strategy</title>
 
     <p>
-      Implicit differentiation is especially useful for discovering derivative formulas for inverse functions.
-      The general strategy is:
+      Back in <xref ref="ssec-expChain-key-results">the section on exponentials and logs</xref>, 
+      we stated that the derivative of the natural logarithm function and said that we would prove it later... well now is later!
+      We will use implicit differentiation to find the derivative of <m>y=\ln x</m>.
     </p>
 
+<example xml:id="ex-derivative-ln">
+      <statement>
+        <p>
+          Create the formula for <m>\displaystyle \frac{d}{dx}(\ln x)</m> by using implicit differentiation.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>y=\ln x</m>. Then by the inverse relationship with the exponential function, 
+          
+          <me>
+            \begin{array}{rcl}
+            y \amp = \amp \ln x \\
+            e^y \amp = \amp  e^{\ln x} \\
+            e^y \amp = \amp  x.
+            \end{array}
+          </me>
+          Differentiate both sides with respect to <m>x</m> to get:
+          <me> e^y \cdot y' = 1. </me>
+          Therefore,
+          <me> y' = \frac{1}{e^y}. </me>
+          Now rewrite <m>e^y</m> in terms of <m>x</m>. Since we know from above that <m>e^y = x</m>, we have
+          <me> y' = \frac{1}{x}. </me>
+          Thus,
+          <me> \displaystyle \frac{d}{dx}(\ln x) = \frac{1}{x}. </me>
+        </p>
+</solution>
+
+</example>
+
+
+<p> Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function. </p>
+
+<insight xml:id="insight-derivative-inverse-general">
+  <title>Finding the Derivative of an Inverse Function</title>
+      <p>
     <ul>
       <li>
         <p>
-          Start with an inverse relationship (for example, <m>y=\arcsin(x)</m> means <m>\sin(y)=x</m>).
+          Start with a differentiable function <m>y=f(x)</m> and its inverse <m>f^{-1}</m>. Then by the definition of inverse functions, <m>f^{-1}(y)=x</m>.
         </p>
       </li>
       <li>
@@ -44,25 +93,21 @@
         </p>
       </li>
     </ul>
+  </p>
+    </insight>
 
-    <remark xml:id="rem-implicit-formulas">
-      <p>
-        We can use this method to derive formulas for
-        <m>(\arcsin(x))'</m>, <m>(\arccos(x))'</m>, <m>(\arctan(x))'</m>, and also <m>(\ln x)'</m>
-        (the logarithm proof is often placed in a separate section).
-      </p>
-    </remark>
-  </subsection>
 
-  <subsection xml:id="inverse-trig-derivatives">
-    <title>Derivative Formulas for Inverse Trigonometric Functions</title>
+<p> Now let's use this idea to find the formulas for the derivatives of various inverse trigonometric functions. </p>
+
+</subsection> 
+
+        
+  <subsection xml:id="implicit-inverse-idea">
+    <title>Derivatives of Inverse Trig Functions</title>
 
     <theorem xml:id="thm-derivative-arcsin">
       <title>Derivative of <m>\arcsin(x)</m></title>
       <statement>
-        <p>
-          For <m>-1&lt;x&lt;1</m>,
-        </p>
         <me>
           \displaystyle \frac{d}{dx}\bigl(\arcsin(x)\bigr)=\frac{1}{\sqrt{1-x^2}}.
         </me>
@@ -108,9 +153,6 @@
     <theorem xml:id="thm-derivative-arccos">
       <title>Derivative of <m>\arccos(x)</m></title>
       <statement>
-        <p>
-          For <m>-1&lt;x&lt;1</m>,
-        </p>
         <me>
           \displaystyle \frac{d}{dx}\bigl(\arccos(x)\bigr)=-\frac{1}{\sqrt{1-x^2}}.
         </me>
@@ -120,18 +162,11 @@
           Let <m>y=\arccos(x)</m>. Then <m>\cos(y)=x</m>. Differentiate:
         </p>
 
-        <me>
-\begin{array}{rcl}
-\displaystyle \frac{d}{dx}\bigl(\cos(y)\bigr)
-\amp=\amp \displaystyle \frac{d}{dx}(x)
-\\[1.2em]
-\displaystyle -\sin(y)\,y'
-\amp=\amp \displaystyle 1
-\\[1.2em]
-\displaystyle y'
-\amp=\amp \displaystyle -\frac{1}{\sin(y)}.
-\end{array}
-        </me>
+<me> \begin{array}{rcl} 
+  \displaystyle \frac{d}{dx}\bigl(\cos(y)\bigr) \amp=\amp \displaystyle \frac{d}{dx}(x) \\[1.2em] 
+  \displaystyle -\sin(y)\,y' \amp=\amp \displaystyle 1 \\[1.2em] 
+  \displaystyle y' \amp=\amp \displaystyle -\frac{1}{\sin(y)}. 
+  \end{array} </me>
 
         <p>
           Since <m>\cos(y)=x</m> and <m>0\le y\le \pi</m>, we have <m>\sin(y)\ge 0</m>, and
@@ -149,14 +184,12 @@
           \displaystyle y'=-\frac{1}{\sqrt{1-x^2}}.
         </me>
       </proof>
+
     </theorem>
 
     <theorem xml:id="thm-derivative-arctan">
       <title>Derivative of <m>\arctan(x)</m></title>
       <statement>
-        <p>
-          For all real <m>x</m>,
-        </p>
         <me>
           \displaystyle \frac{d}{dx}\bigl(\arctan(x)\bigr)=\frac{1}{1+x^2}.
         </me>
@@ -180,7 +213,7 @@
         </me>
 
         <p>
-          Use the identity <m>\sec^2(y)=1+\tan^2(y)</m> and <m>\tan(y)=x</m>:
+          Use the pythagorean identity <m>\sec^2(y)=1+\tan^2(y)</m> and <m>\tan(y)=x</m>:
         </p>
 
         <me>
@@ -188,10 +221,26 @@
         </me>
       </proof>
     </theorem>
+
+
+<remark xml:id="remark-derivative-inverse-trig-domains">
+  <title>Notations of Inverse Trigonometric Functions</title>
+      <p>
+    Note that some both <m>\sin^{-1}(x)</m>, <m>\cos^{-1}(x)</m>, and <m>\tan^{-1}(x)</m> along with 
+    <m>\arcsin(x)</m>, <m>\arccos(x)</m>, and <m>\arctan(x)</m> are valid notations for the inverse trigonometric functions.
+    We will use them interchangeably in our course. Students are expected to be comfortable with both notations.
+  </p>
+    </remark>
+
+
   </subsection>
 
   <subsection xml:id="sample-problems-inverse-trig">
-    <title>Straightforward Problems</title>
+    <title>Select Examples</title>
+
+<p> Now that we have the formulas for the derivatives of various inverse functions, let's see some example of problems that would make reasonable 
+  homework, quiz, or exam questions. </p>
+
 
     <example xml:id="ex-deriv-ln-sin-arcsin">
       <statement>
@@ -226,29 +275,11 @@
     <example xml:id="ex-domain-derivative-sqrt-ln">
       <statement>
         <p>
-          Determine the domain and find the derivative of <m>f(x)=\sqrt{2+\ln x}</m>.
+          Find the derivative of <m>f(x)=\sqrt{2+\ln x}</m>.
         </p>
       </statement>
 
       <solution>
-        <p>
-          For the expression to be defined, we need <m>x&gt;0</m> (so <m>\ln x</m> exists) and also <m>2+\ln x\ge 0</m>.
-          Solve <m>2+\ln x\ge 0</m>:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle 2+\ln x \ge 0
-\amp\Longleftrightarrow\amp \displaystyle \ln x \ge -2
-\\[0.8em]
-\amp\Longleftrightarrow\amp \displaystyle x \ge e^{-2}.
-\end{array}
-        </me>
-
-        <p>
-          So the domain is <m>\displaystyle [e^{-2},\infty)</m>.
-        </p>
-
         <p>
           Differentiate using the Chain Rule:
         </p>
@@ -272,14 +303,14 @@
     <example xml:id="ex-arctan-slope-point">
       <statement>
         <p>
-          Find a point on the curve <m>y=\arctan(x)</m> where the slope is <m>\displaystyle \frac{1}{10}</m>.
+          Find a point on the curve <m>y=\tan^{-1}(x)</m> where the slope is <m>\displaystyle \frac{1}{10}</m>.
           Is there more than one answer?
         </p>
       </statement>
 
       <solution>
         <p>
-          Since <m>\displaystyle \frac{d}{dx}\bigl(\arctan(x)\bigr)=\frac{1}{1+x^2}</m>, we want
+          Since <m>\displaystyle \frac{d}{dx}\bigl(\tan^{-1}(x)\bigr)=\frac{1}{1+x^2}</m>, we want
         </p>
 
         <me>
@@ -304,12 +335,12 @@
         </me>
 
         <p>
-          So there are two points. When <m>x=3</m>, <m>y=\arctan(3)</m>, and when <m>x=-3</m>, <m>y=\arctan(-3)=-\arctan(3)</m>.
+          So there are two points. When <m>x=3</m>, <m>y=\tan^{-1}(3)</m>, and when <m>x=-3</m>, <m>y=\tan^{-1}(-3)=-\tan^{-1}(3)</m>.
           Therefore the slope is <m>\displaystyle \frac{1}{10}</m> at
         </p>
 
         <me>
-          \displaystyle (3,\arctan(3)) \quad \text{and} \quad (-3,-\arctan(3)).
+          \displaystyle (3,\tan^{-1}(3)) \quad \text{and} \quad (-3,-\tan^{-1}(3)).
         </me>
 
         <p>
@@ -318,110 +349,11 @@
         </p>
       </solution>
     </example>
-  </subsection>
 
-  <subsection xml:id="conceptual-problems-inverse-trig">
-    <title>More Challenging and Conceptual Problems</title>
 
-    <example xml:id="ex-cos-ln-x2">
-      <statement>
-        <p>
-          If <m>f(x)=\cos(\ln(x^2))</m>, find <m>f'(1)</m>.
-        </p>
-      </statement>
 
-      <solution>
-        <p>
-          Use the Chain Rule. Let <m>u(x)=\ln(x^2)</m>, so <m>f(x)=\cos(u(x))</m>.
-        </p>
 
-        <p>
-          First compute <m>u'(x)</m>. Since <m>\ln(x^2)</m> is <m>\ln(\,x^2\,)</m>, apply the Chain Rule:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle u'(x)
-\amp=\amp \displaystyle \frac{1}{x^2}\cdot 2x
-\\[0.8em]
-\amp=\amp \displaystyle \frac{2}{x}.
-\end{array}
-        </me>
-
-        <p>
-          Now differentiate <m>f(x)=\cos(u(x))</m>:
-        </p>
-
-        <me>
-          \displaystyle f'(x)=-\sin(\ln(x^2))\cdot \frac{2}{x}.
-        </me>
-
-        <p>
-          Evaluate at <m>x=1</m>:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle f'(1)
-\amp=\amp \displaystyle -\sin(\ln(1^2))\cdot 2
-\\[0.8em]
-\amp=\amp \displaystyle -\sin(0)\cdot 2
-\\[0.8em]
-\amp=\amp \displaystyle 0.
-\end{array}
-        </me>
-      </solution>
-    </example>
-
-    <example xml:id="ex-c-value">
-      <statement>
-        <p>
-          Suppose <m>f(x)=cx+\ln(\cos x)</m>, where <m>c</m> is a constant. For what value of <m>c</m> do we have
-          <m>f'(\pi/4)=6</m>?
-        </p>
-      </statement>
-
-      <solution>
-        <p>
-          Differentiate:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle f'(x)
-\amp=\amp \displaystyle c+\frac{d}{dx}\bigl(\ln(\cos x)\bigr)
-\\[1.2em]
-\amp=\amp \displaystyle c+\frac{1}{\cos x}\cdot (-\sin x)
-\\[1.2em]
-\amp=\amp \displaystyle c-\tan x.
-\end{array}
-        </me>
-
-        <p>
-          Evaluate at <m>\displaystyle x=\frac{\pi}{4}</m> where <m>\tan(\pi/4)=1</m>:
-        </p>
-
-        <me>
-          \displaystyle f'\!\left(\frac{\pi}{4}\right)=c-1.
-        </me>
-
-        <p>
-          Set this equal to 6:
-        </p>
-
-        <me>
-\begin{array}{rcl}
-\displaystyle c-1
-\amp=\amp \displaystyle 6
-\\[0.8em]
-\displaystyle c
-\amp=\amp \displaystyle 7.
-\end{array}
-        </me>
-      </solution>
-    </example>
-
-    <example xml:id="ex-inverse-derivative-general">
+<example xml:id="ex-inverse-derivative-general">
       <statement>
         <p>
           Suppose that <m>f</m> is differentiable, <m>f(2)=3</m>, and <m>f'(2)=5</m>. Find <m>(f^{-1})'(3)</m>.
@@ -455,7 +387,13 @@
         </me>
       </solution>
     </example>
+
   </subsection>
+
+
+
+
+
 
 
 <subsection xml:id="additional-worked-problems-derivInv">
@@ -473,5 +411,30 @@
   </p>
 
 </subsection>
+
+
+  <exercises xml:id="exercises-derivative-inv-tf">
+  <title>Practice / Study Problems</title>
+
+
+    <exercisegroup>
+      <title>True/False Questions</title>
+
+      <introduction>
+        <p>
+          Determine whether each statement is true or false.
+          Justify your answer.
+        </p>
+
+
+      </introduction>
+
+<exercise>
+  
+</exercise>
+
+
+    </exercisegroup>  
+  </exercises>
 
 </section>
