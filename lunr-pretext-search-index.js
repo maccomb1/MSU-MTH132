@@ -2374,7 +2374,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Definition of the Derivative",
-  "body": " Definition of the Derivative    Compute the derivative using the limit definition.  Interpret the derivative as an instantaneous rate of change and as the slope of a tangent line.  Rewrite the derivative definition using either or .  Define the derivative function and interpret it as a new function.  Recognize common situations where a derivative fails to exist (vertical tangents, corners, discontinuities).  Identify where a function is differentiable on an interval by locating vertical tangents, corners\/cusps, and discontinuities.     Definition of the Derivative  In the last section, we saw that instantaneous velocity can be obtained as a limit of average velocities over shorter and shorter time increments. Likewise, the slope of a tangent line can be obtained as a limit of secant slopes as the secant point moves closer and closer to the point of tangency.  Both ideas measure an instantaneous rate of change. For a general function , we define its instantaneous rate of change at using the following limit.   Derivative at a Point   The derivative of a function at , denoted , is defined by   provided the limit exists.    Here is the change in the output, and is the change in the input. The quotient is the average rate of change over the interval from to , and the derivative is the limit as the increment shrinks to 0.  Another common form comes from substituting (so that ):   Geometrically, if exists, then it is the slope of the tangent line to at the point . The tangent line has equation    If the limit defining exists, we say is differentiable at . If the limit does not exist, then is undefined and is not differentiable at .     Computing Derivatives from the Definition  A derivative is always a limit of a difference quotient, so direct substitution usually produces the meaningless expression . The goal is to simplify the difference quotient until the limit can be evaluated.   A Rational Example   Find for .    Step by Step:      A Radical Example   Find for .    We multiply by the conjugate to eliminate the radical in the numerator.      A Cube Root Example   Find for .    Here we use the difference of cubes identity .   This example is a good preview of why we will soon develop derivative rules: computing derivatives from the limit definition can become algebraically heavy.      The Derivative Function  The derivative at a point is a single number. But we can compute the derivative for many input values, producing a new function.  For example, consider from the previous example. At each value of , the function has a slope. Plotting these slopes as points creates a new graph, which we call the graph of the derivative function .     Slopes of tangent lines to at many values of , plotted as points and connected to form the graph of the derivative function.   Animated graph showing the cube root function with tangent lines at various points. For each point, the slope of the tangent line is recorded and plotted separately. As these slope values are connected, they form a new curve representing the derivative function.       Derivative Function   The derivative function of , denoted , is defined by   for all where this limit exists.     Computing a Derivative Function   Let . Find .    Step by Step:   Graphically this is what we have accomplished     The function with tangent lines drawn at several points. The slopes of these tangent lines are labeled and shown to align with the values of the derivative function .   Graph showing the quadratic function f(x)=x(x-2). At several points along the curve, tangent lines are drawn and their slopes are labeled with values such as −4, −2, 0, 2, and 4. A separate straight line representing the derivative f'(x)=2x-2 is shown, illustrating how each slope of f corresponds to a point on the derivative graph.          When the Derivative Fails to Exist  Even if a function is defined at a point, the derivative may fail to exist there. Graphically, this happens when the curve does not have a single well-defined tangent line.  Common ways differentiability can fail include:   Vertical Tangent: slopes become infinite (unbounded).  Corner: the left-hand and right-hand slopes are different.  Discontinuity: if a function is not continuous at a point, then it cannot be differentiable there.   We first consider what happens when a function has a vertical tangent. Recall that the derivative at a point represents the slope of the tangent line. Because vertical lines have undefined slope, the derivative cannot exist at any point where the tangent line is vertical.   A Vertical Tangent   Consider the function , which we analyzed previously in . Show that has a vertical tangent at .    From , the derivative of is   Trying to substitute in , the denominator yields , causing the derivative to grow without bound like we saw in our section on infinite limits . In other words, the slopes of the tangent lines become arbitrarily large in magnitude.  Graphically, this behavior appears as the tangent lines becoming steeper and steeper near , eventually approaching a vertical line. Since vertical lines have undefined slope, the derivative does not exist at .   Graph of near , showing a vertical tangent line at the origin where the slope is undefined.   Graph of the cube root function near the origin. The curve becomes very steep as it approaches zero. A vertical line is drawn at zero to represent the tangent line at that point. Because the tangent line is vertical, its slope is undefined and the derivative does not exist there.    Therefore, is not differentiable at due to the presence of a vertical tangent line.    Next we consider two other common ways differentiability can fail: corners and discontinuities. In these situations, it is helpful to introduce right-hand and left-hand derivatives, defined using one-sided limits in the same spirit as one-sided limits for functions. These allow us to determine whether the derivative exists by comparing the slopes approaching a point from the right and from the left.   Right-Hand Derivative   Let be a function and let be a point in its domain. The right-hand derivative of at is   provided this limit exists.     Left-Hand Derivative   Let be a function and let be a point in its domain. The left-hand derivative of at is   provided this limit exists.     Remember that the derivative is defined as a limit. A two-sided limit exists only when the corresponding one-sided limits both exist and agree. Therefore, is differentiable at only if both and exist and satisfy . If the left-hand and right-hand derivatives do not agree, then the derivative does not exist.    A Corner   Show that the function is not differentiable at by computing the left-hand and right-hand derivatives at that point.    We compute the one-sided derivatives at . First note that .  To evaluate the limits, we recall the definition of absolute value from . This definition tells us how behaves depending on whether is positive or negative.  The right-hand derivative is   For , we have , so   The left-hand derivative is   For , we have , so   Since , the derivative at does not exist. This corresponds graphically to a sharp corner at the origin, where the slopes approaching from the left and right are different.    The function is continuous at , yet it is not differentiable there because of a sharp corner. Next, we examine a case where the function is not even continuous. In this situation, the derivative must fail to exist.   A Discontinuity   Consider the function   Determine whether is differentiable at .    Using the definitions of and , we compute:  The left-hand derivative at is   This limit does not exist because the numerator is constant while the denominator approaches zero. The right-hand derivative is   Since the one-sided derivatives do not both exist and agree, the derivative does not exist.    In all of the situations we have examined so far, differentiability has required the function to behave continuously at the point in question. This relationship between differentiability and continuity is fundamental and can be stated precisely as a theorem.   Differentiability Implies Continuity   If is differentiable at , then is continuous at .     The contrapositive is often the useful version in practice: if is not continuous at , then is not differentiable at .   Now that we have studied the main ways a derivative can fail to exist, we will put these ideas together and identify the regions where a function is differentiable (that is, where the derivative exists).    Differentiability on an Interval   Differentiable on an Interval   Let be an interval. We say that is differentiable on  if exists for every point in .  We say that is differentiable on  if exists for all . We say that is differentiable on  if exists for all and the one-sided derivatives and exist.    Problems that ask where a function is differentiable often come in two common forms. In the first, only a graph is given, with no algebraic expression for the function.   Differentiability from a Graph   The graph below represents a function . Identify all values of where is differentiable. Give your answer in interval notation.  A function illustrating multiple ways differentiability can fail.   Graph of a piecewise function defined for x greater than negative three and less than or equal to five. The graph has a sharp corner at x equals negative one. There is a jump at x equals zero, with a filled point above and an open point at the origin. A vertical dashed line at x equals two indicates another discontinuity. Away from these points, the graph is smooth.       A function is differentiable at a point only if it is continuous there and has a well-defined tangent line. We examine each notable feature of the graph.  At , the graph has a sharp corner. The slopes approaching from the left and right are different, so the derivative does not exist at this point.  At , the graph has a jump discontinuity. Because the function is not continuous at , it cannot be differentiable there.  At , the graph has another discontinuity, indicated by the vertical dashed line. Since the function does not have a defined value that matches nearby behavior, the derivative does not exist at .  On all other intervals where the graph is defined, smooth, and continuous, the function is differentiable. Therefore, is differentiable on the intervals     In the second common type of problem, the function is given by an explicit formula, often defined piecewise, and we must use algebraic reasoning to determine where the derivative exists.   Determining Differentiability for a Piecewise Function   Let   Determine where is differentiable. Give your answer in interval notation.    On each open interval where a single formula applies, the function is differentiable: is differentiable for , is differentiable for , and is differentiable for . Therefore, the only points we need to check are the junctions and .  At , we first check continuity: for , , so . Also . Since , the function is not continuous at , and therefore it is not differentiable at .  At , we again check continuity: for , , so . For , . Since the left-hand limit equals the function value, is continuous at . To determine differentiability, we compare one-sided derivatives.  The left-hand derivative at is   For close to 0, we have , so . Also . Hence   The right-hand derivative at is   For , we have , so . Using ,   Expand the numerator. Since , we have   Therefore,   Since , the derivative exists at .  Putting everything together, is differentiable for all real numbers except at . In interval notation, is differentiable on   To help us check\/visualize here is a graph of the function   Graph of the piecewise-defined function used to determine where it is differentiable.   Graph of a piecewise function. For x less than zero, the graph is a straight line ending at a filled point above the x-axis. At x equals zero, there is an open circle at the origin indicating a jump. From zero to two, the graph increases linearly. For x greater than or equal to two, the graph follows a smooth downward-opening curve. The graph highlights points where the function changes behavior and where differentiability must be checked.        Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Definition of the Derivative      Practice \/ Study Problems    Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.      If , then .     False. We can calculate the derivative , so , not 16.      If , then the limit definition shows that .     False. The derivative of a linear function is constant. Using the limit definition gives , not .      If , then for all .     True. For the derivative exists, and . This can be verified directly from the limit definition by combining the fractions and simplifying the difference quotient.      The derivative function assigns to each input the slope of the tangent line to at that input.     True. Where the derivative exists, it equals the slope of the tangent line to the graph of at that point.      The derivative function can exist at some values of but fail to exist at others.     True. Many functions are differentiable on part of their domain but not everywhere, for example at corners, discontinuities, or vertical tangents.      If is differentiable at , then the graph of must be smooth near with no corners or jumps.     True. Differentiability requires both continuity and a well-defined tangent line.      If is continuous at , then is differentiable at .     False. A function can be continuous but not differentiable. For example, is continuous at but has a corner there, so does not exist.      If for all in an interval, then is increasing on that interval.     True. A positive derivative means tangent slopes are positive, which corresponds to increasing behavior.      If exists, then must be a finite number.     True. By definition, is the value of this limit. If the limit were infinite or did not exist, then would be undefined.      A vertical tangent line corresponds to a derivative value of zero.     False. A vertical tangent line has undefined slope. This corresponds to the derivative failing to exist (the slopes become unbounded), not to a derivative of zero.      Algebraic simplification of the difference quotient is used to eliminate the form before taking the limit.     True. Direct substitution often yields , so we simplify the difference quotient (factor, combine fractions, use conjugates, identities) to evaluate the limit.      The right-hand derivative uses only values of the function for inputs greater than .     True. The limit uses , so .      If and both exist and are equal, then exists.     True. The derivative is a two-sided limit. If the one-sided limits exist and agree, then the two-sided limit exists and equals their common value.       "
+  "body": " Definition of the Derivative    Compute the derivative using the limit definition.  Interpret the derivative as an instantaneous rate of change and as the slope of a tangent line.  Rewrite the derivative definition using either or .  Define the derivative function and interpret it as a new function.  Recognize common situations where a derivative fails to exist (vertical tangents, corners, discontinuities).  Identify where a function is differentiable on an interval by locating vertical tangents, corners\/cusps, and discontinuities.     Definition of the Derivative  In the last section, we saw that instantaneous velocity can be obtained as a limit of average velocities over shorter and shorter time increments. Likewise, the slope of a tangent line can be obtained as a limit of secant slopes as the secant point moves closer and closer to the point of tangency.  Both ideas measure an instantaneous rate of change. For a general function , we define its instantaneous rate of change at using the following limit.   Derivative at a Point   The derivative of a function at , denoted , is defined by   provided the limit exists.    Here is the change in the output, and is the change in the input. The quotient is the average rate of change over the interval from to , and the derivative is the limit as the increment shrinks to 0.  Another common form comes from substituting (so that ):   Geometrically, if exists, then it is the slope of the tangent line to at the point . The tangent line has equation    If the limit defining exists, we say is differentiable at . If the limit does not exist, then is undefined and is not differentiable at .     Computing Derivatives from the Definition  A derivative is always a limit of a difference quotient, so direct substitution usually produces the meaningless expression . The goal is to simplify the difference quotient until the limit can be evaluated.   A Rational Example   Find for .    Step by Step:      A Radical Example   Find for .    We multiply by the conjugate to eliminate the radical in the numerator.      A Cube Root Example   Find for .    Here we use the difference of cubes identity .   This example is a good preview of why we will soon develop derivative rules: computing derivatives from the limit definition can become algebraically heavy.      The Derivative Function  The derivative at a point is a single number. But we can compute the derivative for many input values, producing a new function.  For example, consider from the previous example. At each value of , the function has a slope. Plotting these slopes as points creates a new graph, which we call the graph of the derivative function .     Slopes of tangent lines to at many values of , plotted as points and connected to form the graph of the derivative function.   Animated graph showing the cube root function with tangent lines at various points. For each point, the slope of the tangent line is recorded and plotted separately. As these slope values are connected, they form a new curve representing the derivative function.       Derivative Function   The derivative function of , denoted , is defined by   for all where this limit exists.     Computing a Derivative Function   Let . Find .    Step by Step:   Graphically this is what we have accomplished     The function with tangent lines drawn at several points. The slopes of these tangent lines are labeled and shown to align with the values of the derivative function .   Graph showing the quadratic function f(x)=x(x-2). At several points along the curve, tangent lines are drawn and their slopes are labeled with values such as −4, −2, 0, 2, and 4. A separate straight line representing the derivative f'(x)=2x-2 is shown, illustrating how each slope of f corresponds to a point on the derivative graph.          When the Derivative Fails to Exist  Even if a function is defined at a point, the derivative may fail to exist there. Graphically, this happens when the curve does not have a single well-defined tangent line.  Common ways differentiability can fail include:   Vertical Tangent: slopes become infinite (unbounded).  Corner: the left-hand and right-hand slopes are different.  Discontinuity: if a function is not continuous at a point, then it cannot be differentiable there.   We first consider what happens when a function has a vertical tangent. Recall that the derivative at a point represents the slope of the tangent line. Because vertical lines have undefined slope, the derivative cannot exist at any point where the tangent line is vertical.   A Vertical Tangent   Consider the function , which we analyzed previously in . Show that has a vertical tangent at .    From , the derivative of is   Trying to substitute in , the denominator yields , causing the derivative to grow without bound like we saw in our section on infinite limits . In other words, the slopes of the tangent lines become arbitrarily large in magnitude.  Graphically, this behavior appears as the tangent lines becoming steeper and steeper near , eventually approaching a vertical line. Since vertical lines have undefined slope, the derivative does not exist at .   Graph of near , showing a vertical tangent line at the origin where the slope is undefined.   Graph of the cube root function near the origin. The curve becomes very steep as it approaches zero. A vertical line is drawn at zero to represent the tangent line at that point. Because the tangent line is vertical, its slope is undefined and the derivative does not exist there.    Therefore, is not differentiable at due to the presence of a vertical tangent line.    Next we consider two other common ways differentiability can fail: corners and discontinuities. In these situations, it is helpful to introduce right-hand and left-hand derivatives, defined using one-sided limits in the same spirit as one-sided limits for functions. These allow us to determine whether the derivative exists by comparing the slopes approaching a point from the right and from the left.   Right-Hand Derivative   Let be a function and let be a point in its domain. The right-hand derivative of at is   provided this limit exists.     Left-Hand Derivative   Let be a function and let be a point in its domain. The left-hand derivative of at is   provided this limit exists.     Remember that the derivative is defined as a limit. A two-sided limit exists only when the corresponding one-sided limits both exist and agree. Therefore, is differentiable at only if both and exist and satisfy . If the left-hand and right-hand derivatives do not agree, then the derivative does not exist.    A Corner   Show that the function is not differentiable at by computing the left-hand and right-hand derivatives at that point.    We compute the one-sided derivatives at . First note that .  To evaluate the limits, we recall the definition of absolute value from . This definition tells us how behaves depending on whether is positive or negative.  The right-hand derivative is   For , we have , so   The left-hand derivative is   For , we have , so   Since , the derivative at does not exist. This corresponds graphically to a sharp corner at the origin, where the slopes approaching from the left and right are different.    The function is continuous at , yet it is not differentiable there because of a sharp corner. Next, we examine a case where the function is not even continuous. In this situation, the derivative must fail to exist.   A Discontinuity   Consider the function   Determine whether is differentiable at .    Using the definitions of and , we compute:  The left-hand derivative at is   This limit does not exist because the numerator is constant while the denominator approaches zero. The right-hand derivative is   Since the one-sided derivatives do not both exist and agree, the derivative does not exist.    In all of the situations we have examined so far, differentiability has required the function to behave continuously at the point in question. This relationship between differentiability and continuity is fundamental and can be stated precisely as a theorem.   Differentiability Implies Continuity   If is differentiable at , then is continuous at .     The contrapositive is often the useful version in practice: if is not continuous at , then is not differentiable at .   Now that we have studied the main ways a derivative can fail to exist, we will put these ideas together and identify the regions where a function is differentiable (that is, where the derivative exists).    Differentiability on an Interval   Differentiable on an Interval   Let be an interval. We say that is differentiable on  if exists for every point in .  We say that is differentiable on  if exists for all . We say that is differentiable on  if exists for all and the one-sided derivatives and exist.    Problems that ask where a function is differentiable often come in two common forms. In the first, only a graph is given, with no algebraic expression for the function.   Differentiability from a Graph   The graph below represents a function . Identify all values of where is differentiable. Give your answer in interval notation.  A function illustrating multiple ways differentiability can fail.   Graph of a piecewise function defined for x greater than negative three and less than or equal to five. The graph has a sharp corner at x equals negative one. There is a jump at x equals zero, with a filled point above and an open point at the origin. A vertical dashed line at x equals two indicates another discontinuity. Away from these points, the graph is smooth.       A function is differentiable at a point only if it is continuous there and has a well-defined tangent line. We examine each notable feature of the graph.  At , the graph has a sharp corner. The slopes approaching from the left and right are different, so the derivative does not exist at this point.  At , the graph has a jump discontinuity. Because the function is not continuous at , it cannot be differentiable there.  At , the graph has another discontinuity, indicated by the vertical dashed line. Since the function does not have a defined value that matches nearby behavior, the derivative does not exist at .  On all other intervals where the graph is defined, smooth, and continuous, the function is differentiable. Therefore, is differentiable on the intervals     In the second common type of problem, the function is given by an explicit formula, often defined piecewise, and we must use algebraic reasoning to determine where the derivative exists.   Determining Differentiability for a Piecewise Function   Let   Determine where is differentiable. Give your answer in interval notation.    On each open interval where a single formula applies, the function is differentiable: is differentiable for , is differentiable for , and is differentiable for . Therefore, the only points we need to check are the junctions and .  At , we first check continuity: for , , so . Also . Since , the function is not continuous at , and therefore it is not differentiable at .  At , we again check continuity: for , , so . For , . Since the left-hand limit equals the function value, is continuous at . To determine differentiability, we compare one-sided derivatives.  The left-hand derivative at is   For close to 0, we have , so . Also . Hence   The right-hand derivative at is   For , we have , so . Using ,   Expand the numerator. Since , we have   Therefore,   Since , the derivative exists at .  Putting everything together, is differentiable for all real numbers except at . In interval notation, is differentiable on   To help us check\/visualize here is a graph of the function   Graph of the piecewise-defined function used to determine where it is differentiable.   Graph of a piecewise function. For x less than zero, the graph is a straight line ending at a filled point above the x-axis. At x equals zero, there is an open circle at the origin indicating a jump. From zero to two, the graph increases linearly. For x greater than or equal to two, the graph follows a smooth downward-opening curve. The graph highlights points where the function changes behavior and where differentiability must be checked.        Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Definition of the Derivative      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.      If , then .     False. We can calculate the derivative , so , not 16.      If , then the limit definition shows that .     False. The derivative of a linear function is constant. Using the limit definition gives , not .      If , then for all .     True. For the derivative exists, and . This can be verified directly from the limit definition by combining the fractions and simplifying the difference quotient.      The derivative function assigns to each input the slope of the tangent line to at that input.     True. Where the derivative exists, it equals the slope of the tangent line to the graph of at that point.      The derivative function can exist at some values of but fail to exist at others.     True. Many functions are differentiable on part of their domain but not everywhere, for example at corners, discontinuities, or vertical tangents.      If is differentiable at , then the graph of must be smooth near with no corners or jumps.     True. Differentiability requires both continuity and a well-defined tangent line.      If is continuous at , then is differentiable at .     False. A function can be continuous but not differentiable. For example, is continuous at but has a corner there, so does not exist.      If for all in an interval, then is increasing on that interval.     True. A positive derivative means tangent slopes are positive, which corresponds to increasing behavior.      If exists, then must be a finite number.     True. By definition, is the value of this limit. If the limit were infinite or did not exist, then would be undefined.      A vertical tangent line corresponds to a derivative value of zero.     False. A vertical tangent line has undefined slope. This corresponds to the derivative failing to exist (the slopes become unbounded), not to a derivative of zero.      Algebraic simplification of the difference quotient is used to eliminate the form before taking the limit.     True. Direct substitution often yields , so we simplify the difference quotient (factor, combine fractions, use conjugates, identities) to evaluate the limit.      The right-hand derivative uses only values of the function for inputs greater than .     True. The limit uses , so .      If and both exist and are equal, then exists.     True. The derivative is a two-sided limit. If the one-sided limits exist and agree, then the two-sided limit exists and equals their common value.      "
 },
 {
   "id": "sec-derivative-defn-2",
@@ -2689,7 +2689,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Basic Differentiation Rules",
-  "body": " Basic Differentiation Rules    Interpret derivative notation in both Newton form and Leibniz form .  Use basic derivative formulas to differentiate power functions and constants.  Apply the sum, constant multiple, product, and quotient rules to compute derivatives algebraically.  Interpret higher derivatives in an applied context (velocity and acceleration).    So far, we have seen how real-world rate-of-change problems and geometric tangent-line problems lead to derivatives. In this section, we focus on computing derivatives efficiently by using algebraic rules, so we do not need to return to the limit definition every time.   Notation for the Derivative  The derivative of a function can be written in several equivalent ways. In Newton notation we write . In Leibniz notation we write , which is meant to remind us of the definition of the derivative as a limit of difference quotients:   Here is a change in the input, and is the corresponding change in the output: and . The notation does not literally mean “a quotient of two tiny numbers.” It is a single symbol that represents a limit.  For example, if , then the derivative formula can be written as    To emphasize the distinction between the derivative function and the derivative at a specific point , we often write . This notation highlights that the derivative function is evaluated at . You may also encounter the notation for the derivative of , so that .     Basic Derivatives  The strategy is the same as earlier limit techniques: we establish derivatives of basic functions, then build more complicated derivatives from those. The most important basic formulas are the following.   Derivatives of Constant and Linear Functions    If is a constant function, then .  If , then .     We use the limit definition of the derivative.  First, suppose , where is a constant. By definition,   Since and , the numerator is zero.   Therefore, the derivative of a constant function is zero.  Next, suppose . Using the limit definition,   Simplifying the numerator gives   Therefore, the derivative of is equal to .     The Power Rule   Let be any real number for which is defined. If , then     We begin with a geometric intuition. For the function , increasing by a small amount produces a change in area that is approximately .    A geometric illustration of the change in area when a square of side length is increased by a small amount . The added strips show how the area grows approximately like .   A square with side length x and area x squared is shown. Light shaded strips of width Delta x are added along the top and right sides, representing the increase in area when x is increased by Delta x. The diagram visually illustrates how the change in area is approximately proportional to 2x times Delta x.     This suggests that   A similar idea applies to volume. For , the change in volume due to a small increase is approximately ,    A geometric illustration of the change in volume when a cube of side length is increased by a small amount . The added slabs show how the volume grows approximately like .   A cube with side length x and volume x cubed is shown. Light shaded slabs of thickness Delta x are added to the top, right, and back faces of the cube, representing the increase in volume when x is increased by Delta x. The diagram illustrates that the dominant contribution to the change in volume is proportional to 3x squared times Delta x.     suggesting that .  More generally, for the growth of an -dimensional cube with side length , this geometric reasoning suggests that . While this intuition cannot be visualized for higher dimensions, it motivates the algebraic proof that follows.  We now prove the Power Rule rigorously using the limit definition of the derivative. The constant and linear cases were proved earlier. We focus on the case .  The proof proceeds in stages, beginning with whole number powers. Throughout, we repeatedly use the identity   which holds for all positive integers .   Step 1: Positive integer powers. Let be a positive integer. Using the limit definition of the derivative,   Apply the factorization identity with and .   Cancel the factor of to obtain   Taking the limit as gives   Therefore, for positive integers ,    Step 2: Negative integer powers. Let , where is a positive integer. Then . In the derivative limit, we combine fractions and apply the same factorization identity with and .  After simplification, the resulting expression reduces to   Thus, the Power Rule holds for negative integers as well.   Step 3: Rational powers. Let , where is a positive integer and is any integer. Then   In the derivative limit, the numerator has the form . As in earlier work with cube roots, we multiply the numerator and denominator by   where and . This eliminates the radicals and produces the numerator   which we have already handled. Simplifying the resulting limit again yields .  Therefore, the Power Rule holds for all rational exponents.  The formula is also valid for irrational exponents such as , but proving this rigorously requires more advanced theory.      Compute each derivative:      .    Apply the power rule with .        .    First rewrite the cube root using exponent notation, then apply the power rule.        .    Rewrite the reciprocal using a negative exponent, then apply the power rule.        Derivative Rules  Once we know the derivatives of basic functions, we can differentiate combinations of functions using rules. Suppose and are differentiable at .      Sum Rule:  .   Difference Rule:  .   Constant Multiple Rule:  for any constant .   Product Rule:  .   Quotient Rule:  , where .     A proof of the Derivative Sum Rule is presented in the video below.    A proof of the Product Rule is presented in the following video.    Proofs of additional derivative rules can be found online. Your instructor would love to talk about this in office hours, and also you may want to consider a math major\/minor. These topics are covered in more detail in MTH 320.     Warning: the derivative of a product is not the product of derivatives. In general, .     Compute the following derivatives.     Compute .    First rewrite the square root using exponents and apply the constant multiple rule.       Compute .    The quantity is a constant, so its derivative is .       Let . Compute .    Use the Product Rule with and .   (Optional) You can also expand first and then differentiate term-by-term. Both approaches agree.      Differentiate .    First rewrite the denominator: . Then , so   You could also use the Quotient Rule directly; both methods produce equivalent results.      A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at .      Higher Derivatives  Because the derivative of a function is itself a function, we can differentiate again. The second derivative of is denoted , and in Leibniz notation it is written :   If represents position as a function of time, then is velocity and is acceleration .    A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec ).     Higher derivatives are defined by repeatedly differentiating. The third derivative of is denoted , the fourth derivative is denoted , and in general the th derivative is written .  In Leibniz notation, these derivatives are written , , and .  As the order of the derivative increases, prime notation becomes cumbersome, so the superscript notation is typically preferred for higher derivatives.     Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Basic Differentiation Rules      Practice: True\/False    True\/False Questions   Determine whether each statement is true or false. Justify your answer using derivative rules or interpretation.     The symbols and always represent the same quantity.     True. Both notations represent the derivative of with respect to . In other words, . (They are two different notational conventions for the same derivative.)      If , then for all .     True. The expression is a constant (it does not depend on ), so for all .      If , then .     True. Using the constant multiple rule and , we get .      If , then .     True. Rewrite (where defined). Then apply the power rule: .      If and then .     False. By the Product Rule, . Evaluating at gives . Since is not given, cannot be determined from the information provided, and it is not necessarily .      If represents velocity (where is a time variable), then represents acceleration.     True. When velocity is given as a function of time , its derivative with respect to time, , measures the rate of change of velocity. By definition, this rate of change is acceleration.      The notation and represent the same function.     True. Both notations mean the third derivative of with respect to .      More True\/False Questions   For this set of problems let be a differentiable function. Values of are given in the table below, and is piecewise linear function shown in the accompanying graph.       Graph of , a piecewise linear function composed of two line segments.   Graph of a piecewise linear function B(x). The graph consists of a line segment increasing from the point (0, 2) to (2, 4), followed by a line segment decreasing from (2, 4) to (5, 1). The two segments meet at a sharp corner at x = 2.        If , then .     True. By the Sum Rule, . From the table, . From the graph, is increasing with slope at , so .  Therefore, .      If , then .     False. By the Constant Multiple Rule, . From the graph, is decreasing with slope at , so .  Hence, , not .      If , then .     False. Use the Product Rule: . From the table, and .  Evaluating at , , not .      If , then .     True. Apply the Quotient Rule: From the table, and . From the graph, and .  Substituting, .       "
+  "body": " Basic Differentiation Rules    Interpret derivative notation in both Newton form and Leibniz form .  Use basic derivative formulas to differentiate power functions and constants.  Apply the sum, constant multiple, product, and quotient rules to compute derivatives algebraically.  Interpret higher derivatives in an applied context (velocity and acceleration).    So far, we have seen how real-world rate-of-change problems and geometric tangent-line problems lead to derivatives. In this section, we focus on computing derivatives efficiently by using algebraic rules, so we do not need to return to the limit definition every time.   Notation for the Derivative  The derivative of a function can be written in several equivalent ways. In Newton notation we write . In Leibniz notation we write , which is meant to remind us of the definition of the derivative as a limit of difference quotients:   Here is a change in the input, and is the corresponding change in the output: and . The notation does not literally mean “a quotient of two tiny numbers.” It is a single symbol that represents a limit.  For example, if , then the derivative formula can be written as    To emphasize the distinction between the derivative function and the derivative at a specific point , we often write . This notation highlights that the derivative function is evaluated at . You may also encounter the notation for the derivative of , so that .     Basic Derivatives  The strategy is the same as earlier limit techniques: we establish derivatives of basic functions, then build more complicated derivatives from those. The most important basic formulas are the following.   Derivatives of Constant and Linear Functions    If is a constant function, then .  If , then .     We use the limit definition of the derivative.  First, suppose , where is a constant. By definition,   Since and , the numerator is zero.   Therefore, the derivative of a constant function is zero.  Next, suppose . Using the limit definition,   Simplifying the numerator gives   Therefore, the derivative of is equal to .     The Power Rule   Let be any real number for which is defined. If , then     We begin with a geometric intuition. For the function , increasing by a small amount produces a change in area that is approximately .    A geometric illustration of the change in area when a square of side length is increased by a small amount . The added strips show how the area grows approximately like .   A square with side length x and area x squared is shown. Light shaded strips of width Delta x are added along the top and right sides, representing the increase in area when x is increased by Delta x. The diagram visually illustrates how the change in area is approximately proportional to 2x times Delta x.     This suggests that   A similar idea applies to volume. For , the change in volume due to a small increase is approximately ,    A geometric illustration of the change in volume when a cube of side length is increased by a small amount . The added slabs show how the volume grows approximately like .   A cube with side length x and volume x cubed is shown. Light shaded slabs of thickness Delta x are added to the top, right, and back faces of the cube, representing the increase in volume when x is increased by Delta x. The diagram illustrates that the dominant contribution to the change in volume is proportional to 3x squared times Delta x.     suggesting that .  More generally, for the growth of an -dimensional cube with side length , this geometric reasoning suggests that . While this intuition cannot be visualized for higher dimensions, it motivates the algebraic proof that follows.  We now prove the Power Rule rigorously using the limit definition of the derivative. The constant and linear cases were proved earlier. We focus on the case .  The proof proceeds in stages, beginning with whole number powers. Throughout, we repeatedly use the identity   which holds for all positive integers .   Step 1: Positive integer powers. Let be a positive integer. Using the limit definition of the derivative,   Apply the factorization identity with and .   Cancel the factor of to obtain   Taking the limit as gives   Therefore, for positive integers ,    Step 2: Negative integer powers. Let , where is a positive integer. Then . In the derivative limit, we combine fractions and apply the same factorization identity with and .  After simplification, the resulting expression reduces to   Thus, the Power Rule holds for negative integers as well.   Step 3: Rational powers. Let , where is a positive integer and is any integer. Then   In the derivative limit, the numerator has the form . As in earlier work with cube roots, we multiply the numerator and denominator by   where and . This eliminates the radicals and produces the numerator   which we have already handled. Simplifying the resulting limit again yields .  Therefore, the Power Rule holds for all rational exponents.  The formula is also valid for irrational exponents such as , but proving this rigorously requires more advanced theory.      Compute each derivative:      .    Apply the power rule with .        .    First rewrite the cube root using exponent notation, then apply the power rule.        .    Rewrite the reciprocal using a negative exponent, then apply the power rule.        Derivative Rules  Once we know the derivatives of basic functions, we can differentiate combinations of functions using rules. Suppose and are differentiable at .      Sum Rule:  .   Difference Rule:  .   Constant Multiple Rule:  for any constant .   Product Rule:  .   Quotient Rule:  , where .     A proof of the Derivative Sum Rule is presented in the video below.    A proof of the Product Rule is presented in the following video.    Proofs of additional derivative rules can be found online. Your instructor would love to talk about this in office hours, and also you may want to consider a math major\/minor. These topics are covered in more detail in MTH 320.     Warning: the derivative of a product is not the product of derivatives. In general, .     Compute the following derivatives.     Compute .    First rewrite the square root using exponents and apply the constant multiple rule.       Compute .    The quantity is a constant, so its derivative is .       Let . Compute .    Use the Product Rule with and .   (Optional) You can also expand first and then differentiate term-by-term. Both approaches agree.      Differentiate .    First rewrite the denominator: . Then , so   You could also use the Quotient Rule directly; both methods produce equivalent results.      A block of ice has length cm, width cm, and height cm. Its length and width are decreasing at cm\/hr, and its height is decreasing at cm\/hr. How fast is the volume decreasing at that instant?    The volume is , and all three dimensions depend on time . Differentiate using the Product Rule (applied twice):   At the instant described: , , , , , (cm\/hr).   The volume is decreasing at .      Higher Derivatives  Because the derivative of a function is itself a function, we can differentiate again. The second derivative of is denoted , and in Leibniz notation it is written :   If represents position as a function of time, then is velocity and is acceleration .    A stone falls feet in seconds. Compute , , and interpret them.    Differentiate repeatedly using the power rule:   Here is velocity (ft\/sec), increasing with time. The constant is acceleration (ft\/sec ).     Higher derivatives are defined by repeatedly differentiating. The third derivative of is denoted , the fourth derivative is denoted , and in general the th derivative is written .  In Leibniz notation, these derivatives are written , , and .  As the order of the derivative increases, prime notation becomes cumbersome, so the superscript notation is typically preferred for higher derivatives.     Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Basic Differentiation Rules      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer using derivative rules or interpretation.     The symbols and always represent the same quantity.     True. Both notations represent the derivative of with respect to . In other words, . (They are two different notational conventions for the same derivative.)      If , then for all .     True. The expression is a constant (it does not depend on ), so for all .      If , then .     True. Using the constant multiple rule and , we get .      If , then .     True. Rewrite (where defined). Then apply the power rule: .      If and then .     False. By the Product Rule, . Evaluating at gives . Since is not given, cannot be determined from the information provided, and it is not necessarily .      If represents velocity (where is a time variable), then represents acceleration.     True. When velocity is given as a function of time , its derivative with respect to time, , measures the rate of change of velocity. By definition, this rate of change is acceleration.      The notation and represent the same function.     True. Both notations mean the third derivative of with respect to .      More True\/False Questions   For this set of problems let be a differentiable function. Values of are given in the table below, and is piecewise linear function shown in the accompanying graph.       Graph of , a piecewise linear function composed of two line segments.   Graph of a piecewise linear function B(x). The graph consists of a line segment increasing from the point (0, 2) to (2, 4), followed by a line segment decreasing from (2, 4) to (5, 1). The two segments meet at a sharp corner at x = 2.        If , then .     True. By the Sum Rule, . From the table, . From the graph, is increasing with slope at , so .  Therefore, .      If , then .     False. By the Constant Multiple Rule, . From the graph, is decreasing with slope at , so .  Hence, , not .      If , then .     False. Use the Product Rule: . From the table, and .  Evaluating at , , not .      If , then .     True. Apply the Quotient Rule: From the table, and . From the graph, and .  Substituting,       If , then is increasing when .     True. Apply the Product Rule: From the table, and . From the graph, and .  Substituting,   Since has a positive derivative (a.k.a. slope) we know that it is increasing at .      "
 },
 {
   "id": "sec-derivative-rules-2",
@@ -2923,7 +2923,16 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "11",
   "title": "",
-  "body": "  If , then .     True. Apply the Quotient Rule: From the table, and . From the graph, and .  Substituting, .   "
+  "body": "  If , then .     True. Apply the Quotient Rule: From the table, and . From the graph, and .  Substituting,    "
+},
+{
+  "id": "tf-deriv-rules-25",
+  "level": "2",
+  "url": "sec-derivative-rules.html#tf-deriv-rules-25",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  If , then is increasing when .     True. Apply the Product Rule: From the table, and . From the graph, and .  Substituting,   Since has a positive derivative (a.k.a. slope) we know that it is increasing at .   "
 },
 {
   "id": "sec-derivative-trig",
@@ -2932,7 +2941,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Trigonometric Derivatives",
-  "body": " Trigonometric Derivatives    Use geometric and graphical reasoning to understand why and .  Use these results with the product and quotient rules to differentiate the remaining trigonometric functions.  Evaluate basic trigonometric limits by rewriting them in terms of .  Remember that standard trigonometric derivative formulas assume angles are measured in radians.     Derivative of Sine and Cosine  Sine and cosine are fundamental for describing periodic motion. One way to predict their derivatives is to look at graphs. If we estimate the slope of the graph at many points, we can sketch its derivative function. The slopes appear to match the graph of .    The derivative of visualized: the slope of the tangent line to at each point matches the value of .   An animated graph showing a sine curve and a cosine curve. As a point moves along the sine curve, a tangent line is drawn. The steepness of the tangent line changes and matches the height of the cosine curve at the same horizontal position.       For all real (measured in radians),     A full proof of these derivative formulas begins with the limit definition of the derivative applied to the sine and cosine functions. Using trigonometric identities, this reduces the problem to understanding the behavior of certain key limits involving sine and cosine near zero.  The first half of this argument is presented clearly in the video Derivatives of Sine and Cosine from First Principles . As you will see, completing the proof requires evaluating limits such as the limit of sine of x over x as x approaches zero, which we will develop later in this section.    For the time being, we will take this result as given and focus on how to use it to find the derivative formulas for the other standard trigonometric functions.    General Trigonometric Derivatives  Now that we know the derivatives of sine and cosine, we can quickly find the derivatives of the remaining trigonometric functions by applying our basic differentiation rules, such as the Quotient Rule.    For all real such that is defined,     Recall that . Since wherever is defined, we may apply the Quotient Rule.   Therefore, wherever is defined.    And similarly    For all real such that the following functions are defined,      Again remember, the derivative formulas in this section are valid when is measured in radians , not degrees.   Now let’s take a moment to incorporate this new knowledge into ideas from earlier sections before moving on to our discussion of limits.    Find if .    Since is written as a product of two functions, we apply the Product Rule.   This expression is an acceptable final answer, though it could be simplified further if desired.      Evaluate .    Since the function is written as a quotient, we apply the Quotient Rule.       Two Fundamental Trigonometric Limits  Previously in this section, we outlined the proof that the derivative of the sine function is the cosine function. That argument reduces to evaluating certain key limits involving sine and cosine as the input approaches zero. In this subsection, we formally establish those limits using a generic variable . This prepares us for the substitutions and rewrites that commonly appear in trigonometric limit problems.     .    Consider the unit circle and an angle measured in radians, with . Geometric arguments This typically involves comparing the areas of triangles and circular sectors in the unit circle. In previous semesters, the full argument has been worked through in recitation. For students who are curious, Khan Academy also has a great video on this topic. show that   Dividing all three expressions by gives   Taking reciprocals reverses the inequalities:   As , we know . Since is trapped between two expressions that both approach , the Squeeze Theorem implies        .    Rewrite the expression by multiplying the numerator and denominator by :   Rewrite this expression to isolate the sine-over-input factor:   As , we have , , and . Therefore the entire product approaches , and     These two limits supply the missing analytic step in the proof of the sine and cosine derivative formulas and will be used repeatedly to evaluate more complicated trigonometric limits.    Limits of Trigonometric Quotients  Many trigonometric limits can be evaluated by rewriting the expression until a factor of the form appears, where . Then we use .    Compute .    Multiply and divide by to create .   In the third line we used the substitution , so forces .      Compute .    Rewrite and then introduce the standard sine-over-input factors.   We used and also by the substitution .      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Trigonometric Derivatives     "
+  "body": " Trigonometric Derivatives    Use geometric and graphical reasoning to understand why and .  Use these results with the product and quotient rules to differentiate the remaining trigonometric functions.  Evaluate basic trigonometric limits by rewriting them in terms of .  Remember that standard trigonometric derivative formulas assume angles are measured in radians.     Derivative of Sine and Cosine  Sine and cosine are fundamental for describing periodic motion. One way to predict their derivatives is to look at graphs. If we estimate the slope of the graph at many points, we can sketch its derivative function. The slopes appear to match the graph of .    The derivative of visualized: the slope of the tangent line to at each point matches the value of .   An animated graph showing a sine curve and a cosine curve. As a point moves along the sine curve, a tangent line is drawn. The steepness of the tangent line changes and matches the height of the cosine curve at the same horizontal position.       For all real (measured in radians),     A full proof of these derivative formulas begins with the limit definition of the derivative applied to the sine and cosine functions. Using trigonometric identities, this reduces the problem to understanding the behavior of certain key limits involving sine and cosine near zero.  The first half of this argument is presented clearly in the video Derivatives of Sine and Cosine from First Principles . As you will see, completing the proof requires evaluating limits such as the limit of sine of x over x as x approaches zero, which we will develop later in this section.    For the time being, we will take this result as given and focus on how to use it to find the derivative formulas for the other standard trigonometric functions.    General Trigonometric Derivatives  Now that we know the derivatives of sine and cosine, we can quickly find the derivatives of the remaining trigonometric functions by applying our basic differentiation rules, such as the Quotient Rule.    For all real such that is defined,     Recall that . Since wherever is defined, we may apply the Quotient Rule.   Therefore, wherever is defined.    And similarly    For all real such that the following functions are defined,      Again remember, the derivative formulas in this section are valid when is measured in radians , not degrees.   Now let’s take a moment to incorporate this new knowledge into ideas from earlier sections before moving on to our discussion of limits.    Find if .    Since is written as a product of two functions, we apply the Product Rule.   This expression is an acceptable final answer, though it could be simplified further if desired.      Evaluate .    Since the function is written as a quotient, we apply the Quotient Rule.       Two Fundamental Trigonometric Limits  Previously in this section, we outlined the proof that the derivative of the sine function is the cosine function. That argument reduces to evaluating certain key limits involving sine and cosine as the input approaches zero. In this subsection, we formally establish those limits using a generic variable . This prepares us for the substitutions and rewrites that commonly appear in trigonometric limit problems.     .    Consider the unit circle and an angle measured in radians, with . Geometric arguments This typically involves comparing the areas of triangles and circular sectors in the unit circle. In previous semesters, the full argument has been worked through in recitation. For students who are curious, Khan Academy also has a great video on this topic. show that   Dividing all three expressions by gives   Taking reciprocals reverses the inequalities:   As , we know . Since is trapped between two expressions that both approach , the Squeeze Theorem implies        .    Rewrite the expression by multiplying the numerator and denominator by :   Rewrite this expression to isolate the sine-over-input factor:   As , we have , , and . Therefore the entire product approaches , and     These two limits supply the missing analytic step in the proof of the sine and cosine derivative formulas and will be used repeatedly to evaluate more complicated trigonometric limits.    Limits of Trigonometric Quotients  Many trigonometric limits can be evaluated by rewriting the expression until a factor of the form appears, where . Then we use .    Compute .    Multiply and divide by to create .   In the third line we used the substitution , so forces .      Compute .    Rewrite and then introduce the standard sine-over-input factors.   We used and also by the substitution .      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Trigonometric Derivatives      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.      .      If angles are measured in degrees, then still holds without modification.      If , then .     True. We can use either algebra or the Product Rule. Since wherever it is defined,   on the domain where is defined. Then .  Alternatively, using the Product Rule directly,        The instantaneous rate of change of at is .     True. The instantaneous rate of change at a point is the derivative at that point. Use the Product Rule:   Evaluate at :   So the instantaneous rate of change at is .       The slope of the tangent line to at is .     False. First rewrite in simpler form. Since and , we have   on any interval where the expressions are defined. Thus .  Now differentiate:   Evaluate at :   The slope is , not , so the statement is false.      Since , it follows that .     False. The equation is not true for all . The expression equals only in the limiting sense , not as an identity. Since is not a constant function, its derivative is not zero. In fact, applying the Quotient Rule shows that is nonzero for all .       .     False. Rewrite as . Since as , the product becomes .       .     False.  grows without bound as . The limit does not exist as a finite number.       .     True. Rewrite the expression to introduce the standard limit .   Therefore the statement is true.       .     True. Replace each term with : .       .     True. Use the identity . Then the expression becomes , which tends to .      "
 },
 {
   "id": "sec-derivative-trig-2",
@@ -3043,13 +3052,112 @@ var ptx_lunr_docs = [
   "body": "  Compute .    Rewrite and then introduce the standard sine-over-input factors.   We used and also by the substitution .   "
 },
 {
+  "id": "tf-deriv-trig-07",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-07",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "   .   "
+},
+{
+  "id": "tf-deriv-trig-02",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  If angles are measured in degrees, then still holds without modification.   "
+},
+{
+  "id": "tf-deriv-trig-comp-01",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-comp-01",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If , then .     True. We can use either algebra or the Product Rule. Since wherever it is defined,   on the domain where is defined. Then .  Alternatively, using the Product Rule directly,    "
+},
+{
+  "id": "tf-deriv-trig-comp-02",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-comp-02",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  The instantaneous rate of change of at is .     True. The instantaneous rate of change at a point is the derivative at that point. Use the Product Rule:   Evaluate at :   So the instantaneous rate of change at is .   "
+},
+{
+  "id": "tf-deriv-trig-comp-03",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-comp-03",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  The slope of the tangent line to at is .     False. First rewrite in simpler form. Since and , we have   on any interval where the expressions are defined. Thus .  Now differentiate:   Evaluate at :   The slope is , not , so the statement is false.   "
+},
+{
+  "id": "tf-deriv-trig-31",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-deriv-trig-31",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Since , it follows that .     False. The equation is not true for all . The expression equals only in the limiting sense , not as an identity. Since is not a constant function, its derivative is not zero. In fact, applying the Quotient Rule shows that is nonzero for all .   "
+},
+{
+  "id": "tf-trig-limits-01",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-trig-limits-01",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "   .     False. Rewrite as . Since as , the product becomes .   "
+},
+{
+  "id": "tf-trig-limits-02",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-trig-limits-02",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "   .     False.  grows without bound as . The limit does not exist as a finite number.   "
+},
+{
+  "id": "tf-trig-limits-03",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-trig-limits-03",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "   .     True. Rewrite the expression to introduce the standard limit .   Therefore the statement is true.   "
+},
+{
+  "id": "tf-trig-limits-06",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-trig-limits-06",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "   .     True. Replace each term with : .   "
+},
+{
+  "id": "tf-trig-limits-07",
+  "level": "2",
+  "url": "sec-derivative-trig.html#tf-trig-limits-07",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "   .     True. Use the identity . Then the expression becomes , which tends to .   "
+},
+{
   "id": "sec-derivative-expChain",
   "level": "1",
   "url": "sec-derivative-expChain.html",
   "type": "Section",
   "number": "2.5",
-  "title": "Exponential Functions and the Chain Rule",
-  "body": " Exponential Functions and the Chain Rule    Students should understand and apply the Chain Rule:  Using tabular values for and (constructing tables of values for composite derivatives).  Through formulas to solve problems algebraically.  By interpreting the behavior of composite functions and their slopes graphically, identifying how changes in the inner function affect the slope of .    Students should be able to apply the derivative rules for , , and in simple to moderately complicated problems, including those requiring the product, quotient, or chain rule.     Key Derivative Rules   Derivative of   The exponential function is its own derivative:      Derivative of   For ,     We will justify this formula in the next section. For now, we use it as a rule.      The Chain Rule   Chain Rule   If and are differentiable and , then      Intuitively, a small change in produces a change in , and that change in produces a change in . The Chain Rule multiplies these “rates of change along the way.”    Chain Rule from a Table   Let and be differentiable functions with values given in the table below.                                  Using the Chain Rule, find:   at  at     (1) By the Chain Rule,   At , the table gives and . We also need , and the table gives . Therefore,   (2) By the Chain Rule,   At , the table gives and . We also need , and the table gives . Therefore,       Derivatives of Exponential Functions   Derivative of   If and , then     Write in terms of :   Differentiate using the Chain Rule and the fact that .       Sample Problems   Straightforward Derivatives   Find the derivative of each function:        (1) Since is a constant, is a power function. Using the Power Rule and ,   (2) Let . Then , so by the Chain Rule,   Compute using the Quotient Rule (or product plus chain rule):   Therefore,      No Tangent Line with a Given Slope   Show that the curve has no tangent line with slope .    A tangent line has slope 2 exactly when . Differentiate:   Now observe that for all and , so   In particular, for any . Therefore the curve has no tangent line with slope 2.      More Challenging and Conceptual Problems   Deriving the Quotient Rule from Product and Chain Rules   Writing in the form , use the Product Rule and the Chain Rule to prove the Quotient Rule.    Let , where . By the Product Rule,   Now apply the Chain Rule to . If and , then , so   Substitute and simplify:   This is the Quotient Rule.     Compositions Involving Exponentials   Suppose is differentiable on , and let and . Compute and .    For , apply the Chain Rule with inner function :   For , use the Chain Rule with inner function :       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Exponential Functions and the Chain Rule     "
+  "title": "Exponential and Logarithmic Derivatives and the Chain Rule",
+  "body": " Exponential and Logarithmic Derivatives and the Chain Rule    Apply the basic derivative formulas for , , and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, logarithms, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.    Exponential and logarithmic functions appear throughout calculus. Their derivatives play a central role in growth models, rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.  If you feel a bit out of practice with exponential rules, logarithm rules, or composition rules from algebra, it may be helpful to revisit those ideas before diving into the calculus. A strong foundation makes the new material much more approachable.   Review section on function composition    Review section on exponential functions    Review section on logarithmic functions       Key Derivative Formulas  We begin by collecting the fundamental derivative rules for exponential and logarithmic functions. Some are stated without proof here and will be justified later in the text.   Derivatives of the Natural Exponential and Natural Logarithm   For all in the domains of the functions below:     We will use these two derivative formulas throughout the course, but we will not prove both of them at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  The proof of will appear later, once we have developed the tools needed to understand derivatives of inverse functions. See for a full derivation.  For now, we take both results as known facts and use them to develop more general differentiation techniques.    Now that we know the derivatives of and , we can combine them with the Product Rule, Quotient Rule, and earlier power–function rules to differentiate more complicated expressions.    Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.         .    Apply the Quotient Rule with and . Then and .        Show that the curve has no tangent line with slope 2.    Compute the derivative:   To find a point where the slope is 2, we solve   Rearranging gives   Every term on the left side is positive for all real . The equation has no solution. Thus the slope never equals 2.      The Statement and Applications of The Chain Rule  Composite functions arise everywhere. For example, if measures a temperature that changes with time, and converts that temperature to pressure, then describes how pressure changes with time. The Chain Rule captures how variations in the inner function affect the slope of the composite function.   The Chain Rule   If and are differentiable functions, then their composition is differentiable and   In Leibniz notation, if we let , then     A full proof of the Chain Rule requires careful algebra using the limit definition of the derivative and the structure of composite functions. We present the result here without a complete derivation. Students who would like to explore the proof in detail may find the following video especially helpful:   A visual and intuitive explanation of the Chain Rule   The central idea behind the proof is that small changes in the input propagate through the inner function and then through the outer function . The Chain Rule formalizes this by multiplying the rate of change of with respect to by the rate of change of with respect to .     Informally, the Chain Rule says that the rate of change of a composite function is the rate of change of the outer function, evaluated at the inner function, multiplied by how fast the inner function itself is changing.   Now let's see the chain rule applied with a few examples.    Compute the derivative of     Apply the Chain Rule and Quotient rule. Let , then and so: Therefore       Let and be differentiable functions with the values shown below.   Compute the following derivatives.     Compute at .    Using the Chain Rule,   At , we have and , and the table gives .       Compute at .    Again apply the Chain Rule:   At , the table shows , so , and .      Lastly, we can use the Chain Rule to extend our exponential derivative formulas. This allows us to differentiate any exponential function, not just those with base .   Derivative of the General Exponential Functions   For any positive constant , the derivative of is     To compute the derivative of for a positive constant , we rewrite in terms of the natural exponential function. Recall that by using the power rule for logarithms and the inverse identity we can write:   We now differentiate using the Chain Rule. Let   Then , and by the Chain Rule,   Since , we have . Substituting back:   Using once more, we obtain the final formula:   This completes the proof.      Compute the derivative of .    Apply the exponential derivative formula with .       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Exponential Functions and the Chain Rule      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.     If , then .     True. This is the Chain Rule with outer function and inner function . Since , we get .      If , then .     False. By the Chain Rule, . The factor is missing.      If for a constant , then for all real .     True. Using , we have for all real and when . Therefore for all .      If , then , regardless of .     True (assuming the Chain Rule applies at ). By the Chain Rule, . Since , the product is .      The derivative of and the derivative of are the same.     False. Using the Chain Rule: , while . These expressions are not equal in general.      If , then exists for all real .     False. The function is only defined for , so the derivative cannot exist for negative . (On it is differentiable; at one must check separately.)      If and on an interval, then is decreasing on that interval.     True (where the composition is defined). By the Chain Rule, . Since and , their product is negative, so is decreasing.      If has a horizontal tangent at , then either or .     True (assuming differentiability so the Chain Rule applies at ). A horizontal tangent means . By the Chain Rule, . A product is zero only if at least one factor is zero, so or .      If , then .     True. Let . Then . By the Chain Rule, .      Consider the graphs of and below. Since is not differentiable at we know that is not is not differentiable at .    Graphs of two functions and .   A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x).        False. The fact that is not differentiable at does not automatically mean that the composite is not differentiable at .  In fact, we can compute the derivative using the Chain Rule. The slope of is constant:   For , the graph of is the line segment from to , so its slope is   on that segment, including at . Therefore,   So  is differentiable at .      "
 },
 {
   "id": "sec-derivative-expChain-2",
@@ -3058,25 +3166,34 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.5",
   "title": "",
-  "body": "  Students should understand and apply the Chain Rule:  Using tabular values for and (constructing tables of values for composite derivatives).  Through formulas to solve problems algebraically.  By interpreting the behavior of composite functions and their slopes graphically, identifying how changes in the inner function affect the slope of .    Students should be able to apply the derivative rules for , , and in simple to moderately complicated problems, including those requiring the product, quotient, or chain rule.   "
+  "body": "  Apply the basic derivative formulas for , , and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, logarithms, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.   "
 },
 {
-  "id": "thm-derivative-exponential",
+  "id": "thm-derivatives-exp-log",
   "level": "2",
-  "url": "sec-derivative-expChain.html#thm-derivative-exponential",
+  "url": "sec-derivative-expChain.html#thm-derivatives-exp-log",
   "type": "Theorem",
   "number": "2.5.1",
-  "title": "Derivative of <span class=\"process-math\">\\(e^x\\)<\/span>.",
-  "body": " Derivative of   The exponential function is its own derivative:    "
+  "title": "Derivatives of the Natural Exponential and Natural Logarithm.",
+  "body": " Derivatives of the Natural Exponential and Natural Logarithm   For all in the domains of the functions below:     We will use these two derivative formulas throughout the course, but we will not prove both of them at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  The proof of will appear later, once we have developed the tools needed to understand derivatives of inverse functions. See for a full derivation.  For now, we take both results as known facts and use them to develop more general differentiation techniques.   "
 },
 {
-  "id": "thm-derivative-ln",
+  "id": "ex-exp-log-basic-combined",
   "level": "2",
-  "url": "sec-derivative-expChain.html#thm-derivative-ln",
-  "type": "Theorem",
+  "url": "sec-derivative-expChain.html#ex-exp-log-basic-combined",
+  "type": "Example",
   "number": "2.5.2",
-  "title": "Derivative of <span class=\"process-math\">\\(\\ln x\\)<\/span>.",
-  "body": " Derivative of   For ,     We will justify this formula in the next section. For now, we use it as a rule.   "
+  "title": "",
+  "body": "  Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.         .    Apply the Quotient Rule with and . Then and .     "
+},
+{
+  "id": "ex-expChain-basic-02",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#ex-expChain-basic-02",
+  "type": "Example",
+  "number": "2.5.3",
+  "title": "",
+  "body": "  Show that the curve has no tangent line with slope 2.    Compute the derivative:   To find a point where the slope is 2, we solve   Rearranging gives   Every term on the left side is positive for all real . The equation has no solution. Thus the slope never equals 2.   "
 },
 {
   "id": "thm-chain-rule",
@@ -3084,26 +3201,35 @@ var ptx_lunr_docs = [
   "url": "sec-derivative-expChain.html#thm-chain-rule",
   "type": "Theorem",
   "number": "2.5.4",
-  "title": "Chain Rule.",
-  "body": " Chain Rule   If and are differentiable and , then    "
+  "title": "The Chain Rule.",
+  "body": " The Chain Rule   If and are differentiable functions, then their composition is differentiable and   In Leibniz notation, if we let , then     A full proof of the Chain Rule requires careful algebra using the limit definition of the derivative and the structure of composite functions. We present the result here without a complete derivation. Students who would like to explore the proof in detail may find the following video especially helpful:   A visual and intuitive explanation of the Chain Rule   The central idea behind the proof is that small changes in the input propagate through the inner function and then through the outer function . The Chain Rule formalizes this by multiplying the rate of change of with respect to by the rate of change of with respect to .   "
 },
 {
-  "id": "rem-chain-idea",
+  "id": "rem-chainrule-informal",
   "level": "2",
-  "url": "sec-derivative-expChain.html#rem-chain-idea",
+  "url": "sec-derivative-expChain.html#rem-chainrule-informal",
   "type": "Remark",
   "number": "2.5.5",
   "title": "",
-  "body": " Intuitively, a small change in produces a change in , and that change in produces a change in . The Chain Rule multiplies these “rates of change along the way.”  "
+  "body": " Informally, the Chain Rule says that the rate of change of a composite function is the rate of change of the outer function, evaluated at the inner function, multiplied by how fast the inner function itself is changing.  "
 },
 {
-  "id": "ex-chain-table",
+  "id": "ex-expChain-basic-01",
   "level": "2",
-  "url": "sec-derivative-expChain.html#ex-chain-table",
+  "url": "sec-derivative-expChain.html#ex-expChain-basic-01",
   "type": "Example",
   "number": "2.5.6",
-  "title": "Chain Rule from a Table.",
-  "body": " Chain Rule from a Table   Let and be differentiable functions with values given in the table below.                                  Using the Chain Rule, find:   at  at     (1) By the Chain Rule,   At , the table gives and . We also need , and the table gives . Therefore,   (2) By the Chain Rule,   At , the table gives and . We also need , and the table gives . Therefore,    "
+  "title": "",
+  "body": "  Compute the derivative of     Apply the Chain Rule and Quotient rule. Let , then and so: Therefore    "
+},
+{
+  "id": "ex-expChain-table",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#ex-expChain-table",
+  "type": "Example",
+  "number": "2.5.7",
+  "title": "",
+  "body": "  Let and be differentiable functions with the values shown below.   Compute the following derivatives.     Compute at .    Using the Chain Rule,   At , we have and , and the table gives .       Compute at .    Again apply the Chain Rule:   At , the table shows , so , and .     "
 },
 {
   "id": "thm-derivative-a-to-x",
@@ -3111,44 +3237,107 @@ var ptx_lunr_docs = [
   "url": "sec-derivative-expChain.html#thm-derivative-a-to-x",
   "type": "Theorem",
   "number": "2.5.8",
-  "title": "Derivative of <span class=\"process-math\">\\(a^x\\)<\/span>.",
-  "body": " Derivative of   If and , then     Write in terms of :   Differentiate using the Chain Rule and the fact that .    "
+  "title": "Derivative of the General Exponential Functions.",
+  "body": " Derivative of the General Exponential Functions   For any positive constant , the derivative of is     To compute the derivative of for a positive constant , we rewrite in terms of the natural exponential function. Recall that by using the power rule for logarithms and the inverse identity we can write:   We now differentiate using the Chain Rule. Let   Then , and by the Chain Rule,   Since , we have . Substituting back:   Using once more, we obtain the final formula:   This completes the proof.   "
 },
 {
-  "id": "ex-straightforward-derivatives",
+  "id": "ex-derivative-2-to-x",
   "level": "2",
-  "url": "sec-derivative-expChain.html#ex-straightforward-derivatives",
+  "url": "sec-derivative-expChain.html#ex-derivative-2-to-x",
   "type": "Example",
   "number": "2.5.9",
-  "title": "Straightforward Derivatives.",
-  "body": " Straightforward Derivatives   Find the derivative of each function:        (1) Since is a constant, is a power function. Using the Power Rule and ,   (2) Let . Then , so by the Chain Rule,   Compute using the Quotient Rule (or product plus chain rule):   Therefore,    "
+  "title": "",
+  "body": "  Compute the derivative of .    Apply the exponential derivative formula with .    "
 },
 {
-  "id": "ex-no-slope-2",
+  "id": "tf-expChain-ap-01",
   "level": "2",
-  "url": "sec-derivative-expChain.html#ex-no-slope-2",
-  "type": "Example",
-  "number": "2.5.10",
-  "title": "No Tangent Line with a Given Slope.",
-  "body": " No Tangent Line with a Given Slope   Show that the curve has no tangent line with slope .    A tangent line has slope 2 exactly when . Differentiate:   Now observe that for all and , so   In particular, for any . Therefore the curve has no tangent line with slope 2.   "
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  If , then .     True. This is the Chain Rule with outer function and inner function . Since , we get .   "
 },
 {
-  "id": "act-quotient-rule-proof",
+  "id": "tf-expChain-ap-02",
   "level": "2",
-  "url": "sec-derivative-expChain.html#act-quotient-rule-proof",
-  "type": "Activity",
-  "number": "2.5.1",
-  "title": "Deriving the Quotient Rule from Product and Chain Rules.",
-  "body": " Deriving the Quotient Rule from Product and Chain Rules   Writing in the form , use the Product Rule and the Chain Rule to prove the Quotient Rule.    Let , where . By the Product Rule,   Now apply the Chain Rule to . If and , then , so   Substitute and simplify:   This is the Quotient Rule.   "
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  If , then .     False. By the Chain Rule, . The factor is missing.   "
 },
 {
-  "id": "ex-compositions-with-exp",
+  "id": "tf-expChain-ap-03",
   "level": "2",
-  "url": "sec-derivative-expChain.html#ex-compositions-with-exp",
-  "type": "Example",
-  "number": "2.5.11",
-  "title": "Compositions Involving Exponentials.",
-  "body": " Compositions Involving Exponentials   Suppose is differentiable on , and let and . Compute and .    For , apply the Chain Rule with inner function :   For , use the Chain Rule with inner function :    "
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If for a constant , then for all real .     True. Using , we have for all real and when . Therefore for all .   "
+},
+{
+  "id": "tf-expChain-ap-04",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If , then , regardless of .     True (assuming the Chain Rule applies at ). By the Chain Rule, . Since , the product is .   "
+},
+{
+  "id": "tf-expChain-ap-05",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-05",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  The derivative of and the derivative of are the same.     False. Using the Chain Rule: , while . These expressions are not equal in general.   "
+},
+{
+  "id": "tf-expChain-ap-06",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-06",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If , then exists for all real .     False. The function is only defined for , so the derivative cannot exist for negative . (On it is differentiable; at one must check separately.)   "
+},
+{
+  "id": "tf-expChain-ap-08",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-08",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  If and on an interval, then is decreasing on that interval.     True (where the composition is defined). By the Chain Rule, . Since and , their product is negative, so is decreasing.   "
+},
+{
+  "id": "tf-expChain-ap-10",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-10",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  If has a horizontal tangent at , then either or .     True (assuming differentiability so the Chain Rule applies at ). A horizontal tangent means . By the Chain Rule, . A product is zero only if at least one factor is zero, so or .   "
+},
+{
+  "id": "tf-expChain-ap-11",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-11",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  If , then .     True. Let . Then . By the Chain Rule, .   "
+},
+{
+  "id": "tf-expChain-ap-12",
+  "level": "2",
+  "url": "sec-derivative-expChain.html#tf-expChain-ap-12",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Consider the graphs of and below. Since is not differentiable at we know that is not is not differentiable at .    Graphs of two functions and .   A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x).        False. The fact that is not differentiable at does not automatically mean that the composite is not differentiable at .  In fact, we can compute the derivative using the Chain Rule. The slope of is constant:   For , the graph of is the line segment from to , so its slope is   on that segment, including at . Therefore,   So  is differentiable at .   "
 },
 {
   "id": "sec-derivative-implicit",
@@ -3157,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.6",
   "title": "Implicit Differentiation",
-  "body": " Implicit Differentiation    Students should know when they should apply implicit differentiation.  Students should be able to apply the implicit differentiation technique in simple to slightly complicated problems, including those requiring the use of the product, quotient, or chain rule.  Students should be able to interpret the results of implicit differentiation as the slope of a curve.     Key Idea: Implicit Differentiation   Implicit Differentiation    Implicit differentiation consists of differentiating both sides of an equation with respect to and then solving the resulting equation for .  In the examples and exercises of this section, it is assumed that the given equation determines implicitly as a differentiable function of , so that implicit differentiation applies.     The key feature is that depends on , even if the equation does not explicitly solve for . So whenever you differentiate an expression containing , you must use the Chain Rule and include a factor of .     Straightforward Examples   Implicit Differentiation with a Logarithm   Given the equation , find using implicit differentiation.    Differentiate both sides with respect to . The left side requires the Product Rule on and the Chain Rule on and .   Now solve for by collecting terms with .   A common simplification is to multiply top and bottom by :      Horizontal Tangent in the First Quadrant   Find if . At what point in the first quadrant is the tangent line to this curve horizontal?    Differentiate both sides with respect to . On the right side, use the Product Rule on .   Solve for .   A horizontal tangent occurs when , which requires the numerator to be zero (and the denominator nonzero):   Substitute into the original equation .   In the first quadrant, , so divide by :   Then . So the point in the first quadrant where the tangent is horizontal is   (This point is valid as long as , which you can check holds here.)     Tangent Line from an Implicit Equation   Find an equation of the tangent line to the curve at the point .    Differentiate both sides with respect to . Use the Product Rule on both sides.   Now substitute . Note , , , and .   The slope at is 1, so the tangent line is       More Challenging and Conceptual Problems   Intercept Form and a Constant Sum   Show that the sum of the - and -intercepts of any tangent line to the curve is equal to .    Differentiate implicitly:   At a point on the curve, the slope is . The tangent line is .  Find the intercepts. The -intercept occurs when :   So the -intercept is . The -intercept occurs when :   Thus the sum of intercepts is .  Since lies on , we have , so . Therefore the sum of the intercepts is always .     Parallel Tangents on an Ellipse   Consider the ellipse given by . Find the points where the ellipse crosses the -axis and show that the tangent lines at these points are parallel.    Points on the -axis have . Substitute into the equation:   So the ellipse crosses the -axis at and .  Differentiate implicitly:   At points on the -axis, , so   In particular, the slope at both and is 2, so the tangent lines are parallel.     When Do We Need Implicit Differentiation?   Explain how to determine when implicit differentiation is needed to find , as opposed to using the standard differentiation methods covered earlier. Provide an example where implicit differentiation is required and one where it is not.    Implicit differentiation is needed when is not given explicitly as a function of , or when the equation mixes and in a way that makes solving for difficult or undesirable. In these cases, we treat as a function of and differentiate both sides with respect to , remembering that derivatives of expressions involving must include a factor of .  For example, the equation defines a circle. Solving for gives , which is possible but splits into two functions. Implicit differentiation gives , so , which works on the whole circle (except where ).  On the other hand, if is already given explicitly, such as , then standard differentiation rules apply directly and there is no need for implicit differentiation. In this example, the Chain Rule gives .     Geometric Meaning of   A student uses implicit differentiation on a curve and finds that at the point . Explain the geometric meaning of this result as it relates to the graph of the curve.    The derivative at means that the tangent line to the curve at that point has slope 5. Geometrically, the curve is increasing at , and near that point the graph rises about 5 units vertically for every 1 unit horizontally (using the usual interpretation of slope).  Equivalently, if we zoom in close enough around , the curve looks nearly like the tangent line, and that tangent line has equation       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Implicit Differentiation     "
+  "body": " Implicit Differentiation    Recognize when a relationship between and requires implicit differentiation rather than treating as an explicit function .  Differentiate equations that involve both and by treating , applying the Product Rule, Quotient Rule, and Chain Rule, and then solving for .  Compute slopes of tangent lines and write equations of tangent lines for curves defined implicitly, including identifying where tangents are horizontal or vertical.    In earlier sections, we found tangent lines and rates of change by differentiating functions written in the form . However, many important curves are not given as explicit functions of . Instead, they are described by equations that relate and implicitly. In this section, we develop a technique called implicit differentiation that allows us to compute derivatives directly from such equations.   A Motivating Example  Consider the circle defined by the equation . If we wish to find the slope of the tangent line at the point , we immediately face a difficulty: there is no function specified in the form .    Tangent line to the circle at the point .   A coordinate plane showing the circle defined by x squared plus y squared equals 25. The circle is centered at the origin with radius 5. A dashed line represents the tangent line at the point (3,4), touching the circle at exactly one point. The point of tangency is marked, and the tangent line slopes downward to the right.     One possible approach is to make the equation explicit by solving for . Let's consider this method first    Find the slope of the tangent line to the circle at the point by first solving for .    We begin by solving the equation of the circle for :     Explicit representations of the circle and the tangent line at .   A coordinate plane showing the circle x squared plus y squared equals 25, written explicitly as two functions. The upper semicircle is shown as y equals the square root of 25 minus x squared, drawn as a solid red curve. The lower semicircle is shown as y equals negative the square root of 25 minus x squared, drawn as a dotted green curve. A dashed blue line represents the tangent line at the point (3,4), touching the upper semicircle at that point. The upper and lower branches are labeled to emphasize that the circle is not a single function of x.     This shows that the circle is the union of two function graphs.  Since the point lies on the upper semicircle, we use .  Differentiate using the Chain Rule:   Evaluating at gives .     While solving an equation for can sometimes allow us to apply standard differentiation rules, this approach is often inconvenient and may even be impossible. In many equations, even relatively simple ones, such as , the variable appears in multiple locations and cannot be isolated as an explicit function of .  Implicit differentiation avoids this difficulty by treating as a function of and differentiating both sides of the equation directly, using the Chain Rule wherever appears.   Instead of solving for , we assume that is an unknown function of that satisfies the equation. Then we can differentiate both sides with respect to .    Use implicit differentiation to find for the circle , and determine the slope of the tangent line at the point .    We treat as a function of and differentiate both sides of the equation with respect to .    The derivative follows from a basic derivative rule. In contrast, differentiating requires the Chain Rule, since is itself a function of . Here the outside function is and the inside function is . As a result, the derivative introduces the unknown quantity , which we can then solve for algebraically.   We now solve for .   This derivative formula applies to every point on the circle. Evaluating at gives     Let us now formalize this process into a general technique.    Key Idea: Implicit Differentiation   Implicit Differentiation    Implicit differentiation consists of differentiating both sides of an equation with respect to and then solving the resulting equation for .  In the examples and exercises of this section, it is assumed that the given equation determines implicitly as a differentiable function of , so that implicit differentiation applies.     The key feature is that depends on , even if the equation does not explicitly solve for . So whenever you differentiate an expression containing , you must use the Chain Rule and include a factor of .     Given the equation , find using implicit differentiation.    Differentiate both sides with respect to . The left side requires the Product Rule on and the Chain Rule on and .   Now solve for by collecting terms with .   A common simplification is to multiply top and bottom by :       Find an equation of the tangent line to the curve at the point .    Differentiate both sides with respect to . Use the Product Rule on both sides.   Now substitute . Note , , , and .   The slope at is 1, so the tangent line is       Find if . At what point in the first quadrant is the tangent line to this curve horizontal?    Differentiate both sides with respect to . On the right side, use the Product Rule on .   Solve for .   A horizontal tangent occurs when , which requires the numerator to be zero (and the denominator nonzero):   Substitute into the original equation .   In the first quadrant, , so divide by :   Then . So the point in the first quadrant where the tangent is horizontal is   (This point is valid as long as , which you can check holds here.)      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Implicit Differentiation      Practice \/ Study Problems   Explain it to a Friend    Explain how to decide when implicit differentiation is needed to find , as opposed to using the standard differentiation rules for explicit functions.  In your explanation, include:   One example where implicit differentiation is required.  One example where implicit differentiation is not required, and standard rules apply directly.     If you have a equation then you can just use the normal way but if is not given explicitly as a function of , and it is not easy to solve for a then implicit differentiation should be used   Example of when implicit differentiation is not needed:     Example of when implicit differentiation is needed:          A student applies implicit differentiation to a curve and finds that at the point .  Explain the geometric meaning of this result in terms of the graph of the curve. Your explanation should describe what this value tells you about the tangent line and the behavior of the curve near the point.    The value at means that the tangent line to the curve at that point has slope . Geometrically, the curve is increasing at , and very close to that point the graph rises about units vertically for every unit horizontally.      True\/False Questions    If , then implicit differentiation is required to find .     True. Since appears on both sides of the equation, it is not possible to isolate as an explicit function of without also having on the right side. Therefore, implicit differentiation is required to find .      If , then .     True. Differentiating both sides with respect to gives Rearranging and solving for yields       If , then .     False. Differentiating both sides with respect to gives Rearranging and solving for yields       If , then .     False. Differentiating both sides with respect to gives Rearranging and solving for yields       If , then at the slope of the tangent line is .     False. Differentiating both sides with respect to gives Plugging in gives which simplifies to Solving for yields       If at a point on a curve defined implicitly, then the tangent line at that point is horizontal.     True. A slope of zero indicates that the tangent line is horizontal at that point on the curve.      If is undefined at a point on a curve defined implicitly, then the tangent line at that point is vertical.     False. While an undefined derivative often indicates a vertical tangent line, it can also occur at points where the curve has a cusp or corner. Therefore, an undefined derivative does not always imply a vertical tangent line.      If , then the curve has a vertical tangent at points where .     True. Differentiating both sides with respect to gives Rearranging and solving for yields At points where , the derivative is undefined, indicating a possible vertical tangent line. We must check if such points lie on the curve. Setting in the original equation gives , so the points and are on the curve and we can verify with a graph that they have vertical tangents.      If , then at the second derivative is .     False. Differentiating both sides with respect to gives Solving for yields Differentiating again with respect to gives Substituting the value of and evaluating at gives       "
 },
 {
   "id": "sec-derivative-implicit-2",
@@ -3166,14 +3355,50 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.6",
   "title": "",
-  "body": "  Students should know when they should apply implicit differentiation.  Students should be able to apply the implicit differentiation technique in simple to slightly complicated problems, including those requiring the use of the product, quotient, or chain rule.  Students should be able to interpret the results of implicit differentiation as the slope of a curve.   "
+  "body": "  Recognize when a relationship between and requires implicit differentiation rather than treating as an explicit function .  Differentiate equations that involve both and by treating , applying the Product Rule, Quotient Rule, and Chain Rule, and then solving for .  Compute slopes of tangent lines and write equations of tangent lines for curves defined implicitly, including identifying where tangents are horizontal or vertical.   "
+},
+{
+  "id": "fig-implicit-circle-tangent",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#fig-implicit-circle-tangent",
+  "type": "Figure",
+  "number": "2.6.1",
+  "title": "",
+  "body": " Tangent line to the circle at the point .   A coordinate plane showing the circle defined by x squared plus y squared equals 25. The circle is centered at the origin with radius 5. A dashed line represents the tangent line at the point (3,4), touching the circle at exactly one point. The point of tangency is marked, and the tangent line slopes downward to the right.   "
+},
+{
+  "id": "ex-explicit-circle-tangent",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#ex-explicit-circle-tangent",
+  "type": "Example",
+  "number": "2.6.2",
+  "title": "",
+  "body": "  Find the slope of the tangent line to the circle at the point by first solving for .    We begin by solving the equation of the circle for :     Explicit representations of the circle and the tangent line at .   A coordinate plane showing the circle x squared plus y squared equals 25, written explicitly as two functions. The upper semicircle is shown as y equals the square root of 25 minus x squared, drawn as a solid red curve. The lower semicircle is shown as y equals negative the square root of 25 minus x squared, drawn as a dotted green curve. A dashed blue line represents the tangent line at the point (3,4), touching the upper semicircle at that point. The upper and lower branches are labeled to emphasize that the circle is not a single function of x.     This shows that the circle is the union of two function graphs.  Since the point lies on the upper semicircle, we use .  Differentiate using the Chain Rule:   Evaluating at gives .   "
+},
+{
+  "id": "rem-implicit-motivation",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#rem-implicit-motivation",
+  "type": "Remark",
+  "number": "2.6.4",
+  "title": "",
+  "body": " While solving an equation for can sometimes allow us to apply standard differentiation rules, this approach is often inconvenient and may even be impossible. In many equations, even relatively simple ones, such as , the variable appears in multiple locations and cannot be isolated as an explicit function of .  Implicit differentiation avoids this difficulty by treating as a function of and differentiating both sides of the equation directly, using the Chain Rule wherever appears.  "
+},
+{
+  "id": "ex-implicit-circle-basic",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#ex-implicit-circle-basic",
+  "type": "Example",
+  "number": "2.6.5",
+  "title": "",
+  "body": "  Use implicit differentiation to find for the circle , and determine the slope of the tangent line at the point .    We treat as a function of and differentiate both sides of the equation with respect to .    The derivative follows from a basic derivative rule. In contrast, differentiating requires the Chain Rule, since is itself a function of . Here the outside function is and the inside function is . As a result, the derivative introduces the unknown quantity , which we can then solve for algebraically.   We now solve for .   This derivative formula applies to every point on the circle. Evaluating at gives    "
 },
 {
   "id": "def-implicit-differentiation",
   "level": "2",
   "url": "sec-derivative-implicit.html#def-implicit-differentiation",
   "type": "Definition",
-  "number": "2.6.1",
+  "number": "2.6.7",
   "title": "Implicit Differentiation.",
   "body": " Implicit Differentiation    Implicit differentiation consists of differentiating both sides of an equation with respect to and then solving the resulting equation for .  In the examples and exercises of this section, it is assumed that the given equation determines implicitly as a differentiable function of , so that implicit differentiation applies.   "
 },
@@ -3182,7 +3407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-implicit.html#rem-implicit-why",
   "type": "Remark",
-  "number": "2.6.2",
+  "number": "2.6.8",
   "title": "",
   "body": " The key feature is that depends on , even if the equation does not explicitly solve for . So whenever you differentiate an expression containing , you must use the Chain Rule and include a factor of .  "
 },
@@ -3191,63 +3416,126 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-implicit.html#ex-implicit-ln",
   "type": "Example",
-  "number": "2.6.3",
-  "title": "Implicit Differentiation with a Logarithm.",
-  "body": " Implicit Differentiation with a Logarithm   Given the equation , find using implicit differentiation.    Differentiate both sides with respect to . The left side requires the Product Rule on and the Chain Rule on and .   Now solve for by collecting terms with .   A common simplification is to multiply top and bottom by :    "
-},
-{
-  "id": "ex-implicit-astroid-like",
-  "level": "2",
-  "url": "sec-derivative-implicit.html#ex-implicit-astroid-like",
-  "type": "Example",
-  "number": "2.6.4",
-  "title": "Horizontal Tangent in the First Quadrant.",
-  "body": " Horizontal Tangent in the First Quadrant   Find if . At what point in the first quadrant is the tangent line to this curve horizontal?    Differentiate both sides with respect to . On the right side, use the Product Rule on .   Solve for .   A horizontal tangent occurs when , which requires the numerator to be zero (and the denominator nonzero):   Substitute into the original equation .   In the first quadrant, , so divide by :   Then . So the point in the first quadrant where the tangent is horizontal is   (This point is valid as long as , which you can check holds here.)   "
+  "number": "2.6.9",
+  "title": "",
+  "body": "  Given the equation , find using implicit differentiation.    Differentiate both sides with respect to . The left side requires the Product Rule on and the Chain Rule on and .   Now solve for by collecting terms with .   A common simplification is to multiply top and bottom by :    "
 },
 {
   "id": "ex-implicit-tangent-line",
   "level": "2",
   "url": "sec-derivative-implicit.html#ex-implicit-tangent-line",
   "type": "Example",
-  "number": "2.6.5",
-  "title": "Tangent Line from an Implicit Equation.",
-  "body": " Tangent Line from an Implicit Equation   Find an equation of the tangent line to the curve at the point .    Differentiate both sides with respect to . Use the Product Rule on both sides.   Now substitute . Note , , , and .   The slope at is 1, so the tangent line is    "
+  "number": "2.6.10",
+  "title": "",
+  "body": "  Find an equation of the tangent line to the curve at the point .    Differentiate both sides with respect to . Use the Product Rule on both sides.   Now substitute . Note , , , and .   The slope at is 1, so the tangent line is    "
 },
 {
-  "id": "ex-intercepts-tangent",
+  "id": "ex-implicit-astroid-like",
   "level": "2",
-  "url": "sec-derivative-implicit.html#ex-intercepts-tangent",
+  "url": "sec-derivative-implicit.html#ex-implicit-astroid-like",
   "type": "Example",
-  "number": "2.6.6",
-  "title": "Intercept Form and a Constant Sum.",
-  "body": " Intercept Form and a Constant Sum   Show that the sum of the - and -intercepts of any tangent line to the curve is equal to .    Differentiate implicitly:   At a point on the curve, the slope is . The tangent line is .  Find the intercepts. The -intercept occurs when :   So the -intercept is . The -intercept occurs when :   Thus the sum of intercepts is .  Since lies on , we have , so . Therefore the sum of the intercepts is always .   "
+  "number": "2.6.11",
+  "title": "",
+  "body": "  Find if . At what point in the first quadrant is the tangent line to this curve horizontal?    Differentiate both sides with respect to . On the right side, use the Product Rule on .   Solve for .   A horizontal tangent occurs when , which requires the numerator to be zero (and the denominator nonzero):   Substitute into the original equation .   In the first quadrant, , so divide by :   Then . So the point in the first quadrant where the tangent is horizontal is   (This point is valid as long as , which you can check holds here.)   "
 },
 {
-  "id": "ex-ellipse-parallel",
+  "id": "ex-implicit-when-needed",
   "level": "2",
-  "url": "sec-derivative-implicit.html#ex-ellipse-parallel",
-  "type": "Example",
-  "number": "2.6.7",
-  "title": "Parallel Tangents on an Ellipse.",
-  "body": " Parallel Tangents on an Ellipse   Consider the ellipse given by . Find the points where the ellipse crosses the -axis and show that the tangent lines at these points are parallel.    Points on the -axis have . Substitute into the equation:   So the ellipse crosses the -axis at and .  Differentiate implicitly:   At points on the -axis, , so   In particular, the slope at both and is 2, so the tangent lines are parallel.   "
-},
-{
-  "id": "ex-when-implicit-needed",
-  "level": "2",
-  "url": "sec-derivative-implicit.html#ex-when-implicit-needed",
-  "type": "Example",
-  "number": "2.6.8",
-  "title": "When Do We Need Implicit Differentiation?",
-  "body": " When Do We Need Implicit Differentiation?   Explain how to determine when implicit differentiation is needed to find , as opposed to using the standard differentiation methods covered earlier. Provide an example where implicit differentiation is required and one where it is not.    Implicit differentiation is needed when is not given explicitly as a function of , or when the equation mixes and in a way that makes solving for difficult or undesirable. In these cases, we treat as a function of and differentiate both sides with respect to , remembering that derivatives of expressions involving must include a factor of .  For example, the equation defines a circle. Solving for gives , which is possible but splits into two functions. Implicit differentiation gives , so , which works on the whole circle (except where ).  On the other hand, if is already given explicitly, such as , then standard differentiation rules apply directly and there is no need for implicit differentiation. In this example, the Chain Rule gives .   "
+  "url": "sec-derivative-implicit.html#ex-implicit-when-needed",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Explain how to decide when implicit differentiation is needed to find , as opposed to using the standard differentiation rules for explicit functions.  In your explanation, include:   One example where implicit differentiation is required.  One example where implicit differentiation is not required, and standard rules apply directly.     If you have a equation then you can just use the normal way but if is not given explicitly as a function of , and it is not easy to solve for a then implicit differentiation should be used   Example of when implicit differentiation is not needed:     Example of when implicit differentiation is needed:       "
 },
 {
   "id": "ex-geom-meaning-slope",
   "level": "2",
   "url": "sec-derivative-implicit.html#ex-geom-meaning-slope",
-  "type": "Example",
-  "number": "2.6.9",
-  "title": "Geometric Meaning of <span class=\"process-math\">\\(y'=5\\)<\/span>.",
-  "body": " Geometric Meaning of   A student uses implicit differentiation on a curve and finds that at the point . Explain the geometric meaning of this result as it relates to the graph of the curve.    The derivative at means that the tangent line to the curve at that point has slope 5. Geometrically, the curve is increasing at , and near that point the graph rises about 5 units vertically for every 1 unit horizontally (using the usual interpretation of slope).  Equivalently, if we zoom in close enough around , the curve looks nearly like the tangent line, and that tangent line has equation    "
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  A student applies implicit differentiation to a curve and finds that at the point .  Explain the geometric meaning of this result in terms of the graph of the curve. Your explanation should describe what this value tells you about the tangent line and the behavior of the curve near the point.    The value at means that the tangent line to the curve at that point has slope . Geometrically, the curve is increasing at , and very close to that point the graph rises about units vertically for every unit horizontally.   "
+},
+{
+  "id": "tf-imp-ap-05",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-05",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If , then implicit differentiation is required to find .     True. Since appears on both sides of the equation, it is not possible to isolate as an explicit function of without also having on the right side. Therefore, implicit differentiation is required to find .   "
+},
+{
+  "id": "tf-imp-ap-01",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-01",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If , then .     True. Differentiating both sides with respect to gives Rearranging and solving for yields    "
+},
+{
+  "id": "tf-imp-ap-04",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-04",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If , then .     False. Differentiating both sides with respect to gives Rearranging and solving for yields    "
+},
+{
+  "id": "tf-imp-ap-07",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-07",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If , then .     False. Differentiating both sides with respect to gives Rearranging and solving for yields    "
+},
+{
+  "id": "tf-imp-ap-09",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-09",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  If , then at the slope of the tangent line is .     False. Differentiating both sides with respect to gives Plugging in gives which simplifies to Solving for yields    "
+},
+{
+  "id": "tf-imp-ap-11",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-11",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  If at a point on a curve defined implicitly, then the tangent line at that point is horizontal.     True. A slope of zero indicates that the tangent line is horizontal at that point on the curve.   "
+},
+{
+  "id": "tf-imp-ap-12",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-12",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  If is undefined at a point on a curve defined implicitly, then the tangent line at that point is vertical.     False. While an undefined derivative often indicates a vertical tangent line, it can also occur at points where the curve has a cusp or corner. Therefore, an undefined derivative does not always imply a vertical tangent line.   "
+},
+{
+  "id": "tf-imp-ap-13",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-13",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  If , then the curve has a vertical tangent at points where .     True. Differentiating both sides with respect to gives Rearranging and solving for yields At points where , the derivative is undefined, indicating a possible vertical tangent line. We must check if such points lie on the curve. Setting in the original equation gives , so the points and are on the curve and we can verify with a graph that they have vertical tangents.   "
+},
+{
+  "id": "tf-imp-ap-14",
+  "level": "2",
+  "url": "sec-derivative-implicit.html#tf-imp-ap-14",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  If , then at the second derivative is .     False. Differentiating both sides with respect to gives Solving for yields Differentiating again with respect to gives Substituting the value of and evaluating at gives    "
 },
 {
   "id": "sec-derivative-inverse",
@@ -3256,7 +3544,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.7",
   "title": "Inverse Functions and Their Derivatives",
-  "body": " Inverse Functions and Their Derivatives    Students should recognize that implicit differentiation can be used to find derivatives of inverse functions.  Students should be able to apply the implicit differentiation technique in moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.  Students should be able to apply the derivative rules for , , and in simple to moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.     Implicit Differentiation and Inverse Functions  Implicit differentiation is especially useful for discovering derivative formulas for inverse functions. The general strategy is:    Start with an inverse relationship (for example, means ).    Differentiate both sides with respect to , treating as a function of .    Solve for , then rewrite the result in terms of .     We can use this method to derive formulas for , , , and also (the logarithm proof is often placed in a separate section).     Derivative Formulas for Inverse Trigonometric Functions   Derivative of   For ,     Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,      Derivative of   For ,     Let . Then . Differentiate:   Since and , we have , and   Therefore,      Derivative of   For all real ,     Let , so . Differentiate:   Use the identity and :       Straightforward Problems    Find and .    For , use the Chain Rule with outer function and inner function :   For , use the Chain Rule and the derivative of :       Determine the domain and find the derivative of .    For the expression to be defined, we need (so exists) and also . Solve :   So the domain is .  Differentiate using the Chain Rule:       Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .      More Challenging and Conceptual Problems    If , find .    Use the Chain Rule. Let , so .  First compute . Since is , apply the Chain Rule:   Now differentiate :   Evaluate at :       Suppose , where is a constant. For what value of do we have ?    Differentiate:   Evaluate at where :   Set this equal to 6:       Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Inverse Functions and Their Derivatives     "
+  "body": " Inverse Functions and Their Derivatives    Use implicit differentiation to derive the formula for the derivative of an inverse function.  Compute derivatives of functions involving logarithmic, trigonometric, and inverse trigonometric functions.  Interpret derivative values of inverse functions geometrically as slopes of tangent lines.    This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions and particularly the inverse trigonometric functions. If you feel a bit out of practice with inverse functions or trigonometric functions, it may be helpful to revisit those ideas before diving into the calculus. A strong foundation makes the new material much more approachable.   Review section on function inverses    Review section on trigonometric functions      Motivating Example and Strategy  Back in the section on exponentials and logs , we stated that the derivative of the natural logarithm function and said that we would prove it later... well now is later! We will use implicit differentiation to find the derivative of .    Create the formula for by using implicit differentiation.    Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,     Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function.   Finding the Derivative of an Inverse Function     Start with a differentiable function and its inverse . Then by the definition of inverse functions, .    Differentiate both sides with respect to , treating as a function of .    Solve for , then rewrite the result in terms of .      Now let's use this idea to find the formulas for the derivatives of various inverse trigonometric functions.    Derivatives of Inverse Trig Functions   Derivative of      Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,      Derivative of      Let . Then . Differentiate:   Since and , we have , and   Therefore,      Derivative of      Let , so . Differentiate:   Use the pythagorean identity and :      Notations of Inverse Trigonometric Functions  Note that some both , , and along with , , and are valid notations for the inverse trigonometric functions. We will use them interchangeably in our course. Students are expected to be comfortable with both notations.     Select Examples  Now that we have the formulas for the derivatives of various inverse functions, let's see some example of problems that would make reasonable homework, quiz, or exam questions.    Find and .    For , use the Chain Rule with outer function and inner function :   For , use the Chain Rule and the derivative of :       Find the derivative of .    Differentiate using the Chain Rule:       Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .      Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Inverse Functions and Their Derivatives      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.      .   False. The Chain Rule introduces a factor of 5.     If , then .   False. The derivative requires the Quotient Rule.       The derivative of is always less than 1.   True.     If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .     If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .     If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore      If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,      If has a horizontal tangent at , then has a vertical tangent at .   True.     If is increasing, then is decreasing.   False. Both are increasing.     Consider a function and its inverse as shown in the figure below. The function contains the point and contains the point . Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.   >  A function and its inverse , shown as reflections across the line .   A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue. The two graphs are mirror images of each other across the dashed diagonal line y equals x. A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4), illustrating the inverse relationship between the functions.        False. The slopes of the tangent lines at corresponding points of a function and its inverse are multiplicative inverses of each other, not negative reciprocals. Therefore, the tangent lines are not necessarily perpendicular. You can also sketch the tangent lines to see that they are not perpendicular.      "
 },
 {
   "id": "sec-derivative-inverse-2",
@@ -3265,50 +3553,68 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.7",
   "title": "",
-  "body": "  Students should recognize that implicit differentiation can be used to find derivatives of inverse functions.  Students should be able to apply the implicit differentiation technique in moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.  Students should be able to apply the derivative rules for , , and in simple to moderately complicated problems, including those requiring the use of the product, quotient, or chain rule.   "
+  "body": "  Use implicit differentiation to derive the formula for the derivative of an inverse function.  Compute derivatives of functions involving logarithmic, trigonometric, and inverse trigonometric functions.  Interpret derivative values of inverse functions geometrically as slopes of tangent lines.   "
 },
 {
-  "id": "rem-implicit-formulas",
+  "id": "ex-derivative-ln",
   "level": "2",
-  "url": "sec-derivative-inverse.html#rem-implicit-formulas",
-  "type": "Remark",
+  "url": "sec-derivative-inverse.html#ex-derivative-ln",
+  "type": "Example",
   "number": "2.7.1",
   "title": "",
-  "body": " We can use this method to derive formulas for , , , and also (the logarithm proof is often placed in a separate section).  "
+  "body": "  Create the formula for by using implicit differentiation.    Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,    "
+},
+{
+  "id": "insight-derivative-inverse-general",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#insight-derivative-inverse-general",
+  "type": "Strategy",
+  "number": "2.7.2",
+  "title": "Finding the Derivative of an Inverse Function.",
+  "body": " Finding the Derivative of an Inverse Function     Start with a differentiable function and its inverse . Then by the definition of inverse functions, .    Differentiate both sides with respect to , treating as a function of .    Solve for , then rewrite the result in terms of .     "
 },
 {
   "id": "thm-derivative-arcsin",
   "level": "2",
   "url": "sec-derivative-inverse.html#thm-derivative-arcsin",
   "type": "Theorem",
-  "number": "2.7.2",
+  "number": "2.7.3",
   "title": "Derivative of <span class=\"process-math\">\\(\\arcsin(x)\\)<\/span>.",
-  "body": " Derivative of   For ,     Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,    "
+  "body": " Derivative of      Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,    "
 },
 {
   "id": "thm-derivative-arccos",
   "level": "2",
   "url": "sec-derivative-inverse.html#thm-derivative-arccos",
   "type": "Theorem",
-  "number": "2.7.3",
+  "number": "2.7.4",
   "title": "Derivative of <span class=\"process-math\">\\(\\arccos(x)\\)<\/span>.",
-  "body": " Derivative of   For ,     Let . Then . Differentiate:   Since and , we have , and   Therefore,    "
+  "body": " Derivative of      Let . Then . Differentiate:   Since and , we have , and   Therefore,    "
 },
 {
   "id": "thm-derivative-arctan",
   "level": "2",
   "url": "sec-derivative-inverse.html#thm-derivative-arctan",
   "type": "Theorem",
-  "number": "2.7.4",
+  "number": "2.7.5",
   "title": "Derivative of <span class=\"process-math\">\\(\\arctan(x)\\)<\/span>.",
-  "body": " Derivative of   For all real ,     Let , so . Differentiate:   Use the identity and :    "
+  "body": " Derivative of      Let , so . Differentiate:   Use the pythagorean identity and :    "
+},
+{
+  "id": "remark-derivative-inverse-trig-domains",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#remark-derivative-inverse-trig-domains",
+  "type": "Remark",
+  "number": "2.7.6",
+  "title": "Notations of Inverse Trigonometric Functions.",
+  "body": " Notations of Inverse Trigonometric Functions  Note that some both , , and along with , , and are valid notations for the inverse trigonometric functions. We will use them interchangeably in our course. Students are expected to be comfortable with both notations.  "
 },
 {
   "id": "ex-deriv-ln-sin-arcsin",
   "level": "2",
   "url": "sec-derivative-inverse.html#ex-deriv-ln-sin-arcsin",
   "type": "Example",
-  "number": "2.7.5",
+  "number": "2.7.7",
   "title": "",
   "body": "  Find and .    For , use the Chain Rule with outer function and inner function :   For , use the Chain Rule and the derivative of :    "
 },
@@ -3317,36 +3623,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-inverse.html#ex-domain-derivative-sqrt-ln",
   "type": "Example",
-  "number": "2.7.6",
+  "number": "2.7.8",
   "title": "",
-  "body": "  Determine the domain and find the derivative of .    For the expression to be defined, we need (so exists) and also . Solve :   So the domain is .  Differentiate using the Chain Rule:    "
+  "body": "  Find the derivative of .    Differentiate using the Chain Rule:    "
 },
 {
   "id": "ex-arctan-slope-point",
   "level": "2",
   "url": "sec-derivative-inverse.html#ex-arctan-slope-point",
   "type": "Example",
-  "number": "2.7.7",
-  "title": "",
-  "body": "  Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .   "
-},
-{
-  "id": "ex-cos-ln-x2",
-  "level": "2",
-  "url": "sec-derivative-inverse.html#ex-cos-ln-x2",
-  "type": "Example",
-  "number": "2.7.8",
-  "title": "",
-  "body": "  If , find .    Use the Chain Rule. Let , so .  First compute . Since is , apply the Chain Rule:   Now differentiate :   Evaluate at :    "
-},
-{
-  "id": "ex-c-value",
-  "level": "2",
-  "url": "sec-derivative-inverse.html#ex-c-value",
-  "type": "Example",
   "number": "2.7.9",
   "title": "",
-  "body": "  Suppose , where is a constant. For what value of do we have ?    Differentiate:   Evaluate at where :   Set this equal to 6:    "
+  "body": "  Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .   "
 },
 {
   "id": "ex-inverse-derivative-general",
@@ -3356,6 +3644,96 @@ var ptx_lunr_docs = [
   "number": "2.7.10",
   "title": "",
   "body": "  Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,    "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-3",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-3",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "   .   False. The Chain Rule introduces a factor of 5.  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-4",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-4",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  If , then .   False. The derivative requires the Quotient Rule.    "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-5",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-5",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  The derivative of is always less than 1.   True.  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-6",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-6",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-7",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-7",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-8",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-8",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore   "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-9",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-9",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,   "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-10",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-10",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  If has a horizontal tangent at , then has a vertical tangent at .   True.  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-11",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-11",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  If is increasing, then is decreasing.   False. Both are increasing.  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-12",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-12",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Consider a function and its inverse as shown in the figure below. The function contains the point and contains the point . Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.   >  A function and its inverse , shown as reflections across the line .   A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue. The two graphs are mirror images of each other across the dashed diagonal line y equals x. A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4), illustrating the inverse relationship between the functions.        False. The slopes of the tangent lines at corresponding points of a function and its inverse are multiplicative inverses of each other, not negative reciprocals. Therefore, the tangent lines are not necessarily perpendicular. You can also sketch the tangent lines to see that they are not perpendicular.   "
 },
 {
   "id": "sec-derivative-ww",
