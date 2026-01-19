@@ -366,7 +366,7 @@
         </p>
 
         <me>
-          \displaystyle f'(y)\,y'=1.
+          \displaystyle f'(y)\cdot y'=1.
         </me>
 
         <p>
@@ -429,9 +429,180 @@
 
       </introduction>
 
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \frac{d}{dx}\bigl(\arcsin(5x)\bigr)=\frac{1}{\sqrt{1-25x^2}}</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em> The Chain Rule introduces a factor of 5.</p></solution>
+  </exercise>
+
 <exercise>
-  
+  <statement>
+    <p>
+      If <m>f(x)=\dfrac{\arccos(x)}{\ln(x)}</m>, then <m>f'(x)=\dfrac{-x}{\sqrt{1-x^2}}</m>.
+    </p>
+  </statement>
+  <solution><p><em>False.</em> The derivative requires the Quotient Rule.</p>
+  <me>f'(x)=\dfrac{-\dfrac{1}{\sqrt{1-x^2}}\ln(x)-\arccos(x)\cdot \dfrac{1}{x}}{(\ln(x))^2}</me>
+  </solution>
 </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        The derivative of <m>\arctan(x)</m> is always less than 1.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    Since <m>\displaystyle \frac{d}{dx}\bigl(\arctan(x)\bigr)=\frac{1}{1+x^2}</m> and <m>1+x^2 \geq 1</m> for all real <m>x</m>, 
+    the derivative is always less than or equal to 1, and equal to 1 only at <m>x=0</m>.</p></solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f(x) = \arcsin(2x)</m>, then <m>\displaystyle f'(1) \geq 0</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+      The derivative of <m>f(x) = \arcsin(2x)</m> is <m>f'(x) = \dfrac{2}{\sqrt{1-4x^2}}</m>.
+      At <m>x=1</m>, the expression under the square root is negative, so <m>f'(1)</m> is undefined.
+      Therefore, <m>f'(1) \ne 0</m>.</p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f(x)=\arctan(x)</m>, then at <m>x=1</m> the tangent line equation is given by <m>y = \tfrac12(x-1) + \dfrac{\pi}{4}</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em> The derivative of <m>f(x)=\arctan(x)</m> is <m>f'(x)=\dfrac{1}{1+x^2}</m>.
+      At <m>x=1</m>, <m>f'(1)=\tfrac12</m> and <m>f(1)=\tfrac{\pi}{4}</m>, so the tangent line equation is
+      <m>y=\tfrac12(x-1)+\tfrac{\pi}{4}</m>.</p></solution>
+  </exercise>
+
+
+ <exercise>
+    <statement>
+      <p>
+        If <m>f</m> is one-to-one and differentiable and contains the point <m>(a,b)</m> and <m>f^{-1}</m> is its inverse, then
+        <m>(f^{-1})'(b) = \dfrac{1}{f'(a)}</m>.
+      </p>
+    </statement>
+    <solution><p><em>
+True. 
+    </em>
+  Consider <m>y=f^{-1}(x)</m>, then <m>f(y)=x </m> so <m>f'(y)\cdot y'=1</m>, which gives <m>y'=\dfrac{1}{f'(y)}</m>.
+    Since  <m>a=f^{-1}(b)</m>, therefore <me>(f^{-1})'(b)=\dfrac{1}{f'(a)}.</me>
+  
+  </p></solution>
+  </exercise>
+
+ 
+<exercise>
+  <statement>
+    <p>
+      If <m>f(x)=2^x+x</m> and note that <m>f(1)=3</m>, then <m>(f^{-1})'(3)=\dfrac{1}{2\ln(2)+1} </m>.
+    </p>
+  </statement>
+  <solution><p><em>True.</em>
+    Consider <m>y=f^{-1}(x)</m>, then <m>f(y)=x </m> so <m>f'(y)\cdot y'=1</m>, which gives <m>y'=\dfrac{1}{f'(y)}</m>.
+    Since <m>y=f^{-1}(3)</m>, we have <m>f(y)=3</m>, so <m>y=1</m>.
+    Therefore, <m>(f^{-1})'(3)=\dfrac{1}{f'(1)}=\dfrac{1}{2\ln(2)+1}.</m>
+  </p></solution>
+</exercise>
+
+  
+  <exercise>
+    <statement>
+      <p>
+        If <m>f</m> has a horizontal tangent at <m>x=a</m>, then <m>f^{-1}</m> has a vertical tangent at <m>x=f(a)</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+      If <m>f</m> has a horizontal tangent at <m>x=a</m>, then <m>f'(a)=0</m>.
+      Since <m>(f^{-1})'(f(a))=\dfrac{1}{f'(a)}</m>, it follows that <m>(f^{-1})'(f(a))=\dfrac{1}{0}</m>, which is undefined.
+      Therefore, <m>f^{-1}</m> has a vertical tangent at <m>x=f(a)</m>. We can also verify this by sketching the graphs of <m>f</m> and <m>f^{-1}</m> and
+      remembering that they are reflections across the line <m>y=x</m>.
+    
+    
+    </p></solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f</m> is increasing, then <m>f^{-1}</m> is decreasing.
+      </p>
+    </statement>
+    <solution><p><em>False.</em> Both are increasing.</p>
+    <p>If <m>f</m> is increasing, then <m>f'(x) &gt; 0</m> for all <m>x</m> in the domain of <m>f</m>.
+      Since <m>(f^{-1})'(f(x)) = \dfrac{1}{f'(x)}</m>, and <m>f'(x) &gt; 0</m>, it follows that <m>(f^{-1})'(f(x)) &gt; 0</m>.
+      Therefore, <m>f^{-1}</m> is also increasing.</p>
+    </solution>
+  </exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+  Consider a function <m>f</m> and its inverse <m>f^{-1}</m> as shown in the figure below. The function <m>f</m> contains the point <m>(4,2)</m> and <m>f^{-1}</m> contains the point 
+  <m>(2,4)</m>. Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.
+    </p> <p> 
+  <sidebyside width="60%">>
+    
+        <figure xml:id="fig-inv-tangent01">
+<caption>
+  A function <m>f</m> and its inverse <m>f^{-1}</m>, shown as reflections across the line <m>y=x</m>.
+</caption>
+
+  <image source="images/invGraph01.PNG">
+<shortdescription>
+  A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue.
+  The two graphs are mirror images of each other across the dashed diagonal line y equals x.
+  A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4),
+  illustrating the inverse relationship between the functions.
+</shortdescription>
+  </image>
+</figure>
+  </sidebyside>
+
+</p>
+  </statement>
+
+  <solution>
+    <p>
+      False. The slopes of the tangent lines at corresponding points of a function and its inverse are
+      multiplicative inverses of each other, not negative reciprocals.
+      Therefore, the tangent lines are not necessarily perpendicular.
+      You can also sketch the tangent lines to see that they are not perpendicular.
+    </p>
+  </solution>
+
+</exercise>
+
+
+
+ 
+
+
+
+
+
+
+  
+
+
+
+
 
 
     </exercisegroup>  

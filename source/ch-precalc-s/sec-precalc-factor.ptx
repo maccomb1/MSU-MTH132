@@ -251,7 +251,7 @@ x^2 - 10x + 25 &amp; = &amp; (x - 5)^2
     is not equal to 1, and it works equally well when it is.
   </p>
 
-  <principle xml:id="pr-ac-method">
+  <insight xml:id="pr-ac-method">
     <statement>
       <p>
         To factor <m>ax^2 + bx + c</m> using the AC method:
@@ -263,7 +263,7 @@ x^2 - 10x + 25 &amp; = &amp; (x - 5)^2
         <li>Factor by grouping.</li>
       </ol>
     </statement>
-  </principle>
+  </insight>
 
   <example>
     <statement>

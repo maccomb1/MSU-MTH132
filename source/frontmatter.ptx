@@ -10,15 +10,19 @@
   <bibinfo>
 
     <author>
-      <personname>R. Maccombs</personname>
+      <personname>Ryan Maccombs</personname>
       <department>Department of Mathematics</department>
       <institution>Michigan State University</institution>
     </author>    
+
+    <credit>
+      <title>Contributing Authors</title>
     <author>
-      <personname>P. Magyar</personname>
+      <personname>Peter Magyar</personname>
       <department>Department of Mathematics</department>
       <institution>Michigan State University</institution>
     </author>
+    </credit>
 
     <date>
       <today />
