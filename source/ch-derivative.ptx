@@ -3,11 +3,33 @@
 <chapter xml:id="ch-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Derivative</title>
 
-  <!-- 
+  
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+Derivatives provide a precise way to measure how one quantity changes with respect to another. They are defined 
+using limits and give meaning to concepts such as instantaneous rate of change and the slope of a tangent line. 
+Before we apply derivatives to a wide range of real-world problems, it is essential to understand where derivatives 
+come from and how they are computed.
+</p>
+
+    <p>
+In this chapter, we focus on developing the derivative itself. We begin with motivation and the limit-based 
+definition of the derivative, then build a toolkit of differentiation rules. Along the way, we learn how to 
+differentiate trigonometric, exponential, and logarithmic functions, apply the Chain Rule, work with implicitly 
+defined relationships, and compute derivatives of inverse functions. The emphasis here is on understanding the 
+structure of derivatives and gaining fluency with the core techniques.
+</p>
+
+    <p>
+Major applications of derivatives are intentionally postponed until the next chapter. In Chapter 3, we will 
+use derivatives to study motion, related rates, linear approximation, optimization, and the overall behavior 
+of functions. Mastering the ideas and skills in this chapter provides the foundation needed to apply 
+derivatives effectively and confidently in those settings.  
+</p>
+    
+    
   </introduction>
--->
+
   
   <!-- include sections -->
   <xi:include href="./ch-derivative-s/sec-derivative-intro.ptx" />
