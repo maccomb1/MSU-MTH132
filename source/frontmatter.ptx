@@ -57,7 +57,44 @@
   </colophon>
   -->
 
+ <acknowledgement>
+<p>
+  This project was made possible in large part by the support of Michigan State University and the College of Natural Science through the 
+  EDGE Fellowship awarded in Spring 2026. That fellowship provided the time and space necessary to meaningfully develop and 
+  refine these course notes, and I am deeply grateful for that support.
+</p>
 
+<p> 
+I am also indebted to Dr. Peter Magyar, who authored the first version of <url href="https://users.math.msu.edu/users/magyarp/Math132-Notes/Math132-Notes.pdf" visual="true">the MTH 132 course notes</url>.
+In many places, this text builds directly on his structure, ideas, and exposition, and his work served as an essential foundation for what appears here.
+</p>
+
+<p> 
+  Thanks are also due to the SIGMAA WEB group at Mathfest 2025, whose sessions clearly demonstrated how approachable and powerful <pretext /> 
+  can be. Their work and examples played an important role in lowering the barrier to getting this project off the ground.
+</p>
+
+<p>
+If you spot any errors or unclear explanations please let me know. 
+I welcome suggestions for improvement and corrections, and I would be grateful if readers would share feedback using the following
+ <url href="https://forms.gle/YpmAhEjVguPXamtw6" visual="true">Google Feedback Form</url>.
+
+
+</p>
+
+<p>   </p>
+
+    <attribution>
+    <line>Ryan Maccombs</line>
+    <line>Michigan State University</line>
+    <line>January 2026</line>
+    <line>
+    <email>maccomb1@msu.edu</email>
+    </line>
+    </attribution>
+
+
+ </acknowledgement>
 
 
   <preface >
@@ -72,8 +109,8 @@
     <li><term>Definitions</term> of important concepts.</li>
     <li><term>Theorems</term> that summarize key results.</li>
     <li><term>Examples</term> to illustrate ideas and methods.</li>
-    <li><term>Exercises</term> for you to practice and check understanding.</li>
     <li><term>Remarks</term> and <term>alerts</term> that highlight common pitfalls or important insights.</li>
+    <li><term>Exercises</term> for you to practice and check understanding.</li>
   </ul>
 
   <p><alert>How to Approach Each Section</alert></p>
@@ -96,9 +133,11 @@
 <p><alert>Technology and Tools</alert></p>
 <p>This book makes use of graphs, figures, and sometimes interactive elements (such as Desmos activities). 
   A scientific calculator or graphing tool may be helpful, especially when you are first learning new concepts. 
-  However, calculators should not become a crutch—the main goal is to understand the ideas and be able to carry out the work by hand. 
+  
+  That said, calculators should not replace understanding. The primary goal is to develop conceptual insight and 
+  the ability to carry out computations by hand. 
   Be aware that calculator use may be restricted or not allowed at all on quizzes and exams, 
-  so practicing without a calculator is important preparation.</p>
+  so practicing without a calculator an important part of your preparation.</p>
 
   <p><alert>Connections to Course Materials</alert></p>
   <p>This book works alongside other course resources:</p>
@@ -112,20 +151,23 @@
   <p><alert>Study Strategies</alert></p>
   <p>Some tips for success:</p>
   <ul>
-    <li>Practice actively: work through examples, don’t just read them.</li>
+    <li><url href="https://launchings.blogspot.com/2011/07/the-worst-way-to-teach.html" visual="true">Practice actively</url>: 
+      work through examples, don’t just read them.</li>
     <li>Collaborate with classmates and discuss your reasoning.</li>
     <li>Always show your work and leave answers in exact form when possible.</li>
     <li>Interpret results and think about what they mean in context.</li>
   </ul>
 
   <p><alert>Accessibility and Flexibility</alert></p>
-  <p>This book has been designed with accessibility in mind. Figures include alt text, and the content can be navigated electronically or in print. Use whichever format supports your learning best.</p>
+  <p>This book has been designed with accessibility in mind. Figures include alt text, and the content can be navigated easily.</p>
 
   <p><alert>Final Encouragement</alert></p>
   <p>Remember: this book is a tool, not just a reference. Stay engaged, practice often, and combine it with the support of your instructors, TAs, and the Math Learning Center. With steady effort, you will succeed in calculus.</p>
 
   </preface>
 
+
+  <!-- 
   <preface >
     <title>Instructors: How to Use this Book</title>
 
@@ -187,7 +229,7 @@
 
   </preface>
 
-
+-->
     
 </frontmatter>
 
