@@ -3751,7 +3751,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Motion in Physics",
-  "body": " Motion in Physics    Translate between physical, geometric, numerical, and algebraic meanings of the derivative.  Interpret motion quantities , , , and using derivatives.  Use graphs and tables to estimate rates of change and interpret what they mean in context.     Conceptual Levels of the Derivative  Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning. Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting where our tools apply, then translate the result back to the original context.  Our key concept so far has been the derivative . For a function , the derivative has several complementary meanings.    Physical:  is the rate of change of with respect to . For a specific input , describes how fast changes near .   Geometric:  is the slope of the tangent line to the graph at .   Numerical: we approximate the derivative using a difference quotient where is small. As , the average rate of change approaches the instantaneous rate of change.   Algebraic: we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition      Functions of Motion  Many applications of derivatives involve motion. In this subsection, all quantities are functions of time .    Position (or displacement) : distance past a reference point (for example, in feet) at time seconds.   Velocity  : the rate of change of position (ft\/sec). Velocity may be negative. Speed is .   Acceleration  : the rate of change of velocity (ft\/sec 2 ). A useful benchmark is one gee , about ft\/sec 2 , the free-fall acceleration near Earth’s surface.   Jerk  : the rate of change of acceleration (ft\/sec 3 ).     Car Stopping  Consider a car whose speedometer data is represented by the velocity graph below. Remember: velocity is the derivative of position, so the level of is the slope of .   Velocity data from a car’s speedometer.    Since , a constant velocity corresponds to a distance graph with constant slope. If the velocity suddenly drops to zero, the distance graph becomes flat.   Distance consistent with the velocity graph.    Acceleration is the derivative of velocity, , so the slope of the velocity graph becomes the level of the acceleration graph. The transition is very steep, so the average acceleration over that short time is large.    Acceleration is near zero except during the sudden stop.     These graphs describe a car going from about 40 mph to 0 in about 0.1 seconds. That is not normal braking. It indicates a crash. The deceleration is roughly gees for a brief moment, which would feel like many times your weight pressing into the seatbelt.     Braking Techniques and Jerk  Now imagine braking steadily at a traffic light, slowing at a constant rate until the car stops. Here the velocity decreases linearly, and the acceleration is roughly constant.    A steady stop: acceleration is roughly constant (left), velocity decreases linearly (middle), and distance levels off smoothly (right).      Even if the deceleration is not large, an abrupt change in acceleration produces a noticeable jolt. That jolt corresponds to a large value of jerk for a brief moment.  To reduce jerk, the acceleration should change gradually: squeeze the brake down and release it smoothly. This makes the acceleration graph rise and fall instead of jumping suddenly.   Smoother braking reduces jerk, but it may require a longer stopping time to keep peak deceleration reasonable.       Smoother changes in acceleration often require a longer stopping distance and time. In driving terms: if you want a gentle stop without a jolt, you usually need to begin braking earlier.     The Ballistic Equation  A basic model for vertical motion under constant gravity is the ballistic equation :   Here is the initial height, is the initial velocity, and is a positive constant representing the strength of gravity. Differentiating reveals the relationships among position, velocity, acceleration, and jerk.     Under standard gravity ft\/sec 2 , suppose a ball is thrown straight up from height ft. How large must be so that the ball hits the ground after seconds? How high does it go?    The model is . Landing at means .   so and therefore ft\/sec.  The velocity is . The ball reaches its highest point when .   The height at that time is ft.  For the velocity is positive (the ball rises). For the velocity is negative (the ball falls).     The graph of is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.     Practice: Translating Between Levels    A position graph is increasing and concave down on an interval. Describe what this says about the signs of and on that interval.      A velocity graph is above the -axis and decreasing. What can you conclude about the motion of the object? Include a statement about speed and acceleration.      Suppose a car’s acceleration graph has a sharp jump at a moment in time. What does this suggest about the jerk? Give a real-world interpretation.     "
+  "body": " Motion in Physics    Translate between physical, geometric, numerical, and algebraic meanings of the derivative.  Interpret motion quantities , , , and using derivatives.  Use graphs and tables to estimate rates of change and interpret what they mean in context.    Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning. Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting where our tools apply, then translate the result back to the original context.  Our key concept so far has been the derivative . For a function , the derivative has several complementary meanings.    Physical:  is the rate of change of with respect to . For a specific input , describes how fast changes near .   Geometric:  is the slope of the tangent line to the graph at .   Numerical: we approximate the derivative using a difference quotient where is small. As , the average rate of change approaches the instantaneous rate of change.   Algebraic: we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition     The Basics of Motion  Many applications of derivatives involve motion. In this section, all quantities are functions of time . Here is a basic set of definitions:   Position, Velocity, Acceleration, and Jerk   Let denote the position of an object at time , measured relative to a fixed reference point. The following quantities describe different aspects of the object’s motion:    Position  : the distance past a reference point (for example, in feet) at time seconds.   Velocity  : the rate of change of position, measured in feet per second. Velocity may be negative if the object is moving in the negative direction. The speed of the object is the absolute value of velocity, .   Acceleration  : the rate of change of velocity, measured in feet per second squared. A useful benchmark is one gee , approximately ft\/sec , which is the acceleration due to gravity near Earth’s surface.   Jerk  : the rate of change of acceleration, measured in feet per second cubed.       A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft\/sec. Its vertical position (height) at time seconds is modeled by .    Find formulas for the ball’s velocity and acceleration .    Differentiating gives and       When is does the ball have a velocity of zero? What is special about that moment in terms of the ball's height?    The ball has zero velocity when Solving gives seconds. At that time, the ball reaches its maximum height before falling back down.      When does the ball hit the ground? What are its velocity and acceleration right before it strikes the ground?    The ball hits the ground when : Or equivalently, Solving this quadratic equation (using the quadratic formula) gives Since time must be positive, we take the larger solution: seconds (approximately 4.1 seconds).  The velocity just before impact is (approximately -67 ft\/sec, indicating downward motion).  The acceleration is constant: at all times, including right before the ball strikes the ground.      The graph of in is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.     Consider the velocity graph of a particle moving along a line given below.   Velocity graph for a particle moving along a line.   A graph of velocity versus time for a particle moving along a line. At time 0, the velocity is 4. From time 0 to time 2, the velocity decreases linearly from 4 to 1. From time 2 to time 4, the velocity remains constant at 1. From time 4 to time 6, the velocity decreases linearly from 1 to negative 1, crossing zero at time 5.    Use this to answer the following questions:     When is the particle moving at a constant speed? Explain how you know.    The particle is moving at a constant speed from time to . In interval notation this is . This is because the velocity graph is flat (horizontal) during this interval, indicating that the velocity is not changing.      When is the particle changing direction? Explain how you know.    The particle is changing direction at time . This is because the velocity graph crosses the -axis at this time, indicating that the velocity changes from positive to negative. A change in the sign of velocity indicates a change in direction of motion.      What is the acceleration of the particle at time ?    The acceleration at time is the slope of the velocity graph at that time. From the graph, we see that from to , the velocity decreases linearly from 4 to 1. The slope of this line segment is Therefore, the acceleration at time is units per second squared.       Speeding Up and Slowing Down  Bleh    Total Distance Traveled  Bleh    Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Motion in Physics      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     "
 },
 {
   "id": "sec-derivApp-motion-2",
@@ -3763,130 +3763,49 @@ var ptx_lunr_docs = [
   "body": "  Translate between physical, geometric, numerical, and algebraic meanings of the derivative.  Interpret motion quantities , , , and using derivatives.  Use graphs and tables to estimate rates of change and interpret what they mean in context.   "
 },
 {
-  "id": "conceptual-levels-3",
+  "id": "sec-derivApp-motion-4",
   "level": "2",
-  "url": "sec-derivApp-motion.html#conceptual-levels-3",
+  "url": "sec-derivApp-motion.html#sec-derivApp-motion-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "derivative "
 },
 {
-  "id": "fig-stop-v-1",
+  "id": "def-motion-quantities",
   "level": "2",
-  "url": "sec-derivApp-motion.html#fig-stop-v-1",
-  "type": "Figure",
+  "url": "sec-derivApp-motion.html#def-motion-quantities",
+  "type": "Definition",
   "number": "3.1.1",
-  "title": "",
-  "body": " Velocity data from a car’s speedometer.   "
+  "title": "Position, Velocity, Acceleration, and Jerk.",
+  "body": " Position, Velocity, Acceleration, and Jerk   Let denote the position of an object at time , measured relative to a fixed reference point. The following quantities describe different aspects of the object’s motion:    Position  : the distance past a reference point (for example, in feet) at time seconds.   Velocity  : the rate of change of position, measured in feet per second. Velocity may be negative if the object is moving in the negative direction. The speed of the object is the absolute value of velocity, .   Acceleration  : the rate of change of velocity, measured in feet per second squared. A useful benchmark is one gee , approximately ft\/sec , which is the acceleration due to gravity near Earth’s surface.   Jerk  : the rate of change of acceleration, measured in feet per second cubed.    "
 },
 {
-  "id": "fig-stop-s-1",
+  "id": "ex-ball-motion-derivatives",
   "level": "2",
-  "url": "sec-derivApp-motion.html#fig-stop-s-1",
-  "type": "Figure",
+  "url": "sec-derivApp-motion.html#ex-ball-motion-derivatives",
+  "type": "Example",
   "number": "3.1.2",
   "title": "",
-  "body": " Distance consistent with the velocity graph.   "
-},
-{
-  "id": "fig-stop-a-1",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#fig-stop-a-1",
-  "type": "Figure",
-  "number": "3.1.3",
-  "title": "",
-  "body": " Acceleration is near zero except during the sudden stop.   "
-},
-{
-  "id": "rem-crash-interpretation",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#rem-crash-interpretation",
-  "type": "Remark",
-  "number": "3.1.4",
-  "title": "",
-  "body": " These graphs describe a car going from about 40 mph to 0 in about 0.1 seconds. That is not normal braking. It indicates a crash. The deceleration is roughly gees for a brief moment, which would feel like many times your weight pressing into the seatbelt.  "
-},
-{
-  "id": "fig-stop-a-v-s-2",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#fig-stop-a-v-s-2",
-  "type": "Figure",
-  "number": "3.1.5",
-  "title": "",
-  "body": " A steady stop: acceleration is roughly constant (left), velocity decreases linearly (middle), and distance levels off smoothly (right).     "
-},
-{
-  "id": "fig-stop-a-v-s-3",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#fig-stop-a-v-s-3",
-  "type": "Figure",
-  "number": "3.1.6",
-  "title": "",
-  "body": " Smoother braking reduces jerk, but it may require a longer stopping time to keep peak deceleration reasonable.     "
-},
-{
-  "id": "rem-braking-tradeoff",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#rem-braking-tradeoff",
-  "type": "Remark",
-  "number": "3.1.7",
-  "title": "",
-  "body": " Smoother changes in acceleration often require a longer stopping distance and time. In driving terms: if you want a gentle stop without a jolt, you usually need to begin braking earlier.  "
-},
-{
-  "id": "ballistic-equation-2",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ballistic-equation-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "ballistic equation "
-},
-{
-  "id": "ex-throw-ball-4-seconds",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-throw-ball-4-seconds",
-  "type": "Example",
-  "number": "3.1.8",
-  "title": "",
-  "body": "  Under standard gravity ft\/sec 2 , suppose a ball is thrown straight up from height ft. How large must be so that the ball hits the ground after seconds? How high does it go?    The model is . Landing at means .   so and therefore ft\/sec.  The velocity is . The ball reaches its highest point when .   The height at that time is ft.  For the velocity is positive (the ball rises). For the velocity is negative (the ball falls).   "
+  "body": "  A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft\/sec. Its vertical position (height) at time seconds is modeled by .    Find formulas for the ball’s velocity and acceleration .    Differentiating gives and       When is does the ball have a velocity of zero? What is special about that moment in terms of the ball's height?    The ball has zero velocity when Solving gives seconds. At that time, the ball reaches its maximum height before falling back down.      When does the ball hit the ground? What are its velocity and acceleration right before it strikes the ground?    The ball hits the ground when : Or equivalently, Solving this quadratic equation (using the quadratic formula) gives Since time must be positive, we take the larger solution: seconds (approximately 4.1 seconds).  The velocity just before impact is (approximately -67 ft\/sec, indicating downward motion).  The acceleration is constant: at all times, including right before the ball strikes the ground.    "
 },
 {
   "id": "rem-trajectory-vs-height",
   "level": "2",
   "url": "sec-derivApp-motion.html#rem-trajectory-vs-height",
   "type": "Remark",
-  "number": "3.1.9",
+  "number": "3.1.3",
   "title": "",
-  "body": " The graph of is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.  "
+  "body": " The graph of in is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.  "
 },
 {
-  "id": "ex-translation-1",
+  "id": "ex-velocity-particle-graph",
   "level": "2",
-  "url": "sec-derivApp-motion.html#ex-translation-1",
-  "type": "Checkpoint",
-  "number": "3.1.10",
+  "url": "sec-derivApp-motion.html#ex-velocity-particle-graph",
+  "type": "Example",
+  "number": "3.1.4",
   "title": "",
-  "body": "  A position graph is increasing and concave down on an interval. Describe what this says about the signs of and on that interval.   "
-},
-{
-  "id": "ex-translation-2",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-translation-2",
-  "type": "Checkpoint",
-  "number": "3.1.11",
-  "title": "",
-  "body": "  A velocity graph is above the -axis and decreasing. What can you conclude about the motion of the object? Include a statement about speed and acceleration.   "
-},
-{
-  "id": "ex-translation-3",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-translation-3",
-  "type": "Checkpoint",
-  "number": "3.1.12",
-  "title": "",
-  "body": "  Suppose a car’s acceleration graph has a sharp jump at a moment in time. What does this suggest about the jerk? Give a real-world interpretation.   "
+  "body": "  Consider the velocity graph of a particle moving along a line given below.   Velocity graph for a particle moving along a line.   A graph of velocity versus time for a particle moving along a line. At time 0, the velocity is 4. From time 0 to time 2, the velocity decreases linearly from 4 to 1. From time 2 to time 4, the velocity remains constant at 1. From time 4 to time 6, the velocity decreases linearly from 1 to negative 1, crossing zero at time 5.    Use this to answer the following questions:     When is the particle moving at a constant speed? Explain how you know.    The particle is moving at a constant speed from time to . In interval notation this is . This is because the velocity graph is flat (horizontal) during this interval, indicating that the velocity is not changing.      When is the particle changing direction? Explain how you know.    The particle is changing direction at time . This is because the velocity graph crosses the -axis at this time, indicating that the velocity changes from positive to negative. A change in the sign of velocity indicates a change in direction of motion.      What is the acceleration of the particle at time ?    The acceleration at time is the slope of the velocity graph at that time. From the graph, we see that from to , the velocity decreases linearly from 4 to 1. The slope of this line segment is Therefore, the acceleration at time is units per second squared.    "
 },
 {
   "id": "sec-derivApp-related",
