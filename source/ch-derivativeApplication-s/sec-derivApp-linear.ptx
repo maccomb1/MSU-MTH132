@@ -6,33 +6,39 @@
   <objectives>
     <ul>
       <li>
-        Students should understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near <m>x=a</m>.
+        Understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near <m>x=a</m>.
       </li>
       <li>
-        Students should recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.
+        Recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.
       </li>
       <li>
-        Students should be able to apply the linear approximation formula
-        <m>\displaystyle L(x)=f(a)+f'(a)(x-a)</m>
-        in simple to moderately complicated problems.
+        Apply the linear approximation formula
+        <m>\displaystyle L(x)=f(a)+f'(a)(x-a)</m>.
       </li>
       <li>
-        Students should see how linearization can be used to motivate (and ultimately prove) L’Hôpital’s Rule.
-      </li>
-      <li>
-        Students should recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms
+        Recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms
         <m>\displaystyle \frac{0}{0}</m>
         and
         <m>\displaystyle \frac{\infty}{\infty}</m>.
       </li>
       <li>
-        Students should be able to apply L’Hôpital’s Rule in simple to moderately complicated problems, including those that require up to two applications.
+        Apply L’Hôpital’s Rule in limit problems, including those that require up to two applications.
       </li>
     </ul>
   </objectives>
 
   <subsection xml:id="linearization-definition">
     <title>Linearization</title>
+
+<p>
+  One of the most useful applications of derivatives is <term>linearization</term>, which uses tangent lines to
+  approximate the values of a function.  Earlier, we interpreted the derivative at a point as the slope of the
+  tangent line to a curve.  Linearization builds on this idea by treating the tangent line as a stand-in
+  for the function itself.  When we focus on values of <m>x</m> near a chosen point, the tangent line provides
+  a simple and accurate approximation of the function.
+</p>
+
+
 
     <definition xml:id="def-linearization">
       <statement>
@@ -51,8 +57,34 @@
 
     <p>
       The idea is that when <m>x</m> is close to <m>a</m>, the curve <m>y=f(x)</m> and its tangent line
-      have very similar values. So <m>L(x)</m> can be used to approximate <m>f(x)</m> near <m>x=a</m>.
+      have very similar values. So <m>L(x)\approx f(x)</m> near <m>x=a</m>.
     </p>
+
+    <p> 
+      To see this idea in action consider the GIF below which shows us zooming in on the curve and that the curve and tangent line become indistinguishable.
+    </p>
+
+
+    <sidebyside width="80%">
+      <figure>
+<caption>
+  Zooming in on a curve near a point of tangency, illustrating how the graph of the function becomes indistinguishable 
+  from its tangent line at sufficiently small scales. This visual shows why using the linearization, 
+  the tangent line, is an effective strategy for estimating the function’s values at nearby <m>x</m>-values.
+</caption>
+        <image width="100%" source="images/GraphZoomingIn.gif">
+<shortdescription>
+  An animated graph showing a red curve and a purple straight line touching at a single point. As the view zooms in closer to that point, 
+  the red curve and the purple line overlap more closely until they are nearly indistinguishable. This illustrates that near a point of tangency, 
+  a differentiable function behaves almost linearly, which justifies using the tangent line to approximate the function at nearby points.
+</shortdescription>
+        </image>
+      </figure>
+    </sidebyside>
+ 
+
+
+
 
     <example xml:id="ex-linearization-sqrt">
       <statement>
@@ -64,7 +96,7 @@
 
       <solution>
         <p>
-          First compute <m>f(1)</m> and <m>f'(1)</m>.
+          First let's build the linearization by computing <m>f(1)</m> and <m>f'(1)</m>.
         </p>
 
         <me>
@@ -78,7 +110,7 @@
 \amp=\amp \displaystyle \frac{1}{2\sqrt{x+3}}.
 \end{array}
         </me>
-
+<p> So therefore </p> 
         <me>
 \begin{array}{rcl}
 \displaystyle f(1)
@@ -90,7 +122,7 @@
         </me>
 
         <p>
-          Therefore the linearization at <m>a=1</m> is
+          Which gives the linearization at <m>a=1</m> as
         </p>
 
         <me>
@@ -138,6 +170,11 @@
 \amp=\amp \displaystyle 2.0125.
 \end{array}
         </me>
+
+<p> Using a calculator, we find that <m>\sqrt{3.98}\approx 1.99499</m> and <m>\sqrt{4.05}\approx 2.01246</m>, so our approximations are quite close! Indeed the 
+linearization provides a good estimate for values of <m>x</m> near <m>a=1</m>.
+        </p>
+
       </solution>
     </example>
 
@@ -165,8 +202,19 @@
         <me>
           \displaystyle e^{0.1}=f(0.1)\approx L(0.1)=1+0.1=1.1.
         </me>
+
+        <p>Again we can check with a calculator: <m>e^{0.1}\approx 1.10517</m>, so our approximation is quite good!</p>
       </solution>
     </example>
+
+<p>
+  Linearization gives us a powerful way to understand how functions behave near a point by replacing them with their tangent lines.
+  This local linear behavior turns out to be especially useful when studying limits that initially appear undefined.
+  
+</p>
+
+
+
   </subsection>
 
   <subsection xml:id="lhopital-statement">
@@ -196,14 +244,52 @@
           provided the limit on the right exists (or is infinite).
         </p>
       </statement>
+      <proof>
+        <title>Formal Proof</title>
+        <p>
+          A formal proof of L’Hôpital’s Rule requires something called the Cauchy Mean Value Theorem, along with a careful
+          analysis of limits. This is beyond the scope of our class. However students interested in seeing a formal proof are encouraged to pursue 
+          a math major/minor and take MTH 320 (or equivalent) where this proof is typically covered.
+        </p>
+          
+      </proof>
+      <proof>
+        <title>Idea of a Proof</title>
+          <p> 
+            We will focus on the <m>\tfrac{0}{0}</m> case, that is where <m>f(c)=0</m> and <m>g(c)=0</m>. The case where both approach <m>\pm\infty</m> is similar 
+        </p>
+        <p>
+          The linearizations of <m>f</m> and <m>g</m> at <m>x=c</m> are
+        </p>
+        <me>L_f(x) =  0+f'(c)(x-c) = f'(c)(x-c)
+        </me>
+        <me>L_g(x) =  0+g'(c)(x-c) = g'(c)(x-c)
+        </me>
+        <p> Since again, <m>f(c)=0</m> and <m>g(c)=0</m>.
+        </p>
+        <p>
+          Now as we have seen earlier, differentiable functions behave like their tangent lines when we are close to the point of tangency.
+          Therefore, as <m>x\to c</m>, we have
+        </p>
+        <me>\displaystyle \frac{f(x)}{g(x)} \approx \frac{L_f(x)}{L_g(x)} = \frac{f'(c)(x-c)}{g'(c)(x-c)} = \frac{f'(c)}{g'(c)}.
+        </me>
+        <p>
+          Therefore, we can conclude that 
+        </p>
+        <me>\displaystyle \lim_{x\to c} \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)} = \lim_{x\to c} \frac{f'(x)}{g'(x)}.
+        </me>
+      </proof>
     </theorem>
 
-    <remark xml:id="rem-linearization-motivation">
-      <p>
-        One way to motivate L’Hôpital’s Rule is through linearization:
-        near a point, differentiable functions behave like their tangent lines, and tangent lines are linear.
-        This idea can be used to build an argument for why replacing <m>f</m> and <m>g</m> by <m>f'</m> and <m>g'</m>
-        can preserve the limiting ratio in indeterminate forms.
+
+    <remark xml:id="rem-lhopital-indeterminate-forms">
+      <p> 
+        We have previously called the expressions <m>\frac{0}{0}</m> and <m> \frac{\infty}{\infty}</m> "<em>meaningless expressions</em>". 
+        A more precise term for these expressions that you may encounter on the internet or other texts is <term>indeterminate forms</term>.
+      </p> 
+        <p> 
+        This is because these expressions do not have a well-defined value and must be evaluated on a case-by-case basis. We will 
+        see cases where <m> \frac{0}{0}</m> evaluates to 2 but other cases where it evaluates to 5 or 0 or does not exist at all.
       </p>
     </remark>
 
@@ -275,10 +361,251 @@
 
         <p>
           Therefore, <m>\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}=\infty</m>.
-          In words: <m>e^x</m> grows faster than <m>x^2</m>.
         </p>
       </solution>
     </example>
   </subsection>
+
+
+
+<subsection xml:id="additional-worked-problems-derivApp-Linear">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-derivApp-placeholder">
+        Additional Worked-Out Problems for Linear Approximation and L’Hopital’s Rule
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-derivApp-Linear-tf">
+  <title>Practice / Study Problems</title>
+
+
+
+<exercisegroup xml:id="eg-derivApp-linear-tf">
+  <title>True/False Questions</title>
+
+  <introduction>
+    <p>
+      Determine whether each statement is true or false.
+      Justify your answers.
+    </p>
+  </introduction>
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f</m> is differentiable at <m>x=a</m>, then the linearization <m>L(x)</m> gives an exact value of <m>f(x)</m>
+        for all <m>x</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+      The linearization <m>L(x)</m> is only an approximation of <m>f(x)</m> near <m>x=a</m>. It is not exact for all values of <m>x</m>.
+    
+    </p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        The linearization of <m>f(x)=\ln x</m> at <m>x=1</m> is <m>L(x)=x-1</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    We can verify this by computing <m>f(1)=\ln 1=0</m> and <m>f'(x)=\frac{1}{x}</m>, so <m>f'(1)=1</m>. Therefore, the linearization at <m>x=1</m> is
+    <m>L(x)=f(1)+f'(1)(x-1)=0+1(x-1)=x-1</m>.
+    </p></solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        The limit <m>\displaystyle \lim_{x\to 0}\frac{\sin x}{x}</m> can be evaluated using L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    Although previously we have used geometric arguments to evaluate this limit, we can also apply L’Hôpital’s Rule since 
+    both the numerator and denominator approach 0 as <m>x\to 0</m>. Applying L’Hôpital’s Rule gives
+    <me>\displaystyle \lim_{x\to 0}\frac{\sin x}{x} = \lim_{x\to 0}\frac{\cos x}{1} = 1</me>.
+
+    </p></solution>
+  </exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+        Using linearization for <m>f(x)=\sqrt{x}</m> at <m>x=9</m> tells us that <m>\sqrt{9.02}\approx 3+\tfrac{1}{50}</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+    The linearization of <m>f(x)=\sqrt{x}</m> at <m>x=9</m> is <m>L(x)=\frac{1}{6}(x-9)+3</m>. Evaluating at <m>x=9.02</m>, we get:
+    <me>L(9.02)=\frac{1}{6}(9.02-9)+3=\frac{1}{6}\left(\frac{1}{50}\right)+3=\frac{1}{300}+3</me>.
+    
+    </p></solution>
+  </exercise>
+
+
+<exercise>
+    <statement>
+      <p>
+        Consider the table of values below
+        </p>
+        <me> 
+\begin{array}{|c|c|c|c|c|}
+\hline
+x \amp f(x) \amp f'(x) \amp g(x) \amp g'(x) \\
+\hline
+2 \amp 0 \amp 3 \amp 4 \amp 1 \\
+\hline
+\end{array}
+        </me>
+        <p> 
+        Evaluating <m>\displaystyle \lim_{x\to 2}\frac{f(x)}{g(x)}</m> yields <m>3</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+    As <m>x\to 2</m>, we have <m>f(2)=0</m> and <m>g(2)=4</m>, so the limit evaluates to
+    <me>\displaystyle \lim_{x\to 2}\frac{f(x)}{g(x)} = \frac{f(2)}{g(2)} = \frac{0}{4} = 0</me>. 
+    Notice that L’Hôpital’s Rule does not apply here since the limit is not an indeterminate form.
+    </p></solution>
+  </exercise>
+
+
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        Using linearization at <m>x=0</m>, <m>e^{0.05}\approx 1.05</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Using linearization at <m>x=4</m>, <m>\sqrt{3.9}\approx 1.95</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em></p></solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        Using linearization at <m>x=1</m>, <m>\ln(0.98)\approx -0.02</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Using linearization at <m>x=0</m>, <m>\sin(0.1)\approx 0.1</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Using linearization at <m>x=0</m>, <m>\cos(0.1)\approx 1-0.1</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em></p></solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{e^x-1}{x}=1</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2}=1</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>False.</em></p></solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to \infty}\frac{x}{e^x}=0</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to \infty}\frac{x^2}{e^x}=0</m> after two applications of L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x}=0</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2}=\frac12</m> using L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em></p></solution>
+  </exercise>
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{\ln(1+x)}{x^2}=1</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>False.</em></p></solution>
+  </exercise>
+
+
+
+
+      </exercisegroup>
+      </exercises>
+
 
 </section>
