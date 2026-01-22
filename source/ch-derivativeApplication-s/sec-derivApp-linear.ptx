@@ -444,15 +444,105 @@ linearization provides a good estimate for values of <m>x</m> near <m>a=1</m>.
 <exercise>
     <statement>
       <p>
-        Using linearization for <m>f(x)=\sqrt{x}</m> at <m>x=9</m> tells us that <m>\sqrt{9.02}\approx 3+\tfrac{1}{50}</m>.
+        Using linearization for <m>f(x)=\sqrt{x}</m> at <m>x=9</m> tells us that <m>\sqrt{9.02}\approx 3+\tfrac{1}{300}</m>.
       </p>
     </statement>
-    <solution><p><em>False.</em>
+    <solution><p><em>True.</em>
     The linearization of <m>f(x)=\sqrt{x}</m> at <m>x=9</m> is <m>L(x)=\frac{1}{6}(x-9)+3</m>. Evaluating at <m>x=9.02</m>, we get:
     <me>L(9.02)=\frac{1}{6}(9.02-9)+3=\frac{1}{6}\left(\frac{1}{50}\right)+3=\frac{1}{300}+3</me>.
     
     </p></solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Using a linearization at <m>x=8</m> gives us <m>\sqrt[3]{8.1}\approx 2.01</m>.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+    The linearization of <m>f(x)=\sqrt[3]{x}</m> at <m>x=8</m> is <m>L(x)=\frac{1}{12}(x-8)+2</m>. Evaluating at <m>x=8.1</m>, we get:
+    <me>L(8.1)=\frac{1}{12}(8.1-8)+2=\frac{1}{12}(0.1)+2=\frac{1}{120}+2</me>.
+    This is not equal to <m>2.01 = 2 + \frac{1}{100}</m>.    
+    </p></solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        Using a linearization at <m>x=0</m> gives us <m>\sin(0.1)\approx 0.1</m>.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    The linearization of <m>f(x)=\sin x</m> at <m>x=0</m> is <m>L(x)=x</m>. Therefore, <m>\sin(0.1)\approx 0.1</m>. 
+    Remember that for trigonometric functions, the angle must be in radians!
+    </p></solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{e^x-1}{x}=1</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    Plugging in <m>x=0</m> gives the indeterminate form <m>\frac{0}{0}</m>. Applying L’Hôpital’s Rule, we get
+    <me>\displaystyle \lim_{x\to 0}\frac{e^x-1}{x} = \lim_{x\to 0}\frac{e^x}{1} = e^0 = 1</me>.
+    </p></solution>
+  </exercise>
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x}=0</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    Plugging in <m>x=0</m> gives the indeterminate form <m>\frac{0}{0}</m>. Applying L’Hôpital’s Rule, we get
+    <me>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x} = \lim_{x\to 0}\frac{\sin x}{1} = \sin(0) = 0</me>.
+    
+    </p></solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2}=\frac12</m> using L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>True.</em>
+    Plugging in <m>x=0</m> gives the indeterminate form <m>\frac{0}{0}</m>. Applying L’Hôpital’s Rule, we get
+    <me>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2} = \lim_{x\to 0}\frac{\sin x}{2x}</me>.
+    When we attempt to plug in <m>x=0</m> again, we still get the indeterminate form <m>\frac{0}{0}</m>, so we apply L’Hôpital’s Rule again:
+    <me>\displaystyle \lim_{x\to 0}\frac{\sin x}{2x} = \lim_{x\to 0}\frac{\cos x}{2} = \frac{\cos(0)}{2} = \frac12</me>.
+    Therefore, the original limit is <m>\frac12</m>.
+    </p></solution>
+  </exercise>
+
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        <m>\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2}=1</m> by L’Hôpital’s Rule.
+      </p>
+    </statement>
+    <solution><p><em>False.</em>
+    Plugging in <m>x=0</m> gives the indeterminate form <m>\frac{0}{0}</m>. Applying L’Hôpital’s Rule, we get
+    <me>\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2} = \lim_{x\to 0}\frac{\cos x}{2x}</me>.
+    When we attempt to plug in <m>x=0</m> again, we get <m>\frac{1}{0}</m>, which is undefined. Therefore, the limit does not exist.
+    </p></solution>
+  </exercise>
+
+
+
 
 
 <exercise>
@@ -482,124 +572,40 @@ x \amp f(x) \amp f'(x) \amp g(x) \amp g'(x) \\
 
 
 
-
-
-
-  <exercise>
+<exercise>
     <statement>
       <p>
-        Using linearization at <m>x=0</m>, <m>e^{0.05}\approx 1.05</m>.
+        Consider the graph below that shows <m>f(x)</m> and <m>g(x)</m>. 
       </p>
+     <figure>
+        <caption>
+  Two functions, <m>f(x)</m> and <m>g(x)</m>, both passing through the origin, shown together with their tangent lines at <m>x=0</m>.
+</caption>
+
+        <image source="images/LHgraph01.PNG" width="80%">
+        <shortdescription>
+          A coordinate plane showing two curves and their tangent lines at the origin.
+          The red curve, labeled f of x, passes through the point (0,0).
+          Its tangent line at x equals 0 is shown as a dashed red line with slope negative two.
+          The blue curve, labeled g of x, also passes through the point (0,0).
+          Its tangent line at x equals 0 is shown as a dashed blue line with slope three.
+        </shortdescription>
+
+        </image>
+     </figure>
+      <p>Then <m>\displaystyle \lim_{x\to 0}\frac{f(x)}{g(x)} = -\dfrac{2}{3}</m>.</p> 
+
     </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        Using linearization at <m>x=4</m>, <m>\sqrt{3.9}\approx 1.95</m>.
-      </p>
-    </statement>
-    <solution><p><em>False.</em></p></solution>
-  </exercise>
+    <solution><p><em>True.</em>
+    Since both functions pass through the origin, we have <m>f(0)=0</m> and <m>g(0)=0</m>, so this is an indeterminate form
+    <m>\displaystyle \frac{0}{0}</m>. Applying L’Hôpital’s Rule, we get
+    <me>\displaystyle \lim_{x\to 0}\frac{f(x)}{g(x)} = \lim_{x\to 0}\frac{f'(x)}{g'(x)} = \frac{f'(0)}{g'(0)} = \frac{-2}{3}</me>
+    Based on the slopes of the tangent lines shown in the graph.
+    
+    </p></solution>
+</exercise>
 
 
-
-  <exercise>
-    <statement>
-      <p>
-        Using linearization at <m>x=1</m>, <m>\ln(0.98)\approx -0.02</m>.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        Using linearization at <m>x=0</m>, <m>\sin(0.1)\approx 0.1</m>.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        Using linearization at <m>x=0</m>, <m>\cos(0.1)\approx 1-0.1</m>.
-      </p>
-    </statement>
-    <solution><p><em>False.</em></p></solution>
-  </exercise>
-
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to 0}\frac{e^x-1}{x}=1</m> by L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2}=1</m> by L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>False.</em></p></solution>
-  </exercise>
-
-
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to \infty}\frac{x}{e^x}=0</m> by L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to \infty}\frac{x^2}{e^x}=0</m> after two applications of L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x}=0</m> by L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2}=\frac12</m> using L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>True.</em></p></solution>
-  </exercise>
-
-
-
-
-  <exercise>
-    <statement>
-      <p>
-        <m>\displaystyle \lim_{x\to 0}\frac{\ln(1+x)}{x^2}=1</m> by L’Hôpital’s Rule.
-      </p>
-    </statement>
-    <solution><p><em>False.</em></p></solution>
-  </exercise>
 
 
 

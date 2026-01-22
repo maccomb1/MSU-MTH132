@@ -11,8 +11,6 @@
     </ul>
   </objectives>
 
-  <subsection xml:id="conceptual-levels">
-    <title>Conceptual Levels of the Derivative</title>
 
     <p>
       Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning.
@@ -27,54 +25,172 @@
 
     <ul>
       <li>
-        <emph>Physical:</emph> <m>\displaystyle \frac{dy}{dx}=f'(x)</m> is the rate of change of <m>y</m> with respect to <m>x</m>.
+        <em>Physical:</em> <m>\displaystyle \frac{dy}{dx}=f'(x)</m> is the rate of change of <m>y</m> with respect to <m>x</m>.
         For a specific input <m>a</m>, <m>f'(a)</m> describes how fast <m>f(x)</m> changes near <m>x=a</m>.
       </li>
       <li>
-        <emph>Geometric:</emph> <m>f'(a)</m> is the slope of the tangent line to the graph <m>y=f(x)</m> at <m>(a,f(a))</m>.
+        <em>Geometric:</em> <m>f'(a)</m> is the slope of the tangent line to the graph <m>y=f(x)</m> at <m>(a,f(a))</m>.
       </li>
       <li>
-        <emph>Numerical:</emph> we approximate the derivative using a difference quotient
+        <em>Numerical:</em> we approximate the derivative using a difference quotient
         <me>
           f'(a)\cong \frac{\Delta f}{\Delta x}=\frac{f(a+h)-f(a)}{h},
         </me>
         where <m>h</m> is small. As <m>\Delta x=h\to 0</m>, the average rate of change approaches the instantaneous rate of change.
       </li>
       <li>
-        <emph>Algebraic:</emph> we compute derivatives from formulas using derivative rules and known basic derivatives.
+        <em>Algebraic:</em> we compute derivatives from formulas using derivative rules and known basic derivatives.
         Occasionally we return to the definition
         <me>
           f'(a)=\displaystyle \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
         </me>
       </li>
     </ul>
-  </subsection>
+    
+
 
   <subsection xml:id="functions-of-motion">
-    <title>Functions of Motion</title>
+    <title>The Basics of Motion</title>
 
     <p>
-      Many applications of derivatives involve motion. In this subsection, all quantities are functions of time <m>t</m>.
+      Many applications of derivatives involve motion. In this section, all quantities are functions of time <m>t</m>. Here is a basic set of definitions:
+    </p>
+
+<definition xml:id="def-motion-quantities">
+  <title>Position, Velocity, Acceleration, and Jerk</title>
+
+  <statement>
+    <p>
+      Let <m>s(t)</m> denote the position of an object at time <m>t</m>, measured relative to a fixed reference point.
+      The following quantities describe different aspects of the object’s motion:
     </p>
 
     <ul>
       <li>
-        <emph>Position</emph> (or displacement) <m>s(t)</m>: distance past a reference point (for example, in feet) at time <m>t</m> seconds.
+        <term>Position</term> <m>s(t)</m>:
+        the distance past a reference point (for example, in feet) at time <m>t</m> seconds.
       </li>
+
       <li>
-        <emph>Velocity</emph> <m>v(t)=\displaystyle \frac{ds}{dt}=s'(t)</m>: the rate of change of position (ft/sec). Velocity may be negative.
-        <emph>Speed</emph> is <m>|v(t)|</m>.
+        <term>Velocity</term>
+        <m>v(t)=\displaystyle \frac{ds}{dt}=s'(t)</m>:
+        the rate of change of position, measured in feet per second.
+        Velocity may be negative if the object is moving in the negative direction.
+        The <term>speed</term> of the object is the absolute value of velocity,
+        <m>|v(t)|</m>.
       </li>
+
       <li>
-        <emph>Acceleration</emph> <m>a(t)=\displaystyle \frac{dv}{dt}=\frac{d^2 s}{dt^2}=s''(t)</m>:
-        the rate of change of velocity (ft/sec<sup>2</sup>).
-        A useful benchmark is <term>one gee</term>, about <m>32</m> ft/sec<sup>2</sup>, the free-fall acceleration near Earth’s surface.
+        <term>Acceleration</term>
+        <m>a(t)=\displaystyle \frac{dv}{dt}=\frac{d^2 s}{dt^2}=s''(t)</m>:
+        the rate of change of velocity, measured in feet per second squared.
+        A useful benchmark is <term>one gee</term>, approximately
+        <m>32</m> ft/sec<m>^2</m>, which is the acceleration due to gravity near Earth’s surface.
       </li>
+
       <li>
-        <emph>Jerk</emph> <m>j(t)=\displaystyle \frac{da}{dt}=\frac{d^3 s}{dt^3}=s'''(t)</m>:
-        the rate of change of acceleration (ft/sec<sup>3</sup>).
+        <term>Jerk</term>
+        <m>j(t)=\displaystyle \frac{da}{dt}=\frac{d^3 s}{dt^3}=s'''(t)</m>:
+        the rate of change of acceleration, measured in feet per second cubed.
       </li>
     </ul>
+  </statement>
+</definition>
+
+<example xml:id="ex-ball-motion-derivatives">
+  <introduction>
+    <p>
+      A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft/sec.
+      Its vertical position (height) at time <m>t</m> seconds is modeled by
+      <me>s(t)=-16t^2+64t+6</me>.
+    </p> 
+    </introduction>
+
+      <task><statement>
+        <p>
+      Find formulas for the ball’s velocity <m>v(t)</m> and acceleration <m>a(t)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+      Differentiating gives
+      <me>
+\displaystyle v(t) = s'(t) = -32t + 64 \text{ ft/sec,}
+      </me>
+      and
+      <me>
+\displaystyle a(t) = v'(t) = s''(t) = -32 \text{ ft/sec}^2.
+      </me>
+        </p>
+      </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            When is does the ball have a velocity of zero? What is special about that moment in terms of the ball's height?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The ball has zero velocity when
+            <me>
+\displaystyle 0 = v(t) = -32t + 64.
+            </me>
+            Solving gives <m>t=2</m> seconds. At that time, the ball reaches its maximum height before falling back down.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            When does the ball hit the ground? What are its velocity and acceleration right before it strikes the ground?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The ball hits the ground when <m>s(t)=0</m>:
+            <me>
+\displaystyle 0 = -16t^2 + 64t + 6.
+            </me>
+            Or equivalently,
+            <me>
+\displaystyle 8t^2 - 32t - 3 = 0.
+            </me>
+            Solving this quadratic equation (using the quadratic formula) gives
+            <me> 
+              t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac{\sqrt{70}}{4}.
+            </me>
+            Since time must be positive, we take the larger solution: 
+            <m>t = 2 + \frac{\sqrt{70}}{4}</m> seconds (approximately 4.1 seconds).
+          </p>
+          <p>
+            The velocity just before impact is
+            <me>
+              \begin{array}{rcl}
+\displaystyle v\left(2 + \frac{\sqrt{70}}{4}\right) \amp =\amp -32\left(2 + \frac{\sqrt{70}}{4}\right) + 64\\
+\amp =\amp -8\sqrt{70} \text{ ft/sec}
+              \end{array}
+            </me>
+            (approximately -67 ft/sec, indicating downward motion).
+          </p>
+          <p>
+            The acceleration is constant:
+            <me>
+\displaystyle a(t) = -32 \text{ ft/sec}^2
+            </me>
+            at all times, including right before the ball strikes the ground.
+          </p>
+        </solution>
+
+
+      </task>
+
+</example>
+
+      
+
+
   </subsection>
 
   <subsection xml:id="car-stopping">
@@ -82,7 +198,7 @@
 
     <p>
       Consider a car whose speedometer data is represented by the velocity graph below.
-      Remember: velocity is the derivative of position, so the <emph>level</emph> of <m>v(t)</m> is the <emph>slope</emph> of <m>s(t)</m>.
+      Remember: velocity is the derivative of position, so the <em>level</em> of <m>v(t)</m> is the <em>slope</em> of <m>s(t)</m>.
     </p>
 
     <figure xml:id="fig-stop-v-1">
@@ -101,8 +217,8 @@
     </figure>
 
     <p>
-      Acceleration is the derivative of velocity, <m>a(t)=v'(t)</m>, so the <emph>slope</emph> of the velocity graph becomes the
-      <emph>level</emph> of the acceleration graph. The transition is very steep, so the average acceleration over that short time is large.
+      Acceleration is the derivative of velocity, <m>a(t)=v'(t)</m>, so the <em>slope</em> of the velocity graph becomes the
+      <em>level</em> of the acceleration graph. The transition is very steep, so the average acceleration over that short time is large.
     </p>
 
     <me>
