@@ -4030,7 +4030,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Linear Approximation and L’Hopital’s Rule",
-  "body": " Linear Approximation and L'Hopital's Rule    Students should understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near .  Students should recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.  Students should be able to apply the linear approximation formula in simple to moderately complicated problems.  Students should see how linearization can be used to motivate (and ultimately prove) L’Hôpital’s Rule.  Students should recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms and .  Students should be able to apply L’Hôpital’s Rule in simple to moderately complicated problems, including those that require up to two applications.     Linearization    Let be differentiable at . The linearization of at is the linear function   The graph of is the tangent line to at the point .    The idea is that when is close to , the curve and its tangent line have very similar values. So can be used to approximate near .    Find the linearization of at . Use it to approximate and .    First compute and .    Therefore the linearization at is   To approximate , notice that , so   Similarly, , so       Use linear approximation to estimate .    Let and linearize at (since is close to ). We have and , so .   Therefore,       L’Hôpital’s Rule   L’Hôpital’s Rule (Informal Statement)   Suppose and are differentiable near (except possibly at ), and near . If   then   provided the limit on the right exists (or is infinite).     One way to motivate L’Hôpital’s Rule is through linearization: near a point, differentiable functions behave like their tangent lines, and tangent lines are linear. This idea can be used to build an argument for why replacing and by and can preserve the limiting ratio in indeterminate forms.     Compute .    As , we have and , so this is an indeterminate form . Apply L’Hôpital’s Rule:       Compute . (This requires two applications of L’Hôpital’s Rule.)    As , both and go to , so this is an indeterminate form . Apply L’Hôpital’s Rule:   This is still , so apply L’Hôpital’s Rule again:   Therefore, . In words: grows faster than .     "
+  "body": " Linear Approximation and L'Hopital's Rule    Understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near .  Recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.  Apply the linear approximation formula .  Recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms and .  Apply L’Hôpital’s Rule in limit problems, including those that require up to two applications.     Linearization  One of the most useful applications of derivatives is linearization , which uses tangent lines to approximate the values of a function. Earlier, we interpreted the derivative at a point as the slope of the tangent line to a curve. Linearization builds on this idea by treating the tangent line as a stand-in for the function itself. When we focus on values of near a chosen point, the tangent line provides a simple and accurate approximation of the function.    Let be differentiable at . The linearization of at is the linear function   The graph of is the tangent line to at the point .    The idea is that when is close to , the curve and its tangent line have very similar values. So near .  To see this idea in action consider the GIF below which shows us zooming in on the curve and that the curve and tangent line become indistinguishable.    Zooming in on a curve near a point of tangency, illustrating how the graph of the function becomes indistinguishable from its tangent line at sufficiently small scales. This visual shows why using the linearization, the tangent line, is an effective strategy for estimating the function’s values at nearby -values.   An animated graph showing a red curve and a purple straight line touching at a single point. As the view zooms in closer to that point, the red curve and the purple line overlap more closely until they are nearly indistinguishable. This illustrates that near a point of tangency, a differentiable function behaves almost linearly, which justifies using the tangent line to approximate the function at nearby points.       Find the linearization of at . Use it to approximate and .    First let's build the linearization by computing and .   So therefore   Which gives the linearization at as   To approximate , notice that , so   Similarly, , so   Using a calculator, we find that and , so our approximations are quite close! Indeed the linearization provides a good estimate for values of near .      Use linear approximation to estimate .    Let and linearize at (since is close to ). We have and , so .   Therefore,   Again we can check with a calculator: , so our approximation is quite good!    Linearization gives us a powerful way to understand how functions behave near a point by replacing them with their tangent lines. This local linear behavior turns out to be especially useful when studying limits that initially appear undefined.    L’Hôpital’s Rule   L’Hôpital’s Rule (Informal Statement)   Suppose and are differentiable near (except possibly at ), and near . If   then   provided the limit on the right exists (or is infinite).    Formal Proof  A formal proof of L’Hôpital’s Rule requires something called the Cauchy Mean Value Theorem, along with a careful analysis of limits. This is beyond the scope of our class. However students interested in seeing a formal proof are encouraged to pursue a math major\/minor and take MTH 320 (or equivalent) where this proof is typically covered.    Idea of a Proof  We will focus on the case, that is where and . The case where both approach is similar  The linearizations of and at are    Since again, and .  Now as we have seen earlier, differentiable functions behave like their tangent lines when we are close to the point of tangency. Therefore, as , we have   Therefore, we can conclude that      We have previously called the expressions and \" meaningless expressions \". A more precise term for these expressions that you may encounter on the internet or other texts is indeterminate forms .  This is because these expressions do not have a well-defined value and must be evaluated on a case-by-case basis. We will see cases where evaluates to 2 but other cases where it evaluates to 5 or 0 or does not exist at all.     Compute .    As , we have and , so this is an indeterminate form . Apply L’Hôpital’s Rule:       Compute . (This requires two applications of L’Hôpital’s Rule.)    As , both and go to , so this is an indeterminate form . Apply L’Hôpital’s Rule:   This is still , so apply L’Hôpital’s Rule again:   Therefore, .      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Linear Approximation and L’Hopital’s Rule      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     If is differentiable at , then the linearization gives an exact value of for all .   False. The linearization is only an approximation of near . It is not exact for all values of .     The linearization of at is .   True. We can verify this by computing and , so . Therefore, the linearization at is .     The limit can be evaluated using L’Hôpital’s Rule.   True. Although previously we have used geometric arguments to evaluate this limit, we can also apply L’Hôpital’s Rule since both the numerator and denominator approach 0 as . Applying L’Hôpital’s Rule gives .     Using linearization for at tells us that .   True. The linearization of at is . Evaluating at , we get: .     Using a linearization at gives us .   False. The linearization of at is . Evaluating at , we get: . This is not equal to .     Using a linearization at gives us .   True. The linearization of at is . Therefore, . Remember that for trigonometric functions, the angle must be in radians!      by L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get .      by L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get .      using L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get . When we attempt to plug in again, we still get the indeterminate form , so we apply L’Hôpital’s Rule again: . Therefore, the original limit is .      by L’Hôpital’s Rule.   False. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get . When we attempt to plug in again, we get , which is undefined. Therefore, the limit does not exist.     Consider the table of values below   Evaluating yields .   False. As , we have and , so the limit evaluates to . Notice that L’Hôpital’s Rule does not apply here since the limit is not an indeterminate form.     Consider the graph below that shows and .   Two functions, and , both passing through the origin, shown together with their tangent lines at .   A coordinate plane showing two curves and their tangent lines at the origin. The red curve, labeled f of x, passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed red line with slope negative two. The blue curve, labeled g of x, also passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed blue line with slope three.    Then .   True. Since both functions pass through the origin, we have and , so this is an indeterminate form . Applying L’Hôpital’s Rule, we get Based on the slopes of the tangent lines shown in the graph.     "
 },
 {
   "id": "sec-derivApp-linear-2",
@@ -4039,7 +4039,16 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.3",
   "title": "",
-  "body": "  Students should understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near .  Students should recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.  Students should be able to apply the linear approximation formula in simple to moderately complicated problems.  Students should see how linearization can be used to motivate (and ultimately prove) L’Hôpital’s Rule.  Students should recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms and .  Students should be able to apply L’Hôpital’s Rule in simple to moderately complicated problems, including those that require up to two applications.   "
+  "body": "  Understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near .  Recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.  Apply the linear approximation formula .  Recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms and .  Apply L’Hôpital’s Rule in limit problems, including those that require up to two applications.   "
+},
+{
+  "id": "linearization-definition-2",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#linearization-definition-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "linearization "
 },
 {
   "id": "def-linearization",
@@ -4051,47 +4060,56 @@ var ptx_lunr_docs = [
   "body": "  Let be differentiable at . The linearization of at is the linear function   The graph of is the tangent line to at the point .   "
 },
 {
+  "id": "linearization-definition-6-1",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#linearization-definition-6-1",
+  "type": "Figure",
+  "number": "3.3.2",
+  "title": "",
+  "body": " Zooming in on a curve near a point of tangency, illustrating how the graph of the function becomes indistinguishable from its tangent line at sufficiently small scales. This visual shows why using the linearization, the tangent line, is an effective strategy for estimating the function’s values at nearby -values.   An animated graph showing a red curve and a purple straight line touching at a single point. As the view zooms in closer to that point, the red curve and the purple line overlap more closely until they are nearly indistinguishable. This illustrates that near a point of tangency, a differentiable function behaves almost linearly, which justifies using the tangent line to approximate the function at nearby points.   "
+},
+{
   "id": "ex-linearization-sqrt",
   "level": "2",
   "url": "sec-derivApp-linear.html#ex-linearization-sqrt",
   "type": "Example",
-  "number": "3.3.2",
+  "number": "3.3.3",
   "title": "",
-  "body": "  Find the linearization of at . Use it to approximate and .    First compute and .    Therefore the linearization at is   To approximate , notice that , so   Similarly, , so    "
+  "body": "  Find the linearization of at . Use it to approximate and .    First let's build the linearization by computing and .   So therefore   Which gives the linearization at as   To approximate , notice that , so   Similarly, , so   Using a calculator, we find that and , so our approximations are quite close! Indeed the linearization provides a good estimate for values of near .   "
 },
 {
   "id": "ex-linearization-exp-01",
   "level": "2",
   "url": "sec-derivApp-linear.html#ex-linearization-exp-01",
   "type": "Example",
-  "number": "3.3.3",
+  "number": "3.3.4",
   "title": "",
-  "body": "  Use linear approximation to estimate .    Let and linearize at (since is close to ). We have and , so .   Therefore,    "
+  "body": "  Use linear approximation to estimate .    Let and linearize at (since is close to ). We have and , so .   Therefore,   Again we can check with a calculator: , so our approximation is quite good!   "
 },
 {
   "id": "thm-lhopital",
   "level": "2",
   "url": "sec-derivApp-linear.html#thm-lhopital",
   "type": "Theorem",
-  "number": "3.3.4",
+  "number": "3.3.5",
   "title": "L’Hôpital’s Rule (Informal Statement).",
-  "body": " L’Hôpital’s Rule (Informal Statement)   Suppose and are differentiable near (except possibly at ), and near . If   then   provided the limit on the right exists (or is infinite).   "
+  "body": " L’Hôpital’s Rule (Informal Statement)   Suppose and are differentiable near (except possibly at ), and near . If   then   provided the limit on the right exists (or is infinite).    Formal Proof  A formal proof of L’Hôpital’s Rule requires something called the Cauchy Mean Value Theorem, along with a careful analysis of limits. This is beyond the scope of our class. However students interested in seeing a formal proof are encouraged to pursue a math major\/minor and take MTH 320 (or equivalent) where this proof is typically covered.    Idea of a Proof  We will focus on the case, that is where and . The case where both approach is similar  The linearizations of and at are    Since again, and .  Now as we have seen earlier, differentiable functions behave like their tangent lines when we are close to the point of tangency. Therefore, as , we have   Therefore, we can conclude that    "
 },
 {
-  "id": "rem-linearization-motivation",
+  "id": "rem-lhopital-indeterminate-forms",
   "level": "2",
-  "url": "sec-derivApp-linear.html#rem-linearization-motivation",
+  "url": "sec-derivApp-linear.html#rem-lhopital-indeterminate-forms",
   "type": "Remark",
-  "number": "3.3.5",
+  "number": "3.3.6",
   "title": "",
-  "body": " One way to motivate L’Hôpital’s Rule is through linearization: near a point, differentiable functions behave like their tangent lines, and tangent lines are linear. This idea can be used to build an argument for why replacing and by and can preserve the limiting ratio in indeterminate forms.  "
+  "body": " We have previously called the expressions and \" meaningless expressions \". A more precise term for these expressions that you may encounter on the internet or other texts is indeterminate forms .  This is because these expressions do not have a well-defined value and must be evaluated on a case-by-case basis. We will see cases where evaluates to 2 but other cases where it evaluates to 5 or 0 or does not exist at all.  "
 },
 {
   "id": "ex-lhopital-ln-over-xminus1",
   "level": "2",
   "url": "sec-derivApp-linear.html#ex-lhopital-ln-over-xminus1",
   "type": "Example",
-  "number": "3.3.6",
+  "number": "3.3.7",
   "title": "",
   "body": "  Compute .    As , we have and , so this is an indeterminate form . Apply L’Hôpital’s Rule:    "
 },
@@ -4100,9 +4118,117 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-linear.html#ex-lhopital-exp-over-x2",
   "type": "Example",
-  "number": "3.3.7",
+  "number": "3.3.8",
   "title": "",
-  "body": "  Compute . (This requires two applications of L’Hôpital’s Rule.)    As , both and go to , so this is an indeterminate form . Apply L’Hôpital’s Rule:   This is still , so apply L’Hôpital’s Rule again:   Therefore, . In words: grows faster than .   "
+  "body": "  Compute . (This requires two applications of L’Hôpital’s Rule.)    As , both and go to , so this is an indeterminate form . Apply L’Hôpital’s Rule:   This is still , so apply L’Hôpital’s Rule again:   Therefore, .   "
+},
+{
+  "id": "eg-derivApp-linear-tf-3",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-3",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  If is differentiable at , then the linearization gives an exact value of for all .   False. The linearization is only an approximation of near . It is not exact for all values of .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-4",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-4",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  The linearization of at is .   True. We can verify this by computing and , so . Therefore, the linearization at is .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-5",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-5",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  The limit can be evaluated using L’Hôpital’s Rule.   True. Although previously we have used geometric arguments to evaluate this limit, we can also apply L’Hôpital’s Rule since both the numerator and denominator approach 0 as . Applying L’Hôpital’s Rule gives .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-6",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-6",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Using linearization for at tells us that .   True. The linearization of at is . Evaluating at , we get: .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-7",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-7",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Using a linearization at gives us .   False. The linearization of at is . Evaluating at , we get: . This is not equal to .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-8",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-8",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Using a linearization at gives us .   True. The linearization of at is . Therefore, . Remember that for trigonometric functions, the angle must be in radians!  "
+},
+{
+  "id": "eg-derivApp-linear-tf-9",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-9",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "   by L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-10",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-10",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "   by L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-11",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-11",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "   using L’Hôpital’s Rule.   True. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get . When we attempt to plug in again, we still get the indeterminate form , so we apply L’Hôpital’s Rule again: . Therefore, the original limit is .  "
+},
+{
+  "id": "eg-derivApp-linear-tf-12",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-12",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "   by L’Hôpital’s Rule.   False. Plugging in gives the indeterminate form . Applying L’Hôpital’s Rule, we get . When we attempt to plug in again, we get , which is undefined. Therefore, the limit does not exist.  "
+},
+{
+  "id": "eg-derivApp-linear-tf-13",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-13",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Consider the table of values below   Evaluating yields .   False. As , we have and , so the limit evaluates to . Notice that L’Hôpital’s Rule does not apply here since the limit is not an indeterminate form.  "
+},
+{
+  "id": "eg-derivApp-linear-tf-14",
+  "level": "2",
+  "url": "sec-derivApp-linear.html#eg-derivApp-linear-tf-14",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Consider the graph below that shows and .   Two functions, and , both passing through the origin, shown together with their tangent lines at .   A coordinate plane showing two curves and their tangent lines at the origin. The red curve, labeled f of x, passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed red line with slope negative two. The blue curve, labeled g of x, also passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed blue line with slope three.    Then .   True. Since both functions pass through the origin, we have and , so this is an indeterminate form . Applying L’Hôpital’s Rule, we get Based on the slopes of the tangent lines shown in the graph.  "
 },
 {
   "id": "sec-derivApp-extrema",
@@ -4148,6 +4274,15 @@ var ptx_lunr_docs = [
   "number": "3.8",
   "title": "Optimization Problems",
   "body": " Optimization Problems  Text of section.  "
+},
+{
+  "id": "sec-derivApp-ww",
+  "level": "1",
+  "url": "sec-derivApp-ww.html",
+  "type": "Section",
+  "number": "3.9",
+  "title": "Additional Worked-Out Problems",
+  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Derivative Applications chapter.   Placeholder Section   "
 },
 {
   "id": "sec-integral-antiderivatives",

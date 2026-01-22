@@ -431,6 +431,8 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-linear.html#linearization-definition" class="internal"><span class="title">Linearization</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-linear.html#lhopital-statement" class="internal"><span class="title">L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-linear.html#additional-worked-problems-derivApp-Linear" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-linear.html#exercises-derivApp-Linear-tf" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivApp-extrema.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Extrema</span></a></div></li>
@@ -438,6 +440,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivApp-curve1.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Curve Sketching Part 1</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-derivApp-ww.html" class="internal"><span class="codenumber">3.9</span> <span class="title">Additional Worked-Out Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-ww.html#subsec-derivApp-placeholder" class="internal"><span class="title">Placeholder Section</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -462,35 +468,34 @@ eBookConfig.enable_chatcodes =  false;
 <article class="objectives goal-like" id="sec-derivApp-linear-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="sec-derivApp-linear-2-1">
 <li id="sec-derivApp-linear-2-1-1">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-1">Students should understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near <span class="process-math">\(x=a\text{.}\)</span>
+<div class="para" id="p-derived-sec-derivApp-linear-2-1-1">Understand the idea of linearization (tangent line approximation) and recognize why it can be used to approximate a function near <span class="process-math">\(x=a\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-linear-2-1-2">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-2">Students should recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.</div>
+<div class="para" id="p-derived-sec-derivApp-linear-2-1-2">Recognize the purpose of linearization as a tool for simplifying complicated functions and interpreting the result in context.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-linear-2-1-3">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-3">Students should be able to apply the linear approximation formula <span class="process-math">\(\displaystyle L(x)=f(a)+f'(a)(x-a)\)</span> in simple to moderately complicated problems.</div>
+<div class="para" id="p-derived-sec-derivApp-linear-2-1-3">Apply the linear approximation formula <span class="process-math">\(\displaystyle L(x)=f(a)+f'(a)(x-a)\text{.}\)</span>
+</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-linear-2-1-4">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-4">Students should see how linearization can be used to motivate (and ultimately prove) L’Hôpital’s Rule.</div>
+<div class="para" id="p-derived-sec-derivApp-linear-2-1-4">Recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms <span class="process-math">\(\displaystyle \frac{0}{0}\)</span> and <span class="process-math">\(\displaystyle \frac{\infty}{\infty}\text{.}\)</span>
+</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-linear-2-1-5">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-5">Students should recognize when L’Hôpital’s Rule applies, particularly for indeterminate forms <span class="process-math">\(\displaystyle \frac{0}{0}\)</span> and <span class="process-math">\(\displaystyle \frac{\infty}{\infty}\text{.}\)</span>
-</div>
+<div class="para" id="p-derived-sec-derivApp-linear-2-1-5">Apply L’Hôpital’s Rule in limit problems, including those that require up to two applications.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-5" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
-</li>
-<li id="sec-derivApp-linear-2-1-6">
-<div class="para" id="p-derived-sec-derivApp-linear-2-1-6">Students should be able to apply L’Hôpital’s Rule in simple to moderately complicated problems, including those that require up to two applications.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-linear-2-1-6" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Objectives 3.3"><a href="#sec-derivApp-linear-2" title="Copy heading and permalink for Objectives 3.3" aria-label="Copy heading and permalink for Objectives 3.3">🔗</a></div></article><section class="subsection" id="linearization-definition"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linearization</span>
 </h3>
+<div class="para" id="linearization-definition-2">One of the most useful applications of derivatives is <dfn class="terminology">linearization</dfn>, which uses tangent lines to approximate the values of a function.  Earlier, we interpreted the derivative at a point as the slope of the tangent line to a curve.  Linearization builds on this idea by treating the tangent line as a stand-in for the function itself.  When we focus on values of <span class="process-math">\(x\)</span> near a chosen point, the tangent line provides a simple and accurate approximation of the function.<div class="autopermalink" data-description="Paragraph"><a href="#linearization-definition-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def-linearization"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
@@ -503,15 +508,18 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="def-linearization-1-3">The graph of <span class="process-math">\(y=L(x)\)</span> is the tangent line to <span class="process-math">\(y=f(x)\)</span> at the point <span class="process-math">\((a,f(a))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-linearization-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.3.1"><a href="#def-linearization" title="Copy heading and permalink for Definition 3.3.1" aria-label="Copy heading and permalink for Definition 3.3.1">🔗</a></div></article><div class="para" id="linearization-definition-3">The idea is that when <span class="process-math">\(x\)</span> is close to <span class="process-math">\(a\text{,}\)</span> the curve <span class="process-math">\(y=f(x)\)</span> and its tangent line have very similar values. So <span class="process-math">\(L(x)\)</span> can be used to approximate <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linearization-definition-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.3.1"><a href="#def-linearization" title="Copy heading and permalink for Definition 3.3.1" aria-label="Copy heading and permalink for Definition 3.3.1">🔗</a></div></article><div class="para" id="linearization-definition-4">The idea is that when <span class="process-math">\(x\)</span> is close to <span class="process-math">\(a\text{,}\)</span> the curve <span class="process-math">\(y=f(x)\)</span> and its tangent line have very similar values. So <span class="process-math">\(L(x)\approx f(x)\)</span> near <span class="process-math">\(x=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#linearization-definition-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="linearization-definition-5">To see this idea in action consider the GIF below which shows us zooming in on the curve and that the curve and tangent line become indistinguishable.<div class="autopermalink" data-description="Paragraph"><a href="#linearization-definition-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="linearization-definition-6-1"><img src="external/images/GraphZoomingIn.gif" class="contained" alt="An animated graph showing a red curve and a purple straight line touching at a single point. As the view zooms in closer to that point, the red curve and the purple line overlap more closely until they are nearly indistinguishable. This illustrates that near a point of tangency, a differentiable function behaves almost linearly, which justifies using the tangent line to approximate the function at nearby points."><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Zooming in on a curve near a point of tangency, illustrating how the graph of the function becomes indistinguishable from its tangent line at sufficiently small scales. This visual shows why using the linearization, the tangent line, is an effective strategy for estimating the function’s values at nearby <span class="process-math">\(x\)</span>-values.<div class="autopermalink" data-description="Figure 3.3.2"><a href="#linearization-definition-6-1" title="Copy heading and permalink for Figure 3.3.2" aria-label="Copy heading and permalink for Figure 3.3.2">🔗</a></div></figcaption></figure></div></div></div>
 <article class="example example-like" id="ex-linearization-sqrt"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-linearization-sqrt-1-1">Find the linearization of <span class="process-math">\(f(x)=\sqrt{x+3}\)</span> at <span class="process-math">\(a=1\text{.}\)</span> Use it to approximate <span class="process-math">\(\sqrt{3.98}\)</span> and <span class="process-math">\(\sqrt{4.05}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="ex-linearization-sqrt-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-linearization-sqrt-2-1">First compute <span class="process-math">\(f(1)\)</span> and <span class="process-math">\(f'(1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-linearization-sqrt-2-1">First let’s build the linearization by computing <span class="process-math">\(f(1)\)</span> and <span class="process-math">\(f'(1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -526,6 +534,8 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
+<div class="para" id="ex-linearization-sqrt-2-3">So therefore<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
@@ -537,14 +547,14 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="ex-linearization-sqrt-2-4">Therefore the linearization at <span class="process-math">\(a=1\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-linearization-sqrt-2-5">Which gives the linearization at <span class="process-math">\(a=1\)</span> as<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \displaystyle L(x)=2+\frac{1}{4}(x-1).
 \end{equation*}
 </div>
-<div class="para" id="ex-linearization-sqrt-2-6">To approximate <span class="process-math">\(\sqrt{3.98}\text{,}\)</span> notice that <span class="process-math">\(\sqrt{3.98}=\sqrt{0.98+3}=f(0.98)\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-linearization-sqrt-2-7">To approximate <span class="process-math">\(\sqrt{3.98}\text{,}\)</span> notice that <span class="process-math">\(\sqrt{3.98}=\sqrt{0.98+3}=f(0.98)\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -564,7 +574,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="ex-linearization-sqrt-2-8">Similarly, <span class="process-math">\(\sqrt{4.05}=f(1.05)\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-linearization-sqrt-2-9">Similarly, <span class="process-math">\(\sqrt{4.05}=f(1.05)\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -584,10 +594,12 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Solution 3.3.2.1"><a href="#ex-linearization-sqrt-2" title="Copy heading and permalink for Solution 3.3.2.1" aria-label="Copy heading and permalink for Solution 3.3.2.1">🔗</a></div>
+<div class="para" id="ex-linearization-sqrt-2-11">Using a calculator, we find that <span class="process-math">\(\sqrt{3.98}\approx 1.99499\)</span> and <span class="process-math">\(\sqrt{4.05}\approx 2.01246\text{,}\)</span> so our approximations are quite close! Indeed the linearization provides a good estimate for values of <span class="process-math">\(x\)</span> near <span class="process-math">\(a=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-sqrt-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.3.1"><a href="#ex-linearization-sqrt-2" title="Copy heading and permalink for Solution 3.3.3.1" aria-label="Copy heading and permalink for Solution 3.3.3.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.2"><a href="#ex-linearization-sqrt" title="Copy heading and permalink for Example 3.3.2" aria-label="Copy heading and permalink for Example 3.3.2">🔗</a></div></article><article class="example example-like" id="ex-linearization-exp-01"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 3.3.3"><a href="#ex-linearization-sqrt" title="Copy heading and permalink for Example 3.3.3" aria-label="Copy heading and permalink for Example 3.3.3">🔗</a></div></article><article class="example example-like" id="ex-linearization-exp-01"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-linearization-exp-01-1-1">Use linear approximation to estimate <span class="process-math">\(e^{0.1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-exp-01-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -606,13 +618,17 @@ eBookConfig.enable_chatcodes =  false;
 \displaystyle e^{0.1}=f(0.1)\approx L(0.1)=1+0.1=1.1.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Solution 3.3.3.1"><a href="#ex-linearization-exp-01-2" title="Copy heading and permalink for Solution 3.3.3.1" aria-label="Copy heading and permalink for Solution 3.3.3.1">🔗</a></div>
+<div class="para" id="ex-linearization-exp-01-2-5">Again we can check with a calculator: <span class="process-math">\(e^{0.1}\approx 1.10517\text{,}\)</span> so our approximation is quite good!<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-exp-01-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.3.4.1"><a href="#ex-linearization-exp-01-2" title="Copy heading and permalink for Solution 3.3.4.1" aria-label="Copy heading and permalink for Solution 3.3.4.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.3"><a href="#ex-linearization-exp-01" title="Copy heading and permalink for Example 3.3.3" aria-label="Copy heading and permalink for Example 3.3.3">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Linearization"><a href="#linearization-definition" title="Copy heading and permalink for Subsection: Linearization" aria-label="Copy heading and permalink for Subsection: Linearization">🔗</a></div></section><section class="subsection" id="lhopital-statement"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 3.3.4"><a href="#ex-linearization-exp-01" title="Copy heading and permalink for Example 3.3.4" aria-label="Copy heading and permalink for Example 3.3.4">🔗</a></div></article><div class="para" id="linearization-definition-9">Linearization gives us a powerful way to understand how functions behave near a point by replacing them with their tangent lines. This local linear behavior turns out to be especially useful when studying limits that initially appear undefined.<div class="autopermalink" data-description="Paragraph"><a href="#linearization-definition-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Linearization"><a href="#linearization-definition" title="Copy heading and permalink for Subsection: Linearization" aria-label="Copy heading and permalink for Subsection: Linearization">🔗</a></div></section><section class="subsection" id="lhopital-statement"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hôpital’s Rule</span>
 </h3>
 <article class="theorem theorem-like" id="thm-lhopital"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hôpital’s Rule (Informal Statement).</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hôpital’s Rule (Informal Statement).</span>
 </h4>
 <div class="para" id="thm-lhopital-2-1">Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable near <span class="process-math">\(x=c\)</span> (except possibly at <span class="process-math">\(x=c\)</span>), and <span class="process-math">\(g'(x)\neq 0\)</span> near <span class="process-math">\(x=c\text{.}\)</span> If<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -634,13 +650,47 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="thm-lhopital-2-5">provided the limit on the right exists (or is infinite).<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.3.4: L’Hôpital’s Rule (Informal Statement)"><a href="#thm-lhopital" title="Copy heading and permalink for Theorem 3.3.4: L’Hôpital’s Rule (Informal Statement)" aria-label="Copy heading and permalink for Theorem 3.3.4: L’Hôpital’s Rule (Informal Statement)">🔗</a></div></article><article class="remark remark-like" id="rem-linearization-motivation"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="rem-linearization-motivation-1">One way to motivate L’Hôpital’s Rule is through linearization: near a point, differentiable functions behave like their tangent lines, and tangent lines are linear. This idea can be used to build an argument for why replacing <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> by <span class="process-math">\(f'\)</span> and <span class="process-math">\(g'\)</span> can preserve the limiting ratio in indeterminate forms.<div class="autopermalink" data-description="Paragraph"><a href="#rem-linearization-motivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.3.5: L’Hôpital’s Rule (Informal Statement)"><a href="#thm-lhopital" title="Copy heading and permalink for Theorem 3.3.5: L’Hôpital’s Rule (Informal Statement)" aria-label="Copy heading and permalink for Theorem 3.3.5: L’Hôpital’s Rule (Informal Statement)">🔗</a></div></article><details id="thm-lhopital-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Formal Proof.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-lhopital-3-2">A formal proof of L’Hôpital’s Rule requires something called the Cauchy Mean Value Theorem, along with a careful analysis of limits. This is beyond the scope of our class. However students interested in seeing a formal proof are encouraged to pursue a math major/minor and take MTH 320 (or equivalent) where this proof is typically covered.<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.3.5"><a href="#rem-linearization-motivation" title="Copy heading and permalink for Remark 3.3.5" aria-label="Copy heading and permalink for Remark 3.3.5">🔗</a></div></article><article class="example example-like" id="ex-lhopital-ln-over-xminus1"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Proof 3.3.5.1: Formal Proof"><a href="#thm-lhopital-3" title="Copy heading and permalink for Proof 3.3.5.1: Formal Proof" aria-label="Copy heading and permalink for Proof 3.3.5.1: Formal Proof">🔗</a></div></article></details><details id="thm-lhopital-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Idea of a Proof.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-lhopital-4-2">We will focus on the <span class="process-math">\(\tfrac{0}{0}\)</span> case, that is where <span class="process-math">\(f(c)=0\)</span> and <span class="process-math">\(g(c)=0\text{.}\)</span> The case where both approach <span class="process-math">\(\pm\infty\)</span> is similar<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-lhopital-4-3">The linearizations of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> at <span class="process-math">\(x=c\)</span> are<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L_f(x) =  0+f'(c)(x-c) = f'(c)(x-c)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L_g(x) =  0+g'(c)(x-c) = g'(c)(x-c)
+\end{equation*}
+</div>
+<div class="para" id="thm-lhopital-4-6">Since again, <span class="process-math">\(f(c)=0\)</span> and <span class="process-math">\(g(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-lhopital-4-7">Now as we have seen earlier, differentiable functions behave like their tangent lines when we are close to the point of tangency. Therefore, as <span class="process-math">\(x\to c\text{,}\)</span> we have<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \frac{f(x)}{g(x)} \approx \frac{L_f(x)}{L_g(x)} = \frac{f'(c)(x-c)}{g'(c)(x-c)} = \frac{f'(c)}{g'(c)}.
+\end{equation*}
+</div>
+<div class="para" id="thm-lhopital-4-9">Therefore, we can conclude that<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhopital-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to c} \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)} = \lim_{x\to c} \frac{f'(x)}{g'(x)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Proof 3.3.5.2: Idea of a Proof"><a href="#thm-lhopital-4" title="Copy heading and permalink for Proof 3.3.5.2: Idea of a Proof" aria-label="Copy heading and permalink for Proof 3.3.5.2: Idea of a Proof">🔗</a></div></article></details><article class="remark remark-like" id="rem-lhopital-indeterminate-forms"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="rem-lhopital-indeterminate-forms-1">We have previously called the expressions <span class="process-math">\(\frac{0}{0}\)</span> and <span class="process-math">\(\frac{\infty}{\infty}\)</span> "<em class="emphasis">meaningless expressions</em>". A more precise term for these expressions that you may encounter on the internet or other texts is <dfn class="terminology">indeterminate forms</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#rem-lhopital-indeterminate-forms-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rem-lhopital-indeterminate-forms-2">This is because these expressions do not have a well-defined value and must be evaluated on a case-by-case basis. We will see cases where <span class="process-math">\(\frac{0}{0}\)</span> evaluates to 2 but other cases where it evaluates to 5 or 0 or does not exist at all.<div class="autopermalink" data-description="Paragraph"><a href="#rem-lhopital-indeterminate-forms-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.3.6"><a href="#rem-lhopital-indeterminate-forms" title="Copy heading and permalink for Remark 3.3.6" aria-label="Copy heading and permalink for Remark 3.3.6">🔗</a></div></article><article class="example example-like" id="ex-lhopital-ln-over-xminus1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-lhopital-ln-over-xminus1-1-1">Compute <span class="process-math">\(\displaystyle \lim_{x\to 1}\frac{\ln x}{x-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-ln-over-xminus1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -661,10 +711,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Solution 3.3.6.1"><a href="#ex-lhopital-ln-over-xminus1-2" title="Copy heading and permalink for Solution 3.3.6.1" aria-label="Copy heading and permalink for Solution 3.3.6.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.3.7.1"><a href="#ex-lhopital-ln-over-xminus1-2" title="Copy heading and permalink for Solution 3.3.7.1" aria-label="Copy heading and permalink for Solution 3.3.7.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.6"><a href="#ex-lhopital-ln-over-xminus1" title="Copy heading and permalink for Example 3.3.6" aria-label="Copy heading and permalink for Example 3.3.6">🔗</a></div></article><article class="example example-like" id="ex-lhopital-exp-over-x2"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 3.3.7"><a href="#ex-lhopital-ln-over-xminus1" title="Copy heading and permalink for Example 3.3.7" aria-label="Copy heading and permalink for Example 3.3.7">🔗</a></div></article><article class="example example-like" id="ex-lhopital-exp-over-x2"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-lhopital-exp-over-x2-1-1">Compute <span class="process-math">\(\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}\text{.}\)</span> (This requires two applications of L’Hôpital’s Rule.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-exp-over-x2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -695,11 +745,231 @@ eBookConfig.enable_chatcodes =  false;
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="ex-lhopital-exp-over-x2-2-5">Therefore, <span class="process-math">\(\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}=\infty\text{.}\)</span> In words: <span class="process-math">\(e^x\)</span> grows faster than <span class="process-math">\(x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-exp-over-x2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-lhopital-exp-over-x2-2-5">Therefore, <span class="process-math">\(\displaystyle \lim_{x\to\infty}\frac{e^x}{x^2}=\infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-exp-over-x2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 3.3.7.1"><a href="#ex-lhopital-exp-over-x2-2" title="Copy heading and permalink for Solution 3.3.7.1" aria-label="Copy heading and permalink for Solution 3.3.7.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.3.8.1"><a href="#ex-lhopital-exp-over-x2-2" title="Copy heading and permalink for Solution 3.3.8.1" aria-label="Copy heading and permalink for Solution 3.3.8.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.3.7"><a href="#ex-lhopital-exp-over-x2" title="Copy heading and permalink for Example 3.3.7" aria-label="Copy heading and permalink for Example 3.3.7">🔗</a></div></article><div class="autopermalink" data-description="Subsection: L’Hôpital’s Rule"><a href="#lhopital-statement" title="Copy heading and permalink for Subsection: L’Hôpital’s Rule" aria-label="Copy heading and permalink for Subsection: L’Hôpital’s Rule">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Linear Approximation and L’Hopital’s Rule"><a href="#sec-derivApp-linear" title="Copy heading and permalink for Section 3.3: Linear Approximation and L’Hopital’s Rule" aria-label="Copy heading and permalink for Section 3.3: Linear Approximation and L’Hopital’s Rule">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 3.3.8"><a href="#ex-lhopital-exp-over-x2" title="Copy heading and permalink for Example 3.3.8" aria-label="Copy heading and permalink for Example 3.3.8">🔗</a></div></article><div class="autopermalink" data-description="Subsection: L’Hôpital’s Rule"><a href="#lhopital-statement" title="Copy heading and permalink for Subsection: L’Hôpital’s Rule" aria-label="Copy heading and permalink for Subsection: L’Hôpital’s Rule">🔗</a></div></section><section class="subsection" id="additional-worked-problems-derivApp-Linear"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Worked-Out Examples</span>
+</h3>
+<div class="para" id="additional-worked-problems-derivApp-Linear-2">To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via: <em class="alert"><a href="sec-derivApp-ww.html#subsec-derivApp-placeholder" class="internal" title="Subsection: Placeholder Section">Additional Worked-Out Problems for Linear Approximation and L’Hopital’s Rule </a></em><div class="autopermalink" data-description="Paragraph"><a href="#additional-worked-problems-derivApp-Linear-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Additional Worked-Out Examples"><a href="#additional-worked-problems-derivApp-Linear" title="Copy heading and permalink for Subsection: Additional Worked-Out Examples" aria-label="Copy heading and permalink for Subsection: Additional Worked-Out Examples">🔗</a></div></section><section class="exercises" id="exercises-derivApp-Linear-tf"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice / Study Problems</span>
+</h3>
+<div class="exercisegroup" id="eg-derivApp-linear-tf">
+<h4 class="heading"><span class="title">True/False Questions.</span></h4>
+<div class="introduction" id="eg-derivApp-linear-tf-2"><div class="para" id="eg-derivApp-linear-tf-2-1">Determine whether each statement is true or false. Justify your answers.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="eg-derivApp-linear-tf-3"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-3-1-1">If <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x=a\text{,}\)</span> then the linearization <span class="process-math">\(L(x)\)</span> gives an exact value of <span class="process-math">\(f(x)\)</span> for all <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg-derivApp-linear-tf-3-2-1">
+<em class="emphasis">False.</em> The linearization <span class="process-math">\(L(x)\)</span> is only an approximation of <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=a\text{.}\)</span> It is not exact for all values of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#eg-derivApp-linear-tf-3-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#eg-derivApp-linear-tf-3" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-4"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-4-1-1">The linearization of <span class="process-math">\(f(x)=\ln x\)</span> at <span class="process-math">\(x=1\)</span> is <span class="process-math">\(L(x)=x-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg-derivApp-linear-tf-4-2-1">
+<em class="emphasis">True.</em> We can verify this by computing <span class="process-math">\(f(1)=\ln 1=0\)</span> and <span class="process-math">\(f'(x)=\frac{1}{x}\text{,}\)</span> so <span class="process-math">\(f'(1)=1\text{.}\)</span> Therefore, the linearization at <span class="process-math">\(x=1\)</span> is <span class="process-math">\(L(x)=f(1)+f'(1)(x-1)=0+1(x-1)=x-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#eg-derivApp-linear-tf-4-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#eg-derivApp-linear-tf-4" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-5"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-5-1-1">The limit <span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{\sin x}{x}\)</span> can be evaluated using L’Hôpital’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-5-2-1">
+<div class="para">
+<em class="emphasis">True.</em> Although previously we have used geometric arguments to evaluate this limit, we can also apply L’Hôpital’s Rule since both the numerator and denominator approach 0 as <span class="process-math">\(x\to 0\text{.}\)</span> Applying L’Hôpital’s Rule gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{\sin x}{x} = \lim_{x\to 0}\frac{\cos x}{1} = 1\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#eg-derivApp-linear-tf-5-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3"><a href="#eg-derivApp-linear-tf-5" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-6"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-6-1-1">Using linearization for <span class="process-math">\(f(x)=\sqrt{x}\)</span> at <span class="process-math">\(x=9\)</span> tells us that <span class="process-math">\(\sqrt{9.02}\approx 3+\tfrac{1}{300}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-6-2-1">
+<div class="para">
+<em class="emphasis">True.</em> The linearization of <span class="process-math">\(f(x)=\sqrt{x}\)</span> at <span class="process-math">\(x=9\)</span> is <span class="process-math">\(L(x)=\frac{1}{6}(x-9)+3\text{.}\)</span> Evaluating at <span class="process-math">\(x=9.02\text{,}\)</span> we get:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(9.02)=\frac{1}{6}(9.02-9)+3=\frac{1}{6}\left(\frac{1}{50}\right)+3=\frac{1}{300}+3\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#eg-derivApp-linear-tf-6-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#eg-derivApp-linear-tf-6" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-7"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-7-1-1">Using a linearization at <span class="process-math">\(x=8\)</span> gives us <span class="process-math">\(\sqrt[3]{8.1}\approx 2.01\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-7-2-1">
+<div class="para">
+<em class="emphasis">False.</em> The linearization of <span class="process-math">\(f(x)=\sqrt[3]{x}\)</span> at <span class="process-math">\(x=8\)</span> is <span class="process-math">\(L(x)=\frac{1}{12}(x-8)+2\text{.}\)</span> Evaluating at <span class="process-math">\(x=8.1\text{,}\)</span> we get:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(8.1)=\frac{1}{12}(8.1-8)+2=\frac{1}{12}(0.1)+2=\frac{1}{120}+2\text{.}
+\end{equation*}
+</div>
+<div class="para">This is not equal to <span class="process-math">\(2.01 = 2 + \frac{1}{100}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#eg-derivApp-linear-tf-7-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#eg-derivApp-linear-tf-7" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-8"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-8-1-1">Using a linearization at <span class="process-math">\(x=0\)</span> gives us <span class="process-math">\(\sin(0.1)\approx 0.1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg-derivApp-linear-tf-8-2-1">
+<em class="emphasis">True.</em> The linearization of <span class="process-math">\(f(x)=\sin x\)</span> at <span class="process-math">\(x=0\)</span> is <span class="process-math">\(L(x)=x\text{.}\)</span> Therefore, <span class="process-math">\(\sin(0.1)\approx 0.1\text{.}\)</span> Remember that for trigonometric functions, the angle must be in radians!<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#eg-derivApp-linear-tf-8-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#eg-derivApp-linear-tf-8" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-9"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-9-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{e^x-1}{x}=1\)</span> by L’Hôpital’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-9-2-1">
+<div class="para">
+<em class="emphasis">True.</em> Plugging in <span class="process-math">\(x=0\)</span> gives the indeterminate form <span class="process-math">\(\frac{0}{0}\text{.}\)</span> Applying L’Hôpital’s Rule, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{e^x-1}{x} = \lim_{x\to 0}\frac{e^x}{1} = e^0 = 1\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#eg-derivApp-linear-tf-9-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#eg-derivApp-linear-tf-9" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-10"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-10-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x}=0\)</span> by L’Hôpital’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-10-2-1">
+<div class="para">
+<em class="emphasis">True.</em> Plugging in <span class="process-math">\(x=0\)</span> gives the indeterminate form <span class="process-math">\(\frac{0}{0}\text{.}\)</span> Applying L’Hôpital’s Rule, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x} = \lim_{x\to 0}\frac{\sin x}{1} = \sin(0) = 0\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#eg-derivApp-linear-tf-10-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#eg-derivApp-linear-tf-10" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-11"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-11-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2}=\frac12\)</span> using L’Hôpital’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-11-2-1">
+<div class="para">
+<em class="emphasis">True.</em> Plugging in <span class="process-math">\(x=0\)</span> gives the indeterminate form <span class="process-math">\(\frac{0}{0}\text{.}\)</span> Applying L’Hôpital’s Rule, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{1-\cos x}{x^2} = \lim_{x\to 0}\frac{\sin x}{2x}\text{.}
+\end{equation*}
+</div>
+<div class="para">When we attempt to plug in <span class="process-math">\(x=0\)</span> again, we still get the indeterminate form <span class="process-math">\(\frac{0}{0}\text{,}\)</span> so we apply L’Hôpital’s Rule again:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{\sin x}{2x} = \lim_{x\to 0}\frac{\cos x}{2} = \frac{\cos(0)}{2} = \frac12\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, the original limit is <span class="process-math">\(\frac12\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#eg-derivApp-linear-tf-11-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9"><a href="#eg-derivApp-linear-tf-11" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-12"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-12-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2}=1\)</span> by L’Hôpital’s Rule.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-12-2-1">
+<div class="para">
+<em class="emphasis">False.</em> Plugging in <span class="process-math">\(x=0\)</span> gives the indeterminate form <span class="process-math">\(\frac{0}{0}\text{.}\)</span> Applying L’Hôpital’s Rule, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{\sin x}{x^2} = \lim_{x\to 0}\frac{\cos x}{2x}\text{.}
+\end{equation*}
+</div>
+<div class="para">When we attempt to plug in <span class="process-math">\(x=0\)</span> again, we get <span class="process-math">\(\frac{1}{0}\text{,}\)</span> which is undefined. Therefore, the limit does not exist.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#eg-derivApp-linear-tf-12-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10"><a href="#eg-derivApp-linear-tf-12" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-13"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-13-1-1">Consider the table of values below<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|}
+\hline
+x \amp f(x) \amp f'(x) \amp g(x) \amp g'(x) \\
+\hline
+2 \amp 0 \amp 3 \amp 4 \amp 1 \\
+\hline
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="eg-derivApp-linear-tf-13-1-3">Evaluating <span class="process-math">\(\displaystyle \lim_{x\to 2}\frac{f(x)}{g(x)}\)</span> yields <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-13-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-13-2-1">
+<div class="para">
+<em class="emphasis">False.</em> As <span class="process-math">\(x\to 2\text{,}\)</span> we have <span class="process-math">\(f(2)=0\)</span> and <span class="process-math">\(g(2)=4\text{,}\)</span> so the limit evaluates to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 2}\frac{f(x)}{g(x)} = \frac{f(2)}{g(2)} = \frac{0}{4} = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">Notice that L’Hôpital’s Rule does not apply here since the limit is not an indeterminate form.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#eg-derivApp-linear-tf-13-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 11"><a href="#eg-derivApp-linear-tf-13" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div></article><article class="exercise exercise-like" id="eg-derivApp-linear-tf-14"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="eg-derivApp-linear-tf-14-1-1">Consider the graph below that shows <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="eg-derivApp-linear-tf-14-1-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/LHgraph01.PNG" class="contained" alt="A coordinate plane showing two curves and their tangent lines at the origin. The red curve, labeled f of x, passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed red line with slope negative two. The blue curve, labeled g of x, also passes through the point (0,0). Its tangent line at x equals 0 is shown as a dashed blue line with slope three."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two functions, <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{,}\)</span> both passing through the origin, shown together with their tangent lines at <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Figure 3.3.9"><a href="#eg-derivApp-linear-tf-14-1-2" title="Copy heading and permalink for Figure 3.3.9" aria-label="Copy heading and permalink for Figure 3.3.9">🔗</a></div></figcaption></figure> <div class="para" id="eg-derivApp-linear-tf-14-1-3">Then <span class="process-math">\(\displaystyle \lim_{x\to 0}\frac{f(x)}{g(x)} = -\dfrac{2}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-14-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg-derivApp-linear-tf-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg-derivApp-linear-tf-14-2-1">
+<div class="para">
+<em class="emphasis">True.</em> Since both functions pass through the origin, we have <span class="process-math">\(f(0)=0\)</span> and <span class="process-math">\(g(0)=0\text{,}\)</span> so this is an indeterminate form <span class="process-math">\(\displaystyle \frac{0}{0}\text{.}\)</span> Applying L’Hôpital’s Rule, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle \lim_{x\to 0}\frac{f(x)}{g(x)} = \lim_{x\to 0}\frac{f'(x)}{g'(x)} = \frac{f'(0)}{g'(0)} = \frac{-2}{3}
+\end{equation*}
+</div>
+<div class="para">Based on the slopes of the tangent lines shown in the graph.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-linear-tf-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#eg-derivApp-linear-tf-14-2" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 12"><a href="#eg-derivApp-linear-tf-14" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–12: True/False Questions"><a href="#eg-derivApp-linear-tf" title="Copy heading and permalink for Exercise Group 1–12: True/False Questions" aria-label="Copy heading and permalink for Exercise Group 1–12: True/False Questions">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises: Practice / Study Problems"><a href="#exercises-derivApp-Linear-tf" title="Copy heading and permalink for Exercises: Practice / Study Problems" aria-label="Copy heading and permalink for Exercises: Practice / Study Problems">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Linear Approximation and L’Hopital’s Rule"><a href="#sec-derivApp-linear" title="Copy heading and permalink for Section 3.3: Linear Approximation and L’Hopital’s Rule" aria-label="Copy heading and permalink for Section 3.3: Linear Approximation and L’Hopital’s Rule">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-derivApp-related.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-derivApp-extrema.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
