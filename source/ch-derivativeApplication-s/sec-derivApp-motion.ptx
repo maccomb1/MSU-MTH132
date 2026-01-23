@@ -542,9 +542,59 @@ We will now move on to discuss total distance traveled and how it differs from d
   <subsection xml:id="subsec-TDT">
     <title>Displacement vs Distance Traveled</title>
 <p>
-  Bleh
+  Many students are probably already familiar with the concept of displacement from your favorite physics class:
 </p>
-    
+
+<definition xml:id="def-displacement">
+  <title>Displacement</title>
+  <statement>
+    <p>
+      The <term>displacement</term> of an object over the time interval <m>[a,b]</m> is how much the object's position changes during that time.
+    </p> 
+      <p> 
+      Displacement is given by
+      <me>
+        \text{Displacement} = s(b) - s(a),
+      </me>
+      where <m>s(t)</m> is the position function of the object.
+      </p>
+    </statement>
+</definition> 
+
+
+<example xml:id="ex-displacement-vs-distance-01">
+  <statement>
+    <p> 
+      Building off of <xref ref="ex-ball-motion-derivatives"/>: Recall the vertical position of the ball is given by
+      <me>s(t)=-16t^2+64t+6</me>.
+      Find the displacement of the ball from <m>t=1</m> seconds to <m>t=3</m> seconds.
+    </p>
+  </statement> 
+  <solution>
+    <p>
+      To find the displacement, we evaluate the position function at the endpoints of the interval:
+      <me>
+\begin{array}{rcl}
+\displaystyle s(1) \amp =\amp -16(1)^2 + 64(1) + 6 = 54 \text{ ft,}\\[0.6em]
+\displaystyle s(3) \amp =\amp -16(3)^2 + 64(3) + 6 = 54 \text{ ft.}
+\end{array}
+      </me>
+      Therefore, the displacement is
+      <me>
+\displaystyle \text{Displacement} = s(3) - s(1) = 54 - 54 = 0 \text{ ft.}
+      </me>
+      This means that the ball ends up at the same height it started from during this time interval.
+    </p>
+  </solution>
+</example>
+
+
+
+
+
+
+
+
   </subsection>
 
 
