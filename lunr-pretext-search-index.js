@@ -3156,8 +3156,8 @@ var ptx_lunr_docs = [
   "url": "sec-derivative-expChain.html",
   "type": "Section",
   "number": "2.5",
-  "title": "Exponential and Logarithmic Derivatives and the Chain Rule",
-  "body": " Exponential and Logarithmic Derivatives and the Chain Rule    Apply the basic derivative formulas for , , and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, logarithms, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.     Prerequisite Review  If you feel a bit out of practice with exponential rules, logarithm rules, or composition rules from algebra, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function composition    Review section on exponential functions    Review section on logarithmic functions      Exponential and logarithmic functions appear throughout calculus. Their derivatives play a central role in growth models, rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.    Key Derivative Formulas  We begin by collecting the fundamental derivative rules for exponential and logarithmic functions. Some are stated without proof here and will be justified later in the text.   Derivatives of the Natural Exponential and Natural Logarithm   For all in the domains of the functions below:     We will use these two derivative formulas throughout the course, but we will not prove both of them at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  The proof of will appear later, once we have developed the tools needed to understand derivatives of inverse functions. See for a full derivation.  For now, we take both results as known facts and use them to develop more general differentiation techniques.    Now that we know the derivatives of and , we can combine them with the Product Rule, Quotient Rule, and earlier power–function rules to differentiate more complicated expressions.    Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.         .    Apply the Quotient Rule with and . Then and .        Show that the curve has no tangent line with slope 2.    Compute the derivative:   To find a point where the slope is 2, we solve   Rearranging gives   Every term on the left side is positive for all real . The equation has no solution. Thus the slope never equals 2.      The Statement and Applications of The Chain Rule  Composite functions arise everywhere. For example, if measures a temperature that changes with time, and converts that temperature to pressure, then describes how pressure changes with time. The Chain Rule captures how variations in the inner function affect the slope of the composite function.   The Chain Rule   If and are differentiable functions, then their composition is differentiable and   In Leibniz notation, if we let , then     A full proof of the Chain Rule requires careful algebra using the limit definition of the derivative and the structure of composite functions. We present the result here without a complete derivation. Students who would like to explore the proof in detail may find the following video especially helpful:   A visual and intuitive explanation of the Chain Rule   The central idea behind the proof is that small changes in the input propagate through the inner function and then through the outer function . The Chain Rule formalizes this by multiplying the rate of change of with respect to by the rate of change of with respect to .     Informally, the Chain Rule says that the rate of change of a composite function is the rate of change of the outer function, evaluated at the inner function, multiplied by how fast the inner function itself is changing.   Now let's see the chain rule applied with a few examples.    Compute the derivative of     Apply the Chain Rule and Quotient rule. Let , then and so: Therefore       Let and be differentiable functions with the values shown below.   Compute the following derivatives.     Compute at .    Using the Chain Rule,   At , we have and , and the table gives .       Compute at .    Again apply the Chain Rule:   At , the table shows , so , and .      Lastly, we can use the Chain Rule to extend our exponential derivative formulas. This allows us to differentiate any exponential function, not just those with base .   Derivative of the General Exponential Functions   For any positive constant , the derivative of is     To compute the derivative of for a positive constant , we rewrite in terms of the natural exponential function. Recall that by using the power rule for logarithms and the inverse identity we can write:   We now differentiate using the Chain Rule. Let   Then , and by the Chain Rule,   Since , we have . Substituting back:   Using once more, we obtain the final formula:   This completes the proof.      Compute the derivative of .    Apply the exponential derivative formula with .       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Exponential Functions and the Chain Rule      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.     If , then .     True. This is the Chain Rule with outer function and inner function . Since , we get .      If , then .     False. By the Chain Rule, . The factor is missing.      If for a constant , then for all real .     True. Using , we have for all real and when . Therefore for all .      If , then , regardless of .     True (assuming the Chain Rule applies at ). By the Chain Rule, . Since , the product is .      The derivative of and the derivative of are the same.     False. Using the Chain Rule: , while . These expressions are not equal in general.      If , then exists for all real .     False. The function is only defined for , so the derivative cannot exist for negative . (On it is differentiable; at one must check separately.)      If and on an interval, then is decreasing on that interval.     True (where the composition is defined). By the Chain Rule, . Since and , their product is negative, so is decreasing.      If has a horizontal tangent at , then either or .     True (assuming differentiability so the Chain Rule applies at ). A horizontal tangent means . By the Chain Rule, . A product is zero only if at least one factor is zero, so or .      If , then .     True. Let . Then . By the Chain Rule, .      Consider the graphs of and below. Since is not differentiable at we know that is not is not differentiable at .    Graphs of two functions and .   A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x).        False. The fact that is not differentiable at does not automatically mean that the composite is not differentiable at .  In fact, we can compute the derivative using the Chain Rule. The slope of is constant:   For , the graph of is the line segment from to , so its slope is   on that segment, including at . Therefore,   So  is differentiable at .      "
+  "title": "Exponential Derivatives and the Chain Rule",
+  "body": " Exponential Derivatives and the Chain Rule    Apply the basic derivative formulas for and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.     Prerequisite Review  If you feel a bit out of practice with exponential rules or composition rules from algebra, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function composition    Review section on exponential functions       Exponential functions appear throughout calculus. Their derivatives play a central role in growth models, rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.    Key Derivative Formula  We begin by stating the derivative formula for the natural exponential function.   Derivative of the Natural Exponential Function      We will use this derivative formula throughout the course, but we will not prove it at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  For now, we take this result as a known fact and use it to develop more general differentiation techniques.     Now that we know the derivative of , we can combine it with the Product Rule, Quotient Rule, and earlier power–function rules to differentiate more complicated expressions.    Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.         Show that the curve has no tangent line with slope 2.    Compute the derivative:   To find a point where the slope is 2, we solve   Rearranging gives   Every term on the left side is positive for all real . The equation has no solution. Thus the slope never equals 2.      The Statement and Applications of The Chain Rule  Composite functions arise everywhere. For example, if measures a temperature that changes with time, and converts that temperature to pressure, then describes how pressure changes with time. The Chain Rule captures how variations in the inner function affect the slope of the composite function.   The Chain Rule   If and are differentiable functions, then their composition is differentiable and   In Leibniz notation, if we let , then     A full proof of the Chain Rule requires careful algebra using the limit definition of the derivative and the structure of composite functions. We present the result here without a complete derivation. Students who would like to explore the proof in detail may find the following video especially helpful:   A visual and intuitive explanation of the Chain Rule   The central idea behind the proof is that small changes in the input propagate through the inner function and then through the outer function . The Chain Rule formalizes this by multiplying the rate of change of with respect to by the rate of change of with respect to .     Informally, the Chain Rule says that the rate of change of a composite function is the rate of change of the outer function, evaluated at the inner function, multiplied by how fast the inner function itself is changing.   Now let's see the chain rule applied with a few examples.    Compute the derivative of     Apply the Chain Rule and Quotient rule. Let , then and so: Therefore       Let and be differentiable functions with the values shown below.   Compute the following derivatives.     Compute at .    Using the Chain Rule,   At , we have and , and the table gives .       Compute at .    Again apply the Chain Rule:   At , the table shows , so , and .      Lastly, we can use the Chain Rule to extend our exponential derivative formulas. This allows us to differentiate any exponential function, not just those with base .   Derivative of the General Exponential Functions   For any positive constant , the derivative of is     To compute the derivative of for a positive constant , we rewrite in terms of the natural exponential function. Recall that by using the power rule for logarithms and the inverse identity we can write:   We now differentiate using the Chain Rule. Let   Then , and by the Chain Rule,   Since , we have . Substituting back:   Using once more, we obtain the final formula:   This completes the proof.      Compute the derivative of .    Apply the exponential derivative formula with .       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Exponential Functions and the Chain Rule      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.     If , then .     True. This is the Chain Rule with outer function and inner function . Since , we get .      If for a constant , then for all real .     True. Using , we have for all real and when . Therefore for all .      If , then , regardless of .     True (assuming the Chain Rule applies at ). By the Chain Rule, . Since , the product is .      The derivative of and the derivative of are the same.     False. Using the Chain Rule: , while . These expressions are not equal in general.      If , then exists for all real .     False. The function is only defined for , so the derivative cannot exist for negative . (On it is differentiable; at one must check separately.)      If and on an interval, then is decreasing on that interval.     True (where the composition is defined). By the Chain Rule, . Since and , their product is negative, so is decreasing.      If has a horizontal tangent at , then either or .     True (assuming differentiability so the Chain Rule applies at ). A horizontal tangent means . By the Chain Rule, . A product is zero only if at least one factor is zero, so or .      Consider the graphs of and below. Since is not differentiable at we know that is not is not differentiable at .    Graphs of two functions and .   A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x).        False. The fact that is not differentiable at does not automatically mean that the composite is not differentiable at .  In fact, we can compute the derivative using the Chain Rule. The slope of is constant:   For , the graph of is the line segment from to , so its slope is   on that segment, including at . Therefore,   So  is differentiable at .      "
 },
 {
   "id": "sec-derivative-expChain-2",
@@ -3166,7 +3166,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.5",
   "title": "",
-  "body": "  Apply the basic derivative formulas for , , and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, logarithms, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.   "
+  "body": "  Apply the basic derivative formulas for and .  Understand and use the Chain Rule to differentiate composite functions algebraically, graphically, and through values provided in tables.  Compute derivatives of functions that combine exponentials, powers, and trigonometric expressions using the Product Rule, Quotient Rule, and Chain Rule.   "
 },
 {
   "id": "wrn-expChain-prereq",
@@ -3175,16 +3175,16 @@ var ptx_lunr_docs = [
   "type": "Warning",
   "number": "2.5.1",
   "title": "Prerequisite Review.",
-  "body": " Prerequisite Review  If you feel a bit out of practice with exponential rules, logarithm rules, or composition rules from algebra, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function composition    Review section on exponential functions    Review section on logarithmic functions     "
+  "body": " Prerequisite Review  If you feel a bit out of practice with exponential rules or composition rules from algebra, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function composition    Review section on exponential functions      "
 },
 {
-  "id": "thm-derivatives-exp-log",
+  "id": "thm-derivatives-exp",
   "level": "2",
-  "url": "sec-derivative-expChain.html#thm-derivatives-exp-log",
+  "url": "sec-derivative-expChain.html#thm-derivatives-exp",
   "type": "Theorem",
   "number": "2.5.2",
-  "title": "Derivatives of the Natural Exponential and Natural Logarithm.",
-  "body": " Derivatives of the Natural Exponential and Natural Logarithm   For all in the domains of the functions below:     We will use these two derivative formulas throughout the course, but we will not prove both of them at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  The proof of will appear later, once we have developed the tools needed to understand derivatives of inverse functions. See for a full derivation.  For now, we take both results as known facts and use them to develop more general differentiation techniques.   "
+  "title": "Derivative of the Natural Exponential Function.",
+  "body": " Derivative of the Natural Exponential Function      We will use this derivative formula throughout the course, but we will not prove it at this moment.  The fact that is a classical result that can be established in several different ways: by studying the compound interest definition of , by using limits, or by analyzing the unique solution to a differential equation. Curious students can find many proofs available online.  For now, we take this result as a known fact and use it to develop more general differentiation techniques.   "
 },
 {
   "id": "ex-exp-log-basic-combined",
@@ -3193,7 +3193,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.5.3",
   "title": "",
-  "body": "  Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.         .    Apply the Quotient Rule with and . Then and .     "
+  "body": "  Compute the derivatives of the following functions.      .    For , use the power rule and the fact that :         .    Rewrite and apply the Product Rule.      "
 },
 {
   "id": "ex-expChain-basic-02",
@@ -3268,20 +3268,11 @@ var ptx_lunr_docs = [
   "body": "  If , then .     True. This is the Chain Rule with outer function and inner function . Since , we get .   "
 },
 {
-  "id": "tf-expChain-ap-02",
-  "level": "2",
-  "url": "sec-derivative-expChain.html#tf-expChain-ap-02",
-  "type": "Exercise",
-  "number": "2",
-  "title": "",
-  "body": "  If , then .     False. By the Chain Rule, . The factor is missing.   "
-},
-{
   "id": "tf-expChain-ap-03",
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-03",
   "type": "Exercise",
-  "number": "3",
+  "number": "2",
   "title": "",
   "body": "  If for a constant , then for all real .     True. Using , we have for all real and when . Therefore for all .   "
 },
@@ -3290,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-04",
   "type": "Exercise",
-  "number": "4",
+  "number": "3",
   "title": "",
   "body": "  If , then , regardless of .     True (assuming the Chain Rule applies at ). By the Chain Rule, . Since , the product is .   "
 },
@@ -3299,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-05",
   "type": "Exercise",
-  "number": "5",
+  "number": "4",
   "title": "",
   "body": "  The derivative of and the derivative of are the same.     False. Using the Chain Rule: , while . These expressions are not equal in general.   "
 },
@@ -3308,7 +3299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-06",
   "type": "Exercise",
-  "number": "6",
+  "number": "5",
   "title": "",
   "body": "  If , then exists for all real .     False. The function is only defined for , so the derivative cannot exist for negative . (On it is differentiable; at one must check separately.)   "
 },
@@ -3317,7 +3308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-08",
   "type": "Exercise",
-  "number": "7",
+  "number": "6",
   "title": "",
   "body": "  If and on an interval, then is decreasing on that interval.     True (where the composition is defined). By the Chain Rule, . Since and , their product is negative, so is decreasing.   "
 },
@@ -3326,25 +3317,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-10",
   "type": "Exercise",
-  "number": "8",
+  "number": "7",
   "title": "",
   "body": "  If has a horizontal tangent at , then either or .     True (assuming differentiability so the Chain Rule applies at ). A horizontal tangent means . By the Chain Rule, . A product is zero only if at least one factor is zero, so or .   "
-},
-{
-  "id": "tf-expChain-ap-11",
-  "level": "2",
-  "url": "sec-derivative-expChain.html#tf-expChain-ap-11",
-  "type": "Exercise",
-  "number": "9",
-  "title": "",
-  "body": "  If , then .     True. Let . Then . By the Chain Rule, .   "
 },
 {
   "id": "tf-expChain-ap-12",
   "level": "2",
   "url": "sec-derivative-expChain.html#tf-expChain-ap-12",
   "type": "Exercise",
-  "number": "10",
+  "number": "8",
   "title": "",
   "body": "  Consider the graphs of and below. Since is not differentiable at we know that is not is not differentiable at .    Graphs of two functions and .   A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x).        False. The fact that is not differentiable at does not automatically mean that the composite is not differentiable at .  In fact, we can compute the derivative using the Chain Rule. The slope of is constant:   For , the graph of is the line segment from to , so its slope is   on that segment, including at . Therefore,   So  is differentiable at .   "
 },
@@ -3553,7 +3535,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.7",
   "title": "Inverse Functions and Their Derivatives",
-  "body": " Inverse Functions and Their Derivatives    Use implicit differentiation to derive the formula for the derivative of an inverse function.  Compute derivatives of functions involving logarithmic, trigonometric, and inverse trigonometric functions.  Interpret derivative values of inverse functions geometrically as slopes of tangent lines.     Prerequisite Review  This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions and particularly the inverse trigonometric functions. If you feel a bit out of practice with inverse functions or trigonometric functions, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function inverses    Review section on trigonometric functions       Motivating Example and Strategy  Back in the section on exponentials and logs , we stated that the derivative of the natural logarithm function and said that we would prove it later... well now is later! We will use implicit differentiation to find the derivative of .    Create the formula for by using implicit differentiation.    Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,     Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function.   Finding the Derivative of an Inverse Function     Start with a differentiable function and its inverse . Then by the definition of inverse functions, .    Differentiate both sides with respect to , treating as a function of .    Solve for , then rewrite the result in terms of .      Now let's use this idea to find the formulas for the derivatives of various inverse trigonometric functions.    Derivatives of Inverse Trig Functions   Derivative of      Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,      Derivative of      Let . Then . Differentiate:   Since and , we have , and   Therefore,      Derivative of      Let , so . Differentiate:   Use the pythagorean identity and :      Notations of Inverse Trigonometric Functions  Note that some both , , and along with , , and are valid notations for the inverse trigonometric functions. We will use them interchangeably in our course. Students are expected to be comfortable with both notations.     Select Examples  Now that we have the formulas for the derivatives of various inverse functions, let's see some example of problems that would make reasonable homework, quiz, or exam questions.    Find and .    For , use the Chain Rule with outer function and inner function :   For , use the Chain Rule and the derivative of :       Find the derivative of .    Differentiate using the Chain Rule:       Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .      Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Inverse Functions and Their Derivatives      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.      .   False. The Chain Rule introduces a factor of 5.     If , then .   False. The derivative requires the Quotient Rule.       The derivative of is always less than 1.   True. Since and for all real , the derivative is always less than or equal to 1, and equal to 1 only at .     If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .     If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .     If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore      If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,      If has a horizontal tangent at , then has a vertical tangent at .   True. If has a horizontal tangent at , then . Since , it follows that , which is undefined. Therefore, has a vertical tangent at . We can also verify this by sketching the graphs of and and remembering that they are reflections across the line .     If is increasing, then is decreasing.   False. Both are increasing.  If is increasing, then for all in the domain of . Since , and , it follows that . Therefore, is also increasing.      Consider a function and its inverse as shown in the figure below. The function contains the point and contains the point . Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.   >  A function and its inverse , shown as reflections across the line .   A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue. The two graphs are mirror images of each other across the dashed diagonal line y equals x. A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4), illustrating the inverse relationship between the functions.        False. The slopes of the tangent lines at corresponding points of a function and its inverse are multiplicative inverses of each other, not negative reciprocals. Therefore, the tangent lines are not necessarily perpendicular. You can also sketch the tangent lines to see that they are not perpendicular.      "
+  "body": " Inverse Functions and Their Derivatives    Use implicit differentiation to derive the formula for the derivative of an inverse function.  Compute derivatives of functions involving logarithmic, trigonometric, and inverse trigonometric functions.  Interpret derivative values of inverse functions geometrically as slopes of tangent lines.     Prerequisite Review  This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions and particularly the logarithmic and inverse trigonometric functions. If you feel a bit out of practice with inverse functions, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function inverses    Review section on logarithmic functions    Review section on trigonometric functions       The Natural Logarithm and Finding Derivatives of Inverse Functions  Here we will demonstrate how we can use implicit differentiation to find the derivative of the natural logarithm function, . We will use this same idea to find the derivatives of other inverse functions as well.         Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,     Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function.   Finding the Derivative of an Inverse Function     Start with a differentiable function and its inverse . Then by the definition of inverse functions, .    Differentiate both sides with respect to , treating as a function of .    Solve for , then rewrite the result in terms of .      Now let's use this idea to find the formulas for the derivatives of various inverse trigonometric functions.    Derivatives of Inverse Trig Functions   Derivative of      Let . Then . Differentiate both sides with respect to :   Now rewrite in terms of . Since and has range , we have , so   Therefore,      Derivative of      Let . Then . Differentiate:   Since and , we have , and   Therefore,      Derivative of      Let , so . Differentiate:   Use the pythagorean identity and :      Notations of Inverse Trigonometric Functions  Note that some both , , and along with , , and are valid notations for the inverse trigonometric functions. We will use them interchangeably in our course. Students are expected to be comfortable with both notations.     Select Examples  Now that we have the formulas for the derivatives of various inverse functions, let's see some example of problems that would make reasonable homework, quiz, or exam questions.    Find and .    For , use the Chain Rule with outer function and inner function :   For , use the Chain Rule and the derivative of :       Find the derivative of .    Differentiate using the Chain Rule:       Find a point on the curve where the slope is . Is there more than one answer?    Since , we want   Solve for :   So there are two points. When , , and when , . Therefore the slope is at   Yes, there is more than one answer because depends on , so it has the same value at and .      Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Inverse Functions and Their Derivatives      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answer.     If , then .     False. By the Chain Rule, . The factor is missing.      If , then .     True. Let . Then . By the Chain Rule, .       .   False. The Chain Rule introduces a factor of 5.     If , then .   False. The derivative requires the Quotient Rule.       The derivative of is always less than 1.   True. Since and for all real , the derivative is always less than or equal to 1, and equal to 1 only at .     If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .     If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .     If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore      If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,      If has a horizontal tangent at , then has a vertical tangent at .   True. If has a horizontal tangent at , then . Since , it follows that , which is undefined. Therefore, has a vertical tangent at . We can also verify this by sketching the graphs of and and remembering that they are reflections across the line .     If is increasing, then is decreasing.   False. Both are increasing.  If is increasing, then for all in the domain of . Since , and , it follows that . Therefore, is also increasing.      Consider a function and its inverse as shown in the figure below. The function contains the point and contains the point . Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.   >  A function and its inverse , shown as reflections across the line .   A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue. The two graphs are mirror images of each other across the dashed diagonal line y equals x. A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4), illustrating the inverse relationship between the functions.        False. The slopes of the tangent lines at corresponding points of a function and its inverse are multiplicative inverses of each other, not negative reciprocals. Therefore, the tangent lines are not necessarily perpendicular. You can also sketch the tangent lines to see that they are not perpendicular.      "
 },
 {
   "id": "sec-derivative-inverse-2",
@@ -3571,16 +3553,16 @@ var ptx_lunr_docs = [
   "type": "Warning",
   "number": "2.7.1",
   "title": "Prerequisite Review.",
-  "body": " Prerequisite Review  This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions and particularly the inverse trigonometric functions. If you feel a bit out of practice with inverse functions or trigonometric functions, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function inverses    Review section on trigonometric functions     "
+  "body": " Prerequisite Review  This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions and particularly the logarithmic and inverse trigonometric functions. If you feel a bit out of practice with inverse functions, it may be helpful to revisit those ideas before diving into the calculus.   Review section on function inverses    Review section on logarithmic functions    Review section on trigonometric functions     "
 },
 {
-  "id": "ex-derivative-ln",
+  "id": "thm-derivative-ln",
   "level": "2",
-  "url": "sec-derivative-inverse.html#ex-derivative-ln",
-  "type": "Example",
+  "url": "sec-derivative-inverse.html#thm-derivative-ln",
+  "type": "Theorem",
   "number": "2.7.2",
   "title": "",
-  "body": "  Create the formula for by using implicit differentiation.    Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,    "
+  "body": "       Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,    "
 },
 {
   "id": "insight-derivative-inverse-general",
@@ -3664,22 +3646,22 @@ var ptx_lunr_docs = [
   "body": "  Suppose that is differentiable, , and . Find .    Let . Then . Differentiate both sides with respect to :   Therefore,   Now evaluate at . Since , we have because . Thus,    "
 },
 {
-  "id": "exercises-derivative-inv-tf-2-3",
+  "id": "tf-expChain-ap-02",
   "level": "2",
-  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-3",
+  "url": "sec-derivative-inverse.html#tf-expChain-ap-02",
   "type": "Exercise",
   "number": "1",
   "title": "",
-  "body": "   .   False. The Chain Rule introduces a factor of 5.  "
+  "body": "  If , then .     False. By the Chain Rule, . The factor is missing.   "
 },
 {
-  "id": "exercises-derivative-inv-tf-2-4",
+  "id": "tf-expChain-ap-11",
   "level": "2",
-  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-4",
+  "url": "sec-derivative-inverse.html#tf-expChain-ap-11",
   "type": "Exercise",
   "number": "2",
   "title": "",
-  "body": "  If , then .   False. The derivative requires the Quotient Rule.    "
+  "body": "  If , then .     True. Let . Then . By the Chain Rule, .   "
 },
 {
   "id": "exercises-derivative-inv-tf-2-5",
@@ -3688,7 +3670,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3",
   "title": "",
-  "body": "  The derivative of is always less than 1.   True. Since and for all real , the derivative is always less than or equal to 1, and equal to 1 only at .  "
+  "body": "   .   False. The Chain Rule introduces a factor of 5.  "
 },
 {
   "id": "exercises-derivative-inv-tf-2-6",
@@ -3697,7 +3679,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4",
   "title": "",
-  "body": "  If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .  "
+  "body": "  If , then .   False. The derivative requires the Quotient Rule.    "
 },
 {
   "id": "exercises-derivative-inv-tf-2-7",
@@ -3706,7 +3688,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5",
   "title": "",
-  "body": "  If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .  "
+  "body": "  The derivative of is always less than 1.   True. Since and for all real , the derivative is always less than or equal to 1, and equal to 1 only at .  "
 },
 {
   "id": "exercises-derivative-inv-tf-2-8",
@@ -3715,7 +3697,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "6",
   "title": "",
-  "body": "  If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore   "
+  "body": "  If , then .   False. The derivative of is . At , the expression under the square root is negative, so is undefined. Therefore, .  "
 },
 {
   "id": "exercises-derivative-inv-tf-2-9",
@@ -3724,7 +3706,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "7",
   "title": "",
-  "body": "  If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,   "
+  "body": "  If , then at the tangent line equation is given by .   True. The derivative of is . At , and , so the tangent line equation is .  "
 },
 {
   "id": "exercises-derivative-inv-tf-2-10",
@@ -3733,7 +3715,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "8",
   "title": "",
-  "body": "  If has a horizontal tangent at , then has a vertical tangent at .   True. If has a horizontal tangent at , then . Since , it follows that , which is undefined. Therefore, has a vertical tangent at . We can also verify this by sketching the graphs of and and remembering that they are reflections across the line .  "
+  "body": "  If is one-to-one and differentiable and contains the point and is its inverse, then .   True. Consider , then so , which gives . Since , therefore   "
 },
 {
   "id": "exercises-derivative-inv-tf-2-11",
@@ -3742,7 +3724,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "9",
   "title": "",
-  "body": "  If is increasing, then is decreasing.   False. Both are increasing.  If is increasing, then for all in the domain of . Since , and , it follows that . Therefore, is also increasing.   "
+  "body": "  If and note that , then .   True. Consider , then so , which gives . Since , we have , so . Therefore,   "
 },
 {
   "id": "exercises-derivative-inv-tf-2-12",
@@ -3750,6 +3732,24 @@ var ptx_lunr_docs = [
   "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-12",
   "type": "Exercise",
   "number": "10",
+  "title": "",
+  "body": "  If has a horizontal tangent at , then has a vertical tangent at .   True. If has a horizontal tangent at , then . Since , it follows that , which is undefined. Therefore, has a vertical tangent at . We can also verify this by sketching the graphs of and and remembering that they are reflections across the line .  "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-13",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-13",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  If is increasing, then is decreasing.   False. Both are increasing.  If is increasing, then for all in the domain of . Since , and , it follows that . Therefore, is also increasing.   "
+},
+{
+  "id": "exercises-derivative-inv-tf-2-14",
+  "level": "2",
+  "url": "sec-derivative-inverse.html#exercises-derivative-inv-tf-2-14",
+  "type": "Exercise",
+  "number": "12",
   "title": "",
   "body": "  Consider a function and its inverse as shown in the figure below. The function contains the point and contains the point . Since the functions are inverses of each other, the two tangent lines at these corresponding points must be perpendicular to each other.   >  A function and its inverse , shown as reflections across the line .   A coordinate plane showing the graph of a function f(x) in red and its inverse f inverse of x in blue. The two graphs are mirror images of each other across the dashed diagonal line y equals x. A point on f(x) at approximately (4, 2) corresponds to a point on f inverse of x at approximately (2, 4), illustrating the inverse relationship between the functions.        False. The slopes of the tangent lines at corresponding points of a function and its inverse are multiplicative inverses of each other, not negative reciprocals. Therefore, the tangent lines are not necessarily perpendicular. You can also sketch the tangent lines to see that they are not perpendicular.   "
 },
