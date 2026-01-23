@@ -12,6 +12,18 @@
   </objectives>
 
 
+  <warning xml:id="rem-derivApp-motion-inequalities">
+    <title>Prerequisite Review</title>
+    <p>
+      In this section there are several types of problems that require us to be able to solve inequalities. Problems such as
+      determining when an object is moving in the positive direction, or speeding up, or when it has a negative acceleration. 
+    </p>
+    <p>
+  If you feel a bit out of practice with inequalities, it may be helpful
+  to revisit those ideas via the <xref ref="sec-precalc-ineq">Precalculus Review: Inequalities</xref> section before proceeding.
+</p>
+</warning>
+
     <p>
       Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning.
       Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting
@@ -188,157 +200,411 @@
 
 </example>
 
+ <remark xml:id="rem-trajectory-vs-height">
+      <p>
+        The graph of <m>s(t)</m> in <xref ref="ex-ball-motion-derivatives"/> is a downward-opening parabola in <m>t</m>, representing height over time.
+        It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.
+      </p>
+    </remark>
       
 
-
-  </subsection>
-
-  <subsection xml:id="car-stopping">
-    <title>Car Stopping</title>
-
-    <p>
-      Consider a car whose speedometer data is represented by the velocity graph below.
-      Remember: velocity is the derivative of position, so the <em>level</em> of <m>v(t)</m> is the <em>slope</em> of <m>s(t)</m>.
+<example xml:id="ex-velocity-particle-graph">
+  <introduction>
+    <p> 
+    Consider the velocity graph of a particle moving along a line given below.
     </p>
 
-    <figure xml:id="fig-stop-v-1">
-      <caption>Velocity data <m>v(t)</m> from a car’s speedometer.</caption>
-      <image source="2-7-Stop-V-1.png" width="85%"/>
-    </figure>
-
-    <p>
-      Since <m>v(t)=s'(t)</m>, a constant velocity corresponds to a distance graph with constant slope.
-      If the velocity suddenly drops to zero, the distance graph becomes flat.
-    </p>
-
-    <figure xml:id="fig-stop-s-1">
-      <caption>Distance <m>s(t)</m> consistent with the velocity graph.</caption>
-      <image source="2-7-Stop-S-1.png" width="80%"/>
-    </figure>
-
-    <p>
-      Acceleration is the derivative of velocity, <m>a(t)=v'(t)</m>, so the <em>slope</em> of the velocity graph becomes the
-      <em>level</em> of the acceleration graph. The transition is very steep, so the average acceleration over that short time is large.
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle a
-\amp\approx\amp \displaystyle \frac{\Delta v}{\Delta t}
-\\[0.8em]
-\amp=\amp \displaystyle \frac{0-60}{2.1-2}
-\\[0.8em]
-\amp=\amp \displaystyle -600\ \text{ft/sec}^2.
-\end{array}
-    </me>
-
-    <figure xml:id="fig-stop-a-1">
-      <caption>Acceleration <m>a(t)</m> is near zero except during the sudden stop.</caption>
-      <image source="2-7-Stop-A-1.png" width="80%"/>
-    </figure>
-
-    <remark xml:id="rem-crash-interpretation">
-      <p>
-        These graphs describe a car going from about 40 mph to 0 in about 0.1 seconds. That is not normal braking.
-        It indicates a crash. The deceleration is roughly <m>\displaystyle \frac{600}{32}\approx 19</m> gees for a brief moment,
-        which would feel like many times your weight pressing into the seatbelt.
-      </p>
-    </remark>
-  </subsection>
-
-  <subsection xml:id="braking-techniques">
-    <title>Braking Techniques and Jerk</title>
-
-    <p>
-      Now imagine braking steadily at a traffic light, slowing at a constant rate until the car stops.
-      Here the velocity decreases linearly, and the acceleration is roughly constant.
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle \frac{\Delta v}{\Delta t}
-\amp=\amp \displaystyle \frac{0-60}{4-0}
-\\[0.8em]
-\amp=\amp \displaystyle -15\ \text{ft/sec}^2.
-\end{array}
-    </me>
-
-    <figure xml:id="fig-stop-a-v-s-2">
+    <figure xml:id="fig-velocity-particle-graph">
       <caption>
-        A steady stop: acceleration is roughly constant (left), velocity decreases linearly (middle), and distance levels off smoothly (right).
+        Velocity graph <m>v(t)</m> for a particle moving along a line.
       </caption>
-      <image source="2-7-Stop-A-2.png" width="30%"/>
-      <image source="2-7-Stop-V-2.png" width="30%"/>
-      <image source="2-7-Stop-S-2.png" width="30%"/>
+      <image source="images/velocity01.PNG" width="80%">
+          <shortdescription>
+      A graph of velocity versus time for a particle moving along a line.
+      At time 0, the velocity is 4.
+      From time 0 to time 2, the velocity decreases linearly from 4 to 1.
+      From time 2 to time 4, the velocity remains constant at 1.
+      From time 4 to time 6, the velocity decreases linearly from 1 to negative 1, crossing zero at time 5.
+    </shortdescription>
+      </image>
+
     </figure>
-
     <p>
-      Even if the deceleration is not large, an abrupt change in acceleration produces a noticeable jolt.
-      That jolt corresponds to a large value of jerk for a brief moment.
+    Use this to answer the following questions:
     </p>
+  </introduction>
 
-    <p>
-      To reduce jerk, the acceleration should change gradually: squeeze the brake down and release it smoothly.
-      This makes the acceleration graph rise and fall instead of jumping suddenly.
-    </p>
-
-    <figure xml:id="fig-stop-a-v-s-3">
-      <caption>
-        Smoother braking reduces jerk, but it may require a longer stopping time to keep peak deceleration reasonable.
-      </caption>
-      <image source="2-7-Stop-A-3.png" width="30%"/>
-      <image source="2-7-Stop-V-3.png" width="30%"/>
-      <image source="2-7-Stop-S-3.png" width="30%"/>
-    </figure>
-
-    <remark xml:id="rem-braking-tradeoff">
+  <task>
+    <statement>
       <p>
-        Smoother changes in acceleration often require a longer stopping distance and time.
-        In driving terms: if you want a gentle stop without a jolt, you usually need to begin braking earlier.
+        When is the particle moving at a constant speed? Explain how you know.
       </p>
-    </remark>
+    </statement>
+    <solution>
+      <p>
+        The particle is moving at a constant speed from time <m>t=2</m> to <m>t=4</m>.
+        In interval notation this is <m>[2,4]</m>.
+        This is because the velocity graph is flat (horizontal) during this interval,
+        indicating that the velocity is not changing.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        When is the particle changing direction? Explain how you know.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The particle is changing direction at time <m>t=5</m>.
+        This is because the velocity graph crosses the <m>t</m>-axis at this time,
+        indicating that the velocity changes from positive to negative.
+        A change in the sign of velocity indicates a change in direction of motion.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        What is the acceleration of the particle at time <m>t=1</m>? 
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The acceleration at time <m>t=1</m> is the slope of the velocity graph at that time.
+        From the graph, we see that from <m>t=0</m> to <m>t=2</m>, the velocity decreases linearly from 4 to 1.
+        The slope of this line segment is
+        <me>
+\displaystyle \frac{1-4}{2-0} = \frac{-3}{2} = -1.5.
+        </me> 
+        Therefore, the acceleration at time <m>t=1</m> is <m>-1.5</m> units per second squared.
+      </p>
+    </solution>
+  </task>
+
+</example>
+
+
+
+
+
+<p>Now that we have reviewed some of the basic concepts of motion, let's move on to some more advanced topics.</p>
+
+</subsection>
+
+ <subsection xml:id="subsec-SpeedingUp-SlowingDown">
+    <title>Speeding Up and Slowing Down</title>
+  <p>
+    Before we proceed, it is important to emphasize the difference between velocity and speed. 
+    An object is said to be <em>speeding up</em> when its speed is increasing, and <em>slowing down</em> when its speed is decreasing.
+    Let's consider the following example to illustrate this concept before we get our main rule for this section.
+  </p>
+
+  <example xml:id="ex-speeding-up-slowing-down-01">
+    <introduction>
+      <p>
+        Consider the following situations. In each case, determine whether the particle is speeding up or slowing down.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          The velocity of a particle is initially <m>5</m> m/sec and it increases to <m>9</m> m/sec.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since speed is the absolute value of velocity, the speed changes from <m>|5|=5</m> m/sec to <m>|9|=9</m> m/sec.
+          Because the speed is increasing, the particle is speeding up.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The velocity of a particle is initially <m>9</m> m/sec and it decreases to <m>5</m> m/sec.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since speed is the absolute value of velocity, the speed changes from <m>|9|=9</m> m/sec to <m>|5|=5</m> m/sec.
+          Because the speed is decreasing, the particle is slowing down.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The velocity of a particle is initially <m>-5</m> m/sec and it decreases to <m>-9</m> m/sec.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since speed is the absolute value of velocity, the speed changes from <m>|-5|=5</m> m/sec to <m>|-9|=9</m> m/sec.
+          Because the speed is increasing, the particle is speeding up.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The velocity of a particle is initially <m>-9</m> m/sec and it increases to <m>-5</m> m/sec.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since speed is the absolute value of velocity, the speed changes from <m>|-9|=9</m> m/sec to <m>|-5|=5</m> m/sec.
+          Because the speed is decreasing, the particle is slowing down.
+        </p>
+      </solution>
+    </task>
+
+
+  </example>
+
+<remark xml:id="rem-speeding-up-slowing-down">
+  <p> 
+ In summary it is not enough to know whether the velocity is increasing or decreasing to determine if the object is speeding up or slowing down.
+ One must also consider the sign of the velocity.
+  </p>
+  </remark>
+
+<p> Now let's summarize this information as a theorem:</p>
+
+<theorem xml:id="thm-speeding-up-slowing-down">
+  <title>Speeding Up and Slowing Down</title>
+  <statement>
+    <p>
+      <ul> 
+      <li> An object is <term>speeding up</term> when its velocity and acceleration have the same sign (either both positive or both negative). </li>
+      <li>
+      An object is <term>slowing down</term> when its velocity and acceleration have opposite signs (one is positive and the other is negative). </li>
+      </ul>
+    </p>  
+  </statement>
+  <proof>
+    <title>Justification</title>
+    <p>
+      If the velocity is positive then it is the same as speed.
+      Thus if the acceleration is also positive then the velocity is increasing which means the speed is increasing. 
+    </p>
+    <p> 
+      If the velocity is negative then the speed is the opposite of velocity.
+      Thus if the acceleration is also negative then the velocity is decreasing which means the speed is increasing.
+    </p>
+    <p>
+      The other two cases are similar.
+    </p>
+  </proof>
+</theorem>
+
+
+
+<example xml:id="ex-speeding-up-slowing-down2">
+  <statement>
+    <p>
+      Suppose an object has velocity <m>v(t)=t^2-4t</m>. Determine when the object is speeding up and when it is slowing down. Express your answers in interval notation.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First let's find the sign of the velocity.
+      We have
+      <me>
+\displaystyle v(t) = t^2 - 4t = t(t-4).
+      </me>
+      Using the <xref ref="ssec-ineq-overview">Test Point Method for Inequalities</xref>, we 
+      find that the velocity is zero at <m>t=0</m> and <m>t=4</m>.
+      These points divide the number line into three intervals: <m>(-\infty,0)</m>, <m>(0,4)</m>, and <m>(4,\infty)</m>. Choosing test points from each interval, we find:
+      <ul>
+        <li> For <m>t=-1</m> in <m>(-\infty,0)</m>, <m>v(-1)=5</m>, so velocity is positive on this interval. </li>
+        <li> For <m>t=2</m> in <m>(0,4)</m>, <m>v(2)=-4</m>, so velocity is negative on this interval. </li>
+        <li> For <m>t=5</m> in <m>(4,\infty)</m>, <m>v(5)=5</m>, so velocity is positive on this interval. </li>
+      </ul>
+    </p>
+      <p> 
+      <sidebyside width="80%">
+<figure xml:id="fig-tikz-speeding-up-slowing-down01">
+  <caption>A figure showing the sign of the velocity function <m>v(t)=t^2 - 4t</m> on the number line.</caption>
+  <image width="80%" >
+
+<latex-image>
+  <![CDATA[
+\begin{tikzpicture}
+  \draw[->] (-2,0) -- (0,0) node{|} node[below, font=\small, yshift=-4pt] {$0$} -- (4,0) node{|} node[below, font=\small, yshift=-4pt] {$4$} -- (6,0) node[right] {$t$};
+  \draw (-1,0.5) node {(+)};
+  \draw (2,0.5) node {(-)};
+  \draw (5,0.5) node {(+)};
+  \draw (-2.5,0.5) node[left] {$v(t)$};
+\end{tikzpicture}
+  ]]>
+</latex-image>
+  </image>
+
+</figure>
+</sidebyside>
+
+    </p>
+    <p>
+      Next, we find the acceleration by differentiating the velocity:
+      <me>
+\displaystyle a(t) = v'(t) = 2t - 4.
+      </me>
+      Setting the acceleration equal to zero gives <m>2t - 4 = 0</m>, or <m>t=2</m>.
+      This divides the number line into two intervals: <m>(-\infty,2)</m> and <m>(2,\infty)</m>.
+      Choosing test points from each interval, we find:
+      <ul>
+        <li> For <m>t=0</m> in <m>(-\infty,2)</m>, <m>a(0)=-4</m>, so acceleration is negative on this interval. </li>
+        <li> For <m>t=3</m> in <m>(2,\infty)</m>, <m>a(3)=2</m>, so acceleration is positive on this interval. </li>
+      </ul>
+</p>
+    <p>
+            <sidebyside width="80%">
+<figure xml:id="fig-tikz-speeding-up-slowing-down02">
+  <caption>A figure showing the sign of the acceleration function <m>a(t)=2t - 4</m> on the number line.</caption>
+  <image width="80%" >
+
+<latex-image>
+  <![CDATA[
+\begin{tikzpicture}
+  \draw[->] (-2,0) -- (2,0) node{|} node[below, font=\small, yshift=-4pt] {$2$} -- (6,0) node[right] {$t$};
+  \draw (0,-0.5) node {(-)};
+  \draw (4,-0.5) node {(+)};
+  \draw (-2.5,-0.5) node[left] {$a(t)$};
+\end{tikzpicture}
+  ]]>
+</latex-image>
+  </image>
+
+</figure>
+</sidebyside>
+
+
+    </p>
+    <p>
+      Now we can determine when the object is speeding up and when it is slowing down by comparing the signs of velocity and acceleration:
+</p>
+    <p>
+      <sidebyside width="80%">
+        
+<figure xml:id="fig-tikz-speeding-up-slowing-down03">
+  <caption>A figure showing the sign of the velocity function and the acceleration function together on one number line.</caption>
+  <image >
+
+<latex-image>
+  <![CDATA[
+\begin{tikzpicture}
+  \draw[->] (-2,0) -- (0,0) node{|} node[below, font=\small, yshift=-4pt] {$0$} -- (2,0) node{|} node[below, font=\small, yshift=-4pt] {$2$} -- (4,0) node{|} node[below, font=\small, yshift=-4pt] {$4$} -- (6,0) node[right] {$t$};
+  \draw (-1,0.5) node {(+)};
+  \draw (1,0.5) node {(-)};
+  \draw (3,0.5) node {(-)};
+  \draw (5,0.5) node {(+)};
+  \draw (-2.5,0.5) node[left] {$v(t)$};
+  \draw (-1,-0.5) node {(-)};
+  \draw (1,-0.5) node {(-)};
+  \draw (3,-0.5) node {(+)};
+  \draw (5,-0.5) node {(+)};
+  \draw (-2.5,-0.5) node[left] {$a(t)$};
+\end{tikzpicture}
+  ]]>
+</latex-image>
+  </image>
+
+</figure>
+      </sidebyside>
+
+    </p>
+    <p> 
+
+      <ul>
+        <li> On <m>(-\infty,0)</m>, velocity is positive and acceleration is negative, so the object is slowing down. </li>
+        <li> On <m>(0,2)</m>, velocity is negative and acceleration is negative, so the object is speeding up. </li>
+        <li> On <m>(2,4)</m>, velocity is negative and acceleration is positive, so the object is slowing down. </li>
+        <li> On <m>(4,\infty)</m>, velocity is positive and acceleration is positive, so the object is speeding up. </li>
+      </ul>
+    </p>
+    <p>
+      Therefore, the object is speeding up on <m>(0,2)\cup(4,\infty)</m> and slowing down on <m>(-\infty,0)\cup(2,4)</m>.
+    </p>
+  </solution> 
+</example>
+
+
+<p>This completes our discussion of speeding up and slowing down.
+We will now move on to discuss total distance traveled and how it differs from displacement, the final new concept in this section. </p>
+
   </subsection>
 
-  <subsection xml:id="ballistic-equation">
-    <title>The Ballistic Equation</title>
 
+
+
+  <subsection xml:id="subsec-TDT">
+    <title>Displacement vs Distance Traveled</title>
+<p>
+  Bleh
+</p>
+    
+  </subsection>
+
+
+
+  
+
+
+  
+
+
+
+<subsection xml:id="additional-worked-problems-derivApp-Motion">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-derivApp-placeholder">
+        Additional Worked-Out Problems for Motion in Physics
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-derivApp-Motion-tf">
+  <title>Practice / Study Problems</title>
+
+
+
+<exercisegroup xml:id="eg-derivApp-motion-tf">
+  <title>True/False Questions</title>
+
+  <introduction>
     <p>
-      A basic model for vertical motion under constant gravity is the <term>ballistic equation</term>:
+      Determine whether each statement is true or false.
+      Justify your answers.
     </p>
+  </introduction>
 
-    <me>
-      s(t)=s_0+v_0 t-\frac12 g t^2.
-    </me>
 
-    <p>
-      Here <m>s_0</m> is the initial height, <m>v_0</m> is the initial velocity, and <m>g</m> is a positive constant representing the strength of gravity.
-      Differentiating reveals the relationships among position, velocity, acceleration, and jerk.
-    </p>
 
-    <me>
-\begin{array}{rcl}
-\displaystyle v(t)
-\amp=\amp \displaystyle s'(t)
-\\[0.6em]
-\amp=\amp \displaystyle (s_0)'+(v_0 t)'-\left(\frac12 g t^2\right)'
-\\[0.9em]
-\amp=\amp \displaystyle 0+v_0-g t
-\\[0.6em]
-\amp=\amp \displaystyle v_0-g t,
-\\[1.2em]
-\displaystyle a(t)
-\amp=\amp \displaystyle v'(t)
-\\[0.6em]
-\amp=\amp \displaystyle -g,
-\\[1.2em]
-\displaystyle j(t)
-\amp=\amp \displaystyle a'(t)
-\\[0.6em]
-\amp=\amp \displaystyle 0.
-\end{array}
-    </me>
+      </exercisegroup>
+      </exercises>
 
-    <example xml:id="ex-throw-ball-4-seconds">
+
+</section>
+
+
+
+
+
+
+
+<!-- 
+
+  <example xml:id="ex-throw-ball-4-seconds">
       <statement>
         <p>
           Under standard gravity <m>g=32</m> ft/sec<sup>2</sup>, suppose a ball is thrown straight up from height
@@ -393,42 +659,5 @@
       </solution>
     </example>
 
-    <remark xml:id="rem-trajectory-vs-height">
-      <p>
-        The graph of <m>s(t)</m> is a downward-opening parabola in <m>t</m>, representing height over time.
-        It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.
-      </p>
-    </remark>
-  </subsection>
 
-  <subsection xml:id="practice-conceptual-translation">
-    <title>Practice: Translating Between Levels</title>
-
-    <exercise xml:id="ex-translation-1">
-      <statement>
-        <p>
-          A position graph <m>s(t)</m> is increasing and concave down on an interval. Describe what this says about the signs of
-          <m>v(t)=s'(t)</m> and <m>a(t)=s''(t)</m> on that interval.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="ex-translation-2">
-      <statement>
-        <p>
-          A velocity graph <m>v(t)</m> is above the <m>t</m>-axis and decreasing. What can you conclude about the motion of the object?
-          Include a statement about speed and acceleration.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="ex-translation-3">
-      <statement>
-        <p>
-          Suppose a car’s acceleration graph has a sharp jump at a moment in time. What does this suggest about the jerk?
-          Give a real-world interpretation.
-        </p>
-      </statement>
-    </exercise>
-  </subsection>
-</section>
+-->

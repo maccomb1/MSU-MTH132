@@ -13,6 +13,8 @@
   </ul>
 </objectives>
 
+<warning xml:id="wrn-derivative-inverse-prereq">
+  <title>Prerequisite Review</title>
 <p>
   This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions
   and particularly the inverse trigonometric functions.
@@ -29,6 +31,8 @@
   </li>
 </ul>
 </p>
+</warning>
+
 
 <subsection xml:id="derivative-inverse-motivating-example">
     <title>Motivating Example and Strategy</title>

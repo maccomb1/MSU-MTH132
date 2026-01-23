@@ -24,11 +24,9 @@
 </objectives>
 
 
-<p>
-  Exponential and logarithmic functions appear throughout calculus. Their derivatives play a central role in growth models,
-  rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these
-  functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.
-</p>
+
+<warning xml:id="wrn-expChain-prereq">
+  <title>Prerequisite Review</title>
 
 <p>
   If you feel a bit out of practice with exponential rules, logarithm rules, or composition rules from algebra, it may be helpful
@@ -47,6 +45,14 @@
   </li>
 </ul>
 </p>
+</warning>
+
+<p>
+  Exponential and logarithmic functions appear throughout calculus. Their derivatives play a central role in growth models,
+  rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these
+  functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.
+</p>
+
 
   <!-- Key Definitions and Theorems -->
   <subsection xml:id="ssec-expChain-key-results">
