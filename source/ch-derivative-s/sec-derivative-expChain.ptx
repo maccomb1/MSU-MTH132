@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-derivative-expChain" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Exponential and Logarithmic Derivatives and the Chain Rule</title>
+  <title>Exponential Derivatives and the Chain Rule</title>
 
 <objectives>
   <ul>
     <li>
       Apply the basic derivative formulas for 
-      <m>e^x</m>,  <m>\ln(x)</m>, and <m>a^x</m>.
+      <m>e^x</m> and <m>a^x</m>.
     </li>
 
     <li>
@@ -16,7 +16,7 @@
     </li>
 
     <li>
-      Compute derivatives of functions that combine exponentials, logarithms, 
+      Compute derivatives of functions that combine exponentials,
       powers, and trigonometric expressions using the Product Rule, Quotient Rule, 
       and Chain Rule.
     </li>
@@ -29,7 +29,7 @@
   <title>Prerequisite Review</title>
 
 <p>
-  If you feel a bit out of practice with exponential rules, logarithm rules, or composition rules from algebra, it may be helpful
+  If you feel a bit out of practice with exponential rules or composition rules from algebra, it may be helpful
   to revisit those ideas before diving into the calculus.
 
 <ul>
@@ -39,15 +39,17 @@
   <li>
     <p><xref ref="ssec-exp-def">Review section on exponential functions</xref></p>
   </li>
+  <!-- 
   <li>
     <p><xref ref="ssec-log-def">Review section on logarithmic functions</xref></p>
   </li>
+  -->
 </ul>
 </p>
 </warning>
 
 <p>
-  Exponential and logarithmic functions appear throughout calculus. Their derivatives play a central role in growth models,
+  Exponential functions appear throughout calculus. Their derivatives play a central role in growth models,
   rates of change, and the behavior of composite functions. This section develops the essential derivative formulas for these
   functions and introduces the Chain Rule, which allows us to differentiate compositions of functions.
 </p>
@@ -55,12 +57,42 @@
 
   <!-- Key Definitions and Theorems -->
   <subsection xml:id="ssec-expChain-key-results">
-    <title>Key Derivative Formulas</title>
+    <title>Key Derivative Formula</title>
 
     <p>
-      We begin by collecting the fundamental derivative rules for exponential and logarithmic functions. Some are stated without proof here and will be justified later in the text.
+      We begin by stating the derivative formula for the natural exponential function.
+      </p>
+
+<theorem xml:id="thm-derivatives-exp">
+  <title>Derivative of the Natural Exponential Function</title>
+
+  <statement>
+    <me>
+      \dfrac{d}{dx}(e^x) = e^x.
+    </me>
+  </statement>
+
+  <proof>
+    <p>
+      We will use this derivative formula throughout the course, but we will not prove it at this moment.
     </p>
 
+    <p>
+      The fact that <m>(e^x)' = e^x</m> is a classical result that can be established in several different ways:
+      by studying the compound interest definition of <m>e</m>, by using limits, or by analyzing the unique solution
+      to a differential equation. Curious students can find many proofs available online.
+    </p>
+
+    <p>
+      For now, we take this result as a known fact and use it to develop more general differentiation techniques.
+    </p>
+  </proof>
+</theorem>
+
+
+
+
+    <!-- 
 <theorem xml:id="thm-derivatives-exp-log">
   <title>Derivatives of the Natural Exponential and Natural Logarithm</title>
   <statement>
@@ -97,8 +129,10 @@
   </proof>  
 </theorem>
 
+--> 
+
     <p>
-      Now that we know the derivatives of <m>e^x</m> and <m>\ln(x)</m>, we can combine them with the
+      Now that we know the derivative of <m>e^x</m>, we can combine it with the
       Product Rule, Quotient Rule, and earlier power–function rules to differentiate more complicated expressions.
     </p>
 
@@ -157,7 +191,8 @@
     </solution>
   </task>
 
-  <!-- Task (b) -->
+  
+  <!-- Task (b) 
   <task>
     <statement>
       <p>
@@ -184,7 +219,7 @@
       </me>
     </solution>
   </task>
-
+-->
 </example>
 
   <example xml:id="ex-expChain-basic-02">
@@ -546,21 +581,7 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
   </solution>
 </exercise>
 
-<exercise xml:id="tf-expChain-ap-02">
-  <statement>
-    <p>
-      If <m>f(x)=\ln(g(x))</m>, then <m>f'(x)=\dfrac{1}{g(x)}</m>.
-    </p>
-  </statement>
-  <solution>
-    <p>
-      <em>False.</em>
-      By the Chain Rule,
-      <m>\dfrac{d}{dx}\left(\ln(g(x))\right)=\dfrac{1}{g(x)}\cdot g'(x)</m>.
-      The factor <m>g'(x)</m> is missing.
-    </p>
-  </solution>
-</exercise>
+
 
 <exercise xml:id="tf-expChain-ap-03">
   <statement>
@@ -665,21 +686,7 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
   </solution>
 </exercise>
 
-<exercise xml:id="tf-expChain-ap-11">
-  <statement>
-    <p>
-      If <m>f(x)=\ln(x^2+1)</m>, then <m>f'(x)=\dfrac{2x}{x^2+1}</m>.
-    </p>
-  </statement>
-  <solution>
-    <p>
-      <em>True.</em>
-      Let <m>u=x^2+1</m>. Then <m>f(x)=\ln(u)</m>.
-      By the Chain Rule,
-      <m>f'(x)=\dfrac{1}{u}\cdot u'=\dfrac{1}{x^2+1}\cdot 2x=\dfrac{2x}{x^2+1}</m>.
-    </p>
-  </solution>
-</exercise>
+
 
 <exercise xml:id="tf-expChain-ap-12">
   <statement>

@@ -17,13 +17,16 @@
   <title>Prerequisite Review</title>
 <p>
   This section builds on your knowledge of implicit differentiation to find derivatives of inverse functions
-  and particularly the inverse trigonometric functions.
-  If you feel a bit out of practice with inverse functions or trigonometric functions, it may be helpful
+  and particularly the logarithmic and inverse trigonometric functions.
+  If you feel a bit out of practice with inverse functions, it may be helpful
   to revisit those ideas before diving into the calculus. 
 
 <ul>
   <li>
     <p><xref ref="ssec-inverses">Review section on function inverses</xref></p>
+  </li>
+    <li>
+    <p><xref ref="ssec-log-def">Review section on logarithmic functions</xref></p>
   </li>
   <li>
     <p><xref ref="ssec-trig-triangle">Review section on trigonometric functions</xref></p>
@@ -33,23 +36,22 @@
 </warning>
 
 
-<subsection xml:id="derivative-inverse-motivating-example">
-    <title>Motivating Example and Strategy</title>
+<subsection xml:id="derivative-inverse-log">
+    <title>The Natural Logarithm and Finding Derivatives of Inverse Functions</title>
 
     <p>
-      Back in <xref ref="ssec-expChain-key-results">the section on exponentials and logs</xref>, 
-      we stated that the derivative of the natural logarithm function and said that we would prove it later... well now is later!
-      We will use implicit differentiation to find the derivative of <m>y=\ln x</m>.
+      Here we will demonstrate how we can use implicit differentiation to find the derivative of the natural logarithm function, <m>y=\ln x</m>.
+      We will use this same idea to find the derivatives of other inverse functions as well.
     </p>
 
-<example xml:id="ex-derivative-ln">
+<theorem xml:id="thm-derivative-ln">
       <statement>
         <p>
-          Create the formula for <m>\displaystyle \frac{d}{dx}(\ln x)</m> by using implicit differentiation.
+         <me>\displaystyle \frac{d}{dx}(\ln x) = \frac{1}{x}</me> 
         </p>
       </statement>
 
-      <solution>
+      <proof>
         <p>
           Let <m>y=\ln x</m>. Then by the inverse relationship with the exponential function, 
           
@@ -69,9 +71,8 @@
           Thus,
           <me> \displaystyle \frac{d}{dx}(\ln x) = \frac{1}{x}. </me>
         </p>
-</solution>
-
-</example>
+      </proof>
+    </theorem>
 
 
 <p> Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function. </p>
@@ -432,6 +433,37 @@
 
       </introduction>
 
+<exercise xml:id="tf-expChain-ap-02">
+  <statement>
+    <p>
+      If <m>f(x)=\ln(g(x))</m>, then <m>f'(x)=\dfrac{1}{g(x)}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em>
+      By the Chain Rule,
+      <m>\dfrac{d}{dx}\left(\ln(g(x))\right)=\dfrac{1}{g(x)}\cdot g'(x)</m>.
+      The factor <m>g'(x)</m> is missing.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="tf-expChain-ap-11">
+  <statement>
+    <p>
+      If <m>f(x)=\ln(x^2+1)</m>, then <m>f'(x)=\dfrac{2x}{x^2+1}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em>
+      Let <m>u=x^2+1</m>. Then <m>f(x)=\ln(u)</m>.
+      By the Chain Rule,
+      <m>f'(x)=\dfrac{1}{u}\cdot u'=\dfrac{1}{x^2+1}\cdot 2x=\dfrac{2x}{x^2+1}</m>.
+    </p>
+  </solution>
+</exercise>
 
   <exercise>
     <statement>
