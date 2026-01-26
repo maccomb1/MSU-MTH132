@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '7.11.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -411,18 +411,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-derivApp-related.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Related Rates</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#pulley-example" class="internal"><span class="title">Pulley Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#method-related-rates" class="internal"><span class="title">A Method for Related Rates Problems</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#spill-radius-example" class="internal"><span class="title">Spill Radius Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#searchlight-example" class="internal"><span class="title">Searchlight Example</span></a></div></li>
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-derivApp-related.html#flashlight-examples" class="internal"><span class="title">Flashlight Examples</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#flashlight-a" class="internal"><span class="title">Case (a): Moving Toward the Wall</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#flashlight-b" class="internal"><span class="title">Case (b): Narrowing the Beam</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#practice-related-rates" class="internal"><span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#related-rates-intro" class="internal"><span class="title">Introduction to Related Rates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#related-rates-examples" class="internal"><span class="title">Select Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-related.html#additional-worked-problems-derivApp-Related" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-related.html#exercises-derivApp-RRates-tf" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -458,7 +450,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Additional Resources</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Quiz / Exam Formula Sheet</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-appendix"><div class="toc-title-box"><a href="formula-sheet.html" class="internal"><span class="codenumber">A</span> <span class="title">Quiz / Exam Formula Sheet</span></a></div></li></ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-derivApp-related"><h2 class="heading hide-type">
@@ -467,375 +459,543 @@ eBookConfig.enable_chatcodes =  false;
 <article class="objectives goal-like" id="sec-derivApp-related-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="sec-derivApp-related-2-1">
 <li id="sec-derivApp-related-2-1-1">
-<div class="para" id="p-derived-sec-derivApp-related-2-1-1">Set up a related rates problem by identifying variables, constants, current values, and known rates.</div>
+<div class="para" id="p-derived-sec-derivApp-related-2-1-1">Identify all relevant quantities in a related rates problem, distinguishing between constants, variables, known rates, and unknown rates.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-related-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-related-2-1-2">
-<div class="para" id="p-derived-sec-derivApp-related-2-1-2">Write a geometric relationship among variables, then differentiate with respect to time using the Chain Rule.</div>
+<div class="para" id="p-derived-sec-derivApp-related-2-1-2">Translate a physical or geometric situation into an equation relating the variables using appropriate formulas.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-related-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-related-2-1-3">
-<div class="para" id="p-derived-sec-derivApp-related-2-1-3">Compute an unknown rate at a specific instant by substituting current values only at the end.</div>
+<div class="para" id="p-derived-sec-derivApp-related-2-1-3">Create and label an appropriate diagram to support problem setup and reasoning.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-related-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-related-2-1-4">
-<div class="para" id="p-derived-sec-derivApp-related-2-1-4">Check answers for sign and real-world plausibility, including unit consistency.</div>
+<div class="para" id="p-derived-sec-derivApp-related-2-1-4">Apply differentiation rules to a relationship involving multiple time-dependent quantities using the chain rule and possibly implicit differentiation.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-related-2-1-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Objectives 3.2"><a href="#sec-derivApp-related-2" title="Copy heading and permalink for Objectives 3.2" aria-label="Copy heading and permalink for Objectives 3.2">🔗</a></div></article><section class="subsection" id="pulley-example"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pulley Example</span>
+<div class="autopermalink" data-description="Objectives 3.2"><a href="#sec-derivApp-related-2" title="Copy heading and permalink for Objectives 3.2" aria-label="Copy heading and permalink for Objectives 3.2">🔗</a></div></article><section class="subsection" id="related-rates-intro"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to Related Rates</span>
 </h3>
-<div class="para" id="pulley-example-2">Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand, which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at <span class="process-math">\(2\)</span> ft/sec, how fast will the weight rise?<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="related-rates-intro-2">Many real-world situations involve quantities that change over time. In some cases, the rates of change of certain quantities are known, and we want to find the rates of change of other related quantities. These problems are called <dfn class="terminology">related rates</dfn> problems.<div class="autopermalink" data-description="Paragraph"><a href="#related-rates-intro-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="pulley-example-3">This is a <dfn class="terminology">related rates</dfn> problem: we want an unknown rate of change from a known rate, using a geometric relationship. Start by drawing a picture and labeling constants and variables. Let <span class="process-math">\(h(t)\)</span> be the horizontal distance from the weight to your hand, and let <span class="process-math">\(r(t)\)</span> be the length of the rope segment from the pulley to your hand. The problem gives the current value <span class="process-math">\(h(0)=15\)</span> and the current rate <span class="process-math">\(h'(0)=2\)</span> (ft/sec). We want <span class="process-math">\(r'(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="related-rates-intro-3">The key steps in solving related rates problems are:<div class="autopermalink" data-description="Paragraph"><a href="#related-rates-intro-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-pulley"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/2-8-Pulley.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pulley setup with variables <span class="process-math">\(h(t)\)</span> and <span class="process-math">\(r(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 3.2.1"><a href="#fig-pulley" title="Copy heading and permalink for Figure 3.2.1" aria-label="Copy heading and permalink for Figure 3.2.1">🔗</a></div></figcaption></figure><div class="para logical" id="pulley-example-5">
-<div class="para">The vertical distance from your hand up to the pulley is constant: <span class="process-math">\(10-3=7\)</span> ft. By the Pythagorean Theorem, the geometry implies</div>
-<div class="displaymath process-math">
-\begin{equation*}
-r(t)^2=h(t)^2+7^2=h(t)^2+49.
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="pulley-example-6">One approach is to solve for <span class="process-math">\(r(t)\)</span> and then differentiate.<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcl}
-\displaystyle r(t) 
-\amp=\amp \displaystyle \sqrt{h(t)^2+49}
-\\[0.9em]
-\displaystyle r'(t)
-\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot \left(h(t)^2+49\right)'
-\\[0.9em]
-\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot 2h(t)h'(t)
-\\[0.9em]
-\amp=\amp \displaystyle \frac{h(t)h'(t)}{\sqrt{h(t)^2+49}}.
-\end{array}
-\end{equation*}
-</div>
-<div class="para" id="pulley-example-8">Now substitute the current values:<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcl}
-\displaystyle r'(0)
-\amp=\amp \displaystyle \frac{h(0)\,h'(0)}{\sqrt{h(0)^2+49}}
-\\[0.9em]
-\amp=\amp \displaystyle \frac{(15)(2)}{\sqrt{15^2+49}}
-\\[0.9em]
-\amp=\amp \displaystyle \frac{30}{\sqrt{274}}
-\approx 1.8\ \text{ft/sec}.
-\end{array}
-\end{equation*}
-</div>
-<div class="para" id="pulley-example-10">The weight rises at the same rate that the rope segment <span class="process-math">\(r(t)\)</span> increases, so the weight rises at about <span class="process-math">\(1.8\)</span> ft/sec at that instant.<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="remark remark-like" id="rem-plug-in-last"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<article class="insight remark-like" id="insight-related-rates-steps"><h4 class="heading">
+<span class="type">Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Steps for Solving Related Rates Problems.</span>
 </h4>
-<div class="para" id="rem-plug-in-last-1">Plug in the current values only at the last step. If you substitute before differentiating, you turn variables into constants and their derivatives become zero.<div class="autopermalink" data-description="Paragraph"><a href="#rem-plug-in-last-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 3.2.2"><a href="#rem-plug-in-last" title="Copy heading and permalink for Remark 3.2.2" aria-label="Copy heading and permalink for Remark 3.2.2">🔗</a></div></article><div class="para" id="pulley-example-12">We can also do this more directly by implicitly differentiating the relationship <span class="process-math">\(r(t)^2=h(t)^2+49\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcl}
-\displaystyle \left(r(t)^2\right)'
-\amp=\amp \displaystyle \left(h(t)^2+49\right)'
-\\[0.9em]
-\displaystyle 2r(t)r'(t)
-\amp=\amp \displaystyle 2h(t)h'(t)
-\\[0.9em]
-\displaystyle r'(t)
-\amp=\amp \displaystyle \frac{h(t)h'(t)}{r(t)}.
-\end{array}
-\end{equation*}
-</div>
-<div class="para" id="pulley-example-14">Since <span class="process-math">\(r(0)=\sqrt{h(0)^2+49}=\sqrt{274}\text{,}\)</span> this gives the same numerical result as above.<div class="autopermalink" data-description="Paragraph"><a href="#pulley-example-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Subsection: Pulley Example"><a href="#pulley-example" title="Copy heading and permalink for Subsection: Pulley Example" aria-label="Copy heading and permalink for Subsection: Pulley Example">🔗</a></div></section><section class="subsection" id="method-related-rates"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Method for Related Rates Problems</span>
-</h3>
-<ol class="decimal" id="method-related-rates-2">
-<li id="method-related-rates-2-1">
-<div class="para" id="p-derived-method-related-rates-2-1"><ul class="disc" id="method-related-rates-2-1-1">
-<li id="method-related-rates-2-1-1-1">
-<div class="para" id="p-derived-method-related-rates-2-1-1-1">numerical constant values,</div>
-<div class="autopermalink" data-description="Item"><a href="#method-related-rates-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<ol class="decimal" id="insight-related-rates-steps-2">
+<li id="insight-related-rates-steps-2-1">
+<div class="para" id="p-derived-insight-related-rates-steps-2-1">Establish a relationship between the variables using geometry or known formulas.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#insight-related-rates-steps-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="method-related-rates-2-1-1-2">
-<div class="para" id="p-derived-method-related-rates-2-1-1-2">letter variables and their current values,</div>
-<div class="autopermalink" data-description="Item"><a href="#method-related-rates-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="insight-related-rates-steps-2-2">
+<div class="para" id="p-derived-insight-related-rates-steps-2-2">Differentiate the relationship with respect to time, applying the Chain Rule as needed.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#insight-related-rates-steps-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="method-related-rates-2-1-1-3">
-<div class="para" id="p-derived-method-related-rates-2-1-1-3">arrows showing known current rates (derivatives),</div>
-<div class="autopermalink" data-description="Item"><a href="#method-related-rates-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="method-related-rates-2-1-1-4">
-<div class="para" id="p-derived-method-related-rates-2-1-1-4">an arrow for the unknown target rate you want.</div>
-<div class="autopermalink" data-description="Item"><a href="#method-related-rates-2-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul></div>
-<div class="autopermalink" data-description="Item 1"><a href="#method-related-rates-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="method-related-rates-2-2">
-<div class="para" id="p-derived-method-related-rates-2-2">Write an equation relating the variables using geometry (or a known formula).</div>
-<div class="autopermalink" data-description="Item 2"><a href="#method-related-rates-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="method-related-rates-2-3">
-<div class="para" id="p-derived-method-related-rates-2-3">Assume each variable depends on time <span class="process-math">\(t\text{,}\)</span> then differentiate both sides with respect to <span class="process-math">\(t\text{.}\)</span> Use the Chain Rule whenever a variable appears inside a power, root, trig function, etc. Solve for the target derivative if needed.</div>
-<div class="autopermalink" data-description="Item 3"><a href="#method-related-rates-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="method-related-rates-2-4">
-<div class="para" id="p-derived-method-related-rates-2-4">Substitute the current values and current rates to compute the target rate.</div>
-<div class="autopermalink" data-description="Item 4"><a href="#method-related-rates-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="insight-related-rates-steps-2-3">
+<div class="para" id="p-derived-insight-related-rates-steps-2-3">Substituting known values and rates to find the unknown rate.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#insight-related-rates-steps-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Subsection: A Method for Related Rates Problems"><a href="#method-related-rates" title="Copy heading and permalink for Subsection: A Method for Related Rates Problems" aria-label="Copy heading and permalink for Subsection: A Method for Related Rates Problems">🔗</a></div></section><section class="subsection" id="spill-radius-example"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spill Radius Example</span>
+<div class="autopermalink" data-description="Strategy 3.2.1: Steps for Solving Related Rates Problems"><a href="#insight-related-rates-steps" title="Copy heading and permalink for Strategy 3.2.1: Steps for Solving Related Rates Problems" aria-label="Copy heading and permalink for Strategy 3.2.1: Steps for Solving Related Rates Problems">🔗</a></div></article><article class="remark remark-like" id="rem-related-rates-overview"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="rem-related-rates-overview-1">Related rates problems often involve geometric relationships, such as those found in triangles, circles, or other shapes. Some students find that every problem feels a bit different, but the overall method remains consistent across various scenarios.<div class="autopermalink" data-description="Paragraph"><a href="#rem-related-rates-overview-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rem-related-rates-overview-2">Remember that our <a href="formula-sheet.html" class="internal" title="Appendix A: Quiz / Exam Formula Sheet">formula sheet, included in Appendix A</a> includes many geometric formulas that can be useful in setting up these problems and that many of the quantities involved may depend on time, even if not explicitly stated (so the chain rule will often be needed).<div class="autopermalink" data-description="Paragraph"><a href="#rem-related-rates-overview-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.2"><a href="#rem-related-rates-overview" title="Copy heading and permalink for Remark 3.2.2" aria-label="Copy heading and permalink for Remark 3.2.2">🔗</a></div></article><div class="para" id="related-rates-intro-6">Now that we have the technique outlined, let’s explore some examples to see how these steps are applied in practice.<div class="autopermalink" data-description="Paragraph"><a href="#related-rates-intro-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Introduction to Related Rates"><a href="#related-rates-intro" title="Copy heading and permalink for Subsection: Introduction to Related Rates" aria-label="Copy heading and permalink for Subsection: Introduction to Related Rates">🔗</a></div></section><section class="subsection" id="related-rates-examples"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Select Examples</span>
 </h3>
-<div class="para" id="spill-radius-example-2">A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of <span class="process-math">\(2\)</span> m2/min, how quickly is the puddle widening at that instant?<div class="autopermalink" data-description="Paragraph"><a href="#spill-radius-example-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="example example-like" id="example-spill-radius"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spill Example.</span>
+</h4>
+<div class="para" id="example-spill-radius-2-1">A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of <span class="process-math">\(2\)</span> m<span class="process-math">\(^2\)</span>/min, how quickly is the puddle’s radius widening at that instant?<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-puddle"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/RelatedRates1.gif" class="contained" alt="An animation on a coordinate grid showing a circle centered at the origin expanding outward over time, modeling a circular puddle that is widening. The circle represents the puddle’s boundary and grows smoothly, indicating increasing radius and diameter. The situation corresponds to the instant when the puddle’s diameter is 1 meter and the area is increasing at 2 square meters per minute, and the goal is to determine how fast the radius is increasing at that instant."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circular puddle grows as water spreads outward.<div class="autopermalink" data-description="Figure 3.2.4"><a href="#fig-puddle" title="Copy heading and permalink for Figure 3.2.4" aria-label="Copy heading and permalink for Figure 3.2.4">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-spill-radius-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-spill-radius-3-1">We can see in this problem that they give us the rate of change of the area of the puddle, and we are asked to find the rate of change of the radius, these are the two rates we are try to relate together in this problem.<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-puddle"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="external/2-8-Puddle.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A growing circular puddle with radius <span class="process-math">\(r(t)\)</span> and area <span class="process-math">\(A(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 3.2.3"><a href="#fig-puddle" title="Copy heading and permalink for Figure 3.2.3" aria-label="Copy heading and permalink for Figure 3.2.3">🔗</a></div></figcaption></figure><div class="para" id="spill-radius-example-4">Let <span class="process-math">\(r(t)\)</span> be the puddle’s radius and <span class="process-math">\(A(t)\)</span> its area. A diameter of 1 m means the current radius is <span class="process-math">\(r(0)=\frac12\text{.}\)</span> The given rate is <span class="process-math">\(A'(0)=2\)</span> m2/min. We want <span class="process-math">\(r'(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#spill-radius-example-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-spill-radius-3-2">So for this problem, since the puddle is circular, we can use the formula for the area of a circle, which is <span class="process-math">\(A=\pi r^2\text{,}\)</span> where <span class="process-math">\(r\)</span> is the radius of the circle.<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="spill-radius-example-5">
-<div class="para">The geometric relationship is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A(t)=\pi r(t)^2.
-\end{equation*}
+<div class="para" id="example-spill-radius-3-3">Since both the area and the radius are changing over time, we can express them as functions of time: <span class="process-math">\(A(t)\)</span> and <span class="process-math">\(r(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Differentiate both sides with respect to time:</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#spill-radius-example-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-spill-radius-3-4">We are given that the area is increasing at a rate of <span class="process-math">\(2\)</span> m<span class="process-math">\(^2\)</span>/min, which means <span class="process-math">\(A'(t)=2\)</span> m<span class="process-math">\(^2\)</span>/min. We are asked to find how quickly the radius is widening, which means we need to find <span class="process-math">\(r'(t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-spill-radius-3-5">To find <span class="process-math">\(r'(t)\text{,}\)</span> we can differentiate the area formula with respect to time using the Chain Rule:<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle A'(t)
-\amp=\amp \displaystyle \pi\left(r(t)^2\right)'
+\displaystyle A(t)
+\amp=\amp \displaystyle \pi r(t)^2,
 \\[0.9em]
-\amp=\amp \displaystyle 2\pi r(t)r'(t).
+\displaystyle A'(t)
+\amp=\amp \displaystyle \pi \cdot 2r(t) \cdot r'(t)
+\\[0.9em]
+\amp=\amp \displaystyle 2\pi r(t) r'(t).
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="spill-radius-example-7">Solve for the target rate and substitute the current values:<div class="autopermalink" data-description="Paragraph"><a href="#spill-radius-example-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-spill-radius-3-7">Now we can solve for <span class="process-math">\(r'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle r'(t)
-\amp=\amp \displaystyle \frac{A'(t)}{2\pi r(t)}
-\\[0.9em]
+\amp=\amp \displaystyle \frac{A'(t)}{2\pi r(t)}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="example-spill-radius-3-9">Now we will take the <span class="process-math">\(t=0\)</span> to be the time where the puddle is 1 meter across (so <span class="process-math">\(r(0)=\frac12\)</span>). Recall also we know that <span class="process-math">\(A'(0)=2\text{.}\)</span> So therefore:<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
 \displaystyle r'(0)
 \amp=\amp \displaystyle \frac{A'(0)}{2\pi r(0)}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{2}{2\pi(\frac12)}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{2}{\pi}
-\approx 0.64\ \text{m/min}.
 \end{array}
 \end{equation*}
 </div>
-<article class="remark remark-like" id="rem-puddle-plausible"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para" id="example-spill-radius-3-11">So the radius is widening at a rate of <span class="process-math">\(\frac{2}{\pi}\)</span> m/min when the puddle is 1 meter across.<div class="autopermalink" data-description="Paragraph"><a href="#example-spill-radius-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.3.1"><a href="#example-spill-radius-3" title="Copy heading and permalink for Solution 3.2.3.1" aria-label="Copy heading and permalink for Solution 3.2.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.3: Spill Example"><a href="#example-spill-radius" title="Copy heading and permalink for Example 3.2.3: Spill Example" aria-label="Copy heading and permalink for Example 3.2.3: Spill Example">🔗</a></div></article><article class="example example-like" id="example-pulley"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pulley Example.</span>
 </h4>
-<div class="para" id="rem-puddle-plausible-1">Always check plausibility. A radius increase of about 0.6 m per minute can be reasonable, depending on flow rate and surface.<div class="autopermalink" data-description="Paragraph"><a href="#rem-puddle-plausible-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-pulley-2-1">Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand, which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at <span class="process-math">\(2\)</span> ft/sec, how fast will the weight rise?<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-pulley"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RelatedRates2.gif" class="contained" alt="An animated diagram on a grid showing a pulley mounted above the floor with a rope passing over it. On the left, a weight hangs vertically from the pulley down to the floor. On the right, a person holds the other end of the rope at a point 3 feet above the floor and moves horizontally to the right. An arrow indicates the person walking away from the pulley at a constant speed of 2 feet per second. As the person moves farther away, the rope segment from the pulley to the person lengthens and the vertical rope segment shortens, illustrating that the hanging weight is rising."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A pulley system with a hanging weight and a rope held by a person walking away from the pulley.<div class="autopermalink" data-description="Figure 3.2.6"><a href="#fig-pulley" title="Copy heading and permalink for Figure 3.2.6" aria-label="Copy heading and permalink for Figure 3.2.6">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-pulley-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-pulley-3-1">First let’s define our variables. Let <span class="process-math">\(x(t)\)</span> be the horizontal distance from the pulley to your hand, let <span class="process-math">\(r(t)\)</span> be the length of the rope segment from the pulley to your hand, and finally let <span class="process-math">\(h(t)\)</span> be the height (vertical distance) from your hand to the pulley.<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.2.4"><a href="#rem-puddle-plausible" title="Copy heading and permalink for Remark 3.2.4" aria-label="Copy heading and permalink for Remark 3.2.4">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Spill Radius Example"><a href="#spill-radius-example" title="Copy heading and permalink for Subsection: Spill Radius Example" aria-label="Copy heading and permalink for Subsection: Spill Radius Example">🔗</a></div></section><section class="subsection" id="searchlight-example"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Searchlight Example</span>
-</h3>
-<div class="para" id="searchlight-example-2">A searchlight shines along a wall 20 meters away. If the light is currently <span class="process-math">\(30^\circ\)</span> away from pointing directly at the wall and the light is rotating at <span class="process-math">\(5^\circ\)</span> per second, what is the speed of the bright spot moving along the wall at that instant?<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-pulley-3-2">Since your hand is 3 ft above the floor and the pulley is 10 ft above the floor, the height <span class="process-math">\(h(t)\)</span> between the two will be a constant can be expressed as:<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="fig-searchlight"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="external/2-8-Searchlight.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The spotlight position <span class="process-math">\(s(t)\)</span> depends on the angle <span class="process-math">\(\theta(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 3.2.5"><a href="#fig-searchlight" title="Copy heading and permalink for Figure 3.2.5" aria-label="Copy heading and permalink for Figure 3.2.5">🔗</a></div></figcaption></figure><div class="para logical" id="searchlight-example-4">
-<div class="para">Let <span class="process-math">\(\theta(t)\)</span> be the angle and <span class="process-math">\(s(t)\)</span> the distance of the spot from the point on the wall closest to the light. The geometry gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tan(\theta(t))=\frac{s(t)}{20},
+\displaystyle h(t)
+= \displaystyle 10-3
+= \displaystyle 7
 \end{equation*}
 </div>
-<div class="para">so</div>
-<div class="displaymath process-math">
-\begin{equation*}
-s(t)=20\tan(\theta(t)).
-\end{equation*}
+<div class="para" id="example-pulley-3-4">So no matter the time, <span class="process-math">\(h(t)=7\)</span> is constant. Also notice that because the rope is connected to the weight, as the rope length <span class="process-math">\(r(t)\)</span> increases, the height of the weight will decrease at the same rate. So if we can find <span class="process-math">\(r'(t)\text{,}\)</span> we will also have found the rate at which the weight is rising.<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="searchlight-example-5">Differentiate with respect to time:<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-pulley-3-5">Finally, notice that these three variables (<span class="process-math">\(r(t)\text{,}\)</span> <span class="process-math">\(h(t)\text{,}\)</span> and <span class="process-math">\(x(t)\)</span>) form a right triangle with the hypotenuse being the rope segment from the pulley to your hand. So we can use the Pythagorean theorem to get:<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle s'(t)
-\amp=\amp \displaystyle 20\left(\tan(\theta(t))\right)'\,\theta'(t)
+\displaystyle r(t)^2
+\amp=\amp \displaystyle h(t)^2 + x(t)^2,
 \\[0.9em]
-\amp=\amp \displaystyle 20\sec^2(\theta(t))\,\theta'(t).
+\displaystyle r(t)^2
+\amp=\amp \displaystyle 7^2 + x(t)^2,
+\\[0.9em]
+\displaystyle r(t)^2
+\amp=\amp \displaystyle 49 + x(t)^2.
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="searchlight-example-7">Trig derivatives require radians. Convert the current angle and angular speed:<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-pulley-3-7">Now we can differentiate both sides with respect to time <span class="process-math">\(t\)</span> using the Chain Rule:<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle \theta(0)
-\amp=\amp \displaystyle 30^\circ
-\ =\ 30\left(\frac{2\pi}{360}\right)
+\displaystyle \left(r(t)^2\right)'
+\amp=\amp \displaystyle \left(49 + x(t)^2\right)',
+\\[0.9em]
+\displaystyle 2r(t) r'(t)
+\amp=\amp \displaystyle 2x(t) x'(t).
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="example-pulley-3-9">Now we can solve for <span class="process-math">\(r'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle r'(t)
+\amp=\amp \displaystyle \frac{x(t) x'(t)}{r(t)}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="example-pulley-3-11">Next we can let <span class="process-math">\(t=0\)</span> be the time of interest (when we are 15 ft from the pulley), so <span class="process-math">\(x(0)=15\)</span> and <span class="process-math">\(x'(0)=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-pulley-3-12">Also, at time <span class="process-math">\(t=0\text{,}\)</span> we can compute <span class="process-math">\(r(0)\)</span> using the Pythagorean theorem:<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + x(0)^2
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + 15^2
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + 225
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 274
+\\[0.9em]
+\displaystyle r(0)
+\amp=\amp \displaystyle \sqrt{274}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="example-pulley-3-14">Substituting into our expression for <span class="process-math">\(r'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle r'(0)
+\amp=\amp \displaystyle \frac{x(0) x'(0)}{r(0)}
+\\[1.5em]
+\amp=\amp \displaystyle \frac{15 \cdot 2}{\sqrt{274}}
+\\[1.5em]
+\amp=\amp \displaystyle \frac{30}{\sqrt{274}}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="example-pulley-3-16">So the rope length is increasing at a rate of <span class="process-math">\(\frac{30}{\sqrt{274}}\)</span> ft/sec when you are 15 ft from the pulley which means that the box is rising at the same rate of <span class="process-math">\(\frac{30}{\sqrt{274}}\)</span> ft/sec.<div class="autopermalink" data-description="Paragraph"><a href="#example-pulley-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.5.1"><a href="#example-pulley-3" title="Copy heading and permalink for Solution 3.2.5.1" aria-label="Copy heading and permalink for Solution 3.2.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.5: Pulley Example"><a href="#example-pulley" title="Copy heading and permalink for Example 3.2.5: Pulley Example" aria-label="Copy heading and permalink for Example 3.2.5: Pulley Example">🔗</a></div></article><article class="remark remark-like" id="rem-plug-in-last"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="rem-plug-in-last-1">Plug in the current values only at the last step. If you substitute before differentiating, you turn variables into constants and their derivatives become zero.<div class="autopermalink" data-description="Paragraph"><a href="#rem-plug-in-last-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.7"><a href="#rem-plug-in-last" title="Copy heading and permalink for Remark 3.2.7" aria-label="Copy heading and permalink for Remark 3.2.7">🔗</a></div></article><article class="example example-like" id="example-searchlight"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Searchlight Example.</span>
+</h4>
+<div class="para" id="example-searchlight-2-1">A searchlight shines along a wall 20 meters away. If the light is currently <span class="process-math">\(30^\circ\)</span> away from pointing directly at the wall and the light is rotating at <span class="process-math">\(5^\circ\)</span> per second, what is the speed of the bright spot moving along the wall at that instant?<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <article class="remark remark-like" id="example-searchlight-2-2"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="example-searchlight-2-2-1">We are intentionally not providing a figure for this example (until you look at the solution). Try drawing your own diagram to help visualize the situation. This is an important skill when solving related rates problems that may be required for quizzes or exams.<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.9"><a href="#example-searchlight-2-2" title="Copy heading and permalink for Remark 3.2.9" aria-label="Copy heading and permalink for Remark 3.2.9">🔗</a></div></article><div class="solutions"><details id="example-searchlight-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-searchlight-3-1">Here is a sketch of the situation:<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-searchlight"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RelatedRates3.PNG" class="contained" alt="A diagram on a grid showing a vertical wall on the left and a searchlight on the ground to the right. A straight beam of light extends from the searchlight to a point on the wall. At the searchlight, the beam makes a 30 degree angle with the horizontal ground. A curved arrow at the searchlight indicates that the beam is rotating upward at a rate of 5 degrees per second. The illuminated point on the wall is above the ground and moves vertically as the beam rotates, illustrating the changing height of the light spot on the wall."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This diagram models the related-rates problem stated above asking how fast the illuminated spot on the wall is moving upward at that instant.<div class="autopermalink" data-description="Figure 3.2.10"><a href="#fig-searchlight" title="Copy heading and permalink for Figure 3.2.10" aria-label="Copy heading and permalink for Figure 3.2.10">🔗</a></div></figcaption></figure><div class="para" id="example-searchlight-3-3">Let <span class="process-math">\(\theta(t)\)</span> be the angle of the light beam from the horizontal and <span class="process-math">\(s(t)\)</span> be the distance of the spot from the point on the wall closest to the light. We are given that at some time of interest (which we will call <span class="process-math">\(t=0\)</span>) that <span class="process-math">\(\theta(0)=30^\circ\)</span> and <span class="process-math">\(\theta'(0)=5^\circ/\text{sec}\text{,}\)</span> and we want to find <span class="process-math">\(s'(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-searchlight-3-4">Since the situation is about a right triangle formed by the light beam, the wall, and the ground, we have several options to consider (like sine, cosine, or tangent or the pythagorean theorem). However, to relate the angle and the distance along the wall we should use the tangent function. This gives:<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
+\begin{equation*}
+\tan(\theta(t)) = \frac{s(t)}{20}
+\end{equation*}
+</div>
+<div class="para" id="example-searchlight-3-6">Differentiating both sides with respect to time:<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
+\begin{equation*}
+\sec^2(\theta(t)) \cdot \theta'(t) = \frac{s'(t)}{20}
+\end{equation*}
+</div>
+<div class="para" id="example-searchlight-3-8">Solving for <span class="process-math">\(s'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
+\begin{equation*}
+s'(t) = 20 \cdot \sec^2(\theta(t)) \cdot \theta'(t)
+\end{equation*}
+</div>
+<div class="para" id="example-searchlight-3-10">Now we can substitute in our known values at <span class="process-math">\(t=0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
+\begin{equation*}
+s'(0) = 20 \cdot \sec^2(30^\circ) \cdot 5^\circ/\text{sec}
+\end{equation*}
+</div>
+<div class="para" id="example-searchlight-3-12">However, because the trig differentiation formulas are only valid for radian measure (See <a href="sec-derivative-trig.html#rem-radians-warning" class="xref" data-knowl="./knowl/xref/rem-radians-warning.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 2.4.5">Remark 2.4.5</a>), we need to convert he angle and angular speed to radians before substituting:<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle 30^\circ
+\amp=\amp \displaystyle 30\left(\frac{2\pi}{360}\right)
 \ =\ \frac{\pi}{6}\ \text{rad},
 \\[1.0em]
-\displaystyle \theta'(0)
-\amp=\amp \displaystyle 5^\circ/\text{sec}
-\ =\ 5\left(\frac{2\pi}{360}\right)
+\displaystyle 5^\circ/\text{sec}
+\amp=\amp \displaystyle 5\left(\frac{2\pi}{360}\right)
 \ =\ \frac{\pi}{36}\ \text{rad/sec}.
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="searchlight-example-9">Now compute:<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-searchlight-3-14">Now substituting in:<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle s'(0)
-\amp=\amp \displaystyle 20\sec^2\!\left(\frac{\pi}{6}\right)\cdot \frac{\pi}{36}.
+\amp=\amp \displaystyle 20 \cdot \sec^2\left(\frac{\pi}{6}\right) \cdot \frac{\pi}{36}
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="searchlight-example-11">Since <span class="process-math">\(\cos(\pi/6)=\sqrt{3}/2\text{,}\)</span> we have <span class="process-math">\(\sec^2(\pi/6)=\left(\frac{2}{\sqrt{3}}\right)^2=\frac{4}{3}\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#searchlight-example-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-searchlight-3-16">Since <span class="process-math">\(\cos(\pi/6)=\sqrt{3}/2\text{,}\)</span> we have <span class="process-math">\(\sec^2(\pi/6)=\left(\frac{2}{\sqrt{3}}\right)^2=\frac{4}{3}\text{,}\)</span> so<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-radians-warning.html">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle s'(0)
-\amp=\amp \displaystyle 20\cdot \frac{4}{3}\cdot \frac{\pi}{36}
+\amp=\amp \displaystyle 20 \cdot \frac{4}{3} \cdot \frac{\pi}{36}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{20\pi}{27}
-\approx 2.3\ \text{m/sec}.
 \end{array}
 \end{equation*}
 </div>
-<article class="remark remark-like" id="rem-sign-speed"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+<div class="para" id="example-searchlight-3-18">So the speed of the bright spot moving along the wall at that instant is <span class="process-math">\(\frac{20}{27}\pi\)</span> m/sec.<div class="autopermalink" data-description="Paragraph"><a href="#example-searchlight-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="rem-sign-speed"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
 <div class="para" id="rem-sign-speed-1">The problem asks for speed, so report <span class="process-math">\(|s'(0)|\text{.}\)</span> If the rotation direction were opposite, the derivative would change sign but the speed would be the same.<div class="autopermalink" data-description="Paragraph"><a href="#rem-sign-speed-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.2.6"><a href="#rem-sign-speed" title="Copy heading and permalink for Remark 3.2.6" aria-label="Copy heading and permalink for Remark 3.2.6">🔗</a></div></article><article class="remark remark-like" id="rem-radians-required"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
+<div class="autopermalink" data-description="Remark 3.2.11"><a href="#rem-sign-speed" title="Copy heading and permalink for Remark 3.2.11" aria-label="Copy heading and permalink for Remark 3.2.11">🔗</a></div></article><article class="remark remark-like" id="rem-radians-required"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
 <div class="para" id="rem-radians-required-1">If you mistakenly use <span class="process-math">\(\theta'(0)=5\)</span> in degrees/sec inside the derivative formula, the numerical answer will be wrong. Convert to radians/sec before substituting.<div class="autopermalink" data-description="Paragraph"><a href="#rem-radians-required-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.2.7"><a href="#rem-radians-required" title="Copy heading and permalink for Remark 3.2.7" aria-label="Copy heading and permalink for Remark 3.2.7">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Searchlight Example"><a href="#searchlight-example" title="Copy heading and permalink for Subsection: Searchlight Example" aria-label="Copy heading and permalink for Subsection: Searchlight Example">🔗</a></div></section><section class="subsection" id="flashlight-examples"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flashlight Examples</span>
+<div class="autopermalink" data-description="Remark 3.2.12"><a href="#rem-radians-required" title="Copy heading and permalink for Remark 3.2.12" aria-label="Copy heading and permalink for Remark 3.2.12">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.2.8.1"><a href="#example-searchlight-3" title="Copy heading and permalink for Solution 3.2.8.1" aria-label="Copy heading and permalink for Solution 3.2.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.2.8: Searchlight Example"><a href="#example-searchlight" title="Copy heading and permalink for Example 3.2.8: Searchlight Example" aria-label="Copy heading and permalink for Example 3.2.8: Searchlight Example">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Select Examples"><a href="#related-rates-examples" title="Copy heading and permalink for Subsection: Select Examples" aria-label="Copy heading and permalink for Subsection: Select Examples">🔗</a></div></section><section class="subsection" id="additional-worked-problems-derivApp-Related"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Worked-Out Examples</span>
 </h3>
-<div class="para" id="flashlight-examples-2">A flashlight shines a cone of light straight toward a wall. The lit region on the wall is a circle. What is the rate of change of the lit circular area if: (a) the flashlight moves toward the wall at 2 m/sec; (b) the flashlight stays 5 m from the wall, but the focus narrows so the total angle decreases at <span class="process-math">\(10^\circ\)</span> per second?<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-examples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="additional-worked-problems-derivApp-Related-2">To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via: <em class="alert"><a href="sec-derivApp-ww.html#subsec-derivApp-placeholder" class="internal" title="Subsection: Placeholder Section">Additional Worked-Out Problems for Related Rates </a></em><div class="autopermalink" data-description="Paragraph"><a href="#additional-worked-problems-derivApp-Related-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<section class="subsubsection" id="flashlight-a"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Case (a): Moving Toward the Wall</span>
-</h4>
-<figure class="figure figure-like" id="fig-flashlight-a"><div class="image-box" style="width: 88%; margin-left: 6%; margin-right: 6%;"><img src="external/2-8-Flashlight-2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>As the flashlight moves, similar triangles relate the radius to the distance <span class="process-math">\(\ell(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 3.2.8"><a href="#fig-flashlight-a" title="Copy heading and permalink for Figure 3.2.8" aria-label="Copy heading and permalink for Figure 3.2.8">🔗</a></div></figcaption></figure><div class="para" id="flashlight-a-3">Let <span class="process-math">\(\ell(t)\)</span> be the distance from the wall, <span class="process-math">\(r(t)\)</span> the radius of the lit circle, and <span class="process-math">\(A(t)\)</span> its area. We are given <span class="process-math">\(\ell(0)=5\text{,}\)</span> <span class="process-math">\(\ell'(0)=-2\text{,}\)</span> and <span class="process-math">\(r(0)=\frac12\text{.}\)</span> Similar triangles show <span class="process-math">\(\frac{r(t)}{\ell(t)}=\frac{1/2}{5}=\frac{1}{10}\text{,}\)</span> so <span class="process-math">\(r(t)=\frac{1}{10}\ell(t)\text{,}\)</span> and therefore <span class="process-math">\(A(t)=\pi r(t)^2=\frac{\pi}{100}\ell(t)^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#flashlight-a-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Subsection: Additional Worked-Out Examples"><a href="#additional-worked-problems-derivApp-Related" title="Copy heading and permalink for Subsection: Additional Worked-Out Examples" aria-label="Copy heading and permalink for Subsection: Additional Worked-Out Examples">🔗</a></div></section><section class="exercises" id="exercises-derivApp-RRates-tf"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice / Study Problems</span>
+</h3>
+<div class="exercisegroup" id="eg-derivApp-RRates-tf">
+<h4 class="heading"><span class="title">True/False Questions.</span></h4>
+<div class="introduction" id="eg-derivApp-RRates-tf-2"><div class="para" id="eg-derivApp-RRates-tf-2-1">Determine whether each statement is true or false. Justify your answers.<div class="autopermalink" data-description="Paragraph"><a href="#eg-derivApp-RRates-tf-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="rr-tf-01"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-01-1-1">In any related rates problem, all quantities that change must be written as functions of time, even if time is not mentioned explicitly in the problem.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-01-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="flashlight-a-4">Differentiate and substitute:<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-a-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="rr-tf-01-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-01-2-1">
+<em class="emphasis">True</em>. In related rates problems, all variables must be expressed as functions of time to properly apply the chain rule. It is possible that some quantities do not change (and thus are constants), but any quantity that does change must be treated as a function of time.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#rr-tf-01-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#rr-tf-01" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-16"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-16-1-1">If a related rates problem asks for a <em class="emphasis">speed</em>, the final answer should be reported as a nonnegative value even if the derivative is negative.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-16-2-1">
+<em class="emphasis">True</em>. Speed is defined as the magnitude of velocity, which is always nonnegative. Therefore, when a related rates problem asks for speed, the final answer should be reported as a nonnegative value, regardless of the sign of the derivative.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#rr-tf-16-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#rr-tf-16" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-08"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-08-1-1">In a related rates problem involving a right triangle, the Pythagorean Theorem must be used to relate the variables before differentiating.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-08-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-08-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-08-2-1">
+<em class="emphasis">False</em>. While the Pythagorean Theorem is often useful in related rates problems involving right triangles, it is not always necessary. Depending on the specific problem, other relationships such as trigonometric functions (sine, cosine, tangent) or geometric formulas may be more appropriate to relate the variables before differentiating.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-08-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#rr-tf-08-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3"><a href="#rr-tf-08" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-09"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para logical" id="rr-tf-09-1-1">
+<div class="para">If <span class="process-math">\(x(t)^2 + y(t)^2 = 25\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2x(t)x'(t) + 2y(t)y'(t) = 0
+\end{equation*}
+</div>
+<div class="para">after differentiating with respect to time.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-09-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-09-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-09-2-1">
+<em class="emphasis">True</em>. Differentiating both sides of the equation <span class="process-math">\(x(t)^2 + y(t)^2 = 25\)</span> with respect to time using the chain rule gives:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-09-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle A'(t)
-\amp=\amp \displaystyle \frac{\pi}{100}\left(\ell(t)^2\right)'
+\displaystyle \frac{d}{dt}(x(t)^2) + \frac{d}{dt}(y(t)^2)
+\amp=\amp \displaystyle \frac{d}{dt}(25)
 \\[0.9em]
-\amp=\amp \displaystyle \frac{\pi}{50}\ell(t)\,\ell'(t),
-\\[1.2em]
-\displaystyle A'(0)
-\amp=\amp \displaystyle \frac{\pi}{50}\ell(0)\,\ell'(0)
-\\[0.9em]
-\amp=\amp \displaystyle \frac{\pi}{50}(5)(-2)
-\\[0.9em]
-\amp=\amp \displaystyle -\frac{\pi}{5}\ \text{m}^2/\text{s}
-\approx -0.63\ \text{m}^2/\text{s}.
+\displaystyle 2x(t)x'(t) + 2y(t)y'(t)
+\amp=\amp \displaystyle 0.
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="flashlight-a-6">The negative sign matches the situation: as the flashlight moves closer, the circle on the wall shrinks.<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-a-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rr-tf-09-2-3">This confirms that the statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-09-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsubsection: Case (a): Moving Toward the Wall"><a href="#flashlight-a" title="Copy heading and permalink for Subsubsection: Case (a): Moving Toward the Wall" aria-label="Copy heading and permalink for Subsubsection: Case (a): Moving Toward the Wall">🔗</a></div></section><section class="subsubsection" id="flashlight-b"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Case (b): Narrowing the Beam</span>
-</h4>
-<div class="para" id="flashlight-b-2">Now the distance is constant at 5 m, but the beam angle changes. Let <span class="process-math">\(\theta(t)\)</span> be the total cone angle and let <span class="process-math">\(r(t)\)</span> be the radius of the lit circle. The right triangle in the diagram uses the half-angle <span class="process-math">\(\theta(t)/2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#rr-tf-09-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#rr-tf-09" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-11"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-11-1-1">A circle has radius <span class="process-math">\(4\)</span> meters at a certain instant. If the radius is increasing at <span class="process-math">\(3\)</span> m/min, then the area is increasing at <span class="process-math">\(12\pi\)</span> m<span class="process-math">\(^2\)</span>/min at that instant.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-11-2-1">
+<em class="emphasis">False</em>. The area <span class="process-math">\(A\)</span> of a circle is given by the formula <span class="process-math">\(A = \pi r^2\text{,}\)</span> where <span class="process-math">\(r\)</span> is the radius. To find the rate of change of the area with respect to time, we differentiate both sides with respect to time using the chain rule:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle \tan\!\left(\frac{\theta(t)}{2}\right)
-\amp=\amp \displaystyle \frac{r(t)}{5},
-\\[0.9em]
-\displaystyle r(t)
-\amp=\amp \displaystyle 5\tan\!\left(\frac{\theta(t)}{2}\right),
-\\[0.9em]
 \displaystyle A(t)
-\amp=\amp \displaystyle \pi r(t)^2
-\ =\ 25\pi \tan^2\!\left(\frac{\theta(t)}{2}\right).
-\end{array}
-\end{equation*}
-</div>
-<div class="para" id="flashlight-b-4">Differentiate using the Chain Rule:<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{rcl}
+\amp=\amp \displaystyle \pi r(t)^2,
+\\[0.9em]
 \displaystyle A'(t)
-\amp=\amp \displaystyle 25\pi \left(\tan^2\!\left(\frac{\theta(t)}{2}\right)\right)'
+\amp=\amp \displaystyle \pi \cdot 2r(t) \cdot r'(t)
 \\[0.9em]
-\amp=\amp \displaystyle 50\pi \tan\!\left(\frac{\theta(t)}{2}\right)\left(\tan\!\left(\frac{\theta(t)}{2}\right)\right)'\cdot \left(\frac{\theta(t)}{2}\right)'
-\\[0.9em]
-\amp=\amp \displaystyle 50\pi \tan\!\left(\frac{\theta(t)}{2}\right)\sec^2\!\left(\frac{\theta(t)}{2}\right)\cdot \frac{\theta'(t)}{2}.
+\amp=\amp \displaystyle 2\pi r(t) r'(t).
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="flashlight-b-6">We are given <span class="process-math">\(\theta'(0)=-10^\circ/\text{sec}\text{,}\)</span> so <span class="process-math">\(\theta'(0)/2=-5^\circ/\text{sec}\text{.}\)</span> Convert to radians/sec: <span class="process-math">\(\displaystyle \frac{\theta'(0)}{2}=-5\left(\frac{2\pi}{360}\right)=-\frac{\pi}{36}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="flashlight-b-7">We are not given <span class="process-math">\(\theta(0)\text{,}\)</span> but we are given <span class="process-math">\(r(0)=\frac12\)</span> and distance 5 m, so <span class="process-math">\(\tan(\theta(0)/2)=\frac{(1/2)}{5}=\frac{1}{10}\text{.}\)</span> Also, using the same right triangle, the adjacent side is 5 and the opposite side is <span class="process-math">\(1/2\text{,}\)</span> so the hypotenuse squared is <span class="process-math">\(5^2+(1/2)^2=25+\frac14=\frac{101}{4}\text{,}\)</span> giving <span class="process-math">\(\sec^2(\theta(0)/2)=\frac{\text{hyp}^2}{\text{adj}^2}=\frac{101/4}{25}=\frac{101}{100}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="flashlight-b-8">Substitute into the derivative formula:<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rr-tf-11-2-3">Substituting the given values <span class="process-math">\(r = 4\)</span> m and <span class="process-math">\(r' = 3\)</span> m/min into the equation for <span class="process-math">\(A'\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-11-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{rcl}
-\displaystyle A'(0)
-\amp=\amp \displaystyle 50\pi\left(\frac{1}{10}\right)\left(\frac{101}{100}\right)\left(-\frac{\pi}{36}\right)
+\displaystyle A'
+\amp=\amp \displaystyle 2\pi (4)(3)
 \\[0.9em]
-\amp=\amp \displaystyle -\frac{101}{720}\pi^2
-\approx -1.38\ \text{m}^2/\text{s}.
+\amp=\amp \displaystyle 24\pi \text{ m}^2/\text{min}.
 \end{array}
 \end{equation*}
 </div>
-<div class="para" id="flashlight-b-10">The sign makes sense: the beam narrows, so the lit area decreases.<div class="autopermalink" data-description="Paragraph"><a href="#flashlight-b-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rr-tf-11-2-5">This shows that the area is increasing at <span class="process-math">\(24\pi\)</span> m<span class="process-math">\(^2\)</span>/min, not <span class="process-math">\(12\pi\)</span> m<span class="process-math">\(^2\)</span>/min as stated.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-11-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="remark remark-like" id="rem-angle-size-check"><h5 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>
-<div class="para" id="rem-angle-size-check-1">A quick check: <span class="process-math">\(\theta(0)=2\arctan(1/10)\approx 11^\circ\text{.}\)</span> If the angle is decreasing at about <span class="process-math">\(10^\circ\)</span>/sec, the circle can shrink very quickly at that instant, so a relatively large negative area rate is plausible.<div class="autopermalink" data-description="Paragraph"><a href="#rem-angle-size-check-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#rr-tf-11-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#rr-tf-11" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-15"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-15-1-1">If the volume of a cube is increasing at <span class="process-math">\(12\)</span> cm<span class="process-math">\(^3\)</span>/sec when the side length is <span class="process-math">\(2\)</span> cm, then the side length is increasing at <span class="process-math">\(1\)</span> cm/sec at that instant.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.2.9"><a href="#rem-angle-size-check" title="Copy heading and permalink for Remark 3.2.9" aria-label="Copy heading and permalink for Remark 3.2.9">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection: Case (b): Narrowing the Beam"><a href="#flashlight-b" title="Copy heading and permalink for Subsubsection: Case (b): Narrowing the Beam" aria-label="Copy heading and permalink for Subsubsection: Case (b): Narrowing the Beam">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Flashlight Examples"><a href="#flashlight-examples" title="Copy heading and permalink for Subsection: Flashlight Examples" aria-label="Copy heading and permalink for Subsection: Flashlight Examples">🔗</a></div></section><section class="subsection" id="practice-related-rates"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice Problems</span>
-</h3>
-<details id="ex-rr-1" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-rr-1-1-1">In the pulley example, explain why substituting <span class="process-math">\(h(0)=15\)</span> into <span class="process-math">\(r(t)^2=h(t)^2+49\)</span> before differentiating leads to an incorrect conclusion about <span class="process-math">\(r'(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-rr-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="rr-tf-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-15-2-1">
+<em class="emphasis">True</em>. The volume <span class="process-math">\(V\)</span> of a cube is given by the formula <span class="process-math">\(V = s^3\text{,}\)</span> where <span class="process-math">\(s\)</span> is the side length. To find the rate of change of the side length with respect to time, we differentiate both sides with respect to time using the chain rule:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.2.10"><a href="#ex-rr-1" title="Copy heading and permalink for Checkpoint 3.2.10" aria-label="Copy heading and permalink for Checkpoint 3.2.10">🔗</a></div></article></details><details id="ex-rr-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-rr-2-1-1">A circular disk has radius <span class="process-math">\(r(t)\)</span> and area <span class="process-math">\(A(t)=\pi r(t)^2\text{.}\)</span> If <span class="process-math">\(r'(t)\)</span> is constant and positive, describe how the sign and size of <span class="process-math">\(A'(t)\)</span> change as <span class="process-math">\(r(t)\)</span> grows.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rr-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle V(t)
+\amp=\amp \displaystyle s(t)^3,
+\\[0.9em]
+\displaystyle V'(t)
+\amp=\amp \displaystyle 3s(t)^2 \cdot s'(t).
+\end{array}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.2.11"><a href="#ex-rr-2" title="Copy heading and permalink for Checkpoint 3.2.11" aria-label="Copy heading and permalink for Checkpoint 3.2.11">🔗</a></div></article></details><details id="ex-rr-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-rr-3-1-1">In the searchlight example, identify which step requires converting degrees to radians, and explain why that conversion is essential.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rr-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rr-tf-15-2-3">Substituting the given values <span class="process-math">\(V' = 12\)</span> cm<span class="process-math">\(^3\)</span>/sec and <span class="process-math">\(s = 2\)</span> cm into the equation for <span class="process-math">\(V'\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-15-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.2.12"><a href="#ex-rr-3" title="Copy heading and permalink for Checkpoint 3.2.12" aria-label="Copy heading and permalink for Checkpoint 3.2.12">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: Practice Problems"><a href="#practice-related-rates" title="Copy heading and permalink for Subsection: Practice Problems" aria-label="Copy heading and permalink for Subsection: Practice Problems">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Related Rates"><a href="#sec-derivApp-related" title="Copy heading and permalink for Section 3.2: Related Rates" aria-label="Copy heading and permalink for Section 3.2: Related Rates">🔗</a></div></section></div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle 12
+\amp=\amp \displaystyle 3(2)^2 \cdot s'(t)
+\\[0.9em]
+\displaystyle 12
+\amp=\amp \displaystyle 12 \cdot s'(t)
+\\[0.9em]
+\displaystyle s'(t)
+\amp=\amp \displaystyle 1 \text{ cm/sec}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-15-2-5">This confirms that the side length is increasing at <span class="process-math">\(1\)</span> cm/sec at that instant.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-15-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#rr-tf-15-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#rr-tf-15" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-12"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-12-1-1">A ladder 10 ft long is leaning against a vertical wall. If the bottom of the ladder is sliding away from the wall at 1 ft/sec, then the top of the ladder is sliding down the wall at 1 ft/sec when the bottom of the ladder is 6 ft from the wall.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-12-2-1">
+<em class="emphasis">False</em>. Let <span class="process-math">\(x(t)\)</span> be the distance from the wall to the bottom of the ladder and <span class="process-math">\(y(t)\)</span> be the height of the top of the ladder on the wall. The relationship between <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> is given by the Pythagorean theorem:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle x(t)^2 + y(t)^2
+\amp=\amp \displaystyle 10^2,
+\\[0.9em]
+\displaystyle x(t)^2 + y(t)^2
+\amp=\amp \displaystyle 100.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-12-2-3">Differentiating both sides with respect to time:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle 2x(t)x'(t) + 2y(t)y'(t)
+= \displaystyle 0.
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-12-2-5">Solving for <span class="process-math">\(y'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle y'(t)
+= \displaystyle -\frac{x(t)x'(t)}{y(t)}.
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-12-2-7">At the instant when <span class="process-math">\(x(t) = 6\)</span> ft and <span class="process-math">\(x'(t) = 1\)</span> ft/sec, we can find <span class="process-math">\(y(t)\)</span> using the Pythagorean theorem:<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle 6^2 + y(t)^2
+\amp=\amp \displaystyle 100,
+\\[0.9em]
+\displaystyle 36 + y(t)^2
+\amp=\amp \displaystyle 100,
+\\[0.9em]
+\displaystyle y(t)^2
+\amp=\amp \displaystyle 64,
+\\[0.9em]
+\displaystyle y(t)
+\amp=\amp \displaystyle 8 \text{ ft}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-12-2-9">Substituting these values into the equation for <span class="process-math">\(y'(t)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\displaystyle y'(t)
+\amp=\amp \displaystyle -\frac{6 \cdot 1}{8}
+\\[0.9em]
+\amp=\amp \displaystyle -\frac{3}{4} \text{ ft/sec}.
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="rr-tf-12-2-11">This shows that the top of the ladder is sliding down the wall at a rate of <span class="process-math">\(\frac{3}{4}\)</span> ft/sec, not 1 ft/sec as stated.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-12-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#rr-tf-12-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#rr-tf-12" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="rr-tf-03"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="rr-tf-03-1-1">If the radius of a sphere is increasing at a constant rate, then the volume of the sphere is also increasing at a constant rate.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-03-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="rr-tf-03-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="rr-tf-03-2-1">
+<em class="emphasis">False</em>. The volume of a sphere is given by the formula <span class="process-math">\(V=\frac{4}{3}\pi r^3\text{.}\)</span> If the radius <span class="process-math">\(r\)</span> is increasing at a constant rate, the volume <span class="process-math">\(V\)</span> will not increase at a constant rate because the relationship between volume and radius is cubic. As the radius increases, the rate of change of the volume will also increase.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="rr-tf-03-2-2">A simple example would be if <span class="process-math">\(r(t) = t\)</span> (which has a constant rate of change of <span class="process-math">\(r'(t) = 1\)</span>), then <span class="process-math">\(V(t) = \frac{4}{3}\pi t^3\text{,}\)</span> and the derivative <span class="process-math">\(V'(t) = 4\pi t^2\)</span> is not constant.<div class="autopermalink" data-description="Paragraph"><a href="#rr-tf-03-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#rr-tf-03-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#rr-tf-03" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–8: True/False Questions"><a href="#eg-derivApp-RRates-tf" title="Copy heading and permalink for Exercise Group 1–8: True/False Questions" aria-label="Copy heading and permalink for Exercise Group 1–8: True/False Questions">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises: Practice / Study Problems"><a href="#exercises-derivApp-RRates-tf" title="Copy heading and permalink for Exercises: Practice / Study Problems" aria-label="Copy heading and permalink for Exercises: Practice / Study Problems">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: Related Rates"><a href="#sec-derivApp-related" title="Copy heading and permalink for Section 3.2: Related Rates" aria-label="Copy heading and permalink for Section 3.2: Related Rates">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-derivApp-motion.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-derivApp-linear.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

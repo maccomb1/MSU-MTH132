@@ -4021,7 +4021,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Related Rates",
-  "body": " Related Rates    Set up a related rates problem by identifying variables, constants, current values, and known rates.  Write a geometric relationship among variables, then differentiate with respect to time using the Chain Rule.  Compute an unknown rate at a specific instant by substituting current values only at the end.  Check answers for sign and real-world plausibility, including unit consistency.     Pulley Example  Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand, which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at ft\/sec, how fast will the weight rise?  This is a related rates problem: we want an unknown rate of change from a known rate, using a geometric relationship. Start by drawing a picture and labeling constants and variables. Let be the horizontal distance from the weight to your hand, and let be the length of the rope segment from the pulley to your hand. The problem gives the current value and the current rate (ft\/sec). We want .   Pulley setup with variables and .    The vertical distance from your hand up to the pulley is constant: ft. By the Pythagorean Theorem, the geometry implies   One approach is to solve for and then differentiate.   Now substitute the current values:   The weight rises at the same rate that the rope segment increases, so the weight rises at about ft\/sec at that instant.   Plug in the current values only at the last step. If you substitute before differentiating, you turn variables into constants and their derivatives become zero.   We can also do this more directly by implicitly differentiating the relationship .   Since , this gives the same numerical result as above.    A Method for Related Rates Problems   Draw a picture labeled with:  numerical constant values,  letter variables and their current values,  arrows showing known current rates (derivatives),  an arrow for the unknown target rate you want.    Write an equation relating the variables using geometry (or a known formula).  Assume each variable depends on time , then differentiate both sides with respect to . Use the Chain Rule whenever a variable appears inside a power, root, trig function, etc. Solve for the target derivative if needed.  Substitute the current values and current rates to compute the target rate.     Spill Radius Example  A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of m 2 \/min, how quickly is the puddle widening at that instant?   A growing circular puddle with radius and area .    Let be the puddle’s radius and its area. A diameter of 1 m means the current radius is . The given rate is m 2 \/min. We want .  The geometric relationship is Differentiate both sides with respect to time:   Solve for the target rate and substitute the current values:    Always check plausibility. A radius increase of about 0.6 m per minute can be reasonable, depending on flow rate and surface.     Searchlight Example  A searchlight shines along a wall 20 meters away. If the light is currently away from pointing directly at the wall and the light is rotating at per second, what is the speed of the bright spot moving along the wall at that instant?   The spotlight position depends on the angle .    Let be the angle and the distance of the spot from the point on the wall closest to the light. The geometry gives so   Differentiate with respect to time:   Trig derivatives require radians. Convert the current angle and angular speed:   Now compute:   Since , we have , so    The problem asks for speed , so report . If the rotation direction were opposite, the derivative would change sign but the speed would be the same.    If you mistakenly use in degrees\/sec inside the derivative formula, the numerical answer will be wrong. Convert to radians\/sec before substituting.     Flashlight Examples  A flashlight shines a cone of light straight toward a wall. The lit region on the wall is a circle. What is the rate of change of the lit circular area if: (a) the flashlight moves toward the wall at 2 m\/sec; (b) the flashlight stays 5 m from the wall, but the focus narrows so the total angle decreases at per second?   Case (a): Moving Toward the Wall   As the flashlight moves, similar triangles relate the radius to the distance .    Let be the distance from the wall, the radius of the lit circle, and its area. We are given , , and . Similar triangles show , so , and therefore .  Differentiate and substitute:   The negative sign matches the situation: as the flashlight moves closer, the circle on the wall shrinks.    Case (b): Narrowing the Beam  Now the distance is constant at 5 m, but the beam angle changes. Let be the total cone angle and let be the radius of the lit circle. The right triangle in the diagram uses the half-angle :   Differentiate using the Chain Rule:   We are given , so . Convert to radians\/sec: .  We are not given , but we are given and distance 5 m, so . Also, using the same right triangle, the adjacent side is 5 and the opposite side is , so the hypotenuse squared is , giving .  Substitute into the derivative formula:   The sign makes sense: the beam narrows, so the lit area decreases.   A quick check: . If the angle is decreasing at about \/sec, the circle can shrink very quickly at that instant, so a relatively large negative area rate is plausible.      Practice Problems    In the pulley example, explain why substituting into before differentiating leads to an incorrect conclusion about .      A circular disk has radius and area . If is constant and positive, describe how the sign and size of change as grows.      In the searchlight example, identify which step requires converting degrees to radians, and explain why that conversion is essential.     "
+  "body": " Related Rates    Identify all relevant quantities in a related rates problem, distinguishing between constants, variables, known rates, and unknown rates.  Translate a physical or geometric situation into an equation relating the variables using appropriate formulas.  Create and label an appropriate diagram to support problem setup and reasoning.  Apply differentiation rules to a relationship involving multiple time-dependent quantities using the chain rule and possibly implicit differentiation.     Introduction to Related Rates  Many real-world situations involve quantities that change over time. In some cases, the rates of change of certain quantities are known, and we want to find the rates of change of other related quantities. These problems are called related rates problems.  The key steps in solving related rates problems are:   Steps for Solving Related Rates Problems   Establish a relationship between the variables using geometry or known formulas.  Differentiate the relationship with respect to time, applying the Chain Rule as needed.  Substituting known values and rates to find the unknown rate.     Related rates problems often involve geometric relationships, such as those found in triangles, circles, or other shapes. Some students find that every problem feels a bit different, but the overall method remains consistent across various scenarios.  Remember that our formula sheet, included in Appendix includes many geometric formulas that can be useful in setting up these problems and that many of the quantities involved may depend on time, even if not explicitly stated (so the chain rule will often be needed).   Now that we have the technique outlined, let's explore some examples to see how these steps are applied in practice.    Select Examples   Spill Example   A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of m \/min, how quickly is the puddle's radius widening at that instant?   A circular puddle grows as water spreads outward.   An animation on a coordinate grid showing a circle centered at the origin expanding outward over time, modeling a circular puddle that is widening. The circle represents the puddle’s boundary and grows smoothly, indicating increasing radius and diameter. The situation corresponds to the instant when the puddle’s diameter is 1 meter and the area is increasing at 2 square meters per minute, and the goal is to determine how fast the radius is increasing at that instant.      We can see in this problem that they give us the rate of change of the area of the puddle, and we are asked to find the rate of change of the radius, these are the two rates we are try to relate together in this problem.  So for this problem, since the puddle is circular, we can use the formula for the area of a circle, which is , where is the radius of the circle.  Since both the area and the radius are changing over time, we can express them as functions of time: and .  We are given that the area is increasing at a rate of m \/min, which means m \/min. We are asked to find how quickly the radius is widening, which means we need to find .  To find , we can differentiate the area formula with respect to time using the Chain Rule:   Now we can solve for :   Now we will take the to be the time where the puddle is 1 meter across (so ). Recall also we know that . So therefore:   So the radius is widening at a rate of m\/min when the puddle is 1 meter across.     Pulley Example   Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand, which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at ft\/sec, how fast will the weight rise?   A pulley system with a hanging weight and a rope held by a person walking away from the pulley.   An animated diagram on a grid showing a pulley mounted above the floor with a rope passing over it. On the left, a weight hangs vertically from the pulley down to the floor. On the right, a person holds the other end of the rope at a point 3 feet above the floor and moves horizontally to the right. An arrow indicates the person walking away from the pulley at a constant speed of 2 feet per second. As the person moves farther away, the rope segment from the pulley to the person lengthens and the vertical rope segment shortens, illustrating that the hanging weight is rising.      First let's define our variables. Let be the horizontal distance from the pulley to your hand, let be the length of the rope segment from the pulley to your hand, and finally let be the height (vertical distance) from your hand to the pulley.  Since your hand is 3 ft above the floor and the pulley is 10 ft above the floor, the height between the two will be a constant can be expressed as:   So no matter the time, is constant. Also notice that because the rope is connected to the weight, as the rope length increases, the height of the weight will decrease at the same rate. So if we can find , we will also have found the rate at which the weight is rising.  Finally, notice that these three variables ( , , and ) form a right triangle with the hypotenuse being the rope segment from the pulley to your hand. So we can use the Pythagorean theorem to get:   Now we can differentiate both sides with respect to time using the Chain Rule:   Now we can solve for :   Next we can let be the time of interest (when we are 15 ft from the pulley), so and .  Also, at time , we can compute using the Pythagorean theorem:   Substituting into our expression for :   So the rope length is increasing at a rate of ft\/sec when you are 15 ft from the pulley which means that the box is rising at the same rate of ft\/sec.     Plug in the current values only at the last step. If you substitute before differentiating, you turn variables into constants and their derivatives become zero.    Searchlight Example   A searchlight shines along a wall 20 meters away. If the light is currently away from pointing directly at the wall and the light is rotating at per second, what is the speed of the bright spot moving along the wall at that instant?   We are intentionally not providing a figure for this example (until you look at the solution). Try drawing your own diagram to help visualize the situation. This is an important skill when solving related rates problems that may be required for quizzes or exams.     Here is a sketch of the situation:   This diagram models the related-rates problem stated above asking how fast the illuminated spot on the wall is moving upward at that instant.   A diagram on a grid showing a vertical wall on the left and a searchlight on the ground to the right. A straight beam of light extends from the searchlight to a point on the wall. At the searchlight, the beam makes a 30 degree angle with the horizontal ground. A curved arrow at the searchlight indicates that the beam is rotating upward at a rate of 5 degrees per second. The illuminated point on the wall is above the ground and moves vertically as the beam rotates, illustrating the changing height of the light spot on the wall.    Let be the angle of the light beam from the horizontal and be the distance of the spot from the point on the wall closest to the light. We are given that at some time of interest (which we will call ) that and , and we want to find .  Since the situation is about a right triangle formed by the light beam, the wall, and the ground, we have several options to consider (like sine, cosine, or tangent or the pythagorean theorem). However, to relate the angle and the distance along the wall we should use the tangent function. This gives:   Differentiating both sides with respect to time:   Solving for :   Now we can substitute in our known values at :   However, because the trig differentiation formulas are only valid for radian measure (See ), we need to convert he angle and angular speed to radians before substituting:   Now substituting in:   Since , we have , so   So the speed of the bright spot moving along the wall at that instant is m\/sec.   The problem asks for speed , so report . If the rotation direction were opposite, the derivative would change sign but the speed would be the same.    If you mistakenly use in degrees\/sec inside the derivative formula, the numerical answer will be wrong. Convert to radians\/sec before substituting.       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Related Rates      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     In any related rates problem, all quantities that change must be written as functions of time, even if time is not mentioned explicitly in the problem.     True . In related rates problems, all variables must be expressed as functions of time to properly apply the chain rule. It is possible that some quantities do not change (and thus are constants), but any quantity that does change must be treated as a function of time.      If a related rates problem asks for a speed , the final answer should be reported as a nonnegative value even if the derivative is negative.     True . Speed is defined as the magnitude of velocity, which is always nonnegative. Therefore, when a related rates problem asks for speed, the final answer should be reported as a nonnegative value, regardless of the sign of the derivative.      In a related rates problem involving a right triangle, the Pythagorean Theorem must be used to relate the variables before differentiating.     False . While the Pythagorean Theorem is often useful in related rates problems involving right triangles, it is not always necessary. Depending on the specific problem, other relationships such as trigonometric functions (sine, cosine, tangent) or geometric formulas may be more appropriate to relate the variables before differentiating.      If , then after differentiating with respect to time.     True . Differentiating both sides of the equation with respect to time using the chain rule gives:   This confirms that the statement is true.      A circle has radius meters at a certain instant. If the radius is increasing at m\/min, then the area is increasing at m \/min at that instant.     False . The area of a circle is given by the formula , where is the radius. To find the rate of change of the area with respect to time, we differentiate both sides with respect to time using the chain rule:   Substituting the given values m and m\/min into the equation for :   This shows that the area is increasing at m \/min, not m \/min as stated.      If the volume of a cube is increasing at cm \/sec when the side length is cm, then the side length is increasing at cm\/sec at that instant.     True . The volume of a cube is given by the formula , where is the side length. To find the rate of change of the side length with respect to time, we differentiate both sides with respect to time using the chain rule:   Substituting the given values cm \/sec and cm into the equation for :   This confirms that the side length is increasing at cm\/sec at that instant.      A ladder 10 ft long is leaning against a vertical wall. If the bottom of the ladder is sliding away from the wall at 1 ft\/sec, then the top of the ladder is sliding down the wall at 1 ft\/sec when the bottom of the ladder is 6 ft from the wall.     False . Let be the distance from the wall to the bottom of the ladder and be the height of the top of the ladder on the wall. The relationship between and is given by the Pythagorean theorem:   Differentiating both sides with respect to time:   Solving for :   At the instant when ft and ft\/sec, we can find using the Pythagorean theorem:   Substituting these values into the equation for :   This shows that the top of the ladder is sliding down the wall at a rate of ft\/sec, not 1 ft\/sec as stated.      If the radius of a sphere is increasing at a constant rate, then the volume of the sphere is also increasing at a constant rate.     False . The volume of a sphere is given by the formula . If the radius is increasing at a constant rate, the volume will not increase at a constant rate because the relationship between volume and radius is cubic. As the radius increases, the rate of change of the volume will also increase.  A simple example would be if (which has a constant rate of change of ), then , and the derivative is not constant.      "
 },
 {
   "id": "sec-derivApp-related-2",
@@ -4030,124 +4030,142 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.2",
   "title": "",
-  "body": "  Set up a related rates problem by identifying variables, constants, current values, and known rates.  Write a geometric relationship among variables, then differentiate with respect to time using the Chain Rule.  Compute an unknown rate at a specific instant by substituting current values only at the end.  Check answers for sign and real-world plausibility, including unit consistency.   "
+  "body": "  Identify all relevant quantities in a related rates problem, distinguishing between constants, variables, known rates, and unknown rates.  Translate a physical or geometric situation into an equation relating the variables using appropriate formulas.  Create and label an appropriate diagram to support problem setup and reasoning.  Apply differentiation rules to a relationship involving multiple time-dependent quantities using the chain rule and possibly implicit differentiation.   "
 },
 {
-  "id": "pulley-example-3",
+  "id": "related-rates-intro-2",
   "level": "2",
-  "url": "sec-derivApp-related.html#pulley-example-3",
+  "url": "sec-derivApp-related.html#related-rates-intro-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "related rates "
 },
 {
-  "id": "fig-pulley",
+  "id": "insight-related-rates-steps",
   "level": "2",
-  "url": "sec-derivApp-related.html#fig-pulley",
-  "type": "Figure",
+  "url": "sec-derivApp-related.html#insight-related-rates-steps",
+  "type": "Strategy",
   "number": "3.2.1",
+  "title": "Steps for Solving Related Rates Problems.",
+  "body": " Steps for Solving Related Rates Problems   Establish a relationship between the variables using geometry or known formulas.  Differentiate the relationship with respect to time, applying the Chain Rule as needed.  Substituting known values and rates to find the unknown rate.   "
+},
+{
+  "id": "rem-related-rates-overview",
+  "level": "2",
+  "url": "sec-derivApp-related.html#rem-related-rates-overview",
+  "type": "Remark",
+  "number": "3.2.2",
   "title": "",
-  "body": " Pulley setup with variables and .   "
+  "body": " Related rates problems often involve geometric relationships, such as those found in triangles, circles, or other shapes. Some students find that every problem feels a bit different, but the overall method remains consistent across various scenarios.  Remember that our formula sheet, included in Appendix includes many geometric formulas that can be useful in setting up these problems and that many of the quantities involved may depend on time, even if not explicitly stated (so the chain rule will often be needed).  "
+},
+{
+  "id": "example-spill-radius",
+  "level": "2",
+  "url": "sec-derivApp-related.html#example-spill-radius",
+  "type": "Example",
+  "number": "3.2.3",
+  "title": "Spill Example.",
+  "body": " Spill Example   A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of m \/min, how quickly is the puddle's radius widening at that instant?   A circular puddle grows as water spreads outward.   An animation on a coordinate grid showing a circle centered at the origin expanding outward over time, modeling a circular puddle that is widening. The circle represents the puddle’s boundary and grows smoothly, indicating increasing radius and diameter. The situation corresponds to the instant when the puddle’s diameter is 1 meter and the area is increasing at 2 square meters per minute, and the goal is to determine how fast the radius is increasing at that instant.      We can see in this problem that they give us the rate of change of the area of the puddle, and we are asked to find the rate of change of the radius, these are the two rates we are try to relate together in this problem.  So for this problem, since the puddle is circular, we can use the formula for the area of a circle, which is , where is the radius of the circle.  Since both the area and the radius are changing over time, we can express them as functions of time: and .  We are given that the area is increasing at a rate of m \/min, which means m \/min. We are asked to find how quickly the radius is widening, which means we need to find .  To find , we can differentiate the area formula with respect to time using the Chain Rule:   Now we can solve for :   Now we will take the to be the time where the puddle is 1 meter across (so ). Recall also we know that . So therefore:   So the radius is widening at a rate of m\/min when the puddle is 1 meter across.   "
+},
+{
+  "id": "example-pulley",
+  "level": "2",
+  "url": "sec-derivApp-related.html#example-pulley",
+  "type": "Example",
+  "number": "3.2.5",
+  "title": "Pulley Example.",
+  "body": " Pulley Example   Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand, which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at ft\/sec, how fast will the weight rise?   A pulley system with a hanging weight and a rope held by a person walking away from the pulley.   An animated diagram on a grid showing a pulley mounted above the floor with a rope passing over it. On the left, a weight hangs vertically from the pulley down to the floor. On the right, a person holds the other end of the rope at a point 3 feet above the floor and moves horizontally to the right. An arrow indicates the person walking away from the pulley at a constant speed of 2 feet per second. As the person moves farther away, the rope segment from the pulley to the person lengthens and the vertical rope segment shortens, illustrating that the hanging weight is rising.      First let's define our variables. Let be the horizontal distance from the pulley to your hand, let be the length of the rope segment from the pulley to your hand, and finally let be the height (vertical distance) from your hand to the pulley.  Since your hand is 3 ft above the floor and the pulley is 10 ft above the floor, the height between the two will be a constant can be expressed as:   So no matter the time, is constant. Also notice that because the rope is connected to the weight, as the rope length increases, the height of the weight will decrease at the same rate. So if we can find , we will also have found the rate at which the weight is rising.  Finally, notice that these three variables ( , , and ) form a right triangle with the hypotenuse being the rope segment from the pulley to your hand. So we can use the Pythagorean theorem to get:   Now we can differentiate both sides with respect to time using the Chain Rule:   Now we can solve for :   Next we can let be the time of interest (when we are 15 ft from the pulley), so and .  Also, at time , we can compute using the Pythagorean theorem:   Substituting into our expression for :   So the rope length is increasing at a rate of ft\/sec when you are 15 ft from the pulley which means that the box is rising at the same rate of ft\/sec.   "
 },
 {
   "id": "rem-plug-in-last",
   "level": "2",
   "url": "sec-derivApp-related.html#rem-plug-in-last",
   "type": "Remark",
-  "number": "3.2.2",
+  "number": "3.2.7",
   "title": "",
   "body": " Plug in the current values only at the last step. If you substitute before differentiating, you turn variables into constants and their derivatives become zero.  "
 },
 {
-  "id": "fig-puddle",
+  "id": "example-searchlight",
   "level": "2",
-  "url": "sec-derivApp-related.html#fig-puddle",
-  "type": "Figure",
-  "number": "3.2.3",
-  "title": "",
-  "body": " A growing circular puddle with radius and area .   "
-},
-{
-  "id": "rem-puddle-plausible",
-  "level": "2",
-  "url": "sec-derivApp-related.html#rem-puddle-plausible",
-  "type": "Remark",
-  "number": "3.2.4",
-  "title": "",
-  "body": " Always check plausibility. A radius increase of about 0.6 m per minute can be reasonable, depending on flow rate and surface.  "
-},
-{
-  "id": "fig-searchlight",
-  "level": "2",
-  "url": "sec-derivApp-related.html#fig-searchlight",
-  "type": "Figure",
-  "number": "3.2.5",
-  "title": "",
-  "body": " The spotlight position depends on the angle .   "
-},
-{
-  "id": "rem-sign-speed",
-  "level": "2",
-  "url": "sec-derivApp-related.html#rem-sign-speed",
-  "type": "Remark",
-  "number": "3.2.6",
-  "title": "",
-  "body": " The problem asks for speed , so report . If the rotation direction were opposite, the derivative would change sign but the speed would be the same.  "
-},
-{
-  "id": "rem-radians-required",
-  "level": "2",
-  "url": "sec-derivApp-related.html#rem-radians-required",
-  "type": "Remark",
-  "number": "3.2.7",
-  "title": "",
-  "body": " If you mistakenly use in degrees\/sec inside the derivative formula, the numerical answer will be wrong. Convert to radians\/sec before substituting.  "
-},
-{
-  "id": "fig-flashlight-a",
-  "level": "2",
-  "url": "sec-derivApp-related.html#fig-flashlight-a",
-  "type": "Figure",
+  "url": "sec-derivApp-related.html#example-searchlight",
+  "type": "Example",
   "number": "3.2.8",
-  "title": "",
-  "body": " As the flashlight moves, similar triangles relate the radius to the distance .   "
+  "title": "Searchlight Example.",
+  "body": " Searchlight Example   A searchlight shines along a wall 20 meters away. If the light is currently away from pointing directly at the wall and the light is rotating at per second, what is the speed of the bright spot moving along the wall at that instant?   We are intentionally not providing a figure for this example (until you look at the solution). Try drawing your own diagram to help visualize the situation. This is an important skill when solving related rates problems that may be required for quizzes or exams.     Here is a sketch of the situation:   This diagram models the related-rates problem stated above asking how fast the illuminated spot on the wall is moving upward at that instant.   A diagram on a grid showing a vertical wall on the left and a searchlight on the ground to the right. A straight beam of light extends from the searchlight to a point on the wall. At the searchlight, the beam makes a 30 degree angle with the horizontal ground. A curved arrow at the searchlight indicates that the beam is rotating upward at a rate of 5 degrees per second. The illuminated point on the wall is above the ground and moves vertically as the beam rotates, illustrating the changing height of the light spot on the wall.    Let be the angle of the light beam from the horizontal and be the distance of the spot from the point on the wall closest to the light. We are given that at some time of interest (which we will call ) that and , and we want to find .  Since the situation is about a right triangle formed by the light beam, the wall, and the ground, we have several options to consider (like sine, cosine, or tangent or the pythagorean theorem). However, to relate the angle and the distance along the wall we should use the tangent function. This gives:   Differentiating both sides with respect to time:   Solving for :   Now we can substitute in our known values at :   However, because the trig differentiation formulas are only valid for radian measure (See ), we need to convert he angle and angular speed to radians before substituting:   Now substituting in:   Since , we have , so   So the speed of the bright spot moving along the wall at that instant is m\/sec.   The problem asks for speed , so report . If the rotation direction were opposite, the derivative would change sign but the speed would be the same.    If you mistakenly use in degrees\/sec inside the derivative formula, the numerical answer will be wrong. Convert to radians\/sec before substituting.    "
 },
 {
-  "id": "rem-angle-size-check",
+  "id": "rr-tf-01",
   "level": "2",
-  "url": "sec-derivApp-related.html#rem-angle-size-check",
-  "type": "Remark",
-  "number": "3.2.9",
+  "url": "sec-derivApp-related.html#rr-tf-01",
+  "type": "Exercise",
+  "number": "1",
   "title": "",
-  "body": " A quick check: . If the angle is decreasing at about \/sec, the circle can shrink very quickly at that instant, so a relatively large negative area rate is plausible.  "
+  "body": "  In any related rates problem, all quantities that change must be written as functions of time, even if time is not mentioned explicitly in the problem.     True . In related rates problems, all variables must be expressed as functions of time to properly apply the chain rule. It is possible that some quantities do not change (and thus are constants), but any quantity that does change must be treated as a function of time.   "
 },
 {
-  "id": "ex-rr-1",
+  "id": "rr-tf-16",
   "level": "2",
-  "url": "sec-derivApp-related.html#ex-rr-1",
-  "type": "Checkpoint",
-  "number": "3.2.10",
+  "url": "sec-derivApp-related.html#rr-tf-16",
+  "type": "Exercise",
+  "number": "2",
   "title": "",
-  "body": "  In the pulley example, explain why substituting into before differentiating leads to an incorrect conclusion about .   "
+  "body": "  If a related rates problem asks for a speed , the final answer should be reported as a nonnegative value even if the derivative is negative.     True . Speed is defined as the magnitude of velocity, which is always nonnegative. Therefore, when a related rates problem asks for speed, the final answer should be reported as a nonnegative value, regardless of the sign of the derivative.   "
 },
 {
-  "id": "ex-rr-2",
+  "id": "rr-tf-08",
   "level": "2",
-  "url": "sec-derivApp-related.html#ex-rr-2",
-  "type": "Checkpoint",
-  "number": "3.2.11",
+  "url": "sec-derivApp-related.html#rr-tf-08",
+  "type": "Exercise",
+  "number": "3",
   "title": "",
-  "body": "  A circular disk has radius and area . If is constant and positive, describe how the sign and size of change as grows.   "
+  "body": "  In a related rates problem involving a right triangle, the Pythagorean Theorem must be used to relate the variables before differentiating.     False . While the Pythagorean Theorem is often useful in related rates problems involving right triangles, it is not always necessary. Depending on the specific problem, other relationships such as trigonometric functions (sine, cosine, tangent) or geometric formulas may be more appropriate to relate the variables before differentiating.   "
 },
 {
-  "id": "ex-rr-3",
+  "id": "rr-tf-09",
   "level": "2",
-  "url": "sec-derivApp-related.html#ex-rr-3",
-  "type": "Checkpoint",
-  "number": "3.2.12",
+  "url": "sec-derivApp-related.html#rr-tf-09",
+  "type": "Exercise",
+  "number": "4",
   "title": "",
-  "body": "  In the searchlight example, identify which step requires converting degrees to radians, and explain why that conversion is essential.   "
+  "body": "  If , then after differentiating with respect to time.     True . Differentiating both sides of the equation with respect to time using the chain rule gives:   This confirms that the statement is true.   "
+},
+{
+  "id": "rr-tf-11",
+  "level": "2",
+  "url": "sec-derivApp-related.html#rr-tf-11",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  A circle has radius meters at a certain instant. If the radius is increasing at m\/min, then the area is increasing at m \/min at that instant.     False . The area of a circle is given by the formula , where is the radius. To find the rate of change of the area with respect to time, we differentiate both sides with respect to time using the chain rule:   Substituting the given values m and m\/min into the equation for :   This shows that the area is increasing at m \/min, not m \/min as stated.   "
+},
+{
+  "id": "rr-tf-15",
+  "level": "2",
+  "url": "sec-derivApp-related.html#rr-tf-15",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If the volume of a cube is increasing at cm \/sec when the side length is cm, then the side length is increasing at cm\/sec at that instant.     True . The volume of a cube is given by the formula , where is the side length. To find the rate of change of the side length with respect to time, we differentiate both sides with respect to time using the chain rule:   Substituting the given values cm \/sec and cm into the equation for :   This confirms that the side length is increasing at cm\/sec at that instant.   "
+},
+{
+  "id": "rr-tf-12",
+  "level": "2",
+  "url": "sec-derivApp-related.html#rr-tf-12",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  A ladder 10 ft long is leaning against a vertical wall. If the bottom of the ladder is sliding away from the wall at 1 ft\/sec, then the top of the ladder is sliding down the wall at 1 ft\/sec when the bottom of the ladder is 6 ft from the wall.     False . Let be the distance from the wall to the bottom of the ladder and be the height of the top of the ladder on the wall. The relationship between and is given by the Pythagorean theorem:   Differentiating both sides with respect to time:   Solving for :   At the instant when ft and ft\/sec, we can find using the Pythagorean theorem:   Substituting these values into the equation for :   This shows that the top of the ladder is sliding down the wall at a rate of ft\/sec, not 1 ft\/sec as stated.   "
+},
+{
+  "id": "rr-tf-03",
+  "level": "2",
+  "url": "sec-derivApp-related.html#rr-tf-03",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  If the radius of a sphere is increasing at a constant rate, then the volume of the sphere is also increasing at a constant rate.     False . The volume of a sphere is given by the formula . If the radius is increasing at a constant rate, the volume will not increase at a constant rate because the relationship between volume and radius is cubic. As the radius increases, the rate of change of the volume will also increase.  A simple example would be if (which has a constant rate of change of ), then , and the derivative is not constant.   "
 },
 {
   "id": "sec-derivApp-linear",
@@ -4465,9 +4483,9 @@ var ptx_lunr_docs = [
   "body": " Substitution Rule for Integration  Text of section.  "
 },
 {
-  "id": "backmatter-2",
+  "id": "formula-sheet",
   "level": "1",
-  "url": "backmatter-2.html",
+  "url": "formula-sheet.html",
   "type": "Appendix",
   "number": "A",
   "title": "Quiz \/ Exam Formula Sheet",
