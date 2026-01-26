@@ -54,107 +54,106 @@
     <title>Select Examples</title>
 
 <example xml:id="example-spill-radius">
-    <title>Spill Radius Example</title>
+    <title>Spill Example</title>
     <statement>
     <p>
       A stream of water spreads a circular puddle on the floor. If the puddle is 1 meter across and the stream increases the area at a rate of
-      <m>2</m> m<m>^2</m>/min, how quickly is the puddle widening at that instant?
+      <m>2</m> m<m>^2</m>/min, how quickly is the puddle's radius widening at that instant?
     </p>
 
     <figure xml:id="fig-puddle">
-      <caption>A growing circular puddle with radius <m>r(t)</m> and area <m>A(t)</m>.</caption>
-      <image source="2-8-Puddle.png" width="55%"/>
+     <caption>
+    A circular puddle grows as water spreads outward. 
+  </caption>
+      <image source="images/RelatedRates1.gif" width="80%">
+    <shortdescription>
+      An animation on a coordinate grid showing a circle centered at the origin expanding outward over time, modeling a circular puddle that is widening.
+      The circle represents the puddle’s boundary and grows smoothly, indicating increasing radius and diameter.
+      The situation corresponds to the instant when the puddle’s diameter is 1 meter and the area is increasing at 2 square meters per minute, and the goal is to determine how fast the radius is increasing at that instant.
+    </shortdescription>
+    </image>
     </figure>
 
 
     </statement>
     <solution>
-
-
-      </solution>
-    
-  </example>
-
- <subsection xml:id="spill-radius-example">
-    <title></title>
-
-
-
-    <figure xml:id="fig-puddle">
-      <caption>A growing circular puddle with radius <m>r(t)</m> and area <m>A(t)</m>.</caption>
-      <image source="2-8-Puddle.png" width="55%"/>
-    </figure>
-
-    <p>
-      Let <m>r(t)</m> be the puddle’s radius and <m>A(t)</m> its area. A diameter of 1 m means the current radius is
-      <m>r(0)=\frac12</m>. The given rate is <m>A'(0)=2</m> m<sup>2</sup>/min. We want <m>r'(0)</m>.
-    </p>
-
-    <p>
-      The geometric relationship is
+    <p> We can see in this problem that they give us the rate of change of the area of the puddle, 
+      and we are asked to find the rate of change of the radius, these are the two rates we are try to relate together in this problem. </p>
+      <p>So for this problem, since the puddle is circular, we can use the formula for the area of a circle, which is <m>A=\pi r^2</m>, where <m>r</m> 
+        is the radius of the circle. </p>
+      <p>Since both the area and the radius are changing over time, we can express them as functions of time: <m>A(t)</m> and <m>r(t)</m>.</p>
+      <p>We are given that the area is increasing at a rate of <m>2</m> m<m>^2</m>/min, which means <m>A'(t)=2</m> m<m>^2</m>/min. 
+        We are asked to find how quickly the radius is widening, which means we need to find <m>r'(t)</m>.</p>
+      <p>To find <m>r'(t)</m>, we can differentiate the area formula with respect to time using the Chain Rule:</p>
       <me>
-        A(t)=\pi r(t)^2.
-      </me>
-      Differentiate both sides with respect to time:
-    </p>
-
-    <me>
 \begin{array}{rcl}
-\displaystyle A'(t)
-\amp=\amp \displaystyle \pi\left(r(t)^2\right)'
+\displaystyle A(t)
+\amp=\amp \displaystyle \pi r(t)^2,
 \\[0.9em]
-\amp=\amp \displaystyle 2\pi r(t)r'(t).
+\displaystyle A'(t)
+\amp=\amp \displaystyle \pi \cdot 2r(t) \cdot r'(t)
+\\[0.9em]
+\amp=\amp \displaystyle 2\pi r(t) r'(t).
 \end{array}
-    </me>
-
-    <p>
-      Solve for the target rate and substitute the current values:
-    </p>
-
-    <me>
+      </me>
+      <p>Now we can solve for <m>r'(t)</m>:</p>
+      <me>
 \begin{array}{rcl}
 \displaystyle r'(t)
-\amp=\amp \displaystyle \frac{A'(t)}{2\pi r(t)}
-\\[0.9em]
+\amp=\amp \displaystyle \frac{A'(t)}{2\pi r(t)}.
+\end{array}
+      </me>
+      <p>Now we will take the <m>t=0</m> to be the time where the puddle is 1 meter across (so <m>r(0)=\frac12</m>). Recall also we know that <m>A'(0)=2</m>. So therefore:</p>
+      <me>
+\begin{array}{rcl}
 \displaystyle r'(0)
 \amp=\amp \displaystyle \frac{A'(0)}{2\pi r(0)}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{2}{2\pi(\frac12)}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{2}{\pi}
-\approx 0.64\ \text{m/min}.
 \end{array}
-    </me>
+      </me> 
+      <p> So the radius is widening at a rate of <m>\frac{2}{\pi}</m> m/min when the puddle is 1 meter across. </p>
+      </solution>
+    
+  </example>
 
-    <remark xml:id="rem-puddle-plausible">
-      <p>
-        Always check plausibility. A radius increase of about 0.6 m per minute can be reasonable, depending on flow rate and surface.
-      </p>
-    </remark>
-  </subsection>
 
-</subsection> 
-
-  <subsection xml:id="pulley-example">
-    <title>Pulley Example</title>
-
-    <p>
+ <example
+  xml:id="example-pulley">
+  <title>Pulley Example</title>
+    <statement>
+     <p>
       Consider a weight hanging from a rope that goes up to a pulley 10 ft above the floor and then down to your hand,
       which is 3 ft above the floor and 15 ft horizontally from the pulley. If you walk away from the pulley at
       <m>2</m> ft/sec, how fast will the weight rise?
     </p>
 
-    <p>
-      This is a <term>related rates</term> problem: we want an unknown rate of change from a known rate, using a geometric relationship.
-      Start by drawing a picture and labeling constants and variables. Let <m>h(t)</m> be the horizontal distance from the weight to your hand,
-      and let <m>r(t)</m> be the length of the rope segment from the pulley to your hand.
-      The problem gives the current value <m>h(0)=15</m> and the current rate <m>h'(0)=2</m> (ft/sec). We want <m>r'(0)</m>.
-    </p>
 
     <figure xml:id="fig-pulley">
-      <caption>Pulley setup with variables <m>h(t)</m> and <m>r(t)</m>.</caption>
-      <image source="2-8-Pulley.png" width="75%"/>
+  <caption>
+    A pulley system with a hanging weight and a rope held by a person walking away from the pulley.
+  </caption>
+      <image source="images/RelatedRates2.gif" width="80%">
+    <shortdescription>
+      An animated diagram on a grid showing a pulley mounted above the floor with a rope passing over it.
+      On the left, a weight hangs vertically from the pulley down to the floor.
+      On the right, a person holds the other end of the rope at a point 3 feet above the floor and moves horizontally to the right.
+      An arrow indicates the person walking away from the pulley at a constant speed of 2 feet per second.
+      As the person moves farther away, the rope segment from the pulley to the person lengthens and the vertical rope segment shortens,
+      illustrating that the hanging weight is rising.
+    </shortdescription>
+    </image>
     </figure>
+
+      </statement>
+      
+      
+ </example>
+
+ 
+
 
     <p>
       The vertical distance from your hand up to the pulley is constant: <m>10-3=7</m> ft. By the Pythagorean Theorem,
