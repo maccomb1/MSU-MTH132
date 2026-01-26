@@ -135,7 +135,7 @@
   <caption>
     A pulley system with a hanging weight and a rope held by a person walking away from the pulley.
   </caption>
-      <image source="images/RelatedRates2.gif" width="80%">
+      <image source="images/RelatedRates2.gif" width="100%">
     <shortdescription>
       An animated diagram on a grid showing a pulley mounted above the floor with a rope passing over it.
       On the left, a weight hangs vertically from the pulley down to the floor.
@@ -148,59 +148,90 @@
     </figure>
 
       </statement>
-      
-      
+      <solution>
+        <p>
+          First let's define our variables. Let <m>x(t)</m> be the horizontal distance from the pulley to your hand,
+          let <m>r(t)</m> be the length of the rope segment from the pulley to your hand, and finally let <m>h(t)</m> be the height (vertical distance) from your hand to the pulley. 
+        </p> 
+        <p> Since your hand is 3 ft above the floor and the pulley is 10 ft above the floor, the height <m>h(t)</m> between the two will be a constant can be expressed as:</p>
+        <me>
+\displaystyle h(t)
+= \displaystyle 10-3
+= \displaystyle 7
+        </me>
+        <p>So no matter the time, <m>h(t)=7</m> is constant. Also notice that because the rope is connected to the weight, as the rope length 
+          <m>r(t)</m> increases, the height of the weight will decrease at the same rate. So if we can find <m>r'(t)</m>, we will also have found the rate 
+          at which the weight is rising. </p>
+          <p> 
+          Finally, notice that these three variables (<m>r(t)</m>, <m>h(t)</m>, and <m>x(t)</m>) form a right triangle 
+          with the hypotenuse being the rope segment from the pulley to your hand. So we can use the Pythagorean theorem to get: </p>
+        <me>
+\begin{array}{rcl}
+\displaystyle r(t)^2
+\amp=\amp \displaystyle h(t)^2 + x(t)^2,
+\\[0.9em]
+\displaystyle r(t)^2
+\amp=\amp \displaystyle 7^2 + x(t)^2,
+\\[0.9em]
+\displaystyle r(t)^2
+\amp=\amp \displaystyle 49 + x(t)^2.
+\end{array}
+        </me>
+        <p>Now we can differentiate both sides with respect to time <m>t</m> using the Chain Rule:</p>
+        <me>
+\begin{array}{rcl}
+\displaystyle \left(r(t)^2\right)'
+\amp=\amp \displaystyle \left(49 + x(t)^2\right)',
+\\[0.9em]
+\displaystyle 2r(t) r'(t)
+\amp=\amp \displaystyle 2x(t) x'(t).
+\end{array}
+        </me>
+        <p>Now we can solve for <m>r'(t)</m>:</p>
+        <me>
+\begin{array}{rcl}
+\displaystyle r'(t)
+\amp=\amp \displaystyle \frac{x(t) x'(t)}{r(t)}.
+\end{array}
+        </me>
+        <p>Next we can let <m>t=0</m> be the time of interest (when we are 15 ft from the pulley), so <m>x(0)=15</m> and <m>x'(0)=2</m>.</p>
+        <p>Also, at time <m>t=0</m>, we can compute <m>r(0)</m> using the Pythagorean theorem:</p>
+        <me>
+\begin{array}{rcl}
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + x(0)^2
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + 15^2
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 49 + 225
+\\[0.9em]
+\displaystyle r(0)^2
+\amp=\amp \displaystyle 274
+\\[0.9em]
+\displaystyle r(0)
+\amp=\amp \displaystyle \sqrt{274}.
+\end{array}
+        </me>
+        <p>Substituting into our expression for <m>r'(t)</m>:</p>
+        <me>
+          \begin{array}{rcl}
+            \displaystyle r'(0)
+            \amp=\amp \displaystyle \frac{x(0) x'(0)}{r(0)}
+            \\[1.5em]
+            \amp=\amp \displaystyle \frac{15 \cdot 2}{\sqrt{274}}
+            \\[1.5em]
+            \amp=\amp \displaystyle \frac{30}{\sqrt{274}}.
+          \end{array}
+        </me>
+        <p>So the rope length is increasing at a rate of <m>\frac{30}{\sqrt{274}}</m> ft/sec when 
+          you are 15 ft from the pulley which means that the box is rising at the same rate of <m>\frac{30}{\sqrt{274}}</m> ft/sec.</p>
+      </solution>
+
  </example>
 
  
-
-
-    <p>
-      The vertical distance from your hand up to the pulley is constant: <m>10-3=7</m> ft. By the Pythagorean Theorem,
-      the geometry implies
-      <me>
-        r(t)^2=h(t)^2+7^2=h(t)^2+49.
-      </me>
-    </p>
-
-    <p>
-      One approach is to solve for <m>r(t)</m> and then differentiate.
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle r(t) 
-\amp=\amp \displaystyle \sqrt{h(t)^2+49}
-\\[0.9em]
-\displaystyle r'(t)
-\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot \left(h(t)^2+49\right)'
-\\[0.9em]
-\amp=\amp \displaystyle \frac{1}{2}(h(t)^2+49)^{-1/2}\cdot 2h(t)h'(t)
-\\[0.9em]
-\amp=\amp \displaystyle \frac{h(t)h'(t)}{\sqrt{h(t)^2+49}}.
-\end{array}
-    </me>
-
-    <p>
-      Now substitute the current values:
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle r'(0)
-\amp=\amp \displaystyle \frac{h(0)\,h'(0)}{\sqrt{h(0)^2+49}}
-\\[0.9em]
-\amp=\amp \displaystyle \frac{(15)(2)}{\sqrt{15^2+49}}
-\\[0.9em]
-\amp=\amp \displaystyle \frac{30}{\sqrt{274}}
-\approx 1.8\ \text{ft/sec}.
-\end{array}
-    </me>
-
-    <p>
-      The weight rises at the same rate that the rope segment <m>r(t)</m> increases, so the weight rises at about
-      <m>1.8</m> ft/sec at that instant.
-    </p>
 
     <remark xml:id="rem-plug-in-last">
       <p>
@@ -209,69 +240,24 @@
       </p>
     </remark>
 
-    <p>
-      We can also do this more directly by implicitly differentiating the relationship <m>r(t)^2=h(t)^2+49</m>.
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle \left(r(t)^2\right)'
-\amp=\amp \displaystyle \left(h(t)^2+49\right)'
-\\[0.9em]
-\displaystyle 2r(t)r'(t)
-\amp=\amp \displaystyle 2h(t)h'(t)
-\\[0.9em]
-\displaystyle r'(t)
-\amp=\amp \displaystyle \frac{h(t)h'(t)}{r(t)}.
-\end{array}
-    </me>
-
-    <p>
-      Since <m>r(0)=\sqrt{h(0)^2+49}=\sqrt{274}</m>, this gives the same numerical result as above.
-    </p>
-  </subsection>
-
-  <subsection xml:id="method-related-rates">
-    <title>A Method for Related Rates Problems</title>
-
-    <ol>
-      <li>
-        Draw a picture labeled with:
-        <ul>
-          <li>numerical constant values,</li>
-          <li>letter variables and their current values,</li>
-          <li>arrows showing known current rates (derivatives),</li>
-          <li>an arrow for the unknown target rate you want.</li>
-        </ul>
-      </li>
-      <li>
-        Write an equation relating the variables using geometry (or a known formula).
-      </li>
-      <li>
-        Assume each variable depends on time <m>t</m>, then differentiate both sides with respect to <m>t</m>.
-        Use the Chain Rule whenever a variable appears inside a power, root, trig function, etc.
-        Solve for the target derivative if needed.
-      </li>
-      <li>
-        Substitute the current values and current rates to compute the target rate.
-      </li>
-    </ol>
-  </subsection>
-
- 
-
-  <subsection xml:id="searchlight-example">
+ <example
+  xml:id="example-searchlight">
     <title>Searchlight Example</title>
-
+    <statement>
     <p>
       A searchlight shines along a wall 20 meters away. If the light is currently <m>30^\circ</m> away from pointing directly at the wall
       and the light is rotating at <m>5^\circ</m> per second, what is the speed of the bright spot moving along the wall at that instant?
     </p>
 
-    <figure xml:id="fig-searchlight">
-      <caption>The spotlight position <m>s(t)</m> depends on the angle <m>\theta(t)</m>.</caption>
-      <image source="2-8-Searchlight.png" width="55%"/>
-    </figure>
+    <remark>
+      <p>We are intentionally not providing a figure for this example (until you look at the solution). Try drawing your own diagram to help visualize the situation.
+        This is an important skill when solving related rates problems that may be required for quizzes or exams.
+      </p>
+    </remark>
+    </statement>
+
+</example>
+    
 
     <p>
       Let <m>\theta(t)</m> be the angle and <m>s(t)</m> the distance of the spot from the point on the wall closest to the light.
