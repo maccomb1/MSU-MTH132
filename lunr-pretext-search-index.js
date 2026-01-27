@@ -3565,9 +3565,9 @@ var ptx_lunr_docs = [
   "body": "       Let . Then by the inverse relationship with the exponential function, Differentiate both sides with respect to to get: Therefore, Now rewrite in terms of . Since we know from above that , we have Thus,    "
 },
 {
-  "id": "insight-derivative-inverse-general",
+  "id": "strat-derivative-inverse-general",
   "level": "2",
-  "url": "sec-derivative-inverse.html#insight-derivative-inverse-general",
+  "url": "sec-derivative-inverse.html#strat-derivative-inverse-general",
   "type": "Strategy",
   "number": "2.7.3",
   "title": "Finding the Derivative of an Inverse Function.",
@@ -4042,9 +4042,9 @@ var ptx_lunr_docs = [
   "body": "related rates "
 },
 {
-  "id": "insight-related-rates-steps",
+  "id": "strat-related-rates-steps",
   "level": "2",
-  "url": "sec-derivApp-related.html#insight-related-rates-steps",
+  "url": "sec-derivApp-related.html#strat-related-rates-steps",
   "type": "Strategy",
   "number": "3.2.1",
   "title": "Steps for Solving Related Rates Problems.",
@@ -4381,7 +4381,151 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Extrema",
-  "body": " Extrema  Text of section.  "
+  "body": " Extrema    Define and distinguish between absolute and local maxima and minima.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.  Identify critical points of a function.  Apply derivatives to locate and classify extrema on a closed interval.  Understand how discontinuities and nondifferentiable points affect extrema.    In many real-world problems, we are not just interested in how a function behaves, but in finding its largest or smallest possible values. For example, we might want to know the maximum height of a projectile, the minimum cost of producing an item, or the highest temperature reached during a day. Problems like these lead us to the study of extrema .   Absolute Maxima and Minima   Absolute Maximum and Minimum   Let be a function defined on a closed interval .  An absolute maximum of on occurs at a point in if for all .  An absolute minimum of on occurs at a point in if for all .    The output values are called the maximum value and minimum value of the function. While these values are unique, it is possible for a function to attain the same maximum or minimum value at more than one input.   The terms maximum , minimum , and extremum come from Latin. Their plural forms are maxima , minima , and extrema .    Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .     This theorem does not tell us where the extrema occur, only that they must exist. If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.     Local Maxima and Minima  Absolute extrema describe the highest and lowest points over an entire interval. A broader concept focuses only on nearby behavior.   Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to .  A local minimum of a function occurs at if for all sufficiently close to .    Intuitively, local maxima correspond to hilltops and local minima correspond to valley bottoms. Every absolute maximum or minimum is also a local extremum, but not every local extremum is an absolute one.    Derivatives and Extrema  Calculus provides a powerful tool for locating extrema. If a function has a smooth hilltop or valley bottom at an interior point, the tangent line there is horizontal.   First Derivative Test for Extrema   If has a local maximum or minimum at an interior point and is differentiable at , then .     The converse is not true. A point where need not be a maximum or minimum.     Critical Points   Critical Point   A critical point (or critical number ) of a function is a point where either     Critical points are the only possible locations of local extrema in the interior of an interval. Endpoints of the interval must also be considered when searching for absolute extrema.    A Method for Finding Absolute Extrema   Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.  If is not continuous, also examine behavior near discontinuities.      Examples and Common Pitfalls    Consider .    We compute , so the only critical point is . However, the graph has no local maximum or minimum at this point. Instead, is a stationary point where the function briefly levels off before continuing to increase.      Let .    The derivative is undefined when the expression inside the absolute value is zero, producing corners in the graph. These points must be included as critical points, and in fact they correspond to the absolute minimum values of the function.      Let on .    Although has critical points and endpoint values, the function increases without bound near . Therefore, has no absolute maximum on this interval, but it does have an absolute minimum.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Extrema      Practice \/ Study Problems   Conceptual Questions    True or False: If , then is a local maximum or minimum.    False. A zero derivative may correspond to a stationary point.      True or False: A continuous function on must have an absolute maximum.    True. This follows from the Extreme Value Theorem.      "
+},
+{
+  "id": "sec-derivApp-extrema-2",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#sec-derivApp-extrema-2",
+  "type": "Objectives",
+  "number": "3.4",
+  "title": "",
+  "body": "  Define and distinguish between absolute and local maxima and minima.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.  Identify critical points of a function.  Apply derivatives to locate and classify extrema on a closed interval.  Understand how discontinuities and nondifferentiable points affect extrema.   "
+},
+{
+  "id": "sec-derivApp-extrema-3",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#sec-derivApp-extrema-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "extrema "
+},
+{
+  "id": "def-absolute-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#def-absolute-extrema",
+  "type": "Definition",
+  "number": "3.4.1",
+  "title": "Absolute Maximum and Minimum.",
+  "body": " Absolute Maximum and Minimum   Let be a function defined on a closed interval .  An absolute maximum of on occurs at a point in if for all .  An absolute minimum of on occurs at a point in if for all .   "
+},
+{
+  "id": "ssec-absolute-extrema-4",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ssec-absolute-extrema-4",
+  "type": "Remark",
+  "number": "3.4.2",
+  "title": "",
+  "body": " The terms maximum , minimum , and extremum come from Latin. Their plural forms are maxima , minima , and extrema .  "
+},
+{
+  "id": "thm-extreme-value",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#thm-extreme-value",
+  "type": "Theorem",
+  "number": "3.4.3",
+  "title": "Extreme Value Theorem.",
+  "body": " Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .   "
+},
+{
+  "id": "ssec-absolute-extrema-6",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ssec-absolute-extrema-6",
+  "type": "Remark",
+  "number": "3.4.4",
+  "title": "",
+  "body": " This theorem does not tell us where the extrema occur, only that they must exist. If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.  "
+},
+{
+  "id": "def-local-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#def-local-extrema",
+  "type": "Definition",
+  "number": "3.4.5",
+  "title": "Local Maximum and Minimum.",
+  "body": " Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to .  A local minimum of a function occurs at if for all sufficiently close to .   "
+},
+{
+  "id": "thm-first-derivative-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#thm-first-derivative-extrema",
+  "type": "Theorem",
+  "number": "3.4.6",
+  "title": "First Derivative Test for Extrema.",
+  "body": " First Derivative Test for Extrema   If has a local maximum or minimum at an interior point and is differentiable at , then .   "
+},
+{
+  "id": "ssec-derivatives-extrema-4",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ssec-derivatives-extrema-4",
+  "type": "Remark",
+  "number": "3.4.7",
+  "title": "",
+  "body": " The converse is not true. A point where need not be a maximum or minimum.  "
+},
+{
+  "id": "def-critical-point",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#def-critical-point",
+  "type": "Definition",
+  "number": "3.4.8",
+  "title": "Critical Point.",
+  "body": " Critical Point   A critical point (or critical number ) of a function is a point where either    "
+},
+{
+  "id": "strat-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#strat-extrema",
+  "type": "Strategy",
+  "number": "3.4.9",
+  "title": "Finding Absolute Maxima and Minima.",
+  "body": " Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.  If is not continuous, also examine behavior near discontinuities.   "
+},
+{
+  "id": "ex-stationary-point",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-stationary-point",
+  "type": "Example",
+  "number": "3.4.10",
+  "title": "",
+  "body": "  Consider .    We compute , so the only critical point is . However, the graph has no local maximum or minimum at this point. Instead, is a stationary point where the function briefly levels off before continuing to increase.   "
+},
+{
+  "id": "ex-abs-value-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-abs-value-extrema",
+  "type": "Example",
+  "number": "3.4.11",
+  "title": "",
+  "body": "  Let .    The derivative is undefined when the expression inside the absolute value is zero, producing corners in the graph. These points must be included as critical points, and in fact they correspond to the absolute minimum values of the function.   "
+},
+{
+  "id": "ex-no-absolute-maximum",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-no-absolute-maximum",
+  "type": "Example",
+  "number": "3.4.12",
+  "title": "",
+  "body": "  Let on .    Although has critical points and endpoint values, the function increases without bound near . Therefore, has no absolute maximum on this interval, but it does have an absolute minimum.   "
+},
+{
+  "id": "exercises-extrema-2-2",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#exercises-extrema-2-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  True or False: If , then is a local maximum or minimum.    False. A zero derivative may correspond to a stationary point.   "
+},
+{
+  "id": "exercises-extrema-2-3",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#exercises-extrema-2-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  True or False: A continuous function on must have an absolute maximum.    True. This follows from the Extreme Value Theorem.   "
 },
 {
   "id": "sec-derivApp-mvt",
@@ -4390,7 +4534,214 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Mean Value Theorem",
-  "body": " Mean Value Theorem  Text of section.  "
+  "body": " Mean Value Theorem    State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Use the Mean Value Theorem to justify when a function must be increasing or decreasing.  Apply the Mean Value Theorem to prove basic uniqueness results for functions with given derivatives.  Solve for a value that satisfies the Mean Value Theorem in selected examples.    Derivatives tell us the instantaneous rate of change of a function. In this section, we connect derivatives to the overall behavior of a graph on an interval. The key message is that somewhere between two points, the instantaneous rate of change must match the average rate of change.   Rolle’s Theorem  We begin with a special case where the function starts and ends at the same height. In that situation, the graph must have a horizontal tangent somewhere in between.   Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .     In mathematics, the hypotheses of a theorem are the assumptions (the “if” part), and the conclusion is what we deduce from them (the “then” part). For Rolle’s Theorem, the hypotheses are continuity on , differentiability on , and the condition .   A physical interpretation can help. If represents the height of a rocket that starts and ends on its launch pad, then at some moment the rocket must have zero vertical velocity. That is exactly the conclusion .   Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .    Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.     From Secant Slopes to Tangent Slopes  Over an interval , the average rate of change of is   Geometrically, this is the slope of the secant line through and . The Mean Value Theorem says that at some point in between, the tangent slope matches this secant slope.   Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that      Rolle’s Theorem is the special case of the Mean Value Theorem when . In that case, the secant slope is , so the conclusion becomes .     Why the Mean Value Theorem is True  The proof uses Rolle’s Theorem by subtracting off the secant line. This produces a new function whose endpoints match, so Rolle’s Theorem applies.   Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to     The Mean Value Theorem guarantees that at least one such value of exists, but it does not provide a direct method to find it. In many applications, we only need to know that some exists. When practice problems ask you to find , we usually solve the equation .     An Example: Solving for a Mean Value Point    Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find a value in that satisfies the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore       Derivative Controls Direction  One of the first important consequences of the Mean Value Theorem is that the sign of the derivative controls whether a function increases or decreases.   Positive Derivative Implies Increasing   Suppose is differentiable on an interval . If for every , then is increasing on . That is, whenever in , we have .    Let be any two points in . By the Mean Value Theorem, there exists such that   Since and , we conclude , so .     A similar argument shows that if throughout an interval, then is decreasing on that interval.     Uniqueness and Why It Matters  The Mean Value Theorem also explains why derivatives can determine a function up to a constant, and why an initial value pins down a unique function.   Uniqueness Theorem   Let be differentiable on an interval .    If for all , then for some constant .    If and satisfy for all , then for some constant .    If for all and for some , then for all .      For the first claim, fix in . Apply the Mean Value Theorem to on . There exists such that   Multiplying by gives , so . Since and were arbitrary, is constant.  For the second claim, let . Then , so by the first claim, , which means .  For the third claim, from the second claim we have . Evaluate at to get . Since , we have , and therefore .      A common model for vertical motion under constant gravitational acceleration is   Explain why there is only one function that satisfies both conditions.    Suppose and both satisfy the same derivative condition and the same initial value . By the Uniqueness Theorem, if two functions have the same derivative everywhere and agree at one point, then they are the same function. Therefore for all times in the interval of interest.     This type of uniqueness matches what we expect in many physical settings: if an object is launched in the same way, the model predicts the same motion. Later in the course, we will see more examples where derivatives together with initial conditions determine a unique function.     Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for the Mean Value Theorem      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.     If is differentiable on , then the Mean Value Theorem applies on .     False. The Mean Value Theorem requires both continuity on the closed interval and differentiability on the open interval .      Rolle’s Theorem is a special case of the Mean Value Theorem.     True. If , then the secant slope is , so the Mean Value Theorem gives a point with .      If for every in an interval, then is constant on that interval.     True. This is part (a) of the Uniqueness Theorem and follows from the Mean Value Theorem.      If for every in an interval, then has no local maxima in that interval.     True. If everywhere, then is increasing, so it cannot turn from increasing to decreasing at an interior point.      Algebraic and Procedural Problems    Let on . Find all values in that satisfy the Mean Value Theorem conclusion.    Compute the secant slope:   Since , solve , so .      Consider on . (a) Verify that Rolle’s Theorem applies. (b) Find a value in such that .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so Rolle’s Theorem applies.  Differentiate:   Factor:   In , the root is .      Graphical and Applied Problems    A differentiable function satisfies and . Explain what the Mean Value Theorem guarantees about the value of for some .    The secant slope is . The Mean Value Theorem guarantees there exists such that .      Suppose and are differentiable on and satisfy for all . If and , determine .    Since the derivatives are equal everywhere, the Uniqueness Theorem implies . Evaluate at : , so . Therefore for all in the interval.      "
+},
+{
+  "id": "sec-derivApp-mvt-2",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#sec-derivApp-mvt-2",
+  "type": "Objectives",
+  "number": "3.5",
+  "title": "",
+  "body": "  State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Use the Mean Value Theorem to justify when a function must be increasing or decreasing.  Apply the Mean Value Theorem to prove basic uniqueness results for functions with given derivatives.  Solve for a value that satisfies the Mean Value Theorem in selected examples.   "
+},
+{
+  "id": "thm-rolles",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#thm-rolles",
+  "type": "Theorem",
+  "number": "3.5.1",
+  "title": "Rolle’s Theorem.",
+  "body": " Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .   "
+},
+{
+  "id": "rem-hypothesis-conclusion",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-hypothesis-conclusion",
+  "type": "Remark",
+  "number": "3.5.2",
+  "title": "",
+  "body": " In mathematics, the hypotheses of a theorem are the assumptions (the “if” part), and the conclusion is what we deduce from them (the “then” part). For Rolle’s Theorem, the hypotheses are continuity on , differentiability on , and the condition .  "
+},
+{
+  "id": "pf-rolles",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#pf-rolles",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .  "
+},
+{
+  "id": "rem-rolles-necessity",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-rolles-necessity",
+  "type": "Remark",
+  "number": "3.5.3",
+  "title": "",
+  "body": " Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.  "
+},
+{
+  "id": "thm-mvt",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#thm-mvt",
+  "type": "Theorem",
+  "number": "3.5.4",
+  "title": "Mean Value Theorem.",
+  "body": " Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that    "
+},
+{
+  "id": "rem-rolles-special-case",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-rolles-special-case",
+  "type": "Remark",
+  "number": "3.5.5",
+  "title": "",
+  "body": " Rolle’s Theorem is the special case of the Mean Value Theorem when . In that case, the secant slope is , so the conclusion becomes .  "
+},
+{
+  "id": "pf-mvt",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#pf-mvt",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to   "
+},
+{
+  "id": "rem-mvt-finding-c",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-mvt-finding-c",
+  "type": "Remark",
+  "number": "3.5.6",
+  "title": "",
+  "body": " The Mean Value Theorem guarantees that at least one such value of exists, but it does not provide a direct method to find it. In many applications, we only need to know that some exists. When practice problems ask you to find , we usually solve the equation .  "
+},
+{
+  "id": "ex-mvt-sqrt",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#ex-mvt-sqrt",
+  "type": "Example",
+  "number": "3.5.7",
+  "title": "",
+  "body": "  Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find a value in that satisfies the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore    "
+},
+{
+  "id": "thm-positive-derivative-increasing",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#thm-positive-derivative-increasing",
+  "type": "Theorem",
+  "number": "3.5.8",
+  "title": "Positive Derivative Implies Increasing.",
+  "body": " Positive Derivative Implies Increasing   Suppose is differentiable on an interval . If for every , then is increasing on . That is, whenever in , we have .    Let be any two points in . By the Mean Value Theorem, there exists such that   Since and , we conclude , so .   "
+},
+{
+  "id": "rem-negative-derivative",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-negative-derivative",
+  "type": "Remark",
+  "number": "3.5.9",
+  "title": "",
+  "body": " A similar argument shows that if throughout an interval, then is decreasing on that interval.  "
+},
+{
+  "id": "thm-uniqueness",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#thm-uniqueness",
+  "type": "Theorem",
+  "number": "3.5.10",
+  "title": "Uniqueness Theorem.",
+  "body": " Uniqueness Theorem   Let be differentiable on an interval .    If for all , then for some constant .    If and satisfy for all , then for some constant .    If for all and for some , then for all .      For the first claim, fix in . Apply the Mean Value Theorem to on . There exists such that   Multiplying by gives , so . Since and were arbitrary, is constant.  For the second claim, let . Then , so by the first claim, , which means .  For the third claim, from the second claim we have . Evaluate at to get . Since , we have , and therefore .   "
+},
+{
+  "id": "ex-uniqueness-ballistic",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#ex-uniqueness-ballistic",
+  "type": "Example",
+  "number": "3.5.11",
+  "title": "",
+  "body": "  A common model for vertical motion under constant gravitational acceleration is   Explain why there is only one function that satisfies both conditions.    Suppose and both satisfy the same derivative condition and the same initial value . By the Uniqueness Theorem, if two functions have the same derivative everywhere and agree at one point, then they are the same function. Therefore for all times in the interval of interest.   "
+},
+{
+  "id": "rem-physical-law",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#rem-physical-law",
+  "type": "Remark",
+  "number": "3.5.12",
+  "title": "",
+  "body": " This type of uniqueness matches what we expect in many physical settings: if an object is launched in the same way, the model predicts the same motion. Later in the course, we will see more examples where derivatives together with initial conditions determine a unique function.  "
+},
+{
+  "id": "tf-mvt-01",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#tf-mvt-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  If is differentiable on , then the Mean Value Theorem applies on .     False. The Mean Value Theorem requires both continuity on the closed interval and differentiability on the open interval .   "
+},
+{
+  "id": "tf-mvt-02",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#tf-mvt-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Rolle’s Theorem is a special case of the Mean Value Theorem.     True. If , then the secant slope is , so the Mean Value Theorem gives a point with .   "
+},
+{
+  "id": "tf-mvt-03",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#tf-mvt-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If for every in an interval, then is constant on that interval.     True. This is part (a) of the Uniqueness Theorem and follows from the Mean Value Theorem.   "
+},
+{
+  "id": "tf-mvt-04",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#tf-mvt-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If for every in an interval, then has no local maxima in that interval.     True. If everywhere, then is increasing, so it cannot turn from increasing to decreasing at an interior point.   "
+},
+{
+  "id": "prob-mvt-find-c-poly",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#prob-mvt-find-c-poly",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Let on . Find all values in that satisfy the Mean Value Theorem conclusion.    Compute the secant slope:   Since , solve , so .   "
+},
+{
+  "id": "prob-rolles-check",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#prob-rolles-check",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Consider on . (a) Verify that Rolle’s Theorem applies. (b) Find a value in such that .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so Rolle’s Theorem applies.  Differentiate:   Factor:   In , the root is .   "
+},
+{
+  "id": "prob-mvt-graphical",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#prob-mvt-graphical",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  A differentiable function satisfies and . Explain what the Mean Value Theorem guarantees about the value of for some .    The secant slope is . The Mean Value Theorem guarantees there exists such that .   "
+},
+{
+  "id": "prob-uniqueness-constant-diff",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#prob-uniqueness-constant-diff",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Suppose and are differentiable on and satisfy for all . If and , determine .    Since the derivatives are equal everywhere, the Uniqueness Theorem implies . Evaluate at : , so . Therefore for all in the interval.   "
 },
 {
   "id": "sec-derivApp-curve1",
@@ -4399,7 +4750,187 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.6",
   "title": "Curve Sketching Part 1",
-  "body": " Curve Sketching Part 1  Text of section.  "
+  "body": " Curve Sketching Part 1    Determine where a function is increasing or decreasing using the sign of .  Use the First Derivative Test to classify critical points as local maxima, local minima, or stationary points.  Determine concavity using the sign of and identify inflection points.  Use the Second Derivative Test to classify a critical point when applicable.  Combine derivative information with intercepts and asymptotes to sketch a reasonable graph.    Derivatives do more than provide slopes at individual points. They also reveal the overall shape of a graph. In this section, we build a toolkit for sketching the graph of by analyzing and . The goal is not a perfect drawing, but a reliable picture that captures the key features.   Increasing and Decreasing   Increasing and Decreasing   A function is increasing on an interval if whenever in . A function is decreasing on if whenever in .    The derivative provides an efficient test: the graph rises where slopes are positive and falls where slopes are negative.   Increasing\/Decreasing Test   Let be continuous on and differentiable on .    If for all , then is increasing on .    If for all , then is decreasing on .      Assume for all , and choose any in . By the Mean Value Theorem, there exists such that   Since and , we have , so . Therefore is increasing on . The decreasing case is similar.      Let . Determine where is increasing and decreasing, and use this information to identify local extrema.    Differentiate:   The critical points occur where , so . To determine the sign of on the intervals between critical points, we test one value in each interval.  Since , the sign of is controlled by except that contributes a zero but does not change sign.  A sign chart is summarized below.   The function changes from increasing to decreasing at , so there is a local maximum at . The function changes from decreasing to increasing at , so there is a local minimum at .  At , the derivative is zero but the function is decreasing on both sides, so is a stationary point rather than a local extremum.   Since contains only odd powers, it satisfies . This means the graph has 180-degree rotational symmetry about the origin.      First Derivative Test   Let be differentiable on an interval around and suppose .    If for and for , then is a local maximum.    If for and for , then is a local minimum.    If has the same sign on both sides of , then is a stationary point (not a local extremum).        Concavity and Inflection Points  Increasing and decreasing behavior describes whether the graph rises or falls. Concavity describes how the graph bends. A graph is concave up when it looks like a smile, and concave down when it looks like a frown. An inflection point is a point where the concavity changes.  A helpful way to connect this to derivatives is to think about slopes. When a function is concave up, its slopes tend to increase as increases. When a function is concave down, its slopes tend to decrease.   Concavity Test   Let be twice differentiable on an interval .    If for all , then is concave up on .    If for all , then is concave down on .    If and changes sign at , then is an inflection point.      Apply the Increasing\/Decreasing Test to . If , then is increasing. Since , the condition means is increasing, which corresponds to concave up behavior. The concave down case is similar, and the inflection point criterion follows from a sign change in .      Continue with . Find where the graph is concave up or concave down, and identify inflection points.    We already computed . Differentiate again:   Candidate inflection points occur where , so and , which gives .  A sign check for shows that concavity changes at each of these points, so they are inflection points. In particular, the graph is concave down for large negative , then concave up between and , then concave down between and , and concave up for large positive .     Second Derivative Test   Let be twice differentiable near , and suppose .    If , then is a local maximum.    If , then is a local minimum.    If , then this test is inconclusive.       The Second Derivative Test is convenient when it applies, but it does not replace the First Derivative Test. If , the point might still be a maximum, a minimum, or neither.     A Longer Example    Sketch the graph of . Identify intercepts, critical points, intervals of increase\/decrease, concavity, inflection points, and any vertical asymptotes.    The function is defined for all real except . Also note , so the graph passes through the origin.  Using derivative rules (and simplifying), we obtain:   Critical points occur where or where is undefined (while is defined). The equation is satisfied when , so . The derivative is undefined at and . Since is undefined, is a vertical asymptote of the function. Since is defined but the derivative is not, is a critical point.  A sign analysis for shows:   Therefore is a local maximum. At , the graph has a cusp: the function reaches a local minimum at the origin, but the tangent line is vertical rather than horizontal. At , there is a vertical asymptote, and the function grows without bound as .  Inflection points occur where and concavity changes. Solve :   These values (approximately and ) are candidates, and checking concavity confirms that the concavity changes at both, so they are inflection points.  Finally, as , the factors and are nearly the same, so we compare with   This shows as . Combining these features produces a reliable sketch.      A Method for Curve Sketching   Curve Sketching Checklist   Compute and .  Find critical points from and where is undefined.  Use the sign of to determine where the function increases or decreases and to classify critical points.  Find possible inflection points from and where is undefined.  Use the sign of to determine concavity and confirm inflection points.  Find intercepts and identify any vertical asymptotes from the domain.  Describe end behavior as (we will develop stronger tools for this soon).  Check for symmetry when it is helpful ( or ).  Combine these features into a clear sketch.     We will return to end behavior and asymptotic comparisons in more detail in the next part of curve sketching.     Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for Curve Sketching Part 1      Practice \/ Study Problems   Conceptual Questions    True or False: If , then must be a local maximum or minimum.     False. The point could be a stationary point where the function does not change direction.      True or False: If and , then is a local minimum.     True. This is the Second Derivative Test.      True or False: An inflection point must occur where .     False.  is a common candidate, but an inflection point can occur where is undefined as well.      Algebraic Practice    Let . Find the critical points, intervals of increase\/decrease, concavity, and inflection points. Then sketch a graph.      Let . Find where is increasing or decreasing and where it is concave up or concave down. Then sketch a graph.      Graphical and Interpretation Problems    A differentiable function has critical points at and . The sign of is positive on , negative on , and positive on . Describe the behavior of the graph and classify the critical points.      The second derivative satisfies for and for . What does this say about concavity and inflection points?      "
+},
+{
+  "id": "sec-derivApp-curve1-2",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#sec-derivApp-curve1-2",
+  "type": "Objectives",
+  "number": "3.6",
+  "title": "",
+  "body": "  Determine where a function is increasing or decreasing using the sign of .  Use the First Derivative Test to classify critical points as local maxima, local minima, or stationary points.  Determine concavity using the sign of and identify inflection points.  Use the Second Derivative Test to classify a critical point when applicable.  Combine derivative information with intercepts and asymptotes to sketch a reasonable graph.   "
+},
+{
+  "id": "def-increasing-decreasing",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#def-increasing-decreasing",
+  "type": "Definition",
+  "number": "3.6.1",
+  "title": "Increasing and Decreasing.",
+  "body": " Increasing and Decreasing   A function is increasing on an interval if whenever in . A function is decreasing on if whenever in .   "
+},
+{
+  "id": "thm-inc-dec",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#thm-inc-dec",
+  "type": "Theorem",
+  "number": "3.6.2",
+  "title": "Increasing\/Decreasing Test.",
+  "body": " Increasing\/Decreasing Test   Let be continuous on and differentiable on .    If for all , then is increasing on .    If for all , then is decreasing on .      Assume for all , and choose any in . By the Mean Value Theorem, there exists such that   Since and , we have , so . Therefore is increasing on . The decreasing case is similar.   "
+},
+{
+  "id": "ex-inc-dec-poly",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#ex-inc-dec-poly",
+  "type": "Example",
+  "number": "3.6.3",
+  "title": "",
+  "body": "  Let . Determine where is increasing and decreasing, and use this information to identify local extrema.    Differentiate:   The critical points occur where , so . To determine the sign of on the intervals between critical points, we test one value in each interval.  Since , the sign of is controlled by except that contributes a zero but does not change sign.  A sign chart is summarized below.   The function changes from increasing to decreasing at , so there is a local maximum at . The function changes from decreasing to increasing at , so there is a local minimum at .  At , the derivative is zero but the function is decreasing on both sides, so is a stationary point rather than a local extremum.   Since contains only odd powers, it satisfies . This means the graph has 180-degree rotational symmetry about the origin.    "
+},
+{
+  "id": "thm-first-derivative-test",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#thm-first-derivative-test",
+  "type": "Theorem",
+  "number": "3.6.5",
+  "title": "First Derivative Test.",
+  "body": " First Derivative Test   Let be differentiable on an interval around and suppose .    If for and for , then is a local maximum.    If for and for , then is a local minimum.    If has the same sign on both sides of , then is a stationary point (not a local extremum).     "
+},
+{
+  "id": "ssec-concavity-2",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#ssec-concavity-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "concave up concave down inflection point "
+},
+{
+  "id": "thm-concavity-test",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#thm-concavity-test",
+  "type": "Theorem",
+  "number": "3.6.6",
+  "title": "Concavity Test.",
+  "body": " Concavity Test   Let be twice differentiable on an interval .    If for all , then is concave up on .    If for all , then is concave down on .    If and changes sign at , then is an inflection point.      Apply the Increasing\/Decreasing Test to . If , then is increasing. Since , the condition means is increasing, which corresponds to concave up behavior. The concave down case is similar, and the inflection point criterion follows from a sign change in .   "
+},
+{
+  "id": "ex-concavity-poly",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#ex-concavity-poly",
+  "type": "Example",
+  "number": "3.6.7",
+  "title": "",
+  "body": "  Continue with . Find where the graph is concave up or concave down, and identify inflection points.    We already computed . Differentiate again:   Candidate inflection points occur where , so and , which gives .  A sign check for shows that concavity changes at each of these points, so they are inflection points. In particular, the graph is concave down for large negative , then concave up between and , then concave down between and , and concave up for large positive .   "
+},
+{
+  "id": "thm-second-derivative-test",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#thm-second-derivative-test",
+  "type": "Theorem",
+  "number": "3.6.8",
+  "title": "Second Derivative Test.",
+  "body": " Second Derivative Test   Let be twice differentiable near , and suppose .    If , then is a local maximum.    If , then is a local minimum.    If , then this test is inconclusive.     "
+},
+{
+  "id": "rem-second-derivative-test",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#rem-second-derivative-test",
+  "type": "Remark",
+  "number": "3.6.9",
+  "title": "",
+  "body": " The Second Derivative Test is convenient when it applies, but it does not replace the First Derivative Test. If , the point might still be a maximum, a minimum, or neither.  "
+},
+{
+  "id": "ex-curvesketch-rational",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#ex-curvesketch-rational",
+  "type": "Example",
+  "number": "3.6.10",
+  "title": "",
+  "body": "  Sketch the graph of . Identify intercepts, critical points, intervals of increase\/decrease, concavity, inflection points, and any vertical asymptotes.    The function is defined for all real except . Also note , so the graph passes through the origin.  Using derivative rules (and simplifying), we obtain:   Critical points occur where or where is undefined (while is defined). The equation is satisfied when , so . The derivative is undefined at and . Since is undefined, is a vertical asymptote of the function. Since is defined but the derivative is not, is a critical point.  A sign analysis for shows:   Therefore is a local maximum. At , the graph has a cusp: the function reaches a local minimum at the origin, but the tangent line is vertical rather than horizontal. At , there is a vertical asymptote, and the function grows without bound as .  Inflection points occur where and concavity changes. Solve :   These values (approximately and ) are candidates, and checking concavity confirms that the concavity changes at both, so they are inflection points.  Finally, as , the factors and are nearly the same, so we compare with   This shows as . Combining these features produces a reliable sketch.   "
+},
+{
+  "id": "strat-curve-sketching",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#strat-curve-sketching",
+  "type": "Strategy",
+  "number": "3.6.11",
+  "title": "Curve Sketching Checklist.",
+  "body": " Curve Sketching Checklist   Compute and .  Find critical points from and where is undefined.  Use the sign of to determine where the function increases or decreases and to classify critical points.  Find possible inflection points from and where is undefined.  Use the sign of to determine concavity and confirm inflection points.  Find intercepts and identify any vertical asymptotes from the domain.  Describe end behavior as (we will develop stronger tools for this soon).  Check for symmetry when it is helpful ( or ).  Combine these features into a clear sketch.   "
+},
+{
+  "id": "rem-end-behavior-future",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#rem-end-behavior-future",
+  "type": "Remark",
+  "number": "3.6.12",
+  "title": "",
+  "body": " We will return to end behavior and asymptotic comparisons in more detail in the next part of curve sketching.  "
+},
+{
+  "id": "tf-cs1-01",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#tf-cs1-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  True or False: If , then must be a local maximum or minimum.     False. The point could be a stationary point where the function does not change direction.   "
+},
+{
+  "id": "tf-cs1-02",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#tf-cs1-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  True or False: If and , then is a local minimum.     True. This is the Second Derivative Test.   "
+},
+{
+  "id": "tf-cs1-03",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#tf-cs1-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  True or False: An inflection point must occur where .     False.  is a common candidate, but an inflection point can occur where is undefined as well.   "
+},
+{
+  "id": "prob-cs1-poly",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#prob-cs1-poly",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let . Find the critical points, intervals of increase\/decrease, concavity, and inflection points. Then sketch a graph.   "
+},
+{
+  "id": "prob-cs1-rational",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#prob-cs1-rational",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Let . Find where is increasing or decreasing and where it is concave up or concave down. Then sketch a graph.   "
+},
+{
+  "id": "prob-cs1-sign-chart",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#prob-cs1-sign-chart",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  A differentiable function has critical points at and . The sign of is positive on , negative on , and positive on . Describe the behavior of the graph and classify the critical points.   "
+},
+{
+  "id": "prob-cs1-concavity-chart",
+  "level": "2",
+  "url": "sec-derivApp-curve1.html#prob-cs1-concavity-chart",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  The second derivative satisfies for and for . What does this say about concavity and inflection points?   "
 },
 {
   "id": "sec-derivApp-curve2",
@@ -4408,7 +4939,106 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.7",
   "title": "Curve Sketching Part 2",
-  "body": " Curve Sketching Part 2  Text of section.  "
+  "body": " Curve Sketching Part 2    Explain why qualitative graphing is useful even when graphing technology is available.  Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large .  Use derivative sign charts to classify behavior near critical points and vertical asymptotes.  Recognize and use symmetry (even, odd, periodic, and other transformations) to streamline a sketch.    Computers can produce a graph instantly by plotting many points, so why learn to sketch by hand? One reason is that calculus helps us focus on the important parts of the graph: critical points, asymptotes, and regions where behavior changes. Another reason is error checking. A quick sketch, combined with a few well-chosen test values, can reveal when a result is unreasonable long before a mistake spreads into a larger calculation.   A Rational Function Example    Use the curve sketching method to analyze . Identify the domain, intercepts, critical points, vertical asymptotes, an inflection point, and end behavior.    First factor the function:   The domain excludes values that make the denominator zero, so and . These produce vertical asymptotes at and .  Intercepts come from , which occurs at zeros of the numerator that are in the domain: . There is no -intercept because is not in the domain.  The derivatives (after simplification) are:   Solving requires locating roots of the numerator. A numerical approach (graphing or a root finder) gives approximate solutions:   Along with the vertical asymptotes at and , these break the real line into intervals where the sign of is constant. A sign chart then determines where the function increases or decreases, which in turn classifies the critical points as local maxima or minima.  For concavity, solve by setting the numerator to zero:   Factoring shows , and the quadratic has no real roots. Thus is the only inflection point in the domain.  Finally, to understand end behavior, compare leading terms:   This tells us that the graph grows roughly like a line with slope as becomes large. In practice, this is enough to guide a reasonable sketch when combined with critical points and asymptotes.      A Trigonometric Example    Apply the curve sketching method to . Identify critical points, concavity, intercepts, and symmetry.    The derivatives are and . The domain is all real numbers.  Critical points occur where , so . This happens at and , repeating every :   Inflection points occur where , so , which gives for any integer .  The point is both an - and -intercept.  This function is odd: . Therefore its graph has 180-degree rotational symmetry about the origin.   Since behaves like for large , a reasonable long-range guide is the line . However, the term keeps oscillating, so the graph continues to wiggle above and below this line.       Curve Sketching Checklist   Method for Graphing (Detailed)    Compute and . Determine the domain of .    Find critical points by solving and locating where is undefined.    Make a sign table for to determine intervals of increase and decrease and to classify each critical point. Critical points can correspond to local maxima, local minima, stationary points, cusps, corners, or vertical asymptotes.    Find possible inflection points by solving and locating where is undefined. Confirm an inflection point by a sign change in (and typically requiring to exist at the point).    Find intercepts: solve for -intercepts and compute if is in the domain.    Describe end behavior as . When possible, use limit language. For polynomials and many rational functions, comparing leading terms gives a useful approximation of the long-range trend.    Check symmetry when it helps: even symmetry if , odd symmetry if , and periodicity if for some constant .    Combine the information into a clear sketch. Mark intercepts, extrema, inflection points, and asymptotes.       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for Curve Sketching Part 2      Practice \/ Study Problems   Conceptual Questions    True or False: A calculator graph can hide important features if the viewing window is not chosen carefully.     True. A window can miss a vertical asymptote, a local extremum, or a change in concavity.      True or False: If for large , then this approximation can help predict the end behavior of the graph.     True. The dominant term controls the long-range trend.      True or False: If is odd, then its graph has 180-degree rotational symmetry about the origin.     True. This follows from .      Algebraic Practice    Analyze . Identify the domain, intercepts, vertical asymptotes, end behavior, and intervals of increase\/decrease. Then sketch a graph.      Use leading-term comparisons to describe the end behavior of:          Trigonometric and Interpretation Problems    Let . Find and , describe where the graph is concave up or concave down, and determine whether the function is even, odd, or neither.      Give an example of a function whose graph has a vertical asymptote at . Explain how a poorly chosen viewing window could make it look like the function is continuous.      "
+},
+{
+  "id": "sec-derivApp-curve2-2",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#sec-derivApp-curve2-2",
+  "type": "Objectives",
+  "number": "3.7",
+  "title": "",
+  "body": "  Explain why qualitative graphing is useful even when graphing technology is available.  Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large .  Use derivative sign charts to classify behavior near critical points and vertical asymptotes.  Recognize and use symmetry (even, odd, periodic, and other transformations) to streamline a sketch.   "
+},
+{
+  "id": "ex-curve-rational",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#ex-curve-rational",
+  "type": "Example",
+  "number": "3.7.1",
+  "title": "",
+  "body": "  Use the curve sketching method to analyze . Identify the domain, intercepts, critical points, vertical asymptotes, an inflection point, and end behavior.    First factor the function:   The domain excludes values that make the denominator zero, so and . These produce vertical asymptotes at and .  Intercepts come from , which occurs at zeros of the numerator that are in the domain: . There is no -intercept because is not in the domain.  The derivatives (after simplification) are:   Solving requires locating roots of the numerator. A numerical approach (graphing or a root finder) gives approximate solutions:   Along with the vertical asymptotes at and , these break the real line into intervals where the sign of is constant. A sign chart then determines where the function increases or decreases, which in turn classifies the critical points as local maxima or minima.  For concavity, solve by setting the numerator to zero:   Factoring shows , and the quadratic has no real roots. Thus is the only inflection point in the domain.  Finally, to understand end behavior, compare leading terms:   This tells us that the graph grows roughly like a line with slope as becomes large. In practice, this is enough to guide a reasonable sketch when combined with critical points and asymptotes.   "
+},
+{
+  "id": "ex-curve-trig",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#ex-curve-trig",
+  "type": "Example",
+  "number": "3.7.2",
+  "title": "",
+  "body": "  Apply the curve sketching method to . Identify critical points, concavity, intercepts, and symmetry.    The derivatives are and . The domain is all real numbers.  Critical points occur where , so . This happens at and , repeating every :   Inflection points occur where , so , which gives for any integer .  The point is both an - and -intercept.  This function is odd: . Therefore its graph has 180-degree rotational symmetry about the origin.   Since behaves like for large , a reasonable long-range guide is the line . However, the term keeps oscillating, so the graph continues to wiggle above and below this line.    "
+},
+{
+  "id": "strat-curve-sketching-detailed",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#strat-curve-sketching-detailed",
+  "type": "Strategy",
+  "number": "3.7.4",
+  "title": "Method for Graphing (Detailed).",
+  "body": " Method for Graphing (Detailed)    Compute and . Determine the domain of .    Find critical points by solving and locating where is undefined.    Make a sign table for to determine intervals of increase and decrease and to classify each critical point. Critical points can correspond to local maxima, local minima, stationary points, cusps, corners, or vertical asymptotes.    Find possible inflection points by solving and locating where is undefined. Confirm an inflection point by a sign change in (and typically requiring to exist at the point).    Find intercepts: solve for -intercepts and compute if is in the domain.    Describe end behavior as . When possible, use limit language. For polynomials and many rational functions, comparing leading terms gives a useful approximation of the long-range trend.    Check symmetry when it helps: even symmetry if , odd symmetry if , and periodicity if for some constant .    Combine the information into a clear sketch. Mark intercepts, extrema, inflection points, and asymptotes.    "
+},
+{
+  "id": "tf-cs2-01",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#tf-cs2-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  True or False: A calculator graph can hide important features if the viewing window is not chosen carefully.     True. A window can miss a vertical asymptote, a local extremum, or a change in concavity.   "
+},
+{
+  "id": "tf-cs2-02",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#tf-cs2-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  True or False: If for large , then this approximation can help predict the end behavior of the graph.     True. The dominant term controls the long-range trend.   "
+},
+{
+  "id": "tf-cs2-03",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#tf-cs2-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  True or False: If is odd, then its graph has 180-degree rotational symmetry about the origin.     True. This follows from .   "
+},
+{
+  "id": "prob-cs2-rational-sketch",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#prob-cs2-rational-sketch",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Analyze . Identify the domain, intercepts, vertical asymptotes, end behavior, and intervals of increase\/decrease. Then sketch a graph.   "
+},
+{
+  "id": "prob-cs2-leading-terms",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#prob-cs2-leading-terms",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Use leading-term comparisons to describe the end behavior of:       "
+},
+{
+  "id": "prob-cs2-trig",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#prob-cs2-trig",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Let . Find and , describe where the graph is concave up or concave down, and determine whether the function is even, odd, or neither.   "
+},
+{
+  "id": "prob-cs2-window",
+  "level": "2",
+  "url": "sec-derivApp-curve2.html#prob-cs2-window",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Give an example of a function whose graph has a vertical asymptote at . Explain how a poorly chosen viewing window could make it look like the function is continuous.   "
 },
 {
   "id": "sec-derivApp-opt",
@@ -4417,7 +5047,133 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.8",
   "title": "Optimization Problems",
-  "body": " Optimization Problems  Text of section.  "
+  "body": " Optimization Problems    Translate a word problem into a function to be maximized or minimized.  Identify controlling variables, constraints, and the target quantity in an optimization setting.  Determine a relevant domain based on physical or geometric restrictions.  Find absolute maxima and minima using critical points and endpoint checks.  Interpret an optimal solution in context and check that it is physically reasonable.    In many applications, we are not just interested in computing derivatives. Instead, we use derivatives as a tool to make the best possible choice: the largest area, the smallest cost, the least time, or the greatest profit. Problems of this type are called optimization problems .   Maximizing Area with a Fixed Perimeter  Suppose we have 40 meters of fencing to build a rectangular corral. What dimensions produce the largest possible enclosed area?    A rectangle has perimeter meters. Find the length and width that maximize its area.    The constraint comes from the perimeter:   Solve for one variable in terms of the other. For example,   The area is the target quantity:   The physical domain requires and , so . Now we find the absolute maximum of on .   The critical point satisfies , so . Evaluate the candidates:   The largest value occurs at . Therefore . The rectangle of greatest area is a square.      A Reusable Method for Optimization   Technique for Optimization  Most optimization problems follow the same workflow:   Draw a labeled picture (if appropriate). Identify the controlling variable(s), the constraint(s), and the target quantity you want to maximize or minimize.  Write equations that relate the variables using geometry, formulas, or context.  Choose one controlling variable as the independent variable and rewrite the target quantity as a single-variable function . Determine the domain of .  Find absolute extrema of on its domain by checking critical points and endpoints (or by using limits when the domain is open or unbounded).  Interpret your answer in context and check that it makes sense.      Minimizing Material for a Cylindrical Bucket    A 10-quart bucket has cylindrical sides and a circular bottom (no top). What radius and height minimize the surface area of the sides and bottom?    The target quantity is the surface area   The constraint is the volume. Converting 10 quarts to cubic inches gives in 3 , so   Use the constraint to write in terms of :   Substitute into to obtain a single-variable function:   The domain is . Differentiate:   Set :   This is the only critical point. To confirm it is an absolute minimum, note that   Since the surface area grows without bound at both ends, the single critical point must give the absolute minimum.  Now compute the corresponding height:   In fact, simplifying shows , so the optimal bucket is as tall as its radius. This yields a bucket that is twice as wide as it is tall.   Real buckets are often designed with other priorities besides minimizing material, such as stability, ease of carrying, stackability, and manufacturing constraints. Optimization models are most useful when we clearly state what is being optimized and what is being ignored.       Choosing a Path to Minimize Time    A line of ants travels from the lower-left corner to the upper-right corner of a cm by cm square of carpet. They may travel along the left or bottom edge at speed cm\/sec, and then cut across the carpet at speed cm\/sec.  Let be the distance traveled along an edge before entering the carpet. Find the value of that minimizes: (a) the total distance traveled, and (b) the total travel time.    The diagonal segment across the carpet has length . From the right triangle,   Therefore   The domain is . The total distance is   The total time is distance divided by speed. Along the edge the speed is , so time is . Across the carpet the speed is , so time is . Thus    (a) Minimize distance. Differentiate:   Solving would require . Squaring both sides gives , which reduces to , an impossibility. Therefore there are no critical points in , so the minimum occurs at an endpoint.   Since , the minimum distance occurs at . In other words, the straight diagonal is the shortest path.   (b) Minimize time. Differentiate:   Set :   Square both sides and simplify:   Apply the quadratic formula:   Only lies in , so it is our only critical point. Compare to the endpoints:   Since is the smallest of these values, the minimum time occurs at .   Minimizing distance and minimizing time are different problems because the speed changes. The ants save time by traveling partway along the faster edge and then cutting across the slower carpet.       Maximizing Profit    A company produces a product for per item and sells it for dollars per item. Market demand is modeled by , meaning that when the price is , the number of items sold is .  What price maximizes total profit?    The profit per item is , and the number sold is . Therefore total profit is   The relevant domain is , since selling below cost is not sensible here, and demand reaches zero at .  Differentiate:   The critical point satisfies , so . Check the endpoints:   The maximum profit occurs at . The most profitable selling price is per item.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for Optimization Problems      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.     If , then must give an absolute maximum or minimum of .     False. A critical point is only a candidate. The absolute extremum could occur at an endpoint, and some critical points are neither maxima nor minima.      In an optimization problem on a closed interval, it is always necessary to check endpoints.     True. Absolute maxima and minima can occur at endpoints, so they must be included as candidates.      If the domain is , then an absolute minimum cannot exist.     False. An absolute minimum may exist on an open or unbounded domain, but we must justify it by analyzing critical points and limits at the boundaries.      Algebraic and Applied Problems    You have 48 meters of fencing to enclose a rectangle. What dimensions maximize area, and what is the maximum area?      An open-top box is made by cutting equal squares of side length from the corners of a by rectangle and folding up the sides. Write the volume as a function of and determine the value of that maximizes the volume.      A company has cost per item and demand . Write a profit function and determine the price that maximizes profit.      A person walks along a sidewalk at m\/s and then crosses a field at m\/s. Sketch a diagram and set up a time function similar to the ants problem. Explain what your independent variable is and what domain it must satisfy.      "
+},
+{
+  "id": "sec-derivApp-opt-2",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#sec-derivApp-opt-2",
+  "type": "Objectives",
+  "number": "3.8",
+  "title": "",
+  "body": "  Translate a word problem into a function to be maximized or minimized.  Identify controlling variables, constraints, and the target quantity in an optimization setting.  Determine a relevant domain based on physical or geometric restrictions.  Find absolute maxima and minima using critical points and endpoint checks.  Interpret an optimal solution in context and check that it is physically reasonable.   "
+},
+{
+  "id": "sec-derivApp-opt-3",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#sec-derivApp-opt-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "optimization problems "
+},
+{
+  "id": "ex-opt-rectangle",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#ex-opt-rectangle",
+  "type": "Example",
+  "number": "3.8.1",
+  "title": "",
+  "body": "  A rectangle has perimeter meters. Find the length and width that maximize its area.    The constraint comes from the perimeter:   Solve for one variable in terms of the other. For example,   The area is the target quantity:   The physical domain requires and , so . Now we find the absolute maximum of on .   The critical point satisfies , so . Evaluate the candidates:   The largest value occurs at . Therefore . The rectangle of greatest area is a square.   "
+},
+{
+  "id": "strat-optimization-method",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#strat-optimization-method",
+  "type": "Strategy",
+  "number": "3.8.2",
+  "title": "Technique for Optimization.",
+  "body": " Technique for Optimization  Most optimization problems follow the same workflow:   Draw a labeled picture (if appropriate). Identify the controlling variable(s), the constraint(s), and the target quantity you want to maximize or minimize.  Write equations that relate the variables using geometry, formulas, or context.  Choose one controlling variable as the independent variable and rewrite the target quantity as a single-variable function . Determine the domain of .  Find absolute extrema of on its domain by checking critical points and endpoints (or by using limits when the domain is open or unbounded).  Interpret your answer in context and check that it makes sense.   "
+},
+{
+  "id": "ex-opt-bucket",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#ex-opt-bucket",
+  "type": "Example",
+  "number": "3.8.3",
+  "title": "",
+  "body": "  A 10-quart bucket has cylindrical sides and a circular bottom (no top). What radius and height minimize the surface area of the sides and bottom?    The target quantity is the surface area   The constraint is the volume. Converting 10 quarts to cubic inches gives in 3 , so   Use the constraint to write in terms of :   Substitute into to obtain a single-variable function:   The domain is . Differentiate:   Set :   This is the only critical point. To confirm it is an absolute minimum, note that   Since the surface area grows without bound at both ends, the single critical point must give the absolute minimum.  Now compute the corresponding height:   In fact, simplifying shows , so the optimal bucket is as tall as its radius. This yields a bucket that is twice as wide as it is tall.   Real buckets are often designed with other priorities besides minimizing material, such as stability, ease of carrying, stackability, and manufacturing constraints. Optimization models are most useful when we clearly state what is being optimized and what is being ignored.    "
+},
+{
+  "id": "ex-opt-ants",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#ex-opt-ants",
+  "type": "Example",
+  "number": "3.8.5",
+  "title": "",
+  "body": "  A line of ants travels from the lower-left corner to the upper-right corner of a cm by cm square of carpet. They may travel along the left or bottom edge at speed cm\/sec, and then cut across the carpet at speed cm\/sec.  Let be the distance traveled along an edge before entering the carpet. Find the value of that minimizes: (a) the total distance traveled, and (b) the total travel time.    The diagonal segment across the carpet has length . From the right triangle,   Therefore   The domain is . The total distance is   The total time is distance divided by speed. Along the edge the speed is , so time is . Across the carpet the speed is , so time is . Thus    (a) Minimize distance. Differentiate:   Solving would require . Squaring both sides gives , which reduces to , an impossibility. Therefore there are no critical points in , so the minimum occurs at an endpoint.   Since , the minimum distance occurs at . In other words, the straight diagonal is the shortest path.   (b) Minimize time. Differentiate:   Set :   Square both sides and simplify:   Apply the quadratic formula:   Only lies in , so it is our only critical point. Compare to the endpoints:   Since is the smallest of these values, the minimum time occurs at .   Minimizing distance and minimizing time are different problems because the speed changes. The ants save time by traveling partway along the faster edge and then cutting across the slower carpet.    "
+},
+{
+  "id": "ex-opt-profit",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#ex-opt-profit",
+  "type": "Example",
+  "number": "3.8.7",
+  "title": "",
+  "body": "  A company produces a product for per item and sells it for dollars per item. Market demand is modeled by , meaning that when the price is , the number of items sold is .  What price maximizes total profit?    The profit per item is , and the number sold is . Therefore total profit is   The relevant domain is , since selling below cost is not sensible here, and demand reaches zero at .  Differentiate:   The critical point satisfies , so . Check the endpoints:   The maximum profit occurs at . The most profitable selling price is per item.   "
+},
+{
+  "id": "tf-opt-01",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#tf-opt-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  If , then must give an absolute maximum or minimum of .     False. A critical point is only a candidate. The absolute extremum could occur at an endpoint, and some critical points are neither maxima nor minima.   "
+},
+{
+  "id": "tf-opt-02",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#tf-opt-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  In an optimization problem on a closed interval, it is always necessary to check endpoints.     True. Absolute maxima and minima can occur at endpoints, so they must be included as candidates.   "
+},
+{
+  "id": "tf-opt-03",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#tf-opt-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If the domain is , then an absolute minimum cannot exist.     False. An absolute minimum may exist on an open or unbounded domain, but we must justify it by analyzing critical points and limits at the boundaries.   "
+},
+{
+  "id": "prob-opt-rect-48",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#prob-opt-rect-48",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  You have 48 meters of fencing to enclose a rectangle. What dimensions maximize area, and what is the maximum area?   "
+},
+{
+  "id": "prob-opt-open-top-box",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#prob-opt-open-top-box",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  An open-top box is made by cutting equal squares of side length from the corners of a by rectangle and folding up the sides. Write the volume as a function of and determine the value of that maximizes the volume.   "
+},
+{
+  "id": "prob-opt-profit-new",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#prob-opt-profit-new",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  A company has cost per item and demand . Write a profit function and determine the price that maximizes profit.   "
+},
+{
+  "id": "prob-opt-time-speed-change",
+  "level": "2",
+  "url": "sec-derivApp-opt.html#prob-opt-time-speed-change",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  A person walks along a sidewalk at m\/s and then crosses a field at m\/s. Sketch a diagram and set up a time function similar to the ants problem. Explain what your independent variable is and what domain it must satisfy.   "
 },
 {
   "id": "sec-derivApp-ww",
@@ -4426,7 +5182,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.9",
   "title": "Additional Worked-Out Problems",
-  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Derivative Applications chapter.   Placeholder Section   "
+  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Derivative Applications chapter.   Motion in Physics  test    Related Rates  test    Linear Approximation and L'Hopital's Rule  test    Extrema  test    Mean Value Theorem  test    Curve Sketching Part 1  test    Curve Sketching Part 2  test    Optimization Problems  test   "
 },
 {
   "id": "sec-integral-antiderivatives",
@@ -4481,6 +5237,15 @@ var ptx_lunr_docs = [
   "number": "4.6",
   "title": "Substitution Rule for Integration",
   "body": " Substitution Rule for Integration  Text of section.  "
+},
+{
+  "id": "sec-integral-ww",
+  "level": "1",
+  "url": "sec-integral-ww.html",
+  "type": "Section",
+  "number": "4.7",
+  "title": "Additional Worked-Out Problems",
+  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Integral chapter.   Placeholder  test   "
 },
 {
   "id": "formula-sheet",
