@@ -4,10 +4,63 @@
   <title>Additional Worked-Out Problems</title>
     <p> Placeholder for additional worked-out problems for the Derivative Applications chapter. </p>
 
-    <subsection xml:id="subsec-derivApp-placeholder">
-        <title>Placeholder Section</title>
-        
+
+
+   <subsection xml:id="subsec-derivApp-motion">
+      <title><xref ref="sec-derivApp-motion"/> Motion in Physics</title>
+      <p> test
+      </p>
     </subsection>
+
+   <subsection xml:id="subsec-derivApp-relatedRates">
+      <title><xref ref="sec-derivApp-related"/> Related Rates</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+   <subsection xml:id="subsec-derivApp-linear">
+      <title><xref ref="sec-derivApp-linear"/> Linear Approximation and L'Hopital's Rule</title>
+      <p> test
+      </p>
+    </subsection> 
+   
+
+       <subsection xml:id="subsec-derivApp-extrema">
+      <title><xref ref="sec-derivApp-extrema"/> Extrema</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+       <subsection xml:id="subsec-derivApp-mvt">
+      <title><xref ref="sec-derivApp-mvt"/> Mean Value Theorem</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+       <subsection xml:id="subsec-derivApp-curve1">
+      <title><xref ref="sec-derivApp-curve1"/> Curve Sketching Part 1</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+       <subsection xml:id="subsec-derivApp-curve2">
+      <title><xref ref="sec-derivApp-curve2"/> Curve Sketching Part 2</title>
+      <p> test
+      </p>
+    </subsection>
+
+
+       <subsection xml:id="subsec-derivApp-opt">
+      <title><xref ref="sec-derivApp-opt"/> Optimization Problems</title>
+      <p> test
+      </p>
+    </subsection>
+
+
 
   </section>
   

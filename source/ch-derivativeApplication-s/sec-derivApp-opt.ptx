@@ -3,6 +3,541 @@
 <section xml:id="sec-derivApp-opt" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Optimization Problems</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Translate a word problem into a function to be maximized or minimized.</li>
+      <li>Identify controlling variables, constraints, and the target quantity in an optimization setting.</li>
+      <li>Determine a relevant domain based on physical or geometric restrictions.</li>
+      <li>Find absolute maxima and minima using critical points and endpoint checks.</li>
+      <li>Interpret an optimal solution in context and check that it is physically reasonable.</li>
+    </ul>
+  </objectives>
+
+  <p>
+    In many applications, we are not just interested in computing derivatives.
+    Instead, we use derivatives as a tool to make the best possible choice:
+    the largest area, the smallest cost, the least time, or the greatest profit.
+    Problems of this type are called <term>optimization problems</term>.
+  </p>
+
+  <subsection xml:id="ssec-opt-rectangle">
+    <title>Maximizing Area with a Fixed Perimeter</title>
+
+    <p>
+      Suppose we have 40 meters of fencing to build a rectangular corral.
+      What dimensions produce the largest possible enclosed area?
+    </p>
+
+    <example xml:id="ex-opt-rectangle">
+      <statement>
+        <p>
+          A rectangle has perimeter <m>40</m> meters.
+          Find the length <m>\ell</m> and width <m>w</m> that maximize its area.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The constraint comes from the perimeter:
+        </p>
+        <me>
+          2\ell+2w=40.
+        </me>
+
+        <p>
+          Solve for one variable in terms of the other. For example,
+        </p>
+        <me>
+          w=20-\ell.
+        </me>
+
+        <p>
+          The area is the target quantity:
+        </p>
+        <me>
+          A=\ell w=\ell(20-\ell)=20\ell-\ell^2.
+        </me>
+
+        <p>
+          The physical domain requires <m>\ell\ge 0</m> and <m>w\ge 0</m>, so
+          <m>\ell\in[0,20]</m>.
+          Now we find the absolute maximum of <m>A(\ell)</m> on <m>[0,20]</m>.
+        </p>
+
+        <me>
+          A'(\ell)=20-2\ell.
+        </me>
+
+        <p>
+          The critical point satisfies <m>A'(\ell)=0</m>, so <m>\ell=10</m>.
+          Evaluate the candidates:
+        </p>
+
+        <me>
+          A(0)=0,\qquad A(10)=100,\qquad A(20)=0.
+        </me>
+
+        <p>
+          The largest value occurs at <m>\ell=10</m>.
+          Therefore <m>w=20-\ell=10</m>.
+          The rectangle of greatest area is a square.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-opt-method">
+    <title>A Reusable Method for Optimization</title>
+
+    <algorithm xml:id="strat-optimization-method">
+      <title>Technique for Optimization</title>
+      <p>
+        Most optimization problems follow the same workflow:
+      </p>
+
+      <ol>
+        <li>
+          Draw a labeled picture (if appropriate). Identify the controlling variable(s),
+          the constraint(s), and the target quantity you want to maximize or minimize.
+        </li>
+        <li>
+          Write equations that relate the variables using geometry, formulas, or context.
+        </li>
+        <li>
+          Choose one controlling variable as the independent variable and rewrite the target quantity
+          as a single-variable function <m>T(x)</m>. Determine the domain of <m>x</m>.
+        </li>
+        <li>
+          Find absolute extrema of <m>T(x)</m> on its domain by checking critical points and endpoints
+          (or by using limits when the domain is open or unbounded).
+        </li>
+        <li>
+          Interpret your answer in context and check that it makes sense.
+        </li>
+      </ol>
+    </algorithm>
+  </subsection>
+
+  <subsection xml:id="ssec-opt-cylinder">
+    <title>Minimizing Material for a Cylindrical Bucket</title>
+
+    <example xml:id="ex-opt-bucket">
+      <statement>
+        <p>
+          A 10-quart bucket has cylindrical sides and a circular bottom (no top).
+          What radius <m>r</m> and height <m>h</m> minimize the surface area of the sides and bottom?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The target quantity is the surface area
+        </p>
+
+        <me>
+          S=\pi r^2+2\pi rh.
+        </me>
+
+        <p>
+          The constraint is the volume. Converting 10 quarts to cubic inches gives
+          <m>V=577.5</m> in<superscript>3</superscript>, so
+        </p>
+
+        <me>
+          V=\pi r^2h=577.5.
+        </me>
+
+        <p>
+          Use the constraint to write <m>h</m> in terms of <m>r</m>:
+        </p>
+
+        <me>
+          h=\frac{577.5}{\pi r^2}.
+        </me>
+
+        <p>
+          Substitute into <m>S</m> to obtain a single-variable function:
+        </p>
+
+        <me>
+          S(r)=\pi r^2+2\pi r\left(\frac{577.5}{\pi r^2}\right)
+          =\pi r^2+\frac{1155}{r}.
+        </me>
+
+        <p>
+          The domain is <m>r&gt;0</m>. Differentiate:
+        </p>
+
+        <me>
+          S'(r)=2\pi r-\frac{1155}{r^2}.
+        </me>
+
+        <p>
+          Set <m>S'(r)=0</m>:
+        </p>
+
+        <me>
+          2\pi r=\frac{1155}{r^2}
+          \quad\Longrightarrow\quad
+          r^3=\frac{1155}{2\pi}
+          \quad\Longrightarrow\quad
+          r=\sqrt[3]{\frac{1155}{2\pi}}.
+        </me>
+
+        <p>
+          This is the only critical point. To confirm it is an absolute minimum,
+          note that
+        </p>
+
+        <me>
+          \displaystyle\lim_{r\to 0^+} S(r)=\infty,
+          \qquad
+          \displaystyle\lim_{r\to\infty} S(r)=\infty.
+        </me>
+
+        <p>
+          Since the surface area grows without bound at both ends, the single critical point must give
+          the absolute minimum.
+        </p>
+
+        <p>
+          Now compute the corresponding height:
+        </p>
+
+        <me>
+          h=\frac{577.5}{\pi r^2}
+          =\frac{577.5}{\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2}.
+        </me>
+
+        <p>
+          In fact, simplifying shows <m>h=r</m>, so the optimal bucket is as tall as its radius.
+          This yields a bucket that is twice as wide as it is tall.
+        </p>
+
+        <remark>
+          <p>
+            Real buckets are often designed with other priorities besides minimizing material,
+            such as stability, ease of carrying, stackability, and manufacturing constraints.
+            Optimization models are most useful when we clearly state what is being optimized
+            and what is being ignored.
+          </p>
+        </remark>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-opt-ants">
+    <title>Choosing a Path to Minimize Time</title>
+
+    <example xml:id="ex-opt-ants">
+      <statement>
+        <p>
+          A line of ants travels from the lower-left corner to the upper-right corner
+          of a <m>10</m> cm by <m>10</m> cm square of carpet.
+          They may travel along the left or bottom edge at speed <m>1</m> cm/sec,
+          and then cut across the carpet at speed <m>\tfrac12</m> cm/sec.
+        </p>
+
+        <p>
+          Let <m>e</m> be the distance traveled along an edge before entering the carpet.
+          Find the value of <m>e</m> that minimizes:
+          (a) the total distance traveled, and
+          (b) the total travel time.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The diagonal segment across the carpet has length <m>c</m>.
+          From the right triangle,
+        </p>
+
+        <me>
+          c^2=10^2+(10-e)^2.
+        </me>
+
+        <p>
+          Therefore
+        </p>
+
+        <me>
+          c=\sqrt{200-20e+e^2}.
+        </me>
+
+        <p>
+          The domain is <m>e\in[0,10]</m>.
+          The total distance is
+        </p>
+
+        <me>
+          L(e)=e+c=e+\sqrt{200-20e+e^2}.
+        </me>
+
+        <p>
+          The total time is distance divided by speed.
+          Along the edge the speed is <m>1</m>, so time is <m>e</m>.
+          Across the carpet the speed is <m>\tfrac12</m>, so time is <m>\frac{c}{1/2}=2c</m>.
+          Thus
+        </p>
+
+        <me>
+          T(e)=e+2\sqrt{200-20e+e^2}.
+        </me>
+
+        <p>
+          <alert>(a) Minimize distance.</alert>
+          Differentiate:
+        </p>
+
+        <me>
+          L'(e)=1+\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
+          =1-\frac{10-e}{\sqrt{200-20e+e^2}}.
+        </me>
+
+        <p>
+          Solving <m>L'(e)=0</m> would require
+          <m>\sqrt{200-20e+e^2}=10-e</m>. Squaring both sides gives
+          <m>200-20e+e^2=(10-e)^2=100-20e+e^2</m>, which reduces to <m>200=100</m>,
+          an impossibility. Therefore there are no critical points in <m>(0,10)</m>,
+          so the minimum occurs at an endpoint.
+        </p>
+
+        <me>
+          L(0)=10\sqrt{2},\qquad L(10)=20.
+        </me>
+
+        <p>
+          Since <m>10\sqrt2&lt;20</m>, the minimum distance occurs at <m>e=0</m>.
+          In other words, the straight diagonal is the shortest path.
+        </p>
+
+        <p>
+          <alert>(b) Minimize time.</alert>
+          Differentiate:
+        </p>
+
+        <me>
+          T'(e)=1+(2)\cdot\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
+          =1-\frac{2(10-e)}{\sqrt{200-20e+e^2}}.
+        </me>
+
+        <p>
+          Set <m>T'(e)=0</m>:
+        </p>
+
+        <me>
+          \sqrt{200-20e+e^2}=20-2e.
+        </me>
+
+        <p>
+          Square both sides and simplify:
+        </p>
+
+        <me>
+          200-20e+e^2=(20-2e)^2
+          \quad\Longrightarrow\quad
+          3e^2-60e+200=0.
+        </me>
+
+        <p>
+          Apply the quadratic formula:
+        </p>
+
+        <me>
+          e=\frac{60\pm\sqrt{60^2-4(3)(200)}}{2(3)}
+          =10\pm\frac{10}{3}\sqrt{3}.
+        </me>
+
+        <p>
+          Only <m>e=10-\frac{10}{3}\sqrt{3}</m> lies in <m>[0,10]</m>, so it is our only critical point.
+          Compare to the endpoints:
+        </p>
+
+        <me>
+          T(0)=20\sqrt2,\qquad T(10)=30,\qquad
+          T\!\left(10-\frac{10}{3}\sqrt3\right)=10+10\sqrt3.
+        </me>
+
+        <p>
+          Since <m>10+10\sqrt3</m> is the smallest of these values, the minimum time occurs at
+          <m>\displaystyle e=10-\frac{10}{3}\sqrt3\approx 4.2</m>.
+        </p>
+
+        <remark>
+          <p>
+            Minimizing distance and minimizing time are different problems because the speed changes.
+            The ants save time by traveling partway along the faster edge and then cutting across the slower carpet.
+          </p>
+        </remark>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-opt-profit">
+    <title>Maximizing Profit</title>
+
+    <example xml:id="ex-opt-profit">
+      <statement>
+        <p>
+          A company produces a product for <m>\$10</m> per item and sells it for <m>s</m> dollars per item.
+          Market demand is modeled by <m>m(s)=100-s</m>, meaning that when the price is <m>s</m>,
+          the number of items sold is <m>100-s</m>.
+        </p>
+        <p>
+          What price <m>s</m> maximizes total profit?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The profit per item is <m>s-10</m>, and the number sold is <m>100-s</m>.
+          Therefore total profit is
+        </p>
+
+        <me>
+          P(s)=(100-s)(s-10)=-1000+110s-s^2.
+        </me>
+
+        <p>
+          The relevant domain is <m>s\in[10,100]</m>, since selling below cost is not sensible here,
+          and demand reaches zero at <m>s=100</m>.
+        </p>
+
+        <p>
+          Differentiate:
+        </p>
+
+        <me>
+          P'(s)=110-2s.
+        </me>
+
+        <p>
+          The critical point satisfies <m>P'(s)=0</m>, so <m>s=55</m>.
+          Check the endpoints:
+        </p>
+
+        <me>
+          P(10)=0,\qquad P(55)=2025,\qquad P(100)=0.
+        </me>
+
+        <p>
+          The maximum profit occurs at <m>s=55</m>.
+          The most profitable selling price is <m>\$55</m> per item.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="additional-worked-examples-opt">
+    <title>Additional Worked-Out Examples</title>
+
+    <p>
+      To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+      If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+      fully worked-out examples are available in:
+      <alert>
+        <xref ref="subsec-derivApp-opt">
+          Additional Examples for Optimization Problems
+        </xref>
+      </alert>
+    </p>
+  </subsection>
+
+  <exercises xml:id="exercises-optimization">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Some True/False Problems</title>
+      <introduction>
+        <p>
+          Determine whether each statement is true or false and explain your reasoning.
+        </p>
+      </introduction>
+
+      <exercise xml:id="tf-opt-01">
+        <statement>
+          <p>
+            If <m>T'(c)=0</m>, then <m>x=c</m> must give an absolute maximum or minimum of <m>T</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>False.</emph> A critical point is only a candidate. The absolute extremum could occur at an endpoint,
+            and some critical points are neither maxima nor minima.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-opt-02">
+        <statement>
+          <p>
+            In an optimization problem on a closed interval, it is always necessary to check endpoints.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>True.</emph> Absolute maxima and minima can occur at endpoints, so they must be included as candidates.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-opt-03">
+        <statement>
+          <p>
+            If the domain is <m>(0,\infty)</m>, then an absolute minimum cannot exist.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>False.</emph> An absolute minimum may exist on an open or unbounded domain,
+            but we must justify it by analyzing critical points and limits at the boundaries.
+          </p>
+        </solution>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Algebraic and Applied Problems</title>
+
+      <exercise xml:id="prob-opt-rect-48">
+        <statement>
+          <p>
+            You have 48 meters of fencing to enclose a rectangle.
+            What dimensions maximize area, and what is the maximum area?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-opt-open-top-box">
+        <statement>
+          <p>
+            An open-top box is made by cutting equal squares of side length <m>x</m> from the corners of a
+            <m>20</m> by <m>30</m> rectangle and folding up the sides.
+            Write the volume as a function of <m>x</m> and determine the value of <m>x</m> that maximizes the volume.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-opt-profit-new">
+        <statement>
+          <p>
+            A company has cost <m>\$12</m> per item and demand <m>m(s)=160-2s</m>.
+            Write a profit function <m>P(s)</m> and determine the price <m>s</m> that maximizes profit.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-opt-time-speed-change">
+        <statement>
+          <p>
+            A person walks along a sidewalk at <m>4</m> m/s and then crosses a field at <m>2</m> m/s.
+            Sketch a diagram and set up a time function similar to the ants problem.
+            Explain what your independent variable is and what domain it must satisfy.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercisegroup>
+  </exercises>
 
 </section>

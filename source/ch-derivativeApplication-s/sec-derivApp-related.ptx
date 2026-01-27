@@ -3,14 +3,22 @@
 <section xml:id="sec-derivApp-related" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Related Rates</title>
 
-  <objectives>
-    <ul>
-      <li>Set up a related rates problem by identifying variables, constants, current values, and known rates.</li>
-      <li>Write a geometric relationship among variables, then differentiate with respect to time using the Chain Rule.</li>
-      <li>Compute an unknown rate at a specific instant by substituting current values only at the end.</li>
-      <li>Check answers for sign and real-world plausibility, including unit consistency.</li>
-    </ul>
-  </objectives>
+<objectives>
+  <ul>
+    <li>
+      Identify all relevant quantities in a related rates problem, distinguishing between constants, variables, known rates, and unknown rates.
+    </li>
+    <li>
+      Translate a physical or geometric situation into an equation relating the variables using appropriate formulas.
+    </li>
+    <li>
+      Create and label an appropriate diagram to support problem setup and reasoning.
+    </li>
+    <li>
+      Apply differentiation rules to a relationship involving multiple time-dependent quantities using the chain rule and possibly implicit differentiation.
+    </li>
+  </ul>
+</objectives>
 
 <subsection xml:id="related-rates-intro">
     <title>Introduction to Related Rates</title>
@@ -26,14 +34,14 @@
     </p>
 
 
-<insight xml:id="insight-related-rates-steps">
+<algorithm xml:id="strat-related-rates-steps">
     <title>Steps for Solving Related Rates Problems</title>    
     <ol>
       <li>Establish a relationship between the variables using geometry or known formulas.</li>
       <li>Differentiate the relationship with respect to time, applying the Chain Rule as needed.</li>
       <li>Substituting known values and rates to find the unknown rate.</li>
     </ol>
-  </insight>
+  </algorithm>
 
 <remark xml:id="rem-related-rates-overview">
     <p>
@@ -255,77 +263,80 @@
       </p>
     </remark>
     </statement>
+    <solution>
+      <p>
+        Here is a sketch of the situation:
+      </p>
+          <figure xml:id="fig-searchlight">
+  <caption>
+    This diagram models the related-rates problem stated above asking how fast the illuminated spot on the wall is moving upward at that instant.
+  </caption>
+      <image source="images/RelatedRates3.PNG" width="100%">
+    <shortdescription>
+      A diagram on a grid showing a vertical wall on the left and a searchlight on the ground to the right.
+      A straight beam of light extends from the searchlight to a point on the wall.
+      At the searchlight, the beam makes a 30 degree angle with the horizontal ground.
+      A curved arrow at the searchlight indicates that the beam is rotating upward at a rate of 5 degrees per second.
+      The illuminated point on the wall is above the ground and moves vertically as the beam rotates,
+      illustrating the changing height of the light spot on the wall.
+    </shortdescription>
+    </image>
+    </figure>
 
-</example>
-    
+      <p>
+        Let <m>\theta(t)</m> be the angle of the light beam from the horizontal and <m>s(t)</m> be the distance of the spot from the point on the wall closest to the light.
+        We are given that at some time of interest (which we will call <m>t=0</m>) that <m>\theta(0)=30^\circ</m> and <m>\theta'(0)=5^\circ/\text{sec}</m>, and we want to find <m>s'(0)</m>.
+      </p>
 
-    <p>
-      Let <m>\theta(t)</m> be the angle and <m>s(t)</m> the distance of the spot from the point on the wall closest to the light.
-      The geometry gives
+      <p> Since the situation is about a right triangle formed by the light beam, the wall, and the ground, 
+        we have several options to consider (like sine, cosine, or tangent or the pythagorean theorem). However, to relate the 
+        angle and the distance along the wall we should use the tangent function. This gives:</p>
       <me>
-        \tan(\theta(t))=\frac{s(t)}{20},
+        \tan(\theta(t)) = \frac{s(t)}{20}
       </me>
-      so
+      <p> Differentiating both sides with respect to time:</p>
       <me>
-        s(t)=20\tan(\theta(t)).
+        \sec^2(\theta(t)) \cdot \theta'(t) = \frac{s'(t)}{20}
       </me>
-    </p>
-
-    <p>
-      Differentiate with respect to time:
-    </p>
-
-    <me>
+      <p> Solving for <m>s'(t)</m>:</p>
+      <me>
+        s'(t) = 20 \cdot \sec^2(\theta(t)) \cdot \theta'(t)
+      </me>
+      <p> Now we can substitute in our known values at <m>t=0</m>:</p>
+      <me>
+        s'(0) = 20 \cdot \sec^2(30^\circ) \cdot 5^\circ/\text{sec}
+      </me>
+      <p> However, because the trig differentiation formulas are only valid for radian measure (See <xref ref="rem-radians-warning"/>), we need to convert 
+        he angle and angular speed to radians before substituting:</p>
+      <me>
 \begin{array}{rcl}
-\displaystyle s'(t)
-\amp=\amp \displaystyle 20\left(\tan(\theta(t))\right)'\,\theta'(t)
-\\[0.9em]
-\amp=\amp \displaystyle 20\sec^2(\theta(t))\,\theta'(t).
-\end{array}
-    </me>
-
-    <p>
-      Trig derivatives require radians. Convert the current angle and angular speed:
-    </p>
-
-    <me>
-\begin{array}{rcl}
-\displaystyle \theta(0)
-\amp=\amp \displaystyle 30^\circ
-\ =\ 30\left(\frac{2\pi}{360}\right)
+\displaystyle 30^\circ
+\amp=\amp \displaystyle 30\left(\frac{2\pi}{360}\right)
 \ =\ \frac{\pi}{6}\ \text{rad},
 \\[1.0em]
-\displaystyle \theta'(0)
-\amp=\amp \displaystyle 5^\circ/\text{sec}
-\ =\ 5\left(\frac{2\pi}{360}\right)
+\displaystyle 5^\circ/\text{sec}
+\amp=\amp \displaystyle 5\left(\frac{2\pi}{360}\right)
 \ =\ \frac{\pi}{36}\ \text{rad/sec}.
 \end{array}
-    </me>
-
-    <p>
-      Now compute:
-    </p>
-
-    <me>
+      </me>
+      <p> Now substituting in:</p> 
+      <me>
 \begin{array}{rcl}
 \displaystyle s'(0)
-\amp=\amp \displaystyle 20\sec^2\!\left(\frac{\pi}{6}\right)\cdot \frac{\pi}{36}.
+\amp=\amp \displaystyle 20 \cdot \sec^2\left(\frac{\pi}{6}\right) \cdot \frac{\pi}{36}
 \end{array}
-    </me>
-
-    <p>
-      Since <m>\cos(\pi/6)=\sqrt{3}/2</m>, we have <m>\sec^2(\pi/6)=\left(\frac{2}{\sqrt{3}}\right)^2=\frac{4}{3}</m>, so
-    </p>
-
-    <me>
+      </me>
+      <p> Since <m>\cos(\pi/6)=\sqrt{3}/2</m>, we have <m>\sec^2(\pi/6)=\left(\frac{2}{\sqrt{3}}\right)^2=\frac{4}{3}</m>, so</p>
+      <me>
 \begin{array}{rcl}
 \displaystyle s'(0)
-\amp=\amp \displaystyle 20\cdot \frac{4}{3}\cdot \frac{\pi}{36}
+\amp=\amp \displaystyle 20 \cdot \frac{4}{3} \cdot \frac{\pi}{36}
 \\[0.9em]
 \amp=\amp \displaystyle \frac{20\pi}{27}
-\approx 2.3\ \text{m/sec}.
+
 \end{array}
-    </me>
+      </me>
+      <p> So the speed of the bright spot moving along the wall at that instant is <m>\frac{20}{27}\pi</m> m/sec. </p>
 
     <remark xml:id="rem-sign-speed">
       <p>
@@ -340,9 +351,286 @@
         Convert to radians/sec before substituting.
       </p>
     </remark>
+
+    </solution>
+</example>
+    
+
+
   </subsection>
 
  
 
+<subsection xml:id="additional-worked-problems-derivApp-Related">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-derivApp-relatedRates">
+        Additional Worked-Out Problems for Related Rates
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-derivApp-RRates-tf">
+  <title>Practice / Study Problems</title>
+
+
+
+<exercisegroup xml:id="eg-derivApp-RRates-tf">
+  <title>True/False Questions</title>
+
+  <introduction>
+    <p>
+      Determine whether each statement is true or false.
+      Justify your answers.
+    </p>
+  </introduction>
+ 
+
+  <exercise xml:id="rr-tf-01">
+    <statement>
+      <p>
+        In any related rates problem, all quantities that change must be written as functions of time,
+        even if time is not mentioned explicitly in the problem.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. In related rates problems, all variables must be expressed as functions of time to properly apply the chain rule. 
+        It is possible that some quantities do not change (and thus are constants), but any quantity that does change must be treated as a function of time.
+      </p>
+    </solution>
+  </exercise>
+
+
+
   
+  <exercise xml:id="rr-tf-16">
+    <statement>
+      <p>
+        If a related rates problem asks for a <em>speed</em>, the final answer should be reported as a
+        nonnegative value even if the derivative is negative.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. Speed is defined as the magnitude of velocity, which is always nonnegative. 
+        Therefore, when a related rates problem asks for speed, the final answer should be reported as a nonnegative value, regardless of the sign of the derivative.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="rr-tf-08">
+    <statement>
+      <p>
+        In a related rates problem involving a right triangle, the Pythagorean Theorem must be used to relate
+        the variables before differentiating.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. While the Pythagorean Theorem is often useful in related rates problems involving right triangles, it is not always necessary. 
+        Depending on the specific problem, other relationships such as trigonometric functions (sine, cosine, tangent) or geometric formulas may be more appropriate to relate the variables before differentiating.
+      </p>
+    </solution>
+
+  </exercise>
+
+  <exercise xml:id="rr-tf-09">
+    <statement>
+      <p>
+        If <m>x(t)^2 + y(t)^2 = 25</m>, then
+        <me>2x(t)x'(t) + 2y(t)y'(t) = 0</me>
+        after differentiating with respect to time.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. Differentiating both sides of the equation <m>x(t)^2 + y(t)^2 = 25</m> with respect to time using the chain rule gives:
+      </p>
+      <me>
+\begin{array}{rcl}
+\displaystyle \frac{d}{dt}(x(t)^2) + \frac{d}{dt}(y(t)^2)
+\amp=\amp \displaystyle \frac{d}{dt}(25)
+\\[0.9em]
+\displaystyle 2x(t)x'(t) + 2y(t)y'(t)
+\amp=\amp \displaystyle 0.
+\end{array}
+      </me>
+      <p>This confirms that the statement is true.</p>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="rr-tf-11">
+    <statement>
+      <p>
+        A circle has radius <m>4</m> meters at a certain instant.
+        If the radius is increasing at <m>3</m> m/min, then the area is increasing at
+        <m>12\pi</m> m<m>^2</m>/min at that instant.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. The area <m>A</m> of a circle is given by the formula <m>A = \pi r^2</m>, where <m>r</m> is the radius. 
+        To find the rate of change of the area with respect to time, we differentiate both sides with respect to time using the chain rule:
+      </p>
+      <me>
+\begin{array}{rcl}
+\displaystyle A(t)
+\amp=\amp \displaystyle \pi r(t)^2,
+\\[0.9em]
+\displaystyle A'(t)
+\amp=\amp \displaystyle \pi \cdot 2r(t) \cdot r'(t)
+\\[0.9em]
+\amp=\amp \displaystyle 2\pi r(t) r'(t).
+\end{array}
+      </me>
+      <p>Substituting the given values <m>r = 4</m> m and <m>r' = 3</m> m/min into the equation for <m>A'</m>:</p>
+      <me>
+\begin{array}{rcl}
+\displaystyle A'
+\amp=\amp \displaystyle 2\pi (4)(3)
+\\[0.9em]
+\amp=\amp \displaystyle 24\pi \text{ m}^2/\text{min}.
+\end{array}
+      </me>
+      <p>This shows that the area is increasing at <m>24\pi</m> m<m>^2</m>/min, not <m>12\pi</m> m<m>^2</m>/min as stated.</p>
+    </solution>
+  </exercise>
+
+
+
+  <exercise xml:id="rr-tf-15">
+    <statement>
+      <p>
+        If the volume of a cube is increasing at <m>12</m> cm<m>^3</m>/sec when the side length is <m>2</m> cm,
+        then the side length is increasing at <m>1</m> cm/sec at that instant.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. The volume <m>V</m> of a cube is given by the formula <m>V = s^3</m>, where <m>s</m> is the side length. 
+        To find the rate of change of the side length with respect to time, we differentiate both sides with respect to time using the chain rule:
+      </p>
+      <me>
+\begin{array}{rcl}
+\displaystyle V(t)
+\amp=\amp \displaystyle s(t)^3,
+\\[0.9em]
+\displaystyle V'(t)
+\amp=\amp \displaystyle 3s(t)^2 \cdot s'(t).
+\end{array}
+      </me>
+      <p>Substituting the given values <m>V' = 12</m> cm<m>^3</m>/sec and <m>s = 2</m> cm into the equation for <m>V'</m>:</p>
+      <me>
+\begin{array}{rcl}
+\displaystyle 12
+\amp=\amp \displaystyle 3(2)^2 \cdot s'(t)
+\\[0.9em]
+\displaystyle 12
+\amp=\amp \displaystyle 12 \cdot s'(t)
+\\[0.9em]
+\displaystyle s'(t)
+\amp=\amp \displaystyle 1 \text{ cm/sec}.
+\end{array}
+      </me>
+      <p>This confirms that the side length is increasing at <m>1</m> cm/sec at that instant.</p>
+    </solution>
+  </exercise>
+
+<exercise xml:id="rr-tf-12">
+  <statement>
+    <p>
+      A ladder 10 ft long is leaning against a vertical wall. If the bottom of the ladder is sliding away from the wall at 1 ft/sec,
+      then the top of the ladder is sliding down the wall at 1 ft/sec when the bottom of the ladder is 6 ft from the wall.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False</em>. Let <m>x(t)</m> be the distance from the wall to the bottom of the ladder and <m>y(t)</m> be the height of the top of the ladder on the wall. 
+      The relationship between <m>x(t)</m> and <m>y(t)</m> is given by the Pythagorean theorem:
+    </p>
+    <me>
+\begin{array}{rcl}
+\displaystyle x(t)^2 + y(t)^2
+\amp=\amp \displaystyle 10^2,
+\\[0.9em]
+\displaystyle x(t)^2 + y(t)^2
+\amp=\amp \displaystyle 100.
+\end{array}
+    </me>
+    <p>Differentiating both sides with respect to time:</p>
+    <me>
+\displaystyle 2x(t)x'(t) + 2y(t)y'(t)
+= \displaystyle 0.
+    </me>
+    <p>Solving for <m>y'(t)</m>:</p>
+    <me>
+\displaystyle y'(t)
+= \displaystyle -\frac{x(t)x'(t)}{y(t)}.
+    </me>
+    <p>At the instant when <m>x(t) = 6</m> ft and <m>x'(t) = 1</m> ft/sec, we can find <m>y(t)</m> using the Pythagorean theorem:</p>
+    <me>
+\begin{array}{rcl}
+\displaystyle 6^2 + y(t)^2
+\amp=\amp \displaystyle 100,
+\\[0.9em]
+\displaystyle 36 + y(t)^2
+\amp=\amp \displaystyle 100,
+\\[0.9em]
+\displaystyle y(t)^2
+\amp=\amp \displaystyle 64,
+\\[0.9em]
+\displaystyle y(t)
+\amp=\amp \displaystyle 8 \text{ ft}.
+\end{array}
+    </me>
+    <p>Substituting these values into the equation for <m>y'(t)</m>:</p>
+    <me>
+\begin{array}{rcl}
+\displaystyle y'(t)
+\amp=\amp \displaystyle -\frac{6 \cdot 1}{8}
+\\[0.9em]
+\amp=\amp \displaystyle -\frac{3}{4} \text{ ft/sec}.
+\end{array}
+    </me>
+    <p>This shows that the top of the ladder is sliding down the wall at a rate of <m>\frac{3}{4}</m> ft/sec, not 1 ft/sec as stated.</p>
+  </solution>
+</exercise>
+
+
+  <exercise xml:id="rr-tf-03">
+    <statement>
+      <p>
+        If the radius of a sphere is increasing at a constant rate, then the volume of the sphere is also
+        increasing at a constant rate.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. The volume of a sphere is given by the formula <m>V=\frac{4}{3}\pi r^3</m>. 
+        If the radius <m>r</m> is increasing at a constant rate, the volume <m>V</m> will not increase at a constant rate because the relationship between volume and radius is cubic. 
+        As the radius increases, the rate of change of the volume will also increase.
+      </p>
+      <p>A simple example would be if <m>r(t) = t</m> (which has a constant rate of change of <m>r'(t) = 1</m>), then <m>V(t) = \frac{4}{3}\pi t^3</m>, and the derivative <m>V'(t) = 4\pi t^2</m> is not constant.</p>
+    </solution>
+  </exercise>
+
+
+
+
+  </exercisegroup>
+  </exercises>
+
+
+  
+
 </section>

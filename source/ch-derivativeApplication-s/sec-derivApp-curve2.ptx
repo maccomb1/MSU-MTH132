@@ -2,7 +2,338 @@
 
 <section xml:id="sec-derivApp-curve2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curve Sketching Part 2</title>
+  <objectives>
+    <ul>
+      <li>Explain why qualitative graphing is useful even when graphing technology is available.</li>
+      <li>Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large <m>|x|</m>.</li>
+      <li>Use derivative sign charts to classify behavior near critical points and vertical asymptotes.</li>
+      <li>Recognize and use symmetry (even, odd, periodic, and other transformations) to streamline a sketch.</li>
+    </ul>
+  </objectives>
 
-  <p> Text of section. </p>
+  <p>
+    Computers can produce a graph instantly by plotting many points, so why learn to sketch by hand?
+    One reason is that calculus helps us focus on the important parts of the graph: critical points,
+    asymptotes, and regions where behavior changes. Another reason is error checking. A quick sketch,
+    combined with a few well-chosen test values, can reveal when a result is unreasonable long before
+    a mistake spreads into a larger calculation.
+  </p>
+
+  <subsection xml:id="ssec-rational-example">
+    <title>A Rational Function Example</title>
+
+    <example xml:id="ex-curve-rational">
+      <statement>
+        <p>
+          Use the curve sketching method to analyze
+          <m>f(x)=\dfrac{x^3-6x^2+11x-6}{2x^2-8x}</m>.
+          Identify the domain, intercepts, critical points, vertical asymptotes, an inflection point, and end behavior.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          First factor the function:
+        </p>
+
+        <me>
+          f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}
+          =\frac{(x-1)(x-2)(x-3)}{2x(x-4)}.
+        </me>
+
+        <p>
+          The domain excludes values that make the denominator zero, so
+          <m>x\neq 0</m> and <m>x\neq 4</m>. These produce vertical asymptotes at <m>x=0</m> and <m>x=4</m>.
+        </p>
+
+        <p>
+          Intercepts come from <m>f(x)=0</m>, which occurs at zeros of the numerator that are in the domain:
+          <m>x=1,2,3</m>. There is no <m>y</m>-intercept because <m>x=0</m> is not in the domain.
+        </p>
+
+        <p>
+          The derivatives (after simplification) are:
+        </p>
+
+        <me>
+          f'(x)=\frac{x^4-8x^3+13x^2+12x-24}{2x^2(x-4)^2},
+          \qquad
+          f''(x)=-\frac{3(x^3-6x^2+24x-32)}{x^3(x-4)^3}.
+        </me>
+
+        <p>
+          Solving <m>f'(x)=0</m> requires locating roots of the numerator.
+          A numerical approach (graphing or a root finder) gives approximate solutions:
+        </p>
+
+        <me>
+          a_1\approx -1.26,\quad a_2\approx 1.39,\quad a_3\approx 2.61,\quad a_4\approx 5.26.
+        </me>
+
+        <p>
+          Along with the vertical asymptotes at <m>x=0</m> and <m>x=4</m>, these break the real line into intervals
+          where the sign of <m>f'(x)</m> is constant. A sign chart then determines where the function increases or decreases,
+          which in turn classifies the critical points as local maxima or minima.
+        </p>
+
+        <p>
+          For concavity, solve <m>f''(x)=0</m> by setting the numerator to zero:
+        </p>
+
+        <me>
+          x^3-6x^2+24x-32=0.
+        </me>
+
+        <p>
+          Factoring shows
+          <m>x^3-6x^2+24x-32=(x-2)(x^2-4x+16)</m>, and the quadratic has no real roots.
+          Thus <m>x=2</m> is the only inflection point in the domain.
+        </p>
+
+        <p>
+          Finally, to understand end behavior, compare leading terms:
+        </p>
+
+        <me>
+          f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}\approx \frac{x^3}{2x^2}=\tfrac12 x \quad \text{for large } |x|.
+        </me>
+
+        <p>
+          This tells us that the graph grows roughly like a line with slope <m>\tfrac12</m> as <m>|x|</m> becomes large.
+          In practice, this is enough to guide a reasonable sketch when combined with critical points and asymptotes.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-trig-example">
+    <title>A Trigonometric Example</title>
+
+    <example xml:id="ex-curve-trig">
+      <statement>
+        <p>
+          Apply the curve sketching method to <m>s(x)=x-2\sin(x)</m>.
+          Identify critical points, concavity, intercepts, and symmetry.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The derivatives are
+          <m>s'(x)=1-2\cos(x)</m> and <m>s''(x)=2\sin(x)</m>.
+          The domain is all real numbers.
+        </p>
+
+        <p>
+          Critical points occur where <m>s'(x)=0</m>, so <m>\cos(x)=\tfrac12</m>.
+          This happens at <m>x=\tfrac{\pi}{3}</m> and <m>x=\tfrac{5\pi}{3}</m>, repeating every <m>2\pi</m>:
+        </p>
+
+        <me>
+          x=\tfrac{\pi}{3}+2\pi n
+          \quad\text{and}\quad
+          x=\tfrac{5\pi}{3}+2\pi n
+          \quad\text{for integers } n.
+        </me>
+
+        <p>
+          Inflection points occur where <m>s''(x)=0</m>, so <m>\sin(x)=0</m>, which gives
+          <m>x=n\pi</m> for any integer <m>n</m>.
+        </p>
+
+        <p>
+          The point <m>(0,s(0))=(0,0)</m> is both an <m>x</m>- and <m>y</m>-intercept.
+        </p>
+
+        <p>
+          This function is odd:
+          <m>s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x)</m>.
+          Therefore its graph has 180-degree rotational symmetry about the origin.
+        </p>
+
+        <remark xml:id="rem-trig-end-behavior">
+          <p>
+            Since <m>s(x)=x-2\sin(x)</m> behaves like <m>x</m> for large <m>|x|</m>, a reasonable long-range guide is the line <m>y=x</m>.
+            However, the term <m>-2\sin(x)</m> keeps oscillating, so the graph continues to wiggle above and below this line.
+          </p>
+        </remark>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-curve-sketching-method-detailed">
+    <title>Curve Sketching Checklist</title>
+
+    <algorithm xml:id="strat-curve-sketching-detailed">
+      <title>Method for Graphing (Detailed)</title>
+
+      <ol>
+        <li>
+          <p>
+            Compute <m>f'(x)</m> and <m>f''(x)</m>. Determine the domain of <m>f</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Find critical points by solving <m>f'(x)=0</m> and locating where <m>f'(x)</m> is undefined.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Make a sign table for <m>f'(x)</m> to determine intervals of increase and decrease and to classify each critical point.
+            Critical points can correspond to local maxima, local minima, stationary points, cusps, corners, or vertical asymptotes.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Find possible inflection points by solving <m>f''(x)=0</m> and locating where <m>f''(x)</m> is undefined.
+            Confirm an inflection point by a sign change in <m>f''(x)</m> (and typically requiring <m>f'(x)</m> to exist at the point).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Find intercepts: solve <m>f(x)=0</m> for <m>x</m>-intercepts and compute <m>f(0)</m> if <m>x=0</m> is in the domain.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Describe end behavior as <m>x\to\pm\infty</m>. When possible, use limit language.
+            For polynomials and many rational functions, comparing leading terms gives a useful approximation of the long-range trend.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Check symmetry when it helps:
+            even symmetry if <m>f(-x)=f(x)</m>, odd symmetry if <m>f(-x)=-f(x)</m>,
+            and periodicity if <m>f(x+c)=f(x)</m> for some constant <m>c</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Combine the information into a clear sketch. Mark intercepts, extrema, inflection points, and asymptotes.
+          </p>
+        </li>
+      </ol>
+    </algorithm>
+  </subsection>
+
+  <subsection xml:id="additional-worked-examples-curve2">
+    <title>Additional Worked-Out Examples</title>
+
+    <p>
+      To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+      If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+      fully worked-out examples are available in:
+      <alert>
+        <xref ref="subsec-derivApp-curve2">
+          Additional Examples for Curve Sketching Part 2
+        </xref>
+      </alert>
+    </p>
+  </subsection>
+
+
+  <exercises xml:id="exercises-curve-sketching-2">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Conceptual Questions</title>
+
+      <exercise xml:id="tf-cs2-01">
+        <statement>
+          <p>
+            True or False: A calculator graph can hide important features if the viewing window is not chosen carefully.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>True.</emph> A window can miss a vertical asymptote, a local extremum, or a change in concavity.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-cs2-02">
+        <statement>
+          <p>
+            True or False: If <m>f(x)\approx cx^p</m> for large <m>|x|</m>, then this approximation can help predict the end behavior of the graph.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>True.</emph> The dominant term controls the long-range trend.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-cs2-03">
+        <statement>
+          <p>
+            True or False: If <m>f</m> is odd, then its graph has 180-degree rotational symmetry about the origin.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>True.</emph> This follows from <m>f(-x)=-f(x)</m>.
+          </p>
+        </solution>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Algebraic Practice</title>
+
+      <exercise xml:id="prob-cs2-rational-sketch">
+        <statement>
+          <p>
+            Analyze <m>\displaystyle f(x)=\frac{(x-2)(x+1)}{x(x-3)}</m>.
+            Identify the domain, intercepts, vertical asymptotes, end behavior, and intervals of increase/decrease.
+            Then sketch a graph.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-cs2-leading-terms">
+        <statement>
+          <p>
+            Use leading-term comparisons to describe the end behavior of:
+          </p>
+          <ol>
+            <li><p><m>\displaystyle f(x)=\frac{5x^3-2x+7}{x^2+1}</m></p></li>
+            <li><p><m>\displaystyle g(x)=\frac{3x^2-10}{2x^4+1}</m></p></li>
+          </ol>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Trigonometric and Interpretation Problems</title>
+
+      <exercise xml:id="prob-cs2-trig">
+        <statement>
+          <p>
+            Let <m>g(x)=x+\sin(x)</m>.
+            Find <m>g'(x)</m> and <m>g''(x)</m>, describe where the graph is concave up or concave down,
+            and determine whether the function is even, odd, or neither.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-cs2-window">
+        <statement>
+          <p>
+            Give an example of a function whose graph has a vertical asymptote at <m>x=1</m>.
+            Explain how a poorly chosen viewing window could make it look like the function is continuous.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

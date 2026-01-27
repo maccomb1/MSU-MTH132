@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-integral" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Integrals and the Fundamental Theorem</title>
+  <title>Integrals and the Fundamental Theorem of Calculus</title>
 
   <!-- 
   <introduction>
@@ -16,6 +16,7 @@
   <xi:include href="./ch-integral-s/sec-integral-FTC.ptx" />
   <xi:include href="./ch-integral-s/sec-integral-net.ptx" />
   <xi:include href="./ch-integral-s/sec-integral-usub.ptx" />
+  <xi:include href="./ch-integral-s/sec-integral-ww.ptx" />
   
 
 </chapter>

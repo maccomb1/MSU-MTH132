@@ -45,6 +45,6 @@
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
   <rename element="insight" xml:lang="en-US">Strategy</rename>
-
+  <rename element="algorithm" xml:lang="en-US">Strategy</rename>
 
 </docinfo>

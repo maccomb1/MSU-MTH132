@@ -77,7 +77,7 @@
 
 <p> Now let's take this idea and generalize it to find a formula for the derivative of the inverse of any differentiable function. </p>
 
-<insight xml:id="insight-derivative-inverse-general">
+<algorithm xml:id="strat-derivative-inverse-general">
   <title>Finding the Derivative of an Inverse Function</title>
       <p>
     <ul>
@@ -98,7 +98,7 @@
       </li>
     </ul>
   </p>
-    </insight>
+    </algorithm>
 
 
 <p> Now let's use this idea to find the formulas for the derivatives of various inverse trigonometric functions. </p>

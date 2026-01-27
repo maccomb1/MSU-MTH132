@@ -3,6 +3,515 @@
 <section xml:id="sec-derivApp-curve1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curve Sketching Part 1</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Determine where a function is increasing or decreasing using the sign of <m>f'(x)</m>.</li>
+      <li>Use the First Derivative Test to classify critical points as local maxima, local minima, or stationary points.</li>
+      <li>Determine concavity using the sign of <m>f''(x)</m> and identify inflection points.</li>
+      <li>Use the Second Derivative Test to classify a critical point when applicable.</li>
+      <li>Combine derivative information with intercepts and asymptotes to sketch a reasonable graph.</li>
+    </ul>
+  </objectives>
+
+  <p>
+    Derivatives do more than provide slopes at individual points.
+    They also reveal the overall shape of a graph.
+    In this section, we build a toolkit for sketching the graph of <m>y=f(x)</m>
+    by analyzing <m>f'(x)</m> and <m>f''(x)</m>.
+    The goal is not a perfect drawing, but a reliable picture that captures the key features.
+  </p>
+
+  <subsection xml:id="ssec-increasing-decreasing">
+    <title>Increasing and Decreasing</title>
+
+    <definition xml:id="def-increasing-decreasing">
+      <title>Increasing and Decreasing</title>
+      <statement>
+        <p>
+          A function <m>f</m> is <term>increasing</term> on an interval <m>[a,b]</m> if
+          <m>f(x_1)&lt;f(x_2)</m> whenever <m>x_1&lt;x_2</m> in <m>[a,b]</m>.
+          A function <m>f</m> is <term>decreasing</term> on <m>[a,b]</m> if
+          <m>f(x_1)&gt;f(x_2)</m> whenever <m>x_1&lt;x_2</m> in <m>[a,b]</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The derivative provides an efficient test: the graph rises where slopes are positive
+      and falls where slopes are negative.
+    </p>
+
+    <theorem xml:id="thm-inc-dec">
+      <title>Increasing/Decreasing Test</title>
+      <statement>
+        <p>
+          Let <m>f</m> be continuous on <m>[a,b]</m> and differentiable on <m>(a,b)</m>.
+        </p>
+        <ul>
+          <li>
+            <p>
+              If <m>f'(x)&gt;0</m> for all <m>x\in(a,b)</m>, then <m>f</m> is increasing on <m>[a,b]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f'(x)&lt;0</m> for all <m>x\in(a,b)</m>, then <m>f</m> is decreasing on <m>[a,b]</m>.
+            </p>
+          </li>
+        </ul>
+      </statement>
+
+      <proof>
+        <p>
+          Assume <m>f'(x)&gt;0</m> for all <m>x\in(a,b)</m>, and choose any <m>x_1&lt;x_2</m> in <m>[a,b]</m>.
+          By the Mean Value Theorem, there exists <m>c\in(x_1,x_2)</m> such that
+        </p>
+        <me>
+          f'(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}.
+        </me>
+        <p>
+          Since <m>x_2-x_1&gt;0</m> and <m>f'(c)&gt;0</m>, we have <m>f(x_2)-f(x_1)&gt;0</m>, so <m>f(x_2)&gt;f(x_1)</m>.
+          Therefore <m>f</m> is increasing on <m>[a,b]</m>. The decreasing case is similar.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="ex-inc-dec-poly">
+      <statement>
+        <p>
+          Let <m>f(x)=x^5-15x^3</m>.
+          Determine where <m>f</m> is increasing and decreasing, and use this information to identify local extrema.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Differentiate:
+        </p>
+
+        <me>
+          f'(x)=5x^4-45x^2=5x^2(x^2-9)=5x^2(x-3)(x+3).
+        </me>
+
+        <p>
+          The critical points occur where <m>f'(x)=0</m>, so <m>x=-3,0,3</m>.
+          To determine the sign of <m>f'(x)</m> on the intervals between critical points,
+          we test one value in each interval.
+        </p>
+
+        <p>
+          Since <m>5x^2\ge 0</m>, the sign of <m>f'(x)</m> is controlled by <m>(x-3)(x+3)</m>
+          except that <m>x=0</m> contributes a zero but does not change sign.
+        </p>
+
+        <p>
+          A sign chart is summarized below.
+        </p>
+
+        <me>
+          \begin{array}{c|c|c|c|c|c|c|c}
+          x &amp; \quad &amp; -3 &amp; \quad &amp; 0 &amp; \quad &amp; 3 &amp; \quad \\ \hline
+          f'(x) &amp; + &amp; 0 &amp; - &amp; 0 &amp; - &amp; 0 &amp; + \\ \hline
+          f(x) &amp; \nearrow &amp; &amp; \searrow &amp; &amp; \searrow &amp; &amp; \nearrow
+          \end{array}
+        </me>
+
+        <p>
+          The function changes from increasing to decreasing at <m>x=-3</m>,
+          so there is a local maximum at <m>x=-3</m>.
+          The function changes from decreasing to increasing at <m>x=3</m>,
+          so there is a local minimum at <m>x=3</m>.
+        </p>
+
+        <p>
+          At <m>x=0</m>, the derivative is zero but the function is decreasing on both sides,
+          so <m>x=0</m> is a stationary point rather than a local extremum.
+        </p>
+
+        <remark xml:id="rem-odd-symmetry">
+          <p>
+            Since <m>f(x)=x^5-15x^3</m> contains only odd powers, it satisfies <m>f(-x)=-f(x)</m>.
+            This means the graph has 180-degree rotational symmetry about the origin.
+          </p>
+        </remark>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-first-derivative-test">
+      <title>First Derivative Test</title>
+      <statement>
+        <p>
+          Let <m>f</m> be differentiable on an interval around <m>c</m> and suppose <m>f'(c)=0</m>.
+        </p>
+        <ul>
+          <li>
+            <p>
+              If <m>f'(x)&gt;0</m> for <m>x&lt;c</m> and <m>f'(x)&lt;0</m> for <m>x&gt;c</m>,
+              then <m>x=c</m> is a local maximum.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f'(x)&lt;0</m> for <m>x&lt;c</m> and <m>f'(x)&gt;0</m> for <m>x&gt;c</m>,
+              then <m>x=c</m> is a local minimum.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f'(x)</m> has the same sign on both sides of <m>c</m>,
+              then <m>x=c</m> is a stationary point (not a local extremum).
+            </p>
+          </li>
+        </ul>
+      </statement>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="ssec-concavity">
+    <title>Concavity and Inflection Points</title>
+
+    <p>
+      Increasing and decreasing behavior describes whether the graph rises or falls.
+      Concavity describes how the graph bends.
+      A graph is <term>concave up</term> when it looks like a smile, and <term>concave down</term>
+      when it looks like a frown.
+      An <term>inflection point</term> is a point where the concavity changes.
+    </p>
+
+    <p>
+      A helpful way to connect this to derivatives is to think about slopes.
+      When a function is concave up, its slopes tend to increase as <m>x</m> increases.
+      When a function is concave down, its slopes tend to decrease.
+    </p>
+
+    <theorem xml:id="thm-concavity-test">
+      <title>Concavity Test</title>
+      <statement>
+        <p>
+          Let <m>f</m> be twice differentiable on an interval <m>(a,b)</m>.
+        </p>
+        <ul>
+          <li>
+            <p>
+              If <m>f''(x)&gt;0</m> for all <m>x\in(a,b)</m>, then <m>f</m> is concave up on <m>(a,b)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f''(x)&lt;0</m> for all <m>x\in(a,b)</m>, then <m>f</m> is concave down on <m>(a,b)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f''(c)=0</m> and <m>f''</m> changes sign at <m>x=c</m>, then <m>(c,f(c))</m> is an inflection point.
+            </p>
+          </li>
+        </ul>
+      </statement>
+
+      <proof>
+        <p>
+          Apply the Increasing/Decreasing Test to <m>g(x)=f'(x)</m>.
+          If <m>g'(x)&gt;0</m>, then <m>g</m> is increasing.
+          Since <m>g'(x)=(f'(x))'=f''(x)</m>, the condition <m>f''(x)&gt;0</m> means <m>f'(x)</m> is increasing,
+          which corresponds to concave up behavior. The concave down case is similar,
+          and the inflection point criterion follows from a sign change in <m>f''</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="ex-concavity-poly">
+      <statement>
+        <p>
+          Continue with <m>f(x)=x^5-15x^3</m>. Find where the graph is concave up or concave down,
+          and identify inflection points.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          We already computed <m>f'(x)=5x^4-45x^2</m>. Differentiate again:
+        </p>
+
+        <me>
+          f''(x)=20x^3-90x=10x(2x^2-9).
+        </me>
+
+        <p>
+          Candidate inflection points occur where <m>f''(x)=0</m>, so
+          <m>x=0</m> and <m>2x^2-9=0</m>, which gives <m>x=\pm\frac{3}{\sqrt{2}}</m>.
+        </p>
+
+        <p>
+          A sign check for <m>f''(x)</m> shows that concavity changes at each of these points,
+          so they are inflection points.
+          In particular, the graph is concave down for large negative <m>x</m>,
+          then concave up between <m>-\frac{3}{\sqrt2}</m> and <m>0</m>,
+          then concave down between <m>0</m> and <m>\frac{3}{\sqrt2}</m>,
+          and concave up for large positive <m>x</m>.
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-second-derivative-test">
+      <title>Second Derivative Test</title>
+      <statement>
+        <p>
+          Let <m>f</m> be twice differentiable near <m>c</m>, and suppose <m>f'(c)=0</m>.
+        </p>
+        <ul>
+          <li>
+            <p>
+              If <m>f''(c)&lt;0</m>, then <m>x=c</m> is a local maximum.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f''(c)&gt;0</m>, then <m>x=c</m> is a local minimum.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f''(c)=0</m>, then this test is inconclusive.
+            </p>
+          </li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-second-derivative-test">
+      <p>
+        The Second Derivative Test is convenient when it applies,
+        but it does not replace the First Derivative Test.
+        If <m>f''(c)=0</m>, the point might still be a maximum, a minimum, or neither.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="ssec-full-example">
+    <title>A Longer Example</title>
+
+    <example xml:id="ex-curvesketch-rational">
+      <statement>
+        <p>
+          Sketch the graph of
+          <m>f(x)=\dfrac{x^{2/3}}{(x-1)^2}</m>.
+          Identify intercepts, critical points, intervals of increase/decrease,
+          concavity, inflection points, and any vertical asymptotes.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The function is defined for all real <m>x</m> except <m>x=1</m>.
+          Also note <m>f(0)=0</m>, so the graph passes through the origin.
+        </p>
+
+        <p>
+          Using derivative rules (and simplifying), we obtain:
+        </p>
+
+        <me>
+          f'(x)=-\frac{\tfrac{2}{3}(2x+1)}{(x-1)^3x^{1/3}},
+          \qquad
+          f''(x)=-\frac{\tfrac{2}{9}(14x^2+14x-1)}{(x-1)^4x^{4/3}}.
+        </me>
+
+        <p>
+          Critical points occur where <m>f'(x)=0</m> or where <m>f'(x)</m> is undefined (while <m>f</m> is defined).
+          The equation <m>f'(x)=0</m> is satisfied when <m>2x+1=0</m>, so <m>x=-\frac12</m>.
+          The derivative is undefined at <m>x=0</m> and <m>x=1</m>.
+          Since <m>f(1)</m> is undefined, <m>x=1</m> is a vertical asymptote of the function.
+          Since <m>f(0)</m> is defined but the derivative is not, <m>x=0</m> is a critical point.
+        </p>
+
+        <p>
+          A sign analysis for <m>f'(x)</m> shows:
+        </p>
+
+        <me>
+          \begin{array}{c|c|c|c|c|c|c}
+          x &amp; \quad &amp; -\frac12 &amp; \quad &amp; 0 &amp; \quad &amp; 1 \ \ \ \\ \hline
+          f'(x) &amp; + &amp; 0 &amp; - &amp; \text{undef} &amp; + &amp; \text{undef} \ \ - \\
+          \hline
+          f(x) &amp; \nearrow &amp; &amp; \searrow &amp; &amp; \nearrow &amp; \text{VA} \ \searrow
+          \end{array}
+        </me>
+
+        <p>
+          Therefore <m>x=-\frac12</m> is a local maximum.
+          At <m>x=0</m>, the graph has a cusp: the function reaches a local minimum at the origin,
+          but the tangent line is vertical rather than horizontal.
+          At <m>x=1</m>, there is a vertical asymptote, and the function grows without bound as <m>x\to 1^\pm</m>.
+        </p>
+
+        <p>
+          Inflection points occur where <m>f''(x)=0</m> and concavity changes.
+          Solve <m>14x^2+14x-1=0</m>:
+        </p>
+
+        <me>
+          x=\frac{-14\pm\sqrt{14^2-4(14)(-1)}}{2(14)}
+          =\frac{-14\pm 6\sqrt7}{28}
+          =\frac{-7\pm 3\sqrt7}{14}.
+        </me>
+
+        <p>
+          These values (approximately <m>-1.07</m> and <m>0.07</m>) are candidates,
+          and checking concavity confirms that the concavity changes at both, so they are inflection points.
+        </p>
+
+        <p>
+          Finally, as <m>|x|\to\infty</m>, the factors <m>x</m> and <m>x-1</m> are nearly the same,
+          so we compare with
+        </p>
+
+        <me>
+          f(x)=\frac{x^{2/3}}{(x-1)^2}\approx\frac{x^{2/3}}{x^2}=x^{-4/3}.
+        </me>
+
+        <p>
+          This shows <m>f(x)\to 0</m> as <m>x\to\pm\infty</m>.
+          Combining these features produces a reliable sketch.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-curve-sketching-method">
+    <title>A Method for Curve Sketching</title>
+
+    <algorithm xml:id="strat-curve-sketching">
+      <title>Curve Sketching Checklist</title>
+      <ol>
+        <li>Compute <m>f'(x)</m> and <m>f''(x)</m>.</li>
+        <li>Find critical points from <m>f'(x)=0</m> and where <m>f'(x)</m> is undefined.</li>
+        <li>Use the sign of <m>f'(x)</m> to determine where the function increases or decreases and to classify critical points.</li>
+        <li>Find possible inflection points from <m>f''(x)=0</m> and where <m>f''(x)</m> is undefined.</li>
+        <li>Use the sign of <m>f''(x)</m> to determine concavity and confirm inflection points.</li>
+        <li>Find intercepts and identify any vertical asymptotes from the domain.</li>
+        <li>Describe end behavior as <m>x\to\pm\infty</m> (we will develop stronger tools for this soon).</li>
+        <li>Check for symmetry when it is helpful (<m>f(-x)=f(x)</m> or <m>f(-x)=-f(x)</m>).</li>
+        <li>Combine these features into a clear sketch.</li>
+      </ol>
+    </algorithm>
+
+    <remark xml:id="rem-end-behavior-future">
+      <p>
+        We will return to end behavior and asymptotic comparisons in more detail in the next part of curve sketching.
+      </p>
+    </remark>
+  </subsection>
+
+
+  <subsection xml:id="additional-worked-examples-curve1">
+    <title>Additional Worked-Out Examples</title>
+
+    <p>
+      To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+      If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+      fully worked-out examples are available in:
+      <alert>
+        <xref ref="subsec-derivApp-curve1">
+          Additional Examples for Curve Sketching Part 1
+        </xref>
+      </alert>
+    </p>
+  </subsection>
+
+  <exercises xml:id="exercises-curve-sketching-1">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Conceptual Questions</title>
+
+      <exercise xml:id="tf-cs1-01">
+        <statement>
+          <p>
+            True or False: If <m>f'(c)=0</m>, then <m>x=c</m> must be a local maximum or minimum.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>False.</emph> The point could be a stationary point where the function does not change direction.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-cs1-02">
+        <statement>
+          <p>
+            True or False: If <m>f''(c)&gt;0</m> and <m>f'(c)=0</m>, then <m>x=c</m> is a local minimum.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>True.</emph> This is the Second Derivative Test.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="tf-cs1-03">
+        <statement>
+          <p>
+            True or False: An inflection point must occur where <m>f''(c)=0</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <emph>False.</emph> <m>f''(c)=0</m> is a common candidate, but an inflection point can occur where <m>f''</m> is undefined as well.
+          </p>
+        </solution>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Algebraic Practice</title>
+
+      <exercise xml:id="prob-cs1-poly">
+        <statement>
+          <p>
+            Let <m>f(x)=x^4-4x^2</m>.
+            Find the critical points, intervals of increase/decrease, concavity, and inflection points.
+            Then sketch a graph.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-cs1-rational">
+        <statement>
+          <p>
+            Let <m>f(x)=\dfrac{x}{x^2+1}</m>.
+            Find where <m>f</m> is increasing or decreasing and where it is concave up or concave down.
+            Then sketch a graph.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Graphical and Interpretation Problems</title>
+
+      <exercise xml:id="prob-cs1-sign-chart">
+        <statement>
+          <p>
+            A differentiable function has critical points at <m>x=-2</m> and <m>x=1</m>.
+            The sign of <m>f'(x)</m> is positive on <m>(-\infty,-2)</m>, negative on <m>(-2,1)</m>,
+            and positive on <m>(1,\infty)</m>.
+            Describe the behavior of the graph and classify the critical points.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-cs1-concavity-chart">
+        <statement>
+          <p>
+            The second derivative satisfies <m>f''(x)&lt;0</m> for <m>x&lt;3</m> and <m>f''(x)&gt;0</m> for <m>x&gt;3</m>.
+            What does this say about concavity and inflection points?
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

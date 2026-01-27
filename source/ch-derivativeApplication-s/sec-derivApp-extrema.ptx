@@ -3,6 +3,274 @@
 <section xml:id="sec-derivApp-extrema" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Extrema</title>
 
-  <p> Text of section. </p>
+ <objectives>
+    <ul>
+      <li>Define and distinguish between absolute and local maxima and minima.</li>
+      <li>Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.</li>
+      <li>Identify critical points of a function.</li>
+      <li>Apply derivatives to locate and classify extrema on a closed interval.</li>
+      <li>Understand how discontinuities and nondifferentiable points affect extrema.</li>
+    </ul>
+  </objectives>
+
+  <p>
+    In many real-world problems, we are not just interested in how a function behaves,
+    but in finding its largest or smallest possible values.
+    For example, we might want to know the maximum height of a projectile,
+    the minimum cost of producing an item, or the highest temperature reached during a day.
+    Problems like these lead us to the study of <term>extrema</term>.
+  </p>
+
+  <subsection xml:id="ssec-absolute-extrema">
+    <title>Absolute Maxima and Minima</title>
+
+    <definition xml:id="def-absolute-extrema">
+      <title>Absolute Maximum and Minimum</title>
+      <statement>
+        <p>
+          Let <m>f</m> be a function defined on a closed interval <m>[a,b]</m>.
+        </p>
+        <p>
+          An <term>absolute maximum</term> of <m>f</m> on <m>[a,b]</m> occurs at a point <m>x=c</m> in <m>[a,b]</m>
+          if
+          <m>f(c)\ge f(x)</m> for all <m>x\in[a,b]</m>.
+        </p>
+        <p>
+          An <term>absolute minimum</term> of <m>f</m> on <m>[a,b]</m> occurs at a point <m>x=c</m> in <m>[a,b]</m>
+          if
+          <m>f(c)\le f(x)</m> for all <m>x\in[a,b]</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The output values <m>f(c)</m> are called the <em>maximum value</em> and <em>minimum value</em> of the function.
+      While these values are unique, it is possible for a function to attain the same maximum
+      or minimum value at more than one input.
+    </p>
+
+    <remark>
+      <p>
+        The terms <em>maximum</em>, <em>minimum</em>, and <em>extremum</em> come from Latin.
+        Their plural forms are <em>maxima</em>, <em>minima</em>, and <em>extrema</em>.
+      </p>
+    </remark>
+
+    <theorem xml:id="thm-extreme-value">
+      <title>Extreme Value Theorem</title>
+      <statement>
+        <p>
+          If a function <m>f</m> is continuous on a closed, finite interval <m>[a,b]</m>,
+          then <m>f</m> has at least one absolute maximum and at least one absolute minimum on <m>[a,b]</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <remark>
+      <p>
+        This theorem does not tell us <em>where</em> the extrema occur, only that they must exist.
+        If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="ssec-local-extrema">
+    <title>Local Maxima and Minima</title>
+
+    <p>
+      Absolute extrema describe the highest and lowest points over an entire interval.
+      A broader concept focuses only on nearby behavior.
+    </p>
+
+    <definition xml:id="def-local-extrema">
+      <title>Local Maximum and Minimum</title>
+      <statement>
+        <p>
+          A <term>local maximum</term> of a function <m>f</m> occurs at <m>x=c</m> if
+          <m>f(c)\ge f(x)</m> for all <m>x</m> sufficiently close to <m>c</m>.
+        </p>
+        <p>
+          A <term>local minimum</term> of a function <m>f</m> occurs at <m>x=c</m> if
+          <m>f(c)\le f(x)</m> for all <m>x</m> sufficiently close to <m>c</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Intuitively, local maxima correspond to hilltops and local minima correspond to valley bottoms.
+      Every absolute maximum or minimum is also a local extremum, but not every local extremum
+      is an absolute one.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-derivatives-extrema">
+    <title>Derivatives and Extrema</title>
+
+    <p>
+      Calculus provides a powerful tool for locating extrema.
+      If a function has a smooth hilltop or valley bottom at an interior point,
+      the tangent line there is horizontal.
+    </p>
+
+    <theorem xml:id="thm-first-derivative-extrema">
+      <title>First Derivative Test for Extrema</title>
+      <statement>
+        <p>
+          If <m>f</m> has a local maximum or minimum at an interior point <m>x=c</m>
+          and <m>f</m> is differentiable at <m>c</m>, then
+          <m>f'(c)=0</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <remark>
+      <p>
+        The converse is not true.
+        A point where <m>f'(c)=0</m> need not be a maximum or minimum.
+      </p>
+    </remark>
+
+  </subsection>
+
+  <subsection xml:id="ssec-critical-points">
+    <title>Critical Points</title>
+
+    <definition xml:id="def-critical-point">
+      <title>Critical Point</title>
+      <statement>
+        <p>
+          A <term>critical point</term> (or <term>critical number</term>) of a function <m>f</m>
+          is a point <m>x=c</m> where either
+        </p>
+        <me>
+          f'(c)=0
+          \quad\text{or}\quad
+          f'(c)\text{ is undefined}.
+        </me>
+      </statement>
+    </definition>
+
+    <p>
+      Critical points are the only possible locations of local extrema in the interior of an interval.
+      Endpoints of the interval must also be considered when searching for absolute extrema.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-method-extrema">
+    <title>A Method for Finding Absolute Extrema</title>
+
+    <algorithm xml:id="strat-extrema">
+      <title>Finding Absolute Maxima and Minima</title>
+      <p>
+        To find the absolute maximum and minimum of a function <m>f</m> on a closed interval <m>[a,b]</m>:
+      </p>
+      <ol>
+        <li>Find all critical points of <m>f</m> in <m>[a,b]</m>.</li>
+        <li>Evaluate <m>f</m> at each critical point and at the endpoints <m>a</m> and <m>b</m>.</li>
+        <li>The largest value is the absolute maximum; the smallest value is the absolute minimum.</li>
+        <li>If <m>f</m> is not continuous, also examine behavior near discontinuities.</li>
+      </ol>
+    </algorithm>
+  </subsection>
+
+  <subsection xml:id="ssec-extrema-examples">
+    <title>Examples and Common Pitfalls</title>
+
+    <example xml:id="ex-stationary-point">
+      <statement>
+        <p>
+          Consider <m>f(x)=x^3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We compute <m>f'(x)=3x^2</m>, so the only critical point is <m>x=0</m>.
+          However, the graph has no local maximum or minimum at this point.
+          Instead, <m>x=0</m> is a <term>stationary point</term> where the function
+          briefly levels off before continuing to increase.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-abs-value-extrema">
+      <statement>
+        <p>
+          Let <m>f(x)=|2x^2+2x-1|</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The derivative is undefined when the expression inside the absolute value is zero,
+          producing corners in the graph.
+          These points must be included as critical points, and in fact they correspond
+          to the absolute minimum values of the function.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-no-absolute-maximum">
+      <statement>
+        <p>
+          Let <m>f(x)=x^2+\dfrac{1}{(x-1)^2}</m> on <m>[-2,2]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Although <m>f</m> has critical points and endpoint values,
+          the function increases without bound near <m>x=1</m>.
+          Therefore, <m>f</m> has no absolute maximum on this interval,
+          but it does have an absolute minimum.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-derivApp-extrema">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-derivApp-extrema">
+        Additional Worked-Out Problems for Extrema
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-extrema">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Conceptual Questions</title>
+
+      <exercise>
+        <statement>
+          <p>
+            True or False: If <m>f'(c)=0</m>, then <m>x=c</m> is a local maximum or minimum.
+          </p>
+        </statement>
+        <solution>
+          <p><alert>False.</alert> A zero derivative may correspond to a stationary point.</p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            True or False: A continuous function on <m>[a,b]</m> must have an absolute maximum.
+          </p>
+        </statement>
+        <solution>
+          <p><alert>True.</alert> This follows from the Extreme Value Theorem.</p>
+        </solution>
+      </exercise>
+
+    </exercisegroup>
+  </exercises>
 
 </section>

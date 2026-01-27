@@ -565,7 +565,7 @@ the function doesn’t have a finite limit, but the way it “blows up” is sti
   in magnitude near that point. 
   </p>
 
-  <insight xml:id="strat-locating-va">
+  <algorithm xml:id="strat-locating-va">
     <title>How to Locate Vertical Asymptotes</title>
     
     <p>
@@ -573,7 +573,7 @@ the function doesn’t have a finite limit, but the way it “blows up” is sti
       Once we have these candidates, 
       we check the one-sided limits to determine whether the function increases toward <m>\infty</m> or decreases toward <m>-\infty</m> on each side.
     </p>
-  </insight>
+  </algorithm>
 
   <p>
     Now let's see it in action with an example

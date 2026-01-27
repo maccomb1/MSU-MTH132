@@ -29,7 +29,7 @@
       Instead of solving directly, we analyze where the function is positive or negative.
     </p>
 
-    <insight xml:id="pr-test-point-method">
+    <algorithm xml:id="pr-test-point-method">
       <statement>
         <p>
           To solve an inequality using test points:
@@ -42,7 +42,7 @@
           <li>Determine which intervals satisfy the inequality.</li>
         </ol>
       </statement>
-    </insight>
+    </algorithm>
 
     <remark>
       <p>

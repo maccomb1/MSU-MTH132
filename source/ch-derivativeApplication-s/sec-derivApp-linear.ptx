@@ -376,7 +376,7 @@ linearization provides a good estimate for values of <m>x</m> near <m>a=1</m>.
     If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
     fully worked-out examples are available via: 
     <alert>
-      <xref ref="subsec-derivApp-placeholder">
+      <xref ref="subsec-derivApp-linear">
         Additional Worked-Out Problems for Linear Approximation and L’Hopital’s Rule
       </xref>
     </alert>
