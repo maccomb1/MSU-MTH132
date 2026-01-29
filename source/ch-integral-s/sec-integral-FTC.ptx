@@ -3,6 +3,396 @@
 <section xml:id="sec-integral-FTC" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Fundamental Theorem of Calculus</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Explain how an integral with a variable upper limit defines an antiderivative.</li>
+      <li>Use the First Fundamental Theorem of Calculus to differentiate integral functions.</li>
+      <li>Use the Second Fundamental Theorem of Calculus to evaluate definite integrals from an antiderivative.</li>
+      <li>Interpret <m>\displaystyle \int_a^b f(x)\,dx</m> as total change <m>F(b)-F(a)</m> when <m>F'(x)=f(x)</m>.</li>
+      <li>Sketch an integral function <m>\displaystyle I(x)=\int_a^x f(t)\,dt</m> using the fact that <m>I'(x)=f(x)</m>.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-ftoc-integral-as-antiderivative">
+    <title>Integral as Antiderivative</title>
+
+    <p>
+      In the previous section we used a velocity function <m>v(t)</m> to compute distance traveled over a time interval <m>[a,b]</m>.
+      The distance is an integral defined as a limit of Riemann sums, adding up (velocity)<m>\times</m>(time) over many small time increments:
+    </p>
+
+    <me>
+      \text{distance traveled}
+      \ =\
+      s(b)-s(a)
+      \ =\
+      \lim_{\Delta t\to 0}\sum_{i=1}^n v(t_i)\,\Delta t
+      \ =\
+      \int_a^b v(t)\,dt.
+    </me>
+
+    <p>
+      If we fix the starting time <m>a</m> and assume <m>s(a)=0</m>, then taking a variable endpoint <m>b=x</m> gives a function
+    </p>
+
+    <me>
+      s(x) \ =\ \int_a^x v(t)\,dt.
+    </me>
+
+    <p>
+      Since the rate of change of position is velocity, <m>s'(x)=v(x)</m>.
+      The remarkable point is that the integral function
+      <m>\displaystyle \int_a^x v(t)\,dt</m> always produces an antiderivative of <m>v</m>,
+      even if we cannot find an antiderivative by reversing derivative formulas.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-ftoc-first-ftc">
+    <title>The First Fundamental Theorem of Calculus</title>
+
+    <theorem xml:id="thm-ftc-1">
+      <title>First Fundamental Theorem of Calculus</title>
+      <statement>
+        <p>
+          Let <m>f</m> be continuous on <m>[a,b]</m> and define
+        </p>
+        <me>
+          I(x)\ =\ \int_a^x f(t)\,dt.
+        </me>
+        <p>
+          Then <m>I'(x)=f(x)</m> for <m>x\in(a,b)</m>.
+          In particular, <m>I</m> is the unique antiderivative of <m>f</m> satisfying <m>I(a)=0</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      In physical language: the rate of change of a cumulative effect up to time <m>x</m> is the strength of the effect at time <m>x</m>.
+    </p>
+
+    <p>
+      <em>Proof idea.</em>
+      We start from the definition of the derivative:
+      <m>I'(x)=\lim_{h\to 0}\dfrac{I(x+h)-I(x)}{h}</m>.
+      Using the splitting rule for integrals,
+      <m>\int_a^{x+h}=\int_a^x+\int_x^{x+h}</m>, so:
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      \displaystyle \frac{I(x+h)-I(x)}{h}
+      &amp;=&amp;
+      \displaystyle \frac{1}{h}\left(\int_a^{x+h} f(t)\,dt-\int_a^x f(t)\,dt\right)
+      \\[0.8em]
+      &amp;=&amp;
+      \displaystyle \frac{1}{h}\int_x^{x+h} f(t)\,dt.
+      \end{array}
+    </me>
+
+    <p>
+      When <m>h</m> is small, the integral <m>\int_x^{x+h} f(t)\,dt</m> is the area under <m>f</m> over a very short interval, so it behaves like (height)<m>\times</m>(width).
+      To make that precise, let <m>N_h</m> be the minimum value of <m>f</m> on <m>[x,x+h]</m> and <m>M_h</m> be the maximum value on <m>[x,x+h]</m>.
+      Since <m>N_h\le f(t)\le M_h</m> on this interval, the bounds rule gives
+    </p>
+
+    <me>
+      \begin{array}{c}
+      \displaystyle
+      N_h \le \frac{1}{h}\int_x^{x+h} f(t)\,dt \le M_h.
+      \end{array}
+    </me>
+
+    <p>
+      As <m>h\to 0</m>, the interval shrinks to the point <m>x</m>, so by continuity
+      <m>\lim_{h\to 0}N_h=\lim_{h\to 0}M_h=f(x)</m>.
+      By the squeeze theorem,
+      <m>\displaystyle \lim_{h\to 0}\frac{1}{h}\int_x^{x+h} f(t)\,dt=f(x)</m>,
+      hence <m>I'(x)=f(x)</m>.
+      The condition <m>I(a)=\int_a^a f(t)\,dt=0</m> and the antiderivative uniqueness theorem give the uniqueness statement.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-ftoc-derivative-of-integral-functions">
+    <title>Derivatives of Integral Functions</title>
+
+    <p>
+      The First Fundamental Theorem can be used as a basic derivative rule:
+      if <m>f</m> is continuous, then
+    </p>
+
+    <me>
+      \frac{d}{dx}\left(\int_a^x f(t)\,dt\right) \ =\ f(x).
+    </me>
+
+    <p>
+      Here <m>a</m> is a constant, <m>x</m> is the input, and <m>t</m> is a dummy variable that only matters inside the integral.
+      If the upper limit is a function <m>g(x)</m>, then the chain rule gives
+    </p>
+
+    <me>
+      \frac{d}{dx}\left(\int_a^{g(x)} f(t)\,dt\right) \ =\ f(g(x))\,g'(x).
+    </me>
+
+    <example xml:id="ex-ftoc-derivative-variable-limits">
+      <statement>
+        <p>
+          Find the derivative of <m>\displaystyle F(x)=\int_{2x}^{x^3}\sin(t)\,dt</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Rewrite with a fixed lower limit and then differentiate:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle F(x)
+          &amp;=&amp;
+          \displaystyle \int_{2x}^{x^3}\sin(t)\,dt
+          \ =\
+          \int_{0}^{x^3}\sin(t)\,dt - \int_{0}^{2x}\sin(t)\,dt.
+          \end{array}
+        </me>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle F'(x)
+          &amp;=&amp;
+          \displaystyle \sin(x^3)\cdot (x^3)' \;-\; \sin(2x)\cdot (2x)'
+          \\[0.6em]
+          &amp;=&amp;
+          3x^2\sin(x^3)-2\sin(2x).
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-ftoc-constant-limits">
+      <statement>
+        <p>
+          Let <m>a</m> and <m>b</m> be constants. Find <m>F'(x)</m> if <m>\displaystyle F(x)=\int_{2a}^{b^3}\sin(t)\,dt</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The expression <m>\int_{2a}^{b^3}\sin(t)\,dt</m> is a number that does not depend on <m>x</m>, so <m>F</m> is constant and <m>F'(x)=0</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-ftoc-sketching-integral-functions">
+    <title>Sketching Integral Functions</title>
+
+    <p>
+      An integral function <m>I(x)=\int_a^x f(t)\,dt</m> may not have an elementary formula.
+      Even so, it can be understood: its derivative is <m>I'(x)=f(x)</m>.
+      In other words, the slope of <m>y=I(x)</m> is determined by the height of <m>y=f(x)</m>.
+      This lets us use the same curve-sketching ideas from earlier sections.
+    </p>
+
+    <example xml:id="ex-ftoc-sketch-sin-x2">
+      <statement>
+        <p>
+          Sketch the function <m>\displaystyle I(x)=\int_0^x \sin(t^2)\,dt</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          By the First Fundamental Theorem, <m>I'(x)=\sin(x^2)</m>.
+          Critical points occur where <m>I'(x)=0</m>, that is where <m>\sin(x^2)=0</m>.
+          This happens when <m>x^2=k\pi</m> for integers <m>k</m>, so
+          <m>x=0,\pm\sqrt{\pi},\pm\sqrt{2\pi},\ldots</m>.
+        </p>
+
+        <p>
+          For concavity, <m>I''(x)=(\sin(x^2))'=2x\cos(x^2)</m>.
+          So possible inflection points occur when <m>2x\cos(x^2)=0</m>, i.e.
+          <m>x=0</m> or <m>\cos(x^2)=0</m>, which means <m>x^2=\frac{\pi}{2}+k\pi</m>.
+        </p>
+
+        <p>
+          Using the sign of <m>I'(x)=\sin(x^2)</m> gives the rough shape:
+        </p>
+
+        <me>
+          \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c}
+          x     &amp;\quad &amp; -\sqrt{2\pi} &amp;\quad &amp; -\sqrt{\pi} &amp;\quad &amp; 0 &amp;\quad &amp; \sqrt{\pi} &amp;\quad &amp; \sqrt{2\pi} &amp;\quad \\ \hline
+          I'(x) &amp; + &amp; 0 &amp; - &amp; 0 &amp; + &amp; 0 &amp; + &amp; 0 &amp; - &amp; 0 &amp; + \\
+          \hline
+          I(x)  &amp; \nearrow &amp;  &amp; \searrow &amp;  &amp; \nearrow &amp; 0 &amp; \nearrow &amp;  &amp; \searrow &amp;  &amp; \nearrow
+          \end{array}
+        </me>
+
+        <p>
+          Because <m>\sin(x^2)</m> is even, the integral function is odd:
+          <m>I(-x)=-I(x)</m>. So the graph has <m>180^\circ</m> rotational symmetry about the origin.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-ftoc-second-ftc">
+    <title>The Second Fundamental Theorem of Calculus</title>
+
+    <theorem xml:id="thm-ftc-2">
+      <title>Second Fundamental Theorem of Calculus</title>
+      <statement>
+        <p>
+          Suppose <m>F</m> is an antiderivative of <m>f</m> on <m>[a,b]</m>, so <m>F'(x)=f(x)</m>.
+          Then
+        </p>
+        <me>
+          \int_a^b f(x)\,dx \ =\ F(b)-F(a).
+        </me>
+        <p>
+          That is, the integral of a rate of change is the total change.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      <em>Proof idea.</em>
+      The First Fundamental Theorem says <m>I(x)=\int_a^x f(t)\,dt</m> is an antiderivative of <m>f</m>.
+      Any two antiderivatives differ by a constant, so <m>I(x)=F(x)+C</m>.
+      Since <m>I(a)=0</m>, we get <m>0=F(a)+C</m>, so <m>C=-F(a)</m>.
+      Thus <m>I(x)=F(x)-F(a)</m>, and evaluating at <m>x=b</m> gives
+      <m>\int_a^b f(x)\,dx=I(b)=F(b)-F(a)</m>.
+    </p>
+
+    <example xml:id="ex-ftc-evaluate-even-poly">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_{-\sqrt{5}}^{\sqrt{5}} \left(5+4x^2-x^4\right)\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          An antiderivative is <m>F(x)=5x+\frac{4}{3}x^3-\frac{1}{5}x^5</m>.
+          Apply the theorem:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int_{-\sqrt{5}}^{\sqrt{5}} (5+4x^2-x^4)\,dx
+          &amp;=&amp;
+          F(\sqrt{5})-F(-\sqrt{5})
+          \\[0.6em]
+          &amp;=&amp;
+          2F(\sqrt{5})
+          \\[0.6em]
+          &amp;=&amp;
+          2\left(5\sqrt{5}+\frac{4}{3}(5\sqrt{5})-\frac{1}{5}(25\sqrt{5})\right)
+          \\[0.6em]
+          &amp;=&amp;
+          2\left(\frac{20}{3}\sqrt{5}\right)
+          \ =\
+          \frac{40}{3}\sqrt{5}.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-ftc-area-poly">
+      <statement>
+        <p>
+          Determine the area under <m>y=5+4x^2-x^4</m> and above the <m>x</m>-axis.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First find where the graph meets the <m>x</m>-axis:
+          <m>5+4x^2-x^4=0</m>. Let <m>u=x^2</m>, so the equation becomes
+          <m>5+4u-u^2=0</m>, which has solutions <m>u=-1</m> and <m>u=5</m>.
+          Only <m>u=5</m> gives real <m>x</m>, so the intercepts are <m>x=\pm\sqrt{5}</m>.
+          The function is nonnegative between these intercepts, so the area is
+        </p>
+
+        <me>
+          \text{Area}
+          \ =\
+          \int_{-\sqrt{5}}^{\sqrt{5}} (5+4x^2-x^4)\,dx
+          \ =\
+          \frac{40}{3}\sqrt{5}.
+        </me>
+
+        <p>
+          Quick check: the base is about <m>2\sqrt{5}\approx 4.47</m> and the average height is around <m>7</m>, so an area near <m>31</m> is reasonable.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-integral-FTC">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-FTC">
+        Additional Worked-Out Problems for The Fundamental Theorem of Calculus
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-ftoc">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Using the First Fundamental Theorem</title>
+
+      <exercise xml:id="prob-ftoc-01">
+        <statement>
+          <p>
+            Let <m>\displaystyle I(x)=\int_{1}^{x} (t^3-2t)\,dt</m>.
+            Compute <m>I'(x)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-ftoc-02">
+        <statement>
+          <p>
+            Compute <m>\displaystyle \frac{d}{dx}\left(\int_{0}^{x^2} \cos(t)\,dt\right)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-ftoc-03">
+        <statement>
+          <p>
+            Compute <m>\displaystyle \frac{d}{dx}\left(\int_{\sin(x)}^{3} \sqrt{1+t^2}\,dt\right)</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Using the Second Fundamental Theorem</title>
+
+      <exercise xml:id="prob-ftoc-04">
+        <statement>
+          <p>Evaluate <m>\displaystyle \int_{0}^{2} (3x^2-4)\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-ftoc-05">
+        <statement>
+          <p>Evaluate <m>\displaystyle \int_{-1}^{1} (x^3+2x)\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-ftoc-06">
+        <statement>
+          <p>Find the area between <m>y=x^2-4</m> and the <m>x</m>-axis on the interval <m>[0,3]</m>.</p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

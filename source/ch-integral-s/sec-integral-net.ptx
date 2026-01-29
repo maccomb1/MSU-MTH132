@@ -3,6 +3,406 @@
 <section xml:id="sec-integral-net" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Net Change Theorem and Indefinite Integrals</title>
 
-  <p> Text of section. </p>
+
+  <objectives>
+    <ul>
+      <li>Interpret a definite integral as net change of a quantity whose rate of change is known.</li>
+      <li>Use indefinite integral notation to represent the family of all antiderivatives.</li>
+      <li>Compute net change from a velocity (or rate) function using <m>F(b)-F(a)</m>.</li>
+      <li>Compute the average value of a function on an interval.</li>
+      <li>State and use the Mean Value Theorem for Integrals.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-net-change-review">
+    <title>Review: Four Meanings of the Definite Integral</title>
+
+    <p>
+      The definite integral <m>\displaystyle \int_a^b f(x)\,dx</m> has several complementary interpretations.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          <em>Physical:</em> Suppose <m>y</m> and <m>z</m> are physical quantities that depend continuously on an independent variable <m>x</m>,
+          with <m>y=f(x)</m> and <m>z=F(x)</m>. If <m>y</m> is the rate of change of <m>z</m>, meaning <m>y=\dfrac{dz}{dx}</m>,
+          then the integral of <m>y</m> over <m>[a,b]</m> is the total change in <m>z</m> from <m>x=a</m> to <m>x=b</m>.
+        </p>
+
+        <p>
+          In Leibniz notation, this is written
+        </p>
+
+        <me>
+          \int_a^b y\,dx \ =\ \left.z\right|_{x=a}^{x=b}.
+        </me>
+
+        <p>
+          In Newton notation, if <m>f(x)=F'(x)</m>, then
+        </p>
+
+        <me>
+          \int_a^b f(x)\,dx \ =\ F(b)-F(a),
+        </me>
+
+        <p>
+          which is the Second Fundamental Theorem of Calculus.
+          If an initial value <m>F(a)</m> is known, then
+        </p>
+
+        <me>
+          F(x)\ =\ F(a) + \int_a^x f(t)\,dt
+          \qquad\text{and}\qquad
+          F'(x)\ =\ \frac{d}{dx}\left(\int_a^x f(t)\,dt\right)\ =\ f(x),
+        </me>
+
+        <p>
+          which is the First Fundamental Theorem of Calculus.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <em>Geometric:</em> The integral is the signed area between the graph <m>y=f(x)</m> and the <m>x</m>-axis on <m>[a,b]</m>,
+          counting regions above the axis as positive and regions below as negative.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <em>Numerical:</em> Divide <m>[a,b]</m> into <m>n</m> increments of width <m>\Delta x=\dfrac{b-a}{n}</m>.
+          Choose sample points <m>x_1,\ldots,x_n</m> (one in each increment).
+          Then the integral is approximated by a Riemann sum:
+        </p>
+
+        <me>
+          \int_a^b f(x)\,dx \ \approx\ \sum_{i=1}^n f(x_i)\,\Delta x
+          \ =\ f(x_1)\Delta x + \cdots + f(x_n)\Delta x,
+        </me>
+
+        <p>
+          and the exact integral is the limit as <m>n\to\infty</m> (so <m>\Delta x\to 0</m>).
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <em>Algebraic:</em> If we can find an antiderivative <m>F</m> with <m>F'(x)=f(x)</m>, then
+          <m>\displaystyle \int_a^b f(x)\,dx = F(b)-F(a)</m>.
+          Later we will develop systematic methods for finding antiderivatives (for example, substitution, which reverses the Chain Rule).
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="ssec-net-change">
+    <title>The Net Change Theorem</title>
+
+    <theorem xml:id="thm-net-change">
+      <title>Net Change Theorem</title>
+      <statement>
+        <p>
+          If a quantity <m>z</m> changes with respect to <m>x</m> at a rate <m>\dfrac{dz}{dx}=f(x)</m>,
+          then the net change in <m>z</m> on <m>[a,b]</m> is
+        </p>
+
+        <me>
+          z(b)-z(a)\ =\ \int_a^b f(x)\,dx.
+        </me>
+
+        <p>
+          Equivalently, if <m>F'(x)=f(x)</m>, then <m>z(b)-z(a)=F(b)-F(a)</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      The phrase <em>net change</em> emphasizes that increases and decreases both count:
+      if the rate <m>f(x)</m> is sometimes positive and sometimes negative, the integral records the overall effect.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-indefinite-integrals">
+    <title>Indefinite Integral Notation</title>
+
+    <p>
+      Because antiderivatives and integrals are linked by the Fundamental Theorems, we use the integral sign as notation for the most general antiderivative:
+    </p>
+
+    <me>
+      \int f(x)\,dx \ =\ F(x)+C,
+      \qquad\text{where }F'(x)=f(x)\text{ and }C\text{ is any constant}.
+    </me>
+
+    <p>
+      The expression <m>\displaystyle \int f(x)\,dx</m> is called an <em>indefinite integral</em>.
+      It represents a family of functions (all antiderivatives), not a single number.
+    </p>
+
+    <example xml:id="ex-indef-int-power">
+      <statement>
+        <p>
+          Compute <m>\displaystyle \int x^2\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>\dfrac{d}{dx}\left(\tfrac13 x^3\right)=x^2</m>, we have
+        </p>
+        <me>
+          \int x^2\,dx \ =\ \tfrac13 x^3 + C.
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-net-change-velocity">
+      <statement>
+        <p>
+          A car has velocity <m>v(t)=10t+10\sin(\pi t)</m> (meters per second).
+          How far does it travel from <m>t=0</m> to <m>t=3</m>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Distance traveled is net change in position:
+          <m>\displaystyle s(3)-s(0)=\int_0^3 v(t)\,dt</m>.
+          First find an antiderivative:
+        </p>
+
+        <me>
+          \int \left(10t+10\sin(\pi t)\right)\,dt
+          \ =\ 5t^2 - \frac{10}{\pi}\cos(\pi t) + C.
+        </me>
+
+        <p>
+          Now evaluate as a definite integral:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int_0^3 \left(10t+10\sin(\pi t)\right)\,dt
+          &amp;=&amp;
+          \left. \left(5t^2 - \frac{10}{\pi}\cos(\pi t)\right)\right|_{t=0}^{t=3}
+          \\[0.9em]
+          &amp;=&amp;
+          \left(5(3^2) - \frac{10}{\pi}\cos(3\pi)\right)
+          - \left(5(0^2) - \frac{10}{\pi}\cos(0)\right)
+          \\[0.9em]
+          &amp;=&amp;
+          \left(45 - \frac{10}{\pi}(-1)\right) - \left(0 - \frac{10}{\pi}(1)\right)
+          \\[0.9em]
+          &amp;=&amp;
+          45 + \frac{20}{\pi}
+          \ \approx\ 51.4\ \text{meters.}
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-average-value">
+    <title>Average Value of a Function</title>
+
+    <p>
+      In a Riemann sum approximation,
+      <m>\sum_{i=1}^n f(x_i)\Delta x</m> can be rewritten to highlight an average of the sample values:
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      \displaystyle \sum_{i=1}^n f(x_i)\Delta x
+      &amp;=&amp;
+      \displaystyle \sum_{i=1}^n f(x_i)\,\frac{b-a}{n}
+      \\[0.9em]
+      &amp;=&amp;
+      \displaystyle (b-a)\,\frac{f(x_1)+\cdots+f(x_n)}{n}.
+      \end{array}
+    </me>
+
+    <p>
+      Taking the limit as <m>n\to\infty</m> motivates the definition of the average value of <m>f</m> on <m>[a,b]</m>:
+    </p>
+
+    <definition xml:id="def-average-value">
+      <statement>
+        <p>
+          The <em>average value</em> of <m>f</m> on <m>[a,b]</m> is
+        </p>
+        <me>
+          f_{\text{avg}}
+          \ =\
+          \frac{1}{b-a}\int_a^b f(x)\,dx.
+        </me>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-average-sqrt">
+      <statement>
+        <p>
+          Find the average value of <m>f(x)=\sqrt{x}</m> on <m>[0,4]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          An antiderivative is <m>\int x^{1/2}\,dx=\frac{2}{3}x^{3/2}+C</m>. Therefore,
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle f_{\text{avg}}
+          &amp;=&amp;
+          \displaystyle \frac{1}{4-0}\int_0^4 \sqrt{x}\,dx
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \frac{1}{4}\left.\left(\frac{2}{3}x^{3/2}\right)\right|_{x=0}^{x=4}
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \frac{1}{4}\cdot\frac{2}{3}\cdot 4^{3/2}
+          \ =\
+          \frac{1}{4}\cdot\frac{2}{3}\cdot 8
+          \ =\
+          \frac{4}{3}
+          \ \approx\ 1.3.
+          \end{array}
+        </me>
+
+        <p>
+          Even though <m>\sqrt{x}</m> ranges from 0 to 2 on <m>[0,4]</m>, the average is above 1 because the graph bulges upward.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-average-velocity">
+      <statement>
+        <p>
+          Let <m>s(t)</m> be a position function with velocity <m>v(t)=s'(t)</m>.
+          Show that the average value of <m>v</m> on <m>[a,b]</m> equals total distance traveled divided by elapsed time.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Using the definition of average value and the Second Fundamental Theorem:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle v_{\text{avg}}
+          &amp;=&amp;
+          \displaystyle \frac{1}{b-a}\int_a^b v(t)\,dt
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \frac{1}{b-a}\int_a^b s'(t)\,dt
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \frac{1}{b-a}\left(s(b)-s(a)\right)
+          \ =\
+          \frac{s(b)-s(a)}{b-a}.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-mvt-integrals">
+    <title>Mean Value Theorem for Integrals</title>
+
+    <theorem xml:id="thm-mvt-integrals">
+      <title>Mean Value Theorem for Integrals</title>
+      <statement>
+        <p>
+          If <m>f</m> is continuous on <m>[a,b]</m>, then there exists a point <m>c\in(a,b)</m> such that
+        </p>
+
+        <me>
+          f(c)\ =\ \frac{1}{b-a}\int_a^b f(x)\,dx.
+        </me>
+
+        <p>
+          In words: at some point, the function attains its average value.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      <em>Proof idea.</em>
+      Let <m>F(x)=\int_a^x f(t)\,dt</m>. By the Mean Value Theorem for derivatives, there is <m>c\in(a,b)</m> such that
+      <m>F'(c)=\dfrac{F(b)-F(a)}{b-a}</m>.
+      By the First Fundamental Theorem, <m>F'(c)=f(c)</m>.
+      Also <m>F(b)-F(a)=\int_a^b f(x)\,dx</m>. Substituting gives the result.
+    </p>
+
+    <p>
+      In the example <m>f(x)=\sqrt{x}</m> on <m>[0,4]</m>, we found <m>f_{\text{avg}}=\frac{4}{3}</m>.
+      So there is <m>c\in(0,4)</m> with <m>\sqrt{c}=\frac{4}{3}</m>, meaning <m>c=\frac{16}{9}</m>.
+    </p>
+  </subsection>
+
+
+<subsection xml:id="additional-worked-problems-integral-net">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-net">
+        Additional Worked-Out Problems for Net Change Theorem and Indefinite Integrals
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-net-change-indef">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Net Change and Indefinite Integrals</title>
+
+      <exercise xml:id="prob-net-change-01">
+        <statement>
+          <p>
+            A bacteria culture grows at rate <m>r(t)=200e^{0.1t}</m> (cells per hour).
+            Interpret <m>\displaystyle \int_0^5 r(t)\,dt</m> in words.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-indef-01">
+        <statement>
+          <p>Compute <m>\displaystyle \int (6x^5-4\sec^2 x)\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-indef-02">
+        <statement>
+          <p>Compute <m>\displaystyle \int \left(3\cos(2x)-\frac{1}{x}\right)\,dx</m>.</p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Average Value</title>
+
+      <exercise xml:id="prob-avg-01">
+        <statement>
+          <p>
+            Find the average value of <m>f(x)=x^2</m> on <m>[1,4]</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-avg-02">
+        <statement>
+          <p>
+            Let <m>f</m> be continuous on <m>[a,b]</m> and suppose <m>0\le f(x)\le 10</m>.
+            Use the bounds rule to give an inequality for <m>f_{\text{avg}}</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

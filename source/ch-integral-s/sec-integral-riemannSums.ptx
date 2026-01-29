@@ -3,6 +3,404 @@
 <section xml:id="sec-integral-riemannSums" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Riemann Sums and Areas</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Connect the definite integral to accumulation: total change from a rate of change.</li>
+      <li>Approximate a definite integral using Riemann sums (left, right, and “upper/lower” estimates).</li>
+      <li>Interpret a definite integral geometrically as (signed) area under a curve.</li>
+      <li>Set up <m>\displaystyle \int_a^b f(x)\,dx</m> from a real-world description involving small increments <m>\Delta x</m>.</li>
+      <li>Use upper and lower sums to bound an integral and estimate a value to a specified accuracy.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-integral-review-derivatives">
+    <title>Review: Derivatives as Rates of Change</title>
+
+    <p>
+      A function <m>y=f(x)</m> has a derivative <m>f'(c)</m> with several complementary meanings.
+      We will lean on these meanings as we introduce the integral.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          <em>Physical:</em> If <m>y</m> depends on <m>x</m>, then <m>f'(c)</m> is the rate of change of <m>y</m> per tiny change in <m>x</m>,
+          starting at <m>x=c</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Geometric:</em> <m>f'(c)</m> is the slope of the graph <m>y=f(x)</m> at the point <m>(c,f(c))</m>, meaning the tangent line
+          near <m>x=c</m> is <m>y=f(c)+f'(c)(x-c)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Numerical:</em> For <m>x</m> near <m>c</m>, the derivative is approximated by a difference quotient:
+          <m>f'(c)\approx \dfrac{f(x)-f(c)}{x-c}</m>. This matches the linear approximation
+          <m>f(x)\approx f(c)+f'(c)(x-c)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Algebraic:</em> We define
+          <m>f'(c)=\displaystyle \lim_{x\to c}\dfrac{f(x)-f(c)}{x-c}</m>
+          and use derivative rules to compute <m>f'(x)</m> from a formula.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      The physical idea is the driving one: derivatives describe change, so they are essential in any system that evolves.
+      Once a situation is translated into a derivative statement, we can use numerical approximations or algebraic rules to answer questions.
+      For example, to find maximum values of <m>f(x)</m>, we look for places where the tangent slope is zero, so we solve <m>f'(x)=0</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-accumulation">
+    <title>Accumulation of Influence</title>
+
+    <p>
+      In the previous section we reversed differentiation algebraically: given a function <m>f(x)</m>, we looked for an antiderivative <m>F(x)</m>
+      with <m>F'(x)=f(x)</m>.
+      Now we will build a numerical definition of antiderivative that works even when no simple formula exists.
+    </p>
+
+    <p>
+      Think of <m>f(x)</m> as the influence on a quantity <m>F(x)</m>.
+      Near <m>x=c</m>, the derivative relationship <m>F'(c)=f(c)</m> says
+      <m>f(c)\approx \dfrac{\Delta F}{\Delta x}</m>, so
+    </p>
+
+    <me>
+      \Delta F \approx f(c)\,\Delta x.
+    </me>
+
+    <p>
+      A small input change <m>\Delta x</m> produces a small output change <m>\Delta F</m> controlled by <m>f(c)</m>.
+      Adding many small changes gives the total change in <m>F</m>.
+      This “add up tiny effects” viewpoint is what the definite integral will formalize.
+    </p>
+
+    <p>
+      Here are several examples of “accumulation” in everyday language:
+    </p>
+
+    <ul>
+      <li><p>Position is the cumulative effect of velocity.</p></li>
+      <li><p>Velocity is the cumulative effect of acceleration.</p></li>
+      <li><p>Temperature is the cumulative effect of warming and cooling rates.</p></li>
+      <li><p>Energy used is the cumulative effect of power (wattage) over time.</p></li>
+      <li><p>Total mass is the cumulative effect of density over volume.</p></li>
+      <li><p>Total force is the cumulative effect of pressure over an area.</p></li>
+      <li><p>Population is the cumulative effect of net growth rate over time.</p></li>
+      <li><p>Total cost is the cumulative effect of marginal cost as production increases.</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-distance-riemann">
+    <title>Riemann Sums for Distance</title>
+
+    <p>
+      To make accumulation computable, we introduce a new operation: the definite integral
+      <m>\displaystyle \int_a^b f(x)\,dx</m>.
+      We will define it numerically as a limit of approximations.
+    </p>
+
+    <p>
+      Imagine a toy car whose velocity is <m>v(t)=t^2</m> (in meters per second) over <m>t\in[0,2]</m>.
+      If <m>s(t)</m> is position and <m>s(0)=0</m>, then the total distance traveled by time <m>t=2</m> is
+      <m>s(2)</m>.
+      Over a short time interval, distance is approximately velocity times time:
+      <m>\Delta s \approx v(t)\,\Delta t</m>.
+    </p>
+
+    <p>
+      A very rough estimate would treat the velocity as constant at the final value <m>v(2)=4</m>, giving
+      <m>s(2)\approx 4(2-0)=8</m>, which is far too large because the car starts at rest.
+      To improve the estimate, split <m>[0,2]</m> into many short intervals.
+    </p>
+
+    <p>
+      For example, take <m>n=20</m> subintervals, each of width <m>\Delta t=\dfrac{2}{20}=0.1</m>.
+      Using right endpoints <m>t_i=0.1,0.2,\ldots,2.0</m>, we get a right Riemann sum:
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      s(2)
+      &amp;\approx&amp;
+      v(0.1)\Delta t+v(0.2)\Delta t+\cdots+v(2.0)\Delta t
+      \\[0.6em]
+      &amp;=&amp;
+      (0.1)^2(0.1)+(0.2)^2(0.1)+\cdots+(2.0)^2(0.1)
+      \\[0.6em]
+      &amp;\approx&amp; 2.87.
+      \end{array}
+    </me>
+
+    <p>
+      Since <m>v(t)=t^2</m> is increasing, sampling at the right endpoints gives an overestimate.
+      Sampling at the left endpoints <m>t_i=0.0,0.1,\ldots,1.9</m> gives an underestimate:
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      s(2)
+      &amp;\approx&amp;
+      v(0.0)\Delta t+v(0.1)\Delta t+\cdots+v(1.9)\Delta t
+      \\[0.6em]
+      &amp;=&amp;
+      (0.0)^2(0.1)+(0.1)^2(0.1)+\cdots+(1.9)^2(0.1)
+      \\[0.6em]
+      &amp;\approx&amp; 2.47.
+      \end{array}
+    </me>
+
+    <p>
+      So <m>s(2)</m> lies between 2.47 and 2.87. If we increase <m>n</m>, the rectangles get thinner and the estimates improve.
+      This motivates the definition of the integral as a limit.
+    </p>
+
+    <definition xml:id="def-definite-integral-riemann">
+      <title>Definite Integral (Riemann Sum Definition)</title>
+      <statement>
+        <p>
+          Let <m>f</m> be a function on <m>[a,b]</m>.
+          Partition <m>[a,b]</m> into <m>n</m> subintervals of equal width
+          <m>\Delta x=\dfrac{b-a}{n}</m>, and choose a sample point <m>x_i</m> in each subinterval.
+          If the limit exists as <m>n\to\infty</m>, we define
+        </p>
+        <me>
+          \int_a^b f(x)\,dx \stackrel{\text{def}}= \lim_{n\to\infty}\left(f(x_1)\Delta x+f(x_2)\Delta x+\cdots+f(x_n)\Delta x\right).
+        </me>
+      </statement>
+    </definition>
+
+    <p>
+      The symbol <m>\int</m> is an elongated <m>S</m> for “sum.”
+      The <m>dx</m> reminds us that <m>\Delta x</m> is becoming very small.
+    </p>
+
+    <p>
+      For this particular example we can also check against an algebraic antiderivative.
+      Since <m>s'(t)=t^2</m> and <m>s(0)=0</m>, we have <m>s(t)=\tfrac13 t^3</m>, so
+      <m>s(2)=\tfrac13(2^3)=\tfrac83\approx 2.667</m>, which lies between the two estimates above.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-total-change">
+    <title>The Integral as Total Change</title>
+
+    <p>
+      The distance story is one example of a more general idea.
+      If <m>f(x)</m> is a rate of change of some quantity <m>F(x)</m>, meaning <m>F'(x)=f(x)</m>,
+      then adding up tiny changes <m>\Delta F\approx f(x)\Delta x</m> produces the total change <m>F(b)-F(a)</m>.
+    </p>
+
+    <me>
+      F(b)-F(a)=\int_a^b f(x)\,dx.
+    </me>
+
+    <p>
+      You can read this as: “the total change equals the accumulated rate of change.”
+      Later, we will prove this relationship (and learn fast techniques for computing integrals) in the Fundamental Theorem of Calculus.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-area">
+    <title>Area Under a Curve</title>
+
+    <p>
+      Now comes one of the most useful interpretations of the integral.
+      Suppose <m>f(x)\ge 0</m> on <m>[a,b]</m>.
+      Then <m>\displaystyle \int_a^b f(x)\,dx</m> is the area under the graph <m>y=f(x)</m> above the <m>x</m>-axis from <m>x=a</m> to <m>x=b</m>.
+    </p>
+
+    <p>
+      To see why, approximate the area with rectangles.
+      Over each small subinterval, the area of a rectangle is (height)<m>\times</m>(width) <m>\approx f(x_i)\Delta x</m>.
+      Adding these areas produces the same type of Riemann sum we used for distance.
+      Taking a limit gives the exact area.
+    </p>
+
+    <example xml:id="ex-area-x-squared">
+      <statement>
+        <p>
+          Interpret <m>\displaystyle \int_0^2 x^2\,dx</m> as an area, and connect it to the distance example.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>x^2\ge 0</m> on <m>[0,2]</m>, the integral equals the area under <m>y=x^2</m> above <m>[0,2]</m>.
+          Approximating with right-endpoint rectangles produces the same sum we computed for distance with velocity <m>v(t)=t^2</m>.
+          The area and the distance are numerically equal because both are defined by the same limiting process:
+          in each case we add up terms of the form “height” <m>\times</m> “width.”
+        </p>
+      </solution>
+    </example>
+
+    <p>
+      In this section we are focusing on functions that stay nonnegative, so “area under the curve” matches the integral directly.
+      Later, when a function dips below the axis, the integral still makes sense but it represents signed area (area above minus area below).
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-approx-sin-squared">
+    <title>Approximating an Integral with Upper and Lower Sums</title>
+
+    <p>
+      Sometimes we want a numerical value of an integral even when we do not yet have a quick algebraic method.
+      Upper and lower Riemann sums give guaranteed bounds.
+    </p>
+
+    <example xml:id="ex-riemann-sin-squared">
+      <statement>
+        <p>
+          Approximate <m>\displaystyle \int_0^\pi \sin^2(x)\,dx</m> to one decimal place.
+          (That is, find a value within <m>\pm 0.05</m>.)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function <m>\sin^2(x)</m> increases on <m>[0,\tfrac{\pi}{2}]</m> and decreases on <m>[\tfrac{\pi}{2},\pi]</m>.
+          So an upper estimate uses right endpoints on the first half and left endpoints on the second half.
+          A lower estimate does the opposite.
+        </p>
+
+        <p>
+          Take <m>n=100</m> equal subintervals, so <m>\Delta x=\dfrac{\pi}{100}=0.01\pi</m>.
+          A computed upper sum gives about 1.60 and a computed lower sum gives about 1.54, so
+        </p>
+
+        <me>
+          1.54 &lt; \int_0^\pi \sin^2(x)\,dx &lt; 1.60.
+        </me>
+
+        <p>
+          Averaging the bounds gives a good estimate:
+          <m>\displaystyle \int_0^\pi \sin^2(x)\,dx \approx 1.57</m>, which is certainly accurate to one decimal place.
+        </p>
+
+        <p>
+          (Later, once we have more integral tools, we can compute this exactly and confirm the approximation.)
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-integral-riemannSums">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-riemannSums">
+        Additional Worked-Out Problems for Riemann Sums and Areas
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-riemann-area">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Setting Up Riemann Sums</title>
+
+      <exercise xml:id="prob-riemann-01">
+        <statement>
+          <p>
+            Let <m>f(x)=x^2</m> on <m>[0,2]</m>.
+            Use <m>n</m> equal subintervals and right endpoints.
+            Write the Riemann sum <m>\sum_{i=1}^n f(x_i)\Delta x</m> explicitly in terms of <m>n</m>.
+            (Do not evaluate the limit.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-riemann-02">
+        <statement>
+          <p>
+            Let <m>f(x)=1+x</m> on <m>[2,6]</m>.
+            Use <m>n</m> equal subintervals and left endpoints.
+            Write the corresponding Riemann sum in terms of <m>n</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Left and Right Sums</title>
+
+      <exercise xml:id="prob-riemann-03">
+        <statement>
+          <p>
+            A particle has velocity <m>v(t)=t^2</m> on <m>[0,2]</m>.
+            Compute the left and right Riemann sums with <m>n=4</m> subintervals.
+            Which one is larger, and why?
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-riemann-04">
+        <statement>
+          <p>
+            Let <m>f(x)=\sqrt{x}</m> on <m>[0,4]</m>.
+            Without computing exact values, explain whether the left Riemann sum is an underestimate or overestimate,
+            and do the same for the right Riemann sum.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Area Interpretation</title>
+
+      <exercise xml:id="prob-riemann-05">
+        <statement>
+          <p>
+            Sketch a graph of a nonnegative function on <m>[a,b]</m> and explain (in a sentence or two)
+            why the sum <m>\sum f(x_i)\Delta x</m> represents the total area of rectangles.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-riemann-06">
+        <statement>
+          <p>
+            Suppose <m>f(x)\ge 0</m> on <m>[a,b]</m>.
+            Describe in words what <m>\displaystyle \int_a^b f(x)\,dx</m> represents geometrically.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Upper and Lower Bounds</title>
+
+      <exercise xml:id="prob-riemann-07">
+        <statement>
+          <p>
+            The function <m>f(x)=\sin(x)</m> is increasing on <m>[0,\tfrac{\pi}{2}]</m>.
+            Explain why the right Riemann sum is an overestimate and the left Riemann sum is an underestimate on this interval.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-riemann-08">
+        <statement>
+          <p>
+            Estimate <m>\displaystyle \int_0^1 x^2\,dx</m> using <m>n=10</m> left rectangles and <m>n=10</m> right rectangles.
+            Then average the two values.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

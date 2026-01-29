@@ -372,7 +372,7 @@ For example, a graph might approach one value when moving in from the left, but 
     If we have the ordinary limit <m>\displaystyle\lim_{x\to a} f(x) = L</m>, then the left and right limits must both have the same value <m>L</m>.
     In the <xref ref="ex-limit-continuous">Example</xref> above, we have <m>\displaystyle\lim_{x\to 5^+} x^2 = \lim_{x\to 5^-} x^2 = 5^2</m>.</p>
   <p> 
-    However in <xref ref="ex-limit-does-not-exist">Example</xref> we have, <m>\displaystyle\lim_{x\to 0^+} \operatorname{sgn}(x) = 1</m> and <m>\lim_{x\to 0^-} \operatorname{sgn}(x) = -1</m>,
+    However in <xref ref="ex-limit-does-not-exist">Example</xref> we have, <m>\displaystyle\lim_{x\to 0^+} \operatorname{sgn}(x) = 1</m> and <m>\displaystyle\lim_{x\to 0^-} \operatorname{sgn}(x) = -1</m>,
     even though <m>\displaystyle\lim_{x\to 0} \operatorname{sgn}(x)</m> does not exist.
   </p>
 </remark>
@@ -399,7 +399,15 @@ For example, a graph might approach one value when moving in from the left, but 
   </proof>
 </theorem>
 
+<p>Finally, let's put it all together with an example before we move on to another idea.</p>
 
+  <example xml:id="ex-one-sided-limits">
+    <title>Evaluating One-Sided Limits</title>
+    <introduction>
+      <p>
+        Consider the function given in the graph below:
+</p>
+    </introduction>
 
     
 </subsection>

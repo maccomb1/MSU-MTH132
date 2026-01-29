@@ -3,6 +3,423 @@
 <section xml:id="sec-integral-antiderivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Antiderivatives</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Interpret an antiderivative as “reversing differentiation” and connect it to rates of change (velocity, acceleration).</li>
+      <li>Find general antiderivatives using basic antidifferentiation rules and linearity.</li>
+      <li>Solve simple initial value problems by using a given function value to determine the constant of integration.</li>
+      <li>Use simple substitution patterns (reverse Chain Rule) when a constant multiple is missing.</li>
+      <li>Recognize when an integrand must be rewritten (for example, by algebra or a trig identity) before antidifferentiating.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-antiderivatives-motivation">
+    <title>Reversing Differentiation</title>
+
+    <p>
+      In many applications we care about some unknown function <m>F(x)</m>, but what we can measure or model is its rate of change,
+      the derivative <m>F'(x)=f(x)</m>. Finding <m>F</m> from <m>f</m> is the process of <term>antidifferentiation</term>.
+      We call <m>F</m> an <term>antiderivative</term> (or <term>primitive</term>) of <m>f</m>.
+      A helpful memory trick is “big <m>F</m>, little <m>f</m>.”
+    </p>
+
+    <example xml:id="ex-antiderivative-simple">
+      <statement>
+        <p>
+          Suppose <m>F'(t)=t^2-1</m>. Find a general formula for <m>F(t)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>(\tfrac13 t^3)'=t^2</m> and <m>(-t)'=-1</m>, one antiderivative is
+          <m>\tfrac13 t^3-t</m>. Any constant disappears when differentiating, so the general antiderivative is
+        </p>
+        <me>
+          F(t)=\tfrac13 t^3-t+C.
+        </me>
+      </solution>
+    </example>
+
+    <p>
+      Different choices of <m>C</m> shift the graph up or down but do not change slopes.
+      If we also know a single value like <m>F(0)=5</m>, then we can determine <m>C</m> and get a unique function.
+      Problems like this are called <term>initial value problems</term>.
+    </p>
+
+    <example xml:id="ex-antiderivative-ivp">
+      <statement>
+        <p>
+          Find the unique function <m>F</m> satisfying <m>F'(t)=t^2+2</m> and <m>F(0)=5</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          An antiderivative of <m>t^2+2</m> is <m>\tfrac13 t^3+2t</m>, so
+          <m>F(t)=\tfrac13 t^3+2t+C</m>.
+          Plug in <m>t=0</m>:
+          <m>F(0)=C=5</m>.
+        </p>
+        <me>
+          F(t)=\tfrac13 t^3+2t+5.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-antiderivatives-definition-theorem">
+    <title>Definition and the Constant of Integration</title>
+
+    <definition xml:id="def-antiderivative">
+      <title>Antiderivative</title>
+      <statement>
+        <p>
+          A function <m>F(x)</m> is an <term>antiderivative</term> of <m>f(x)</m> on an interval if
+          <m>F'(x)=f(x)</m> for all <m>x</m> in that interval.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="thm-antiderivative-family">
+      <title>Antiderivatives Differ by a Constant</title>
+      <statement>
+        <p>
+          Suppose <m>F_0(x)</m> is one antiderivative of <m>f(x)</m> on an interval.
+          Then every antiderivative of <m>f</m> has the form
+          <m>F(x)=F_0(x)+C</m> for some constant <m>C</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          If <m>F</m> is any antiderivative of <m>f</m>, then <m>F'(x)=f(x)=F_0'(x)</m>.
+          By the Uniqueness Theorem from the Mean Value Theorem section, two functions with the same derivative differ by a constant.
+          Therefore <m>F(x)=F_0(x)+C</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="thm-ivp-unique-antiderivative">
+      <title>Uniqueness with One Function Value</title>
+      <statement>
+        <p>
+          If <m>F_0</m> is an antiderivative of <m>f</m> on an interval, then for any point <m>c</m> in the interval
+          and any real number <m>A</m>, there is exactly one antiderivative <m>F</m> satisfying
+          <m>F'(x)=f(x)</m> and <m>F(c)=A</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          By the previous theorem, any antiderivative has the form <m>F(x)=F_0(x)+C</m>.
+          Requiring <m>F(c)=A</m> gives <m>F_0(c)+C=A</m>, so <m>C=A-F_0(c)</m>, which is a single value.
+        </p>
+      </proof>
+    </theorem>
+  </subsection>
+
+  <subsection xml:id="ssec-antiderivatives-rules">
+    <title>Basic Antidifferentiation Rules</title>
+
+    <p>
+      Antidifferentiation starts by reversing the derivative rules you already know.
+      The key is to build a library of basic patterns, then use linearity to break complicated expressions into simpler pieces.
+    </p>
+
+    <theorem xml:id="thm-antiderivative-linearity">
+      <title>Linearity of Antiderivatives</title>
+      <statement>
+        <p>
+          If <m>F'(x)=f(x)</m> and <m>G'(x)=g(x)</m>, then for constants <m>a,b</m>,
+          an antiderivative of <m>af(x)+bg(x)</m> is <m>aF(x)+bG(x)</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Here are several basic patterns (each includes the constant of integration).
+    </p>
+
+    <me>
+      \begin{aligned}
+      \text{Power rule:}\quad &amp;\text{if } n\neq -1,\ \ \int x^n\,dx \text{ corresponds to } \frac{1}{n+1}x^{n+1}+C.\\
+      \text{Special case:}\quad &amp;\text{an antiderivative of } \frac{1}{x} \text{ is } \ln|x|+C.\\
+      \text{Trig:}\quad &amp;\int \cos(x)\,dx \text{ corresponds to } \sin(x)+C,\qquad
+      \int \sin(x)\,dx \text{ corresponds to } -\cos(x)+C.\\
+      &amp;\int \sec^2(x)\,dx \text{ corresponds to } \tan(x)+C,\qquad
+      \int \sec(x)\tan(x)\,dx \text{ corresponds to } \sec(x)+C.
+      \end{aligned}
+    </me>
+
+    <p>
+      We are not formally defining integrals yet, so you can read the display above as a list of “reverse derivative” facts.
+      The important idea is that the derivative table can be read backward, with a <m>+C</m> added.
+    </p>
+
+    <example xml:id="ex-antiderivative-linearity">
+      <statement>
+        <p>
+          Find a general antiderivative of
+          <m>f(x)=7x^3-x\sqrt{x}+\dfrac{3}{x^2}-\dfrac{4}{\cos^2(x)}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Rewrite using exponents and secant:
+          <m>x\sqrt{x}=x^{3/2}</m>,
+          <m>\dfrac{3}{x^2}=3x^{-2}</m>,
+          and <m>\dfrac{1}{\cos^2(x)}=\sec^2(x)</m>.
+          Then antidifferentiate term-by-term:
+        </p>
+
+        <me>
+          \begin{aligned}
+          F(x)
+          &amp;= 7\cdot \frac{1}{4}x^4 \;-\; \frac{1}{\frac52}x^{5/2} \;+\; 3\cdot\frac{1}{-1}x^{-1} \;-\;4\tan(x) + C\\[0.3em]
+          &amp;= \frac{7}{4}x^4 \;-\; \frac{2}{5}x^{5/2} \;-\;\frac{3}{x}\;-\;4\tan(x)+C.
+          \end{aligned}
+        </me>
+
+        <p>
+          A quick check is to differentiate <m>F(x)</m> and confirm you get back <m>f(x)</m>.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-antiderivatives-reverse-chain">
+    <title>A Simple “Reverse Chain Rule” Pattern</title>
+
+    <p>
+      Sometimes a function looks like the derivative of a composition, except for a missing constant multiple.
+      In these cases, you can often fix the issue by introducing the correct constant.
+    </p>
+
+    <example xml:id="ex-antiderivative-cos3x">
+      <statement>
+        <p>
+          Find a general antiderivative of <m>f(x)=\cos(3x)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>(\sin(3x))'=3\cos(3x)</m>, we divide by 3:
+        </p>
+        <me>
+          F(x)=\tfrac13\sin(3x)+C.
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-antiderivative-algebra-first">
+      <statement>
+        <p>
+          Find a general antiderivative of <m>\displaystyle f(x)=\frac{x+4}{\sqrt{x}}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Rewrite as a sum of powers:
+          <m>\displaystyle \frac{x+4}{\sqrt{x}}=\frac{x}{\sqrt{x}}+\frac{4}{\sqrt{x}}=x^{1/2}+4x^{-1/2}</m>.
+          Then antidifferentiate term-by-term:
+        </p>
+
+        <me>
+          \begin{aligned}
+          F(x)
+          &amp;= \frac{1}{\frac32}x^{3/2}+4\cdot\frac{1}{\frac12}x^{1/2}+C\\
+          &amp;= \tfrac23 x\sqrt{x}+8\sqrt{x}+C.
+          \end{aligned}
+        </me>
+      </solution>
+    </example>
+
+    <p>
+      Be careful with products and quotients. In general, the antiderivative of a product is not the product of antiderivatives.
+      When you can rewrite the expression as a sum of basic patterns, the problem becomes manageable.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-antiderivatives-trig-identity">
+    <title>When You Must Rewrite First</title>
+
+    <example xml:id="ex-antiderivative-sin-squared">
+      <statement>
+        <p>
+          Find a general antiderivative of <m>f(x)=\sin^2(x)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function <m>\sin^2(x)</m> is not on our basic list.
+          Use the identity <m>\cos(2x)=1-2\sin^2(x)</m>, which gives
+          <m>\sin^2(x)=\tfrac12(1-\cos(2x))</m>.
+          Now antidifferentiate:
+        </p>
+
+        <me>
+          \begin{aligned}
+          \int \sin^2(x)\,dx
+          &amp;leftrightarrow \int \left(\tfrac12-\tfrac12\cos(2x)\right)\,dx\\
+          &amp;\leftrightarrow \tfrac12 x-\tfrac12\cdot \tfrac12\sin(2x)+C\\
+          &amp;= \tfrac12 x-\tfrac14\sin(2x)+C.
+          \end{aligned}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-antiderivatives-accel-vel-pos">
+    <title>Acceleration, Velocity, and Position</title>
+
+    <p>
+      In motion problems, derivatives connect position, velocity, and acceleration:
+      <m>v(t)=s'(t)</m> and <m>a(t)=v'(t)=s''(t)</m>.
+      If we know acceleration and some initial conditions, we can recover velocity and position by antidifferentiating twice.
+    </p>
+
+    <example xml:id="ex-antiderivative-rocket">
+      <statement>
+        <p>
+          A rocket has acceleration <m>a(t)=t+1</m> (in m/sec<sup>2</sup>).
+          At time <m>t=1</m>, its height is <m>s(1)=10</m> meters and its velocity is <m>v(1)=3</m> m/sec.
+          Find the velocity function <m>v(t)</m> and the height function <m>s(t)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Since <m>v'(t)=a(t)=t+1</m>, antidifferentiate:
+        </p>
+
+        <me>
+          v(t)=\tfrac12 t^2+t+C.
+        </me>
+
+        <p>
+          Use <m>v(1)=3</m>:
+          <m>\tfrac12(1)^2+1+C=3</m>, so <m>C=\tfrac32</m>. Thus
+        </p>
+
+        <me>
+          v(t)=\tfrac12 t^2+t+\tfrac32.
+        </me>
+
+        <p>
+          Now antidifferentiate again because <m>s'(t)=v(t)</m>:
+        </p>
+
+        <me>
+          \begin{aligned}
+          s(t)
+          &amp;= \int \left(\tfrac12 t^2+t+\tfrac32\right)\,dt \ \text{(as antiderivative facts)}\\
+          &amp;= \tfrac12\cdot\tfrac13 t^3+\tfrac12 t^2+\tfrac32 t + B\\
+          &amp;= \tfrac16 t^3+\tfrac12 t^2+\tfrac32 t + B.
+          \end{aligned}
+        </me>
+
+        <p>
+          Use <m>s(1)=10</m>:
+          <m>\tfrac16+\tfrac12+\tfrac32+B=10</m>,
+          so <m>B=\tfrac{47}{6}</m>. Therefore
+        </p>
+
+        <me>
+          s(t)=\tfrac16 t^3+\tfrac12 t^2+\tfrac32 t+\tfrac{47}{6}.
+        </me>
+
+        <p>
+          With both conditions applied, the constants are determined and the solution is unique.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-integral-antiderivatives">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-antiderivatives">
+        Additional Worked-Out Problems for Antiderivatives
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-antiderivatives">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Basic Antiderivatives</title>
+
+      <exercise xml:id="prob-anti-01">
+        <statement>
+          <p>
+            Find a general antiderivative of each function.
+          </p>
+          <ol>
+            <li><p><m>f(x)=6x^5-4x^2+9</m></p></li>
+            <li><p><m>g(x)=\dfrac{5}{x^2}-\sqrt{x}</m></p></li>
+            <li><p><m>h(x)=3\cos(x)-2\sec^2(x)</m></p></li>
+          </ol>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-anti-02">
+        <statement>
+          <p>
+            Find a general antiderivative of <m>f(x)=\cos(5x)</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Rewrite First</title>
+
+      <exercise xml:id="prob-anti-03">
+        <statement>
+          <p>
+            Find a general antiderivative of <m>\displaystyle f(x)=\frac{2x-1}{\sqrt{x}}</m>.
+            (Rewrite as a sum of powers first.)
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-anti-04">
+        <statement>
+          <p>
+            Find a general antiderivative of <m>\cos^2(x)</m>.
+            (Hint: use <m>\cos(2x)=2\cos^2(x)-1</m>.)
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Initial Value Problems</title>
+
+      <exercise xml:id="prob-anti-05">
+        <statement>
+          <p>
+            Find the unique function <m>F</m> such that <m>F'(x)=4x^3-6x</m> and <m>F(2)=1</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-anti-06">
+        <statement>
+          <p>
+            A particle moves on a line with acceleration <m>a(t)=6t</m>.
+            At <m>t=0</m>, the velocity is <m>v(0)=2</m> and the position is <m>s(0)=-1</m>.
+            Find <m>v(t)</m> and <m>s(t)</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

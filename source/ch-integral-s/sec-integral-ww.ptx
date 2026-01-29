@@ -2,14 +2,42 @@
 
 <section xml:id="sec-integral-ww" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Additional Worked-Out Problems</title>
-    <p> Placeholder for additional worked-out problems for the Integral chapter. </p>
-
-
-
-   <subsection xml:id="subsec-integral-placeholder">
-      <title>Placeholder</title>
+ 
+     <subsection xml:id="subsec-integral-antiderivatives">
+      <title><xref ref="sec-integral-antiderivatives"/> Antiderivatives</title>
       <p> test
       </p>
     </subsection>
+
+       <subsection xml:id="subsec-integral-riemannSums">
+      <title><xref ref="sec-integral-riemannSums"/> Riemann Sums and Areas</title>
+      <p> test
+      </p>
+    </subsection>
+
+       <subsection xml:id="subsec-integral-defInt">
+      <title><xref ref="sec-integral-defInt"/> Definite Integrals</title>
+      <p> test
+      </p>
+    </subsection>
+
+       <subsection xml:id="subsec-integral-FTC">
+      <title><xref ref="sec-integral-FTC"/> The Fundamental Theorem of Calculus</title>
+      <p> test
+      </p>
+    </subsection>
+
+       <subsection xml:id="subsec-integral-net">
+      <title><xref ref="sec-integral-net"/> Net Change Theorem and Indefinite Integrals</title>
+      <p> test
+      </p>
+    </subsection>
+
+       <subsection xml:id="subsec-integral-usub">
+      <title><xref ref="sec-integral-usub"/> Substitution Rule for Integration</title>
+      <p> test
+      </p>
+    </subsection>
+
 
 </section>

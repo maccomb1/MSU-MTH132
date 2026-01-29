@@ -3,6 +3,421 @@
 <section xml:id="sec-integral-defInt" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Definite Integral</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>State the Riemann-sum definition of <m>\displaystyle \int_a^b f(x)\,dx</m> and identify the parts of the notation.</li>
+      <li>Explain (at a conceptual level) what it means for a function to be integrable on <m>[a,b]</m>.</li>
+      <li>Interpret <m>\displaystyle \int_a^b f(x)\,dx</m> as total change and as signed area.</li>
+      <li>Use basic integral rules (linearity, bounds, domination, splitting, reversing limits) to simplify and estimate integrals.</li>
+      <li>Compute simple definite integrals using basic integral formulas and the rules.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-defint-precise-definition">
+    <title>Precise Definition</title>
+
+    <p>
+      We have described the integral <m>\displaystyle \int_a^b f(x)\,dx</m> as a number that can be approximated by Riemann sums.
+      The integral is useful because it measures accumulation:
+      given a velocity function it computes distance traveled, and given a nonnegative graph it computes the area between the graph and the <m>x</m>-axis.
+      More generally, if <m>f</m> is a varying rate of change, then the integral computes total change; if <m>f</m> represents a varying influence, then the integral computes cumulative effect.
+    </p>
+
+    <p>
+      The parts of the notation <m>\displaystyle \int_a^b f(x)\,dx</m> have standard names:
+      <m>\int</m> is the integral sign,
+      <m>a</m> is the <em>lower limit of integration</em>,
+      <m>b</m> is the <em>upper limit of integration</em>,
+      <m>f(x)</m> is the <em>integrand</em>,
+      and <m>x</m> is the <em>variable of integration</em>.
+      The variable of integration is just a name, so changing it does not change the value:
+      <m>\int_a^b f(x)\,dx=\int_a^b f(t)\,dt=\int_a^b f(r)\,dr</m>.
+    </p>
+
+    <definition xml:id="def-riemann-integral">
+      <title>Definite Integral (Riemann Sum Definition)</title>
+      <statement>
+        <p>
+          Let <m>f</m> be a function and let <m>a\le b</m>.
+          For each positive integer <m>n</m>, divide the interval <m>[a,b]</m> into <m>n</m> subintervals of equal width
+          <m>\Delta x=\dfrac{b-a}{n}</m>, with division points
+        </p>
+
+        <me>
+          a &lt; a+\Delta x &lt; a+2\Delta x &lt; \cdots &lt; a+n\Delta x=b.
+        </me>
+
+        <p>
+          Choose sample points <m>x_1,\ldots,x_n</m> with <m>x_i</m> anywhere in the <m>i</m><sup>th</sup> subinterval:
+          <m>a+(i-1)\Delta x \le x_i \le a+i\Delta x</m>.
+          If the limit exists, we define
+        </p>
+
+        <me>
+          \int_a^b f(x)\,dx
+          \stackrel{\text{def}}=
+          \lim_{n\to\infty}\sum_{i=1}^n f(x_i)\,\Delta x
+          =
+          \lim_{n\to\infty}\left(f(x_1)\Delta x+\cdots+f(x_n)\Delta x\right).
+        </me>
+
+        <p>
+          We say <m>f</m> is <em>integrable</em> on <m>[a,b]</m> if this limit exists and has the same value for every possible choice of sample points <m>x_i</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      (More formally, writing <m>\int_a^b f(x)\,dx=L</m> means: for any error tolerance <m>\epsilon&gt;0</m>, there is a number <m>N</m> such that any Riemann sum with <m>n&gt;N</m> terms is within <m>\epsilon</m> of <m>L</m>.)
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-integrable-functions">
+    <title>Integrable Functions</title>
+
+    <p>
+      Most functions you meet in calculus are integrable on a closed interval as long as they do not blow up to infinity.
+      In particular, continuous functions are integrable.
+      (A full proof belongs to a Real Analysis course.)
+    </p>
+
+    <p>
+      To see what can go wrong, consider <m>f(x)=\dfrac{1}{x^2}</m> on <m>[0,1]</m>.
+      The function has a vertical asymptote at <m>x=0</m>, so the area under the curve is not finite.
+      If we try a Riemann sum with <m>\Delta x=\dfrac{1}{n}</m> and sample points <m>x_i=\dfrac{i}{n}</m>, we get
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      \displaystyle \sum_{i=1}^n \frac{1}{x_i^2}\,\Delta x
+      &amp;=&amp;
+      \displaystyle \sum_{i=1}^n \frac{1}{(i/n)^2}\,\frac{1}{n}
+      \\[0.6em]
+      &amp;=&amp;
+      \displaystyle \sum_{i=1}^n \frac{n^2}{i^2}\,\frac{1}{n}
+      \ =\
+      \sum_{i=1}^n n\,\frac{1}{i^2}
+      \\[0.6em]
+      &amp;&gt;&amp;
+      n.
+      \end{array}
+    </me>
+
+    <p>
+      As <m>n\to\infty</m>, this grows without bound, so the Riemann sums do not approach a finite limit.
+      Geometrically, this reflects infinite area near the vertical asymptote.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-negative-integrand">
+    <title>Negative Integrands and Signed Area</title>
+
+    <p>
+      So far we have emphasized integrals with <m>f(x)\ge 0</m>, where the integral is positive and equals an area.
+      The definition still works when <m>f(x)\le 0</m>, but the value becomes negative.
+      For example, if <m>f(x)=-1</m>, then
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      \displaystyle \int_1^3 (-1)\,dx
+      &amp;=&amp;
+      \displaystyle \lim_{n\to\infty}\sum_{i=1}^n (-1)\left(\frac{3-1}{n}\right)
+      \\[0.8em]
+      &amp;=&amp;
+      \displaystyle \lim_{n\to\infty}\left(\frac{-2}{n}\right)\sum_{i=1}^n 1
+      \ =\
+      \lim_{n\to\infty}\left(\frac{-2}{n}\right)n
+      \\[0.6em]
+      &amp;=&amp;
+      -2.
+      \end{array}
+    </me>
+
+    <p>
+      Geometrically, we think of each term <m>f(x_i)\Delta x</m> as (height)<m>\times</m>(width).
+      When the graph lies below the <m>x</m>-axis, the “height” is negative, so it contributes negative area.
+      In general, <m>\int_a^b f(x)\,dx</m> is the <em>signed area</em> between the graph and the <m>x</m>-axis:
+      regions above count positive, and regions below count negative.
+    </p>
+
+    <example xml:id="ex-signed-area-line">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_0^3 (2-x)\,dx</m> using geometry.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The line <m>y=2-x</m> crosses the <m>x</m>-axis at <m>x=2</m>.
+          It is above the axis on <m>[0,2]</m> and below the axis on <m>[2,3]</m>.
+          So the integral is (area of a triangle above) minus (area of a triangle below):
+        </p>
+
+        <me>
+          \int_0^3 (2-x)\,dx
+          \ =\
+          \frac12(2)(2)\;-\;\frac12(1)(1)
+          \ =\
+          \frac32.
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-reversing-limits">
+    <title>Reversing Limits of Integration</title>
+
+    <p>
+      If the limits of integration are the same, then every Riemann sum has width <m>\Delta x=0</m>, so
+      <m>\int_a^a f(x)\,dx=0</m>.
+      We also define switching limits by
+      <m>\int_b^a f(x)\,dx=-\int_a^b f(x)\,dx</m>.
+      This convention makes several rules cleaner, especially the splitting rule.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-rules">
+    <title>Integral Rules</title>
+
+    <p>
+      Later we will learn powerful methods for computing integrals.
+      For now, we will rely on a small collection of basic integrals and the following rules.
+      Let <m>f</m> and <m>g</m> be integrable on <m>[a,b]</m>, and let <m>A,B,C</m> be constants.
+    </p>
+
+    <theorem xml:id="thm-integral-rules">
+      <title>Rules for Definite Integrals</title>
+      <statement>
+        <ul>
+          <li><p><em>Sum:</em> <m>\displaystyle \int_a^b (f(x)+g(x))\,dx=\int_a^b f(x)\,dx+\int_a^b g(x)\,dx</m>.</p></li>
+          <li><p><em>Difference:</em> <m>\displaystyle \int_a^b (f(x)-g(x))\,dx=\int_a^b f(x)\,dx-\int_a^b g(x)\,dx</m>.</p></li>
+          <li><p><em>Constant Multiple:</em> <m>\displaystyle \int_a^b C\,f(x)\,dx=C\int_a^b f(x)\,dx</m>.</p></li>
+          <li><p><em>Domination:</em> If <m>f(x)\le g(x)</m> on <m>[a,b]</m>, then <m>\displaystyle \int_a^b f(x)\,dx \le \int_a^b g(x)\,dx</m>.</p></li>
+          <li><p><em>Bounds:</em> If <m>A\le f(x)\le B</m> on <m>[a,b]</m>, then <m>\displaystyle (b-a)A \le \int_a^b f(x)\,dx \le (b-a)B</m>.</p></li>
+          <li><p><em>Splitting:</em> For any <m>a,b,c</m>, <m>\displaystyle \int_a^c f(x)\,dx=\int_a^b f(x)\,dx+\int_b^c f(x)\,dx</m>.</p></li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <p>
+      The sum, difference, and constant multiple rules follow from the corresponding properties of sums.
+      The bounds and domination rules match the geometric idea that a function trapped between two horizontal lines has area trapped between rectangles.
+      The splitting rule matches “area over a big interval equals area over pieces,” and the sign convention for reversed limits makes it valid no matter the order of <m>a,b,c</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-basic-integrals">
+    <title>Basic Integrals</title>
+
+    <p>
+      Here are three basic definite integrals that we can justify directly from Riemann sums:
+    </p>
+
+    <me>
+      \int_a^b 1\,dx = b-a,
+      \qquad
+      \int_a^b x\,dx = \frac12 b^2-\frac12 a^2,
+      \qquad
+      \int_a^b x^2\,dx = \frac13 b^3-\frac13 a^3.
+    </me>
+
+    <p>
+      Later, these will fall out quickly from the Fundamental Theorem of Calculus.
+      For now, they give us a working toolkit.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-defint-examples">
+    <title>Examples</title>
+
+    <example xml:id="ex-defint-expand-square">
+      <statement>
+        <p>Evaluate <m>\displaystyle \int_{-2}^{7} (3t-5)^2\,dt</m>.</p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>\int (f(t))^2\,dt</m> is not equal to <m>\left(\int f(t)\,dt\right)^2</m>, we expand the integrand and use the rules:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int_{-2}^{7} (3t-5)^2\,dt
+          &amp;=&amp;
+          \displaystyle \int_{-2}^{7} (9t^2-30t+25)\,dt
+          \\[0.8em]
+          &amp;=&amp;
+          \displaystyle 9\int_{-2}^{7} t^2\,dt \;-\;30\int_{-2}^{7} t\,dt \;+\;25\int_{-2}^{7} 1\,dt
+          \\[0.8em]
+          &amp;=&amp;
+          \displaystyle 9\left(\frac13 7^3-\frac13(-2)^3\right)
+          \;-\;
+          30\left(\frac12 7^2-\frac12(-2)^2\right)
+          \;+\;
+          25\left(7-(-2)\right)
+          \\[0.8em]
+          &amp;=&amp;
+          603.
+          \end{array}
+        </me>
+
+        <p>
+          (Notice again: the variable of integration is just a name.)
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-defint-upper-bound">
+      <statement>
+        <p>
+          Find an upper bound for <m>\displaystyle \int_{-2}^{7} (3x-5)^2\,(1+\cos(x^2))\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since <m>-1\le \cos(x^2)\le 1</m>, we have <m>1+\cos(x^2)\le 2</m>.
+          By domination,
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int_{-2}^{7} (3x-5)^2(1+\cos(x^2))\,dx
+          &amp;\le&amp;
+          \displaystyle \int_{-2}^{7} (3x-5)^2(2)\,dx
+          \\[0.7em]
+          &amp;=&amp;
+          2\int_{-2}^{7} (3x-5)^2\,dx
+          \ =\
+          2(603)
+          \ =\
+          1206.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-integral-defInt">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-defInt">
+        Additional Worked-Out Problems for Definite Integrals
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+
+  <exercises xml:id="exercises-definite-integral">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Concepts and Interpretation</title>
+
+      <exercise xml:id="prob-defint-01">
+        <statement>
+          <p>
+            In the notation <m>\displaystyle \int_a^b f(x)\,dx</m>, identify the lower limit, upper limit, integrand, and variable of integration.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-02">
+        <statement>
+          <p>
+            Explain in a sentence or two what “signed area” means.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-03">
+        <statement>
+          <p>
+            Without computing exactly, decide whether <m>\displaystyle \int_0^4 (2-x)\,dx</m> is positive, negative, or zero.
+            Briefly justify your answer from the graph of <m>y=2-x</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Rules Practice</title>
+
+      <exercise xml:id="prob-defint-04">
+        <statement>
+          <p>
+            Use the splitting rule to rewrite <m>\displaystyle \int_{-1}^{5} f(x)\,dx</m> as a sum of two integrals split at <m>x=2</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-05">
+        <statement>
+          <p>
+            Suppose <m>3\le f(x)\le 8</m> on <m>[2,7]</m>.
+            Use the bounds rule to trap <m>\displaystyle \int_2^7 f(x)\,dx</m> between two numbers.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-06">
+        <statement>
+          <p>
+            If <m>f(x)\le g(x)</m> on <m>[a,b]</m>, explain what the domination rule says about the two integrals.
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Basic Integrals</title>
+
+      <exercise xml:id="prob-defint-07">
+        <statement>
+          <p>Compute <m>\displaystyle \int_{-3}^{4} 1\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-08">
+        <statement>
+          <p>Compute <m>\displaystyle \int_{0}^{5} x\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-09">
+        <statement>
+          <p>Compute <m>\displaystyle \int_{-2}^{3} x^2\,dx</m>.</p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Putting It Together</title>
+
+      <exercise xml:id="prob-defint-10">
+        <statement>
+          <p>
+            Evaluate <m>\displaystyle \int_{1}^{4} (2x-1)^2\,dx</m> by expanding the integrand and using basic integrals.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-defint-11">
+        <statement>
+          <p>
+            Find an upper bound for <m>\displaystyle \int_{0}^{2} (x^2+1)(3+\sin(x))\,dx</m>.
+            (You do not need the exact value.)
+          </p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>

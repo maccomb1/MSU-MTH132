@@ -27,10 +27,6 @@
     </li>
 
     <li>
-      Distinguish between displacement and total distance traveled on a time interval and compute both quantities. 
-    </li>
-
-    <li>
       Interpret and solve motion problems that require setting up and solving equations or inequalities (for example, finding when height is above a given value, when velocity is positive, or when speed exceeds a threshold).
     </li>
   </ul>
@@ -315,7 +311,7 @@
 
 
 
-<p>Now that we have reviewed some of the basic concepts of motion, let's move on to some more advanced topics.</p>
+<p>Now that we have reviewed some of the basic concepts of motion, let's move on to a more advanced topic.</p>
 
 </subsection>
 
@@ -556,14 +552,15 @@
   </solution> 
 </example>
 
-
+<!-- 
 <p>This completes our discussion of speeding up and slowing down.
 We will now move on to discuss total distance traveled and how it differs from displacement, the final new concept in this section. </p>
+-->
 
   </subsection>
 
 
-
+<!--
 
   <subsection xml:id="subsec-TDT">
     <title>Displacement vs Distance Traveled</title>
@@ -820,7 +817,7 @@ v(t) = s'(t) = 3\pi \cos(\pi t).
   </subsection>
 
 
-
+-->
   
 
 
@@ -968,7 +965,7 @@ v(t) = s'(t) = 3\pi \cos(\pi t).
 
 
 
-
+<!-- 
 
   <exercise xml:id="ex-derivApp-motion-tf-10">
     <statement>
@@ -1000,6 +997,8 @@ v(t) = s'(t) = 3\pi \cos(\pi t).
     </solution>
   </exercise>
 
+  -->
+  
 <exercise xml:id="ex-derivApp-motion-tf-102">
     <statement>
       <p>

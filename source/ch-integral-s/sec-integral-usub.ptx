@@ -3,6 +3,506 @@
 <section xml:id="sec-integral-usub" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Substitution Rule for Integration</title>
 
-  <p> Text of section. </p>
+  <objectives>
+    <ul>
+      <li>Recognize when an integrand has the form <m>f(g(x))g'(x)</m> and apply substitution.</li>
+      <li>Use substitution to evaluate indefinite integrals and then check results by differentiation.</li>
+      <li>Use substitution with updated limits to evaluate definite integrals.</li>
+      <li>Use symmetry (odd functions) to evaluate certain definite integrals quickly.</li>
+      <li>Model a real situation with an integral and interpret a substitution physically.</li>
+    </ul>
+  </objectives>
+
+  <subsection xml:id="ssec-reverse-chain">
+    <title>Reversing the Chain Rule</title>
+
+    <p>
+      By the Second Fundamental Theorem of Calculus, one efficient way to evaluate a definite integral
+      <m>\displaystyle \int_a^b f(x)\,dx</m> is to find an antiderivative <m>F</m> and compute
+      <m>F(b)-F(a)</m>. In this section we develop a powerful method for finding antiderivatives by
+      reversing the Chain Rule:
+      <m>\dfrac{d}{dx}\big(F(g(x))\big)=F'(g(x))g'(x)</m>.
+    </p>
+
+    <p>
+      For example, consider the indefinite integral
+      <m>\displaystyle \int x\cos(x^2)\,dx</m>.
+      The inside function <m>g(x)=x^2</m> appears inside the cosine, and its derivative is <m>g'(x)=2x</m>.
+      Since the integrand contains a factor <m>x</m>, we rewrite it to match the Chain Rule pattern:
+    </p>
+
+    <me>
+      x\cos(x^2)
+      \ =\
+      \tfrac12\cos(x^2)\cdot (2x)
+      \ =\
+      \tfrac12\cos(x^2)\cdot (x^2)'.
+    </me>
+
+    <p>
+      Now set <m>u=g(x)=x^2</m>. Then <m>du=g'(x)\,dx=2x\,dx</m>, so <m>\tfrac12\,du=x\,dx</m>, and the integral becomes
+    </p>
+
+    <me>
+      \int x\cos(x^2)\,dx
+      \ =\
+      \tfrac12\int \cos(u)\,du
+      \ =\
+      \tfrac12\sin(u)+C
+      \ =\
+      \tfrac12\sin(x^2)+C.
+    </me>
+
+    <p>
+      A quick check comes from the Chain Rule:
+      if <m>F(x)=\tfrac12\sin(x^2)</m>, then
+      <m>F'(x)=\tfrac12\cos(x^2)\cdot 2x=x\cos(x^2)</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="ssec-substitution-method">
+    <title>Substitution Method</title>
+
+    <p>
+      Substitution is a structured way to reverse the Chain Rule. The goal is to rewrite the integrand so it looks like
+      <m>f(g(x))g'(x)</m>.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Start with an integral <m>\int h(x)\,dx</m>. Look for an inside function <m>g(x)</m>
+          so that <m>g'(x)</m> appears as a factor (possibly after multiplying and dividing by a constant):
+        </p>
+        <me>
+          h(x)\ =\ f(g(x))\cdot g'(x).
+        </me>
+        <p>
+          After factoring out <m>g'(x)</m>, rewrite the remaining part as a function of <m>u=g(x)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>u=g(x)</m>, so <m>du=g'(x)\,dx</m>. Then rewrite the integral in <m>u</m>:
+        </p>
+        <me>
+          \int h(x)\,dx
+          \ =\
+          \int f(g(x))g'(x)\,dx
+          \ =\
+          \int f(u)\,du.
+        </me>
+        <p>
+          Compute <m>\int f(u)\,du</m> using basic antiderivatives and rules.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Substitute back <m>u=g(x)</m> to express the final answer in terms of <m>x</m>:
+        </p>
+        <me>
+          \int h(x)\,dx
+          \ =\
+          F(u)+C
+          \ =\
+          F(g(x))+C.
+        </me>
+      </li>
+    </ol>
+  </subsection>
+
+  <subsection xml:id="ssec-substitution-examples">
+    <title>Examples</title>
+
+    <example xml:id="ex-sub-01">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int (3x+4)\sqrt{3x+4}\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u=3x+4</m>. Then <m>du=3\,dx</m>, so <m>dx=\tfrac13\,du</m>. Thus,
+        </p>
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int (3x+4)\sqrt{3x+4}\,dx
+          &amp;=&amp;
+          \displaystyle \int u\sqrt{u}\cdot \tfrac13\,du
+          \\[0.8em]
+          &amp;=&amp;
+          \displaystyle \tfrac13\int u^{3/2}\,du
+          \ =\
+          \tfrac13\cdot \tfrac{2}{5}u^{5/2}+C
+          \\[0.8em]
+          &amp;=&amp;
+          \displaystyle \tfrac{2}{15}(3x+4)^{5/2}+C.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-sub-02">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int x\sqrt{3x+4}\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u=3x+4</m>, so <m>du=3\,dx</m> and <m>dx=\tfrac13\,du</m>.
+          We also solve for <m>x</m>: <m>u=3x+4</m> gives <m>x=\tfrac13u-\tfrac43</m>.
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int x\sqrt{3x+4}\,dx
+          &amp;=&amp;
+          \displaystyle \int \left(\tfrac13u-\tfrac43\right)\sqrt{u}\cdot \tfrac13\,du
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \int \left(\tfrac19u^{3/2}-\tfrac49u^{1/2}\right)\,du
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \tfrac19\cdot \tfrac{2}{5}u^{5/2}-\tfrac49\cdot \tfrac{2}{3}u^{3/2}+C
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \tfrac{2}{45}(3x+4)^{5/2}-\tfrac{8}{27}(3x+4)^{3/2}+C.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-sub-03">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int \frac{\sec^2(\sqrt{x})}{\sqrt{x}}\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u=\sqrt{x}=x^{1/2}</m>. Then <m>du=\tfrac{1}{2}x^{-1/2}\,dx=\tfrac{1}{2\sqrt{x}}\,dx</m>.
+          Rewrite to produce <m>du</m>:
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int \frac{\sec^2(\sqrt{x})}{\sqrt{x}}\,dx
+          &amp;=&amp;
+          \displaystyle \int 2\sec^2(\sqrt{x})\cdot \frac{1}{2\sqrt{x}}\,dx
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \int 2\sec^2(u)\,du
+          \ =\
+          2\tan(u)+C
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle 2\tan(\sqrt{x})+C.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-sub-04">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int \frac{\sin(x)}{(1+\cos(x))^2}\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u=1+\cos(x)</m>. Then <m>du=-\sin(x)\,dx</m>, so <m>\sin(x)\,dx=-du</m>.
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int \frac{\sin(x)}{(1+\cos(x))^2}\,dx
+          &amp;=&amp;
+          \displaystyle -\int \frac{1}{u^2}\,du
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle -\left(\frac{u^{-1}}{-1}\right)+C
+          \ =\
+          \frac{1}{u}+C
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \frac{1}{1+\cos(x)}+C.
+          \end{array}
+        </me>
+      </solution>
+    </example>
+
+    <example xml:id="ex-sub-05">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int \sec^2(x)\tan(x)\,dx</m> in two ways, and explain why the answers agree.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Method 1: Let <m>u=\tan(x)</m>. Then <m>du=\sec^2(x)\,dx</m>.
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int \sec^2(x)\tan(x)\,dx
+          &amp;=&amp;
+          \displaystyle \int u\,du
+          \ =\
+          \tfrac12 u^2 + C
+          \ =\
+          \tfrac12\tan^2(x)+C.
+          \end{array}
+        </me>
+
+        <p>
+          Method 2: Write the integrand as <m>\sec(x)\cdot (\tan(x)\sec(x))</m> and let <m>z=\sec(x)</m>.
+          Then <m>dz=\tan(x)\sec(x)\,dx</m>.
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int \sec^2(x)\tan(x)\,dx
+          &amp;=&amp;
+          \displaystyle \int z\,dz
+          \ =\
+          \tfrac12 z^2 + C
+          \ =\
+          \tfrac12\sec^2(x)+C.
+          \end{array}
+        </me>
+
+        <p>
+          These differ by a constant because <m>\sec^2(x)=\tan^2(x)+1</m>.
+          So <m>\tfrac12\sec^2(x)=\tfrac12\tan^2(x)+\tfrac12</m>, meaning the two antiderivative families are the same.
+        </p>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-substitution-definite">
+    <title>Substitution for Definite Integrals</title>
+
+    <p>
+      Substitution can be used directly with definite integrals by changing the limits.
+      If <m>u=g(x)</m>, then
+    </p>
+
+    <me>
+      \int_a^b f(g(x))g'(x)\,dx \ =\ \int_{g(a)}^{g(b)} f(u)\,du.
+    </me>
+
+    <example xml:id="ex-sub-def-01">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_2^3 x(1+x^2)^5\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u=1+x^2</m>, so <m>du=2x\,dx</m> and <m>x\,dx=\tfrac12\,du</m>.
+          Update the limits: when <m>x=2</m>, <m>u=1+2^2=5</m>; when <m>x=3</m>, <m>u=1+3^2=10</m>.
+        </p>
+
+        <me>
+          \begin{array}{rcl}
+          \displaystyle \int_2^3 x(1+x^2)^5\,dx
+          &amp;=&amp;
+          \displaystyle \int_2^3 \tfrac12 (1+x^2)^5\cdot 2x\,dx
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \int_{5}^{10} \tfrac12 u^5\,du
+          \ =\
+          \left.\tfrac{1}{12}u^6\right|_{u=5}^{u=10}
+          \\[0.9em]
+          &amp;=&amp;
+          \displaystyle \tfrac{1}{12}\left(10^6-5^6\right).
+          \end{array}
+        </me>
+      </solution>
+    </example>
+  </subsection>
+
+  <subsection xml:id="ssec-integral-symmetry">
+    <title>Integral Symmetry for Odd Functions</title>
+
+    <theorem xml:id="thm-integral-symmetry-odd">
+      <title>Integral Symmetry Theorem</title>
+      <statement>
+        <p>
+          If <m>f</m> is odd, meaning <m>f(-x)=-f(x)</m>, then for any <m>a&gt;0</m>,
+        </p>
+        <me>
+          \int_{-a}^{a} f(x)\,dx \ =\ 0.
+        </me>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        By the splitting rule,
+      </p>
+      <me>
+        \int_{-a}^{a} f(x)\,dx \ =\ \int_{-a}^{0} f(x)\,dx + \int_{0}^{a} f(x)\,dx.
+      </me>
+      <p>
+        In the first integral, substitute <m>u=-x</m>, so <m>du=-dx</m>.
+        When <m>x=-a</m>, <m>u=a</m>; when <m>x=0</m>, <m>u=0</m>. Then:
+      </p>
+      <me>
+        \begin{array}{rcl}
+        \displaystyle \int_{-a}^{0} f(x)\,dx
+        &amp;=&amp;
+        \displaystyle \int_{a}^{0} f(-u)\,(-du)
+        \ =\
+        \int_{a}^{0} (-f(u))\,(-du)
+        \\[0.9em]
+        &amp;=&amp;
+        \displaystyle \int_{a}^{0} f(u)\,du
+        \ =\
+        -\int_{0}^{a} f(u)\,du.
+        \end{array}
+      </me>
+      <p>
+        Therefore <m>\int_{-a}^{0} f(x)\,dx + \int_{0}^{a} f(x)\,dx=0</m>.
+      </p>
+    </proof>
+
+    <example xml:id="ex-odd-symmetry-01">
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int_{-\pi}^{\pi} x\cos(x)\,dx</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The integrand <m>f(x)=x\cos(x)</m> is odd because
+          <m>f(-x)=(-x)\cos(-x)=(-x)\cos(x)=-f(x)</m>. By the symmetry theorem,
+        </p>
+        <me>
+          \int_{-\pi}^{\pi} x\cos(x)\,dx \ =\ 0.
+        </me>
+      </solution>
+    </example>
+
+    <figure xml:id="fig-xcosx">
+      <caption>
+        <p>
+          The graph of <m>y=x\cos(x)</m> is rotationally symmetric about the origin, so the signed areas on <m>[-\pi,0]</m> and <m>[0,\pi]</m> cancel.
+        </p>
+      </caption>
+      <image source="4-5-XCosX.png" width="60%"/>
+    </figure>
+  </subsection>
+
+  <subsection xml:id="ssec-heart-flow">
+    <title>Application: Heart Flow Rate</title>
+
+    <p>
+      In a medical test, a known amount of dye is injected into a vein flowing toward the heart.
+      Let <m>c(t)</m> be the measured dye concentration in arterial blood (mg per liter) at time <m>t</m> minutes.
+      If the (unknown) blood flow rate is constant at <m>r</m> liters per minute, then the total blood volume that has passed is <m>\ell=rt</m>.
+      Let <m>C(\ell)</m> be the dye concentration after <m>\ell</m> liters have passed, so <m>C(rt)=c(t)</m>.
+    </p>
+
+    <p>
+      The total amount of dye <m>D</m> (in mg) can be computed by integrating concentration with respect to volume:
+    </p>
+
+    <me>
+      D \ =\ \int_0^{\infty} C(\ell)\,d\ell.
+    </me>
+
+    <p>
+      Substitute <m>\ell=rt</m>, so <m>d\ell=r\,dt</m> and <m>C(\ell)=C(rt)=c(t)</m>. Then
+    </p>
+
+    <me>
+      \begin{array}{rcl}
+      \displaystyle D
+      &amp;=&amp;
+      \displaystyle \int_0^{\infty} C(\ell)\,d\ell
+      \ =\
+      \int_0^{\infty} C(rt)\,r\,dt
+      \\[0.9em]
+      &amp;=&amp;
+      \displaystyle r\int_0^{\infty} c(t)\,dt.
+      \end{array}
+    </me>
+
+    <p>
+      Solving for the flow rate gives
+    </p>
+
+    <me>
+      r \ =\ \frac{D}{\displaystyle \int_0^{\infty} c(t)\,dt}.
+    </me>
+
+    <p>
+      In practice, once the dye has passed through the system, <m>c(t)</m> becomes (essentially) zero, so the improper integral can be replaced by a finite upper limit chosen from the data.
+      The remaining integral can be approximated numerically (for example, by a Riemann sum or a spreadsheet).
+    </p>
+  </subsection>
+
+<subsection xml:id="additional-worked-problems-integral-usub">
+  <title>Additional Worked-Out Examples</title>
+
+  <p>
+    To keep this section at a reasonable length, we include only a few representative examples directly in the text.
+    If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional
+    fully worked-out examples are available via: 
+    <alert>
+      <xref ref="subsec-integral-usub">
+        Additional Worked-Out Problems for Substitution Rule for Integration
+      </xref>
+    </alert>
+  </p>
+
+</subsection>
+
+
+  <exercises xml:id="exercises-substitution">
+    <title>Practice / Study Problems</title>
+
+    <exercisegroup>
+      <title>Indefinite Integrals by Substitution</title>
+
+      <exercise xml:id="prob-sub-01">
+        <statement>
+          <p>Compute <m>\displaystyle \int 6x(1+x^2)^4\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-sub-02">
+        <statement>
+          <p>Compute <m>\displaystyle \int \frac{e^{3x}}{1+e^{3x}}\,dx</m>.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-sub-03">
+        <statement>
+          <p>Compute <m>\displaystyle \int \sin(5x)\,dx</m> and check by differentiating.</p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+
+    <exercisegroup>
+      <title>Definite Integrals and Symmetry</title>
+
+      <exercise xml:id="prob-sub-def-01">
+        <statement>
+          <p>Evaluate <m>\displaystyle \int_0^1 2x\sqrt{1+x^2}\,dx</m> using substitution with updated limits.</p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prob-odd-01">
+        <statement>
+          <p>Without finding an antiderivative, evaluate <m>\displaystyle \int_{-4}^{4} (x^3-2x)\,dx</m>.</p>
+        </statement>
+      </exercise>
+    </exercisegroup>
+  </exercises>
 
 </section>
