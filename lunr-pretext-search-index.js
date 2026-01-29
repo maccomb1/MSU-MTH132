@@ -2089,9 +2089,9 @@ var ptx_lunr_docs = [
   "body": " Additional Worked-Out Problems   Limits from Graphs and Notation   Graphing a Function to Find a Limit   Consider the function .  Sketch the graph of and use it to find , if it exists.    To graph , we first graph the pieces of the function on their respective domains. For , we graph , which is a parabola opening upwards. At , we have a single point . For , we graph , which is a line with a negative slope. Together, these pieces form the graph of .    Graph of a piecewise-defined function as described in the example.   A graph on a coordinate grid showing a piecewise function. For x less than 2, the graph is a smooth upward-opening curve with a minimum at the origin. As x approaches 2 from the left, the curve rises toward an open circle at x equals 2 and height 4. At x equals 2, there is a filled point at height 3, indicating the function value. Also at x equals 2, there is an open circle at height 2 that begins a straight line segment. For x greater than 2, the graph is a straight line sloping downward from the open circle at x equals 2 and height 2, passing through the point x equals 3 and height 1, and continuing downward toward x equals 4. The differing open and closed points at x equals 2 show that the left-hand limit, right-hand limit, and the function value at x equals 2 are not all the same.     Now, we analyze the behavior of as approaches 2 from both sides. As approaches 2 from the left ( ), approaches . As approaches 2 from the right ( ), approaches .  Since the left-hand limit ( ) and the right-hand limit ( ) are not equal, the overall limit does not exist.      Limit Laws and Algebraic Techniques  test    Limits at Infinity: Horizontal Asymptotes  test    Continuity  test    Intermediate Value Theorem  test   "
 },
 {
-  "id": "subsec-limit-gl-2",
+  "id": "ex-limit-graph-02",
   "level": "2",
-  "url": "sec-limit-ww.html#subsec-limit-gl-2",
+  "url": "sec-limit-ww.html#ex-limit-graph-02",
   "type": "Example",
   "number": "1.6.1",
   "title": "Graphing a Function to Find a Limit.",
