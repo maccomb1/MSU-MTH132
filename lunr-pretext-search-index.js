@@ -934,7 +934,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Limits from Graphs and Notation",
-  "body": " Limits from Graphs and Notation    Understand the intuitive definition of a limit and how to express it using mathematical notation.  Determine limits from tables of values and from the graph of a function.  Recognize when a limit exists, and identify cases where the limit does not exist.  Interpret and compute one-sided limits, and explain how they relate to the existence of two-sided limits.  Understand the meaning of infinite limits and how they relate to vertical asymptotes.  Locate vertical asymptotes and describe a function’s behavior on both sides of each asymptote.     Definition of Limits  The concept of a limit is one of the cornerstones of calculus. Limits allow us to describe precisely what happens to a function’s values as the input approaches a particular number—whether or not the function is even defined at that point. They provide the language for defining continuity, derivatives, and integrals, and they help us capture “approaching” behavior that can’t be expressed by direct substitution alone. Before moving on to more formal ideas, we start with an intuitive definition of a limit.   Limit (intuitive)   Consider a function and numbers , . Then the limit of equals as approaches , in symbols , whenever can be forced arbitrarily close to by making sufficiently close to (but not equal to) . If we cannot make as close to a single value as we would like as approaches , then we say that does not have a limit as approaches .    That is, approximates to within any desired error tolerance, for all values of within some small distance from (but ). One more way to say it: if we make a table of for any sample values of getting closer and closer to (such as , , etc.), then the values of will get as close as we like to (though they might never quite reach ).  Graphically:   Reading a limit from a graph: .        Evaluating Limits  Let's make sure the definition makes sense. Here is a nice first problem to attempt.   Our First Limit   Consider the function   Using a calculator, evaluate the function at the indicated -values and fill in the corresponding entries in the table.    Based on the intuitive limit definition guess the limit value  View the graph of in Desmos . Use words to explain to another student how the table relates to the graph and how the limit can be determined from the graph.       Check Your Answers:         As approaches from either the left or the right, the output values get closer and closer to . Although is undefined (there is a hole in the graph), the limit still exists and equals .   Step by Step Video Solution:        Some limits are easy because we can plug in to get the limiting value , in which case we say is continuous at . Graphically, as in the above figure , this means the curve has no jump or hole at .   A Nice Continuous Example   Evaluate .    Full Written Solution:  Since our function is continuous around (we can draw the parabola without lifting our pencil), we can simply plug into to get the answer .  More Rigorous Solution:  Algebraically, if is close enough to , say for some small (close to ), then which is forced as close as we like to if is small enough to 0 (either positive or negative).    We have seen a few problems where a limit exists, but in fact, as the 2004 movie Mean Girls teaches us, sometimes    The limit does not exist GIF      One way this can occur is if does not approach a single limiting value as approaches . In such cases, we declare that the limit does not exist , and the symbol has no meaning. Now let's see such an example.   When a limit does not exist   Consider the sign function , defined by   Which when graphed looks like:    The sign function .       Determine the limit     Near , the function cannot be forced close to any single output value. That is, , since no matter how close gets to , there are some (namely negative) for which is far from ; and similarly is not , nor , nor any other value. In such cases, it is most appropriate to simply say does not exist.     An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:   The function for with (a removable discontinuity at ).      Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .     One-sided Limits  Sometimes, the behavior of a function as you approach a point depends on which direction you come from. For example, a graph might approach one value when moving in from the left, but a completely different value when coming in from the right like in Example .  And so, let's define another type of limit:   One-Sided Limits    One-sided limits (from the right or left) consider only values of on one side of . The limit of equals as approaches from the right, denoted , whenever can be made arbitrarily close to by taking sufficiently close to (but greater than) . The limit from the left, denoted , is defined similarly, except with  less than .     If we have the ordinary limit , then the left and right limits must both have the same value . In the Example above, we have .  However in Example we have, and , even though does not exist.   In fact, we can make our first Theorem from this idea    For a function and real number , the (two-sided) limit exists if and only if both one-sided limits exist and are equal. Precisely,   if and only if     A full proof of this theorem requires the formal – definition of a limit and is beyond the scope of this course. You will encounter this level of rigor in MTH 320, where you will learn how to construct proofs of results like this one from first principles.      Infinite Limits  Up to this point, most of the limits we’ve encountered have approached a finite number. However, some functions behave very differently: as you get closer to certain -values, the function’s values grow without bound—either shooting up toward positive infinity or diving down toward negative infinity. In these cases, the function doesn’t have a finite limit, but the way it “blows up” is still predictable.   Infinite Limits and Vertical Asymptotes   We define infinite limits as follows: means that can be made larger than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Similarly means that can be made smaller than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Such behavior signals a vertical asymptote at .     The symbol (and likewise ) has no meaning by itself; it is simply a way of saying that can be made as large as desired.     Consider the function .  Which when graphed looks like:   The graph of .      Answer the following questions.   Using the graph of evaluate and explain your reasoning.  Try now without the graph (using only the equation of ) to evaluate and explain your reasoning.       Looking at the graph , we can notice two key features near :   The graph is in two pieces — one in quadrant II (for ) and one in quadrant I (for ).  Both pieces shoot straight up as they get close to .   This means the function grows beyond any large number we can choose when is close enough to . And so we know     As gets very close to , gets very small — like , , , and so on. Dividing by a very small positive number gives a very large positive number (for example, , , ). In general, we can shorthand this fact as .        True or False: .     False. The two one-sided limits behave differently: but . Because the left and right limits are not equal, the two-sided limit does not exist.    Note: Be careful to read problems in this class carefully! Here is problem that is quite similar looking but has a different result.    True or False: has a vertical asymptote at .     True. As approaches from the right, , and as approaches from the left, . This unbounded behavior around means the line is a vertical asymptote.      Locating Vertical Asymptotes  A vertical asymptote occurs at a value of where a function grows without bound (positively or negatively) as approaches that value. This often happens when the function’s formula has a denominator that becomes zero while the numerator stays nonzero, making the function’s value extremely large in magnitude near that point.   How to Locate Vertical Asymptotes  To locate possible vertical asymptotes, we look for values of that make the denominator zero but do not also make the numerator zero. Once we have these candidates, we check the one-sided limits to determine whether the function increases toward or decreases toward on each side.   Now let's see it in action with an example    Consider the function .   Locate the vertical asymptotes for .  For each vertical asymptote, describe the behavior of as approaches from both the left and the right.      Check Your Answers:    The vertical asymptotes are at and .   Here is the function's behavior around each asymptote:     Step by Step Video Solution:        And lastly, a true\/false problem on the same subject    True or False: The function has a vertical asymptote at .    False. Factoring numerator and denominator we get Notice that if we try to naively plug in we get 0 in both the numerator and denominator. From Remark we should suspect that this will not yield a vertical asymptote.  To verify we can plug in numbers close to on either side to see what is happening to .   From this we suspect . And in fact if we simplify and then plug in into the simplified function we get . We will learn in the next section that this will turn out to be a good strategy for evaluating limits. And so, does not yield a vertical asymptote.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Limits from Graphs and Notation      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning     True or False: If , then .    False. A limit describes nearby behavior; the function value at the point can differ (or be undefined).      True or False: If and , then .    True. Equality of both one-sided limits guarantees the two-sided limit exists and has that value.      True or False: If , then is undefined.    False. The limit concerns values near ; may be anything (defined or not) without affecting the infinite limit.      True or False: If does not exist, then both and do not exist.    False. One-sided limits may exist but differ; that difference causes the two-sided limit to fail.      True or False: If is a vertical asymptote, then at least one of or is infinite.    True. A vertical asymptote is characterized by unbounded behavior from one or both sides.      True or False: If the graph decreases without bound as , then .    True. “Decreases without bound” means the values become arbitrarily negative.      True or False: .    True. Values grow beyond any bound from either side since for .      True or False: If , then is a vertical asymptote.    True.  ; the numerator is nonzero at , so is a VA.      True or False: If a rational function’s denominator is zero at , then the function must have a vertical asymptote at .    False. A common factor in numerator and denominator could cancel instead like in Problem .      "
+  "body": " Limits from Graphs and Notation    Understand the intuitive definition of a limit and how to express it using mathematical notation.  Determine limits from tables of values and from the graph of a function.  Recognize when a limit exists, and identify cases where the limit does not exist.  Interpret and compute one-sided limits, and explain how they relate to the existence of two-sided limits.  Understand the meaning of infinite limits and how they relate to vertical asymptotes.  Locate vertical asymptotes and describe a function’s behavior on both sides of each asymptote.     Definition of Limits  The concept of a limit is one of the cornerstones of calculus. Limits allow us to describe precisely what happens to a function’s values as the input approaches a particular number—whether or not the function is even defined at that point. They provide the language for defining continuity, derivatives, and integrals, and they help us capture “approaching” behavior that can’t be expressed by direct substitution alone. Before moving on to more formal ideas, we start with an intuitive definition of a limit.   Limit (intuitive)   Consider a function and numbers , . Then the limit of equals as approaches , in symbols , whenever can be forced arbitrarily close to by making sufficiently close to (but not equal to) . If we cannot make as close to a single value as we would like as approaches , then we say that does not have a limit as approaches .    That is, approximates to within any desired error tolerance, for all values of within some small distance from (but ). One more way to say it: if we make a table of for any sample values of getting closer and closer to (such as , , etc.), then the values of will get as close as we like to (though they might never quite reach ).  Graphically:   Reading a limit from a graph: .        Evaluating Limits  Let's make sure the definition makes sense. Here is a nice first problem to attempt.   Our First Limit   Consider the function   Using a calculator, evaluate the function at the indicated -values and fill in the corresponding entries in the table.    Based on the intuitive limit definition guess the limit value  View the graph of in Desmos . Use words to explain to another student how the table relates to the graph and how the limit can be determined from the graph.       Check Your Answers:         As approaches from either the left or the right, the output values get closer and closer to . Although is undefined (there is a hole in the graph), the limit still exists and equals .   Step by Step Video Solution:        Some limits are easy because we can plug in to get the limiting value , in which case we say is continuous at . Graphically, as in the above figure , this means the curve has no jump or hole at .   A Nice Continuous Example   Evaluate .    Full Written Solution:  Since our function is continuous around (we can draw the parabola without lifting our pencil), we can simply plug into to get the answer .  More Rigorous Solution:  Algebraically, if is close enough to , say for some small (close to ), then which is forced as close as we like to if is small enough to 0 (either positive or negative).    We have seen a few problems where a limit exists, but in fact, as the 2004 movie Mean Girls teaches us, sometimes    The limit does not exist GIF      One way this can occur is if does not approach a single limiting value as approaches . In such cases, we declare that the limit does not exist , and the symbol has no meaning. Now let's see such an example.   When a limit does not exist   Consider the sign function , defined by   Which when graphed looks like:    The sign function .       Determine the limit     Near , the function cannot be forced close to any single output value. That is, , since no matter how close gets to , there are some (namely negative) for which is far from ; and similarly is not , nor , nor any other value. In such cases, it is most appropriate to simply say does not exist.     An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:   The function for with .      Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .     One-sided Limits  Sometimes, the behavior of a function as you approach a point depends on which direction you come from. For example, a graph might approach one value when moving in from the left, but a completely different value when coming in from the right like in Example .  And so, let's define another type of limit:   One-Sided Limits    One-sided limits (from the right or left) consider only values of on one side of . The limit of equals as approaches from the right, denoted , whenever can be made arbitrarily close to by taking sufficiently close to (but greater than) . The limit from the left, denoted , is defined similarly, except with  less than .     If we have the ordinary limit , then the left and right limits must both have the same value . In the Example above, we have .  However in Example we have, and , even though does not exist.   In fact, we can make our first Theorem from this idea    For a function and real number , the (two-sided) limit exists if and only if both one-sided limits exist and are equal. Precisely,   if and only if     A full proof of this theorem requires the formal – definition of a limit and is beyond the scope of this course. You will encounter this level of rigor in MTH 320, where you will learn how to construct proofs of results like this one from first principles.    Finally, let's put it all together with an example before we move on to another idea.   Evaluating One-Sided Limits   Consider the function given in the graph below:    Graph of a piecewise-defined function with a mix of curves, line segments, open circles, and filled points.   A graph on a coordinate grid showing a piecewise function. On the far left, a smooth curve rises to a maximum near x equals negative four and then decreases. At x equals negative three, the left-hand piece ends at an open circle at height two. At the same x-value, there is a filled point at height one, which begins a straight line segment sloping downward to the right. This line segment continues to an open circle at x equals negative one and height negative one. At x equals negative one, there is also a filled point at height one. From the open circle at negative one, a straight line segment slopes upward to a filled point at x equals one and height two. To the right of x equals one, the graph continues as a smooth increasing curve starting at that filled point.     Use the graph to evaluate the following limits, if they exist. If a limit does not exist, explain why.          As approaches from the left, the graph of approaches the height of . Thus, .           As approaches , the left-hand limit approaches (from the curve) while the right-hand limit approaches (from the line segment). Since the one-sided limits are not equal, the two-sided limit does not exist .           As approaches , the left-hand limit approaches (from the line segment). From the right, the limit also approaches the height of (along the other line segment). Therefore, since the left-hand and right-hand limits are equal, the two-sided limit exists and equals . So            As approaches from the right, the graph of approaches the height of . Thus, .       Infinite Limits  Up to this point, most of the limits we’ve encountered have approached a finite number. However, some functions behave very differently: as you get closer to certain -values, the function’s values grow without bound—either shooting up toward positive infinity or diving down toward negative infinity. In these cases, the function doesn’t have a finite limit, but the way it “blows up” is still predictable.   Infinite Limits and Vertical Asymptotes   We define infinite limits as follows: means that can be made larger than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Similarly means that can be made smaller than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Such behavior signals a vertical asymptote at .     The symbol (and likewise ) has no meaning by itself; it is simply a way of saying that can be made as large as desired.     Consider the function .  Which when graphed looks like:   The graph of .      Answer the following questions.   Using the graph of evaluate and explain your reasoning.  Try now without the graph (using only the equation of ) to evaluate and explain your reasoning.       Looking at the graph , we can notice two key features near :   The graph is in two pieces — one in quadrant II (for ) and one in quadrant I (for ).  Both pieces shoot straight up as they get close to .   This means the function grows beyond any large number we can choose when is close enough to . And so we know     As gets very close to , gets very small — like , , , and so on. Dividing by a very small positive number gives a very large positive number (for example, , , ). In general, we can shorthand this fact as .        True or False: .     False. The two one-sided limits behave differently: but . Because the left and right limits are not equal, the two-sided limit does not exist.    Note: Be careful to read problems in this class carefully! Here is problem that is quite similar looking but has a different result.    True or False: has a vertical asymptote at .     True. As approaches from the right, , and as approaches from the left, . This unbounded behavior around means the line is a vertical asymptote.      Locating Vertical Asymptotes  A vertical asymptote occurs at a value of where a function grows without bound (positively or negatively) as approaches that value. This often happens when the function’s formula has a denominator that becomes zero while the numerator stays nonzero, making the function’s value extremely large in magnitude near that point.   How to Locate Vertical Asymptotes  To locate possible vertical asymptotes, we look for values of that make the denominator zero but do not also make the numerator zero. Once we have these candidates, we check the one-sided limits to determine whether the function increases toward or decreases toward on each side.   Now let's see it in action with an example    Consider the function .   Locate the vertical asymptotes for .  For each vertical asymptote, describe the behavior of as approaches from both the left and the right.      Check Your Answers:    The vertical asymptotes are at and .   Here is the function's behavior around each asymptote:     Step by Step Video Solution:        And lastly, a true\/false problem on the same subject    True or False: The function has a vertical asymptote at .    False. Factoring numerator and denominator we get Notice that if we try to naively plug in we get 0 in both the numerator and denominator. From Remark we should suspect that this will not yield a vertical asymptote.  To verify we can plug in numbers close to on either side to see what is happening to .   From this we suspect . And in fact if we simplify and then plug in into the simplified function we get . We will learn in the next section that this will turn out to be a good strategy for evaluating limits. And so, does not yield a vertical asymptote.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Examples for Limits from Graphs and Notation      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning     True or False: If , then .    False. A limit describes nearby behavior; the function value at the point can differ (or be undefined).      True or False: If and , then .    True. Equality of both one-sided limits guarantees the two-sided limit exists and has that value.      True or False: If , then is undefined.    False. The limit concerns values near ; may be anything (defined or not) without affecting the infinite limit.      True or False: If does not exist, then both and do not exist.    False. One-sided limits may exist but differ; that difference causes the two-sided limit to fail.      True or False: If is a vertical asymptote, then at least one of or is infinite.    True. A vertical asymptote is characterized by unbounded behavior from one or both sides.      True or False: If the graph decreases without bound as , then .    True. “Decreases without bound” means the values become arbitrarily negative.      True or False: .    True. Values grow beyond any bound from either side since for .      True or False: If , then is a vertical asymptote.    True.  ; the numerator is nonzero at , so is a VA.      True or False: If a rational function’s denominator is zero at , then the function must have a vertical asymptote at .    False. A common factor in numerator and denominator could cancel instead like in Problem .      "
 },
 {
   "id": "sec-graphical-limits-2",
@@ -1015,7 +1015,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "1.1.8",
   "title": "",
-  "body": " An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:   The function for with (a removable discontinuity at ).      Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .  "
+  "body": " An important feature of is that it does not depend on , even if is undefined: the limit only notices values of for . As a quick mini example, define for , and , having the graph:   The function for with .      Then , since if is close enough to (but unequal to) , then is arbitrarily close to (in fact ). Again, , and is not continuous at .  "
 },
 {
   "id": "def-one-sided-limits",
@@ -1045,11 +1045,20 @@ var ptx_lunr_docs = [
   "body": "  For a function and real number , the (two-sided) limit exists if and only if both one-sided limits exist and are equal. Precisely,   if and only if     A full proof of this theorem requires the formal – definition of a limit and is beyond the scope of this course. You will encounter this level of rigor in MTH 320, where you will learn how to construct proofs of results like this one from first principles.   "
 },
 {
+  "id": "ex-one-sided-limits",
+  "level": "2",
+  "url": "sec-graphical-limits.html#ex-one-sided-limits",
+  "type": "Example",
+  "number": "1.1.13",
+  "title": "Evaluating One-Sided Limits.",
+  "body": " Evaluating One-Sided Limits   Consider the function given in the graph below:    Graph of a piecewise-defined function with a mix of curves, line segments, open circles, and filled points.   A graph on a coordinate grid showing a piecewise function. On the far left, a smooth curve rises to a maximum near x equals negative four and then decreases. At x equals negative three, the left-hand piece ends at an open circle at height two. At the same x-value, there is a filled point at height one, which begins a straight line segment sloping downward to the right. This line segment continues to an open circle at x equals negative one and height negative one. At x equals negative one, there is also a filled point at height one. From the open circle at negative one, a straight line segment slopes upward to a filled point at x equals one and height two. To the right of x equals one, the graph continues as a smooth increasing curve starting at that filled point.     Use the graph to evaluate the following limits, if they exist. If a limit does not exist, explain why.          As approaches from the left, the graph of approaches the height of . Thus, .           As approaches , the left-hand limit approaches (from the curve) while the right-hand limit approaches (from the line segment). Since the one-sided limits are not equal, the two-sided limit does not exist .           As approaches , the left-hand limit approaches (from the line segment). From the right, the limit also approaches the height of (along the other line segment). Therefore, since the left-hand and right-hand limits are equal, the two-sided limit exists and equals . So            As approaches from the right, the graph of approaches the height of . Thus, .    "
+},
+{
   "id": "def-infinite-limits",
   "level": "2",
   "url": "sec-graphical-limits.html#def-infinite-limits",
   "type": "Definition",
-  "number": "1.1.13",
+  "number": "1.1.15",
   "title": "Infinite Limits and Vertical Asymptotes.",
   "body": " Infinite Limits and Vertical Asymptotes   We define infinite limits as follows: means that can be made larger than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Similarly means that can be made smaller than any real number (for example, ) by taking sufficiently close to (but not equal to) .  Such behavior signals a vertical asymptote at .   "
 },
@@ -1058,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#rmk-infinity-meaning",
   "type": "Remark",
-  "number": "1.1.14",
+  "number": "1.1.16",
   "title": "",
   "body": " The symbol (and likewise ) has no meaning by itself; it is simply a way of saying that can be made as large as desired.  "
 },
@@ -1067,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#ex-inf-lim",
   "type": "Example",
-  "number": "1.1.15",
+  "number": "1.1.17",
   "title": "",
   "body": "  Consider the function .  Which when graphed looks like:   The graph of .      Answer the following questions.   Using the graph of evaluate and explain your reasoning.  Try now without the graph (using only the equation of ) to evaluate and explain your reasoning.       Looking at the graph , we can notice two key features near :   The graph is in two pieces — one in quadrant II (for ) and one in quadrant I (for ).  Both pieces shoot straight up as they get close to .   This means the function grows beyond any large number we can choose when is close enough to . And so we know     As gets very close to , gets very small — like , , , and so on. Dividing by a very small positive number gives a very large positive number (for example, , , ). In general, we can shorthand this fact as .     "
 },
@@ -1076,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-limit-inf-1overx",
   "type": "Problem",
-  "number": "1.1.17",
+  "number": "1.1.19",
   "title": "",
   "body": "  True or False: .     False. The two one-sided limits behave differently: but . Because the left and right limits are not equal, the two-sided limit does not exist.   "
 },
@@ -1085,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-VA-1overx",
   "type": "Problem",
-  "number": "1.1.18",
+  "number": "1.1.20",
   "title": "",
   "body": "  True or False: has a vertical asymptote at .     True. As approaches from the right, , and as approaches from the left, . This unbounded behavior around means the line is a vertical asymptote.   "
 },
@@ -1094,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#strat-locating-va",
   "type": "Strategy",
-  "number": "1.1.19",
+  "number": "1.1.21",
   "title": "How to Locate Vertical Asymptotes.",
   "body": " How to Locate Vertical Asymptotes  To locate possible vertical asymptotes, we look for values of that make the denominator zero but do not also make the numerator zero. Once we have these candidates, we check the one-sided limits to determine whether the function increases toward or decreases toward on each side.  "
 },
@@ -1103,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#ex-vertical-asymptotes-signs",
   "type": "Example",
-  "number": "1.1.20",
+  "number": "1.1.22",
   "title": "",
   "body": "  Consider the function .   Locate the vertical asymptotes for .  For each vertical asymptote, describe the behavior of as approaches from both the left and the right.      Check Your Answers:    The vertical asymptotes are at and .   Here is the function's behavior around each asymptote:     Step by Step Video Solution:       "
 },
@@ -1112,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-graphical-limits.html#prob-hole-vs-asymptote",
   "type": "Problem",
-  "number": "1.1.21",
+  "number": "1.1.23",
   "title": "",
   "body": "  True or False: The function has a vertical asymptote at .    False. Factoring numerator and denominator we get Notice that if we try to naively plug in we get 0 in both the numerator and denominator. From Remark we should suspect that this will not yield a vertical asymptote.  To verify we can plug in numbers close to on either side to see what is happening to .   From this we suspect . And in fact if we simplify and then plug in into the simplified function we get . We will learn in the next section that this will turn out to be a good strategy for evaluating limits. And so, does not yield a vertical asymptote.   "
 },
@@ -3769,7 +3778,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Motion in Physics",
-  "body": " Motion in Physics    Calculate velocity, acceleration, and jerk using derivatives. Include units and interpret results in real-world context.  Move fluently between multiple representations of motion (formula, table, and graph), including estimating derivatives from graphs or tables and interpreting slopes as rates of change.  Determine when an object is moving in the positive or negative direction by analyzing the sign of the velocity, and identify times when the object is at rest ( ).  Use acceleration to describe how velocity is changing, and compute acceleration values either by differentiating or by finding slopes on a velocity graph.  Decide when an object is speeding up or slowing down by comparing the signs of velocity and acceleration, and express the answer in interval notation.  Distinguish between displacement and total distance traveled on a time interval and compute both quantities.  Interpret and solve motion problems that require setting up and solving equations or inequalities (for example, finding when height is above a given value, when velocity is positive, or when speed exceeds a threshold).     Prerequisite Review  In this section there are several types of problems that require us to be able to solve inequalities. Problems such as determining when an object is moving in the positive direction, or speeding up, or when it has a negative acceleration.  If you feel a bit out of practice with inequalities, it may be helpful to revisit those ideas via the Precalculus Review: Inequalities section before proceeding.   Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning. Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting where our tools apply, then translate the result back to the original context.  Our key concept so far has been the derivative . For a function , the derivative has several complementary meanings.    Physical:  is the rate of change of with respect to . For a specific input , describes how fast changes near .   Geometric:  is the slope of the tangent line to the graph at .   Numerical: we approximate the derivative using a difference quotient where is small. As , the average rate of change approaches the instantaneous rate of change.   Algebraic: we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition     The Basics of Motion  Many applications of derivatives involve motion. In this section, all quantities are functions of time . Here is a basic set of definitions:   Position, Velocity, Acceleration, and Jerk   Let denote the position of an object at time , measured relative to a fixed reference point. The following quantities describe different aspects of the object’s motion:    Position  : the distance past a reference point (for example, in feet) at time seconds.   Velocity  : the rate of change of position, measured in feet per second. Velocity may be negative if the object is moving in the negative direction. The speed of the object is the absolute value of velocity, .   Acceleration  : the rate of change of velocity, measured in feet per second squared. A useful benchmark is one gee , approximately ft\/sec , which is the acceleration due to gravity near Earth’s surface.   Jerk  : the rate of change of acceleration, measured in feet per second cubed.       A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft\/sec. Its vertical position (height) at time seconds is modeled by .    Find formulas for the ball’s velocity and acceleration .    Differentiating gives and       When is does the ball have a velocity of zero? What is special about that moment in terms of the ball's height?    The ball has zero velocity when Solving gives seconds. At that time, the ball reaches its maximum height before falling back down.      When does the ball hit the ground? What are its velocity and acceleration right before it strikes the ground?    The ball hits the ground when : Or equivalently, Solving this quadratic equation (using the quadratic formula) gives Since time must be positive, we take the larger solution: seconds (approximately 4.1 seconds).  The velocity just before impact is (approximately -67 ft\/sec, indicating downward motion).  The acceleration is constant: at all times, including right before the ball strikes the ground.      The graph of in is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.     Consider the velocity graph of a particle moving along a line given below.   Velocity graph for a particle moving along a line.   A graph of velocity versus time for a particle moving along a line. At time 0, the velocity is 4. From time 0 to time 2, the velocity decreases linearly from 4 to 1. From time 2 to time 4, the velocity remains constant at 1. From time 4 to time 6, the velocity decreases linearly from 1 to negative 1, crossing zero at time 5.    Use this to answer the following questions:     When is the particle moving at a constant speed? Explain how you know.    The particle is moving at a constant speed from time to . In interval notation this is . This is because the velocity graph is flat (horizontal) during this interval, indicating that the velocity is not changing.      When is the particle changing direction? Explain how you know.    The particle is changing direction at time . This is because the velocity graph crosses the -axis at this time, indicating that the velocity changes from positive to negative. A change in the sign of velocity indicates a change in direction of motion.      What is the acceleration of the particle at time ?    The acceleration at time is the slope of the velocity graph at that time. From the graph, we see that from to , the velocity decreases linearly from 4 to 1. The slope of this line segment is Therefore, the acceleration at time is units per second squared.     Now that we have reviewed some of the basic concepts of motion, let's move on to some more advanced topics.    Speeding Up and Slowing Down  Before we proceed, it is important to emphasize the difference between velocity and speed. An object is said to be speeding up when its speed is increasing, and slowing down when its speed is decreasing. Let's consider the following example to illustrate this concept before we get our main rule for this section.    Consider the following situations. In each case, determine whether the particle is speeding up or slowing down.     The velocity of a particle is initially m\/sec and it increases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is increasing, the particle is speeding up.      The velocity of a particle is initially m\/sec and it decreases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is decreasing, the particle is slowing down.      The velocity of a particle is initially m\/sec and it decreases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is increasing, the particle is speeding up.      The velocity of a particle is initially m\/sec and it increases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is decreasing, the particle is slowing down.      In summary it is not enough to know whether the velocity is increasing or decreasing to determine if the object is speeding up or slowing down. One must also consider the sign of the velocity.   Now let's summarize this information as a theorem:   Speeding Up and Slowing Down     An object is speeding up when its velocity and acceleration have the same sign (either both positive or both negative).  An object is slowing down when its velocity and acceleration have opposite signs (one is positive and the other is negative).      Justification  If the velocity is positive then it is the same as speed. Thus if the acceleration is also positive then the velocity is increasing which means the speed is increasing.  If the velocity is negative then the speed is the opposite of velocity. Thus if the acceleration is also negative then the velocity is decreasing which means the speed is increasing.  The other two cases are similar.      Suppose an object has velocity . Determine when the object is speeding up and when it is slowing down. Express your answers in interval notation.    First let's find the sign of the velocity. We have Using the Test Point Method for Inequalities , we find that the velocity is zero at and . These points divide the number line into three intervals: , , and . Choosing test points from each interval, we find:  For in , , so velocity is positive on this interval.  For in , , so velocity is negative on this interval.  For in , , so velocity is positive on this interval.       A figure showing the sign of the velocity function on the number line.        Next, we find the acceleration by differentiating the velocity: Setting the acceleration equal to zero gives , or . This divides the number line into two intervals: and . Choosing test points from each interval, we find:  For in , , so acceleration is negative on this interval.  For in , , so acceleration is positive on this interval.       A figure showing the sign of the acceleration function on the number line.        Now we can determine when the object is speeding up and when it is slowing down by comparing the signs of velocity and acceleration:     A figure showing the sign of the velocity function and the acceleration function together on one number line.          On , velocity is positive and acceleration is negative, so the object is slowing down.  On , velocity is negative and acceleration is negative, so the object is speeding up.  On , velocity is negative and acceleration is positive, so the object is slowing down.  On , velocity is positive and acceleration is positive, so the object is speeding up.    Therefore, the object is speeding up on and slowing down on .    This completes our discussion of speeding up and slowing down. We will now move on to discuss total distance traveled and how it differs from displacement, the final new concept in this section.    Displacement vs Distance Traveled  Many students are probably already familiar with the concept of displacement from your favorite physics class:   Displacement   The displacement of an object over the time interval is how much the object's position changes during that time.  Displacement is given by where is the position function of the object.      Building off of : Recall the vertical position of the ball is given by . Find the displacement of the ball from seconds to seconds using the equation above.  Then verify your answer on the graph below.     Graph of the height function for the ball thrown straight up.   A graph of height versus time for a ball moving vertically. The horizontal axis represents time in seconds and the vertical axis represents height in feet. The curve is a downward-opening parabola. The point at time 1 has height 54, the maximum occurs at time 2 with height 70, and the point at time 3 has height 54.        To find the displacement, we evaluate the position function at the endpoints of the interval: Therefore, the displacement is This means that the ball ends up at the same height it started from during this time interval.  Looking at the graph, we can see that at seconds, the ball is at a height of 54 feet. It then rises to a maximum height of 70 feet at seconds before falling back down to 54 feet at seconds. Thus, the ball returns to its original height, confirming our calculation of zero displacement.    No compare this with the total distance traveled by the ball during the same time interval. Notice that it would be incorrect to say the ball traveled a distance of zero feet, since it did move up and then back down. But perhaps we are getting ahead of ourselves. Let's first define total distance traveled then we can come up with a reliable method to calculate it.   Total Distance Traveled   The total distance traveled by an object over the time interval is the total length of the path the object takes during that time.    Before we try to come up with a formula for total distance traveled, let's look back to our ball example to get some intuition.    Again, building off of : Recall the vertical position of the ball is given by .     Find the total distance traveled by the ball from seconds to seconds by using the graph below.     Graph of the height function for the ball thrown straight up.   A graph of height versus time for a ball moving vertically. The horizontal axis represents time in seconds and the vertical axis represents height in feet. The curve is a downward-opening parabola. The point at time 1 has height 54, the maximum occurs at time 2 with height 70, and the point at time 3 has height 54.        From the graph, we see that at seconds, the ball is at a height of 54 feet. It then rises to a maximum height of 70 feet at seconds. The distance traveled during this ascent is feet. Notice that we use absolute values here since distance traveled is always non-negative and we don't care about direction.  Next, the ball falls from a maximum height of 70 feet at seconds back down to 54 feet at seconds. The distance traveled during this descent is feet.  Therefore, the total distance traveled by the ball from seconds to seconds is the sum of the distances during the ascent and descent:       Find the total distance traveled by the ball from seconds to seconds by only using the height equation .    To find the total distance traveled using only the height equation, we first need to determine when the ball changes direction. This occurs when the velocity is zero. We already found the velocity function in : Setting , we solve: So the ball changes direction at seconds.  The total distance traveled is the sum of the distances traveled during each segment of motion:   We compute each value:   Therefore:       The key take away from this example is that in order to compute total distance traveled, we must know where all the turning points are (when ) and then sum the distances traveled over each piece.   Now we are ready to summarize our method for finding total distance traveled.   Method for Finding Total Distance Traveled   To find the total distance traveled by an object over the time interval :   Find all times turning points, that is all values of in where the velocity is zero: . These times divide the interval into pieces.  For each piece of the interval, compute the distance traveled by taking the absolute value of the displacement .  Sum the distances from each piece to get the total distance traveled over .       An object moves along a line with position given by . Find the total distance traveled over the time interval .    First, we find the velocity by differentiating the position function: Setting , we solve: Using the unit circle, the solutions to in the interval are and . These points divide the interval into three pieces: , , and .  Next, we compute the distance traveled on each piece:   Finally, we sum the distances from each piece to find the total distance traveled over :       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Motion in Physics      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     If is positive on , then is increasing on .     True. If the velocity is positive, the position function is increasing.      For , the ball reaches its maximum height at seconds because .     False. The velocity function is . Setting , we solve: Therefore, the ball reaches its maximum height at seconds, not seconds.      If at a time , then the object must change direction at .     False. When the velocity is zero, the object is momentarily at rest. However, this does not necessarily mean that the object changes direction at that time. For example, if the velocity changes from positive to zero and then back to positive, the object does not change direction.      If is decreasing on an interval, then the object is slowing down on that interval.     False. If the velocity is decreasing, it means that the acceleration is negative. However, whether the object is slowing down or speeding up depends on the sign of the velocity as well. If the velocity is positive and decreasing, the object is slowing down. But if the velocity is negative and decreasing, the object is actually speeding up.      If at a time , then the object must be at rest (even momentarily) at .     False. When the acceleration is zero, it means that the velocity is not changing at that time. However, this does not necessarily mean that the object is at rest. The object could be moving with a constant velocity.      If and , then the object is speeding up at .     True. Since the velocity is positive, the object is moving in the positive direction. Since the acceleration is also positive, the velocity is increasing. Therefore, the speed of the object is increasing, which means the object is speeding up.      The total distance traveled on is always greater than or equal to .     True. The total distance traveled accounts for all movement, regardless of direction, while only measures the net change in position. Therefore, the total distance traveled is always greater than or equal to the absolute value of the displacement.      If an object never changes direction on , then its total distance traveled equals .     True. If the object never changes direction, it means that it is either always moving in the positive direction or always moving in the negative direction. In either case, the total distance traveled is equal to the absolute value of the displacement, which is .      An object moving along a line has position function . The object is speeding up on the interval .     False. First, we find the velocity and acceleration functions:  Next, we determine the signs of velocity and acceleration on the interval . Setting , we solve: Thus, on the interval , the velocity is positive on and negative on . Setting , we solve: Thus, on the interval , the acceleration is negative on and positive on . Therefore, the object is slowing down on and , and speeding up on . Since the object is not speeding up on the entire interval , the statement is false.      "
+  "body": " Motion in Physics    Calculate velocity, acceleration, and jerk using derivatives. Include units and interpret results in real-world context.  Move fluently between multiple representations of motion (formula, table, and graph), including estimating derivatives from graphs or tables and interpreting slopes as rates of change.  Determine when an object is moving in the positive or negative direction by analyzing the sign of the velocity, and identify times when the object is at rest ( ).  Use acceleration to describe how velocity is changing, and compute acceleration values either by differentiating or by finding slopes on a velocity graph.  Decide when an object is speeding up or slowing down by comparing the signs of velocity and acceleration, and express the answer in interval notation.  Interpret and solve motion problems that require setting up and solving equations or inequalities (for example, finding when height is above a given value, when velocity is positive, or when speed exceeds a threshold).     Prerequisite Review  In this section there are several types of problems that require us to be able to solve inequalities. Problems such as determining when an object is moving in the positive direction, or speeding up, or when it has a negative acceleration.  If you feel a bit out of practice with inequalities, it may be helpful to revisit those ideas via the Precalculus Review: Inequalities section before proceeding.   Mathematics solves problems partly with technical tools, but also by translating between different levels of meaning. Many problems begin in a physical or geometric setting. We often translate them into a numerical or algebraic setting where our tools apply, then translate the result back to the original context.  Our key concept so far has been the derivative . For a function , the derivative has several complementary meanings.    Physical:  is the rate of change of with respect to . For a specific input , describes how fast changes near .   Geometric:  is the slope of the tangent line to the graph at .   Numerical: we approximate the derivative using a difference quotient where is small. As , the average rate of change approaches the instantaneous rate of change.   Algebraic: we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition     The Basics of Motion  Many applications of derivatives involve motion. In this section, all quantities are functions of time . Here is a basic set of definitions:   Position, Velocity, Acceleration, and Jerk   Let denote the position of an object at time , measured relative to a fixed reference point. The following quantities describe different aspects of the object’s motion:    Position  : the distance past a reference point (for example, in feet) at time seconds.   Velocity  : the rate of change of position, measured in feet per second. Velocity may be negative if the object is moving in the negative direction. The speed of the object is the absolute value of velocity, .   Acceleration  : the rate of change of velocity, measured in feet per second squared. A useful benchmark is one gee , approximately ft\/sec , which is the acceleration due to gravity near Earth’s surface.   Jerk  : the rate of change of acceleration, measured in feet per second cubed.       A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft\/sec. Its vertical position (height) at time seconds is modeled by .    Find formulas for the ball’s velocity and acceleration .    Differentiating gives and       When is does the ball have a velocity of zero? What is special about that moment in terms of the ball's height?    The ball has zero velocity when Solving gives seconds. At that time, the ball reaches its maximum height before falling back down.      When does the ball hit the ground? What are its velocity and acceleration right before it strikes the ground?    The ball hits the ground when : Or equivalently, Solving this quadratic equation (using the quadratic formula) gives Since time must be positive, we take the larger solution: seconds (approximately 4.1 seconds).  The velocity just before impact is (approximately -67 ft\/sec, indicating downward motion).  The acceleration is constant: at all times, including right before the ball strikes the ground.      The graph of in is a downward-opening parabola in , representing height over time. It is not the full two-dimensional flight path of the ball, since horizontal motion is ignored in this model.     Consider the velocity graph of a particle moving along a line given below.   Velocity graph for a particle moving along a line.   A graph of velocity versus time for a particle moving along a line. At time 0, the velocity is 4. From time 0 to time 2, the velocity decreases linearly from 4 to 1. From time 2 to time 4, the velocity remains constant at 1. From time 4 to time 6, the velocity decreases linearly from 1 to negative 1, crossing zero at time 5.    Use this to answer the following questions:     When is the particle moving at a constant speed? Explain how you know.    The particle is moving at a constant speed from time to . In interval notation this is . This is because the velocity graph is flat (horizontal) during this interval, indicating that the velocity is not changing.      When is the particle changing direction? Explain how you know.    The particle is changing direction at time . This is because the velocity graph crosses the -axis at this time, indicating that the velocity changes from positive to negative. A change in the sign of velocity indicates a change in direction of motion.      What is the acceleration of the particle at time ?    The acceleration at time is the slope of the velocity graph at that time. From the graph, we see that from to , the velocity decreases linearly from 4 to 1. The slope of this line segment is Therefore, the acceleration at time is units per second squared.     Now that we have reviewed some of the basic concepts of motion, let's move on to a more advanced topic.    Speeding Up and Slowing Down  Before we proceed, it is important to emphasize the difference between velocity and speed. An object is said to be speeding up when its speed is increasing, and slowing down when its speed is decreasing. Let's consider the following example to illustrate this concept before we get our main rule for this section.    Consider the following situations. In each case, determine whether the particle is speeding up or slowing down.     The velocity of a particle is initially m\/sec and it increases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is increasing, the particle is speeding up.      The velocity of a particle is initially m\/sec and it decreases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is decreasing, the particle is slowing down.      The velocity of a particle is initially m\/sec and it decreases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is increasing, the particle is speeding up.      The velocity of a particle is initially m\/sec and it increases to m\/sec.    Since speed is the absolute value of velocity, the speed changes from m\/sec to m\/sec. Because the speed is decreasing, the particle is slowing down.      In summary it is not enough to know whether the velocity is increasing or decreasing to determine if the object is speeding up or slowing down. One must also consider the sign of the velocity.   Now let's summarize this information as a theorem:   Speeding Up and Slowing Down     An object is speeding up when its velocity and acceleration have the same sign (either both positive or both negative).  An object is slowing down when its velocity and acceleration have opposite signs (one is positive and the other is negative).      Justification  If the velocity is positive then it is the same as speed. Thus if the acceleration is also positive then the velocity is increasing which means the speed is increasing.  If the velocity is negative then the speed is the opposite of velocity. Thus if the acceleration is also negative then the velocity is decreasing which means the speed is increasing.  The other two cases are similar.      Suppose an object has velocity . Determine when the object is speeding up and when it is slowing down. Express your answers in interval notation.    First let's find the sign of the velocity. We have Using the Test Point Method for Inequalities , we find that the velocity is zero at and . These points divide the number line into three intervals: , , and . Choosing test points from each interval, we find:  For in , , so velocity is positive on this interval.  For in , , so velocity is negative on this interval.  For in , , so velocity is positive on this interval.       A figure showing the sign of the velocity function on the number line.        Next, we find the acceleration by differentiating the velocity: Setting the acceleration equal to zero gives , or . This divides the number line into two intervals: and . Choosing test points from each interval, we find:  For in , , so acceleration is negative on this interval.  For in , , so acceleration is positive on this interval.       A figure showing the sign of the acceleration function on the number line.        Now we can determine when the object is speeding up and when it is slowing down by comparing the signs of velocity and acceleration:     A figure showing the sign of the velocity function and the acceleration function together on one number line.          On , velocity is positive and acceleration is negative, so the object is slowing down.  On , velocity is negative and acceleration is negative, so the object is speeding up.  On , velocity is negative and acceleration is positive, so the object is slowing down.  On , velocity is positive and acceleration is positive, so the object is speeding up.    Therefore, the object is speeding up on and slowing down on .        Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Motion in Physics      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     If is positive on , then is increasing on .     True. If the velocity is positive, the position function is increasing.      For , the ball reaches its maximum height at seconds because .     False. The velocity function is . Setting , we solve: Therefore, the ball reaches its maximum height at seconds, not seconds.      If at a time , then the object must change direction at .     False. When the velocity is zero, the object is momentarily at rest. However, this does not necessarily mean that the object changes direction at that time. For example, if the velocity changes from positive to zero and then back to positive, the object does not change direction.      If is decreasing on an interval, then the object is slowing down on that interval.     False. If the velocity is decreasing, it means that the acceleration is negative. However, whether the object is slowing down or speeding up depends on the sign of the velocity as well. If the velocity is positive and decreasing, the object is slowing down. But if the velocity is negative and decreasing, the object is actually speeding up.      If at a time , then the object must be at rest (even momentarily) at .     False. When the acceleration is zero, it means that the velocity is not changing at that time. However, this does not necessarily mean that the object is at rest. The object could be moving with a constant velocity.      If and , then the object is speeding up at .     True. Since the velocity is positive, the object is moving in the positive direction. Since the acceleration is also positive, the velocity is increasing. Therefore, the speed of the object is increasing, which means the object is speeding up.       An object moving along a line has position function . The object is speeding up on the interval .     False. First, we find the velocity and acceleration functions:  Next, we determine the signs of velocity and acceleration on the interval . Setting , we solve: Thus, on the interval , the velocity is positive on and negative on . Setting , we solve: Thus, on the interval , the acceleration is negative on and positive on . Therefore, the object is slowing down on and , and speeding up on . Since the object is not speeding up on the entire interval , the statement is false.      "
 },
 {
   "id": "sec-derivApp-motion-2",
@@ -3778,7 +3787,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.1",
   "title": "",
-  "body": "  Calculate velocity, acceleration, and jerk using derivatives. Include units and interpret results in real-world context.  Move fluently between multiple representations of motion (formula, table, and graph), including estimating derivatives from graphs or tables and interpreting slopes as rates of change.  Determine when an object is moving in the positive or negative direction by analyzing the sign of the velocity, and identify times when the object is at rest ( ).  Use acceleration to describe how velocity is changing, and compute acceleration values either by differentiating or by finding slopes on a velocity graph.  Decide when an object is speeding up or slowing down by comparing the signs of velocity and acceleration, and express the answer in interval notation.  Distinguish between displacement and total distance traveled on a time interval and compute both quantities.  Interpret and solve motion problems that require setting up and solving equations or inequalities (for example, finding when height is above a given value, when velocity is positive, or when speed exceeds a threshold).   "
+  "body": "  Calculate velocity, acceleration, and jerk using derivatives. Include units and interpret results in real-world context.  Move fluently between multiple representations of motion (formula, table, and graph), including estimating derivatives from graphs or tables and interpreting slopes as rates of change.  Determine when an object is moving in the positive or negative direction by analyzing the sign of the velocity, and identify times when the object is at rest ( ).  Use acceleration to describe how velocity is changing, and compute acceleration values either by differentiating or by finding slopes on a velocity graph.  Decide when an object is speeding up or slowing down by comparing the signs of velocity and acceleration, and express the answer in interval notation.  Interpret and solve motion problems that require setting up and solving equations or inequalities (for example, finding when height is above a given value, when velocity is positive, or when speed exceeds a threshold).   "
 },
 {
   "id": "rem-derivApp-motion-inequalities",
@@ -3871,69 +3880,6 @@ var ptx_lunr_docs = [
   "body": "  Suppose an object has velocity . Determine when the object is speeding up and when it is slowing down. Express your answers in interval notation.    First let's find the sign of the velocity. We have Using the Test Point Method for Inequalities , we find that the velocity is zero at and . These points divide the number line into three intervals: , , and . Choosing test points from each interval, we find:  For in , , so velocity is positive on this interval.  For in , , so velocity is negative on this interval.  For in , , so velocity is positive on this interval.       A figure showing the sign of the velocity function on the number line.        Next, we find the acceleration by differentiating the velocity: Setting the acceleration equal to zero gives , or . This divides the number line into two intervals: and . Choosing test points from each interval, we find:  For in , , so acceleration is negative on this interval.  For in , , so acceleration is positive on this interval.       A figure showing the sign of the acceleration function on the number line.        Now we can determine when the object is speeding up and when it is slowing down by comparing the signs of velocity and acceleration:     A figure showing the sign of the velocity function and the acceleration function together on one number line.          On , velocity is positive and acceleration is negative, so the object is slowing down.  On , velocity is negative and acceleration is negative, so the object is speeding up.  On , velocity is negative and acceleration is positive, so the object is slowing down.  On , velocity is positive and acceleration is positive, so the object is speeding up.    Therefore, the object is speeding up on and slowing down on .   "
 },
 {
-  "id": "def-displacement",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#def-displacement",
-  "type": "Definition",
-  "number": "3.1.14",
-  "title": "Displacement.",
-  "body": " Displacement   The displacement of an object over the time interval is how much the object's position changes during that time.  Displacement is given by where is the position function of the object.   "
-},
-{
-  "id": "ex-displacement-vs-distance-01",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-displacement-vs-distance-01",
-  "type": "Example",
-  "number": "3.1.15",
-  "title": "",
-  "body": "  Building off of : Recall the vertical position of the ball is given by . Find the displacement of the ball from seconds to seconds using the equation above.  Then verify your answer on the graph below.     Graph of the height function for the ball thrown straight up.   A graph of height versus time for a ball moving vertically. The horizontal axis represents time in seconds and the vertical axis represents height in feet. The curve is a downward-opening parabola. The point at time 1 has height 54, the maximum occurs at time 2 with height 70, and the point at time 3 has height 54.        To find the displacement, we evaluate the position function at the endpoints of the interval: Therefore, the displacement is This means that the ball ends up at the same height it started from during this time interval.  Looking at the graph, we can see that at seconds, the ball is at a height of 54 feet. It then rises to a maximum height of 70 feet at seconds before falling back down to 54 feet at seconds. Thus, the ball returns to its original height, confirming our calculation of zero displacement.   "
-},
-{
-  "id": "def-total-distance-traveled",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#def-total-distance-traveled",
-  "type": "Definition",
-  "number": "3.1.17",
-  "title": "Total Distance Traveled.",
-  "body": " Total Distance Traveled   The total distance traveled by an object over the time interval is the total length of the path the object takes during that time.   "
-},
-{
-  "id": "ex-displacement-vs-distance-02",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-displacement-vs-distance-02",
-  "type": "Example",
-  "number": "3.1.18",
-  "title": "",
-  "body": "  Again, building off of : Recall the vertical position of the ball is given by .     Find the total distance traveled by the ball from seconds to seconds by using the graph below.     Graph of the height function for the ball thrown straight up.   A graph of height versus time for a ball moving vertically. The horizontal axis represents time in seconds and the vertical axis represents height in feet. The curve is a downward-opening parabola. The point at time 1 has height 54, the maximum occurs at time 2 with height 70, and the point at time 3 has height 54.        From the graph, we see that at seconds, the ball is at a height of 54 feet. It then rises to a maximum height of 70 feet at seconds. The distance traveled during this ascent is feet. Notice that we use absolute values here since distance traveled is always non-negative and we don't care about direction.  Next, the ball falls from a maximum height of 70 feet at seconds back down to 54 feet at seconds. The distance traveled during this descent is feet.  Therefore, the total distance traveled by the ball from seconds to seconds is the sum of the distances during the ascent and descent:       Find the total distance traveled by the ball from seconds to seconds by only using the height equation .    To find the total distance traveled using only the height equation, we first need to determine when the ball changes direction. This occurs when the velocity is zero. We already found the velocity function in : Setting , we solve: So the ball changes direction at seconds.  The total distance traveled is the sum of the distances traveled during each segment of motion:   We compute each value:   Therefore:     "
-},
-{
-  "id": "rem-distanceKey",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#rem-distanceKey",
-  "type": "Remark",
-  "number": "3.1.20",
-  "title": "",
-  "body": " The key take away from this example is that in order to compute total distance traveled, we must know where all the turning points are (when ) and then sum the distances traveled over each piece.  "
-},
-{
-  "id": "ins-total-distance-traveled-method",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ins-total-distance-traveled-method",
-  "type": "Strategy",
-  "number": "3.1.21",
-  "title": "Method for Finding Total Distance Traveled.",
-  "body": " Method for Finding Total Distance Traveled   To find the total distance traveled by an object over the time interval :   Find all times turning points, that is all values of in where the velocity is zero: . These times divide the interval into pieces.  For each piece of the interval, compute the distance traveled by taking the absolute value of the displacement .  Sum the distances from each piece to get the total distance traveled over .    "
-},
-{
-  "id": "ex-total-distance-traveled-derivApp-01",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-total-distance-traveled-derivApp-01",
-  "type": "Example",
-  "number": "3.1.22",
-  "title": "",
-  "body": "  An object moves along a line with position given by . Find the total distance traveled over the time interval .    First, we find the velocity by differentiating the position function: Setting , we solve: Using the unit circle, the solutions to in the interval are and . These points divide the interval into three pieces: , , and .  Next, we compute the distance traveled on each piece:   Finally, we sum the distances from each piece to find the total distance traveled over :    "
-},
-{
   "id": "ex-derivApp-motion-tf-12",
   "level": "2",
   "url": "sec-derivApp-motion.html#ex-derivApp-motion-tf-12",
@@ -3988,29 +3934,11 @@ var ptx_lunr_docs = [
   "body": "  If and , then the object is speeding up at .     True. Since the velocity is positive, the object is moving in the positive direction. Since the acceleration is also positive, the velocity is increasing. Therefore, the speed of the object is increasing, which means the object is speeding up.   "
 },
 {
-  "id": "ex-derivApp-motion-tf-10",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-derivApp-motion-tf-10",
-  "type": "Exercise",
-  "number": "7",
-  "title": "",
-  "body": "  The total distance traveled on is always greater than or equal to .     True. The total distance traveled accounts for all movement, regardless of direction, while only measures the net change in position. Therefore, the total distance traveled is always greater than or equal to the absolute value of the displacement.   "
-},
-{
-  "id": "ex-derivApp-motion-tf-11",
-  "level": "2",
-  "url": "sec-derivApp-motion.html#ex-derivApp-motion-tf-11",
-  "type": "Exercise",
-  "number": "8",
-  "title": "",
-  "body": "  If an object never changes direction on , then its total distance traveled equals .     True. If the object never changes direction, it means that it is either always moving in the positive direction or always moving in the negative direction. In either case, the total distance traveled is equal to the absolute value of the displacement, which is .   "
-},
-{
   "id": "ex-derivApp-motion-tf-102",
   "level": "2",
   "url": "sec-derivApp-motion.html#ex-derivApp-motion-tf-102",
   "type": "Exercise",
-  "number": "9",
+  "number": "7",
   "title": "",
   "body": "  An object moving along a line has position function . The object is speeding up on the interval .     False. First, we find the velocity and acceleration functions:  Next, we determine the signs of velocity and acceleration on the interval . Setting , we solve: Thus, on the interval , the velocity is positive on and negative on . Setting , we solve: Thus, on the interval , the acceleration is negative on and positive on . Therefore, the object is slowing down on and , and speeding up on . Since the object is not speeding up on the entire interval , the statement is false.   "
 },
@@ -5182,7 +5110,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.9",
   "title": "Additional Worked-Out Problems",
-  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Derivative Applications chapter.   Motion in Physics  test    Related Rates  test    Linear Approximation and L'Hopital's Rule  test    Extrema  test    Mean Value Theorem  test    Curve Sketching Part 1  test    Curve Sketching Part 2  test    Optimization Problems  test   "
+  "body": " Additional Worked-Out Problems   Motion in Physics  test    Related Rates  test    Linear Approximation and L'Hopital's Rule  test    Extrema  test    Mean Value Theorem  test    Curve Sketching Part 1  test    Curve Sketching Part 2  test    Optimization Problems  test   "
 },
 {
   "id": "sec-integral-antiderivatives",
@@ -5191,7 +5119,187 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Antiderivatives",
-  "body": " Antiderivatives  Text of section.  "
+  "body": " Antiderivatives    Interpret an antiderivative as “reversing differentiation” and connect it to rates of change (velocity, acceleration).  Find general antiderivatives using basic antidifferentiation rules and linearity.  Solve simple initial value problems by using a given function value to determine the constant of integration.  Use simple substitution patterns (reverse Chain Rule) when a constant multiple is missing.  Recognize when an integrand must be rewritten (for example, by algebra or a trig identity) before antidifferentiating.     Reversing Differentiation  In many applications we care about some unknown function , but what we can measure or model is its rate of change, the derivative . Finding from is the process of antidifferentiation . We call an antiderivative (or primitive ) of . A helpful memory trick is “big , little .”    Suppose . Find a general formula for .    Since and , one antiderivative is . Any constant disappears when differentiating, so the general antiderivative is     Different choices of shift the graph up or down but do not change slopes. If we also know a single value like , then we can determine and get a unique function. Problems like this are called initial value problems .    Find the unique function satisfying and .    An antiderivative of is , so . Plug in : .       Definition and the Constant of Integration   Antiderivative   A function is an antiderivative of on an interval if for all in that interval.     Antiderivatives Differ by a Constant   Suppose is one antiderivative of on an interval. Then every antiderivative of has the form for some constant .    If is any antiderivative of , then . By the Uniqueness Theorem from the Mean Value Theorem section, two functions with the same derivative differ by a constant. Therefore .     Uniqueness with One Function Value   If is an antiderivative of on an interval, then for any point in the interval and any real number , there is exactly one antiderivative satisfying and .    By the previous theorem, any antiderivative has the form . Requiring gives , so , which is a single value.      Basic Antidifferentiation Rules  Antidifferentiation starts by reversing the derivative rules you already know. The key is to build a library of basic patterns, then use linearity to break complicated expressions into simpler pieces.   Linearity of Antiderivatives   If and , then for constants , an antiderivative of is .    Here are several basic patterns (each includes the constant of integration).   We are not formally defining integrals yet, so you can read the display above as a list of “reverse derivative” facts. The important idea is that the derivative table can be read backward, with a added.    Find a general antiderivative of .    Rewrite using exponents and secant: , , and . Then antidifferentiate term-by-term:   A quick check is to differentiate and confirm you get back .      A Simple “Reverse Chain Rule” Pattern  Sometimes a function looks like the derivative of a composition, except for a missing constant multiple. In these cases, you can often fix the issue by introducing the correct constant.    Find a general antiderivative of .    Since , we divide by 3:       Find a general antiderivative of .    Rewrite as a sum of powers: . Then antidifferentiate term-by-term:     Be careful with products and quotients. In general, the antiderivative of a product is not the product of antiderivatives. When you can rewrite the expression as a sum of basic patterns, the problem becomes manageable.    When You Must Rewrite First    Find a general antiderivative of .    The function is not on our basic list. Use the identity , which gives . Now antidifferentiate:       Acceleration, Velocity, and Position  In motion problems, derivatives connect position, velocity, and acceleration: and . If we know acceleration and some initial conditions, we can recover velocity and position by antidifferentiating twice.    A rocket has acceleration (in m\/sec 2 ). At time , its height is meters and its velocity is m\/sec. Find the velocity function and the height function .    Since , antidifferentiate:   Use : , so . Thus   Now antidifferentiate again because :   Use : , so . Therefore   With both conditions applied, the constants are determined and the solution is unique.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Antiderivatives      Practice \/ Study Problems   Basic Antiderivatives    Find a general antiderivative of each function.           Find a general antiderivative of .      Rewrite First    Find a general antiderivative of . (Rewrite as a sum of powers first.)      Find a general antiderivative of . (Hint: use .)      Initial Value Problems    Find the unique function such that and .      A particle moves on a line with acceleration . At , the velocity is and the position is . Find and .      "
+},
+{
+  "id": "sec-integral-antiderivatives-2",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#sec-integral-antiderivatives-2",
+  "type": "Objectives",
+  "number": "4.1",
+  "title": "",
+  "body": "  Interpret an antiderivative as “reversing differentiation” and connect it to rates of change (velocity, acceleration).  Find general antiderivatives using basic antidifferentiation rules and linearity.  Solve simple initial value problems by using a given function value to determine the constant of integration.  Use simple substitution patterns (reverse Chain Rule) when a constant multiple is missing.  Recognize when an integrand must be rewritten (for example, by algebra or a trig identity) before antidifferentiating.   "
+},
+{
+  "id": "ssec-antiderivatives-motivation-2",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ssec-antiderivatives-motivation-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "antidifferentiation antiderivative primitive "
+},
+{
+  "id": "ex-antiderivative-simple",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-simple",
+  "type": "Example",
+  "number": "4.1.1",
+  "title": "",
+  "body": "  Suppose . Find a general formula for .    Since and , one antiderivative is . Any constant disappears when differentiating, so the general antiderivative is    "
+},
+{
+  "id": "ssec-antiderivatives-motivation-4",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ssec-antiderivatives-motivation-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "initial value problems "
+},
+{
+  "id": "ex-antiderivative-ivp",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-ivp",
+  "type": "Example",
+  "number": "4.1.2",
+  "title": "",
+  "body": "  Find the unique function satisfying and .    An antiderivative of is , so . Plug in : .    "
+},
+{
+  "id": "def-antiderivative",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#def-antiderivative",
+  "type": "Definition",
+  "number": "4.1.3",
+  "title": "Antiderivative.",
+  "body": " Antiderivative   A function is an antiderivative of on an interval if for all in that interval.   "
+},
+{
+  "id": "thm-antiderivative-family",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#thm-antiderivative-family",
+  "type": "Theorem",
+  "number": "4.1.4",
+  "title": "Antiderivatives Differ by a Constant.",
+  "body": " Antiderivatives Differ by a Constant   Suppose is one antiderivative of on an interval. Then every antiderivative of has the form for some constant .    If is any antiderivative of , then . By the Uniqueness Theorem from the Mean Value Theorem section, two functions with the same derivative differ by a constant. Therefore .   "
+},
+{
+  "id": "thm-ivp-unique-antiderivative",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#thm-ivp-unique-antiderivative",
+  "type": "Theorem",
+  "number": "4.1.5",
+  "title": "Uniqueness with One Function Value.",
+  "body": " Uniqueness with One Function Value   If is an antiderivative of on an interval, then for any point in the interval and any real number , there is exactly one antiderivative satisfying and .    By the previous theorem, any antiderivative has the form . Requiring gives , so , which is a single value.   "
+},
+{
+  "id": "thm-antiderivative-linearity",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#thm-antiderivative-linearity",
+  "type": "Theorem",
+  "number": "4.1.6",
+  "title": "Linearity of Antiderivatives.",
+  "body": " Linearity of Antiderivatives   If and , then for constants , an antiderivative of is .   "
+},
+{
+  "id": "ex-antiderivative-linearity",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-linearity",
+  "type": "Example",
+  "number": "4.1.7",
+  "title": "",
+  "body": "  Find a general antiderivative of .    Rewrite using exponents and secant: , , and . Then antidifferentiate term-by-term:   A quick check is to differentiate and confirm you get back .   "
+},
+{
+  "id": "ex-antiderivative-cos3x",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-cos3x",
+  "type": "Example",
+  "number": "4.1.8",
+  "title": "",
+  "body": "  Find a general antiderivative of .    Since , we divide by 3:    "
+},
+{
+  "id": "ex-antiderivative-algebra-first",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-algebra-first",
+  "type": "Example",
+  "number": "4.1.9",
+  "title": "",
+  "body": "  Find a general antiderivative of .    Rewrite as a sum of powers: . Then antidifferentiate term-by-term:    "
+},
+{
+  "id": "ex-antiderivative-sin-squared",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-sin-squared",
+  "type": "Example",
+  "number": "4.1.10",
+  "title": "",
+  "body": "  Find a general antiderivative of .    The function is not on our basic list. Use the identity , which gives . Now antidifferentiate:    "
+},
+{
+  "id": "ex-antiderivative-rocket",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#ex-antiderivative-rocket",
+  "type": "Example",
+  "number": "4.1.11",
+  "title": "",
+  "body": "  A rocket has acceleration (in m\/sec 2 ). At time , its height is meters and its velocity is m\/sec. Find the velocity function and the height function .    Since , antidifferentiate:   Use : , so . Thus   Now antidifferentiate again because :   Use : , so . Therefore   With both conditions applied, the constants are determined and the solution is unique.   "
+},
+{
+  "id": "prob-anti-01",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Find a general antiderivative of each function.        "
+},
+{
+  "id": "prob-anti-02",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find a general antiderivative of .   "
+},
+{
+  "id": "prob-anti-03",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Find a general antiderivative of . (Rewrite as a sum of powers first.)   "
+},
+{
+  "id": "prob-anti-04",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Find a general antiderivative of . (Hint: use .)   "
+},
+{
+  "id": "prob-anti-05",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-05",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Find the unique function such that and .   "
+},
+{
+  "id": "prob-anti-06",
+  "level": "2",
+  "url": "sec-integral-antiderivatives.html#prob-anti-06",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  A particle moves on a line with acceleration . At , the velocity is and the position is . Find and .   "
 },
 {
   "id": "sec-integral-riemannSums",
@@ -5200,7 +5308,115 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Riemann Sums and Areas",
-  "body": " Riemann Sums and Areas  Text of section.  "
+  "body": " Riemann Sums and Areas    Connect the definite integral to accumulation: total change from a rate of change.  Approximate a definite integral using Riemann sums (left, right, and “upper\/lower” estimates).  Interpret a definite integral geometrically as (signed) area under a curve.  Set up from a real-world description involving small increments .  Use upper and lower sums to bound an integral and estimate a value to a specified accuracy.     Review: Derivatives as Rates of Change  A function has a derivative with several complementary meanings. We will lean on these meanings as we introduce the integral.     Physical: If depends on , then is the rate of change of per tiny change in , starting at .     Geometric:  is the slope of the graph at the point , meaning the tangent line near is .     Numerical: For near , the derivative is approximated by a difference quotient: . This matches the linear approximation .     Algebraic: We define and use derivative rules to compute from a formula.    The physical idea is the driving one: derivatives describe change, so they are essential in any system that evolves. Once a situation is translated into a derivative statement, we can use numerical approximations or algebraic rules to answer questions. For example, to find maximum values of , we look for places where the tangent slope is zero, so we solve .    Accumulation of Influence  In the previous section we reversed differentiation algebraically: given a function , we looked for an antiderivative with . Now we will build a numerical definition of antiderivative that works even when no simple formula exists.  Think of as the influence on a quantity . Near , the derivative relationship says , so   A small input change produces a small output change controlled by . Adding many small changes gives the total change in . This “add up tiny effects” viewpoint is what the definite integral will formalize.  Here are several examples of “accumulation” in everyday language:   Position is the cumulative effect of velocity.  Velocity is the cumulative effect of acceleration.  Temperature is the cumulative effect of warming and cooling rates.  Energy used is the cumulative effect of power (wattage) over time.  Total mass is the cumulative effect of density over volume.  Total force is the cumulative effect of pressure over an area.  Population is the cumulative effect of net growth rate over time.  Total cost is the cumulative effect of marginal cost as production increases.     Riemann Sums for Distance  To make accumulation computable, we introduce a new operation: the definite integral . We will define it numerically as a limit of approximations.  Imagine a toy car whose velocity is (in meters per second) over . If is position and , then the total distance traveled by time is . Over a short time interval, distance is approximately velocity times time: .  A very rough estimate would treat the velocity as constant at the final value , giving , which is far too large because the car starts at rest. To improve the estimate, split into many short intervals.  For example, take subintervals, each of width . Using right endpoints , we get a right Riemann sum:   Since is increasing, sampling at the right endpoints gives an overestimate. Sampling at the left endpoints gives an underestimate:   So lies between 2.47 and 2.87. If we increase , the rectangles get thinner and the estimates improve. This motivates the definition of the integral as a limit.   Definite Integral (Riemann Sum Definition)   Let be a function on . Partition into subintervals of equal width , and choose a sample point in each subinterval. If the limit exists as , we define     The symbol is an elongated for “sum.” The reminds us that is becoming very small.  For this particular example we can also check against an algebraic antiderivative. Since and , we have , so , which lies between the two estimates above.    The Integral as Total Change  The distance story is one example of a more general idea. If is a rate of change of some quantity , meaning , then adding up tiny changes produces the total change .   You can read this as: “the total change equals the accumulated rate of change.” Later, we will prove this relationship (and learn fast techniques for computing integrals) in the Fundamental Theorem of Calculus.    Area Under a Curve  Now comes one of the most useful interpretations of the integral. Suppose on . Then is the area under the graph above the -axis from to .  To see why, approximate the area with rectangles. Over each small subinterval, the area of a rectangle is (height) (width) . Adding these areas produces the same type of Riemann sum we used for distance. Taking a limit gives the exact area.    Interpret as an area, and connect it to the distance example.    Since on , the integral equals the area under above . Approximating with right-endpoint rectangles produces the same sum we computed for distance with velocity . The area and the distance are numerically equal because both are defined by the same limiting process: in each case we add up terms of the form “height” “width.”    In this section we are focusing on functions that stay nonnegative, so “area under the curve” matches the integral directly. Later, when a function dips below the axis, the integral still makes sense but it represents signed area (area above minus area below).    Approximating an Integral with Upper and Lower Sums  Sometimes we want a numerical value of an integral even when we do not yet have a quick algebraic method. Upper and lower Riemann sums give guaranteed bounds.    Approximate to one decimal place. (That is, find a value within .)    The function increases on and decreases on . So an upper estimate uses right endpoints on the first half and left endpoints on the second half. A lower estimate does the opposite.  Take equal subintervals, so . A computed upper sum gives about 1.60 and a computed lower sum gives about 1.54, so   Averaging the bounds gives a good estimate: , which is certainly accurate to one decimal place.  (Later, once we have more integral tools, we can compute this exactly and confirm the approximation.)      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Riemann Sums and Areas      Practice \/ Study Problems   Setting Up Riemann Sums    Let on . Use equal subintervals and right endpoints. Write the Riemann sum explicitly in terms of . (Do not evaluate the limit.)      Let on . Use equal subintervals and left endpoints. Write the corresponding Riemann sum in terms of .      Left and Right Sums    A particle has velocity on . Compute the left and right Riemann sums with subintervals. Which one is larger, and why?      Let on . Without computing exact values, explain whether the left Riemann sum is an underestimate or overestimate, and do the same for the right Riemann sum.      Area Interpretation    Sketch a graph of a nonnegative function on and explain (in a sentence or two) why the sum represents the total area of rectangles.      Suppose on . Describe in words what represents geometrically.      Upper and Lower Bounds    The function is increasing on . Explain why the right Riemann sum is an overestimate and the left Riemann sum is an underestimate on this interval.      Estimate using left rectangles and right rectangles. Then average the two values.      "
+},
+{
+  "id": "sec-integral-riemannSums-2",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#sec-integral-riemannSums-2",
+  "type": "Objectives",
+  "number": "4.2",
+  "title": "",
+  "body": "  Connect the definite integral to accumulation: total change from a rate of change.  Approximate a definite integral using Riemann sums (left, right, and “upper\/lower” estimates).  Interpret a definite integral geometrically as (signed) area under a curve.  Set up from a real-world description involving small increments .  Use upper and lower sums to bound an integral and estimate a value to a specified accuracy.   "
+},
+{
+  "id": "def-definite-integral-riemann",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#def-definite-integral-riemann",
+  "type": "Definition",
+  "number": "4.2.1",
+  "title": "Definite Integral (Riemann Sum Definition).",
+  "body": " Definite Integral (Riemann Sum Definition)   Let be a function on . Partition into subintervals of equal width , and choose a sample point in each subinterval. If the limit exists as , we define    "
+},
+{
+  "id": "ex-area-x-squared",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#ex-area-x-squared",
+  "type": "Example",
+  "number": "4.2.2",
+  "title": "",
+  "body": "  Interpret as an area, and connect it to the distance example.    Since on , the integral equals the area under above . Approximating with right-endpoint rectangles produces the same sum we computed for distance with velocity . The area and the distance are numerically equal because both are defined by the same limiting process: in each case we add up terms of the form “height” “width.”   "
+},
+{
+  "id": "ex-riemann-sin-squared",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#ex-riemann-sin-squared",
+  "type": "Example",
+  "number": "4.2.3",
+  "title": "",
+  "body": "  Approximate to one decimal place. (That is, find a value within .)    The function increases on and decreases on . So an upper estimate uses right endpoints on the first half and left endpoints on the second half. A lower estimate does the opposite.  Take equal subintervals, so . A computed upper sum gives about 1.60 and a computed lower sum gives about 1.54, so   Averaging the bounds gives a good estimate: , which is certainly accurate to one decimal place.  (Later, once we have more integral tools, we can compute this exactly and confirm the approximation.)   "
+},
+{
+  "id": "prob-riemann-01",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let on . Use equal subintervals and right endpoints. Write the Riemann sum explicitly in terms of . (Do not evaluate the limit.)   "
+},
+{
+  "id": "prob-riemann-02",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Let on . Use equal subintervals and left endpoints. Write the corresponding Riemann sum in terms of .   "
+},
+{
+  "id": "prob-riemann-03",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  A particle has velocity on . Compute the left and right Riemann sums with subintervals. Which one is larger, and why?   "
+},
+{
+  "id": "prob-riemann-04",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let on . Without computing exact values, explain whether the left Riemann sum is an underestimate or overestimate, and do the same for the right Riemann sum.   "
+},
+{
+  "id": "prob-riemann-05",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-05",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Sketch a graph of a nonnegative function on and explain (in a sentence or two) why the sum represents the total area of rectangles.   "
+},
+{
+  "id": "prob-riemann-06",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-06",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Suppose on . Describe in words what represents geometrically.   "
+},
+{
+  "id": "prob-riemann-07",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-07",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  The function is increasing on . Explain why the right Riemann sum is an overestimate and the left Riemann sum is an underestimate on this interval.   "
+},
+{
+  "id": "prob-riemann-08",
+  "level": "2",
+  "url": "sec-integral-riemannSums.html#prob-riemann-08",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Estimate using left rectangles and right rectangles. Then average the two values.   "
 },
 {
   "id": "sec-integral-defInt",
@@ -5209,7 +5425,160 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "The Definite Integral",
-  "body": " The Definite Integral  Text of section.  "
+  "body": " The Definite Integral    State the Riemann-sum definition of and identify the parts of the notation.  Explain (at a conceptual level) what it means for a function to be integrable on .  Interpret as total change and as signed area.  Use basic integral rules (linearity, bounds, domination, splitting, reversing limits) to simplify and estimate integrals.  Compute simple definite integrals using basic integral formulas and the rules.     Precise Definition  We have described the integral as a number that can be approximated by Riemann sums. The integral is useful because it measures accumulation: given a velocity function it computes distance traveled, and given a nonnegative graph it computes the area between the graph and the -axis. More generally, if is a varying rate of change, then the integral computes total change; if represents a varying influence, then the integral computes cumulative effect.  The parts of the notation have standard names: is the integral sign, is the lower limit of integration , is the upper limit of integration , is the integrand , and is the variable of integration . The variable of integration is just a name, so changing it does not change the value: .   Definite Integral (Riemann Sum Definition)   Let be a function and let . For each positive integer , divide the interval into subintervals of equal width , with division points   Choose sample points with anywhere in the th subinterval: . If the limit exists, we define   We say is integrable on if this limit exists and has the same value for every possible choice of sample points .    (More formally, writing means: for any error tolerance , there is a number such that any Riemann sum with terms is within of .)    Integrable Functions  Most functions you meet in calculus are integrable on a closed interval as long as they do not blow up to infinity. In particular, continuous functions are integrable. (A full proof belongs to a Real Analysis course.)  To see what can go wrong, consider on . The function has a vertical asymptote at , so the area under the curve is not finite. If we try a Riemann sum with and sample points , we get   As , this grows without bound, so the Riemann sums do not approach a finite limit. Geometrically, this reflects infinite area near the vertical asymptote.    Negative Integrands and Signed Area  So far we have emphasized integrals with , where the integral is positive and equals an area. The definition still works when , but the value becomes negative. For example, if , then   Geometrically, we think of each term as (height) (width). When the graph lies below the -axis, the “height” is negative, so it contributes negative area. In general, is the signed area between the graph and the -axis: regions above count positive, and regions below count negative.    Evaluate using geometry.    The line crosses the -axis at . It is above the axis on and below the axis on . So the integral is (area of a triangle above) minus (area of a triangle below):       Reversing Limits of Integration  If the limits of integration are the same, then every Riemann sum has width , so . We also define switching limits by . This convention makes several rules cleaner, especially the splitting rule.    Integral Rules  Later we will learn powerful methods for computing integrals. For now, we will rely on a small collection of basic integrals and the following rules. Let and be integrable on , and let be constants.   Rules for Definite Integrals    Sum:  .  Difference:  .  Constant Multiple:  .  Domination: If on , then .  Bounds: If on , then .  Splitting: For any , .     The sum, difference, and constant multiple rules follow from the corresponding properties of sums. The bounds and domination rules match the geometric idea that a function trapped between two horizontal lines has area trapped between rectangles. The splitting rule matches “area over a big interval equals area over pieces,” and the sign convention for reversed limits makes it valid no matter the order of .    Basic Integrals  Here are three basic definite integrals that we can justify directly from Riemann sums:   Later, these will fall out quickly from the Fundamental Theorem of Calculus. For now, they give us a working toolkit.    Examples    Evaluate .    Since is not equal to , we expand the integrand and use the rules:   (Notice again: the variable of integration is just a name.)      Find an upper bound for .    Since , we have . By domination,       Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Definite Integrals      Practice \/ Study Problems   Concepts and Interpretation    In the notation , identify the lower limit, upper limit, integrand, and variable of integration.      Explain in a sentence or two what “signed area” means.      Without computing exactly, decide whether is positive, negative, or zero. Briefly justify your answer from the graph of .      Rules Practice    Use the splitting rule to rewrite as a sum of two integrals split at .      Suppose on . Use the bounds rule to trap between two numbers.      If on , explain what the domination rule says about the two integrals.      Basic Integrals    Compute .      Compute .      Compute .      Putting It Together    Evaluate by expanding the integrand and using basic integrals.      Find an upper bound for . (You do not need the exact value.)      "
+},
+{
+  "id": "sec-integral-defInt-2",
+  "level": "2",
+  "url": "sec-integral-defInt.html#sec-integral-defInt-2",
+  "type": "Objectives",
+  "number": "4.3",
+  "title": "",
+  "body": "  State the Riemann-sum definition of and identify the parts of the notation.  Explain (at a conceptual level) what it means for a function to be integrable on .  Interpret as total change and as signed area.  Use basic integral rules (linearity, bounds, domination, splitting, reversing limits) to simplify and estimate integrals.  Compute simple definite integrals using basic integral formulas and the rules.   "
+},
+{
+  "id": "def-riemann-integral",
+  "level": "2",
+  "url": "sec-integral-defInt.html#def-riemann-integral",
+  "type": "Definition",
+  "number": "4.3.1",
+  "title": "Definite Integral (Riemann Sum Definition).",
+  "body": " Definite Integral (Riemann Sum Definition)   Let be a function and let . For each positive integer , divide the interval into subintervals of equal width , with division points   Choose sample points with anywhere in the th subinterval: . If the limit exists, we define   We say is integrable on if this limit exists and has the same value for every possible choice of sample points .   "
+},
+{
+  "id": "ex-signed-area-line",
+  "level": "2",
+  "url": "sec-integral-defInt.html#ex-signed-area-line",
+  "type": "Example",
+  "number": "4.3.2",
+  "title": "",
+  "body": "  Evaluate using geometry.    The line crosses the -axis at . It is above the axis on and below the axis on . So the integral is (area of a triangle above) minus (area of a triangle below):    "
+},
+{
+  "id": "thm-integral-rules",
+  "level": "2",
+  "url": "sec-integral-defInt.html#thm-integral-rules",
+  "type": "Theorem",
+  "number": "4.3.3",
+  "title": "Rules for Definite Integrals.",
+  "body": " Rules for Definite Integrals    Sum:  .  Difference:  .  Constant Multiple:  .  Domination: If on , then .  Bounds: If on , then .  Splitting: For any , .    "
+},
+{
+  "id": "ex-defint-expand-square",
+  "level": "2",
+  "url": "sec-integral-defInt.html#ex-defint-expand-square",
+  "type": "Example",
+  "number": "4.3.4",
+  "title": "",
+  "body": "  Evaluate .    Since is not equal to , we expand the integrand and use the rules:   (Notice again: the variable of integration is just a name.)   "
+},
+{
+  "id": "ex-defint-upper-bound",
+  "level": "2",
+  "url": "sec-integral-defInt.html#ex-defint-upper-bound",
+  "type": "Example",
+  "number": "4.3.5",
+  "title": "",
+  "body": "  Find an upper bound for .    Since , we have . By domination,    "
+},
+{
+  "id": "prob-defint-01",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  In the notation , identify the lower limit, upper limit, integrand, and variable of integration.   "
+},
+{
+  "id": "prob-defint-02",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Explain in a sentence or two what “signed area” means.   "
+},
+{
+  "id": "prob-defint-03",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Without computing exactly, decide whether is positive, negative, or zero. Briefly justify your answer from the graph of .   "
+},
+{
+  "id": "prob-defint-04",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Use the splitting rule to rewrite as a sum of two integrals split at .   "
+},
+{
+  "id": "prob-defint-05",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-05",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Suppose on . Use the bounds rule to trap between two numbers.   "
+},
+{
+  "id": "prob-defint-06",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-06",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If on , explain what the domination rule says about the two integrals.   "
+},
+{
+  "id": "prob-defint-07",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-07",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-defint-08",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-08",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-defint-09",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-09",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-defint-10",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-10",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Evaluate by expanding the integrand and using basic integrals.   "
+},
+{
+  "id": "prob-defint-11",
+  "level": "2",
+  "url": "sec-integral-defInt.html#prob-defint-11",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Find an upper bound for . (You do not need the exact value.)   "
 },
 {
   "id": "sec-integral-FTC",
@@ -5218,7 +5587,133 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.4",
   "title": "The Fundamental Theorem of Calculus",
-  "body": " The Fundamental Theorem of Calculus  Text of section.  "
+  "body": " The Fundamental Theorem of Calculus    Explain how an integral with a variable upper limit defines an antiderivative.  Use the First Fundamental Theorem of Calculus to differentiate integral functions.  Use the Second Fundamental Theorem of Calculus to evaluate definite integrals from an antiderivative.  Interpret as total change when .  Sketch an integral function using the fact that .     Integral as Antiderivative  In the previous section we used a velocity function to compute distance traveled over a time interval . The distance is an integral defined as a limit of Riemann sums, adding up (velocity) (time) over many small time increments:   If we fix the starting time and assume , then taking a variable endpoint gives a function   Since the rate of change of position is velocity, . The remarkable point is that the integral function always produces an antiderivative of , even if we cannot find an antiderivative by reversing derivative formulas.    The First Fundamental Theorem of Calculus   First Fundamental Theorem of Calculus   Let be continuous on and define   Then for . In particular, is the unique antiderivative of satisfying .    In physical language: the rate of change of a cumulative effect up to time is the strength of the effect at time .   Proof idea. We start from the definition of the derivative: . Using the splitting rule for integrals, , so:   When is small, the integral is the area under over a very short interval, so it behaves like (height) (width). To make that precise, let be the minimum value of on and be the maximum value on . Since on this interval, the bounds rule gives   As , the interval shrinks to the point , so by continuity . By the squeeze theorem, , hence . The condition and the antiderivative uniqueness theorem give the uniqueness statement.    Derivatives of Integral Functions  The First Fundamental Theorem can be used as a basic derivative rule: if is continuous, then   Here is a constant, is the input, and is a dummy variable that only matters inside the integral. If the upper limit is a function , then the chain rule gives     Find the derivative of .    Rewrite with a fixed lower limit and then differentiate:        Let and be constants. Find if .    The expression is a number that does not depend on , so is constant and .      Sketching Integral Functions  An integral function may not have an elementary formula. Even so, it can be understood: its derivative is . In other words, the slope of is determined by the height of . This lets us use the same curve-sketching ideas from earlier sections.    Sketch the function .    By the First Fundamental Theorem, . Critical points occur where , that is where . This happens when for integers , so .  For concavity, . So possible inflection points occur when , i.e. or , which means .  Using the sign of gives the rough shape:   Because is even, the integral function is odd: . So the graph has rotational symmetry about the origin.      The Second Fundamental Theorem of Calculus   Second Fundamental Theorem of Calculus   Suppose is an antiderivative of on , so . Then   That is, the integral of a rate of change is the total change.     Proof idea. The First Fundamental Theorem says is an antiderivative of . Any two antiderivatives differ by a constant, so . Since , we get , so . Thus , and evaluating at gives .    Evaluate .    An antiderivative is . Apply the theorem:       Determine the area under and above the -axis.    First find where the graph meets the -axis: . Let , so the equation becomes , which has solutions and . Only gives real , so the intercepts are . The function is nonnegative between these intercepts, so the area is   Quick check: the base is about and the average height is around , so an area near is reasonable.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for The Fundamental Theorem of Calculus      Practice \/ Study Problems   Using the First Fundamental Theorem    Let . Compute .      Compute .      Compute .      Using the Second Fundamental Theorem    Evaluate .      Evaluate .      Find the area between and the -axis on the interval .      "
+},
+{
+  "id": "sec-integral-FTC-2",
+  "level": "2",
+  "url": "sec-integral-FTC.html#sec-integral-FTC-2",
+  "type": "Objectives",
+  "number": "4.4",
+  "title": "",
+  "body": "  Explain how an integral with a variable upper limit defines an antiderivative.  Use the First Fundamental Theorem of Calculus to differentiate integral functions.  Use the Second Fundamental Theorem of Calculus to evaluate definite integrals from an antiderivative.  Interpret as total change when .  Sketch an integral function using the fact that .   "
+},
+{
+  "id": "thm-ftc-1",
+  "level": "2",
+  "url": "sec-integral-FTC.html#thm-ftc-1",
+  "type": "Theorem",
+  "number": "4.4.1",
+  "title": "First Fundamental Theorem of Calculus.",
+  "body": " First Fundamental Theorem of Calculus   Let be continuous on and define   Then for . In particular, is the unique antiderivative of satisfying .   "
+},
+{
+  "id": "ex-ftoc-derivative-variable-limits",
+  "level": "2",
+  "url": "sec-integral-FTC.html#ex-ftoc-derivative-variable-limits",
+  "type": "Example",
+  "number": "4.4.2",
+  "title": "",
+  "body": "  Find the derivative of .    Rewrite with a fixed lower limit and then differentiate:     "
+},
+{
+  "id": "ex-ftoc-constant-limits",
+  "level": "2",
+  "url": "sec-integral-FTC.html#ex-ftoc-constant-limits",
+  "type": "Example",
+  "number": "4.4.3",
+  "title": "",
+  "body": "  Let and be constants. Find if .    The expression is a number that does not depend on , so is constant and .   "
+},
+{
+  "id": "ex-ftoc-sketch-sin-x2",
+  "level": "2",
+  "url": "sec-integral-FTC.html#ex-ftoc-sketch-sin-x2",
+  "type": "Example",
+  "number": "4.4.4",
+  "title": "",
+  "body": "  Sketch the function .    By the First Fundamental Theorem, . Critical points occur where , that is where . This happens when for integers , so .  For concavity, . So possible inflection points occur when , i.e. or , which means .  Using the sign of gives the rough shape:   Because is even, the integral function is odd: . So the graph has rotational symmetry about the origin.   "
+},
+{
+  "id": "thm-ftc-2",
+  "level": "2",
+  "url": "sec-integral-FTC.html#thm-ftc-2",
+  "type": "Theorem",
+  "number": "4.4.5",
+  "title": "Second Fundamental Theorem of Calculus.",
+  "body": " Second Fundamental Theorem of Calculus   Suppose is an antiderivative of on , so . Then   That is, the integral of a rate of change is the total change.   "
+},
+{
+  "id": "ex-ftc-evaluate-even-poly",
+  "level": "2",
+  "url": "sec-integral-FTC.html#ex-ftc-evaluate-even-poly",
+  "type": "Example",
+  "number": "4.4.6",
+  "title": "",
+  "body": "  Evaluate .    An antiderivative is . Apply the theorem:    "
+},
+{
+  "id": "ex-ftc-area-poly",
+  "level": "2",
+  "url": "sec-integral-FTC.html#ex-ftc-area-poly",
+  "type": "Example",
+  "number": "4.4.7",
+  "title": "",
+  "body": "  Determine the area under and above the -axis.    First find where the graph meets the -axis: . Let , so the equation becomes , which has solutions and . Only gives real , so the intercepts are . The function is nonnegative between these intercepts, so the area is   Quick check: the base is about and the average height is around , so an area near is reasonable.   "
+},
+{
+  "id": "prob-ftoc-01",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let . Compute .   "
+},
+{
+  "id": "prob-ftoc-02",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-ftoc-03",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-ftoc-04",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-04",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Evaluate .   "
+},
+{
+  "id": "prob-ftoc-05",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-05",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Evaluate .   "
+},
+{
+  "id": "prob-ftoc-06",
+  "level": "2",
+  "url": "sec-integral-FTC.html#prob-ftoc-06",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Find the area between and the -axis on the interval .   "
 },
 {
   "id": "sec-integral-net",
@@ -5227,7 +5722,124 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.5",
   "title": "Net Change Theorem and Indefinite Integrals",
-  "body": " Net Change Theorem and Indefinite Integrals  Text of section.  "
+  "body": " Net Change Theorem and Indefinite Integrals    Interpret a definite integral as net change of a quantity whose rate of change is known.  Use indefinite integral notation to represent the family of all antiderivatives.  Compute net change from a velocity (or rate) function using .  Compute the average value of a function on an interval.  State and use the Mean Value Theorem for Integrals.     Review: Four Meanings of the Definite Integral  The definite integral has several complementary interpretations.     Physical: Suppose and are physical quantities that depend continuously on an independent variable , with and . If is the rate of change of , meaning , then the integral of over is the total change in from to .  In Leibniz notation, this is written   In Newton notation, if , then   which is the Second Fundamental Theorem of Calculus. If an initial value is known, then   which is the First Fundamental Theorem of Calculus.     Geometric: The integral is the signed area between the graph and the -axis on , counting regions above the axis as positive and regions below as negative.     Numerical: Divide into increments of width . Choose sample points (one in each increment). Then the integral is approximated by a Riemann sum:   and the exact integral is the limit as (so ).     Algebraic: If we can find an antiderivative with , then . Later we will develop systematic methods for finding antiderivatives (for example, substitution, which reverses the Chain Rule).      The Net Change Theorem   Net Change Theorem   If a quantity changes with respect to at a rate , then the net change in on is   Equivalently, if , then .    The phrase net change emphasizes that increases and decreases both count: if the rate is sometimes positive and sometimes negative, the integral records the overall effect.    Indefinite Integral Notation  Because antiderivatives and integrals are linked by the Fundamental Theorems, we use the integral sign as notation for the most general antiderivative:   The expression is called an indefinite integral . It represents a family of functions (all antiderivatives), not a single number.    Compute .    Since , we have       A car has velocity (meters per second). How far does it travel from to ?    Distance traveled is net change in position: . First find an antiderivative:   Now evaluate as a definite integral:       Average Value of a Function  In a Riemann sum approximation, can be rewritten to highlight an average of the sample values:   Taking the limit as motivates the definition of the average value of on :    The average value of on is       Find the average value of on .    An antiderivative is . Therefore,   Even though ranges from 0 to 2 on , the average is above 1 because the graph bulges upward.      Let be a position function with velocity . Show that the average value of on equals total distance traveled divided by elapsed time.    Using the definition of average value and the Second Fundamental Theorem:       Mean Value Theorem for Integrals   Mean Value Theorem for Integrals   If is continuous on , then there exists a point such that   In words: at some point, the function attains its average value.     Proof idea. Let . By the Mean Value Theorem for derivatives, there is such that . By the First Fundamental Theorem, . Also . Substituting gives the result.  In the example on , we found . So there is with , meaning .    Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Net Change Theorem and Indefinite Integrals      Practice \/ Study Problems   Net Change and Indefinite Integrals    A bacteria culture grows at rate (cells per hour). Interpret in words.      Compute .      Compute .      Average Value    Find the average value of on .      Let be continuous on and suppose . Use the bounds rule to give an inequality for .      "
+},
+{
+  "id": "sec-integral-net-2",
+  "level": "2",
+  "url": "sec-integral-net.html#sec-integral-net-2",
+  "type": "Objectives",
+  "number": "4.5",
+  "title": "",
+  "body": "  Interpret a definite integral as net change of a quantity whose rate of change is known.  Use indefinite integral notation to represent the family of all antiderivatives.  Compute net change from a velocity (or rate) function using .  Compute the average value of a function on an interval.  State and use the Mean Value Theorem for Integrals.   "
+},
+{
+  "id": "thm-net-change",
+  "level": "2",
+  "url": "sec-integral-net.html#thm-net-change",
+  "type": "Theorem",
+  "number": "4.5.1",
+  "title": "Net Change Theorem.",
+  "body": " Net Change Theorem   If a quantity changes with respect to at a rate , then the net change in on is   Equivalently, if , then .   "
+},
+{
+  "id": "ex-indef-int-power",
+  "level": "2",
+  "url": "sec-integral-net.html#ex-indef-int-power",
+  "type": "Example",
+  "number": "4.5.2",
+  "title": "",
+  "body": "  Compute .    Since , we have    "
+},
+{
+  "id": "ex-net-change-velocity",
+  "level": "2",
+  "url": "sec-integral-net.html#ex-net-change-velocity",
+  "type": "Example",
+  "number": "4.5.3",
+  "title": "",
+  "body": "  A car has velocity (meters per second). How far does it travel from to ?    Distance traveled is net change in position: . First find an antiderivative:   Now evaluate as a definite integral:    "
+},
+{
+  "id": "def-average-value",
+  "level": "2",
+  "url": "sec-integral-net.html#def-average-value",
+  "type": "Definition",
+  "number": "4.5.4",
+  "title": "",
+  "body": "  The average value of on is    "
+},
+{
+  "id": "ex-average-sqrt",
+  "level": "2",
+  "url": "sec-integral-net.html#ex-average-sqrt",
+  "type": "Example",
+  "number": "4.5.5",
+  "title": "",
+  "body": "  Find the average value of on .    An antiderivative is . Therefore,   Even though ranges from 0 to 2 on , the average is above 1 because the graph bulges upward.   "
+},
+{
+  "id": "ex-average-velocity",
+  "level": "2",
+  "url": "sec-integral-net.html#ex-average-velocity",
+  "type": "Example",
+  "number": "4.5.6",
+  "title": "",
+  "body": "  Let be a position function with velocity . Show that the average value of on equals total distance traveled divided by elapsed time.    Using the definition of average value and the Second Fundamental Theorem:    "
+},
+{
+  "id": "thm-mvt-integrals",
+  "level": "2",
+  "url": "sec-integral-net.html#thm-mvt-integrals",
+  "type": "Theorem",
+  "number": "4.5.7",
+  "title": "Mean Value Theorem for Integrals.",
+  "body": " Mean Value Theorem for Integrals   If is continuous on , then there exists a point such that   In words: at some point, the function attains its average value.   "
+},
+{
+  "id": "prob-net-change-01",
+  "level": "2",
+  "url": "sec-integral-net.html#prob-net-change-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  A bacteria culture grows at rate (cells per hour). Interpret in words.   "
+},
+{
+  "id": "prob-indef-01",
+  "level": "2",
+  "url": "sec-integral-net.html#prob-indef-01",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-indef-02",
+  "level": "2",
+  "url": "sec-integral-net.html#prob-indef-02",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-avg-01",
+  "level": "2",
+  "url": "sec-integral-net.html#prob-avg-01",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Find the average value of on .   "
+},
+{
+  "id": "prob-avg-02",
+  "level": "2",
+  "url": "sec-integral-net.html#prob-avg-02",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Let be continuous on and suppose . Use the bounds rule to give an inequality for .   "
 },
 {
   "id": "sec-integral-usub",
@@ -5236,7 +5848,151 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "Substitution Rule for Integration",
-  "body": " Substitution Rule for Integration  Text of section.  "
+  "body": " Substitution Rule for Integration    Recognize when an integrand has the form and apply substitution.  Use substitution to evaluate indefinite integrals and then check results by differentiation.  Use substitution with updated limits to evaluate definite integrals.  Use symmetry (odd functions) to evaluate certain definite integrals quickly.  Model a real situation with an integral and interpret a substitution physically.     Reversing the Chain Rule  By the Second Fundamental Theorem of Calculus, one efficient way to evaluate a definite integral is to find an antiderivative and compute . In this section we develop a powerful method for finding antiderivatives by reversing the Chain Rule: .  For example, consider the indefinite integral . The inside function appears inside the cosine, and its derivative is . Since the integrand contains a factor , we rewrite it to match the Chain Rule pattern:   Now set . Then , so , and the integral becomes   A quick check comes from the Chain Rule: if , then .    Substitution Method  Substitution is a structured way to reverse the Chain Rule. The goal is to rewrite the integrand so it looks like .    Start with an integral . Look for an inside function so that appears as a factor (possibly after multiplying and dividing by a constant):   After factoring out , rewrite the remaining part as a function of .    Let , so . Then rewrite the integral in :   Compute using basic antiderivatives and rules.    Substitute back to express the final answer in terms of :       Examples    Evaluate .    Let . Then , so . Thus,       Evaluate .    Let , so and . We also solve for : gives .       Evaluate .    Let . Then . Rewrite to produce :       Evaluate .    Let . Then , so .       Evaluate in two ways, and explain why the answers agree.    Method 1: Let . Then .   Method 2: Write the integrand as and let . Then .   These differ by a constant because . So , meaning the two antiderivative families are the same.      Substitution for Definite Integrals  Substitution can be used directly with definite integrals by changing the limits. If , then     Evaluate .    Let , so and . Update the limits: when , ; when , .       Integral Symmetry for Odd Functions   Integral Symmetry Theorem   If is odd, meaning , then for any ,      By the splitting rule,   In the first integral, substitute , so . When , ; when , . Then:   Therefore .     Evaluate .    The integrand is odd because . By the symmetry theorem,       The graph of is rotationally symmetric about the origin, so the signed areas on and cancel.       Application: Heart Flow Rate  In a medical test, a known amount of dye is injected into a vein flowing toward the heart. Let be the measured dye concentration in arterial blood (mg per liter) at time minutes. If the (unknown) blood flow rate is constant at liters per minute, then the total blood volume that has passed is . Let be the dye concentration after liters have passed, so .  The total amount of dye (in mg) can be computed by integrating concentration with respect to volume:   Substitute , so and . Then   Solving for the flow rate gives   In practice, once the dye has passed through the system, becomes (essentially) zero, so the improper integral can be replaced by a finite upper limit chosen from the data. The remaining integral can be approximated numerically (for example, by a Riemann sum or a spreadsheet).    Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Substitution Rule for Integration      Practice \/ Study Problems   Indefinite Integrals by Substitution    Compute .      Compute .      Compute and check by differentiating.      Definite Integrals and Symmetry    Evaluate using substitution with updated limits.      Without finding an antiderivative, evaluate .      "
+},
+{
+  "id": "sec-integral-usub-2",
+  "level": "2",
+  "url": "sec-integral-usub.html#sec-integral-usub-2",
+  "type": "Objectives",
+  "number": "4.6",
+  "title": "",
+  "body": "  Recognize when an integrand has the form and apply substitution.  Use substitution to evaluate indefinite integrals and then check results by differentiation.  Use substitution with updated limits to evaluate definite integrals.  Use symmetry (odd functions) to evaluate certain definite integrals quickly.  Model a real situation with an integral and interpret a substitution physically.   "
+},
+{
+  "id": "ex-sub-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-01",
+  "type": "Example",
+  "number": "4.6.1",
+  "title": "",
+  "body": "  Evaluate .    Let . Then , so . Thus,    "
+},
+{
+  "id": "ex-sub-02",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-02",
+  "type": "Example",
+  "number": "4.6.2",
+  "title": "",
+  "body": "  Evaluate .    Let , so and . We also solve for : gives .    "
+},
+{
+  "id": "ex-sub-03",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-03",
+  "type": "Example",
+  "number": "4.6.3",
+  "title": "",
+  "body": "  Evaluate .    Let . Then . Rewrite to produce :    "
+},
+{
+  "id": "ex-sub-04",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-04",
+  "type": "Example",
+  "number": "4.6.4",
+  "title": "",
+  "body": "  Evaluate .    Let . Then , so .    "
+},
+{
+  "id": "ex-sub-05",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-05",
+  "type": "Example",
+  "number": "4.6.5",
+  "title": "",
+  "body": "  Evaluate in two ways, and explain why the answers agree.    Method 1: Let . Then .   Method 2: Write the integrand as and let . Then .   These differ by a constant because . So , meaning the two antiderivative families are the same.   "
+},
+{
+  "id": "ex-sub-def-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-sub-def-01",
+  "type": "Example",
+  "number": "4.6.6",
+  "title": "",
+  "body": "  Evaluate .    Let , so and . Update the limits: when , ; when , .    "
+},
+{
+  "id": "thm-integral-symmetry-odd",
+  "level": "2",
+  "url": "sec-integral-usub.html#thm-integral-symmetry-odd",
+  "type": "Theorem",
+  "number": "4.6.7",
+  "title": "Integral Symmetry Theorem.",
+  "body": " Integral Symmetry Theorem   If is odd, meaning , then for any ,    "
+},
+{
+  "id": "ssec-integral-symmetry-3",
+  "level": "2",
+  "url": "sec-integral-usub.html#ssec-integral-symmetry-3",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " By the splitting rule,   In the first integral, substitute , so . When , ; when , . Then:   Therefore .  "
+},
+{
+  "id": "ex-odd-symmetry-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#ex-odd-symmetry-01",
+  "type": "Example",
+  "number": "4.6.8",
+  "title": "",
+  "body": "  Evaluate .    The integrand is odd because . By the symmetry theorem,    "
+},
+{
+  "id": "fig-xcosx",
+  "level": "2",
+  "url": "sec-integral-usub.html#fig-xcosx",
+  "type": "Figure",
+  "number": "4.6.9",
+  "title": "",
+  "body": "  The graph of is rotationally symmetric about the origin, so the signed areas on and cancel.    "
+},
+{
+  "id": "prob-sub-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#prob-sub-01",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-sub-02",
+  "level": "2",
+  "url": "sec-integral-usub.html#prob-sub-02",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "prob-sub-03",
+  "level": "2",
+  "url": "sec-integral-usub.html#prob-sub-03",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Compute and check by differentiating.   "
+},
+{
+  "id": "prob-sub-def-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#prob-sub-def-01",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Evaluate using substitution with updated limits.   "
+},
+{
+  "id": "prob-odd-01",
+  "level": "2",
+  "url": "sec-integral-usub.html#prob-odd-01",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Without finding an antiderivative, evaluate .   "
 },
 {
   "id": "sec-integral-ww",
@@ -5245,7 +6001,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.7",
   "title": "Additional Worked-Out Problems",
-  "body": " Additional Worked-Out Problems  Placeholder for additional worked-out problems for the Integral chapter.   Placeholder  test   "
+  "body": " Additional Worked-Out Problems   Antiderivatives  test    Riemann Sums and Areas  test    Definite Integrals  test    The Fundamental Theorem of Calculus  test    Net Change Theorem and Indefinite Integrals  test    Substitution Rule for Integration  test   "
 },
 {
   "id": "formula-sheet",
