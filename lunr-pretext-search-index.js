@@ -1765,9 +1765,9 @@ var ptx_lunr_docs = [
   "body": "  Consider the piecewise function   Find the value of that makes continuous at .    To check continuity at , we need three things: (1) the function is defined at , (2) the limit exists, and (3) the limit equals .  First, , so the function is defined at for any value of .  Next, compute the one-sided limits. For , we use the left-hand piece : For , we use the right-hand piece :   For the limit to exist, these must be equal: Solving gives , so .  Finally, with we have , which matches the limit. Therefore is continuous at when .   "
 },
 {
-  "id": "sec-limit-continuity-8-4",
+  "id": "ssec-piecewise-continuity-4",
   "level": "2",
-  "url": "sec-limit-continuity.html#sec-limit-continuity-8-4",
+  "url": "sec-limit-continuity.html#ssec-piecewise-continuity-4",
   "type": "Example",
   "number": "1.4.17",
   "title": "",
