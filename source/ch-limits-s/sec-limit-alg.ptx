@@ -126,7 +126,7 @@ Using the Difference, Constant Multiple, and Power Limit Laws:
     <p>
       In <xref ref="sec-derivative-trig">Section</xref> and <xref ref="sec-derivative-expChain">Section</xref>, we will verify that trigonometric functions 
  like <m>\sin(x)</m> and <m>\tan(x)</m> are also continuous when defined, 
-and the same holds for functions like <m>2^x</m> and <m>\log(x)</m>. 
+and the same holds for functions like <m>2^x</m> and <m>\ln(x)</m>. 
 Thus, this principle works for pretty much all reasonable functions.
     </p>
 

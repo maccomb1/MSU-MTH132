@@ -57,7 +57,7 @@
     </p>
   </subsection>
 
-  <subsection>
+  <subsection xml:id="ssec-types-discontinuities">
     <title>Removable Discontinuity</title>
     <definition>
       <statement>
@@ -125,7 +125,7 @@
 
 </subsection>
 
-  <subsection>
+  <subsection xml:id="ssec-jump-discontinuity">
     <title>Jump Discontinuity</title>
     <definition>
       <statement>
@@ -175,7 +175,7 @@
 
   </subsection>
 
-  <subsection>
+  <subsection xml:id="ssec-infinite-discontinuity">
     <title>Infinite Discontinuity</title>
     <definition>
       <statement>
@@ -217,7 +217,7 @@
 </example>
 
       </subsection>
-  <subsection>
+  <subsection xml:id="ssec-essential-discontinuity">
     <title>Essential Discontinuity</title>
     <definition>
       <statement>
@@ -282,7 +282,7 @@
 
   </subsection>
 
-  <subsection>
+  <subsection xml:id="ssec-piecewise-continuity">
     <title>Continuity of Piecewise Functions</title>
 <p>
   For a function defined by cases, whose graph consists of several continuous pieces, 
@@ -408,7 +408,7 @@
     </example>
   </subsection>
 
-  <subsection>
+  <subsection xml:id="ssec-domain-continuity">
     <title>Domain of Continuity</title>
     <p>
       Almost all functions defined by formulas are continuous, except at points where they are undefined. This follows from our methods for computing limits.

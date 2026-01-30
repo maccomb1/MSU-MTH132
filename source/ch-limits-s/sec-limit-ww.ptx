@@ -3,33 +3,639 @@
   <title>Additional Worked-Out Problems</title>
     <subsection xml:id="subsec-limit-gl">
       <title><xref ref="sec-graphical-limits"/> Limits from Graphs and Notation</title>
-      <p> test
-      </p>
+      
+      <example xml:id="ex-limit-graph-02">
+        <title>Graphing a Function to Find a Limit</title>
+        <statement>
+          <p>
+            Consider the function <m>f(x) = \begin{cases} x^2 &amp; \text{ if } x \lt 2 \\ 3 &amp; \text{ if } x = 2 \\ 4 - x &amp; \text{ if } x \gt 2 \end{cases}</m>. 
+          </p>
+          <p> Sketch the graph of <m>f</m> and use it to find <m>\displaystyle\lim_{x \to 2} f(x)</m>, if it exists.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            To graph <m>f</m>, we first graph the pieces of the function on their respective domains. For <m>x \lt 2</m>, we graph <m>y = x^2</m>, 
+            which is a parabola opening upwards. At <m>x = 2</m>, we have a single point <m>(2, 3)</m>. For <m>x \gt 2</m>, we graph <m>y = 4 - x</m>, 
+            which is a line with a negative slope. Together, these pieces form the graph of <m>f</m>.
+          </p>
+          <p> 
+<figure xml:id="fig-limit-piecewise-02">
+  <caption>
+    Graph of a piecewise-defined function <m>f(x)</m> as described in the example.
+  </caption>
+  <image source="images/limitFunc02.PNG" width="100%">
+    <shortdescription>
+      A graph on a coordinate grid showing a piecewise function.
+      For x less than 2, the graph is a smooth upward-opening curve with a minimum at the origin.
+      As x approaches 2 from the left, the curve rises toward an open circle at x equals 2 and height 4.
+      At x equals 2, there is a filled point at height 3, indicating the function value.
+      Also at x equals 2, there is an open circle at height 2 that begins a straight line segment.
+      For x greater than 2, the graph is a straight line sloping downward from the open circle at x equals 2 and height 2,
+      passing through the point x equals 3 and height 1, and continuing downward toward x equals 4.
+      The differing open and closed points at x equals 2 show that the left-hand limit, right-hand limit,
+      and the function value at x equals 2 are not all the same.
+    </shortdescription>
+  </image>
+</figure>
+          </p>
+          <p> Now, we analyze the behavior of <m>f(x)</m> as <m>x</m> approaches 2 from both sides. 
+            As <m>x</m> approaches 2 from the left (<m>x \to 2^-</m>), <m>f(x) = x^2</m> approaches <m>4</m>. 
+            As <m>x</m> approaches 2 from the right (<m>x \to 2^+</m>), <m>f(x) = 4 - x</m> approaches <m>2</m>.
+          </p>
+          <p> Since the left-hand limit (<m>4</m>) and the right-hand limit (<m>2</m>) are not equal, the overall limit <m>\displaystyle\lim_{x \to 2} f(x)</m> does not exist.
+          </p>
+          
+        </solution>
+
+      </example>
+
+<example xml:id="ex-vert-asymptotes-rational-01">
+  <statement>
+    <p>
+      Consider the function
+      <m>\displaystyle f(x)=\frac{x^2-1}{x^2+3x+2}</m>.
+    </p> 
+        <p>
+          Find all the vertical asymptotes of <m>f</m>.
+        </p>
+  </statement>
+  <solution>
+    <p>
+      To find the vertical asymptotes of the function <m>f(x)=\frac{x^2-1}{x^2+3x+2}</m>, we first factor the denominator:
+      <m>x^2 + 3x + 2 = (x + 1)(x + 2)</m>.
+      The vertical asymptotes occur where the denominator is zero, provided the numerator is not also zero at those points.
+      Setting the denominator equal to zero gives us:
+      <m>(x + 1)(x + 2) = 0</m>,
+      which has solutions <m>x = -1</m> and <m>x = -2</m>. </p> <p> 
+      Next, we check the numerator at these points:
+      <m>x^2 - 1 = (x - 1)(x + 1)</m>. </p> <p> 
+      At <m>x = -1</m>, the numerator is zero, indicating there is no vertical asymptote there (in fact it will be called a removable discontinuity once we learn
+      about this in our continuity section). </p><p>
+      At <m>x = -2</m>, the numerator is non-zero (<m>3</m>), confirming that there is a vertical asymptote at this point. </p><p>
+      Therefore, the only vertical asymptote of <m>f</m> is at <m>x = -2</m>.
+    </p>
+  </solution>
+</example>
+
+
     </subsection>
 
     <subsection xml:id="subsec-limit-alg">
       <title><xref ref="sec-limit-laws"/> Limit Laws and Algebraic Techniques</title>
-      <p> test
-      </p>
+
+      <example xml:id="ex-limit-rational-a-zero-01">
+  <statement>
+    <p>
+      Evaluate the limit: 
+    <m>
+      \displaystyle \lim_{a \to 0} \frac{(a-3)^2 - 9}{a}.
+    </m>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Begin by simplifying the expression in the numerator.
+      Expand <m>(a-3)^2</m>:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+(a-3)^2 - 9
+&amp; =&amp;  (a^2 - 6a + 9) - 9 \\
+&amp;=&amp; a^2 - 6a.
+\end{array}
+    </me>
+
+    <p>
+      Substituting this back into the limit gives
+    </p>
+
+    <me>
+      \displaystyle \lim_{a \to 0} \frac{a^2 - 6a}{a}.
+    </me>
+
+    <p>
+      Factor <m>a</m> from the numerator and simplify:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \lim_{a \to 0} \frac{a(a-6)}{a}
+&amp; =&amp; \displaystyle \lim_{a \to 0} (a-6).
+\end{array}
+    </me>
+
+    <p>
+      Now evaluate the limit by direct substitution:
+    </p>
+
+    <me>
+      \displaystyle \lim_{a \to 0} (a-6) = -6.
+    </me>
+
+    <p>
+      Therefore, the value of the limit is <m>-6</m>.
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-limit-difference-quotient-01">
+  <statement>
+    <p>
+      Evaluate the limit: 
+    <m>
+      \displaystyle \lim_{h \to 1} \frac{\frac{1}{h+1} - \frac{1}{2}}{h-1}.
+    </m>
+        </p>
+  </statement>
+
+  <solution>
+    <p>
+      Direct substitution gives a meaningless expression <m>\frac{0}{0}</m>,
+      so we begin by simplifying the numerator.
+    </p>
+
+    <p>
+      Combine the fractions in the numerator using a common denominator:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \frac{1}{h+1} - \frac{1}{2}
+&amp; =&amp; \displaystyle \frac{2 - (h+1)}{2(h+1)}.
+\end{array}
+    </me>
+
+    <p>
+      Simplify the numerator:
+    </p>
+
+    <me>
+2 - (h+1) = 1 - h.
+    </me>
+
+    <p>
+      Substitute this back into the original expression:
+    </p>
+
+    <me>
+ \frac{\frac{1}{h+1} - \frac{1}{2}}{h-1}
+= \frac{1-h}{2(h+1)(h-1)}.
+
+    </me>
+
+    <p>
+      Notice that <m>1-h = -(h-1)</m>, so we can factor and cancel:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \frac{1-h}{2(h+1)(h-1)}
+&amp;=&amp; \displaystyle \frac{-(h-1)}{2(h+1)(h-1)}
+\\[0.8em]
+&amp;=&amp; \displaystyle -\frac{1}{2(h+1)}.
+\end{array}
+    </me>
+
+    <p>
+      Now we can safely evaluate the limit by substitution:
+    </p>
+
+    <me>
+      \displaystyle \lim_{h \to 1} -\frac{1}{2(h+1)} = -\frac{1}{4}.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \displaystyle \lim_{h \to 1} \frac{\frac{1}{h+1} - \frac{1}{2}}{h-1} = -\frac{1}{4}.
+    </me>
+  </solution>
+</example>
+
+<example xml:id="ex-squeeze-x-2-cos-poly">
+  <statement>
+    <p>
+      Suppose <m>f</m> is a function such that for all <m>x</m>,
+    </p>
+    <me>
+      \cos(\pi x)\le f(x)\le x^2-4x+5.
+    </me>
+    <p>
+      Use the Squeeze Theorem to evaluate <m>\displaystyle \lim_{x\to 2} f(x)</m>, or explain why the Squeeze Theorem does not apply.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Compute the limits of the bounding functions as <m>x\to 2</m>.
+      Since <m>\cos(\pi x)</m> and polynomials are continuous, we can substitute <m>x=2</m>:
+    </p>
+
+    <me>
+\begin{array}{rcl}
+\displaystyle \lim_{x\to 2}\cos(\pi x)
+&amp;=&amp; \cos(2\pi)=1,
+\\[0.8em]
+\displaystyle \lim_{x\to 2}(x^2-4x+5)
+&amp;=&amp; 2^2-4(2)+5
+\\[0.4em]
+&amp;=&amp; 4-8+5
+\\[0.4em]
+&amp;=&amp; 1.
+\end{array}
+    </me>
+
+    <p>
+      Both bounding functions approach the same value, <m>1</m>. Therefore, by the Squeeze Theorem,
+    </p>
+
+    <me>
+      \displaystyle \lim_{x\to 2} f(x)=1.
+    </me>
+  </solution>
+</example>
+
+
+
     </subsection>
 
 
     <subsection xml:id="subsec-limit-inf">
       <title><xref ref="sec-limit-inf"/> Limits at Infinity: Horizontal Asymptotes</title>
-      <p> test
+
+      
+<example xml:id="ex-limit-infinity-radical-rational">
+  <statement>
+    <p>
+      Evaluate the limit: 
+    <m>
+      \displaystyle \lim_{x\to\infty}
+      \frac{\sqrt{x}-x^{-1}}{x^{3/2}-\sqrt[3]{x}}.
+    </m>
       </p>
+  </statement>
+
+  <solution>
+    <p>
+      To evaluate this limit, we compare the dominant powers of <m>x</m> in the numerator and denominator.
+      The largest power of <m>x</m> in the numerator is <m>x^{1/2}</m>, and the largest power of <m>x</m> in the denominator is <m>x^{3/2}</m>. Therefore
+    </p>
+
+    <me>
+      f(x) \approx \frac{x^{1/2}}{x^{3/2}} = x^{-1} = \frac{1}{x}.
+    </me>
+
+    <p>
+      As <m>x \to \infty</m>, <m>\frac{1}{x} \to 0</m>. Thus, the limit is 
+    </p>
+
+    <me>
+      \displaystyle \lim_{x\to\infty}
+      \frac{\sqrt{x}-x^{-1}}{x^{3/2}-\sqrt[3]{x}} = 0.
+    </me>
+  </solution>
+</example>
+
+<example xml:id="ex-limit-infinity-polynomial-dominant">
+  <statement>
+    <p>
+      Evaluate the limits
+    </p>
+    <me>
+      \displaystyle 
+      \lim_{x\to\infty}\frac{3-2x-8x^3+3x^4}{2x^4+x+1}
+      \quad\text{and}\quad
+      \lim_{x\to -\infty}\frac{3-2x-8x^3+3x^4}{2x^4+x+1}.
+    </me>
+  </statement>
+
+  <solution>
+    <p>
+      To evaluate limits at infinity for rational functions, we compare the dominant (highest–power) terms
+      in the numerator and denominator.
+      In this case, the dominant term in the numerator is <m>3x^4</m>, and the dominant term in the denominator
+      is <m>2x^4</m>.
+    </p>
+
+    <p>
+      For large values of <m>|x|</m>, the lower–degree terms become negligible, so the function behaves like
+    </p>
+
+    <me>
+      f(x) \approx \frac{3x^4}{2x^4} = \frac{3}{2}.
+    </me>
+
+    <p>
+      Since both dominant terms involve <m>x^4</m>, which is positive for both positive and negative values of <m>x</m>,
+      this approximation applies as <m>x\to\infty</m> and as <m>x\to -\infty</m>.
+    </p>
+
+    <me>
+      \displaystyle 
+      \lim_{x\to\infty}\frac{3-2x-8x^3+3x^4}{2x^4+x+1}
+      =
+      \lim_{x\to -\infty}\frac{3-2x-8x^3+3x^4}{2x^4+x+1}
+      =
+      \frac{3}{2}.
+    </me>
+  </solution>
+</example>
+
+
+<example xml:id="ex-limit-infinity-horizontal-asymptote-sqrt-x2plus1">
+  <statement>
+    <p>
+      Let <m>f(x)=\dfrac{\sqrt{x^{2}+1}}{x+1}</m>.
+    </p>
+    <p>
+      (a) Evaluate <m>\displaystyle \lim_{x\to\infty} f(x)</m>. </p><p>
+      (b) Find the equation of the horizontal asymptote associated with this limit.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      (a) To evaluate <m>\displaystyle \lim_{x\to\infty} f(x)</m>, we analyze the dominant terms in the numerator and denominator.
+      The dominant term in the numerator is <m>\sqrt{x^{2}} = x</m>, and the dominant term in the denominator is <m>x</m>.
+      Therefore, for large values of <m>|x|</m>, the function behaves like
+    </p>
+    <me>
+      f(x) \approx \frac{x}{x} = 1.
+    </me>
+    <p>
+      Thus,
+    </p>
+    <me>
+      \displaystyle \lim_{x\to\infty} f(x) = 1.
+    </me>
+
+    <p>
+      (b) Since <m>\displaystyle \lim_{x\to\infty} f(x)=1</m>, the curve approaches height <m>1</m> as <m>x</m> becomes large.
+      Therefore the horizontal asymptote (for <m>x\to\infty</m>) is
+      <m>y=1</m>.
+    </p>
+  </solution>
+</example>
+
+
+<example xml:id="ex-limit-infinity-sqrt-minus-x">
+  <statement>
+    <p>
+      Evaluate the limit: 
+  <m>
+      \displaystyle \lim_{x\to\infty} \left(\sqrt{x^2+x}-x\right).
+    </m>
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Direct substitution leads to a confusing expression of the form <m>\infty-\infty</m>.
+      To resolve this and apply our technique, let's first multiply by the conjugate of the expression.
+    </p>
+
+     <me>
+\begin{array}{rcl}
+\displaystyle \sqrt{x^2+x}-x
+\amp=\amp \displaystyle \left(\sqrt{x^2+x}-x\right)
+\cdot \frac{\sqrt{x^2+x}+x}{\sqrt{x^2+x}+x}
+\\[1.2em]
+\amp=\amp \displaystyle \frac{(x^2+x)-x^2}{\sqrt{x^2+x}+x}
+\\[1.2em]
+\amp=\amp \displaystyle \frac{x}{\sqrt{x^2+x}+x}.
+\end{array}
+    </me>
+
+   <p>The dominant term in the numerator is <m>x</m>, and the dominant term in the denominator is also <m>x</m>.
+   Therefore, for large values of <m>\sqrt{x^2} = x</m>, the function behaves like</p>
+    <me>
+      f(x) \approx \frac{x}{\sqrt{x^2} + x} = \frac{x}{x+x} = \frac{1}{2}. 
+    </me>
+    
+
+    <p>
+      Thus,
+    </p>
+    <me>
+      \displaystyle \lim_{x\to\infty} \left(\sqrt{x^2+x}-x\right) = \frac{1}{2}.
+    </me>
+
+  </solution>
+</example>
+
+
     </subsection>
 
     <subsection xml:id="subsec-limit-cont">
       <title><xref ref="sec-limit-continuity"/> Continuity</title>
-      <p> test
-      </p>
+
+      
+<example xml:id="ex-continuity-realworld-02">
+  <statement>
+    <p>
+      For each function defined below, determine whether it is <em>continuous</em> or <em>discontinuous</em>.
+      Briefly justify your choice.
+    </p>
+
+
+        <p>
+          (a) Let <m>f(t)</m> be the amount of water (in gallons) remaining in a reservoir after <m>t</m> hours of steady drainage.
+</p>
+        <p>
+          (b) Let <m>g(t)</m> be the floor number that an elevator is on at time <m>t</m> seconds.
+        </p>
+
+        <p>
+          (c) Let <m>h(d)</m> be the number of pages read in a book after <m>d</m> days.
+        </p>
+
+  </statement>
+  <solution>
+    <p>
+      (a) <alert>Continuous</alert>. The function <m>f(t)</m> is continuous because the amount of water in the reservoir changes smoothly over time as it drains steadily.
+      There are no sudden jumps or breaks in the amount of water; it decreases gradually.
+    </p>
+    <p>
+      (b) <alert>Discontinuous</alert>. The function <m>g(t)</m> is discontinuous because the elevator moves between floors in jumps.
+      The floor number changes suddenly when the elevator passes from one floor to the next.
+    </p>
+    <p>
+      (c) <alert>Discontinuous</alert>. The function <m>h(d)</m> is discontinuous because the number of pages read is a step function.
+      The number of pages read increases in whole numbers, resulting in jumps rather than a smooth change
+    </p>
+  </solution>
+</example>
+
+
+<example xml:id="ex-continuity-removable-02">
+  <title>Assessing and Fixing a Removable Discontinuity</title>
+
+  <statement>
+    <p>
+      Let
+    </p> <p> 
+    <me>
+      f(x)=
+      \begin{cases}
+        \dfrac{x-2}{x^2+3x-10}, &amp; x \neq 2,\\[0.6em]
+        4, &amp; x = 2.
+      \end{cases}
+    </me>
+</p> <p>
+      (a) Determine whether <m>f</m> is continuous at <m>x=2</m>. Justify your answer.
+    </p> <p>
+      (b) If <m>f</m> is not continuous at <m>x=2</m>, explain how to redefine <m>f(2)</m> so that <m>f</m> becomes continuous at <m>x=2</m>.
+    </p> 
+  </statement>
+
+  <solution>
+    <p>
+      (a) To evaluate the limit as <m>x \to 2</m>, we first simplify the expression for <m>x \neq 2</m>.
+      Factor the denominator:
+    </p>
+
+    <me>
+      x^2 + 3x - 10 = (x+5)(x-2).
+    </me>
+
+    <p>
+      For <m>x \neq 2</m>, the function simplifies to
+    </p>
+
+    <me>
+      f(x) = \frac{x-2}{(x+5)(x-2)} = \frac{1}{x+5}.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      \lim_{x\to 2} f(x) = \frac{1}{2+5} = \frac{1}{7}.
+    </me>
+
+    <p>
+      However, the value of the function at <m>x=2</m> is
+      <m> f(2) = 4.
+    </m>
+      Since the limit exists but is not equal to the function value,
+      <m>f</m> is <em>not continuous</em> at <m>x=2</m>.
+      This is a <term>removable discontinuity</term>.
+    </p>
+
+    <p>
+     (b) To remove the discontinuity, we redefine <m>f(2)</m> to equal the limit:
+    </p>
+
+    <me>
+      f(2) = \frac{1}{7}.
+    </me>
+
+    <p>
+      With this definition, <m>f</m> becomes continuous at <m>x=2</m>. The full definition of <m>f</m> is now
+    </p>
+    <me>
+      f(x)=
+      \begin{cases}
+        \dfrac{x-2}{x^2+3x-10}, &amp; x \neq 2,\\[0.6em]
+        \dfrac{1}{7}, &amp; x = 2.
+      \end{cases}
+    </me>
+
+  </solution>
+</example>
+
+
+
+
     </subsection>
 
     <subsection xml:id="subsec-limit-ivt">
       <title><xref ref="sec-limit-ivt"/> Intermediate Value Theorem</title>
-      <p> test
+
+      
+  <example xml:id="ivt-04">
+    <statement>
+      <p>
+        A function <m>f</m> is continuous on <m>[2,5]</m>, with <m>f(2)=7</m> and <m>f(5)=1</m>.
+        What does the Intermediate Value Theorem guarantee about the equation <m>f(x)=4</m>?
       </p>
+    </statement>
+  <solution>
+    <p>
+      Since <m>f</m> is continuous on the interval <m>[2,5]</m> and <m>f(2)=7</m> and <m>f(5)=1</m>,
+      the Intermediate Value Theorem states that for any value <m>k</m> between <m>f(2)</m> and <m>f(5)</m>,
+      there exists at least one <m>c</m> in <m>(2,5)</m> such that <m>f(c)=k</m>.
+      Since <m>4</m> is between <m>7</m> and <m>1</m>, there exists at least one <m>c</m> in <m>(2,5)</m> such that <m>f(c)=4</m>.
+    </p>
+  </solution>
+  </example>
+      
+  <example xml:id="ivt-02">
+    <statement>
+      <p>
+        Let <m>f(x)=\ln(x)-x+2</m>.
+        Use the Intermediate Value Theorem to show that <m>f(x)=0</m> has at least one solution for <m>x&gt;1</m>.
+      </p>
+    </statement>
+  <solution>
+    <p>
+      First, we need to show that <m>f</m> is continuous for <m>x&gt;1</m>.
+      Since <m>\ln(x)</m> and <m>-x+2</m> are both continuous for <m>x&gt;0</m>,
+      their sum <m>f(x)=\ln(x)-x+2</m> is also continuous for <m>x&gt;0</m>, and thus for <m>x&gt;1</m>.
+    </p>
+    <p>
+      Next, we evaluate <m>f(1)</m> and <m>f(4)</m>:
+    </p>
+    <me>
+\begin{array}{rcl}
+f(1)
+&amp;=&amp; \ln(1) - 1 + 2 \\
+&amp;=&amp; 0 - 1 + 2 \\
+&amp;=&amp; 1,
+\\[1em]
+f(4)
+&amp;=&amp; \ln(4) - 4 + 2 \\
+&amp;=&amp; \ln(4) - 2 \lt 0 \quad \text{(since } \ln(4) \lt \ln(e^2)\text{)}.
+\end{array}
+    </me>
+    <p>
+      Since <m>f(1)=1&gt;0</m> and <m>f(4)&lt;0</m>, by the Intermediate Value Theorem,
+      there exists at least one <m>c</m> in <m>(1,4)</m> such that <m>f(c)=0</m>.
+      Therefore, the equation <m>f(x)=0</m> has at least one solution for <m>x&gt;1</m>.
+    </p> 
+
+</solution>
+
+  </example>
+
+
+    <example xml:id="ivt-08">
+    <statement>
+      <p>
+        The temperature <m>T(t)</m> (in degrees Celsius) at a location varies continuously over time.
+        If <m>T(8\text{:}00\text{ am})=12</m> and <m>T(2\text{:}00\text{ pm})=26</m>,
+        explain why the temperature must have been exactly <m>20^\circ</m> at some time between 8:00 am and 2:00 pm.
+      </p>
+    </statement>
+  <solution>
+    <p>
+      Since temperature varies continuously over time, the function <m>T(t)</m> is continuous
+      on the interval from 8:00 am to 2:00 pm.
+      Given that <m>T(8\text{:}00\text{ am})=12</m> and <m>T(2\text{:}00\text{ pm})=26</m>,
+      by the Intermediate Value Theorem, for any temperature value <m>k</m> between <m>12</m> and <m>26</m>,  
+      there exists at least one time <m>c</m> in the interval from 8:00 am to 2:00 pm such that <m>T(c)=k</m>.
+      Since <m>20</m> is between <m>12</m> and <m>26</m>, there must be at least one time <m>c</m> in that interval
+      when the temperature was exactly <m>20^\circ</m>.
+    </p>
+  </solution>
+  </example>
+
     </subsection>
 
 

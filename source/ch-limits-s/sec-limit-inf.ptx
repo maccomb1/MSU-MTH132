@@ -181,6 +181,9 @@
       </solution>
     </example>
 
+<p>This technique can also be extended to other functions that involve power of <m>x</m>, such as those with roots. 
+</p>
+
 <example xml:id="ex-algebraic-dominant-terms">
   <statement>
     <p>

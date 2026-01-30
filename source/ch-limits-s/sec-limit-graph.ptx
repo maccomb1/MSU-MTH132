@@ -298,7 +298,7 @@ the limit only notices values of <m>f(x)</m> for <m>x \neq a</m>. As a quick min
 </p>
 
 <figure xml:id="fig-removable-discontinuity-tikz">
-  <caption>The function <m>g(x)=1</m> for <m>x\neq 3</m> with <m>g(3)=2</m> (a removable discontinuity at <m>x=3</m>).</caption>
+  <caption>The function <m>g(x)=1</m> for <m>x\neq 3</m> with <m>g(3)=2</m>.</caption>
   <image width="90%" xml:id="g-removable-tikz">
     <latex-image>
 \begin{tikzpicture}
@@ -407,7 +407,89 @@ For example, a graph might approach one value when moving in from the left, but 
       <p>
         Consider the function given in the graph below:
 </p>
+<p> 
+<figure xml:id="fig-limit-piecewise">
+  <caption>
+    Graph of a piecewise-defined function <m>f(x)</m> with a mix of curves, line segments, open circles, and filled points.
+  </caption>
+  <image source="images/limitFunc01.PNG" width="100%">
+    <shortdescription>
+      A graph on a coordinate grid showing a piecewise function.
+      On the far left, a smooth curve rises to a maximum near x equals negative four and then decreases.
+      At x equals negative three, the left-hand piece ends at an open circle at height two.
+      At the same x-value, there is a filled point at height one, which begins a straight line segment sloping downward to the right.
+      This line segment continues to an open circle at x equals negative one and height negative one.
+      At x equals negative one, there is also a filled point at height one.
+      From the open circle at negative one, a straight line segment slopes upward to a filled point at x equals one and height two.
+      To the right of x equals one, the graph continues as a smooth increasing curve starting at that filled point.
+    </shortdescription>
+  </image>
+</figure>
+</p>
+      <p>
+        Use the graph to evaluate the following limits, if they exist. If a limit does not exist, explain why.
+      </p>
     </introduction>
+<task>
+  <statement>
+    <p>
+       <m>\displaystyle \lim_{x\to -5^-} f(x)</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      As <m>x</m> approaches <m>-5</m> from the left, the graph of <m>f(x)</m> approaches the height of <m>2</m>. 
+      Thus, <m>\displaystyle \lim_{x\to -5^-} f(x) = 2</m>.
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+       <m>\displaystyle \lim_{x\to -3} f(x)</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      As <m>x</m> approaches <m>-3</m>, the left-hand limit approaches <m>2</m> (from the curve) 
+      while the right-hand limit approaches <m>1</m> (from the line segment). 
+      Since the one-sided limits are not equal, the two-sided limit <alert>does not exist</alert>.
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+       <m>\displaystyle \lim_{x\to -1} f(x)</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      As <m>x</m> approaches <m>-1</m>, the left-hand limit approaches <m>-1</m> (from the line segment). 
+      From the right, the limit also approaches the height of <m>-1</m> (along the other line segment).       
+      Therefore, since the left-hand and right-hand limits are equal, the two-sided limit exists and equals <m>-1</m>. So <m>
+      \displaystyle \lim_{x\to -1} f(x) = -1
+      </m>
+    </p>
+
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+       <m>\displaystyle \lim_{x\to 1^+} f(x)</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      As <m>x</m> approaches <m>1</m> from the right, the graph of <m>f(x)</m> approaches the height of <m>2</m>. 
+      Thus, <m>\displaystyle \lim_{x\to 1^+} f(x) = 2</m>.
+    </p>
+  </solution>
+</task>
+</example>
+
+
 
     
 </subsection>
