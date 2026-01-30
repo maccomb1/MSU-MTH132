@@ -550,6 +550,107 @@
   </solution>
 </example>
 
+<example xml:id="ex-classify-discontinuities-graph">
+  <introduction>
+    <p>
+      The graph of a function <m>f</m> is shown in the figure below.</p>
+      <figure xml:id="fig-discontinuous-piecewise">
+  <caption>
+    Graph of a piecewise-defined function illustrating several types of discontinuities,
+  </caption>
+
+  <image source="images/discont01.png" width="85%">
+    <shortdescription>
+      A graph of a function on a coordinate grid.
+      On the left, a smooth increasing curve approaches the point (0, 2) but has an open circle there.
+      At x = 0, the function instead has a filled point at (0, -1), indicating a jump.
+      From x = 0 to x = 1, a straight line rises from (0, -1) to an open circle at (1, 1).
+      From x = 1 to x = 3, a straight line descends from the open circle at (1, 1) to a filled point at (3, -1).
+      A dashed vertical line at x = 3 indicates a vertical asymptote.
+      For x greater than 3, the graph shows a decreasing curve that approaches the asymptote from the right
+      and decreases toward zero as x increases.
+    </shortdescription>
+  </image>
+</figure>
+<p> 
+      For each value of <m>x</m> listed below, determine whether <m>f</m> is continuous or discontinuous at that point.
+      If <m>f</m> is discontinuous, classify the type of discontinuity.
+    </p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p>
+        Classify the behavior of <m>f</m> at <m>x=0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        From the graph, as <m>x \to 0^-</m>, the function approaches the open circle at height <m>2</m>,
+        while as <m>x \to 0^+</m>, the function approaches the value <m>-1</m>.
+        Since the one-sided limits are not equal, the limit does not exist.
+      </p>
+      <p>
+        Therefore, <m>f</m> has a <term>jump discontinuity</term> at <m>x=0</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Classify the behavior of <m>f</m> at <m>x=1</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        As <m>x \to 1</m> from both sides, the graph approaches the same height,
+        indicated by an open circle at <m>(1,1)</m>.
+        However, there is no filled point at <m>x=1</m>, so <m>f(1)</m> is not defined.
+      </p>
+      <p>
+        Since the limit exists but <m>f(1)</m> is undefined, <m>f</m> has a
+        <term>removable discontinuity</term> at <m>x=1</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Classify the behavior of <m>f</m> at <m>x=3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The graph shows a dashed vertical line at <m>x=3</m>, and the function values increase without bound
+        as <m>x \to 3^+</m>.
+        This indicates that the function grows arbitrarily large near <m>x=3</m>.
+      </p>
+      <p>
+        Therefore, <m>f</m> has an <term>infinite discontinuity</term>
+        (a vertical asymptote) at <m>x=3</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        On which intervals shown in the graph is <m>f</m> continuous?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The function is continuous on any interval that does not include a discontinuity.
+        From the graph, <m>f</m> is continuous on
+      </p>
+      <me>
+        (-\infty,0)\cup(0,1)\cup(1,3)\cup(3,\infty).
+      </me>
+    </solution>
+  </task>
+</example>
 
 
 
