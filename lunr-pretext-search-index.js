@@ -1666,9 +1666,9 @@ var ptx_lunr_docs = [
   "body": "continuous on an interval "
 },
 {
-  "id": "sec-limit-continuity-4-2",
+  "id": "ssec-types-discontinuities-2",
   "level": "2",
-  "url": "sec-limit-continuity.html#sec-limit-continuity-4-2",
+  "url": "sec-limit-continuity.html#ssec-types-discontinuities-2",
   "type": "Definition",
   "number": "1.4.2",
   "title": "",
@@ -1693,9 +1693,9 @@ var ptx_lunr_docs = [
   "body": "  Revisit . Verify that this function has a removable discontinuity at .    At , both the numerator and denominator vanish, giving the undefined form . However, multiplying numerator and denominator by the conjugate simplifies the expression to , which is continuous everywhere. Taking the limit, we find Thus, although is undefined, the limit exists and equals 6. This is exactly the definition of a removable discontinuity, and the graph shows a “hole” at .   "
 },
 {
-  "id": "sec-limit-continuity-5-2",
+  "id": "ssec-jump-discontinuity-2",
   "level": "2",
-  "url": "sec-limit-continuity.html#sec-limit-continuity-5-2",
+  "url": "sec-limit-continuity.html#ssec-jump-discontinuity-2",
   "type": "Definition",
   "number": "1.4.6",
   "title": "",
@@ -1711,9 +1711,9 @@ var ptx_lunr_docs = [
   "body": "  Revisit . Verify that the function has a jump discontinuity at .    Notice that . For , the absolute value simplifies to , so . For , we instead get , so .  Thus the left-hand limit is while the right-hand limit is Since these limits are not equal, the two-sided limit does not exist. This confirms that has a jump discontinuity at .   "
 },
 {
-  "id": "sec-limit-continuity-6-2",
+  "id": "ssec-infinite-discontinuity-2",
   "level": "2",
-  "url": "sec-limit-continuity.html#sec-limit-continuity-6-2",
+  "url": "sec-limit-continuity.html#ssec-infinite-discontinuity-2",
   "type": "Definition",
   "number": "1.4.9",
   "title": "",
@@ -1729,9 +1729,9 @@ var ptx_lunr_docs = [
   "body": "  Revisit . Verify that the function has an infinite discontinuity at .    The function is undefined at . As , , so . As , , so . In both directions the function grows beyond all bounds, so   Thus, has an infinite discontinuity at . Graphically, this appears as a vertical asymptote along the -axis.   "
 },
 {
-  "id": "sec-limit-continuity-7-2",
+  "id": "ssec-essential-discontinuity-2",
   "level": "2",
-  "url": "sec-limit-continuity.html#sec-limit-continuity-7-2",
+  "url": "sec-limit-continuity.html#ssec-essential-discontinuity-2",
   "type": "Definition",
   "number": "1.4.12",
   "title": "",
