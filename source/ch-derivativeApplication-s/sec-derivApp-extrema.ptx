@@ -149,19 +149,19 @@
     <example xml:id="ex-no-absolute-maximum">
       <statement>
         <p>
-          Consider the function <m>f(x)=x\</m> on the interval <m>[0,1)\</m>. Argue that this function has no absolute maximum on this interval, even though it is continuous.
+          Consider the function <m>f(x)=x</m> on the interval <m>[0,1)</m>. Argue that this function has no absolute maximum on this interval, even though it is continuous.
         </p>
       </statement>
       <solution>
         <p>
-          The function <m>f(x)=x\</m> is continuous on the interval <m>[0,1)</m>, and it takes values that get arbitrarily close to 1 as <m>x\</m> approaches 1 from the left.
-          However, since the interval does not include 1, there is no point in the interval where <m>f(x)\</m> actually attains the value of 1.
+          The function <m>f(x)=x</m> is continuous on the interval <m>[0,1)</m>, and it takes values that get arbitrarily close to 1 as <m>x</m> approaches 1 from the left.
+          However, since the interval does not include 1, there is no point in the interval where <m>f(x)</m> actually attains the value of 1.
           Therefore, there is no absolute maximum on this interval, even though the function is continuous. 
           <ul>
             <li>
               <p>
                 If we were to say the absolute maximum is 1, then that would be incorrect because <m>f(x)</m> never attains the value 1 on the interval <m>[0,1)</m>. 
-                We would be claiming that there is some <m>c\in[0,1)\</m> such that <m>f(c)=1\</m>, but no such <m>c</m> exists.
+                We would be claiming that there is some <m>c\in[0,1)</m> such that <m>f(c)=1</m>, but no such <m>c</m> exists.
               </p>
             </li>
             <li>
@@ -173,55 +173,61 @@
           </ul>
           And so the function <m>f(x)=x</m> on the interval <m>[0,1)</m> has no absolute maximum, even though it is continuous.
         </p>
+        <p>
+          Note that this function does happen to have an absolute minimum of 0 at <m>x=0</m>. Again the extreme value theorem does 
+          not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute minimum but no absolute maximum.
+        </p>
       </solution>
     </example>
 
-    <example xml:id="ex-no-absolute-minimum">
+    <example xml:id="ex-no-absolute-min">
       <statement>
         <p>
-          Consider the function <m>f(x)=\begin{cases} -x &amp; \text{if } x\in[0,1) \\ 1 &amp;  \text{if } x\in [1,2] \end{cases}</m> on the interval <m>[0,2]\</m>. 
-          Argue that this function has no absolute minimum on this closed, finite interval <m>[0,2]</m>.
+          Consider the function <m>f(x)=\dfrac{-1}{(x-1)^2}</m> on the interval <m>[0,4]</m>. 
+          Argue that this function has no absolute minimum on this closed, finite interval <m>[0,4]</m>.
         </p>
 
-<figure xml:id="fig-no-absolute-min">
+<figure xml:id="fig-abs-extreme-no-min">
   <caption>
-    Graph of a function on the interval <m>[0,2]</m> illustrating a case where no absolute minimum exists.
+    A function on a closed interval that does not attain an absolute minimum.
   </caption>
+
   <image source="images/MaxMin03.PNG" width="90%">
     <shortdescription>
-      A graph defined on the interval from x equals 0 to x equals 2.
-      There is a filled point at 0 with y-value 0.
-      From 0 to 1, a straight line decreases toward the point 1 with y-value negative 1, 
-      but the point at 1 with y-value negative 1 is open, meaning it is not included.
-      At x equals 1 there is instead a filled point at y equals 1.
-      From x equals 1 to x equals 2 the graph is a horizontal segment at y equals 1,
-      ending with a filled point at 2 with y-value 1.
-      The smallest y-value approached is negative 1, but since that value is never reached,
-      the function has no absolute minimum on the interval.
-      The largest value is 1, which is attained on the interval from 1 to 2.
+      A graph of a function defined on a finite interval that includes a vertical dashed line
+      at x = 1 representing a vertical asymptote. As x approaches 1 from either side,
+      the function decreases without bound toward negative infinity.
+      To the right, the curve increases and levels off near y = 0.
+      A closed point appears at approximately (4, 0), which is the highest point shown
+      on the interval. Because the function values decrease without bound near x = 1,
+      there is no absolute minimum on the interval, even though an absolute maximum exists.
     </shortdescription>
   </image>
 </figure>
 
 
+
       </statement>
       <solution>
         <p>
-          The function <m>f(x)</m> is not continuous on the interval <m>[0,2]</m>.
-          As <m>x</m> approaches 1 from the left, <m>f(x)=-x</m> approaches -1.
-          However, since the point <m>(1,-1)</m> is not included in the graph (it is an open circle), 
-          the function never actually attains the value -1.
-          Therefore, there is no absolute minimum on this interval.
+          The function <m>f(x)=\dfrac{-1}{(x-1)^2}</m> is not continuous on the closed interval <m>[0,4]</m>, 
+          and it takes values that get arbitrarily close to negative infinity as <m>x</m> approaches 1 from either side.
+          However, since the function decreases without bound near <m>x=1</m>, there is no point in the interval where <m>f(x)</m> attains a minimum value.
+          Therefore, there is no finite absolute minimum on this interval.
         </p>
-        <p> Similar to our last example there is no real number that we can propose as the absolute minimum because for any value we choose, 
-          there are values of <m>f(x)</m> that are smaller on the interval <m>[0,2]</m>.
-
+        <p> Note that this function does happen to have an absolute maximum of <m>-1/9</m> at <m>x=4</m>. Again the extreme value theorem does 
+          not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute maximum but no absolute minimum.
+        </p>
       </solution>
       
     </example>
 
 
-
+    <p>Before we learn formally how to find absolute extrema, let's take a small detour and 
+talk about a related but different concept of local extrema. 
+Local extrema are important to understand because they are often easier to find than absolute extrema, 
+and they can provide valuable information about the behavior of a function even when absolute extrema do not exist or are difficult to determine.
+    </p>
   </subsection>
 
   <subsection xml:id="ssec-local-extrema">
@@ -237,11 +243,11 @@
       <statement>
         <p>
           A <term>local maximum</term> of a function <m>f</m> occurs at <m>x=c</m> if
-          <m>f(c)\ge f(x)</m> for all <m>x</m> sufficiently close to <m>c</m>.
+          <m>f(c)\ge f(x)</m> for all <m>x</m> sufficiently close to <m>c</m> in the domain of <m>f</m>.
         </p>
         <p>
           A <term>local minimum</term> of a function <m>f</m> occurs at <m>x=c</m> if
-          <m>f(c)\le f(x)</m> for all <m>x</m> sufficiently close to <m>c</m>.
+          <m>f(c)\le f(x)</m> for all <m>x</m> sufficiently close to <m>c</m> in the domain of <m>f</m>.
         </p>
       </statement>
     </definition>
@@ -251,6 +257,10 @@
       Every absolute maximum or minimum is also a local extremum, but not every local extremum
       is an absolute one.
     </p>
+
+
+
+    
   </subsection>
 
   <subsection xml:id="ssec-derivatives-extrema">
@@ -279,11 +289,7 @@
         A point where <m>f'(c)=0</m> need not be a maximum or minimum.
       </p>
     </remark>
-
-  </subsection>
-
-  <subsection xml:id="ssec-critical-points">
-    <title>Critical Points</title>
+                                                                                                                                                        
 
     <definition xml:id="def-critical-point">
       <title>Critical Point</title>
@@ -318,7 +324,6 @@
         <li>Find all critical points of <m>f</m> in <m>[a,b]</m>.</li>
         <li>Evaluate <m>f</m> at each critical point and at the endpoints <m>a</m> and <m>b</m>.</li>
         <li>The largest value is the absolute maximum; the smallest value is the absolute minimum.</li>
-        <li>If <m>f</m> is not continuous, also examine behavior near discontinuities.</li>
       </ol>
     </algorithm>
   </subsection>
@@ -358,7 +363,7 @@
       </solution>
     </example>
 
-    <example xml:id="ex-no-absolute-maximum">
+    <example xml:id="ex-no-absolute-max">
       <statement>
         <p>
           Let <m>f(x)=x^2+\dfrac{1}{(x-1)^2}</m> on <m>[-2,2]</m>.
