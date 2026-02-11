@@ -44,8 +44,8 @@
     </definition>
 
     <p>
-      The output values <m>f(c)</m> are called the <em>maximum value</em> and <em>minimum value</em> of the function.
-      While these values are unique, it is possible for a function to attain the same maximum
+      The output values <m>f(c)</m> are called the <em>maximum value</em> and <em>minimum value</em> of the function. These values are real numbers and unique. 
+      However it is possible for a function to attain the same maximum
       or minimum value at more than one input.
     </p>
 
@@ -56,6 +56,65 @@
       </p>
     </remark>
 
+    <p>
+      For example, here is a graph of <m>y=\sin (2x)</m> on the interval <m>[0,\tfrac{3\pi}{2}]</m>
+    </p>
+
+    <figure xml:id="fig-absolute-extrema-sine">
+  <caption>
+    Graph of a sinusoidal function on the interval <m>[0,\tfrac{3\pi}{2}]</m>,
+    illustrating absolute extrema. The function attains absolute maximum values
+    of <m>1</m> at <m>x=\tfrac{\pi}{4}</m> and <m>x=\tfrac{5\pi}{4}</m>, and an
+    absolute minimum value of <m>-1</m> at <m>x=\tfrac{3\pi}{4}</m>.
+  </caption>
+  <image source="images/MaxMin01.PNG" width="90%">
+    <shortdescription>
+      A smooth wave-shaped graph on the interval from 0 to 3 pi over 2.
+      The curve starts at 0, rises to a highest point of 1 at pi over 4,
+      decreases through 0 at pi over 2, reaches a lowest point of negative 1
+      at 3 pi over 4, then rises again through 0 at pi, reaches another highest
+      point of 1 at 5 pi over 4, and finally decreases back to 0 at 3 pi over 2.
+      The highest value on the graph is 1 and the lowest value is negative 1,
+      representing the absolute maximum and absolute minimum on the interval.
+    </shortdescription>
+  </image>
+</figure>
+
+    <p>Here is another example. This time the graph of <m>y=x^2</m> on the interval <m>[-1,2]</m>
+    </p>
+
+<figure xml:id="fig-absolute-extrema-parabola-piece">
+  <caption>
+    Graph of a function on the interval <m>[-1,2]</m> illustrating absolute extrema.
+    The function has an absolute minimum value of <m>0</m> at <m>x=0</m> and
+    an absolute maximum value of <m>4</m> at <m>x=2</m>.
+  </caption>
+  <image source="images/MaxMin02.PNG" width="70%">
+    <shortdescription>
+      A graph defined from x equals negative 1 to x equals 2.
+      There is a filled point at negative 1 with y-value 1.
+      The curve decreases from that point to a lowest point at 0 with y-value 0.
+      From x equals 0, the curve increases smoothly to a filled point at 2 with y-value 4.
+      The lowest value on the graph is 0 at x equals 0, and the highest value is 4 at x equals 2.
+    </shortdescription>
+  </image>
+</figure>
+
+
+    <p>So now that we can visualize absolute extrema, the question becomes how can we find them? Especially if we do not have a graph to rely on. But before 
+      we get to that though, we need to know when should we even be looking for them. For instance if we were asked to find the absolute maximum 
+      of <m>y=x</m> on the interval <m>(-\infty,\infty)</m>, there is no absolute maximum because the function continues to get bigger and bigger without bound.
+      Any real number that you might propose as a maximum can be exceeded by choosing a larger number (remember <m>\infty</m> is not a real number).  
+      The next section will give us a powerful tool for determining when absolute extrema are guaranteed to exist. 
+    </p>
+
+    </subsection>
+
+<subsection xml:id="subsec-EVT">
+  <title>Extreme Value Theorem</title>
+  
+
+
     <theorem xml:id="thm-extreme-value">
       <title>Extreme Value Theorem</title>
       <statement>
@@ -64,6 +123,16 @@
           then <m>f</m> has at least one absolute maximum and at least one absolute minimum on <m>[a,b]</m>.
         </p>
       </statement>
+      <proof>
+        <p>
+          The proof of the Extreme Value Theorem relies on the completeness property of the real numbers.
+          Since <m>f</m> is continuous on the closed interval <m>[a,b]</m>, the set of values <m>f(x)</m> for <m>x\in[a,b]</m> is a bounded subset of the real numbers.
+          By the completeness property, this set has a least upper bound (supremum) and a greatest lower bound (infimum).
+          The continuity of <m>f</m> ensures that these bounds are actually attained at some points in <m>[a,b]</m>, giving us the absolute maximum and minimum.
+          A more rigorous proof can be found in MTH 320 (real analysis), but the key idea is that continuity and the 
+          closed interval together guarantee the existence of extrema.
+        </p>
+      </proof>
     </theorem>
 
     <remark>
@@ -72,6 +141,56 @@
         If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.
       </p>
     </remark>
+
+    <p>
+      Before moving on let's stop and justify that if a function is not continuous or the interval is not closed, absolute extrema may fail to exist. 
+    </p>
+
+    <example xml:id="ex-no-absolute-maximum">
+      <statement>
+        <p>
+          Consider the function <m>f(x)=x\</m> on the interval <m>[0,1)\</m>. Argue that this function has no absolute maximum on this interval, even though it is continuous.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function <m>f(x)=x\</m> is continuous on the interval <m>[0,1)</m>, and it takes values that get arbitrarily close to 1 as <m>x\</m> approaches 1 from the left.
+          However, since the interval does not include 1, there is no point in the interval where <m>f(x)\</m> actually attains the value of 1.
+          Therefore, there is no absolute maximum on this interval, even though the function is continuous. 
+          <ul>
+            <li>
+              <p>
+                If we were to say the absolute maximum is 1, then that would be incorrect because <m>f(x)</m> never attains the value 1 on the interval <m>[0,1)</m>. 
+                We would be claiming that there is some <m>c\in[0,1)\</m> such that <m>f(c)=1\</m>, but no such <m>c</m> exists.
+              </p>
+            </li>
+            <li>
+              <p>
+                And if we were to say that the absolute maximum is some value less than 1 but very close (like 0.9999), then that 
+                would also be incorrect because there are values of <m>f(x)</m> that are greater than 0.9999 on the interval <m>[0,1)</m>.
+              </p>
+            </li>
+          </ul>
+          And so the function <m>f(x)=x</m> on the interval <m>[0,1)</m> has no absolute maximum, even though it is continuous.
+        </p>
+      </solution>
+    </example>
+
+    <example xml:id="ex-no-absolute-minimum">
+      <statement>
+        <p>
+          Consider the function <m>f(x)=\begin{cases} -x &amp; \text{if } x\in[0,1) \\ 1 &amp;  \text{if } x\in [1,2] \end{cases}</m> on the interval <m>[0,2]\</m>. 
+          Argue that this function has no absolute minimum on this closed, finite interval <m>[0,2]</m>.
+        </p>
+      </statement>
+      <solution>
+
+      </solution>
+      
+    </example>
+
+
+
   </subsection>
 
   <subsection xml:id="ssec-local-extrema">
