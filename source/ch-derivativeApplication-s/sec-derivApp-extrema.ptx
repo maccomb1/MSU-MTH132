@@ -259,8 +259,30 @@ and they can provide valuable information about the behavior of a function even 
     </p>
 
 
+<figure xml:id="fig-local-absolute-extrema">
+  <caption>
+    A graph illustrating the difference between local extrema and absolute extrema.
+    The curve contains multiple turning points, including local maxima, local minima,
+    one absolute minimum, and one absolute maximum.
+  </caption>
 
-    
+  <image source="images/MaxMin05.PNG" width="90%">
+    <shortdescription>
+      A smooth curve defined on a closed interval from approximately x = 0 to x = 4.
+      At x = 0 there is a local maximum near y = 0.
+      The curve decreases to a lowest point near x = 0.5 with y = -3.5, labeled both
+      local minimum and absolute minimum.
+      The graph then rises to a local maximum at x = 2 with y = 3.
+      It decreases again to a local minimum at x = 3 with y = 2.
+      Finally, the graph increases to its highest point at x = 4 with y = 4,
+      labeled both local maximum and absolute maximum.
+      This image shows that absolute extrema are the highest and lowest values
+      on the entire interval, while local extrema occur at nearby turning points.
+    </shortdescription>
+  </image>
+</figure>
+
+
   </subsection>
 
   <subsection xml:id="ssec-derivatives-extrema">
