@@ -182,8 +182,39 @@
           Consider the function <m>f(x)=\begin{cases} -x &amp; \text{if } x\in[0,1) \\ 1 &amp;  \text{if } x\in [1,2] \end{cases}</m> on the interval <m>[0,2]\</m>. 
           Argue that this function has no absolute minimum on this closed, finite interval <m>[0,2]</m>.
         </p>
+
+<figure xml:id="fig-no-absolute-min">
+  <caption>
+    Graph of a function on the interval <m>[0,2]</m> illustrating a case where no absolute minimum exists.
+  </caption>
+  <image source="images/MaxMin03.PNG" width="90%">
+    <shortdescription>
+      A graph defined on the interval from x equals 0 to x equals 2.
+      There is a filled point at 0 with y-value 0.
+      From 0 to 1, a straight line decreases toward the point 1 with y-value negative 1, 
+      but the point at 1 with y-value negative 1 is open, meaning it is not included.
+      At x equals 1 there is instead a filled point at y equals 1.
+      From x equals 1 to x equals 2 the graph is a horizontal segment at y equals 1,
+      ending with a filled point at 2 with y-value 1.
+      The smallest y-value approached is negative 1, but since that value is never reached,
+      the function has no absolute minimum on the interval.
+      The largest value is 1, which is attained on the interval from 1 to 2.
+    </shortdescription>
+  </image>
+</figure>
+
+
       </statement>
       <solution>
+        <p>
+          The function <m>f(x)</m> is not continuous on the interval <m>[0,2]</m>.
+          As <m>x</m> approaches 1 from the left, <m>f(x)=-x</m> approaches -1.
+          However, since the point <m>(1,-1)</m> is not included in the graph (it is an open circle), 
+          the function never actually attains the value -1.
+          Therefore, there is no absolute minimum on this interval.
+        </p>
+        <p> Similar to our last example there is no real number that we can propose as the absolute minimum because for any value we choose, 
+          there are values of <m>f(x)</m> that are smaller on the interval <m>[0,2]</m>.
 
       </solution>
       
