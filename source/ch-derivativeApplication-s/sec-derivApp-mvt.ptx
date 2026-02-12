@@ -182,6 +182,38 @@
 
 
     </remark>
+
+
+    <example xml:id="ex-rolles01">
+      <statement>
+        <p>
+          Consider the function
+        </p>
+
+        <me>
+          f(x)=x^2 -4x+3
+        </me>
+
+        <p>
+          Verify that the hypotheses and conclusion of Rolle’s Theorem on the interval <m>[0,4]</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The function <m>f</m> is a polynomial, so it is continuous on <m>[0,4]</m> and differentiable on <m>(0,4)</m>.
+          Also <m>f(0)=3</m> and <m>f(4)=3</m>, so the hypotheses of Rolle’s Theorem are satisfied.
+          Differentiating gives <m>f'(x)=2x-4</m>.
+          Setting this equal to zero gives <m>x=2</m>, which is in the interval <m>(0,4)</m>.
+          Therefore there exists <m>c=2</m> such that <m>f'(c)=0</m>, as Rolle’s Theorem predicts.
+        </p>
+        
+      </solution>     
+    </example>
+
+
+
+
   </subsection>
 
   <subsection xml:id="ssec-mvt-statement">
@@ -213,6 +245,24 @@
         <me>
           f'(c)=\frac{f(b)-f(a)}{b-a}.
         </me>
+
+
+        <figure xml:id="fig-mvt-schematic">
+  <caption>
+    Graph of <m>y = f(x)</m> on the interval <m>[a,b]</m> showing a secant line through 
+    <m>(a,f(a))</m> and <m>(b,f(b))</m> and a tangent line at <m>x=c</m> that is parallel 
+    to the secant, illustrating the Mean Value Theorem.
+  </caption>
+  <image source="images/MVT01.png" width="70%">
+    <shortdescription>
+      A smooth curve labeled y equals f of x runs from x equals a to x equals b. 
+      A dashed blue secant line connects the endpoints at a and b. 
+      A dashed red tangent line at an interior point c is parallel to the secant line. 
+      The points a, c, and b are marked on the x axis.
+    </shortdescription>
+  </image>
+</figure>
+
       </statement>
 
 
@@ -291,24 +341,20 @@
         <m>f'(x)=\frac{f(b)-f(a)}{b-a}</m>.
       </p>
     </remark>
-  </subsection>
-
-  <subsection xml:id="ssec-mvt-example">
-    <title>An Example: Solving for a Mean Value Point</title>
 
     <example xml:id="ex-mvt-sqrt">
       <statement>
         <p>
           Let <m>f(x)=5\sqrt{x}-x\sqrt{x}</m> on the interval <m>[0,4]</m>.
-          Verify that the hypotheses of the Mean Value Theorem apply, and find a value <m>c</m>
-          in <m>(0,4)</m> that satisfies the conclusion.
+          Verify that the hypotheses of the Mean Value Theorem apply, and find all values of <m>c</m>
+         that satisfy the conclusion.
         </p>
       </statement>
 
       <solution>
         <p>
           The function <m>\sqrt{x}</m> is continuous for <m>x\ge 0</m>, so <m>f</m> is continuous on <m>[0,4]</m>.
-          Differentiating (for <m>x&gt;0</m>),
+          Differentiating (for <m>x\gt 0</m>),
         </p>
 
         <me>
@@ -366,6 +412,24 @@
         <me>
           c=u^2=\left(\frac{\sqrt{61}-1}{6}\right)^2\approx 1.29.
         </me>
+
+<figure xml:id="fig-mvt-example-function">
+  <caption>
+    Graph of <m>y = 5x^{1/2} - x^{3/2}</m> on <m>[0,4]</m> showing a secant line from 
+    <m>(0,0)</m> to <m>(4,2)</m> and a tangent line at <m>x=c</m> that is parallel 
+    to the secant, illustrating the Mean Value Theorem for a specific function.
+  </caption>
+  <image source="images/MVT02.png" width="70%">
+    <shortdescription>
+      The graph of y equals 5 times the square root of x minus x to the three halves, 
+      drawn from x equals 0 to x equals 4. A dashed blue secant line connects the 
+      points at x equals 0 and x equals 4. A dashed red tangent line at an interior 
+      point labeled c is parallel to the secant line. The point of tangency is marked 
+      on the curve.
+    </description>
+  </image>
+</figure>
+
       </solution>
     </example>
   </subsection>
