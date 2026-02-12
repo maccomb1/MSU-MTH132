@@ -36,26 +36,49 @@
           If <m>f(a)=f(b)</m>, then there exists a number <m>c</m> in <m>(a,b)</m> such that
           <m>f'(c)=0</m>.
         </p>
+
+          <figure xml:id="rolles-figure1">
+  <caption>
+    A sketch of a continuous and differentiable function on the interval <m>[a,b]</m>.
+  </caption>
+
+<image xml:id="img-rolles-theorem" width="80%">
+
+  <shortdescription>
+    Graph of y equals f of x on the closed interval from a to b. The curve 
+    starts at a low value at x equals a, rises and levels off, reaches its highest point at x equals c, 
+    then decreases to the same low value at x equals b. Dashed lines mark the maximum height and the common endpoint height.
+  </shortdescription>
+
+  <latex-image>
+    <![CDATA[
+\begin{tikzpicture}
+	% Axes
+	\draw[->] (-0.2,0) -- (7,0) node[right] {$x$};
+	\draw[->] (0,-0.2) -- (0,5.2) node[left] {$y$};
+	
+	% Dashed reference lines
+	\draw[blue,dashed,thick] (1,1.0) -- (6,1.0);
+	\draw[red,dashed,thick] (3.2,5) -- (5,5);
+	
+	\draw plot[domain=1:6,smooth,thick] (\x, {1+-4/36*(\x-1)*(\x-6)*(\x+2)});
+	
+	\draw (1,4pt) -- (1,-4pt) node[below] {$a$};
+	\draw (4,4pt) -- (4,-4pt) node[below] {$c$};
+	\draw (6,4pt) -- (6,-4pt) node[below] {$b$};
+	
+	\draw (1,1) node {$\bullet$};
+	\draw (4,5) node {$\bullet$};
+	\draw (6,1) node {$\bullet$};
+	
+	\node at (1.2,3.25) {$y=f(x)$};
+\end{tikzpicture}
+    ]]>
+  </latex-image>
+  </image>
+  </figure>
       </statement>
-    </theorem>
-
-    <remark xml:id="rem-hypothesis-conclusion">
-      <p>
-        In mathematics, the <em>hypotheses</em> of a theorem are the assumptions (the “if” part),
-        and the <em>conclusion</em> is what we deduce from them (the “then” part).
-        For Rolle’s Theorem, the hypotheses are continuity on <m>[a,b]</m>,
-        differentiability on <m>(a,b)</m>, and the condition <m>f(a)=f(b)</m>.
-      </p>
-    </remark>
-
-    <p>
-      A physical interpretation can help.
-      If <m>f(t)</m> represents the height of a rocket that starts and ends on its launch pad,
-      then at some moment the rocket must have zero vertical velocity.
-      That is exactly the conclusion <m>f'(c)=0</m>.
-    </p>
-
-    <proof xml:id="pf-rolles">
+          <proof xml:id="pf-rolles">
       <p>
         Since <m>f</m> is continuous on <m>[a,b]</m>, the Extreme Value Theorem guarantees that
         <m>f</m> has an absolute maximum value and an absolute minimum value on <m>[a,b]</m>.
@@ -78,6 +101,31 @@
         In all cases, there exists <m>c\in(a,b)</m> such that <m>f'(c)=0</m>.
       </p>
     </proof>
+    </theorem>
+
+    <remark xml:id="rem-hypothesis-conclusion">
+      <p>
+        In mathematics, the <em>hypotheses</em> of a theorem are the assumptions (the “if” part),
+        and the <em>conclusion</em> is what we deduce from them (the “then” part).
+        For Rolle’s Theorem, the hypotheses are continuity on <m>[a,b]</m>,
+        differentiability on <m>(a,b)</m>, and the condition <m>f(a)=f(b)</m>.
+      </p>
+    </remark>
+
+
+  
+
+
+
+
+    <p>
+      A physical interpretation can help.
+      If <m>f(t)</m> represents the height of a rocket that starts and ends on its launch pad,
+      then at some moment the rocket must have zero vertical velocity.
+      That is exactly the conclusion <m>f'(c)=0</m>.
+    </p>
+
+
 
     <remark xml:id="rem-rolles-necessity">
       <p>
@@ -85,25 +133,75 @@
         If a function is not differentiable (for example, it has a corner), then the conclusion can fail.
         A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.
       </p>
+
+    <figure xml:id="rolles-figure2">
+  <caption>
+    A sketch of a continuous (but not differentiable) function on the interval <m>[a,b]</m>.
+  </caption>
+
+<image xml:id="img-rolles-theorem2" width="60%">
+
+  <shortdescription>
+    Graph of y equals f of x on the closed interval from a to b. The curve 
+    starts at a low value at x equals a, rises and levels off, reaches its highest point but then take a sharp turn 
+    and never has a horizontal tangent, and 
+    then decreases to the same low value at x equals b.
+  </shortdescription>
+
+  <latex-image>
+    <![CDATA[
+\begin{tikzpicture}
+	% Axes
+	\draw[->] (-0.2,0) -- (7,0) node[right] {$x$};
+	\draw[->] (0,-0.2) -- (0,5.2) node[left] {$y$};
+	
+	% Dashed reference lines
+	\draw[blue,dashed,thick] (1,1.0) -- (6,1.0);
+	%\draw[red,dashed,thick] (3.2,5) -- (5,5);
+	
+	\draw (1,1)--(4,5)--(6,1);
+	
+	\draw (1,4pt) -- (1,-4pt) node[below] {$a$};
+	%\draw (4,4pt) -- (4,-4pt) node[below] {$c$};
+	\draw (6,4pt) -- (6,-4pt) node[below] {$b$};
+	
+	\draw (1,1) node {$\bullet$};
+	%\draw (4,5) node {$\bullet$};
+	\draw (6,1) node {$\bullet$};
+	
+	\node at (1.2,3.25) {$y=f(x)$};
+\end{tikzpicture}
+    ]]>
+  </latex-image>
+  </image>
+  </figure>
+
+
+
+
+
+
     </remark>
   </subsection>
 
   <subsection xml:id="ssec-mvt-statement">
-    <title>From Secant Slopes to Tangent Slopes</title>
-
-    <p>
-      Over an interval <m>[a,b]</m>, the average rate of change of <m>f</m> is
+  <title>Derivatives versus Difference Quotients</title>
+  <p> 
+  Throughout our theory, the derivative <m>f'(a)</m> has been shadowed by the difference quotient 
+  <m>\frac{\Delta f}{\Delta x} = \frac{f(b)-f(a)}{b-a}</m>, 
+  over some interval <m>[a,b]</m>. Numerically, the difference quotient is an approximation to the derivative 
+  <m>\frac{df}{dx} \approx \frac{\Delta f}{\Delta x}</m>, 
+  provided <m>\Delta x</m> is small. In physical terms, the difference quotient is the average rate of change of 
+  <m>f(x)</m> over <m>x \in [a,b]</m>. Geometrically, in terms of the graph <m>y = f(x)</m>, 
+  the difference quotient is the slope of the secant line cutting through the points 
+  <m>(a,f(a))</m> and <m>(b,f(b))</m>.
     </p>
 
-    <me>
-      \frac{f(b)-f(a)}{b-a}.
-    </me>
-
-    <p>
-      Geometrically, this is the slope of the secant line through
-      <m>(a,f(a))</m> and <m>(b,f(b))</m>.
-      The Mean Value Theorem says that at some point in between, the tangent slope matches this secant slope.
-    </p>
+<p>
+  Now we come to the basic theorem that connects the derivative of a function with its basic properties. 
+  It says that the derivative is somewhere exactly equal to the difference quotient, 
+  that is, the slope of one particular tangent line is equal to the slope of the secant line.
+</p>
 
     <theorem xml:id="thm-mvt">
       <title>Mean Value Theorem</title>
@@ -116,25 +214,13 @@
           f'(c)=\frac{f(b)-f(a)}{b-a}.
         </me>
       </statement>
-    </theorem>
 
-    <remark xml:id="rem-rolles-special-case">
-      <p>
-        Rolle’s Theorem is the special case of the Mean Value Theorem when <m>f(a)=f(b)</m>.
-        In that case, the secant slope is <m>0</m>, so the conclusion becomes <m>f'(c)=0</m>.
-      </p>
-    </remark>
-  </subsection>
 
-  <subsection xml:id="ssec-mvt-proof">
-    <title>Why the Mean Value Theorem is True</title>
-
-    <p>
+    <proof xml:id="pf-mvt">
+       <p>
       The proof uses Rolle’s Theorem by subtracting off the secant line.
       This produces a new function whose endpoints match, so Rolle’s Theorem applies.
     </p>
-
-    <proof xml:id="pf-mvt">
       <p>
         Assume <m>f</m> is continuous on <m>[a,b]</m> and differentiable on <m>(a,b)</m>.
         Define a new function
@@ -184,6 +270,18 @@
       </me>
     </proof>
 
+
+    </theorem>
+
+    <remark xml:id="rem-rolles-special-case">
+      <p>
+        Rolle’s Theorem is the special case of the Mean Value Theorem when <m>f(a)=f(b)</m>.
+        In that case, the secant slope is <m>0</m>, so the conclusion becomes <m>f'(c)=0</m>.
+      </p>
+    </remark>
+
+    
+   
     <remark xml:id="rem-mvt-finding-c">
       <p>
         The Mean Value Theorem guarantees that at least one such value of <m>c</m> exists,

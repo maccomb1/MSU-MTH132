@@ -3,15 +3,18 @@
 <section xml:id="sec-derivApp-extrema" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Extrema</title>
 
- <objectives>
-    <ul>
-      <li>Define and distinguish between absolute and local maxima and minima.</li>
-      <li>Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.</li>
-      <li>Identify critical points of a function.</li>
-      <li>Apply derivatives to locate and classify extrema on a closed interval.</li>
-      <li>Understand how discontinuities and nondifferentiable points affect extrema.</li>
-    </ul>
-  </objectives>
+<objectives>
+  <ul>
+    <li>Define and distinguish between absolute and local maxima and minima, both verbally and graphically.</li>
+    <li>Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist, 
+      and explain why the hypotheses (continuity and a closed, finite interval) matter.</li>
+    <li>Identify critical points of a function by solving <m>f'(x)=0</m> and locating points where <m>f'(x)</m> is undefined.</li>
+    <li>Explain why local extrema in the interior of an interval must occur at critical points (or where differentiability fails).</li>
+    <li>Find absolute extrema of a function on a closed interval by evaluating the function at critical points and endpoints.</li>
+    <li>Use graphs to classify extrema and determine whether extrema are local, absolute, both, or neither.</li>
+  </ul>
+</objectives>
+
 
   <p>
     In many real-world problems, we are not just interested in how a function behaves,
@@ -288,10 +291,12 @@ and they can provide valuable information about the behavior of a function even 
   <subsection xml:id="ssec-derivatives-extrema">
     <title>Derivatives and Extrema</title>
 
+
+
     <p>
       Calculus provides a powerful tool for locating extrema.
       If a function has a smooth hilltop or valley bottom at an interior point,
-      the tangent line there is horizontal.
+      the tangent line there is horizontal. 
     </p>
 
     <theorem xml:id="thm-first-derivative-extrema">
@@ -308,17 +313,23 @@ and they can provide valuable information about the behavior of a function even 
     <remark>
       <p>
         The converse is not true.
-        A point where <m>f'(c)=0</m> need not be a maximum or minimum.
+        A point where <m>f'(c)=0</m> need not be a maximum or minimum. For instance, 
+        <m>f(x)=x^3</m> has a critical point at <m>x=0</m>, but it is neither a maximum nor a minimum (can verify by graphing or by testing values of <m>f</m> near 0).
       </p>
     </remark>
-                                                                                                                                                        
+
+    <p>So therefore if we are looking for local extrema, we should look for points where the derivative is zero. But what about points where the derivative is undefined?
+      These points can also correspond to local extrema, for instance consider the function <m>f(x)=|x|</m> at <m>x=0</m>. The derivative is undefined at this point, but it is clearly a local minimum. 
+      This leads us to the concept of critical points.
+    </p>
+
 
     <definition xml:id="def-critical-point">
       <title>Critical Point</title>
       <statement>
         <p>
           A <term>critical point</term> (or <term>critical number</term>) of a function <m>f</m>
-          is a point <m>x=c</m> where either
+          is a point <m>x=c</m> in the domain of <m>f</m> where either
         </p>
         <me>
           f'(c)=0
@@ -332,10 +343,60 @@ and they can provide valuable information about the behavior of a function even 
       Critical points are the only possible locations of local extrema in the interior of an interval.
       Endpoints of the interval must also be considered when searching for absolute extrema.
     </p>
+
+    <example>
+      <statement>
+        <p>
+          Find the critical point(s) of <m>f(x)=2x^2+2x-1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We compute the derivative:
+          <m>
+            f'(x)=4x+2.
+          </m>
+          Setting this equal to zero gives us
+          <m>
+            4x+2=0 \implies x=-\frac{1}{2}.
+          </m>
+          Since the derivative is defined for all real numbers, there are no points where the derivative is undefined.
+          Therefore, the only critical point of <m>f</m> is at <m>x=-\frac{1}{2}</m>.
+        </p>
+      </solution>
+    </example>
+
+   <example>
+      <statement>
+        <p>
+          Find the critical point(s) of <m>f(x)=\sqrt[3]{x^2}+1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We compute the derivative using the power rule:
+          <m>
+            f'(x)=\frac{2}{3}x^{-\frac{1}{3}} = \frac{2}{3x^{\frac{1}{3}}}.
+          </m>
+          Setting this equal to zero gives us
+          <m>
+            \frac{2}{3x^{\frac{1}{3}}}=0.
+          </m>
+          This equation has no solution because the expression on the left is never zero for any real number <m>x</m>.
+          However, the derivative is undefined at <m>x=0</m> because of the negative exponent.
+          Therefore, the only critical point of <m>f</m> is at <m>x=0</m>.
+        </p>
+        </solution>
+    </example>
   </subsection>
 
   <subsection xml:id="ssec-method-extrema">
-    <title>A Method for Finding Absolute Extrema</title>
+    <title>Finding Absolute Extrema</title>
+
+    <p>So as we have discussed, absolute extrema can only occur at critical points or at endpoints of the interval. Therefore, 
+      to find absolute extrema we need to evaluate the function at these points and compare the values. 
+      The following strategy summarizes this process.
+    </p> 
 
     <algorithm xml:id="strat-extrema">
       <title>Finding Absolute Maxima and Minima</title>
@@ -348,60 +409,79 @@ and they can provide valuable information about the behavior of a function even 
         <li>The largest value is the absolute maximum; the smallest value is the absolute minimum.</li>
       </ol>
     </algorithm>
+
+
+    <example>
+      <statement>
+        <p>
+          Find the absolute maximum and minimum of <m>f(x)=2x^2+2x-1</m> on the interval <m>[-3,0]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We already found the critical point of <m>f(x)=2x^2+2x-1</m> in a previous example: <m>x=-\frac{1}{2}</m>.
+          This critical point is in the interval <m>[-3,0]</m>.
+          Now we evaluate <m>f</m> at the critical point and at the endpoints:
+        </p>
+        <me>
+          f(-3) = 2(-3)^2 + 2(-3) - 1 = 18 - 6 - 1 = 11
+        </me>
+        <me>
+          f\left(-\frac{1}{2}\right) = 2\left(-\frac{1}{2}\right)^2 + 2\left(-\frac{1}{2}\right) - 1 = \frac{1}{2} - 1 - 1 = -\frac{3}{2}
+        </me>
+        <me>
+          f(0) = 2(0)^2 + 2(0) - 1 = -1
+        </me>
+        <p>
+          Comparing these values, we see that the absolute maximum is <m>11</m>, occurring at <m>x=-3</m>, and the absolute minimum is <m>-\frac{3}{2}</m>, 
+          occurring at <m>x=-\frac{1}{2}</m>.
+        </p>
+      </solution>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Find the absolute maximum and minimum values of <m>s(t)=\tfrac{1}{6}t(2t^2-3t-12)</m> on the interval <m>[-2,4]</m> and the corresponding values of <m>t</m>.      
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First, we find the critical points of <m>s(t)</m> by computing its derivative:
+        </p>
+          <me>
+            s'(t) =  t^2 - t - 2.
+          </me>
+          <p>
+          Setting the derivative equal to zero gives: 
+          </p>
+          <me>
+            t^2 - t - 2 = 0 \implies (t-2)(t+1) = 0 \implies t=2 \text{ or } t=-1.
+          </me>
+          <p> 
+          Both critical points are in the interval <m>[-2,4]</m>.
+          Now we evaluate <m>s(t)</m> at the critical points and at the endpoints: </p>
+          <me>
+            \begin{array}{rcl}
+              s(-2) &amp; = &amp;  \frac{1}{6}(-2)(8 + 6 - 12) = \frac{1}{6}(-2)(2) = -\frac{2}{3} \\
+              s(-1) &amp; = &amp;\frac{1}{6}(-1)(2 + 3 - 12) = \frac{1}{6}(-1)(-7) = \frac{7}{6} \\
+              s(2) &amp; = &amp;  \frac{1}{6}(2)(16 - 6 - 12) = \frac{1}{6}(2)(-2) = -\frac{4}{6} = -\frac{2}{3} \\
+              s(4) &amp; = &amp;  \frac{1}{6}(4)(128 - 48 - 12) = \frac{1}{6}(4)(68) = \frac{272}{6} = \frac{136}{3}
+            \end{array}
+          </me>
+          <p>
+            Comparing these values, we see that the absolute maximum is <m>\frac{136}{3}</m>, occurring at <m>t=4</m>, and the absolute minimum is <m>-\frac{2}{3}</m>, occurring at both <m>t=-2</m> and <m>t=2</m>.
+          </p>
+            
+
+      </solution>
+    </example>
+
+
+
   </subsection>
 
-  <subsection xml:id="ssec-extrema-examples">
-    <title>Examples and Common Pitfalls</title>
-
-    <example xml:id="ex-stationary-point">
-      <statement>
-        <p>
-          Consider <m>f(x)=x^3</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We compute <m>f'(x)=3x^2</m>, so the only critical point is <m>x=0</m>.
-          However, the graph has no local maximum or minimum at this point.
-          Instead, <m>x=0</m> is a <term>stationary point</term> where the function
-          briefly levels off before continuing to increase.
-        </p>
-      </solution>
-    </example>
-
-    <example xml:id="ex-abs-value-extrema">
-      <statement>
-        <p>
-          Let <m>f(x)=|2x^2+2x-1|</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The derivative is undefined when the expression inside the absolute value is zero,
-          producing corners in the graph.
-          These points must be included as critical points, and in fact they correspond
-          to the absolute minimum values of the function.
-        </p>
-      </solution>
-    </example>
-
-    <example xml:id="ex-no-absolute-max">
-      <statement>
-        <p>
-          Let <m>f(x)=x^2+\dfrac{1}{(x-1)^2}</m> on <m>[-2,2]</m>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Although <m>f</m> has critical points and endpoint values,
-          the function increases without bound near <m>x=1</m>.
-          Therefore, <m>f</m> has no absolute maximum on this interval,
-          but it does have an absolute minimum.
-        </p>
-      </solution>
-    </example>
-  </subsection>
-
+ 
 <subsection xml:id="additional-worked-problems-derivApp-extrema">
   <title>Additional Worked-Out Examples</title>
 
@@ -422,32 +502,246 @@ and they can provide valuable information about the behavior of a function even 
   <exercises xml:id="exercises-extrema">
     <title>Practice / Study Problems</title>
 
-    <exercisegroup>
-      <title>Conceptual Questions</title>
 
-      <exercise>
-        <statement>
-          <p>
-            True or False: If <m>f'(c)=0</m>, then <m>x=c</m> is a local maximum or minimum.
-          </p>
-        </statement>
-        <solution>
-          <p><alert>False.</alert> A zero derivative may correspond to a stationary point.</p>
-        </solution>
-      </exercise>
+<exercisegroup xml:id="eg-derivApp-extrema-tf">
+  <title>True/False Questions</title>
 
-      <exercise>
-        <statement>
-          <p>
-            True or False: A continuous function on <m>[a,b]</m> must have an absolute maximum.
-          </p>
-        </statement>
-        <solution>
-          <p><alert>True.</alert> This follows from the Extreme Value Theorem.</p>
-        </solution>
-      </exercise>
+  <introduction>
+    <p>
+      Determine whether each statement is true or false.
+      Justify your answers.
+    </p>
+  </introduction>
 
-    </exercisegroup>
+  
+
+  <exercise xml:id="ex-extrema-tf-02">
+    <statement>
+      <p>
+        A function that is continuous on an open interval <m>(0,1)</m>
+        must have an absolute maximum on that interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> A function that is continuous on an open interval <m>(0,1)</m> is not guaranteed to have an absolute maximum on that interval.
+        For example, the function <m>f(x)=x</m> is continuous on the open interval <m>(0,1)</m>, but it does not have an absolute maximum because it approaches 1 as <m>x</m> approaches 1 from the left, but never actually attains the value of 1 on the interval.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-03">
+    <statement>
+      <p>
+        If a function is continuous on <m>[0,1]</m>, then it is guaranteed
+        to attain its maximum and minimum values at critical points only.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. If a function is continuous on a closed interval <m>[0,1]</m>, then it is guaranteed to attain its maximum and minimum values 
+        on that interval, but these extrema may occur at critical points or at the endpoints of the interval.
+        For example, the function <m>f(x)=x^2</m> on the interval <m>[0,1]</m> has an absolute minimum at <m>x=0</m> (an endpoint) and an absolute maximum at 
+        <m>x=1</m> (also an endpoint), even though there are no critical points in the interior of the interval.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-04">
+    <statement>
+      <p>
+        If a function has an absolute maximum at <m>x=2</m>,
+        then <m>f'(2)=0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. If a function has an absolute maximum at <m>x=2</m>, it does not necessarily mean that <m>f'(2)=0</m>.
+        The function could have a sharp peak at <m>x=2</m> where the derivative is undefined, or the maximum could occur at an endpoint of the interval where the derivative does not need to be zero.
+        For example, the function <m>f(x)=-|x-2|+3</m> has an absolute maximum of 3 at <m>x=2</m>, but the derivative is undefined at that point due to the sharp peak.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-05">
+    <statement>
+      <p>
+        If <m>f'(-5)=0</m>, then <m>f</m> must have either a local maximum
+        or local minimum at <m>x=-5</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. If <m>f'(-5)=0</m>, it means that the tangent line to the graph of <m>f</m> at <m>x=-5</m> is horizontal, but this does not necessarily imply that there is a local maximum or minimum at that point.
+        The function could have an inflection point at <m>x=-5</m>, where the concavity changes but there is no local extremum.
+        For example, the function <m>f(x)=(x-5)^3</m> has a critical point at <m>x=5</m> where the derivative is zero, but it is neither a local maximum nor a local minimum.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <exercise xml:id="ex-extrema-tf-08">
+    <statement>
+      <p>
+        If a function is not continuous on <m>[3,5]</m>,
+        then it cannot have absolute extrema on that interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. If a function is not continuous on a closed interval <m>[3,5]</m>, it may still have absolute extrema on that interval.
+        The lack of continuity does not necessarily prevent the function from attaining maximum or minimum values.
+        For example, the function defined by
+        <m>
+          f(x) = \begin{cases}
+            2 \amp \text{if } x=4 \\
+            0 \amp \text{if } x \neq 4
+          \end{cases}
+        </m>
+        is not continuous at <m>x=4</m>, but it has an absolute maximum of 2 at <m>x=4</m> and an absolute minimum of 0 at all other points in the interval.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-09">
+    <statement>
+      <p>
+        A function can have more than one absolute minimum value on a closed interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. A function can have more than one absolute minimum value on a closed interval if it attains the same minimum value at multiple points.
+        For example, the function <m>f(x)=\cos(x)</m> on the interval <m>[0,2\pi]</m> has an absolute maximum value of 1 at <m>x=0</m> and <m>x=2\pi</m>, and an absolute minimum value of -1 at <m>x=\pi</m>. 
+        In this case, the absolute minimum value of -1 is attained at only one point, but the absolute maximum value of 1 is attained at two different points.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+
+
+  <exercise xml:id="ex-extrema-tf-16">
+    <statement>
+      <p>
+        The function <m>f(x)=x^3-3x</m> has three critical points.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. To find the critical points of the function <m>f(x)=x^3-3x</m>, we first compute its derivative:
+        <m>
+          f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x-1)(x+1).
+        </m>
+        Setting the derivative equal to zero gives us:
+        <m>
+          3(x-1)(x+1) = 0 \implies x=1 \text{ or } x=-1.
+        </m>
+        The derivative is defined for all real numbers, so there are no points where the derivative is undefined.
+        Therefore, the critical points of the function are at <m>x=-1</m> and <m>x=1</m>.
+        However, we need to check if there are any other critical points. Since the derivative is a quadratic function, it can only have two real roots, which we have already found. 
+        Therefore, there are only two critical points, not three. 
+      </p>
+       </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-17">
+    <statement>
+      <p>
+        The function <m>f(x)=x^2</m> on <m>[-2,3]</m>
+        has its absolute minimum at an endpoint.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. The function <m>f(x)=x^2</m> on the interval <m>[-2,3]</m> has its absolute minimum at <m>x=0</m>, which is not an endpoint of the interval.
+        To see this, we can evaluate the function at the endpoints and at the critical point:
+        <me>
+          f(-2) = (-2)^2 = 4 \\
+          f(0) = 0^2 = 0 \\
+          f(3) = 3^2 = 9
+        </me>
+        Comparing these values, we see that the absolute minimum value is 0, occurring at <m>x=0</m>, which is an interior point of the interval, not an endpoint.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-18">
+    <statement>
+      <p>
+        The function <m>f(x)=\sqrt{x}</m> on <m>[0,4]</m>
+        has a critical point at <m>x=0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True</em>. To determine if <m>x=0</m> is a critical point of the function <m>f(x)=\sqrt{x}</m>, we first compute the derivative:
+        <m>
+          f'(x) = \frac{1}{2\sqrt{x}}.
+        </m>
+        The derivative is undefined at <m>x=0</m> because it involves division by zero. However, for a point to be a critical point, it must be in the domain of the function. 
+        Since <m>x=0</m> is in the domain of <m>f</m>, we can consider it a critical point.   
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-19">
+    <statement>
+      <p>
+        If <m>f(x)=2x^2+4x+1</m> on <m>[-5,1]</m>,
+        then the absolute maximum occurs at <m>x=1</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False</em>. To find the absolute maximum of the function <m>f(x)=2x^2+4x+1</m> on the interval <m>[-5,1]</m>, we first compute its derivative:
+        <m>
+          f'(x) = 4x + 4 = 4(x + 1).
+        </m>
+        Setting the derivative equal to zero gives us:
+        <m>
+          4(x + 1) = 0 \implies x = -1.
+        </m>
+        The critical point is at <m>x=-1</m>, which is in the interval <m>[-5,1]</m>.
+        Now we evaluate the function at the critical point and at the endpoints:
+        <me>
+          f(-5) = 2(-5)^2 + 4(-5) + 1 = 50 - 20 + 1 = 31 \\
+          f(-1) = 2(-1)^2 + 4(-1) + 1 = 2 - 4 + 1 = -1 \\
+          f(1) = 2(1)^2 + 4(1) + 1 = 2 + 4 + 1 = 7
+        </me>
+        Comparing these values, we see that the absolute maximum value is <m>31</m>, occurring at <m>x=-5</m>, not at <m>x=1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="ex-extrema-tf-20">
+    <statement>
+      <p>
+        The function <m>f(x)=\dfrac{1}{(x-2)^2}</m> on <m>[0,4]</m>
+        has an absolute minimum on that interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+          <em>True</em>. The function <m>f(x)=\dfrac{1}{(x-2)^2}</m> on the interval <m>[0,4]</m> has an absolute minimum of <m>1/4</m> at <m>x=0</m> and <m>x=4</m>.
+          To see this, we can evaluate the function at the endpoints and based on the graph of the function:
+          <me>
+            \begin{array}{rcl}
+            f(0) \amp = \amp \frac{1}{(0-2)^2} = \frac{1}{4} \\
+            f(4) \amp = \amp \frac{1}{(4-2)^2} = \frac{1}{4}
+          </me>
+          The function has a vertical asymptote at <m>x=2</m>, where the function values increase without bound as <m>x</m> approaches 2 from either side.
+          Therefore, the absolute minimum value of the function on the interval <m>[0,4]</m> is <m>1/4</m>, occurring at both endpoints <m>x=0</m> and <m>x=4</m>.      
+      </p>
+    </solution>
+  </exercise>
+
+
+
+
+  </exercisegroup>
   </exercises>
 
 </section>
