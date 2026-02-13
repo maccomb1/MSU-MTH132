@@ -7,9 +7,7 @@
     <ul>
       <li>State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.</li>
       <li>Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.</li>
-      <li>Use the Mean Value Theorem to justify when a function must be increasing or decreasing.</li>
-      <li>Apply the Mean Value Theorem to prove basic uniqueness results for functions with given derivatives.</li>
-      <li>Solve for a value <m>c</m> that satisfies the Mean Value Theorem in selected examples.</li>
+      <li>Solve for values of <m>c</m> that satisfies the Mean Value Theorem in selected examples.</li>
     </ul>
   </objectives>
 
@@ -426,7 +424,7 @@
       points at x equals 0 and x equals 4. A dashed red tangent line at an interior 
       point labeled c is parallel to the secant line. The point of tangency is marked 
       on the curve.
-    </description>
+    </shortdescription>
   </image>
 </figure>
 
@@ -438,8 +436,11 @@
     <title>Derivative Controls Direction</title>
 
     <p>
-      One of the first important consequences of the Mean Value Theorem is that
-      the sign of the derivative controls whether a function increases or decreases.
+      One of the first important consequences of the Mean Value Theorem it allows us to prove some 
+      intuition we have about how
+      the sign of the derivative controls whether a function increases or decreases. Intuitively if the slope of the 
+      tangent line is positive, then the function should be increasing. The Mean Value Theorem allows us to make this intuition precise and rigorous.
+      This will become increasingly important as we move into the next sections on curve sketching and optimization.
     </p>
 
     <theorem xml:id="thm-positive-derivative-increasing">
@@ -447,13 +448,13 @@
       <statement>
         <p>
           Suppose <m>f</m> is differentiable on an interval <m>I</m>.
-          If <m>f'(x)&gt;0</m> for every <m>x\in I</m>, then <m>f</m> is increasing on <m>I</m>.
-          That is, whenever <m>a&lt;b</m> in <m>I</m>, we have <m>f(a)&lt;f(b)</m>.
+          If <m>f'(x)\gt 0</m> for every <m>x\in I</m>, then <m>f</m> is increasing on <m>I</m>.
+          That is, whenever <m>a \lt b</m> in <m>I</m>, we have <m>f(a) \lt f(b)</m>.
         </p>
       </statement>
       <proof>
         <p>
-          Let <m>a&lt;b</m> be any two points in <m>I</m>.
+          Let <m>a \lt b</m> be any two points in <m>I</m>.
           By the Mean Value Theorem, there exists <m>c\in(a,b)</m> such that
         </p>
 
@@ -462,8 +463,8 @@
         </me>
 
         <p>
-          Since <m>b-a&gt;0</m> and <m>f'(c)&gt;0</m>, we conclude <m>f(b)-f(a)&gt;0</m>,
-          so <m>f(b)&gt;f(a)</m>.
+          Since <m>b-a \gt 0</m> and <m>f'(c)\gt 0</m>, we conclude <m>f(b)-f(a)\gt 0</m>,
+          so <m>f(b)\gt f(a)</m>.
         </p>
       </proof>
     </theorem>
@@ -476,6 +477,7 @@
     </remark>
   </subsection>
 
+  <!-- 
   <subsection xml:id="ssec-uniqueness">
     <title>Uniqueness and Why It Matters</title>
 
@@ -574,6 +576,7 @@
       </p>
     </remark>
   </subsection>
+--> 
 
   <subsection xml:id="additional-worked-examples-mvt">
     <title>Additional Worked-Out Examples</title>
@@ -601,60 +604,179 @@
         </p>
       </introduction>
 
-      <exercise xml:id="tf-mvt-01">
-        <statement>
-          <p>
-            If <m>f</m> is differentiable on <m>(a,b)</m>, then the Mean Value Theorem applies on <m>[a,b]</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>False.</emph> The Mean Value Theorem requires both continuity on the closed interval <m>[a,b]</m>
-            and differentiability on the open interval <m>(a,b)</m>.
-          </p>
-        </solution>
-      </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If a function is continuous on <m>[a,b]</m> and differentiable on <m>(a,b)</m>,
+        then there exists exactly one number <m>c</m> satisfying the Mean Value Theorem.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> The Mean Value Theorem guarantees at least one such <m>c</m>,
+        but there may be more than one. For example, for <m>f(x)=x^3</m> on <m>[-1,1]</m>,
+        both <m>c=-\frac{1}{\sqrt{3}}</m> and <m>c=\frac{1}{\sqrt{3}}</m> satisfy the conclusion.
+      </p>
+    </solution>
+  </exercise>
 
-      <exercise xml:id="tf-mvt-02">
-        <statement>
-          <p>
-            Rolle’s Theorem is a special case of the Mean Value Theorem.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> If <m>f(a)=f(b)</m>, then the secant slope is <m>0</m>, so the Mean Value Theorem gives
-            a point <m>c</m> with <m>f'(c)=0</m>.
-          </p>
-        </solution>
-      </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>f(a)=f(b)</m> and <m>f</m> is continuous on <m>[a,b]</m> but not differentiable
+        at some point in <m>(a,b)</m>, then Rolle’s Theorem still guarantees a value
+        <m>c</m> such that <m>f'(c)=0</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> Rolle’s Theorem requires differentiability on the entire open interval <m>(a,b)</m>.
+        If there is a point where the function is not differentiable, then the conclusion can fail.
+        For example, for <m>f(x)=|x|</m> on <m>[-1,1]</m>, we have <m>f(-1)=f(1)</m>, and <m>f</m> is continuous on <m>[-1,1]</m>,
+        but there is no value of <m>c\in(-1,1)</m> such that <m>f'(c)=0</m>.
+      </p>
+    </solution>
+  </exercise>
 
-      <exercise xml:id="tf-mvt-03">
-        <statement>
-          <p>
-            If <m>f'(x)=0</m> for every <m>x</m> in an interval, then <m>f</m> is constant on that interval.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> This is part (a) of the Uniqueness Theorem and follows from the Mean Value Theorem.
-          </p>
-        </solution>
-      </exercise>
+  <exercise>
+    <statement>
+      <p>
+        If <m>f'(x)=0</m> for every <m>x</m> in <m>(a,b)</m>,
+        then <m>f(a)=f(b)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> By the Mean Value Theorem, there exists <m>c\in(a,b)</m> such that
+        <m>f'(c)=\frac{f(b)-f(a)}{b-a}</m>. Since <m>f'(c)=0</m>, we have <m>\frac{f(b)-f(a)}{b-a}=0</m>,
+        which implies <m>f(b)-f(a)=0</m>, so <m>f(a)=f(b)</m>.
+      </p>
+    </solution>
+  </exercise>
 
-      <exercise xml:id="tf-mvt-04">
-        <statement>
-          <p>
-            If <m>f'(x)&gt;0</m> for every <m>x</m> in an interval, then <m>f</m> has no local maxima in that interval.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> If <m>f'(x)&gt;0</m> everywhere, then <m>f</m> is increasing,
-            so it cannot turn from increasing to decreasing at an interior point.
-          </p>
-        </solution>
-      </exercise>
+  <exercise>
+    <statement>
+      <p>
+        The Mean Value Theorem guarantees that the tangent line at <m>x=c</m>
+        passes through the points <m>(a,f(a))</m> and <m>(b,f(b))</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> The Mean Value Theorem guarantees that the tangent line at <m>x=c</m> is parallel to 
+        the secant line through <m>(a,f(a))</m> and <m>(b,f(b))</m>, but it does not guarantee that the tangent 
+        line passes through those points.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f</m> is differentiable on <m>(a,b)</m> and continuous on <m>[a,b]</m>,
+        then there exists <m>c\in(a,b)</m> such that
+        <m>f'(c)=\dfrac{f(b)-f(a)}{b-a}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> This is exactly the statement of the Mean Value Theorem.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f'(x) \lt 0</m> for all <m>x</m> in <m>(a,b)</m> where <m>a \lt b</m>,
+        then <m>f(b) \lt f(a)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> By the Mean Value Theorem, there exists <m>c\in(a,b)</m> such that
+        <m>f'(c)=\frac{f(b)-f(a)}{b-a}</m>. Since <m>b-a \gt 0</m> and <m>f'(c) \lt 0</m>, we have <m>f(b)-f(a) \lt 0</m>,
+        which implies <m>f(b) \lt f(a)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        For <m>f(x)=x^2</m> on <m>[1,3]</m>,
+        there exists <m>c</m> such that <m>f'(c)=4</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> The function <m>f</m> is a polynomial, so it is continuous on <m>[1,3]</m> and differentiable on <m>(1,3)</m>.
+        Compute the average rate of change:
+      </p>
+      <me>
+        \frac{f(3)-f(1)}{3-1}=\frac{9-1}{2}=4.
+      </me>
+      <p>
+        By the Mean Value Theorem, there exists <m>c\in(1,3)</m> such that <m>f'(c)=4</m>. In fact, since <m>f'(x)=2x</m>, 
+        we can solve <m>2c=4</m> to find <m>c=2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        The Mean Value Theorem applies to every polynomial on any closed interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> Polynomials are continuous and differentiable everywhere, so the Mean Value Theorem applies on any closed interval.
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise>
+    <statement>
+      <p>
+        If <m>f'(c)=\dfrac{f(b)-f(a)}{b-a}</m>,
+        then <m>c</m> must be the midpoint of <m>[a,b]</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> The Mean Value Theorem guarantees the existence of some <m>c\in(a,b)</m> such that 
+        <m>f'(c)=\dfrac{f(b)-f(a)}{b-a}</m>,
+        but it does not guarantee that <m>c</m> is the midpoint. In many cases, <m>c</m> is not the midpoint. 
+        For example see <xref ref="ex-mvt-sqrt"/>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        For <m>f(x)=\sqrt{x}</m> on <m>[0,4]</m>,
+        the Mean Value Theorem applies.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> The function <m>\sqrt{x}</m> is continuous for <m>x\ge 0</m>, so it is continuous on <m>[0,4]</m>.
+        Also, the derivative <m>\frac{1}{2\sqrt{x}}</m> exists for every <m>x\in(0,4)</m>, so the Mean Value Theorem applies.
+      </p>
+    </solution>
+  </exercise>
+
+
+
+
     </exercisegroup>
 
     <exercisegroup>
@@ -683,8 +805,8 @@
       <exercise xml:id="prob-rolles-check">
         <statement>
           <p>
-            Consider <m>f(x)=(x-1)^2(x-3)</m> on <m>[1,3]</m>.
-            (a) Verify that Rolle’s Theorem applies.
+            Consider <m>f(x)=(x-1)^2(x-3)</m> on <m>[1,3]</m>.</p><p> 
+            (a) Verify that Rolle’s Theorem applies.</p><p>
             (b) Find a value <m>c</m> in <m>(1,3)</m> such that <m>f'(c)=0</m>.
           </p>
         </statement>
@@ -712,10 +834,7 @@
           </p>
         </solution>
       </exercise>
-    </exercisegroup>
-
-    <exercisegroup>
-      <title>Graphical and Applied Problems</title>
+  
 
       <exercise xml:id="prob-mvt-graphical">
         <statement>
@@ -729,23 +848,6 @@
             The secant slope is
             <m>\frac{9-1}{6-2}=2</m>.
             The Mean Value Theorem guarantees there exists <m>c\in(2,6)</m> such that <m>f'(c)=2</m>.
-          </p>
-        </solution>
-      </exercise>
-
-      <exercise xml:id="prob-uniqueness-constant-diff">
-        <statement>
-          <p>
-            Suppose <m>f</m> and <m>g</m> are differentiable on <m>(-5,5)</m> and satisfy <m>f'(x)=g'(x)</m> for all <m>x</m>.
-            If <m>f(0)=10</m> and <m>g(0)=3</m>, determine <m>f(x)-g(x)</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Since the derivatives are equal everywhere, the Uniqueness Theorem implies <m>f(x)=g(x)+C</m>.
-            Evaluate at <m>x=0</m>:
-            <m>10=3+C</m>, so <m>C=7</m>.
-            Therefore <m>f(x)-g(x)=7</m> for all <m>x</m> in the interval.
           </p>
         </solution>
       </exercise>

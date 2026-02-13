@@ -285,23 +285,23 @@ the instantaneous velocity.
   </p>
 
   <url href="https://www.desmos.com/calculator/sw9jjcgdeh">
-    <sidebyside width="80%">
-      <figure>
-        <caption>
-          As two points on the curve move closer together, the secant line
-          determined by those points approaches the tangent line at a single point.
-        </caption>
-        <image width="100%" source="images/tangentSecant.gif">
-          <shortdescription>
-            Animated graph of a smooth curve with two points marked on it. A secant line passes
-            through the two points. As the points move closer together along the curve,
-            the secant line rotates and converges to the tangent line at that point, illustrating how the tangent
-            line arises as a limit of secant lines.
-          </shortdescription>
-        </image>
-      </figure>
-    </sidebyside>
-  </url>
+        <sidebyside width="80%">
+                <figure>
+                          <caption>
+                                      As two points on the curve move closer together, the secant line
+                                                determined by those points approaches the tangent line at a single point.
+                          </caption>
+                                  <image width="100%" source="images/tangentSecant.gif">
+                                              <shortdescription>
+                                                            Animated graph of a smooth curve with two points marked on it. A secant line passes
+                                                                        through the two points. As the points move closer together along the curve,
+                                                                                    the secant line rotates and converges to the tangent line at that point, illustrating how the tangent
+                                                                                                line arises as a limit of secant lines.
+                                              </shortdescription>
+                                            </image>
+                                          </figure>
+                                        </sidebyside>
+                                      </url>
 
   <definition xml:id="def-tangent-slope">
     <statement>
