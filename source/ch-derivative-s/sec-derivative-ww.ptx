@@ -338,30 +338,16 @@ f(x) &amp; -1.000 &amp; -0.869 &amp; -0.989699 &amp; -0.998997 &amp; -1.009701 \
       A graph of <m>p(t)</m> is shown below.
     </p>
 
-    <figure xml:id="fig-height-bounce">
-      <caption>
-        Height <m>p(t)</m> versus time <m>t</m> for a ball that hits the ground at <m>t=0.9</m> seconds and rebounds.
-      </caption>
-      <image source="images/PUT-YOUR-DESMOS-IMAGE-HERE.png" width="85%">
-        <shortdescription>
-          Placeholder for a graph of height versus time for a bouncing ball.
-          The curve decreases smoothly until time 0.9 seconds where it reaches height 0,
-          then immediately changes direction and increases with a smaller upward slope.
-        </shortdescription>
-      </image>
-    </figure>
 
-    <p>
-      In Desmos, plot the piecewise function
-      <me>
-        p(t)=
-        \begin{cases}
-          12 - 16t^2, &amp; 0\le t \le 0.9, \\
-          6(t-0.9), &amp; 0.9 \le t \le 1.3.
-        \end{cases}
-      </me>
-      (Use <m>t</m> on the horizontal axis and <m>p(t)</m> on the vertical axis.)
-    </p>
+  <image source="images/ballBouncing.png" width="85%">
+    <shortdescription>
+      A graph of height versus time. The curve begins at time 0 with height 12 meters and decreases smoothly,
+      curving downward as time increases. The graph reaches height 0 at time 0.9 seconds.
+      At that point there is a sharp corner. After 0.9 seconds, the graph changes direction
+      and increases along a straight line segment, representing the ball rising upward
+      at a constant but smaller speed than it had while falling.
+    </shortdescription>
+  </image>
 
     <p>
       (a) What are the units of <m>p'(t)</m>? Explain what the sign of <m>p'(t)</m> tells you about the motion of the ball.
