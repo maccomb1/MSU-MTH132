@@ -677,27 +677,27 @@ y=f(a)+f'(a)(x-a).
 <div class="para" id="ex-derivative-reciprocal-2-1">Find <span class="process-math">\(f'(2)\)</span> for <span class="process-math">\(f(x)=\dfrac{1}{x+1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-reciprocal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="ex-derivative-reciprocal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-derivative-reciprocal-3-1">
-<em class="alert">Step by Step:</em><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-reciprocal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-derivative-reciprocal-3-1">First let’s start by writing out the difference quotient:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-reciprocal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{array}{rcll}
-\displaystyle f'(2)
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{f(2+h)-f(2)}{h}
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{\frac{1}{(2+h)+1}-\frac{1}{2+1}}{h}
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}{h}\left(\frac{1}{h+3}-\frac{1}{3}\right)
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{1}{h}\left(\frac{3-(h+3)}{3(h+3)}\right)
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{-h}{3h(h+3)}
-\\[1.2em]
-\amp=\amp \displaystyle\lim_{h\to 0}\frac{-1}{3(h+3)}
-\ =\ -\frac{1}{9}.
+\begin{array}{rcl}
+\displaystyle \dfrac{f(2+h)-f(2)}{h} &amp;=\amp \displaystyle \frac{\frac{1}{(2+h)+1}-\frac{1}{2+1}}{h} \\
+&amp;=\amp \displaystyle \frac{\frac{1}{3+h}-\frac{1}{3}}{h} \\
+&amp;=\amp \displaystyle \frac{\frac{3-(3+h)}{3(3+h)}}{h} \\
+&amp;=\amp \displaystyle \frac{\frac{-h}{3(3+h)}}{h} \\
+&amp;=\amp \displaystyle \frac{-1}{3(3+h)}.
 \end{array}
 \end{equation*}
+</div>
+<div class="para" id="ex-derivative-reciprocal-3-3">Now we can evaluate the limit as <span class="process-math">\(h\to 0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-reciprocal-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\displaystyle f'(2)=\lim_{h\to 0}\frac{-1}{3(3+h)}=\frac{-1}{9}.
+\end{equation*}
+</div>
+<div class="para" id="ex-derivative-reciprocal-3-5">So the slope of the tangent line to <span class="process-math">\(y=\frac{1}{x+1}\)</span> at <span class="process-math">\(x=2\)</span> is <span class="process-math">\(-1/9\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-reciprocal-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.2.3.1"><a href="#ex-derivative-reciprocal-3" title="Copy heading and permalink for Solution 2.2.3.1" aria-label="Copy heading and permalink for Solution 2.2.3.1">🔗</a></div>
 </div></details></div>
