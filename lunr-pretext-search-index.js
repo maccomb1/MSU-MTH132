@@ -3904,7 +3904,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.8",
   "title": "Additional Worked-Out Problems",
-  "body": " Additional Worked-Out Problems   Introduction and Motivation for Derivatives  test    Definition of the Derivative  test    Basic Differentiation Rules  test    Trigonometric Derivatives  test    Exponential Functions and the Chain Rule  test    Implicit Differentiation  test    Inverse Functions and Their Derivatives  test   "
+  "body": " Additional Worked-Out Problems   Introduction and Motivation for Derivatives    Find the average rate of change of the function on the interval .    To find the average rate of change of the function on the interval , we use the formula for the average rate of change:   where and .  First, we calculate and :    Now, we substitute these values into the average rate of change formula and simplify:   Therefore, the average rate of change of the function on the interval is .      Let .  (a) Find the slope of the secant line joining and .  (b) Find the slope of the secant line joining and .  (c) Find the slope of the tangent line at .  (d) Find the equation of the tangent line at .    (a) The slope of the secant line is   Compute the function values:    So the slope of the secant line is .  (b) The slope of the secant line is   First compute:    Expand:   So the difference quotient becomes   (c) The slope of the tangent line is the limit as :   So the slope of the tangent line at is .  (d) Using point-slope form:    The tangent line is horizontal at .      Definition of the Derivative  test    Basic Differentiation Rules  test    Trigonometric Derivatives  test    Exponential Functions and the Chain Rule  test    Implicit Differentiation  test    Inverse Functions and Their Derivatives  test   "
+},
+{
+  "id": "ex-deriv-ww-1",
+  "level": "2",
+  "url": "sec-derivative-ww.html#ex-deriv-ww-1",
+  "type": "Example",
+  "number": "2.8.1",
+  "title": "",
+  "body": "  Find the average rate of change of the function on the interval .    To find the average rate of change of the function on the interval , we use the formula for the average rate of change:   where and .  First, we calculate and :    Now, we substitute these values into the average rate of change formula and simplify:   Therefore, the average rate of change of the function on the interval is .   "
+},
+{
+  "id": "ex-secant-tangent-polynomial",
+  "level": "2",
+  "url": "sec-derivative-ww.html#ex-secant-tangent-polynomial",
+  "type": "Example",
+  "number": "2.8.2",
+  "title": "",
+  "body": "  Let .  (a) Find the slope of the secant line joining and .  (b) Find the slope of the secant line joining and .  (c) Find the slope of the tangent line at .  (d) Find the equation of the tangent line at .    (a) The slope of the secant line is   Compute the function values:    So the slope of the secant line is .  (b) The slope of the secant line is   First compute:    Expand:   So the difference quotient becomes   (c) The slope of the tangent line is the limit as :   So the slope of the tangent line at is .  (d) Using point-slope form:    The tangent line is horizontal at .   "
 },
 {
   "id": "sec-derivApp-motion",
@@ -4444,7 +4462,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.4",
   "title": "Extrema",
-  "body": " Extrema    Define and distinguish between absolute and local maxima and minima.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.  Identify critical points of a function.  Apply derivatives to locate and classify extrema on a closed interval.  Understand how discontinuities and nondifferentiable points affect extrema.    In many real-world problems, we are not just interested in how a function behaves, but in finding its largest or smallest possible values. For example, we might want to know the maximum height of a projectile, the minimum cost of producing an item, or the highest temperature reached during a day. Problems like these lead us to the study of extrema .   Absolute Maxima and Minima   Absolute Maximum and Minimum   Let be a function defined on a closed interval .  An absolute maximum of on occurs at a point in if for all .  An absolute minimum of on occurs at a point in if for all .    The output values are called the maximum value and minimum value of the function. While these values are unique, it is possible for a function to attain the same maximum or minimum value at more than one input.   The terms maximum , minimum , and extremum come from Latin. Their plural forms are maxima , minima , and extrema .    Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .     This theorem does not tell us where the extrema occur, only that they must exist. If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.     Local Maxima and Minima  Absolute extrema describe the highest and lowest points over an entire interval. A broader concept focuses only on nearby behavior.   Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to .  A local minimum of a function occurs at if for all sufficiently close to .    Intuitively, local maxima correspond to hilltops and local minima correspond to valley bottoms. Every absolute maximum or minimum is also a local extremum, but not every local extremum is an absolute one.    Derivatives and Extrema  Calculus provides a powerful tool for locating extrema. If a function has a smooth hilltop or valley bottom at an interior point, the tangent line there is horizontal.   First Derivative Test for Extrema   If has a local maximum or minimum at an interior point and is differentiable at , then .     The converse is not true. A point where need not be a maximum or minimum.     Critical Points   Critical Point   A critical point (or critical number ) of a function is a point where either     Critical points are the only possible locations of local extrema in the interior of an interval. Endpoints of the interval must also be considered when searching for absolute extrema.    A Method for Finding Absolute Extrema   Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.  If is not continuous, also examine behavior near discontinuities.      Examples and Common Pitfalls    Consider .    We compute , so the only critical point is . However, the graph has no local maximum or minimum at this point. Instead, is a stationary point where the function briefly levels off before continuing to increase.      Let .    The derivative is undefined when the expression inside the absolute value is zero, producing corners in the graph. These points must be included as critical points, and in fact they correspond to the absolute minimum values of the function.      Let on .    Although has critical points and endpoint values, the function increases without bound near . Therefore, has no absolute maximum on this interval, but it does have an absolute minimum.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Extrema      Practice \/ Study Problems   Conceptual Questions    True or False: If , then is a local maximum or minimum.    False. A zero derivative may correspond to a stationary point.      True or False: A continuous function on must have an absolute maximum.    True. This follows from the Extreme Value Theorem.      "
+  "body": " Extrema    Define and distinguish between absolute and local maxima and minima, both verbally and graphically.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist, and explain why the hypotheses (continuity and a closed, finite interval) matter.  Identify critical points of a function by solving and locating points where is undefined.  Explain why local extrema in the interior of an interval must occur at critical points (or where differentiability fails).  Find absolute extrema of a function on a closed interval by evaluating the function at critical points and endpoints.  Use graphs to classify extrema and determine whether extrema are local, absolute, both, or neither.    In many real-world problems, we are not just interested in how a function behaves, but in finding its largest or smallest possible values. For example, we might want to know the maximum height of a projectile, the minimum cost of producing an item, or the highest temperature reached during a day. Problems like these lead us to the study of extrema .   Absolute Maxima and Minima   Absolute Maximum and Minimum   Let be a function defined on a closed interval .  An absolute maximum of on occurs at a point in if for all .  An absolute minimum of on occurs at a point in if for all .    The output values are called the maximum value and minimum value of the function. These values are real numbers and unique. However it is possible for a function to attain the same maximum or minimum value at more than one input.   The terms maximum , minimum , and extremum come from Latin. Their plural forms are maxima , minima , and extrema .   For example, here is a graph of on the interval    Graph of a sinusoidal function on the interval , illustrating absolute extrema. The function attains absolute maximum values of at and , and an absolute minimum value of at .   A smooth wave-shaped graph on the interval from 0 to 3 pi over 2. The curve starts at 0, rises to a highest point of 1 at pi over 4, decreases through 0 at pi over 2, reaches a lowest point of negative 1 at 3 pi over 4, then rises again through 0 at pi, reaches another highest point of 1 at 5 pi over 4, and finally decreases back to 0 at 3 pi over 2. The highest value on the graph is 1 and the lowest value is negative 1, representing the absolute maximum and absolute minimum on the interval.    Here is another example. This time the graph of on the interval    Graph of a function on the interval illustrating absolute extrema. The function has an absolute minimum value of at and an absolute maximum value of at .   A graph defined from x equals negative 1 to x equals 2. There is a filled point at negative 1 with y-value 1. The curve decreases from that point to a lowest point at 0 with y-value 0. From x equals 0, the curve increases smoothly to a filled point at 2 with y-value 4. The lowest value on the graph is 0 at x equals 0, and the highest value is 4 at x equals 2.    So now that we can visualize absolute extrema, the question becomes how can we find them? Especially if we do not have a graph to rely on. But before we get to that though, we need to know when should we even be looking for them. For instance if we were asked to find the absolute maximum of on the interval , there is no absolute maximum because the function continues to get bigger and bigger without bound. Any real number that you might propose as a maximum can be exceeded by choosing a larger number (remember is not a real number). The next section will give us a powerful tool for determining when absolute extrema are guaranteed to exist.    Extreme Value Theorem   Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .    The proof of the Extreme Value Theorem relies on the completeness property of the real numbers. Since is continuous on the closed interval , the set of values for is a bounded subset of the real numbers. By the completeness property, this set has a least upper bound (supremum) and a greatest lower bound (infimum). The continuity of ensures that these bounds are actually attained at some points in , giving us the absolute maximum and minimum. A more rigorous proof can be found in MTH 320 (real analysis), but the key idea is that continuity and the closed interval together guarantee the existence of extrema.     This theorem does not tell us where the extrema occur, only that they must exist. If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.   Before moving on let's stop and justify that if a function is not continuous or the interval is not closed, absolute extrema may fail to exist.    Consider the function on the interval . Argue that this function has no absolute maximum on this interval, even though it is continuous.    The function is continuous on the interval , and it takes values that get arbitrarily close to 1 as approaches 1 from the left. However, since the interval does not include 1, there is no point in the interval where actually attains the value of 1. Therefore, there is no absolute maximum on this interval, even though the function is continuous.   If we were to say the absolute maximum is 1, then that would be incorrect because never attains the value 1 on the interval . We would be claiming that there is some such that , but no such exists.    And if we were to say that the absolute maximum is some value less than 1 but very close (like 0.9999), then that would also be incorrect because there are values of that are greater than 0.9999 on the interval .   And so the function on the interval has no absolute maximum, even though it is continuous.  Note that this function does happen to have an absolute minimum of 0 at . Again the extreme value theorem does not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute minimum but no absolute maximum.      Consider the function on the interval . Argue that this function has no absolute minimum on this closed, finite interval .   A function on a closed interval that does not attain an absolute minimum.   A graph of a function defined on a finite interval that includes a vertical dashed line at x = 1 representing a vertical asymptote. As x approaches 1 from either side, the function decreases without bound toward negative infinity. To the right, the curve increases and levels off near y = 0. A closed point appears at approximately (4, 0), which is the highest point shown on the interval. Because the function values decrease without bound near x = 1, there is no absolute minimum on the interval, even though an absolute maximum exists.      The function is not continuous on the closed interval , and it takes values that get arbitrarily close to negative infinity as approaches 1 from either side. However, since the function decreases without bound near , there is no point in the interval where attains a minimum value. Therefore, there is no finite absolute minimum on this interval.  Note that this function does happen to have an absolute maximum of at . Again the extreme value theorem does not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute maximum but no absolute minimum.    Before we learn formally how to find absolute extrema, let's take a small detour and talk about a related but different concept of local extrema. Local extrema are important to understand because they are often easier to find than absolute extrema, and they can provide valuable information about the behavior of a function even when absolute extrema do not exist or are difficult to determine.    Local Maxima and Minima  Absolute extrema describe the highest and lowest points over an entire interval. A broader concept focuses only on nearby behavior.   Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to in the domain of .  A local minimum of a function occurs at if for all sufficiently close to in the domain of .    Intuitively, local maxima correspond to hilltops and local minima correspond to valley bottoms. Every absolute maximum or minimum is also a local extremum, but not every local extremum is an absolute one.   A graph illustrating the difference between local extrema and absolute extrema. The curve contains multiple turning points, including local maxima, local minima, one absolute minimum, and one absolute maximum.   A smooth curve defined on a closed interval from approximately x = 0 to x = 4. At x = 0 there is a local maximum near y = 0. The curve decreases to a lowest point near x = 0.5 with y = -3.5, labeled both local minimum and absolute minimum. The graph then rises to a local maximum at x = 2 with y = 3. It decreases again to a local minimum at x = 3 with y = 2. Finally, the graph increases to its highest point at x = 4 with y = 4, labeled both local maximum and absolute maximum. This image shows that absolute extrema are the highest and lowest values on the entire interval, while local extrema occur at nearby turning points.      Derivatives and Extrema  Calculus provides a powerful tool for locating extrema. If a function has a smooth hilltop or valley bottom at an interior point, the tangent line there is horizontal.   First Derivative Test for Extrema   If has a local maximum or minimum at an interior point and is differentiable at , then .     The converse is not true. A point where need not be a maximum or minimum. For instance, has a critical point at , but it is neither a maximum nor a minimum (can verify by graphing or by testing values of near 0).   So therefore if we are looking for local extrema, we should look for points where the derivative is zero. But what about points where the derivative is undefined? These points can also correspond to local extrema, for instance consider the function at . The derivative is undefined at this point, but it is clearly a local minimum. This leads us to the concept of critical points.   Critical Point   A critical point (or critical number ) of a function is a point in the domain of where either     Critical points are the only possible locations of local extrema in the interior of an interval. Endpoints of the interval must also be considered when searching for absolute extrema.    Find the critical point(s) of .    We compute the derivative: Setting this equal to zero gives us Since the derivative is defined for all real numbers, there are no points where the derivative is undefined. Therefore, the only critical point of is at .      Find the critical point(s) of .    We compute the derivative using the power rule: Setting this equal to zero gives us This equation has no solution because the expression on the left is never zero for any real number . However, the derivative is undefined at because of the negative exponent. Therefore, the only critical point of is at .      Finding Absolute Extrema  So as we have discussed, absolute extrema can only occur at critical points or at endpoints of the interval. Therefore, to find absolute extrema we need to evaluate the function at these points and compare the values. The following strategy summarizes this process.   Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.      Find the absolute maximum and minimum of on the interval .    We already found the critical point of in a previous example: . This critical point is in the interval . Now we evaluate at the critical point and at the endpoints:     Comparing these values, we see that the absolute maximum is , occurring at , and the absolute minimum is , occurring at .      Find the absolute maximum and minimum values of on the interval and the corresponding values of .    First, we find the critical points of by computing its derivative:   Setting the derivative equal to zero gives:   Both critical points are in the interval . Now we evaluate at the critical points and at the endpoints:   Comparing these values, we see that the absolute maximum is , occurring at , and the absolute minimum is , occurring at both and .      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available via:  Additional Worked-Out Problems for Extrema      Practice \/ Study Problems   True\/False Questions   Determine whether each statement is true or false. Justify your answers.     A function that is continuous on an open interval must have an absolute maximum on that interval.     False. A function that is continuous on an open interval is not guaranteed to have an absolute maximum on that interval. For example, the function is continuous on the open interval , but it does not have an absolute maximum because it approaches 1 as approaches 1 from the left, but never actually attains the value of 1 on the interval.      If a function is continuous on , then it is guaranteed to attain its maximum and minimum values at critical points only.     False . If a function is continuous on a closed interval , then it is guaranteed to attain its maximum and minimum values on that interval, but these extrema may occur at critical points or at the endpoints of the interval. For example, the function on the interval has an absolute minimum at (an endpoint) and an absolute maximum at (also an endpoint), even though there are no critical points in the interior of the interval.      If a function has an absolute maximum at , then .     False . If a function has an absolute maximum at , it does not necessarily mean that . The function could have a sharp peak at where the derivative is undefined, or the maximum could occur at an endpoint of the interval where the derivative does not need to be zero. For example, the function has an absolute maximum of 3 at , but the derivative is undefined at that point due to the sharp peak.      If , then must have either a local maximum or local minimum at .     False . If , it means that the tangent line to the graph of at is horizontal, but this does not necessarily imply that there is a local maximum or minimum at that point. The function could have an inflection point at , where the concavity changes but there is no local extremum. For example, the function has a critical point at where the derivative is zero, but it is neither a local maximum nor a local minimum.      If a function is not continuous on , then it cannot have absolute extrema on that interval.     False . If a function is not continuous on a closed interval , it may still have absolute extrema on that interval. The lack of continuity does not necessarily prevent the function from attaining maximum or minimum values. For example, the function defined by is not continuous at , but it has an absolute maximum of 2 at and an absolute minimum of 0 at all other points in the interval.      A function can have more than one absolute minimum value on a closed interval.     True . A function can have more than one absolute minimum value on a closed interval if it attains the same minimum value at multiple points. For example, the function on the interval has an absolute maximum value of 1 at and , and an absolute minimum value of -1 at . In this case, the absolute minimum value of -1 is attained at only one point, but the absolute maximum value of 1 is attained at two different points.      The function has three critical points.     False . To find the critical points of the function , we first compute its derivative: Setting the derivative equal to zero gives us: The derivative is defined for all real numbers, so there are no points where the derivative is undefined. Therefore, the critical points of the function are at and . However, we need to check if there are any other critical points. Since the derivative is a quadratic function, it can only have two real roots, which we have already found. Therefore, there are only two critical points, not three.      The function on has its absolute minimum at an endpoint.     False . The function on the interval has its absolute minimum at , which is not an endpoint of the interval. To see this, we can evaluate the function at the endpoints and at the critical point: Comparing these values, we see that the absolute minimum value is 0, occurring at , which is an interior point of the interval, not an endpoint.      The function on has a critical point at .     True . To determine if is a critical point of the function , we first compute the derivative: The derivative is undefined at because it involves division by zero. However, for a point to be a critical point, it must be in the domain of the function. Since is in the domain of , we can consider it a critical point.      If on , then the absolute maximum occurs at .     False . To find the absolute maximum of the function on the interval , we first compute its derivative: Setting the derivative equal to zero gives us: The critical point is at , which is in the interval . Now we evaluate the function at the critical point and at the endpoints: Comparing these values, we see that the absolute maximum value is , occurring at , not at .      The function on has an absolute minimum on that interval.     True . The function on the interval has an absolute minimum of at and . To see this, we can evaluate the function at the endpoints and based on the graph of the function: The function has a vertical asymptote at , where the function values increase without bound as approaches 2 from either side. Therefore, the absolute minimum value of the function on the interval is , occurring at both endpoints and .      "
 },
 {
   "id": "sec-derivApp-extrema-2",
@@ -4453,7 +4471,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.4",
   "title": "",
-  "body": "  Define and distinguish between absolute and local maxima and minima.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist.  Identify critical points of a function.  Apply derivatives to locate and classify extrema on a closed interval.  Understand how discontinuities and nondifferentiable points affect extrema.   "
+  "body": "  Define and distinguish between absolute and local maxima and minima, both verbally and graphically.  Use the Extreme Value Theorem to determine when absolute extrema are guaranteed to exist, and explain why the hypotheses (continuity and a closed, finite interval) matter.  Identify critical points of a function by solving and locating points where is undefined.  Explain why local extrema in the interior of an interval must occur at critical points (or where differentiability fails).  Find absolute extrema of a function on a closed interval by evaluating the function at critical points and endpoints.  Use graphs to classify extrema and determine whether extrema are local, absolute, both, or neither.   "
 },
 {
   "id": "sec-derivApp-extrema-3",
@@ -4483,38 +4501,83 @@ var ptx_lunr_docs = [
   "body": " The terms maximum , minimum , and extremum come from Latin. Their plural forms are maxima , minima , and extrema .  "
 },
 {
+  "id": "fig-absolute-extrema-sine",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#fig-absolute-extrema-sine",
+  "type": "Figure",
+  "number": "3.4.3",
+  "title": "",
+  "body": " Graph of a sinusoidal function on the interval , illustrating absolute extrema. The function attains absolute maximum values of at and , and an absolute minimum value of at .   A smooth wave-shaped graph on the interval from 0 to 3 pi over 2. The curve starts at 0, rises to a highest point of 1 at pi over 4, decreases through 0 at pi over 2, reaches a lowest point of negative 1 at 3 pi over 4, then rises again through 0 at pi, reaches another highest point of 1 at 5 pi over 4, and finally decreases back to 0 at 3 pi over 2. The highest value on the graph is 1 and the lowest value is negative 1, representing the absolute maximum and absolute minimum on the interval.   "
+},
+{
+  "id": "fig-absolute-extrema-parabola-piece",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#fig-absolute-extrema-parabola-piece",
+  "type": "Figure",
+  "number": "3.4.4",
+  "title": "",
+  "body": " Graph of a function on the interval illustrating absolute extrema. The function has an absolute minimum value of at and an absolute maximum value of at .   A graph defined from x equals negative 1 to x equals 2. There is a filled point at negative 1 with y-value 1. The curve decreases from that point to a lowest point at 0 with y-value 0. From x equals 0, the curve increases smoothly to a filled point at 2 with y-value 4. The lowest value on the graph is 0 at x equals 0, and the highest value is 4 at x equals 2.   "
+},
+{
   "id": "thm-extreme-value",
   "level": "2",
   "url": "sec-derivApp-extrema.html#thm-extreme-value",
   "type": "Theorem",
-  "number": "3.4.3",
+  "number": "3.4.5",
   "title": "Extreme Value Theorem.",
-  "body": " Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .   "
+  "body": " Extreme Value Theorem   If a function is continuous on a closed, finite interval , then has at least one absolute maximum and at least one absolute minimum on .    The proof of the Extreme Value Theorem relies on the completeness property of the real numbers. Since is continuous on the closed interval , the set of values for is a bounded subset of the real numbers. By the completeness property, this set has a least upper bound (supremum) and a greatest lower bound (infimum). The continuity of ensures that these bounds are actually attained at some points in , giving us the absolute maximum and minimum. A more rigorous proof can be found in MTH 320 (real analysis), but the key idea is that continuity and the closed interval together guarantee the existence of extrema.   "
 },
 {
-  "id": "ssec-absolute-extrema-6",
+  "id": "subsec-EVT-3",
   "level": "2",
-  "url": "sec-derivApp-extrema.html#ssec-absolute-extrema-6",
+  "url": "sec-derivApp-extrema.html#subsec-EVT-3",
   "type": "Remark",
-  "number": "3.4.4",
+  "number": "3.4.6",
   "title": "",
   "body": " This theorem does not tell us where the extrema occur, only that they must exist. If the function is not continuous or the interval is not closed, absolute extrema may fail to exist.  "
+},
+{
+  "id": "ex-no-absolute-maximum",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-no-absolute-maximum",
+  "type": "Example",
+  "number": "3.4.7",
+  "title": "",
+  "body": "  Consider the function on the interval . Argue that this function has no absolute maximum on this interval, even though it is continuous.    The function is continuous on the interval , and it takes values that get arbitrarily close to 1 as approaches 1 from the left. However, since the interval does not include 1, there is no point in the interval where actually attains the value of 1. Therefore, there is no absolute maximum on this interval, even though the function is continuous.   If we were to say the absolute maximum is 1, then that would be incorrect because never attains the value 1 on the interval . We would be claiming that there is some such that , but no such exists.    And if we were to say that the absolute maximum is some value less than 1 but very close (like 0.9999), then that would also be incorrect because there are values of that are greater than 0.9999 on the interval .   And so the function on the interval has no absolute maximum, even though it is continuous.  Note that this function does happen to have an absolute minimum of 0 at . Again the extreme value theorem does not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute minimum but no absolute maximum.   "
+},
+{
+  "id": "ex-no-absolute-min",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-no-absolute-min",
+  "type": "Example",
+  "number": "3.4.8",
+  "title": "",
+  "body": "  Consider the function on the interval . Argue that this function has no absolute minimum on this closed, finite interval .   A function on a closed interval that does not attain an absolute minimum.   A graph of a function defined on a finite interval that includes a vertical dashed line at x = 1 representing a vertical asymptote. As x approaches 1 from either side, the function decreases without bound toward negative infinity. To the right, the curve increases and levels off near y = 0. A closed point appears at approximately (4, 0), which is the highest point shown on the interval. Because the function values decrease without bound near x = 1, there is no absolute minimum on the interval, even though an absolute maximum exists.      The function is not continuous on the closed interval , and it takes values that get arbitrarily close to negative infinity as approaches 1 from either side. However, since the function decreases without bound near , there is no point in the interval where attains a minimum value. Therefore, there is no finite absolute minimum on this interval.  Note that this function does happen to have an absolute maximum of at . Again the extreme value theorem does not guarantee that either a maximum or minimum will exist in this case but they may happen to exist. In this case we have an absolute maximum but no absolute minimum.   "
 },
 {
   "id": "def-local-extrema",
   "level": "2",
   "url": "sec-derivApp-extrema.html#def-local-extrema",
   "type": "Definition",
-  "number": "3.4.5",
+  "number": "3.4.10",
   "title": "Local Maximum and Minimum.",
-  "body": " Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to .  A local minimum of a function occurs at if for all sufficiently close to .   "
+  "body": " Local Maximum and Minimum   A local maximum of a function occurs at if for all sufficiently close to in the domain of .  A local minimum of a function occurs at if for all sufficiently close to in the domain of .   "
+},
+{
+  "id": "fig-local-absolute-extrema",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#fig-local-absolute-extrema",
+  "type": "Figure",
+  "number": "3.4.11",
+  "title": "",
+  "body": " A graph illustrating the difference between local extrema and absolute extrema. The curve contains multiple turning points, including local maxima, local minima, one absolute minimum, and one absolute maximum.   A smooth curve defined on a closed interval from approximately x = 0 to x = 4. At x = 0 there is a local maximum near y = 0. The curve decreases to a lowest point near x = 0.5 with y = -3.5, labeled both local minimum and absolute minimum. The graph then rises to a local maximum at x = 2 with y = 3. It decreases again to a local minimum at x = 3 with y = 2. Finally, the graph increases to its highest point at x = 4 with y = 4, labeled both local maximum and absolute maximum. This image shows that absolute extrema are the highest and lowest values on the entire interval, while local extrema occur at nearby turning points.   "
 },
 {
   "id": "thm-first-derivative-extrema",
   "level": "2",
   "url": "sec-derivApp-extrema.html#thm-first-derivative-extrema",
   "type": "Theorem",
-  "number": "3.4.6",
+  "number": "3.4.12",
   "title": "First Derivative Test for Extrema.",
   "body": " First Derivative Test for Extrema   If has a local maximum or minimum at an interior point and is differentiable at , then .   "
 },
@@ -4523,72 +4586,162 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-extrema.html#ssec-derivatives-extrema-4",
   "type": "Remark",
-  "number": "3.4.7",
+  "number": "3.4.13",
   "title": "",
-  "body": " The converse is not true. A point where need not be a maximum or minimum.  "
+  "body": " The converse is not true. A point where need not be a maximum or minimum. For instance, has a critical point at , but it is neither a maximum nor a minimum (can verify by graphing or by testing values of near 0).  "
 },
 {
   "id": "def-critical-point",
   "level": "2",
   "url": "sec-derivApp-extrema.html#def-critical-point",
   "type": "Definition",
-  "number": "3.4.8",
+  "number": "3.4.14",
   "title": "Critical Point.",
-  "body": " Critical Point   A critical point (or critical number ) of a function is a point where either    "
+  "body": " Critical Point   A critical point (or critical number ) of a function is a point in the domain of where either    "
+},
+{
+  "id": "ssec-derivatives-extrema-8",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ssec-derivatives-extrema-8",
+  "type": "Example",
+  "number": "3.4.15",
+  "title": "",
+  "body": "  Find the critical point(s) of .    We compute the derivative: Setting this equal to zero gives us Since the derivative is defined for all real numbers, there are no points where the derivative is undefined. Therefore, the only critical point of is at .   "
+},
+{
+  "id": "ssec-derivatives-extrema-9",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ssec-derivatives-extrema-9",
+  "type": "Example",
+  "number": "3.4.16",
+  "title": "",
+  "body": "  Find the critical point(s) of .    We compute the derivative using the power rule: Setting this equal to zero gives us This equation has no solution because the expression on the left is never zero for any real number . However, the derivative is undefined at because of the negative exponent. Therefore, the only critical point of is at .   "
 },
 {
   "id": "strat-extrema",
   "level": "2",
   "url": "sec-derivApp-extrema.html#strat-extrema",
   "type": "Strategy",
-  "number": "3.4.9",
+  "number": "3.4.17",
   "title": "Finding Absolute Maxima and Minima.",
-  "body": " Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.  If is not continuous, also examine behavior near discontinuities.   "
+  "body": " Finding Absolute Maxima and Minima  To find the absolute maximum and minimum of a function on a closed interval :   Find all critical points of in .  Evaluate at each critical point and at the endpoints and .  The largest value is the absolute maximum; the smallest value is the absolute minimum.   "
 },
 {
-  "id": "ex-stationary-point",
+  "id": "ssec-method-extrema-4",
   "level": "2",
-  "url": "sec-derivApp-extrema.html#ex-stationary-point",
+  "url": "sec-derivApp-extrema.html#ssec-method-extrema-4",
   "type": "Example",
-  "number": "3.4.10",
+  "number": "3.4.18",
   "title": "",
-  "body": "  Consider .    We compute , so the only critical point is . However, the graph has no local maximum or minimum at this point. Instead, is a stationary point where the function briefly levels off before continuing to increase.   "
+  "body": "  Find the absolute maximum and minimum of on the interval .    We already found the critical point of in a previous example: . This critical point is in the interval . Now we evaluate at the critical point and at the endpoints:     Comparing these values, we see that the absolute maximum is , occurring at , and the absolute minimum is , occurring at .   "
 },
 {
-  "id": "ex-abs-value-extrema",
+  "id": "ssec-method-extrema-5",
   "level": "2",
-  "url": "sec-derivApp-extrema.html#ex-abs-value-extrema",
+  "url": "sec-derivApp-extrema.html#ssec-method-extrema-5",
   "type": "Example",
-  "number": "3.4.11",
+  "number": "3.4.19",
   "title": "",
-  "body": "  Let .    The derivative is undefined when the expression inside the absolute value is zero, producing corners in the graph. These points must be included as critical points, and in fact they correspond to the absolute minimum values of the function.   "
+  "body": "  Find the absolute maximum and minimum values of on the interval and the corresponding values of .    First, we find the critical points of by computing its derivative:   Setting the derivative equal to zero gives:   Both critical points are in the interval . Now we evaluate at the critical points and at the endpoints:   Comparing these values, we see that the absolute maximum is , occurring at , and the absolute minimum is , occurring at both and .   "
 },
 {
-  "id": "ex-no-absolute-maximum",
+  "id": "ex-extrema-tf-02",
   "level": "2",
-  "url": "sec-derivApp-extrema.html#ex-no-absolute-maximum",
-  "type": "Example",
-  "number": "3.4.12",
-  "title": "",
-  "body": "  Let on .    Although has critical points and endpoint values, the function increases without bound near . Therefore, has no absolute maximum on this interval, but it does have an absolute minimum.   "
-},
-{
-  "id": "exercises-extrema-2-2",
-  "level": "2",
-  "url": "sec-derivApp-extrema.html#exercises-extrema-2-2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-02",
   "type": "Exercise",
   "number": "1",
   "title": "",
-  "body": "  True or False: If , then is a local maximum or minimum.    False. A zero derivative may correspond to a stationary point.   "
+  "body": "  A function that is continuous on an open interval must have an absolute maximum on that interval.     False. A function that is continuous on an open interval is not guaranteed to have an absolute maximum on that interval. For example, the function is continuous on the open interval , but it does not have an absolute maximum because it approaches 1 as approaches 1 from the left, but never actually attains the value of 1 on the interval.   "
 },
 {
-  "id": "exercises-extrema-2-3",
+  "id": "ex-extrema-tf-03",
   "level": "2",
-  "url": "sec-derivApp-extrema.html#exercises-extrema-2-3",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-03",
   "type": "Exercise",
   "number": "2",
   "title": "",
-  "body": "  True or False: A continuous function on must have an absolute maximum.    True. This follows from the Extreme Value Theorem.   "
+  "body": "  If a function is continuous on , then it is guaranteed to attain its maximum and minimum values at critical points only.     False . If a function is continuous on a closed interval , then it is guaranteed to attain its maximum and minimum values on that interval, but these extrema may occur at critical points or at the endpoints of the interval. For example, the function on the interval has an absolute minimum at (an endpoint) and an absolute maximum at (also an endpoint), even though there are no critical points in the interior of the interval.   "
+},
+{
+  "id": "ex-extrema-tf-04",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-04",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  If a function has an absolute maximum at , then .     False . If a function has an absolute maximum at , it does not necessarily mean that . The function could have a sharp peak at where the derivative is undefined, or the maximum could occur at an endpoint of the interval where the derivative does not need to be zero. For example, the function has an absolute maximum of 3 at , but the derivative is undefined at that point due to the sharp peak.   "
+},
+{
+  "id": "ex-extrema-tf-05",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-05",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If , then must have either a local maximum or local minimum at .     False . If , it means that the tangent line to the graph of at is horizontal, but this does not necessarily imply that there is a local maximum or minimum at that point. The function could have an inflection point at , where the concavity changes but there is no local extremum. For example, the function has a critical point at where the derivative is zero, but it is neither a local maximum nor a local minimum.   "
+},
+{
+  "id": "ex-extrema-tf-08",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-08",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If a function is not continuous on , then it cannot have absolute extrema on that interval.     False . If a function is not continuous on a closed interval , it may still have absolute extrema on that interval. The lack of continuity does not necessarily prevent the function from attaining maximum or minimum values. For example, the function defined by is not continuous at , but it has an absolute maximum of 2 at and an absolute minimum of 0 at all other points in the interval.   "
+},
+{
+  "id": "ex-extrema-tf-09",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-09",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  A function can have more than one absolute minimum value on a closed interval.     True . A function can have more than one absolute minimum value on a closed interval if it attains the same minimum value at multiple points. For example, the function on the interval has an absolute maximum value of 1 at and , and an absolute minimum value of -1 at . In this case, the absolute minimum value of -1 is attained at only one point, but the absolute maximum value of 1 is attained at two different points.   "
+},
+{
+  "id": "ex-extrema-tf-16",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-16",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  The function has three critical points.     False . To find the critical points of the function , we first compute its derivative: Setting the derivative equal to zero gives us: The derivative is defined for all real numbers, so there are no points where the derivative is undefined. Therefore, the critical points of the function are at and . However, we need to check if there are any other critical points. Since the derivative is a quadratic function, it can only have two real roots, which we have already found. Therefore, there are only two critical points, not three.   "
+},
+{
+  "id": "ex-extrema-tf-17",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-17",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  The function on has its absolute minimum at an endpoint.     False . The function on the interval has its absolute minimum at , which is not an endpoint of the interval. To see this, we can evaluate the function at the endpoints and at the critical point: Comparing these values, we see that the absolute minimum value is 0, occurring at , which is an interior point of the interval, not an endpoint.   "
+},
+{
+  "id": "ex-extrema-tf-18",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-18",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  The function on has a critical point at .     True . To determine if is a critical point of the function , we first compute the derivative: The derivative is undefined at because it involves division by zero. However, for a point to be a critical point, it must be in the domain of the function. Since is in the domain of , we can consider it a critical point.   "
+},
+{
+  "id": "ex-extrema-tf-19",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-19",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  If on , then the absolute maximum occurs at .     False . To find the absolute maximum of the function on the interval , we first compute its derivative: Setting the derivative equal to zero gives us: The critical point is at , which is in the interval . Now we evaluate the function at the critical point and at the endpoints: Comparing these values, we see that the absolute maximum value is , occurring at , not at .   "
+},
+{
+  "id": "ex-extrema-tf-20",
+  "level": "2",
+  "url": "sec-derivApp-extrema.html#ex-extrema-tf-20",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  The function on has an absolute minimum on that interval.     True . The function on the interval has an absolute minimum of at and . To see this, we can evaluate the function at the endpoints and based on the graph of the function: The function has a vertical asymptote at , where the function values increase without bound as approaches 2 from either side. Therefore, the absolute minimum value of the function on the interval is , occurring at both endpoints and .   "
 },
 {
   "id": "sec-derivApp-mvt",
@@ -4597,7 +4750,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Mean Value Theorem",
-  "body": " Mean Value Theorem    State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Use the Mean Value Theorem to justify when a function must be increasing or decreasing.  Apply the Mean Value Theorem to prove basic uniqueness results for functions with given derivatives.  Solve for a value that satisfies the Mean Value Theorem in selected examples.    Derivatives tell us the instantaneous rate of change of a function. In this section, we connect derivatives to the overall behavior of a graph on an interval. The key message is that somewhere between two points, the instantaneous rate of change must match the average rate of change.   Rolle’s Theorem  We begin with a special case where the function starts and ends at the same height. In that situation, the graph must have a horizontal tangent somewhere in between.   Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .     In mathematics, the hypotheses of a theorem are the assumptions (the “if” part), and the conclusion is what we deduce from them (the “then” part). For Rolle’s Theorem, the hypotheses are continuity on , differentiability on , and the condition .   A physical interpretation can help. If represents the height of a rocket that starts and ends on its launch pad, then at some moment the rocket must have zero vertical velocity. That is exactly the conclusion .   Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .    Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.     From Secant Slopes to Tangent Slopes  Over an interval , the average rate of change of is   Geometrically, this is the slope of the secant line through and . The Mean Value Theorem says that at some point in between, the tangent slope matches this secant slope.   Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that      Rolle’s Theorem is the special case of the Mean Value Theorem when . In that case, the secant slope is , so the conclusion becomes .     Why the Mean Value Theorem is True  The proof uses Rolle’s Theorem by subtracting off the secant line. This produces a new function whose endpoints match, so Rolle’s Theorem applies.   Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to     The Mean Value Theorem guarantees that at least one such value of exists, but it does not provide a direct method to find it. In many applications, we only need to know that some exists. When practice problems ask you to find , we usually solve the equation .     An Example: Solving for a Mean Value Point    Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find a value in that satisfies the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore       Derivative Controls Direction  One of the first important consequences of the Mean Value Theorem is that the sign of the derivative controls whether a function increases or decreases.   Positive Derivative Implies Increasing   Suppose is differentiable on an interval . If for every , then is increasing on . That is, whenever in , we have .    Let be any two points in . By the Mean Value Theorem, there exists such that   Since and , we conclude , so .     A similar argument shows that if throughout an interval, then is decreasing on that interval.     Uniqueness and Why It Matters  The Mean Value Theorem also explains why derivatives can determine a function up to a constant, and why an initial value pins down a unique function.   Uniqueness Theorem   Let be differentiable on an interval .    If for all , then for some constant .    If and satisfy for all , then for some constant .    If for all and for some , then for all .      For the first claim, fix in . Apply the Mean Value Theorem to on . There exists such that   Multiplying by gives , so . Since and were arbitrary, is constant.  For the second claim, let . Then , so by the first claim, , which means .  For the third claim, from the second claim we have . Evaluate at to get . Since , we have , and therefore .      A common model for vertical motion under constant gravitational acceleration is   Explain why there is only one function that satisfies both conditions.    Suppose and both satisfy the same derivative condition and the same initial value . By the Uniqueness Theorem, if two functions have the same derivative everywhere and agree at one point, then they are the same function. Therefore for all times in the interval of interest.     This type of uniqueness matches what we expect in many physical settings: if an object is launched in the same way, the model predicts the same motion. Later in the course, we will see more examples where derivatives together with initial conditions determine a unique function.     Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for the Mean Value Theorem      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.     If is differentiable on , then the Mean Value Theorem applies on .     False. The Mean Value Theorem requires both continuity on the closed interval and differentiability on the open interval .      Rolle’s Theorem is a special case of the Mean Value Theorem.     True. If , then the secant slope is , so the Mean Value Theorem gives a point with .      If for every in an interval, then is constant on that interval.     True. This is part (a) of the Uniqueness Theorem and follows from the Mean Value Theorem.      If for every in an interval, then has no local maxima in that interval.     True. If everywhere, then is increasing, so it cannot turn from increasing to decreasing at an interior point.      Algebraic and Procedural Problems    Let on . Find all values in that satisfy the Mean Value Theorem conclusion.    Compute the secant slope:   Since , solve , so .      Consider on . (a) Verify that Rolle’s Theorem applies. (b) Find a value in such that .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so Rolle’s Theorem applies.  Differentiate:   Factor:   In , the root is .      Graphical and Applied Problems    A differentiable function satisfies and . Explain what the Mean Value Theorem guarantees about the value of for some .    The secant slope is . The Mean Value Theorem guarantees there exists such that .      Suppose and are differentiable on and satisfy for all . If and , determine .    Since the derivatives are equal everywhere, the Uniqueness Theorem implies . Evaluate at : , so . Therefore for all in the interval.      "
+  "body": " Mean Value Theorem    State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Solve for values of that satisfies the Mean Value Theorem in selected examples.    Derivatives tell us the instantaneous rate of change of a function. In this section, we connect derivatives to the overall behavior of a graph on an interval. The key message is that somewhere between two points, the instantaneous rate of change must match the average rate of change.   Rolle’s Theorem  We begin with a special case where the function starts and ends at the same height. In that situation, the graph must have a horizontal tangent somewhere in between.   Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .   A sketch of a continuous and differentiable function on the interval .   Graph of y equals f of x on the closed interval from a to b. The curve starts at a low value at x equals a, rises and levels off, reaches its highest point at x equals c, then decreases to the same low value at x equals b. Dashed lines mark the maximum height and the common endpoint height.       Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .     In mathematics, the hypotheses of a theorem are the assumptions (the “if” part), and the conclusion is what we deduce from them (the “then” part). For Rolle’s Theorem, the hypotheses are continuity on , differentiability on , and the condition .   A physical interpretation can help. If represents the height of a rocket that starts and ends on its launch pad, then at some moment the rocket must have zero vertical velocity. That is exactly the conclusion .   Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.   A sketch of a continuous (but not differentiable) function on the interval .   Graph of y equals f of x on the closed interval from a to b. The curve starts at a low value at x equals a, rises and levels off, reaches its highest point but then take a sharp turn and never has a horizontal tangent, and then decreases to the same low value at x equals b.        Consider the function   Verify that the hypotheses and conclusion of Rolle’s Theorem on the interval .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so the hypotheses of Rolle’s Theorem are satisfied. Differentiating gives . Setting this equal to zero gives , which is in the interval . Therefore there exists such that , as Rolle’s Theorem predicts.      Derivatives versus Difference Quotients  Throughout our theory, the derivative has been shadowed by the difference quotient , over some interval . Numerically, the difference quotient is an approximation to the derivative , provided is small. In physical terms, the difference quotient is the average rate of change of over . Geometrically, in terms of the graph , the difference quotient is the slope of the secant line cutting through the points and .  Now we come to the basic theorem that connects the derivative of a function with its basic properties. It says that the derivative is somewhere exactly equal to the difference quotient, that is, the slope of one particular tangent line is equal to the slope of the secant line.   Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that    Graph of on the interval showing a secant line through and and a tangent line at that is parallel to the secant, illustrating the Mean Value Theorem.   A smooth curve labeled y equals f of x runs from x equals a to x equals b. A dashed blue secant line connects the endpoints at a and b. A dashed red tangent line at an interior point c is parallel to the secant line. The points a, c, and b are marked on the x axis.      The proof uses Rolle’s Theorem by subtracting off the secant line. This produces a new function whose endpoints match, so Rolle’s Theorem applies.  Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to      Rolle’s Theorem is the special case of the Mean Value Theorem when . In that case, the secant slope is , so the conclusion becomes .    The Mean Value Theorem guarantees that at least one such value of exists, but it does not provide a direct method to find it. In many applications, we only need to know that some exists. When practice problems ask you to find , we usually solve the equation .     Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find all values of that satisfy the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore    Graph of on showing a secant line from to and a tangent line at that is parallel to the secant, illustrating the Mean Value Theorem for a specific function.   The graph of y equals 5 times the square root of x minus x to the three halves, drawn from x equals 0 to x equals 4. A dashed blue secant line connects the points at x equals 0 and x equals 4. A dashed red tangent line at an interior point labeled c is parallel to the secant line. The point of tangency is marked on the curve.        Derivative Controls Direction  One of the first important consequences of the Mean Value Theorem it allows us to prove some intuition we have about how the sign of the derivative controls whether a function increases or decreases. Intuitively if the slope of the tangent line is positive, then the function should be increasing. The Mean Value Theorem allows us to make this intuition precise and rigorous. This will become increasingly important as we move into the next sections on curve sketching and optimization.   Positive Derivative Implies Increasing   Suppose is differentiable on an interval . If for every , then is increasing on . That is, whenever in , we have .    Let be any two points in . By the Mean Value Theorem, there exists such that   Since and , we conclude , so .     A similar argument shows that if throughout an interval, then is decreasing on that interval.      Additional Worked-Out Examples  To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in:  Additional Examples for the Mean Value Theorem      Practice \/ Study Problems   Some True\/False Problems   Determine whether each statement is true or false and explain your reasoning.     If a function is continuous on and differentiable on , then there exists exactly one number satisfying the Mean Value Theorem.     False. The Mean Value Theorem guarantees at least one such , but there may be more than one. For example, for on , both and satisfy the conclusion.      If and is continuous on but not differentiable at some point in , then Rolle’s Theorem still guarantees a value such that .     False. Rolle’s Theorem requires differentiability on the entire open interval . If there is a point where the function is not differentiable, then the conclusion can fail. For example, for on , we have , and is continuous on , but there is no value of such that .      If for every in , then .     True. By the Mean Value Theorem, there exists such that . Since , we have , which implies , so .      The Mean Value Theorem guarantees that the tangent line at passes through the points and .     False. The Mean Value Theorem guarantees that the tangent line at is parallel to the secant line through and , but it does not guarantee that the tangent line passes through those points.      If is differentiable on and continuous on , then there exists such that .     True. This is exactly the statement of the Mean Value Theorem.      If for all in where , then .     True. By the Mean Value Theorem, there exists such that . Since and , we have , which implies .      For on , there exists such that .     True. The function is a polynomial, so it is continuous on and differentiable on . Compute the average rate of change:   By the Mean Value Theorem, there exists such that . In fact, since , we can solve to find .      The Mean Value Theorem applies to every polynomial on any closed interval.     True. Polynomials are continuous and differentiable everywhere, so the Mean Value Theorem applies on any closed interval.      If , then must be the midpoint of .     False. The Mean Value Theorem guarantees the existence of some such that , but it does not guarantee that is the midpoint. In many cases, is not the midpoint. For example see       For on , the Mean Value Theorem applies.     True. The function is continuous for , so it is continuous on . Also, the derivative exists for every , so the Mean Value Theorem applies.      Algebraic and Procedural Problems    Let on . Find all values in that satisfy the Mean Value Theorem conclusion.    Compute the secant slope:   Since , solve , so .      Consider on . (a) Verify that Rolle’s Theorem applies. (b) Find a value in such that .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so Rolle’s Theorem applies.  Differentiate:   Factor:   In , the root is .      A differentiable function satisfies and . Explain what the Mean Value Theorem guarantees about the value of for some .    The secant slope is . The Mean Value Theorem guarantees there exists such that .      "
 },
 {
   "id": "sec-derivApp-mvt-2",
@@ -4606,7 +4759,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "3.5",
   "title": "",
-  "body": "  State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Use the Mean Value Theorem to justify when a function must be increasing or decreasing.  Apply the Mean Value Theorem to prove basic uniqueness results for functions with given derivatives.  Solve for a value that satisfies the Mean Value Theorem in selected examples.   "
+  "body": "  State Rolle’s Theorem and the Mean Value Theorem, including all hypotheses.  Interpret the Mean Value Theorem geometrically as a tangent line parallel to a secant line.  Solve for values of that satisfies the Mean Value Theorem in selected examples.   "
 },
 {
   "id": "thm-rolles",
@@ -4615,68 +4768,59 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "3.5.1",
   "title": "Rolle’s Theorem.",
-  "body": " Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .   "
+  "body": " Rolle’s Theorem   Let be continuous on and differentiable on . If , then there exists a number in such that .   A sketch of a continuous and differentiable function on the interval .   Graph of y equals f of x on the closed interval from a to b. The curve starts at a low value at x equals a, rises and levels off, reaches its highest point at x equals c, then decreases to the same low value at x equals b. Dashed lines mark the maximum height and the common endpoint height.       Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .   "
 },
 {
   "id": "rem-hypothesis-conclusion",
   "level": "2",
   "url": "sec-derivApp-mvt.html#rem-hypothesis-conclusion",
   "type": "Remark",
-  "number": "3.5.2",
+  "number": "3.5.3",
   "title": "",
   "body": " In mathematics, the hypotheses of a theorem are the assumptions (the “if” part), and the conclusion is what we deduce from them (the “then” part). For Rolle’s Theorem, the hypotheses are continuity on , differentiability on , and the condition .  "
-},
-{
-  "id": "pf-rolles",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#pf-rolles",
-  "type": "Proof",
-  "number": "1",
-  "title": "",
-  "body": " Since is continuous on , the Extreme Value Theorem guarantees that has an absolute maximum value and an absolute minimum value on .  If a maximum (or minimum) occurs at an interior point , then has a local extremum there. Since is differentiable at , the derivative must satisfy .  If instead both the maximum and minimum occur only at endpoints, then the condition forces the maximum value and minimum value to be the same. In that case, must be constant on , and therefore for every .  In all cases, there exists such that .  "
 },
 {
   "id": "rem-rolles-necessity",
   "level": "2",
   "url": "sec-derivApp-mvt.html#rem-rolles-necessity",
   "type": "Remark",
-  "number": "3.5.3",
+  "number": "3.5.4",
   "title": "",
-  "body": " Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.  "
+  "body": " Each hypothesis matters. If a function is not differentiable (for example, it has a corner), then the conclusion can fail. A graph can rise and then fall sharply without ever having a well-defined horizontal tangent.   A sketch of a continuous (but not differentiable) function on the interval .   Graph of y equals f of x on the closed interval from a to b. The curve starts at a low value at x equals a, rises and levels off, reaches its highest point but then take a sharp turn and never has a horizontal tangent, and then decreases to the same low value at x equals b.     "
+},
+{
+  "id": "ex-rolles01",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#ex-rolles01",
+  "type": "Example",
+  "number": "3.5.6",
+  "title": "",
+  "body": "  Consider the function   Verify that the hypotheses and conclusion of Rolle’s Theorem on the interval .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so the hypotheses of Rolle’s Theorem are satisfied. Differentiating gives . Setting this equal to zero gives , which is in the interval . Therefore there exists such that , as Rolle’s Theorem predicts.   "
 },
 {
   "id": "thm-mvt",
   "level": "2",
   "url": "sec-derivApp-mvt.html#thm-mvt",
   "type": "Theorem",
-  "number": "3.5.4",
+  "number": "3.5.7",
   "title": "Mean Value Theorem.",
-  "body": " Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that    "
+  "body": " Mean Value Theorem   Let be continuous on and differentiable on . Then there exists a number in such that    Graph of on the interval showing a secant line through and and a tangent line at that is parallel to the secant, illustrating the Mean Value Theorem.   A smooth curve labeled y equals f of x runs from x equals a to x equals b. A dashed blue secant line connects the endpoints at a and b. A dashed red tangent line at an interior point c is parallel to the secant line. The points a, c, and b are marked on the x axis.      The proof uses Rolle’s Theorem by subtracting off the secant line. This produces a new function whose endpoints match, so Rolle’s Theorem applies.  Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to    "
 },
 {
   "id": "rem-rolles-special-case",
   "level": "2",
   "url": "sec-derivApp-mvt.html#rem-rolles-special-case",
   "type": "Remark",
-  "number": "3.5.5",
+  "number": "3.5.9",
   "title": "",
   "body": " Rolle’s Theorem is the special case of the Mean Value Theorem when . In that case, the secant slope is , so the conclusion becomes .  "
-},
-{
-  "id": "pf-mvt",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#pf-mvt",
-  "type": "Proof",
-  "number": "1",
-  "title": "",
-  "body": " Assume is continuous on and differentiable on . Define a new function   The function is continuous on and differentiable on , since it is built from and linear functions. Also,   and similarly . Therefore , and Rolle’s Theorem applies. So there exists such that .  Differentiate :   Substituting and using gives   which is equivalent to   "
 },
 {
   "id": "rem-mvt-finding-c",
   "level": "2",
   "url": "sec-derivApp-mvt.html#rem-mvt-finding-c",
   "type": "Remark",
-  "number": "3.5.6",
+  "number": "3.5.10",
   "title": "",
   "body": " The Mean Value Theorem guarantees that at least one such value of exists, but it does not provide a direct method to find it. In many applications, we only need to know that some exists. When practice problems ask you to find , we usually solve the equation .  "
 },
@@ -4685,16 +4829,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-mvt.html#ex-mvt-sqrt",
   "type": "Example",
-  "number": "3.5.7",
+  "number": "3.5.11",
   "title": "",
-  "body": "  Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find a value in that satisfies the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore    "
+  "body": "  Let on the interval . Verify that the hypotheses of the Mean Value Theorem apply, and find all values of that satisfy the conclusion.    The function is continuous for , so is continuous on . Differentiating (for ),   This derivative exists for every in , so the Mean Value Theorem applies. Compute the average rate of change:   We solve :   Multiply both sides by (valid since ):   Let , so . Then the equation becomes   Using the quadratic formula,   Since , we take the positive root: . Therefore    Graph of on showing a secant line from to and a tangent line at that is parallel to the secant, illustrating the Mean Value Theorem for a specific function.   The graph of y equals 5 times the square root of x minus x to the three halves, drawn from x equals 0 to x equals 4. A dashed blue secant line connects the points at x equals 0 and x equals 4. A dashed red tangent line at an interior point labeled c is parallel to the secant line. The point of tangency is marked on the curve.     "
 },
 {
   "id": "thm-positive-derivative-increasing",
   "level": "2",
   "url": "sec-derivApp-mvt.html#thm-positive-derivative-increasing",
   "type": "Theorem",
-  "number": "3.5.8",
+  "number": "3.5.13",
   "title": "Positive Derivative Implies Increasing.",
   "body": " Positive Derivative Implies Increasing   Suppose is differentiable on an interval . If for every , then is increasing on . That is, whenever in , we have .    Let be any two points in . By the Mean Value Theorem, there exists such that   Since and , we conclude , so .   "
 },
@@ -4703,79 +4847,106 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-mvt.html#rem-negative-derivative",
   "type": "Remark",
-  "number": "3.5.9",
+  "number": "3.5.14",
   "title": "",
   "body": " A similar argument shows that if throughout an interval, then is decreasing on that interval.  "
 },
 {
-  "id": "thm-uniqueness",
+  "id": "exercises-mvt-2-3",
   "level": "2",
-  "url": "sec-derivApp-mvt.html#thm-uniqueness",
-  "type": "Theorem",
-  "number": "3.5.10",
-  "title": "Uniqueness Theorem.",
-  "body": " Uniqueness Theorem   Let be differentiable on an interval .    If for all , then for some constant .    If and satisfy for all , then for some constant .    If for all and for some , then for all .      For the first claim, fix in . Apply the Mean Value Theorem to on . There exists such that   Multiplying by gives , so . Since and were arbitrary, is constant.  For the second claim, let . Then , so by the first claim, , which means .  For the third claim, from the second claim we have . Evaluate at to get . Since , we have , and therefore .   "
-},
-{
-  "id": "ex-uniqueness-ballistic",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#ex-uniqueness-ballistic",
-  "type": "Example",
-  "number": "3.5.11",
-  "title": "",
-  "body": "  A common model for vertical motion under constant gravitational acceleration is   Explain why there is only one function that satisfies both conditions.    Suppose and both satisfy the same derivative condition and the same initial value . By the Uniqueness Theorem, if two functions have the same derivative everywhere and agree at one point, then they are the same function. Therefore for all times in the interval of interest.   "
-},
-{
-  "id": "rem-physical-law",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#rem-physical-law",
-  "type": "Remark",
-  "number": "3.5.12",
-  "title": "",
-  "body": " This type of uniqueness matches what we expect in many physical settings: if an object is launched in the same way, the model predicts the same motion. Later in the course, we will see more examples where derivatives together with initial conditions determine a unique function.  "
-},
-{
-  "id": "tf-mvt-01",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#tf-mvt-01",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-3",
   "type": "Exercise",
   "number": "1",
   "title": "",
-  "body": "  If is differentiable on , then the Mean Value Theorem applies on .     False. The Mean Value Theorem requires both continuity on the closed interval and differentiability on the open interval .   "
+  "body": "  If a function is continuous on and differentiable on , then there exists exactly one number satisfying the Mean Value Theorem.     False. The Mean Value Theorem guarantees at least one such , but there may be more than one. For example, for on , both and satisfy the conclusion.   "
 },
 {
-  "id": "tf-mvt-02",
+  "id": "exercises-mvt-2-4",
   "level": "2",
-  "url": "sec-derivApp-mvt.html#tf-mvt-02",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-4",
   "type": "Exercise",
   "number": "2",
   "title": "",
-  "body": "  Rolle’s Theorem is a special case of the Mean Value Theorem.     True. If , then the secant slope is , so the Mean Value Theorem gives a point with .   "
+  "body": "  If and is continuous on but not differentiable at some point in , then Rolle’s Theorem still guarantees a value such that .     False. Rolle’s Theorem requires differentiability on the entire open interval . If there is a point where the function is not differentiable, then the conclusion can fail. For example, for on , we have , and is continuous on , but there is no value of such that .   "
 },
 {
-  "id": "tf-mvt-03",
+  "id": "exercises-mvt-2-5",
   "level": "2",
-  "url": "sec-derivApp-mvt.html#tf-mvt-03",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-5",
   "type": "Exercise",
   "number": "3",
   "title": "",
-  "body": "  If for every in an interval, then is constant on that interval.     True. This is part (a) of the Uniqueness Theorem and follows from the Mean Value Theorem.   "
+  "body": "  If for every in , then .     True. By the Mean Value Theorem, there exists such that . Since , we have , which implies , so .   "
 },
 {
-  "id": "tf-mvt-04",
+  "id": "exercises-mvt-2-6",
   "level": "2",
-  "url": "sec-derivApp-mvt.html#tf-mvt-04",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-6",
   "type": "Exercise",
   "number": "4",
   "title": "",
-  "body": "  If for every in an interval, then has no local maxima in that interval.     True. If everywhere, then is increasing, so it cannot turn from increasing to decreasing at an interior point.   "
+  "body": "  The Mean Value Theorem guarantees that the tangent line at passes through the points and .     False. The Mean Value Theorem guarantees that the tangent line at is parallel to the secant line through and , but it does not guarantee that the tangent line passes through those points.   "
+},
+{
+  "id": "exercises-mvt-2-7",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-7",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If is differentiable on and continuous on , then there exists such that .     True. This is exactly the statement of the Mean Value Theorem.   "
+},
+{
+  "id": "exercises-mvt-2-8",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-8",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  If for all in where , then .     True. By the Mean Value Theorem, there exists such that . Since and , we have , which implies .   "
+},
+{
+  "id": "exercises-mvt-2-9",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-9",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  For on , there exists such that .     True. The function is a polynomial, so it is continuous on and differentiable on . Compute the average rate of change:   By the Mean Value Theorem, there exists such that . In fact, since , we can solve to find .   "
+},
+{
+  "id": "exercises-mvt-2-10",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-10",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  The Mean Value Theorem applies to every polynomial on any closed interval.     True. Polynomials are continuous and differentiable everywhere, so the Mean Value Theorem applies on any closed interval.   "
+},
+{
+  "id": "exercises-mvt-2-11",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-11",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  If , then must be the midpoint of .     False. The Mean Value Theorem guarantees the existence of some such that , but it does not guarantee that is the midpoint. In many cases, is not the midpoint. For example see    "
+},
+{
+  "id": "exercises-mvt-2-12",
+  "level": "2",
+  "url": "sec-derivApp-mvt.html#exercises-mvt-2-12",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  For on , the Mean Value Theorem applies.     True. The function is continuous for , so it is continuous on . Also, the derivative exists for every , so the Mean Value Theorem applies.   "
 },
 {
   "id": "prob-mvt-find-c-poly",
   "level": "2",
   "url": "sec-derivApp-mvt.html#prob-mvt-find-c-poly",
   "type": "Exercise",
-  "number": "5",
+  "number": "11",
   "title": "",
   "body": "  Let on . Find all values in that satisfy the Mean Value Theorem conclusion.    Compute the secant slope:   Since , solve , so .   "
 },
@@ -4784,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-mvt.html#prob-rolles-check",
   "type": "Exercise",
-  "number": "6",
+  "number": "12",
   "title": "",
   "body": "  Consider on . (a) Verify that Rolle’s Theorem applies. (b) Find a value in such that .    The function is a polynomial, so it is continuous on and differentiable on . Also and , so Rolle’s Theorem applies.  Differentiate:   Factor:   In , the root is .   "
 },
@@ -4793,18 +4964,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-derivApp-mvt.html#prob-mvt-graphical",
   "type": "Exercise",
-  "number": "7",
+  "number": "13",
   "title": "",
   "body": "  A differentiable function satisfies and . Explain what the Mean Value Theorem guarantees about the value of for some .    The secant slope is . The Mean Value Theorem guarantees there exists such that .   "
-},
-{
-  "id": "prob-uniqueness-constant-diff",
-  "level": "2",
-  "url": "sec-derivApp-mvt.html#prob-uniqueness-constant-diff",
-  "type": "Exercise",
-  "number": "8",
-  "title": "",
-  "body": "  Suppose and are differentiable on and satisfy for all . If and , determine .    Since the derivatives are equal everywhere, the Uniqueness Theorem implies . Evaluate at : , so . Therefore for all in the interval.   "
 },
 {
   "id": "sec-derivApp-curve1",

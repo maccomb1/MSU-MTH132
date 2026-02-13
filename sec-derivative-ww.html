@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.12';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -429,11 +429,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-derivApp-extrema.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Extrema</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-absolute-extrema" class="internal"><span class="title">Absolute Maxima and Minima</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#subsec-EVT" class="internal"><span class="title">Extreme Value Theorem</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-local-extrema" class="internal"><span class="title">Local Maxima and Minima</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-derivatives-extrema" class="internal"><span class="title">Derivatives and Extrema</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-critical-points" class="internal"><span class="title">Critical Points</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-method-extrema" class="internal"><span class="title">A Method for Finding Absolute Extrema</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-extrema-examples" class="internal"><span class="title">Examples and Common Pitfalls</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#ssec-method-extrema" class="internal"><span class="title">Finding Absolute Extrema</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#additional-worked-problems-derivApp-extrema" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-extrema.html#exercises-extrema" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -442,11 +441,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-derivApp-mvt.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Mean Value Theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-rolles" class="internal"><span class="title">Rolle’s Theorem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-mvt-statement" class="internal"><span class="title">From Secant Slopes to Tangent Slopes</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-mvt-proof" class="internal"><span class="title">Why the Mean Value Theorem is True</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-mvt-example" class="internal"><span class="title">An Example: Solving for a Mean Value Point</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-mvt-statement" class="internal"><span class="title">Derivatives versus Difference Quotients</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-derivative-controls-direction" class="internal"><span class="title">Derivative Controls Direction</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#ssec-uniqueness" class="internal"><span class="title">Uniqueness and Why It Matters</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#additional-worked-examples-mvt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-mvt.html#exercises-mvt" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -603,9 +599,147 @@ eBookConfig.enable_chatcodes =  false;
 <section class="subsection" id="subsec-deriv-intro"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2.1 Introduction and Motivation for Derivatives</span>
 </h3>
-<div class="para" id="subsec-deriv-intro-2">test<div class="autopermalink" data-description="Paragraph"><a href="#subsec-deriv-intro-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="example example-like" id="ex-deriv-ww-1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-deriv-ww-1-1-1">Find the average rate of change of the function <span class="process-math">\(f(x) = \tan(x)-x\)</span> on the interval <span class="process-math">\([-\frac{\pi}{4}, \frac{\pi}{4}]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection: Section 2.1 Introduction and Motivation for Derivatives"><a href="#subsec-deriv-intro" title="Copy heading and permalink for Subsection: Section 2.1 Introduction and Motivation for Derivatives" aria-label="Copy heading and permalink for Subsection: Section 2.1 Introduction and Motivation for Derivatives">🔗</a></div></section><section class="subsection" id="subsec-deriv-defn"><h3 class="heading hide-type">
+<div class="solutions"><details id="ex-deriv-ww-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-deriv-ww-1-2-1">To find the average rate of change of the function <span class="process-math">\(f(x) = \tan(x)-x\)</span> on the interval <span class="process-math">\([-\frac{\pi}{4}, \frac{\pi}{4}]\text{,}\)</span> we use the formula for the average rate of change:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Average Rate of Change} = \frac{f(b) - f(a)}{b - a} 
+\end{equation*}
+</div>
+<div class="para" id="ex-deriv-ww-1-2-3">where <span class="process-math">\(a = -\frac{\pi}{4}\)</span> and <span class="process-math">\(b = \frac{\pi}{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-deriv-ww-1-2-4">First, we calculate <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(-\frac{\pi}{4}\right) = \tan\left(-\frac{\pi}{4}\right) - \left(-\frac{\pi}{4}\right) = -1 + \frac{\pi}{4} 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(\frac{\pi}{4}\right) = \tan\left(\frac{\pi}{4}\right) - \frac{\pi}{4} = 1 - \frac{\pi}{4} 
+\end{equation*}
+</div>
+<div class="para" id="ex-deriv-ww-1-2-7">Now, we substitute these values into the average rate of change formula and simplify:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+\text{Average Rate of Change} &amp; = &amp; \dfrac{\left(1 - \frac{\pi}{4}\right) - \left(-1 + \frac{\pi}{4}\right)}{\frac{\pi}{4} - \left(-\frac{\pi}{4}\right)} \\
+&amp; = &amp; \dfrac{1 - \frac{\pi}{4} + 1 - \frac{\pi}{4}}{\frac{\pi}{4} + \frac{\pi}{4}} \\
+&amp; = &amp; \dfrac{2 - \frac{\pi}{2}}{\frac{\pi}{2}} \\
+&amp; = &amp; \dfrac{2}{\frac{\pi}{2}} - 1 \\
+&amp; = &amp; \dfrac{4}{\pi} - 1
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="ex-deriv-ww-1-2-9">Therefore, the average rate of change of the function <span class="process-math">\(f(x) = \tan(x)-x\)</span> on the interval <span class="process-math">\([-\frac{\pi}{4}, \frac{\pi}{4}]\)</span> is <span class="process-math">\(\frac{4}{\pi} - 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.8.1.1"><a href="#ex-deriv-ww-1-2" title="Copy heading and permalink for Solution 2.8.1.1" aria-label="Copy heading and permalink for Solution 2.8.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.8.1"><a href="#ex-deriv-ww-1" title="Copy heading and permalink for Example 2.8.1" aria-label="Copy heading and permalink for Example 2.8.1">🔗</a></div></article><article class="example example-like" id="ex-secant-tangent-polynomial"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-secant-tangent-polynomial-1-1">Let <span class="process-math">\(f(x)=x^2 - 4x + 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-secant-tangent-polynomial-1-2">(a) Find the slope of the secant line joining <span class="process-math">\(P(1,f(1))\)</span> and <span class="process-math">\(Q(5,f(5))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-secant-tangent-polynomial-1-3">(b) Find the slope of the secant line joining <span class="process-math">\(P(2,f(2))\)</span> and <span class="process-math">\(Q(2+h,f(2+h))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-secant-tangent-polynomial-1-4">(c) Find the slope of the tangent line at <span class="process-math">\(P(2,f(2))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-secant-tangent-polynomial-1-5">(d) Find the equation of the tangent line at <span class="process-math">\(P(2,f(2))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-secant-tangent-polynomial-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-secant-tangent-polynomial-2-1">(a) The slope of the secant line is<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(5)-f(1)}{5-1}.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-3">Compute the function values:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl}
+f(1) &amp; =&amp; 1 - 4 + 1 = -2, \\
+f(5) &amp; =&amp; 25 - 20 + 1 = 6.
+\end{array}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{6-(-2)}{4} = \frac{8}{4} = 2.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-6">So the slope of the secant line is <span class="process-math">\(2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-7">(b) The slope of the secant line is<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(2+h)-f(2)}{h}.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-9">First compute:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(2) = 4 - 8 + 1 = -3.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(2+h) = (2+h)^2 - 4(2+h) + 1.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-12">Expand:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(2+h) = 4 + 4h + h^2 - 8 - 4h + 1 = h^2 - 3.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-14">So the difference quotient becomes<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(h^2 - 3) - (-3)}{h}
+=
+\frac{h^2}{h}
+=
+h.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-16">(c) The slope of the tangent line is the limit as <span class="process-math">\(h \to 0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{h\to 0} h = 0.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-18">So the slope of the tangent line at <span class="process-math">\(x=2\)</span> is <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-19">(d) Using point-slope form:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y - (-3) = 0(x-2).
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = -3.
+\end{equation*}
+</div>
+<div class="para" id="ex-secant-tangent-polynomial-2-22">The tangent line is horizontal at <span class="process-math">\(y=-3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.8.2.1"><a href="#ex-secant-tangent-polynomial-2" title="Copy heading and permalink for Solution 2.8.2.1" aria-label="Copy heading and permalink for Solution 2.8.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.8.2"><a href="#ex-secant-tangent-polynomial" title="Copy heading and permalink for Example 2.8.2" aria-label="Copy heading and permalink for Example 2.8.2">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Section 2.1 Introduction and Motivation for Derivatives"><a href="#subsec-deriv-intro" title="Copy heading and permalink for Subsection: Section 2.1 Introduction and Motivation for Derivatives" aria-label="Copy heading and permalink for Subsection: Section 2.1 Introduction and Motivation for Derivatives">🔗</a></div></section><section class="subsection" id="subsec-deriv-defn"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2.2 Definition of the Derivative</span>
 </h3>
 <div class="para" id="subsec-deriv-defn-2">test<div class="autopermalink" data-description="Paragraph"><a href="#subsec-deriv-defn-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
