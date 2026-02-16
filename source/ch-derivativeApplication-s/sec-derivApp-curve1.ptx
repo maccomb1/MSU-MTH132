@@ -104,8 +104,21 @@
         <p>(c) Use your sketch from (b) to classify the critical points as local maxima, minima, or neither. 
         </p>
       </statement>
+      <solution> <title>Video Solution</title>
+      
+      
+        <p>
+          Here is a video solution to this problem.
+        </p>
 
-      <solution>
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+      </solution>
+      <solution> <title>Written Solution</title>
+      
+      
         <p>
           (a) Differentiate:
         </p>
@@ -179,38 +192,30 @@
 </figure>
 
 
-        <p>And here is a good final sketch. Remember at the critical points the slope is zero so the graph should flatten out near these points</p>
+        <p>And here is a good final sketch. Remember at the critical points the slope is zero so the graph should flatten out near these points. 
+          Also polynomial functions are differentiable everywhere so we should not have any sharp corners or cusps.</p>
 
-<figure xml:id="fig-inc-dec-intervals">
+<figure xml:id="fig-inc-dec-intervals2">
   <caption>
-    A sign chart indicating where a function is increasing and decreasing.
-    Along with the critical points. 
+    A sign chart indicating where a function is increasing and decreasing, the critical points, and a sketch of the graph connecting them.
   </caption>
 
-  <image source="images/curvePlot1.PNG" width="85%">
+  <image source="images/curvePlot2.PNG" width="85%">
     <shortdescription>
     A graph with vertical dashed lines at x = -3, 0, and 3 dividing the real line into four intervals.
     The leftmost and rightmost regions are labeled INC (increasing), while the two middle regions are labeled DEC (decreasing).
-    Points marking critical values are shown on the graph.
+    Points marking critical values are shown on the graph. A curve connects the critical points, rising from the left to the first critical point at (-3, 162), then falling to the second critical point at (0, 0), 
+    then falling again to the third critical point at (3, -162), and finally rising again to the right.
   </shortdescription>
   </image>
 
 </figure>
 
 
-
-
-        <p>
-          The function changes from increasing to decreasing at <m>x=-3</m>,
-          so there is a local maximum at <m>x=-3</m>.
-          The function changes from decreasing to increasing at <m>x=3</m>,
-          so there is a local minimum at <m>x=3</m>.
-        </p>
-
-        <p>
-          At <m>x=0</m>, the derivative is zero but the function is decreasing on both sides,
-          so <m>x=0</m> is a stationary point rather than a local extremum.
-        </p>
+    <p>(c) The function changes from increasing to decreasing at <m>x=-3</m>, so there is a local maximum at <m>x=-3</m>.
+          The function changes from decreasing to increasing at <m>x=3</m>, so there is a local minimum at <m>x=3</m>.
+          At <m>x=0</m>, the derivative is zero but the function is decreasing on both sides, so <m>x=0</m> is neither a local maximum nor a local minimum.
+ </p>
 
         <!--
         <remark xml:id="rem-odd-symmetry">
@@ -223,13 +228,15 @@
       </solution>
     </example>
 
+    <p> Now let's formalize the classification of critical points like we did in the last example using the first derivative. </p>
+
     <theorem xml:id="thm-first-derivative-test">
       <title>First Derivative Test</title>
       <statement>
         <p>
           Let <m>f</m> be differentiable on an interval around <m>c</m> and suppose <m>f'(c)=0</m>.
         </p>
-        <ul>
+        <ul> 
           <li>
             <p>
               If <m>f'(x)&gt;0</m> for <m>x&lt;c</m> and <m>f'(x)&lt;0</m> for <m>x&gt;c</m>,
@@ -253,16 +260,102 @@
     </theorem>
   </subsection>
 
+  <p>So with only the first derivative, we can determine where a function is increasing or decreasing and classify critical points as local maxima, minima, or neither. 
+    However, there are other features of the graph that we can analyze using the second derivative. </p>
+
+
   <subsection xml:id="ssec-concavity">
     <title>Concavity and Inflection Points</title>
 
     <p>
       Increasing and decreasing behavior describes whether the graph rises or falls.
       Concavity describes how the graph bends.
-      A graph is <term>concave up</term> when it looks like a smile, and <term>concave down</term>
-      when it looks like a frown.
+    </p> 
+
+    <definition xml:id="def-concavity">
+      <statement>
+        <p>
+          A graph is <term>concave up</term> when it looks like a smile, the curve is bending upwards. The graph is <term>concave down</term>
+      when it looks like a frown, the curve is bending downwards.
       An <term>inflection point</term> is a point where the concavity changes.
-    </p>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-concavity-visual">
+      <p>  Concavity is independent of increasing/decreasing behavior. A graph can be increasing and concave down at the same time, for example. 
+        Here are some examples of graphs with different combinations of increasing/decreasing and concavity.
+      </p> 
+
+
+        <figure xml:id="fig-basic-inc-dec">
+  <caption>
+    A diagram showing what concavity looks like for increasing and decreasing functions.
+  </caption>
+
+
+
+  <image width="100%">
+<shortdescription>
+Six small coordinate graphs arranged in two columns and three rows. 
+Top left: an increasing curve that is concave down, labeled “INC and CON down.” 
+Top right: a decreasing curve that is concave down, labeled “DEC and CON down.” 
+Middle left: an increasing curve that is concave up, labeled “INC and CON up.” 
+Middle right: a decreasing curve that is concave up, labeled “DEC and CON up.” 
+Bottom left: a cubic-shaped curve with an inflection point at x = 2 marked by a dot, labeled “INFLECTION POINT.” 
+Bottom right: a reflected cubic-shaped curve with an inflection point at x = 2 marked by a dot, labeled “INFLECTION POINT.”
+</shortdescription>
+
+    <latex-image><![CDATA[
+
+      \begin{tikzpicture}
+	\begin{scope}		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] (\x, {(\x)^0.5});
+	\draw (2,-.5) node[draw] {INC and CON$\downarrow$};
+	\end{scope}
+	\begin{scope}[xshift=6cm]		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] ({4.2-\x}, {(\x)^0.5});
+	\draw (2,-.5) node[draw] {DEC and CON$\downarrow$};
+\end{scope}
+	\begin{scope}[yshift=-4cm]		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] ({4.2-\x}, {2.5-1*(\x)^0.5});
+	\draw (2,-.5) node[draw] {INC and CON$\uparrow$};
+\end{scope}
+	\begin{scope}[xshift=6cm, yshift=-4cm]		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] ({\x}, {2.5-1*(\x)^0.5});
+	\draw (2,-.5) node[draw] {DEC and CON$\uparrow$};
+\end{scope}
+	\begin{scope}[yshift=-8cm]		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] ({\x}, { .15*(\x - 2)^3 +1 });
+	\draw (2,-.5) node[draw] {INFLECTON POINT};
+	\draw (2,1) node {$\bullet$};
+\end{scope}
+	\begin{scope}[yshift=-8cm, xshift=6cm]		
+	\draw[->] (-.5, 0) -- (4.5,0);
+	\draw[->] (0,-.5) -- (0,2.5);
+	\draw plot[domain=.2:4, smooth] ({\x}, { -.15*(\x - 2)^3 +1.4 });
+	\draw (2,-.5) node[draw] {INFLECTON POINT};
+	\draw (2,1.4) node {$\bullet$};
+\end{scope}
+\end{tikzpicture}
+
+      ]]></latex-image>
+  </image>
+</figure>
+
+
+    </remark>
+
 
     <p>
       A helpful way to connect this to derivatives is to think about slopes.
@@ -313,8 +406,19 @@
           and identify inflection points.
         </p>
       </statement>
+      <solution> <title>Video Solution</title>
+      
+      
+        <p>
+          Here is a video solution to this problem.
+        </p>
 
-      <solution>
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+      </solution>
+      <solution> <title>Written Solution</title>
         <p>
           We already computed <m>f'(x)=5x^4-45x^2</m>. Differentiate again:
         </p>
@@ -324,18 +428,35 @@
         </me>
 
         <p>
-          Candidate inflection points occur where <m>f''(x)=0</m>, so
-          <m>x=0</m> and <m>2x^2-9=0</m>, which gives <m>x=\pm\frac{3}{\sqrt{2}}</m>.
+          Candidate inflection points occur where <m>f''(x)=0</m> or where <m>f''(x)</m> is undefined (while <m>f</m> is defined). 
+          However since <m>f''(x)</m> is defined for all real <m>x</m>, we only consider where <m>f''(x)=0</m>.
+          So either
+          <m>10x=0 \implies x=0</m> or <m>2x^2-9=0</m>, which gives <m>x=\pm\dfrac{3}{\sqrt{2}}</m>.
         </p>
+        <p> Remember that <m>\sqrt{2}\approx 1.4</m> so the inflection points are approximately at <m>x=-2.1</m>, <m>x=0</m>, and <m>x=2.1</m>. </p> 
 
-        <p>
-          A sign check for <m>f''(x)</m> shows that concavity changes at each of these points,
-          so they are inflection points.
-          In particular, the graph is concave down for large negative <m>x</m>,
-          then concave up between <m>-\frac{3}{\sqrt2}</m> and <m>0</m>,
-          then concave down between <m>0</m> and <m>\frac{3}{\sqrt2}</m>,
-          and concave up for large positive <m>x</m>.
-        </p>
+      <p>Now we will use the test point method to determine where <m>f''(x) \gt 0</m> 
+          (i.e., where the function is concave up) and where <m>f''(x) \lt 0</m> (i.e., where the function is concave down).</p>
+
+        <p> Choose test points in each of the intervals and check the sign of <m>f''(x)=(2x^2-9)</m>:  </p> 
+
+        <me>
+\begin{array}{c|c|c}
+  \text{Interval} &amp; \text{Test Point} &amp; \text{Sign of } f''(x) \\ \hline
+ (-\infty,-\tfrac{3}{\sqrt{2}}) &amp; -4 &amp; (-)(+) \to (-) \\ \hline
+(-\tfrac{3}{\sqrt{2}},0) &amp; -1 &amp; (-)(-)\to(+) \\ \hline
+(0,\tfrac{3}{\sqrt{2}}) &amp; 1 &amp; (+)(-)\to(-) \\ \hline
+(\tfrac{3}{\sqrt{2}},\infty) &amp; 4 &amp; (+)(+)\to(+) \\ \hline
+\end{array}
+</me>
+
+  <p>So therefore <m>f</m> is concave down on <m>(-\infty,-\frac{3}{\sqrt{2}}) \cup (0,\frac{3}{\sqrt{2}})</m>, 
+    and concave up on <m>(-\frac{3}{\sqrt{2}},0) \cup (\frac{3}{\sqrt{2}},\infty)</m>.</p>
+
+  <p>Because <m>f''</m> changes sign at each of the three candidates, there are inflection points at 
+    <m>x=-\frac{3}{\sqrt{2}}</m>, <m>x=0</m>, and <m>x=\frac{3}{\sqrt{2}}</m>.</p>
+
+
       </solution>
     </example>
 
@@ -377,22 +498,42 @@
 
 
 -->     
-  </subsection>
 
-  <subsection xml:id="ssec-full-example">
-    <title>A Longer Example</title>
+    <p>Let's illustrate these ideas with a more complicated example that combines all of the features we have discussed so far. </p> 
+    <p>
+      This upcoming example will also utilize vertical asymptotes from <xref ref="ssec-locating-va">Locating Vertical Asymptotes</xref> 
+      as well as horizontal asymptotes from <xref ref="dominant-terms">Calculating Horizontal Asymptotes</xref> back in Chapter 1.
+    </p>
 
     <example xml:id="ex-curvesketch-rational">
+      <title>Longer Example</title>
       <statement>
         <p>
-          Sketch the graph of
+          Consider the function 
           <m>f(x)=\dfrac{x^{2/3}}{(x-1)^2}</m>.
-          Identify intercepts, critical points, intervals of increase/decrease,
-          concavity, inflection points, and any vertical asymptotes.
-        </p>
+        </p> 
+        <p>(a) Identify intercepts, vertical asymptotes, and horizontal asymptotes of the graph of <m>f</m>.</p>
+        <p>(b) Locate critical points and intervals of increase/decrease.</p>
+        <p>(c) Determine concavity and inflection points.</p>
+        <p>(d) Use your results from (a)-(c) to sketch the graph of <m>f</m>.</p> 
       </statement>
 
-      <solution>
+      <solution> <title>Video Solution</title>
+      
+      
+        <p>
+          Here is a video solution to this problem.
+        </p>
+
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+      </solution>
+
+      <solution><title>Written Solution</title>
+      
+      
         <p>
           The function is defined for all real <m>x</m> except <m>x=1</m>.
           Also note <m>f(0)=0</m>, so the graph passes through the origin.
