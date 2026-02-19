@@ -2,7 +2,7 @@
 
 <section xml:id="sec-derivApp-curve2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curve Sketching Part 2</title>
-  <objectives>
+   <objectives>
     <ul>
       <li>Explain why qualitative graphing is useful even when graphing technology is available.</li>
       <li>Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large <m>|x|</m>.</li>
@@ -12,151 +12,391 @@
   </objectives>
 
   <p>
-    Computers can produce a graph instantly by plotting many points, so why learn to sketch by hand?
+    At this point, you may be asking, "<em>Why do I need to learn to sketch graphs by hand 
+      when there are computers and calculators that can graph instantly?</em>"
     One reason is that calculus helps us focus on the important parts of the graph: critical points,
     asymptotes, and regions where behavior changes. Another reason is error checking. A quick sketch,
     combined with a few well-chosen test values, can reveal when a result is unreasonable long before
-    a mistake spreads into a larger calculation.
+    a mistake spreads into a larger calculation. Finally, sketching by hand is a skill that can be useful in many contexts, 
+    such as when you are explaining a graph to someone else, or when you are trying to understand a graph that is already drawn.
   </p>
 
-  <subsection xml:id="ssec-rational-example">
-    <title>A Rational Function Example</title>
+  <p> So in this section, we first learn a few more skills to aid our curve sketching abilities. Then we will 
+    work through several longer problems that apply the full curve sketching method. 
+  </p> 
 
-    <example xml:id="ex-curve-rational">
+ <subsection xml:id="ssec-second-derivative-test">
+    <title>The Second Derivative Test</title>
+
+    <p>
+      The First Derivative Test classifies critical points by checking whether <m>f'(x)</m> changes sign.
+      When <m>f''(c)</m> exists, there is a quicker classification that often works.
+    </p>
+
+    <theorem xml:id="thm-second-derivative-test">
+      <title>Second Derivative Test</title>
       <statement>
         <p>
-          Use the curve sketching method to analyze
-          <m>f(x)=\dfrac{x^3-6x^2+11x-6}{2x^2-8x}</m>.
-          Identify the domain, intercepts, critical points, vertical asymptotes, an inflection point, and end behavior.
+          Let <m>f</m> be twice differentiable near <m>c</m>, and suppose <m>f'(c)=0</m>.
+        </p>
+        <ul>
+          <li>
+            <p>If <m>f''(c)&gt;0</m>, then <m>f</m> has a local minimum at <m>x=c</m>.</p>
+          </li>
+          <li>
+            <p>If <m>f''(c)&lt;0</m>, then <m>f</m> has a local maximum at <m>x=c</m>.</p>
+          </li>
+          <li>
+            <p>If <m>f''(c)=0</m>, then the test is inconclusive.</p>
+          </li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-sdt-inconclusive">
+      <p>
+        If <m>f''(c)=0</m>, the point could still be a local maximum, a local minimum, or neither.
+        In that case, you should return to the First Derivative Test (or another method).
+      </p>
+    </remark>
+
+    <example xml:id="ex-second-derivative-test">
+      <statement>
+        <p>
+          Use the Second Derivative Test to classify the critical points of <m>f(x)=x^3-3x^2+4</m>.
         </p>
       </statement>
-
       <solution>
         <p>
-          First factor the function:
-        </p>
-
-        <me>
-          f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}
-          =\frac{(x-1)(x-2)(x-3)}{2x(x-4)}.
-        </me>
-
-        <p>
-          The domain excludes values that make the denominator zero, so
-          <m>x\neq 0</m> and <m>x\neq 4</m>. These produce vertical asymptotes at <m>x=0</m> and <m>x=4</m>.
+          Doing some prep work, the derivatives are
+          <m>f'(x)=3x^2-6x</m> and <m>f''(x)=6x-6</m>.
+          Now to find the critical points, we set <m>f'(x)=0</m>, which gives <m>3x^2-6x=0</m>.
+          Factoring gives <m>3x(x-2)=0</m>, so the critical points are <m>x=0</m> and <m>x=2</m>.
+          Note that <m>f'(x)</m> is defined everywhere, so there are no critical points from undefined derivatives.
         </p>
 
         <p>
-          Intercepts come from <m>f(x)=0</m>, which occurs at zeros of the numerator that are in the domain:
-          <m>x=1,2,3</m>. There is no <m>y</m>-intercept because <m>x=0</m> is not in the domain.
+          Evaluating the second derivative at these points gives
+          <m>f''(0)=-6&lt;0</m>, so there is a local maximum at <m>x=0</m>, and
+          <m>f''(2)=6&gt;0</m>, so there is a local minimum at <m>x=2</m>.
         </p>
-
-        <p>
-          The derivatives (after simplification) are:
-        </p>
-
-        <me>
-          f'(x)=\frac{x^4-8x^3+13x^2+12x-24}{2x^2(x-4)^2},
-          \qquad
-          f''(x)=-\frac{3(x^3-6x^2+24x-32)}{x^3(x-4)^3}.
-        </me>
-
-        <p>
-          Solving <m>f'(x)=0</m> requires locating roots of the numerator.
-          A numerical approach (graphing or a root finder) gives approximate solutions:
-        </p>
-
-        <me>
-          a_1\approx -1.26,\quad a_2\approx 1.39,\quad a_3\approx 2.61,\quad a_4\approx 5.26.
-        </me>
-
-        <p>
-          Along with the vertical asymptotes at <m>x=0</m> and <m>x=4</m>, these break the real line into intervals
-          where the sign of <m>f'(x)</m> is constant. A sign chart then determines where the function increases or decreases,
-          which in turn classifies the critical points as local maxima or minima.
-        </p>
-
-        <p>
-          For concavity, solve <m>f''(x)=0</m> by setting the numerator to zero:
-        </p>
-
-        <me>
-          x^3-6x^2+24x-32=0.
-        </me>
-
-        <p>
-          Factoring shows
-          <m>x^3-6x^2+24x-32=(x-2)(x^2-4x+16)</m>, and the quadratic has no real roots.
-          Thus <m>x=2</m> is the only inflection point in the domain.
-        </p>
-
-        <p>
-          Finally, to understand end behavior, compare leading terms:
-        </p>
-
-        <me>
-          f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}\approx \frac{x^3}{2x^2}=\tfrac12 x \quad \text{for large } |x|.
-        </me>
-
-        <p>
-          This tells us that the graph grows roughly like a line with slope <m>\tfrac12</m> as <m>|x|</m> becomes large.
-          In practice, this is enough to guide a reasonable sketch when combined with critical points and asymptotes.
-        </p>
-      </solution>
+        </solution>
     </example>
+
+
+
   </subsection>
 
-  <subsection xml:id="ssec-trig-example">
-    <title>A Trigonometric Example</title>
 
+ <subsection xml:id="ssec-symmetry">
+    <title>Symmetry</title>
+
+    <p>
+      Sometimes symmetry can dramatically reduce the work needed to sketch a graph.
+      If you can recognize that a function is even or odd, then you can often
+      sketch a smaller portion of the graph and use symmetry to complete the picture.
+    </p>
+
+    <p>
+      Note that the idea of symmetry was first introduced in an algebraic context in the section on functions, 
+      but here we are using it as a tool for graphing.
+    </p> 
+
+    <definition xml:id="def-even-odd">
+      <title>Even and Odd Functions</title>
+      <statement>
+        <ul>
+          <li>
+            <p>
+              A function <m>f</m> is <term>even</term> if <m>f(-x)=f(x)</m> for all <m>x</m> in its domain.
+              Visually, the graph of even functions are symmetric about the <m>y</m>-axis, a mirror image on either side.
+            </p>
+
+            <figure xml:id="even-symmetry">
+              <caption> 
+                A graph of the function <m>y=x^2</m> showing even symmetry about the <m>y</m>-axis.
+              </caption>
+              <image width="60%">
+  <shortdescription>
+    A coordinate plane showing the graph of y = x^2. 
+    The curve is a U-shaped parabola opening upward with its vertex at the origin. 
+    The left and right sides of the parabola are mirror images across the y-axis, illustrating even symmetry.
+  </shortdescription>
+
+  <latex-image><![CDATA[
+\begin{tikzpicture}
+	\draw[->, thick] (-3.5,0) -- (3.5,0);
+	\draw[->, thick] (0,-.5) -- (0,4.5);
+	\draw plot[domain=-2.1:2.1, smooth] (\x, {(\x)^2});
+	\draw (.9,3.1) node {$f(x)=x^2$};
+\end{tikzpicture}
+
+  ]]></latex-image>
+</image>
+            </figure>
+
+
+          </li>
+          <li>
+            <p>
+              A function <m>f</m> is <term>odd</term> if <m>f(-x)=-f(x)</m> for all <m>x</m> in its domain.
+              Visually, the graph of odd functions has 180-degree (<m>\pi</m> radians) rotational symmetry about the origin.
+            </p>
+
+
+ <figure xml:id="odd-symmetry">
+              <caption> 
+                A graph of the function <m>y=x^3</m> showing odd symmetry about the origin.
+              </caption>
+              <image width="60%">
+  <shortdescription>
+    A coordinate plane showing the graph of y = x^3. 
+    The curve is an S-shaped curve passing through the origin, symmetric about the origin. 
+     The left and right sides of the curve are mirror images across the origin, illustrating odd symmetry.
+  </shortdescription>
+
+  <latex-image><![CDATA[
+\begin{tikzpicture}
+	\draw[->, thick] (-3.5,0) -- (3.5,0);
+	\draw[->, thick] (0,-3.5) -- (0,3.5);
+	\draw plot[domain=-1.9:1.9, smooth] (\x, {(\x)^3/2});
+	\draw (-1.3,1.6) node {$f(x)=x^3$};
+\end{tikzpicture}
+
+  ]]></latex-image>
+</image>
+            </figure>
+
+          </li>
+        </ul>
+      </statement>
+    </definition>
+
+    <example>
+      <introduction>
+        <p>
+          For each of the following functions, determine whether it is even, odd, both, or neither.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>f(x)=x^4-2x^2+1</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <em>Even.</em> We have
+            <m>
+              f(-x)=(-x)^4-2(-x)^2+1=x^4-2x^2+1=f(x).
+            </m>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>g(x)=x^3+5\sin(x)</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <em>Odd.</em> We have
+            <m>
+              g(-x)=(-x)^3+5\sin(-x)=-x^3-5\sin(x)=-(x^3+5\sin(x))=-g(x).
+            </m>
+          </p>
+          <p>
+            <alert>Note:</alert> that you need to remember from your favorite trig class that <m>\sin(x)</m> is an odd function, 
+            so <m>\sin(-x)=-\sin(x)</m>.
+            It is also true that <m>\cos(x)</m> is an even function, so <m>\cos(-x)=\cos(x)</m>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>h(x)=\dfrac{x^3+1}{x^2-1}</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <em>Neither.</em> We have
+            <m>
+              h(-x)=\frac{(-x)^3+1}{(-x)^2-1}=\frac{-x^3+1}{x^2-1}.
+            </m>
+            This is not equal to <m>h(x)</m>, so it is not even.
+            It is also not equal to <m>-h(x)</m>, so it is not odd.
+          </p>
+          <p>We can also use a specific counterexample to show that <m>h</m> is not even or odd. 
+            For instance, <m>h(2)=\dfrac{9}{3}=3</m>, 
+            but <m>h(-2)=\dfrac{-7}{3}\neq 3</m> and <m>h(-2)\neq -3</m>.</p>
+        </solution>
+        </task>
+    </example>
+
+
+    
+
+
+  </subsection>
+
+<subsection xml:id="subsec-allTogether">
+  <title>Putting It All Together</title>
+  <p>
+ Now that we have developed all of the necessary tools, we are ready to apply the full 
+ curve sketching method to a variety of functions.
+  </p><p> 
+Below is a checklist of the types of steps that might be required in a curve sketching problem. 
+Not every problem will require every step. You should focus only on the parts that are explicitly requested.
+  </p><p> 
+In particular, on timed quizzes and exams, it is important to balance completeness with efficiency. 
+Problems are designed so that the requested steps can reasonably be completed within the allotted time.
+</p>
+
+      <algorithm xml:id="strat-curve-sketching">
+      <title>Curve Sketching Checklist</title>
+      <ol>
+        <li>Compute <m>f'(x)</m> and <m>f''(x)</m>.</li>
+        <li>Find critical points from <m>f'(x)=0</m> and where <m>f'(x)</m> is undefined.</li>
+        <li>Use the sign of <m>f'(x)</m> to determine where the function increases or decreases and to classify critical points.</li>
+        <li>Find possible inflection points from <m>f''(x)=0</m> and where <m>f''(x)</m> is undefined.</li>
+        <li>Use the sign of <m>f''(x)</m> to determine concavity and confirm inflection points.</li>
+        <li>Find intercepts and identify any vertical asymptotes from the domain.</li>
+        <li>Describe end behavior as <m>x\to\pm\infty</m> using our horizontal asymptote techniques.</li>
+        <li>Check for even/odd symmetry, <m>f(-x)=f(x)</m> or <m>f(-x)=-f(x)</m>.</li>
+        <li>Combine these features into a clear sketch.</li>
+      </ol>
+    </algorithm>
+
+
+
+
+
+    
     <example xml:id="ex-curve-trig">
       <statement>
         <p>
-          Apply the curve sketching method to <m>s(x)=x-2\sin(x)</m>.
-          Identify critical points, concavity, intercepts, and symmetry.
+          Consider the function <m>s(x)=x-2\sin(x)</m> on the interval <m>[-2\pi,2\pi]</m>.
+        </p> 
+        <p>
+          (a) Identify vertical and horizontal asymptotes, and symmetry if they exist.
+        </p>
+        <p>
+          (b) Find critical points and regions of increase and decrease.
+        </p>
+        <p>
+          (c) Find inflection points and intervals of concavity.
+        </p>
+        <p>
+          (d) Combine parts (a)-(c) to sketch the graph of <m>s</m>. Plot all critical points and inflection points. 
         </p>
       </statement>
+      <solution> <title>Video Solution</title>
+      
+      
+        <p>
+          Here is a video solution to this problem.
+        </p>
+
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+      </solution>
 
       <solution>
-        <p>
-          The derivatives are
-          <m>s'(x)=1-2\cos(x)</m> and <m>s''(x)=2\sin(x)</m>.
-          The domain is all real numbers.
+        <title>Written Solution</title>
+
+        <p> (a) There are no vertical asymptotes since the domain is all real numbers. 
+          There are no horizontal asymptotes since the function grows without bound as <m>x\to\pm\infty</m>. 
         </p>
-
-        <p>
-          Critical points occur where <m>s'(x)=0</m>, so <m>\cos(x)=\tfrac12</m>.
-          This happens at <m>x=\tfrac{\pi}{3}</m> and <m>x=\tfrac{5\pi}{3}</m>, repeating every <m>2\pi</m>:
-        </p>
-
-        <me>
-          x=\tfrac{\pi}{3}+2\pi n
-          \quad\text{and}\quad
-          x=\tfrac{5\pi}{3}+2\pi n
-          \quad\text{for integers } n.
-        </me>
-
-        <p>
-          Inflection points occur where <m>s''(x)=0</m>, so <m>\sin(x)=0</m>, which gives
-          <m>x=n\pi</m> for any integer <m>n</m>.
-        </p>
-
-        <p>
-          The point <m>(0,s(0))=(0,0)</m> is both an <m>x</m>- and <m>y</m>-intercept.
-        </p>
-
-        <p>
-          This function is odd:
-          <m>s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x)</m>.
-          Therefore its graph has 180-degree rotational symmetry about the origin.
-        </p>
-
-        <remark xml:id="rem-trig-end-behavior">
-          <p>
-            Since <m>s(x)=x-2\sin(x)</m> behaves like <m>x</m> for large <m>|x|</m>, a reasonable long-range guide is the line <m>y=x</m>.
-            However, the term <m>-2\sin(x)</m> keeps oscillating, so the graph continues to wiggle above and below this line.
+        <p>  
+          The function is odd since, 
+          <me> 
+s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>          
+          so it has 180-degree rotational symmetry about the origin.
           </p>
-        </remark>
+        
+        <p> (b) 
+          The derivative is
+          <m>s'(x)=1-2\cos(x)</m>. This is always defined, so there are no critical points from undefined derivatives. 
+          So we only need to solve <m>s'(x)=0</m> to find critical points.
+          <me> \begin{array}{rcl}
+ 0 \amp =\amp  1-2\cos(x)  \\
+  \cos(x)\amp = \amp \tfrac12 \\
+  x \amp= \amp\tfrac{-5\pi}{3}, \tfrac{-\pi}{3}, \tfrac{\pi}{3}, \tfrac{5\pi}{3}
+\end{array} </me> 
+</p>
+  <p> Note that the symmetry of the function means that the critical points are symmetric about the origin, 
+    and the behavior on <m>[-2\pi,0]</m> is a mirror image of the behavior on <m>[0,2\pi]</m>.
+  </p> 
+  <p> Choosing test points in each interval determined by the critical points gives the following sign chart for <m>s'(x)</m>:</p>
+  <me> \begin{array}{c|c|c}
+    x \amp \text{Sign of } s'(x) \amp \text{Behavior of } s(x) \\
+    \hline
+    -2\pi \amp (-) \amp \text{decreasing} \\
+    -\tfrac{5\pi}{3} \amp 0 \amp  \\
+    -\pi \amp (+) \amp \text{increasing} \\
+    -\tfrac{\pi}{3} \amp 0 \amp  \\
+    0 \amp (-) \amp \text{decreasing} \\
+    \tfrac{\pi}{3} \amp 0 \amp  \\
+    \pi \amp (+) \amp \text{increasing} \\
+    \tfrac{5\pi}{3} \amp 0 \amp  \\
+    2\pi \amp (-) \amp \text{decreasing}
+  \end{array}
+</me>
+<p> So the function is decreasing on <m>[-2\pi,-\tfrac{5\pi}{3}) \cup (-\tfrac{\pi}{3},\tfrac{\pi}{3}) \cup (\tfrac{5\pi}{3},2\pi]</m>, 
+  and increasing on <m>(-\tfrac{5\pi}{3},-\tfrac{\pi}{3}) \cup (\tfrac{\pi}{3},\tfrac{5\pi}{3})</m>. </p>
+
+  <p> Again we could have used the symmetry of the function to reduce our work. 
+    For instance, we could have just analyzed the behavior on <m>[0,2\pi]</m> and then used symmetry to get the rest of our conclusion. </p>
+
+    <p>(c) The second derivative is <m>s''(x)=2\sin(x)</m>, which is defined everywhere, so there are no inflection points from undefined derivatives.
+         To find inflection points, we solve <m>s''(x)=0</m>, which gives <m>\sin(x)=0</m>.
+         This happens at <m>x= -2\pi, -\pi, 0, \pi, 2\pi</m>. Because <m> x=-2\pi</m> and <m>x=2\pi</m> are endpoints of the interval, 
+         they cannot be inflection points, so the only possible inflection points are at <m>x=-\pi,0,\pi</m>.
+    </p>
+    <p> To determine intervals of concavity, we can use test points in each interval determined by the possible inflection points.
+      This gives the following sign chart for <m>s''(x)</m>:</p>
+  <me> \begin{array}{c|c|c}
+    x \amp \text{Sign of } s''(x) \amp \text{Concavity of } s(x) \\
+    \hline
+    -2\pi \amp 0 \amp  \\
+    -\tfrac{3\pi}{2} \amp (+) \amp \text{concave up} \\
+    -\pi \amp 0 \amp  \\
+    -\tfrac{\pi}{2} \amp (-) \amp \text{concave down} \\
+    0 \amp 0 \amp  \\
+    \tfrac{\pi}{2} \amp (+) \amp \text{concave up} \\
+    \pi \amp 0 \amp   \\
+    \tfrac{3\pi}{2} \amp (-) \amp \text{concave down} \\
+    2\pi \amp 0 \amp  
+  \end{array}
+</me>
+<p> So the function is concave up on <m>(-2\pi,-\pi) \cup (0,\pi)</m> and concave down on <m>(-\pi,0) \cup (\pi,2\pi)</m>. </p>
+    
+<p>(d) Combining all of this information, we can sketch the graph of <m>s</m>.
+  We know there are no asymptotes, and the function is odd, so we can focus on sketching the portion of the graph on <m>[0,2\pi]</m> 
+  and then use symmetry to get the rest of the graph.</p>
+  <p> Since we will need to plot all critical points and inflection points, we should compute the function values at these points. 
+  </p>
+    <me> \begin{array}{c|c|c}
+    x \amp s(x) \amp \text{Type of Point} \\
+\hline
+0 \amp 0 \amp \text{inflection point} \\
+\tfrac{\pi}{3} \amp \tfrac{\pi}{3}-\sqrt{3}\approx -0.7  \amp \text{critical point} \\
+\pi \amp \pi \amp \text{inflection point} \\
+\tfrac{5\pi}{3} \amp \tfrac{5\pi}{3}+\sqrt{3}\approx 6.7 \amp \text{critical point} \\
+\end{array}
+</me>
+  
+
+
+
+
+
+
+
       </solution>
     </example>
   </subsection>

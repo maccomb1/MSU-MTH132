@@ -650,18 +650,18 @@ x &amp; = &amp; \frac{-14 \pm \sqrt{14^2 - 4\cdot 14 \cdot (-1)}}{2\cdot 14} \\
 
       <solution>
         <title>Written Solution</title>
-        <p>(a) The y-intercept occurs at <m>f(0)=\frac{-1}{2}</m>. Setting <m>f(x)=0</m> and solving for <m>x</m>, we find:
+        <p>(a) The <m>y</m>-intercept occurs at <m>f(0)=\frac{-1}{2}</m>. Setting <m>f(x)=0</m> and solving for <m>x</m>, we find:
           <me>
             \begin{array}{rcl}
               0 &amp; = &amp; x+\dfrac{1}{x+1}-\dfrac{3}{2} \\
-              2(x+1) \left(0) &amp; = &amp;2(x+1) ( x+\dfrac{1}{x+1} - \dfrac{3}{2} ) \\
+              2(x+1) (0) &amp; = &amp; 2(x+1) ( x+\dfrac{1}{x+1} - \dfrac{3}{2} ) \\
               0 &amp; = &amp; 2x(x+1) + 2 - 3(x+1) \\
               0 &amp; = &amp; 2x^2 + 2x + 2 - 3x - 3 \\
               0 &amp; = &amp; 2x^2 - x - 1 \\
               0 &amp; = &amp; (2x+1)(x-1)
               \end{array}
           </me>
-            so the x-intercepts are at <m>x=-\frac{1}{2}</m> and <m>x=1</m>. </p> 
+            so the <m>x</m>-intercepts are at <m>x=-\frac{1}{2}</m> and <m>x=1</m>. </p> 
             <p>  There is a vertical asymptote at <m>x=-1</m> since the denominator of the rational part is zero there and the numerator is not. 
           To find horizontal asymptotes, we compute limits as <m>x\to\pm\infty</m>. 
           We can use dominant term analysis to find that
@@ -711,6 +711,7 @@ f''(x) &amp; = &amp; \left(1 - \dfrac{1}{(x+1)^2}\right)' \\
 Candidate inflection points occur where <m>f''(x)=0</m> or where <m>f''(x)</m> is undefined (while <m>f</m> is defined). 
 Since <m>f''(x)</m> is undefined at <m>x=-1</m>, we do not consider that point since <m>f</m> is also undefined there. 
 Setting the second derivative equal to zero and solving for <m>x</m>, we find:
+</p>
 <me>
 \begin{array}{rcl}
 0 &amp; = &amp; \dfrac{-2}{(x+1)^3} \\
@@ -733,19 +734,19 @@ Since there is no value of <m>x</m> that makes <m>f''(x)=0</m>, there are no inf
 <p>
 So <m>f</m> is concave up on <m>(-\infty,-1)</m> and concave down on <m>(-1,\infty)</m>.
 </p>
-<p>(d) We can now combine all of this information to sketch the graph of <m>f</m>.
+<p>(d) We can now combine all of this information to sketch the graph of <m>f</m>. First I would plot the intercepts, asymptotes, and critical points. 
+  Then I would use the intervals of increase/decrease and concavity to determine the shape of the graph in each region.
 </p> 
 
 <figure xml:id="fig-inc-dec-concavity-intervals-2">
   <caption>
-    A sign chart showing intervals of increase, decrease, and concavity.
-    The function is increasing and concave down on the left interval,
-    decreasing and concave down on the next interval,
-    decreasing and concave up after the inflection point,
-    and increasing on the rightmost interval.
+    A sign chart showing intervals of increase, decrease, and concavity along with some key points on the graph of <m>f</m>.
   </caption>
 
-  <shortdescription>
+
+
+  <image source="images/curvePlot3.PNG">
+      <shortdescription>
     A coordinate plane divided by a vertical dashed line marking a critical or inflection value.
     The leftmost region is shaded and labeled “INC, CON DOWN.”
     The next region is labeled “DEC.”
@@ -753,8 +754,32 @@ So <m>f</m> is concave up on <m>(-\infty,-1)</m> and concave down on <m>(-1,\inf
     The far right region is labeled “INC.”
     Several points are marked on the graph to indicate function values in different intervals.
   </shortdescription>
+  </image> 
 
-  <image source="images/curvePlot3.PNG" width="85%"/>
+</figure>
+
+<p> Now we can use the information from the sign chart, asymptotes and critical points to connect all the key points into a coherent sketch of the graph. 
+</p>
+
+<figure xml:id="fig-inc-dec-concavity-intervals-3">
+  <caption>
+   Our final sketch of the graph of <m>f</m> based on the intervals of increase/decrease and concavity along with key points and asymptotes.
+  </caption>
+
+
+
+  <image source="images/curvePlot4.PNG">
+      <shortdescription>
+    A coordinate plane divided by a vertical dashed line marking a critical or inflection value.
+    The leftmost region is shaded and labeled “INC, CON DOWN.”
+    The next region is labeled “DEC.”
+    To the right of the dashed line the region is labeled “DEC, CON UP.”
+    The far right region is labeled “INC.”
+    Several points are marked on the graph to indicate function values in different intervals. A curve is drawn through the points that matches
+     the increasing/decreasing and concavity behavior indicated by the sign chart. 
+  </shortdescription>
+  </image> 
+
 </figure>
 
 
@@ -812,96 +837,192 @@ So <m>f</m> is concave up on <m>(-\infty,-1)</m> and concave down on <m>(-1,\inf
   <exercises xml:id="exercises-curve-sketching-1">
     <title>Practice / Study Problems</title>
 
-    <exercisegroup>
-      <title>Conceptual Questions</title>
+  
 
-      <exercise xml:id="tf-cs1-01">
-        <statement>
-          <p>
-            True or False: If <m>f'(c)=0</m>, then <m>x=c</m> must be a local maximum or minimum.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>False.</emph> The point could be a stationary point where the function does not change direction.
-          </p>
-        </solution>
-      </exercise>
 
-      <exercise xml:id="tf-cs1-02">
-        <statement>
-          <p>
-            True or False: If <m>f''(c)&gt;0</m> and <m>f'(c)=0</m>, then <m>x=c</m> is a local minimum.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> This is the Second Derivative Test.
-          </p>
-        </solution>
-      </exercise>
+  <exercisegroup>
+    <title>Some True/False Problems</title>
 
-      <exercise xml:id="tf-cs1-03">
-        <statement>
-          <p>
-            True or False: An inflection point must occur where <m>f''(c)=0</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>False.</emph> <m>f''(c)=0</m> is a common candidate, but an inflection point can occur where <m>f''</m> is undefined as well.
-          </p>
-        </solution>
-      </exercise>
-    </exercisegroup>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and briefly justify your reasoning.
+      </p>
+    </introduction>
 
-    <exercisegroup>
-      <title>Algebraic Practice</title>
+    <exercise xml:id="tf-curve1-01">
+      <statement>
+        <p>
+          If <m>f'(x)&gt;0</m> for all <m>x</m> in an interval <m>(a,b)</m>, then <m>f</m> is increasing on <m>(a,b)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><em>True.</em> This is exactly the Increasing/Decreasing Test.</p>
+      </solution>
+    </exercise>
 
-      <exercise xml:id="prob-cs1-poly">
-        <statement>
-          <p>
-            Let <m>f(x)=x^4-4x^2</m>.
-            Find the critical points, intervals of increase/decrease, concavity, and inflection points.
-            Then sketch a graph.
-          </p>
-        </statement>
-      </exercise>
+    <exercise xml:id="tf-curve1-02">
+      <statement>
+        <p>
+          If <m>f'(3)=0</m>, then <m>f</m> has a local maximum or a local minimum at <m>x=3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><em>False.</em> A critical point can be neither. For example, consider <m>f(x)=x^3</m> at <m>x=0</m>.</p>
+      </solution>
+    </exercise>
 
-      <exercise xml:id="prob-cs1-rational">
-        <statement>
-          <p>
-            Let <m>f(x)=\dfrac{x}{x^2+1}</m>.
-            Find where <m>f</m> is increasing or decreasing and where it is concave up or concave down.
-            Then sketch a graph.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+<!--
+    <exercise xml:id="tf-curve1-04">
+      <statement>
+        <p>
+          If <m>f'(x)</m> changes sign from positive to negative at <m>x=2</m>, then <m>f</m> has a local minimum at <m>x=2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><em>False.</em> Positive to negative indicates a local maximum by the First Derivative Test.</p>
+      </solution>
+    </exercise>
+-->
 
-    <exercisegroup>
-      <title>Graphical and Interpretation Problems</title>
+    <exercise xml:id="tf-curve1-05">
+      <statement>
+        <p>
+          If <m>f'(x)</m> changes sign from negative to positive at <m>x=2</m>, then <m>f</m> has a local minimum at <m>x=2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><em>True.</em> This is the First Derivative Test for a local minimum.</p>
+      </solution>
+    </exercise>
 
-      <exercise xml:id="prob-cs1-sign-chart">
-        <statement>
-          <p>
-            A differentiable function has critical points at <m>x=-2</m> and <m>x=1</m>.
-            The sign of <m>f'(x)</m> is positive on <m>(-\infty,-2)</m>, negative on <m>(-2,1)</m>,
-            and positive on <m>(1,\infty)</m>.
-            Describe the behavior of the graph and classify the critical points.
-          </p>
-        </statement>
-      </exercise>
 
-      <exercise xml:id="prob-cs1-concavity-chart">
-        <statement>
-          <p>
-            The second derivative satisfies <m>f''(x)&lt;0</m> for <m>x&lt;3</m> and <m>f''(x)&gt;0</m> for <m>x&gt;3</m>.
-            What does this say about concavity and inflection points?
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+    <exercise xml:id="tf-curve1-07">
+      <statement>
+        <p>
+          If <m>f''(x)&gt;0</m> on an interval, then the slopes of <m>f</m> are increasing on that interval.
+        </p>
+      </statement>
+      <solution>
+        <p><em>True.</em> <m>f''(x)&gt;0</m> means <m>f'(x)</m> is increasing.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-08">
+      <statement>
+        <p>
+          If <m>f</m> is increasing on an interval, then it must be concave up on that interval.
+        </p>
+      </statement>
+      <solution>
+        <p><em>False.</em> A function can be increasing and concave down.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-09">
+      <statement>
+        <p>
+          If <m>f</m> is concave down on an interval, then <m>f'(x)</m> is decreasing on that interval.
+        </p>
+      </statement>
+      <solution>
+        <p><em>True.</em> Concave down means <m>f''(x)&lt;0</m>, so <m>f'(x)</m> decreases.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-10">
+      <statement>
+        <p>
+          If <m>f''(5)=0</m>, then <m>(5,f(5))</m> must be an inflection point.
+        </p>
+      </statement>
+      <solution>
+        <p><em>False.</em> You also need <m>f''</m> to change sign at <m>x=5</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-11">
+      <statement>
+        <p>
+          It is possible for <m>f</m> to have an inflection point at <m>x=-1</m> even if <m>f'(-1)=0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p><em>True.</em> Inflection points concern concavity; the slope can be zero there.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-12">
+      <statement>
+        <p>
+          If <m>f''(x)</m> is undefined at <m>x=4</m>, then <m>x=4</m> cannot be an inflection point.
+        </p>
+      </statement>
+      <solution>
+        <p><em>False.</em> An inflection point can occur where <m>f''</m> is undefined, as long as concavity changes and <m>f</m> is defined.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="tf-curve1-13">
+      <statement>
+        <p>
+          Consider the graph of <m>f</m> below. On this graph <m>f'(2) \gt f''(2)</m>.
+        </p> 
+
+ <image width="60%">
+<shortdescription>
+A coordinate plane showing a curve labeled f(x). 
+The curve is increasing from left to right and gradually flattening, 
+meaning its slope is positive but decreasing as x increases. 
+The graph bends downward, indicating it is concave down. A solid point is marked on the curve directly above x equals 2, 
+with a dashed vertical line dropping from the point to the x-axis at 2. 
+</shortdescription>
+
+    <latex-image><![CDATA[
+
+\begin{tikzpicture}
+		\draw[->] (-.5, 0) -- (4.5,0);
+		\draw[->] (0,-.5) -- (0,2.5);
+		\draw plot[domain=.2:4, smooth] (\x, {(\x)^0.5});
+		\draw[dashed] (2, {2^0.5}) node {$\bullet$} -- (2,-4pt) node[below] {$2$}; 
+		\draw (1,2) node {$f(x)$};
+	\end{tikzpicture}
+
+      ]]></latex-image>
+  </image>        
+
+      </statement>
+      <solution>
+        <p><em>True.</em> The slope at <m>x=2</m> is positive (the curve is increasing), so therefore <m>f'(2) \gt 0</m>.
+          The concavity is downward (the curve is bending down), so <m>f''(2) \lt 0</m>. Therefore, <m>f'(2) \gt f''(2)</m>.</p>
+      </solution>
+      
+    </exercise>
+
+
+
+   
+
+  </exercisegroup>
+
+
+  
+
+  
+
+
   </exercises>
+
+  <remark>
+      <p>While these True / False problems are good for quickly testing your understanding of the concepts, 
+    you should also practice applying these ideas to more complicated and complete problems (like those that appear on WeBWork) 
+    and can possibly appear on quizzes and exams. 
+  </p><p> 
+    <alert>Reminder:</alert> There are more fully worked-out examples available in
+    <xref ref="subsec-derivApp-curve1">Additional Examples for Curve Sketching Part 1</xref> 
+    that you can use to practice with and to check your work against.
+  </p>
+
+  </remark>
+
 
 </section>

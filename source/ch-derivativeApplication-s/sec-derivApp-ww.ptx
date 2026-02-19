@@ -40,8 +40,41 @@
 
        <subsection xml:id="subsec-derivApp-curve1">
       <title><xref ref="sec-derivApp-curve1"/> Curve Sketching Part 1</title>
-      <p> test
-      </p>
+
+      
+
+      <example xml:id="prob-cs1-poly">
+        <statement>
+          <p>
+            Let <m>f(x)=x^4-4x^2</m>.
+            Find the critical points, intervals of increase/decrease, concavity, and inflection points.
+            Then sketch a graph.
+          </p>
+        </statement>
+      </example>
+
+      <example xml:id="prob-cs1-rational">
+        <statement>
+          <p>
+            Let <m>f(x)=\dfrac{x}{x^2+1}</m>.
+            Find where <m>f</m> is increasing or decreasing and where it is concave up or concave down.
+            Then sketch a graph.
+          </p>
+        </statement>
+      </example>
+
+      <example xml:id="prob-cs1-sign-chart">
+        <statement>
+          <p>
+            A differentiable function has critical points at <m>x=-2</m> and <m>x=1</m>.
+            The sign of <m>f'(x)</m> is positive on <m>(-\infty,-2)</m>, negative on <m>(-2,1)</m>,
+            and positive on <m>(1,\infty)</m>.
+            Describe the behavior of the graph and classify the critical points.
+          </p>
+        </statement>
+      </example>
+
+
     </subsection>
 
 

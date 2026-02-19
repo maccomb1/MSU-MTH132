@@ -56,7 +56,7 @@
   <p>
     Graphically, if <m>\displaystyle\lim_{x\to\infty} f(x)=L</m>, then the graph of
     <m>y=f(x)</m> approaches the horizontal line <m>y=L</m> toward the right.
-    This line is called a <emph>horizontal asymptote</emph>. A similar
+    This line is called a <em>horizontal asymptote</em>. A similar
     interpretation applies toward the left when
     <m>\displaystyle\lim_{x\to-\infty} f(x)=L</m>.
   </p>
@@ -130,7 +130,7 @@
     <p>
       For functions made from sums and quotients of powers of <m>x</m>, limits
       at infinity are determined by the terms with the highest powers. These
-      are called the <emph>dominant terms</emph>.
+      are called the <em>dominant terms</em>.
     </p>
 
     <example xml:id="ex-rational-zero-asymptote">
@@ -412,59 +412,158 @@
 
   <p>
     Not all limits at infinity can be evaluated using dominant term analysis
-    or algebraic simplification. Some functions require ideas from other areas
-    of mathematics, and others cannot be evaluated until we develop additional
-    calculus tools later in the course.
-  </p>
+    or algebraic simplification. 
+    Here are a few other basic examples of limits at infinity that you are expected to remember 
+    using knowlege from previous algebra / trigonometry classes. These can largely be gleaned from the graphs of these functions.
+  </p>     
 
-  <example xml:id="ex-arctan-asymptotes">
+  <theorem xml:id="thm-other-inf-limits">
+    <title>Limits of Other Well Known Functions 
+    </title>
+    
+    
+    <statement>
+      <sidebyside widths="50% 50%" valign="middle">        
+      <p>
+        <alert>Exponential functions:</alert>
+<md>
+  <mrow>
+    \displaystyle \lim_{x\to\infty} e^x
+    \amp =
+    \infty
+  </mrow>
+  <mrow>
+    \displaystyle \lim_{x\to-\infty} e^x
+    \amp = 0
+  </mrow>
+</md>
+      </p>
+  <image>
+  <shortdescription>
+    Graph of y equals e to the x showing a horizontal asymptote at y equals 0.
+  </shortdescription>
+    <latex-image><![CDATA[
+\begin{tikzpicture}
+  \clip (-3.5,-3.5) rectangle (3.5,3.5);
+  \draw[->, thick] (-3.5,0) -- (3.5,0);
+  \draw[->, thick] (0,-3.5) -- (0,3.5);
+
+  
+  % exponential curve
+  \draw[blue, thick] plot[domain=-3.5:1.9, smooth] (\x, {exp(\x)});
+  \node at (-1.3,1.6) {$y=e^x$};
+\end{tikzpicture}  ]]>
+    </latex-image>
+  </image>
+      </sidebyside>
+
+      <sidebyside widths="50% 50%" valign="middle">  
+
+<p> 
+        <alert>Logarithmic functions:</alert>
+        <md> <mrow> 
+         \displaystyle  \lim_{x\to\infty} \ln(x) \amp = \infty,
+          </mrow><mrow> \displaystyle          \lim_{x\to 0^+} \ln(x) \amp = -\infty.
+          </mrow></md>
+        
+      </p> 
+        <image>
+  <shortdescription>
+    Graph of y equals natural log of x showing a vertical asymptote at x equals 0.
+  </shortdescription>
+    <latex-image><![CDATA[
+\begin{tikzpicture}
+  \clip (-3.5,-3.5) rectangle (3.5,3.5);
+  \draw[->, thick] (-3.5,0) -- (3.5,0);
+  \draw[->, thick] (0,-3.5) -- (0,3.5);
+
+  % vertical asymptote
+  %\draw[dashed] (0,-3.5) -- (0,3.5);
+  %\node[above left] at (0,3) {$x=0$};
+
+  % logarithm curve
+  \draw[blue, thick, domain=.02:3.5, smooth, samples=100]
+    plot (\x, {ln(\x)});
+  \node at (1.3,1.6) {$y=\ln x$};
+\end{tikzpicture}
+ ]]>
+    </latex-image>
+  </image>
+
+</sidebyside>
+      <sidebyside widths="50% 50%" valign="middle">       
+
+      <p> 
+          <alert>Trigonometric functions:</alert>
+        <md> <mrow> \displaystyle
+          \lim_{x\to\infty} \arctan(x) \amp = \frac{\pi}{2}
+          </mrow><mrow> \displaystyle
+          \lim_{x\to-\infty} \arctan(x) \amp = -\frac{\pi}{2}
+          </mrow></md>
+      </p>
+        <image>
+  <shortdescription>
+    Graph of y equals arctangent of x with horizontal asymptotes at y equals pi over 2 and negative pi over 2.
+  </shortdescription>
+    <latex-image><![CDATA[
+\begin{tikzpicture}
+  \clip (-3.5,-3.5) rectangle (3.5,3.5);
+  \draw[->, thick] (-3.5,0) -- (3.5,0);
+  \draw[->, thick] (0,-3.5) -- (0,3.5);
+
+  % arctan curve
+  \draw[blue, thick, domain=-3.5:3.5, smooth, samples=200]
+    plot (\x, {atan(2*\x)*pi/180});
+  \node at (-1.3,.6) {$y=\arctan x$};
+
+  % horizontal asymptotes
+  \draw[dashed, red] (-3.5, {pi/2}) -- (3.5, {pi/2});
+  \node[above left, font=\small] at (3.3, {pi/2}) {$y=\frac{\pi}{2}$};
+
+  \draw[dashed, red] (-3.5, {-pi/2}) -- (3.5, {-pi/2});
+  \node[below left, font=\small] at (3.3, {-pi/2}) {$y=-\frac{\pi}{2}$};
+\end{tikzpicture}
+ ]]>
+    </latex-image>
+  </image>
+
+
+
+</sidebyside>
+
+    </statement>
+  </theorem>
+  
+<p> Using the above limits, we can evaluate limits at infinity for more complicated functions that involve these types of terms.</p> 
+
+  
+  <example xml:id="ex-non-algebraic-infinity">
     <statement>
       <p>
-        Consider the function <m>f(x)=\arctan(x)</m>.
-        Evaluate <m>\displaystyle\lim_{x\to\infty} f(x)</m> and
-        <m>\displaystyle\lim_{x\to-\infty} f(x)</m>.
+        Find the horizontal asymptote(s) of <m>f(x) = \dfrac{3}{2+e^x}</m>.
       </p>
     </statement>
-
     <solution>
       <p>
-        The inverse tangent function has a restricted range:
+        As <m>x\to\infty</m> we know that <m>e^x\to\infty</m>, so therefore <m> 2+e^x \to \infty</m>. Since the denominator grows without bound,
+        and the numerator is a constant, the function approaches <m>0</m>. Thus,
+        <m>\displaystyle\lim_{x\to\infty} f(x) = \lim_{x\to\infty} \frac{3}{2+e^x} = 0</m>.
       </p>
-
-      <me>
-        -\frac{\pi}{2} &lt; \arctan(x) &lt; \frac{\pi}{2}
-        \quad\text{for all } x.
-      </me>
-
       <p>
-        From trigonometry, as <m>x\to\infty</m>, the angle whose tangent is
-        <m>x</m> approaches <m>\frac{\pi}{2}</m>, and as <m>x\to-\infty</m>,
-        it approaches <m>-\frac{\pi}{2}</m>.
-      </p>
-
-      <me>
-        \lim_{x\to\infty} \arctan(x)=\frac{\pi}{2},
-        \qquad
-        \lim_{x\to-\infty} \arctan(x)=-\frac{\pi}{2}.
-      </me>
-
-      <p>
-        This function has two different horizontal asymptotes:
-        <m>y=\frac{\pi}{2}</m> to the right and
-        <m>y=-\frac{\pi}{2}</m> to the left.
-      </p>
-
-      <p>
-        Notice that dominant term analysis does not apply here, since
-        <m>\arctan(x)</m> is not an algebraic function. Instead, the limits are
-        determined by the trigonometric meaning of the function.
+        As <m>x\to-\infty</m>, we know that <m> e^x\to 0</m>, so therefore <m> 2+e^x \to 2</m>. Since the denominator approaches a constant value,
+        and the numerator is a constant, the function approaches <m>\frac{3}{2}</m>. Thus,  
+        <m>\displaystyle\lim_{x\to-\infty} f(x) = \lim_{x\to-\infty} \frac{3}{2+e^x} = \frac{3}{2}</m>.
       </p>
     </solution>
   </example>
 
+
+
+  
+
   <remark xml:id="rem-limits-future-tools">
     <p>
-      There are many functions whose limits at infinity cannot yet be evaluated
+      There are still many functions whose limits at infinity cannot yet be evaluated
       with the techniques in this section. For example, consider
       <m>\displaystyle \frac{e^x}{x}</m>.
     </p>
@@ -521,7 +620,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> The statement <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that
+          <em>False.</em> The statement <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> means that
           <m>f(x)</m> can be made arbitrarily close to <m>L</m> by taking <m>x</m> sufficiently large.
           It does not require <m>f(x)</m> to equal <m>L</m> for any value of <m>x</m>.
         </p>
@@ -540,7 +639,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> This follows from the Limit Laws for limits at infinity:
+          <em>True.</em> This follows from the Limit Laws for limits at infinity:
           adding a constant shifts the limiting value by the same constant.
         </p>
       </solution>
@@ -555,7 +654,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> If the denominator has higher degree, then the denominator grows faster in magnitude than
+          <em>True.</em> If the denominator has higher degree, then the denominator grows faster in magnitude than
           the numerator as <m>|x|\to\infty</m>, so the quotient approaches <m>0</m>.
         </p>
         <p>
@@ -575,7 +674,7 @@
   </statement>
   <solution>
     <p>
-      <emph>False.</emph> Limits as <m>x\to\infty</m> and <m>x\to-\infty</m>
+      <em>False.</em> Limits as <m>x\to\infty</m> and <m>x\to-\infty</m>
       describe the behavior of a function on different ends of the graph and
       are independent of one another.
     </p>
@@ -596,7 +695,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> Rewrite the denominator using powers:
+          <em>False.</em> Rewrite the denominator using powers:
           <m>9x\sqrt{x}=9x^{3/2}</m> and <m>4x^2\sqrt{x}=4x^{5/2}</m>.
           The dominant term in the numerator is <m>3x^{7/2}</m> and in the denominator is <m>4x^{5/2}</m>.
         </p>
@@ -622,7 +721,7 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> Since <m>\displaystyle\lim_{x\to\infty}\frac{1000}{x}=0</m> and
+          <em>True.</em> Since <m>\displaystyle\lim_{x\to\infty}\frac{1000}{x}=0</m> and
           <m>\displaystyle\lim_{x\to\infty}-\frac{1000}{x}=0</m>, the Squeeze Theorem implies that
           <m>\displaystyle\lim_{x\to\infty} f(x)=0</m>.
         </p>
@@ -637,7 +736,7 @@
       </statement>
       <solution>
         <p>
-          <emph>False.</emph> Although <m>\cos(x)</m> oscillates, it is bounded:
+          <em>False.</em> Although <m>\cos(x)</m> oscillates, it is bounded:
           <m>-1\le \cos(x)\le 1</m> for all <m>x</m>. For <m>x&gt;0</m>, dividing by <m>x</m> gives
         </p>
         <me>
@@ -658,13 +757,27 @@
       </statement>
       <solution>
         <p>
-          <emph>True.</emph> A horizontal asymptote to the right would require
+          <em>True.</em> A horizontal asymptote to the right would require
           <m>\displaystyle\lim_{x\to\infty} f(x)=L</m> for some finite real number <m>L</m>.
           If instead the function grows without bound so that <m>\displaystyle\lim_{x\to\infty} f(x)=\infty</m>,
           then it cannot approach any horizontal line <m>y=L</m>.
         </p>
       </solution>
     </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x\to\infty} \ln\left(\frac{1}{x}\right)= 0</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>False.</em> As <m>x\to\infty</m>, we have <m>u=\frac{1}{x}\to 0^+</m>, so <m>\displaystyle\lim_{x\to\infty} \ln\left(\frac{1}{x}\right)= \lim_{u\to 0^+} \ln(u) = -\infty</m>.
+        </p>
+      </solution>
+    </exercise>
+
 
   </exercisegroup>
 </exercises>

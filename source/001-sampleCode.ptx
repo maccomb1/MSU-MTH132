@@ -1,0 +1,24 @@
+<!-- GIF INSIDE OF URL
+ 
+   <url href="https://www.desmos.com/calculator/42zkvlqlkt">
+    <sidebyside width="100%">
+      <figure>
+<caption>
+  Slopes of tangent lines to <m>f(x)=\sqrt[3]{x}</m> at many values of <m>x</m>,
+  plotted as points and connected to form the graph of the derivative function.
+</caption>
+        <image width="100%" source="images/derivativeFunc.gif">
+<shortdescription>
+  Animated graph showing the cube root function with tangent lines at various points.
+  For each point, the slope of the tangent line is recorded and plotted separately.
+  As these slope values are connected, they form a new curve representing the derivative function.
+</shortdescription>
+        </image>
+      </figure>
+    </sidebyside>
+  </url>
+
+
+-->
+
+<!---------------------------------------------------------------------------------------------------------->
