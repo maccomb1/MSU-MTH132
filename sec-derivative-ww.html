@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -605,7 +602,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="ex-deriv-ww-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-deriv-ww-1-2-1">To find the average rate of change of the function <span class="process-math">\(f(x) = \tan(x)-x\)</span> on the interval <span class="process-math">\([-\frac{\pi}{4}, \frac{\pi}{4}]\text{,}\)</span> we use the formula for the average rate of change:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-ww-1-2-2">
 \begin{equation*}
 \text{Average Rate of Change} = \frac{f(b) - f(a)}{b - a} 
 \end{equation*}
@@ -614,19 +611,19 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="ex-deriv-ww-1-2-4">First, we calculate <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-ww-1-2-5">
 \begin{equation*}
 f\left(-\frac{\pi}{4}\right) = \tan\left(-\frac{\pi}{4}\right) - \left(-\frac{\pi}{4}\right) = -1 + \frac{\pi}{4} 
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-ww-1-2-6">
 \begin{equation*}
 f\left(\frac{\pi}{4}\right) = \tan\left(\frac{\pi}{4}\right) - \frac{\pi}{4} = 1 - \frac{\pi}{4} 
 \end{equation*}
 </div>
 <div class="para" id="ex-deriv-ww-1-2-7">Now, we substitute these values into the average rate of change formula and simplify:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-ww-1-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-ww-1-2-8">
 \begin{equation*}
 \begin{array}{rcl}
 \text{Average Rate of Change} &amp; = &amp; \dfrac{\left(1 - \frac{\pi}{4}\right) - \left(-1 + \frac{\pi}{4}\right)}{\frac{\pi}{4} - \left(-\frac{\pi}{4}\right)} \\
@@ -653,14 +650,14 @@ f\left(\frac{\pi}{4}\right) = \tan\left(\frac{\pi}{4}\right) - \frac{\pi}{4} = 1
 <div class="solutions"><details id="ex-secant-tangent-polynomial-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-secant-tangent-polynomial-2-1">(a) The slope of the secant line is<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-2">
 \begin{equation*}
 \frac{f(5)-f(1)}{5-1}.
 \end{equation*}
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-3">Compute the function values:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-4">
 \begin{equation*}
 \begin{array}{rcl}
 f(1) &amp; =&amp; 1 - 4 + 1 = -2, \\
@@ -668,7 +665,7 @@ f(5) &amp; =&amp; 25 - 20 + 1 = 6.
 \end{array}
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-5">
 \begin{equation*}
 \frac{6-(-2)}{4} = \frac{8}{4} = 2.
 \end{equation*}
@@ -677,33 +674,33 @@ f(5) &amp; =&amp; 25 - 20 + 1 = 6.
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-7">(b) The slope of the secant line is<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-8">
 \begin{equation*}
 \frac{f(2+h)-f(2)}{h}.
 \end{equation*}
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-9">First compute:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-10">
 \begin{equation*}
 f(2) = 4 - 8 + 1 = -3.
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-11">
 \begin{equation*}
 f(2+h) = (2+h)^2 - 4(2+h) + 1.
 \end{equation*}
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-12">Expand:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-13">
 \begin{equation*}
 f(2+h) = 4 + 4h + h^2 - 8 - 4h + 1 = h^2 - 3.
 \end{equation*}
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-14">So the difference quotient becomes<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-15">
 \begin{equation*}
 \frac{(h^2 - 3) - (-3)}{h}
 =
@@ -714,7 +711,7 @@ h.
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-16">(c) The slope of the tangent line is the limit as <span class="process-math">\(h \to 0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-17">
 \begin{equation*}
 \lim_{h\to 0} h = 0.
 \end{equation*}
@@ -723,12 +720,12 @@ h.
 </div>
 <div class="para" id="ex-secant-tangent-polynomial-2-19">(d) Using point-slope form:<div class="autopermalink" data-description="Paragraph"><a href="#ex-secant-tangent-polynomial-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-20">
 \begin{equation*}
 y - (-3) = 0(x-2).
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-secant-tangent-polynomial-2-21">
 \begin{equation*}
 y = -3.
 \end{equation*}
@@ -746,7 +743,7 @@ y = -3.
 <div class="para" id="ex-derivative-limit-def-cubic-1-1">Consider the function <span class="process-math">\(f(x)=x^3-2x\)</span> near <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="ex-derivative-limit-def-cubic-1-2">
 <div class="para">(a) Simplify the difference quotient as much as possible:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-1-2-1">
 \begin{equation*}
 \frac{f(1+h)-f(1)}{h}.
 \end{equation*}
@@ -755,7 +752,7 @@ y = -3.
 </div> <div class="para logical" id="ex-derivative-limit-def-cubic-1-3">
 <div class="para">(b) Use your result from part (a) and the limit definition of the derivative to calculate <span class="process-math">\(f'(1)\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-1-3-2">
 \begin{equation*}
 f'(1)=\lim_{h\to 0}\frac{f(1+h)-f(1)}{h}.
 \end{equation*}
@@ -763,7 +760,7 @@ f'(1)=\lim_{h\to 0}\frac{f(1+h)-f(1)}{h}.
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-derivative-limit-def-cubic-1-4">(c) Consider the following table of values of <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=1\text{.}\)</span> Use difference quotients to approximate <span class="process-math">\(f'(1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-1-5">
 \begin{equation*}
 \begin{array}{|c|c|c|c|c|c|}
 \hline
@@ -800,19 +797,19 @@ f(x) &amp; -1.000 &amp; -0.869 &amp; -0.989699 &amp; -0.998997 &amp; -1.009701 \
 <div class="solutions"><details id="ex-derivative-limit-def-cubic-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-derivative-limit-def-cubic-2-1">(a) First compute:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-2">
 \begin{equation*}
 f(1+h)=(1+h)^3-2(1+h).
 \end{equation*}
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-3">Expand:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-4">
 \begin{equation*}
 (1+h)^3 = 1+3h+3h^2+h^3.
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-5">
 \begin{equation*}
 f(1+h)
 =
@@ -823,14 +820,14 @@ f(1+h)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-6">Since <span class="process-math">\(f(1)=1^3-2(1)=-1\text{,}\)</span> we have:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-7">
 \begin{equation*}
 \frac{f(1+h)-f(1)}{h}
 =
 \frac{(-1+h+3h^2+h^3)-(-1)}{h}.
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-8">
 \begin{equation*}
 =
 \frac{h+3h^2+h^3}{h}
@@ -840,7 +837,7 @@ f(1+h)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-9">(b) Now take the limit:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-10">
 \begin{equation*}
 f'(1)
 =
@@ -853,7 +850,7 @@ f'(1)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-12">For <span class="process-math">\(h=0.1\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-13">
 \begin{equation*}
 \frac{-0.869-(-1)}{0.1}
 =
@@ -864,7 +861,7 @@ f'(1)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-14">For <span class="process-math">\(h=0.01\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-15">
 \begin{equation*}
 \frac{-0.989699-(-1)}{0.01}
 =
@@ -875,7 +872,7 @@ f'(1)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-16">For <span class="process-math">\(h=0.001\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-17">
 \begin{equation*}
 \frac{-0.998997-(-1)}{0.001}
 =
@@ -886,7 +883,7 @@ f'(1)
 </div>
 <div class="para" id="ex-derivative-limit-def-cubic-2-18">For <span class="process-math">\(h=-0.01\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-limit-def-cubic-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-limit-def-cubic-2-19">
 \begin{equation*}
 \frac{-1.009701-(-1)}{-0.01}
 =
@@ -913,7 +910,7 @@ f'(1)
 </div>
 <div class="para" id="ex-velocity-from-graph-bounce-2-2">(b) For <span class="process-math">\(0.8 &lt; t &lt; 0.9\text{,}\)</span> we have <span class="process-math">\(p(0.8) \approx 2.5\)</span> and <span class="process-math">\(p(0.9) = 0\text{.}\)</span> Just before impact, the average velocity is approximately<div class="autopermalink" data-description="Paragraph"><a href="#ex-velocity-from-graph-bounce-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-velocity-from-graph-bounce-2-3">
 \begin{equation*}
 \frac{p(0.9)-p(0.8)}{0.9-0.8}
 =
@@ -926,7 +923,7 @@ f'(1)
 </div>
 <div class="para" id="ex-velocity-from-graph-bounce-2-5">(c) For <span class="process-math">\(0.9 &lt; t &lt; 1.0\text{,}\)</span> we have <span class="process-math">\(p(0.9) = 0\)</span> and <span class="process-math">\(p(1.0) \approx 1\text{.}\)</span> Therefore the average velocity is approximately<div class="autopermalink" data-description="Paragraph"><a href="#ex-velocity-from-graph-bounce-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-velocity-from-graph-bounce-2-6">
 \begin{equation*}
 \frac{p(1.0)-p(0.9)}{1.0-0.9}
 =
@@ -947,14 +944,14 @@ f'(1)
 <div class="para" id="ex-difference-quotient-rational-position-1-1">Let <span class="process-math">\(p(t)=\dfrac{2t-1}{5+t}\)</span> be the position of an object at time <span class="process-math">\(t\text{.}\)</span> Here <span class="process-math">\(p\)</span> is measured in meters and <span class="process-math">\(t\)</span> is measured in seconds.<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-difference-quotient-rational-position-1-2">(a) Simplify the following difference quotient as much as possible:<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-1-3">
 \begin{equation*}
 \frac{p(t+h)-p(t)}{h}.
 \end{equation*}
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-1-4">(b) Use your result from part (a) and the limit definition of the derivative to calculate the instantaneous velocity of the object at time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-1-5">
 \begin{equation*}
 v(t)=p'(t)=\lim_{h\to 0}\frac{p(t+h)-p(t)}{h}.
 \end{equation*}
@@ -964,7 +961,7 @@ v(t)=p'(t)=\lim_{h\to 0}\frac{p(t+h)-p(t)}{h}.
 <div class="solutions"><details id="ex-difference-quotient-rational-position-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-difference-quotient-rational-position-2-1">(a) First compute<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-2">
 \begin{equation*}
 p(t+h)=\frac{2(t+h)-1}{5+t+h}
 =
@@ -973,14 +970,14 @@ p(t+h)=\frac{2(t+h)-1}{5+t+h}
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-2-3">So the difference quotient becomes<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-4">
 \begin{equation*}
 \frac{ \frac{2t+2h-1}{5+t+h} - \frac{2t-1}{5+t} }{h}.
 \end{equation*}
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-2-5">Combine the fractions over a common denominator:<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-6">
 \begin{equation*}
 =
 \frac{
@@ -992,14 +989,14 @@ h(5+t+h)(5+t)
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-2-7">After expanding and simplifying, this reduces to<div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-8">
 \begin{equation*}
 \frac{11}{(5+t+h)(5+t)}.
 \end{equation*}
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-2-9">(b) Now take the limit as <span class="process-math">\(h\to 0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-10">
 \begin{equation*}
 v(t)=\lim_{h\to 0}
 \frac{11}{(5+t+h)(5+t)}
@@ -1009,7 +1006,7 @@ v(t)=\lim_{h\to 0}
 </div>
 <div class="para" id="ex-difference-quotient-rational-position-2-11">(c) Evaluate at <span class="process-math">\(t=1\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-difference-quotient-rational-position-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-difference-quotient-rational-position-2-12">
 \begin{equation*}
 v(1)=\frac{11}{(6)^2}=\frac{11}{36}.
 \end{equation*}
@@ -1035,7 +1032,7 @@ v(1)=\frac{11}{(6)^2}=\frac{11}{36}.
 </div>
 <div class="para" id="ex-derivatives-multi-2-2">Recall that <span class="process-math">\(\dfrac{8}{x^3} = 8x^{-3}\text{,}\)</span> so we can apply the power rule to this term as well.<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivatives-multi-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivatives-multi-2-3">
 \begin{equation*}
 \begin{array}{rcl}
 f'(x) &amp; =&amp; 0 + 6x - 5 - 24x^{-4} \\
@@ -1045,14 +1042,14 @@ f'(x) &amp; =&amp; 0 + 6x - 5 - 24x^{-4} \\
 </div>
 <div class="para" id="ex-derivatives-multi-2-4">(b) To find <span class="process-math">\(f'(2)\text{,}\)</span> we substitute <span class="process-math">\(x=2\)</span> into the expression for <span class="process-math">\(f'(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivatives-multi-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivatives-multi-2-5">
 \begin{equation*}
 f'(2) = 6(2) - 5 - \frac{24}{(2)^4} = 12 - 5 - \frac{24}{16} = 7 - \frac{3}{2} = \frac{11}{2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-derivatives-multi-2-6">(c) To find <span class="process-math">\(f''(x)\text{,}\)</span> we differentiate <span class="process-math">\(f'(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivatives-multi-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivatives-multi-2-7">
 \begin{equation*}
 \begin{array}{rcl}
 f''(x) &amp; =&amp; 6 + 0 + 96x^{-5} \\
@@ -1062,7 +1059,7 @@ f''(x) &amp; =&amp; 6 + 0 + 96x^{-5} \\
 </div>
 <div class="para" id="ex-derivatives-multi-2-8">(d) To find <span class="process-math">\(f''(2)\text{,}\)</span> we substitute <span class="process-math">\(x=2\)</span> into the expression for <span class="process-math">\(f''(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivatives-multi-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivatives-multi-2-9">
 \begin{equation*}
 f''(2) = 6 + \frac{96}{(2)^5} = 6 + \frac{96}{32} = 6 + 3 = 9.
 \end{equation*}
@@ -1080,26 +1077,26 @@ f''(2) = 6 + \frac{96}{(2)^5} = 6 + \frac{96}{32} = 6 + 3 = 9.
 <div class="solutions"><details id="ex-derivative-ww-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-derivative-ww-2-2-1">
 <div class="para">(a) To find <span class="process-math">\(f'(1)\text{,}\)</span> we first need to find the derivative <span class="process-math">\(f'(x)\)</span> using the quotient rule. The quotient rule states that if <span class="process-math">\(f(x) = \dfrac{g(x)}{h(x)}\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-1-4">
 \begin{equation*}
 f'(x) = \frac{g'(x)h(x) - g(x)h'(x)}{(h(x))^2}.
 \end{equation*}
 </div>
 <div class="para">In our case, let <span class="process-math">\(g(x) = 3x^2 - 5x + 4\)</span> and <span class="process-math">\(h(x) = x^3 + 1\text{.}\)</span> We compute:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-1-7">
 \begin{equation*}
 g'(x) = 6x - 5, \quad h'(x) = 3x^2.
 \end{equation*}
 </div>
 <div class="para">Now we can apply the quotient rule:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-1-8">
 \begin{equation*}
 f'(x) = \frac{(6x - 5)(x^3 + 1) - (3x^2 - 5x + 4)(3x^2)}{(x^3 + 1)^2}.
 \end{equation*}
 </div>
 <div class="para"><div class="para" id="ex-derivative-ww-2-2-1-9">Now we substitute <span class="process-math">\(x=1\)</span> into the expression for <span class="process-math">\(f'(x)\)</span> to find <span class="process-math">\(f'(1)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-ww-2-2-1-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-1-10">
 \begin{equation*}
 f'(1) = \frac{(6 - 5)(2) - (3 - 5 + 4)(3)}{(2)^2}
 = \frac{2 - 6}{4}
@@ -1111,19 +1108,19 @@ f'(1) = \frac{(6 - 5)(2) - (3 - 5 + 4)(3)}{(2)^2}
 </div>
 <div class="para logical" id="ex-derivative-ww-2-2-2">
 <div class="para">(b) To find the equation of the tangent line to the graph of <span class="process-math">\(f\)</span> at the point where <span class="process-math">\(x=1\text{,}\)</span> we first need to find the coordinates of the point on the graph at <span class="process-math">\(x=1\text{.}\)</span> We compute:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-2-4">
 \begin{equation*}
 f(1) = \frac{3(1)^2 - 5(1) + 4}{(1)^3 + 1} = \frac{3 - 5 + 4}{2} = \frac{2}{2} = 1.
 \end{equation*}
 </div>
 <div class="para">So the point of tangency is <span class="process-math">\((1, 1)\text{.}\)</span> The slope of the tangent line is given by <span class="process-math">\(f'(1) = -1\text{.}\)</span> Using the point-slope form of a line, we can write the equation of the tangent line as:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-2-7">
 \begin{equation*}
 y - 1 = -1(x - 1).
 \end{equation*}
 </div>
 <div class="para">Simplifying this gives:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-2-8">
 \begin{equation*}
 y = -x + 2.
 \end{equation*}
@@ -1132,13 +1129,13 @@ y = -x + 2.
 </div>
 <div class="para logical" id="ex-derivative-ww-2-2-3">
 <div class="para">(c) To find the equation of the perpendicular line to the graph of <span class="process-math">\(f\)</span> at the point where <span class="process-math">\(x=1\text{,}\)</span> we first need to find the slope of the perpendicular line. The slope of the tangent line is <span class="process-math">\(-1\text{,}\)</span> so the <em class="alert">slope of the perpendicular line is the negative reciprocal</em> of <span class="process-math">\(-1\text{,}\)</span> which is <span class="process-math">\(1\text{.}\)</span> Using the point-slope form of a line again, we can write the equation of the perpendicular line as:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-3-7">
 \begin{equation*}
 y - 1 = 1(x - 1).
 \end{equation*}
 </div>
 <div class="para">Simplifying this gives:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-ww-2-2-3-8">
 \begin{equation*}
 y = x.
 \end{equation*}
@@ -1152,7 +1149,7 @@ y = x.
 </h4>
 <div class="para" id="ex-deriv-values-at-point-2-1">Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable functions and that<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-values-at-point-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-values-at-point-2-2">
 \begin{equation*}
 f(1) = -2, 
 \quad f'(1) = 4, 
@@ -1169,7 +1166,7 @@ f(1) = -2,
 <div class="solutions"><details id="ex-deriv-values-at-point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-deriv-values-at-point-3-1">(a) We use the linearity of differentiation:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-values-at-point-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-values-at-point-3-2">
 \begin{equation*}
 \begin{array}{rcl}
 \left.\frac{d}{dx}(3f - 2g)\right|_{x=1} &amp; = &amp; 3f'(1) - 2g'(1) \\
@@ -1179,7 +1176,7 @@ f(1) = -2,
 </div>
 <div class="para" id="ex-deriv-values-at-point-3-3">(b) We use the product rule:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-values-at-point-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-values-at-point-3-4">
 \begin{equation*}
 \begin{array}{rcl}
 \left.\frac{d}{dx}(fg)\right|_{x=1} &amp; = &amp; f'(1)g(1) + f(1)g'(1) \\
@@ -1189,7 +1186,7 @@ f(1) = -2,
 </div>
 <div class="para" id="ex-deriv-values-at-point-3-5">(c) We use the quotient rule:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-values-at-point-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-values-at-point-3-6">
 \begin{equation*}
 \begin{array}{rcl}
 \left.\frac{d}{dx}\!\left(\frac{f}{g}\right)\right|_{x=1} &amp; = &amp; \frac{f'(1)g(1) - f(1)g'(1)}{(g(1))^2} \\
@@ -1200,7 +1197,7 @@ f(1) = -2,
 </div>
 <div class="para" id="ex-deriv-values-at-point-3-7">(d) Again, we use the quotient rule:<div class="autopermalink" data-description="Paragraph"><a href="#ex-deriv-values-at-point-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-deriv-values-at-point-3-8">
 \begin{equation*}
 \begin{array}{rcl}
 \left.\frac{d}{dx}\!\left(\frac{g}{f}\right)\right|_{x=1} &amp; = &amp; \frac{g'(1)f(1) - g(1)f'(1)}{(f(1))^2} \\
@@ -1219,7 +1216,7 @@ f(1) = -2,
 <div class="solutions"><details id="ex-horizontal-tangents-poly-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-horizontal-tangents-poly-2-1">Horizontal tangents occur where the slope (derivative) is zero. So we are looking to solve the equation <span class="process-math">\(f'(x)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-horizontal-tangents-poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-horizontal-tangents-poly-2-2">
 \begin{equation*}
 \begin{array}{rcl}
 f(x) &amp; = &amp; x^3-6x^2+1 \\
@@ -1233,7 +1230,7 @@ f'(x) &amp; = &amp; 3x^2-12x \\
 </div>
 <div class="para" id="ex-horizontal-tangents-poly-2-4">Therefore, the horizontal tangents occur at <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=4\text{.}\)</span> To find the corresponding points on the graph, we compute:<div class="autopermalink" data-description="Paragraph"><a href="#ex-horizontal-tangents-poly-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-horizontal-tangents-poly-2-5">
 \begin{equation*}
 \begin{array}{rcl}
 f(0) &amp; = &amp; 1, \\
@@ -1250,7 +1247,7 @@ f(4) &amp; = &amp; 64 - 96 + 1 = -31.
 </h4>
 <div class="para" id="ex-derivative-triple-product-1-1">Find the derivative of the given function.<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-triple-product-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-triple-product-1-2">
 \begin{equation*}
 y = x(x^2+5)\sqrt{x+1}.
 \end{equation*}
@@ -1260,7 +1257,7 @@ y = x(x^2+5)\sqrt{x+1}.
 </div>
 <div class="para" id="ex-derivative-triple-product-2-2">First, we can rewrite <span class="process-math">\(y\)</span> as:<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-triple-product-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-triple-product-2-3">
 \begin{equation*}
 \begin{array}{rcl}
 y &amp; = &amp; x(x^2+5)(x+1)^{1/2} \\
@@ -1270,7 +1267,7 @@ y &amp; = &amp; x(x^2+5)(x+1)^{1/2} \\
 </div>
 <div class="para" id="ex-derivative-triple-product-2-4">Now we can apply the product rule to differentiate <span class="process-math">\(y\)</span> with respect to <span class="process-math">\(x\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-triple-product-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-triple-product-2-5">
 \begin{equation*}
 \begin{array}{rcl}
 \dfrac{dy}{dx} &amp; = &amp; \left[(x^3 + 5x)(x+1)^{1/2}\right]' \\
@@ -1294,35 +1291,35 @@ y &amp; = &amp; x(x^2+5)(x+1)^{1/2} \\
 </div>
 <div class="para" id="ex-tangent-line-parameters-2-3">For the line to be tangent to the curve, their slopes must be equal at some point. So we set:<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-line-parameters-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-tangent-line-parameters-2-4">
 \begin{equation*}
 2ax = 6 \quad \Rightarrow \quad a = \frac{3}{x}.
 \end{equation*}
 </div>
 <div class="para" id="ex-tangent-line-parameters-2-5">The point of tangency must also be on both curves. So we know that:<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-line-parameters-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-tangent-line-parameters-2-6">
 \begin{equation*}
 6x+1 =  y = ax^2 = \frac{3}{x} \cdot x^2 = 3x.
 \end{equation*}
 </div>
 <div class="para" id="ex-tangent-line-parameters-2-7">Solving for <span class="process-math">\(x\)</span> gives:<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-line-parameters-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-tangent-line-parameters-2-8">
 \begin{equation*}
 3x = 6x + 1 \quad \Rightarrow \quad -3x = 1 \quad \Rightarrow \quad x = -\frac{1}{3}.
 \end{equation*}
 </div>
 <div class="para" id="ex-tangent-line-parameters-2-9">Substituting back into (either) curve equation we get:<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-line-parameters-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-tangent-line-parameters-2-10">
 \begin{equation*}
 y = 6\left(-\frac{1}{3}\right) + 1 = -2 + 1 = -1.
 \end{equation*}
 </div>
 <div class="para" id="ex-tangent-line-parameters-2-11">And substituting this value back into our  <span class="process-math">\(a = \frac{3}{x}\)</span> equation gives:<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-line-parameters-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-tangent-line-parameters-2-12">
 \begin{equation*}
 a = \frac{3}{-\frac{1}{3}} = -9.
 \end{equation*}

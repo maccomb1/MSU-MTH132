@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -597,167 +594,370 @@ eBookConfig.enable_chatcodes =  false;
 <article class="objectives goal-like" id="sec-derivApp-curve2-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="sec-derivApp-curve2-2-1">
 <li id="sec-derivApp-curve2-2-1-1">
-<div class="para" id="p-derived-sec-derivApp-curve2-2-1-1">Explain why qualitative graphing is useful even when graphing technology is available.</div>
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-1">Apply the Second Derivative Test to classify critical points as local maxima, local minima, or inconclusive.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-curve2-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-curve2-2-1-2">
-<div class="para" id="p-derived-sec-derivApp-curve2-2-1-2">Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large <span class="process-math">\(|x|\text{.}\)</span>
-</div>
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-2">Determine if a function has even and odd symmetry and use symmetry to reduce the amount of work required in a sketch.</div>
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-curve2-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 <li id="sec-derivApp-curve2-2-1-3">
-<div class="para" id="p-derived-sec-derivApp-curve2-2-1-3">Use derivative sign charts to classify behavior near critical points and vertical asymptotes.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-curve2-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<div class="para logical" id="sec-derivApp-curve2-2-1-3-1">
+<div class="para">Use the full curve sketching method to analyze and sketch a variety of functions including:</div>
+<ul class="circle" id="sec-derivApp-curve2-2-1-3-1-1">
+<li id="sec-derivApp-curve2-2-1-3-1-1-1">
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-3-1-1-1">Identifying domain, asymptotes, intercepts, and symmetry.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-derivApp-curve2-2-1-3-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-derivApp-curve2-2-1-4">
-<div class="para" id="p-derived-sec-derivApp-curve2-2-1-4">Recognize and use symmetry (even, odd, periodic, and other transformations) to streamline a sketch.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-curve2-2-1-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<li id="sec-derivApp-curve2-2-1-3-1-1-2">
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-3-1-1-2">Find and classify critical points and determine where the function increases or decreases using <span class="process-math">\(f'(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-derivApp-curve2-2-1-3-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-derivApp-curve2-2-1-3-1-1-3">
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-3-1-1-3">Find inflection points and determine intervals of concavity using <span class="process-math">\(f''(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-derivApp-curve2-2-1-3-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-derivApp-curve2-2-1-3-1-1-4">
+<div class="para" id="p-derived-sec-derivApp-curve2-2-1-3-1-1-4">Combine all information to produce a clear sketch of the graph of the function.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-derivApp-curve2-2-1-3-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Objectives 3.7"><a href="#sec-derivApp-curve2-2" title="Copy heading and permalink for Objectives 3.7" aria-label="Copy heading and permalink for Objectives 3.7">🔗</a></div></article><div class="para" id="sec-derivApp-curve2-3">Computers can produce a graph instantly by plotting many points, so why learn to sketch by hand? One reason is that calculus helps us focus on the important parts of the graph: critical points, asymptotes, and regions where behavior changes. Another reason is error checking. A quick sketch, combined with a few well-chosen test values, can reveal when a result is unreasonable long before a mistake spreads into a larger calculation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<section class="subsection" id="ssec-rational-example"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Rational Function Example</span>
+<div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-curve2-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 3.7"><a href="#sec-derivApp-curve2-2" title="Copy heading and permalink for Objectives 3.7" aria-label="Copy heading and permalink for Objectives 3.7">🔗</a></div></article><div class="para" id="sec-derivApp-curve2-3">At this point, you may be asking, "<em class="emphasis">Why do I need to learn to sketch graphs by hand when there are computers and calculators that can graph instantly?</em>" One reason is that calculus helps us focus on the important parts of the graph: critical points, asymptotes, and regions where behavior changes. Another reason is error checking. A quick sketch, combined with a few well-chosen test values, can reveal when a result is unreasonable long before a mistake spreads into a larger calculation. Finally, sketching by hand is a skill that can be useful in many contexts, such as when you are explaining a graph to someone else, or when you are trying to understand a graph that is already drawn.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-derivApp-curve2-4">So in this section, we first learn a few more skills to aid our curve sketching abilities. Then we will work through several longer problems that apply the full curve sketching method.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="ssec-second-derivative-test"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Second Derivative Test</span>
 </h3>
-<article class="example example-like" id="ex-curve-rational"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para" id="ssec-second-derivative-test-2">The First Derivative Test classifies critical points by checking whether <span class="process-math">\(f'(x)\)</span> changes sign. When <span class="process-math">\(f''(c)\)</span> exists, there is a quicker classification that often works.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-second-derivative-test-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-second-derivative-test"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second Derivative Test.</span>
 </h4>
-<div class="para" id="ex-curve-rational-1-1">Use the curve sketching method to analyze <span class="process-math">\(f(x)=\dfrac{x^3-6x^2+11x-6}{2x^2-8x}\text{.}\)</span> Identify the domain, intercepts, critical points, vertical asymptotes, an inflection point, and end behavior.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-second-derivative-test-2-1">Let <span class="process-math">\(f\)</span> be twice differentiable near <span class="process-math">\(c\text{,}\)</span> and suppose <span class="process-math">\(f'(c)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-second-derivative-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-second-derivative-test-2-2">
+<li id="thm-second-derivative-test-2-2-1">
+<div class="para" id="thm-second-derivative-test-2-2-1-1">If <span class="process-math">\(f''(c)&gt;0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a local minimum at <span class="process-math">\(x=c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-second-derivative-test-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-curve-rational-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-curve-rational-2-1">First factor the function:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#thm-second-derivative-test-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-second-derivative-test-2-2-2">
+<div class="para" id="thm-second-derivative-test-2-2-2-1">If <span class="process-math">\(f''(c)&lt;0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a local maximum at <span class="process-math">\(x=c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-second-derivative-test-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}
-=\frac{(x-1)(x-2)(x-3)}{2x(x-4)}.
-\end{equation*}
+<div class="autopermalink" data-description="Item"><a href="#thm-second-derivative-test-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-second-derivative-test-2-2-3">
+<div class="para" id="thm-second-derivative-test-2-2-3-1">If <span class="process-math">\(f''(c)=0\text{,}\)</span> then the test is inconclusive.<div class="autopermalink" data-description="Paragraph"><a href="#thm-second-derivative-test-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-rational-2-3">The domain excludes values that make the denominator zero, so <span class="process-math">\(x\neq 0\)</span> and <span class="process-math">\(x\neq 4\text{.}\)</span> These produce vertical asymptotes at <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#thm-second-derivative-test-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Theorem 3.7.1: Second Derivative Test"><a href="#thm-second-derivative-test" title="Copy heading and permalink for Theorem 3.7.1: Second Derivative Test" aria-label="Copy heading and permalink for Theorem 3.7.1: Second Derivative Test">🔗</a></div></article><article class="remark remark-like" id="rem-sdt-inconclusive"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="rem-sdt-inconclusive-1">If <span class="process-math">\(f''(c)=0\text{,}\)</span> the point could still be a local maximum, a local minimum, or neither. In that case, you should return to the First Derivative Test (or another method).<div class="autopermalink" data-description="Paragraph"><a href="#rem-sdt-inconclusive-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-rational-2-4">Intercepts come from <span class="process-math">\(f(x)=0\text{,}\)</span> which occurs at zeros of the numerator that are in the domain: <span class="process-math">\(x=1,2,3\text{.}\)</span> There is no <span class="process-math">\(y\)</span>-intercept because <span class="process-math">\(x=0\)</span> is not in the domain.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.7.2"><a href="#rem-sdt-inconclusive" title="Copy heading and permalink for Remark 3.7.2" aria-label="Copy heading and permalink for Remark 3.7.2">🔗</a></div></article><article class="example example-like" id="ex-second-derivative-test"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-second-derivative-test-1-1">Use the Second Derivative Test to classify the critical points of <span class="process-math">\(f(x)=x^3-3x^2+4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-second-derivative-test-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-rational-2-5">The derivatives (after simplification) are:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="ex-second-derivative-test-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-second-derivative-test-2-1">Doing some prep work, the derivatives are <span class="process-math">\(f'(x)=3x^2-6x\)</span> and <span class="process-math">\(f''(x)=6x-6\text{.}\)</span> Now to find the critical points, we set <span class="process-math">\(f'(x)=0\text{,}\)</span> which gives <span class="process-math">\(3x^2-6x=0\text{.}\)</span> Factoring gives <span class="process-math">\(3x(x-2)=0\text{,}\)</span> so the critical points are <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=2\text{.}\)</span> Note that <span class="process-math">\(f'(x)\)</span> is defined everywhere, so there are no critical points from undefined derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#ex-second-derivative-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-f'(x)=\frac{x^4-8x^3+13x^2+12x-24}{2x^2(x-4)^2},
-\qquad
-f''(x)=-\frac{3(x^3-6x^2+24x-32)}{x^3(x-4)^3}.
-\end{equation*}
+<div class="para" id="ex-second-derivative-test-2-2">Evaluating the second derivative at these points gives <span class="process-math">\(f''(0)=-6&lt;0\text{,}\)</span> so there is a local maximum at <span class="process-math">\(x=0\text{,}\)</span> and <span class="process-math">\(f''(2)=6&gt;0\text{,}\)</span> so there is a local minimum at <span class="process-math">\(x=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-second-derivative-test-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-rational-2-7">Solving <span class="process-math">\(f'(x)=0\)</span> requires locating roots of the numerator. A numerical approach (graphing or a root finder) gives approximate solutions:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_1\approx -1.26,\quad a_2\approx 1.39,\quad a_3\approx 2.61,\quad a_4\approx 5.26.
-\end{equation*}
-</div>
-<div class="para" id="ex-curve-rational-2-9">Along with the vertical asymptotes at <span class="process-math">\(x=0\)</span> and <span class="process-math">\(x=4\text{,}\)</span> these break the real line into intervals where the sign of <span class="process-math">\(f'(x)\)</span> is constant. A sign chart then determines where the function increases or decreases, which in turn classifies the critical points as local maxima or minima.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-curve-rational-2-10">For concavity, solve <span class="process-math">\(f''(x)=0\)</span> by setting the numerator to zero:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x^3-6x^2+24x-32=0.
-\end{equation*}
-</div>
-<div class="para" id="ex-curve-rational-2-12">Factoring shows <span class="process-math">\(x^3-6x^2+24x-32=(x-2)(x^2-4x+16)\text{,}\)</span> and the quadratic has no real roots. Thus <span class="process-math">\(x=2\)</span> is the only inflection point in the domain.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-curve-rational-2-13">Finally, to understand end behavior, compare leading terms:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)=\frac{x^3-6x^2+11x-6}{2x^2-8x}\approx \frac{x^3}{2x^2}=\tfrac12 x \quad \text{for large } |x|.
-\end{equation*}
-</div>
-<div class="para" id="ex-curve-rational-2-15">This tells us that the graph grows roughly like a line with slope <span class="process-math">\(\tfrac12\)</span> as <span class="process-math">\(|x|\)</span> becomes large. In practice, this is enough to guide a reasonable sketch when combined with critical points and asymptotes.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-rational-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 3.7.1.1"><a href="#ex-curve-rational-2" title="Copy heading and permalink for Solution 3.7.1.1" aria-label="Copy heading and permalink for Solution 3.7.1.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.7.3.1"><a href="#ex-second-derivative-test-2" title="Copy heading and permalink for Solution 3.7.3.1" aria-label="Copy heading and permalink for Solution 3.7.3.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.7.1"><a href="#ex-curve-rational" title="Copy heading and permalink for Example 3.7.1" aria-label="Copy heading and permalink for Example 3.7.1">🔗</a></div></article><div class="autopermalink" data-description="Subsection: A Rational Function Example"><a href="#ssec-rational-example" title="Copy heading and permalink for Subsection: A Rational Function Example" aria-label="Copy heading and permalink for Subsection: A Rational Function Example">🔗</a></div></section><section class="subsection" id="ssec-trig-example"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Trigonometric Example</span>
+<div class="autopermalink" data-description="Example 3.7.3"><a href="#ex-second-derivative-test" title="Copy heading and permalink for Example 3.7.3" aria-label="Copy heading and permalink for Example 3.7.3">🔗</a></div></article><div class="autopermalink" data-description="Subsection: The Second Derivative Test"><a href="#ssec-second-derivative-test" title="Copy heading and permalink for Subsection: The Second Derivative Test" aria-label="Copy heading and permalink for Subsection: The Second Derivative Test">🔗</a></div></section><section class="subsection" id="ssec-symmetry"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Symmetry</span>
 </h3>
-<article class="example example-like" id="ex-curve-trig"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para" id="ssec-symmetry-2">Sometimes symmetry can dramatically reduce the work needed to sketch a graph. If you can recognize that a function is even or odd, then you can often sketch a smaller portion of the graph and use symmetry to complete the picture.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec-symmetry-3">Note that the idea of symmetry was first introduced in an algebraic context in the section on functions, but here we are using it as a tool for graphing.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-even-odd"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Even and Odd Functions.</span>
 </h4>
-<div class="para" id="ex-curve-trig-1-1">Apply the curve sketching method to <span class="process-math">\(s(x)=x-2\sin(x)\text{.}\)</span> Identify critical points, concavity, intercepts, and symmetry.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="def-even-odd-2-1">
+<li id="def-even-odd-2-1-1">
+<div class="para" id="def-even-odd-2-1-1-1">A function <span class="process-math">\(f\)</span> is <dfn class="terminology">even</dfn> if <span class="process-math">\(f(-x)=f(x)\)</span> for all <span class="process-math">\(x\)</span> in its domain. Visually, the graph of even functions are symmetric about the <span class="process-math">\(y\)</span>-axis, a mirror image on either side.<div class="autopermalink" data-description="Paragraph"><a href="#def-even-odd-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-curve-trig-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-curve-trig-2-1">The derivatives are <span class="process-math">\(s'(x)=1-2\cos(x)\)</span> and <span class="process-math">\(s''(x)=2\sin(x)\text{.}\)</span> The domain is all real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figure class="figure figure-like" id="even-symmetry"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/even-symmetry-2.svg" role="img" class="contained" alt="A coordinate plane showing the graph of y = x^2. The curve is a U-shaped parabola opening upward with its vertex at the origin. The left and right sides of the parabola are mirror images across the y-axis, illustrating even symmetry."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the function <span class="process-math">\(y=x^2\)</span> showing even symmetry about the <span class="process-math">\(y\)</span>-axis.<div class="autopermalink" data-description="Figure 3.7.5"><a href="#even-symmetry" title="Copy heading and permalink for Figure 3.7.5" aria-label="Copy heading and permalink for Figure 3.7.5">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item"><a href="#def-even-odd-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-even-odd-2-1-2">
+<div class="para" id="def-even-odd-2-1-2-1">A function <span class="process-math">\(f\)</span> is <dfn class="terminology">odd</dfn> if <span class="process-math">\(f(-x)=-f(x)\)</span> for all <span class="process-math">\(x\)</span> in its domain. Visually, the graph of odd functions has 180-degree (<span class="process-math">\(\pi\)</span> radians) rotational symmetry about the origin.<div class="autopermalink" data-description="Paragraph"><a href="#def-even-odd-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-trig-2-2">Critical points occur where <span class="process-math">\(s'(x)=0\text{,}\)</span> so <span class="process-math">\(\cos(x)=\tfrac12\text{.}\)</span> This happens at <span class="process-math">\(x=\tfrac{\pi}{3}\)</span> and <span class="process-math">\(x=\tfrac{5\pi}{3}\text{,}\)</span> repeating every <span class="process-math">\(2\pi\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figure class="figure figure-like" id="odd-symmetry"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/odd-symmetry-2.svg" role="img" class="contained" alt="A coordinate plane showing the graph of y = x^3. The curve is an S-shaped curve passing through the origin, symmetric about the origin. The left and right sides of the curve are mirror images across the origin, illustrating odd symmetry."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A graph of the function <span class="process-math">\(y=x^3\)</span> showing odd symmetry about the origin.<div class="autopermalink" data-description="Figure 3.7.6"><a href="#odd-symmetry" title="Copy heading and permalink for Figure 3.7.6" aria-label="Copy heading and permalink for Figure 3.7.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item"><a href="#def-even-odd-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Definition 3.7.4: Even and Odd Functions"><a href="#def-even-odd" title="Copy heading and permalink for Definition 3.7.4: Even and Odd Functions" aria-label="Copy heading and permalink for Definition 3.7.4: Even and Odd Functions">🔗</a></div></article><article class="example example-like" id="ssec-symmetry-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="ssec-symmetry-5-1"><div class="para" id="ssec-symmetry-5-1-1">For each of the following functions, determine whether it is even, odd, both, or neither.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ssec-symmetry-5-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ssec-symmetry-5-2-1-1">
+<span class="process-math">\(f(x)=x^4-2x^2+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-x=\tfrac{\pi}{3}+2\pi n
-\quad\text{and}\quad
-x=\tfrac{5\pi}{3}+2\pi n
-\quad\text{for integers } n.
-\end{equation*}
+<div class="solutions"><details id="ssec-symmetry-5-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ssec-symmetry-5-2-2-1">
+<em class="emphasis">Even.</em> We have <span class="process-math">\(f(-x)=(-x)^4-2(-x)^2+1=x^4-2x^2+1=f(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-curve-trig-2-4">Inflection points occur where <span class="process-math">\(s''(x)=0\text{,}\)</span> so <span class="process-math">\(\sin(x)=0\text{,}\)</span> which gives <span class="process-math">\(x=n\pi\)</span> for any integer <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-curve-trig-2-5">The point <span class="process-math">\((0,s(0))=(0,0)\)</span> is both an <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-intercept.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-curve-trig-2-6">This function is odd: <span class="process-math">\(s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x)\text{.}\)</span> Therefore its graph has 180-degree rotational symmetry about the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="remark remark-like" id="rem-trig-end-behavior"><h5 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h5>
-<div class="para" id="rem-trig-end-behavior-1">Since <span class="process-math">\(s(x)=x-2\sin(x)\)</span> behaves like <span class="process-math">\(x\)</span> for large <span class="process-math">\(|x|\text{,}\)</span> a reasonable long-range guide is the line <span class="process-math">\(y=x\text{.}\)</span> However, the term <span class="process-math">\(-2\sin(x)\)</span> keeps oscillating, so the graph continues to wiggle above and below this line.<div class="autopermalink" data-description="Paragraph"><a href="#rem-trig-end-behavior-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 3.7.3"><a href="#rem-trig-end-behavior" title="Copy heading and permalink for Remark 3.7.3" aria-label="Copy heading and permalink for Remark 3.7.3">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.7.2.1"><a href="#ex-curve-trig-2" title="Copy heading and permalink for Solution 3.7.2.1" aria-label="Copy heading and permalink for Solution 3.7.2.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.7.7.a.1"><a href="#ssec-symmetry-5-2-2" title="Copy heading and permalink for Solution 3.7.7.a.1" aria-label="Copy heading and permalink for Solution 3.7.7.a.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.7.2"><a href="#ex-curve-trig" title="Copy heading and permalink for Example 3.7.2" aria-label="Copy heading and permalink for Example 3.7.2">🔗</a></div></article><div class="autopermalink" data-description="Subsection: A Trigonometric Example"><a href="#ssec-trig-example" title="Copy heading and permalink for Subsection: A Trigonometric Example" aria-label="Copy heading and permalink for Subsection: A Trigonometric Example">🔗</a></div></section><section class="subsection" id="ssec-curve-sketching-method-detailed"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Curve Sketching Checklist</span>
+<div class="autopermalink" data-description="Task 3.7.7.a"><a href="#ssec-symmetry-5-2" title="Copy heading and permalink for Task 3.7.7.a" aria-label="Copy heading and permalink for Task 3.7.7.a">🔗</a></div></article><article class="task exercise-like" id="ssec-symmetry-5-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ssec-symmetry-5-3-1-1">
+<span class="process-math">\(g(x)=x^3+5\sin(x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ssec-symmetry-5-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ssec-symmetry-5-3-2-1">
+<em class="emphasis">Odd.</em> We have <span class="process-math">\(g(-x)=(-x)^3+5\sin(-x)=-x^3-5\sin(x)=-(x^3+5\sin(x))=-g(x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec-symmetry-5-3-2-2">
+<em class="alert">Note:</em> that you need to remember from your favorite trig class that <span class="process-math">\(\sin(x)\)</span> is an odd function, so <span class="process-math">\(\sin(-x)=-\sin(x)\text{.}\)</span> It is also true that <span class="process-math">\(\cos(x)\)</span> is an even function, so <span class="process-math">\(\cos(-x)=\cos(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.7.b.1"><a href="#ssec-symmetry-5-3-2" title="Copy heading and permalink for Solution 3.7.7.b.1" aria-label="Copy heading and permalink for Solution 3.7.7.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.7.7.b"><a href="#ssec-symmetry-5-3" title="Copy heading and permalink for Task 3.7.7.b" aria-label="Copy heading and permalink for Task 3.7.7.b">🔗</a></div></article><article class="task exercise-like" id="ssec-symmetry-5-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ssec-symmetry-5-4-1-1">
+<span class="process-math">\(h(x)=\dfrac{x^3+1}{x^2-1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ssec-symmetry-5-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ssec-symmetry-5-4-2-1">
+<em class="emphasis">Neither.</em> We have <span class="process-math">\(h(-x)=\frac{(-x)^3+1}{(-x)^2-1}=\frac{-x^3+1}{x^2-1}.\)</span> This is not equal to <span class="process-math">\(h(x)\text{,}\)</span> so it is not even. It is also not equal to <span class="process-math">\(-h(x)\text{,}\)</span> so it is not odd.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ssec-symmetry-5-4-2-2">We can also use a specific counterexample to show that <span class="process-math">\(h\)</span> is not even or odd. For instance, <span class="process-math">\(h(2)=\dfrac{9}{3}=3\text{,}\)</span> but <span class="process-math">\(h(-2)=\dfrac{-7}{3}\neq 3\)</span> and <span class="process-math">\(h(-2)\neq -3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ssec-symmetry-5-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.7.c.1"><a href="#ssec-symmetry-5-4-2" title="Copy heading and permalink for Solution 3.7.7.c.1" aria-label="Copy heading and permalink for Solution 3.7.7.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.7.7.c"><a href="#ssec-symmetry-5-4" title="Copy heading and permalink for Task 3.7.7.c" aria-label="Copy heading and permalink for Task 3.7.7.c">🔗</a></div></article><div class="autopermalink" data-description="Example 3.7.7"><a href="#ssec-symmetry-5" title="Copy heading and permalink for Example 3.7.7" aria-label="Copy heading and permalink for Example 3.7.7">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Symmetry"><a href="#ssec-symmetry" title="Copy heading and permalink for Subsection: Symmetry" aria-label="Copy heading and permalink for Subsection: Symmetry">🔗</a></div></section><section class="subsection" id="subsec-allTogether"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Putting It All Together</span>
 </h3>
-<article class="algorithm theorem-like" id="strat-curve-sketching-detailed"><h4 class="heading">
-<span class="type">Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method for Graphing (Detailed).</span>
+<div class="para" id="subsec-allTogether-2">Now that we have developed all of the necessary tools, we are ready to apply the full curve sketching method to a variety of functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-3">Below is a checklist of the types of steps that might be required in a curve sketching problem. Not every problem will require every step. You should focus only on the parts that are explicitly requested.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-4">In particular, on timed quizzes and exams, it is important to balance completeness with efficiency. Problems are designed so that the requested steps can reasonably be completed within the allotted time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="strat-curve-sketching"><h4 class="heading">
+<span class="type">Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Curve Sketching Checklist.</span>
 </h4>
-<ol class="decimal" id="strat-curve-sketching-detailed-2">
-<li id="strat-curve-sketching-detailed-2-1">
-<div class="para" id="strat-curve-sketching-detailed-2-1-1">Compute <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(f''(x)\text{.}\)</span> Determine the domain of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ol class="decimal" id="strat-curve-sketching-2">
+<li id="strat-curve-sketching-2-1">
+<div class="para" id="p-derived-strat-curve-sketching-2-1">Compute <span class="process-math">\(f'(x)\)</span> and <span class="process-math">\(f''(x)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#strat-curve-sketching-detailed-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#strat-curve-sketching-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-2">
-<div class="para" id="strat-curve-sketching-detailed-2-2-1">Find critical points by solving <span class="process-math">\(f'(x)=0\)</span> and locating where <span class="process-math">\(f'(x)\)</span> is undefined.<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#strat-curve-sketching-detailed-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="strat-curve-sketching-2-2">
+<div class="para" id="p-derived-strat-curve-sketching-2-2">Find critical points from <span class="process-math">\(f'(x)=0\)</span> and where <span class="process-math">\(f'(x)\)</span> is undefined.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#strat-curve-sketching-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-3">
-<div class="para" id="strat-curve-sketching-detailed-2-3-1">Make a sign table for <span class="process-math">\(f'(x)\)</span> to determine intervals of increase and decrease and to classify each critical point. Critical points can correspond to local maxima, local minima, stationary points, cusps, corners, or vertical asymptotes.<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 3"><a href="#strat-curve-sketching-detailed-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="strat-curve-sketching-2-3">
+<div class="para" id="p-derived-strat-curve-sketching-2-3">Use the sign of <span class="process-math">\(f'(x)\)</span> to determine where the function increases or decreases and to classify critical points.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#strat-curve-sketching-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-4">
-<div class="para" id="strat-curve-sketching-detailed-2-4-1">Find possible inflection points by solving <span class="process-math">\(f''(x)=0\)</span> and locating where <span class="process-math">\(f''(x)\)</span> is undefined. Confirm an inflection point by a sign change in <span class="process-math">\(f''(x)\)</span> (and typically requiring <span class="process-math">\(f'(x)\)</span> to exist at the point).<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 4"><a href="#strat-curve-sketching-detailed-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="strat-curve-sketching-2-4">
+<div class="para" id="p-derived-strat-curve-sketching-2-4">Find possible inflection points from <span class="process-math">\(f''(x)=0\)</span> and where <span class="process-math">\(f''(x)\)</span> is undefined.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#strat-curve-sketching-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-5">
-<div class="para" id="strat-curve-sketching-detailed-2-5-1">Find intercepts: solve <span class="process-math">\(f(x)=0\)</span> for <span class="process-math">\(x\)</span>-intercepts and compute <span class="process-math">\(f(0)\)</span> if <span class="process-math">\(x=0\)</span> is in the domain.<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 5"><a href="#strat-curve-sketching-detailed-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+<li id="strat-curve-sketching-2-5">
+<div class="para" id="p-derived-strat-curve-sketching-2-5">Use the sign of <span class="process-math">\(f''(x)\)</span> to determine concavity and confirm inflection points.</div>
+<div class="autopermalink" data-description="Item 5"><a href="#strat-curve-sketching-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-6">
-<div class="para" id="strat-curve-sketching-detailed-2-6-1">Describe end behavior as <span class="process-math">\(x\to\pm\infty\text{.}\)</span> When possible, use limit language. For polynomials and many rational functions, comparing leading terms gives a useful approximation of the long-range trend.<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 6"><a href="#strat-curve-sketching-detailed-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+<li id="strat-curve-sketching-2-6">
+<div class="para" id="p-derived-strat-curve-sketching-2-6">Find intercepts and identify any vertical asymptotes from the domain.</div>
+<div class="autopermalink" data-description="Item 6"><a href="#strat-curve-sketching-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-7">
-<div class="para" id="strat-curve-sketching-detailed-2-7-1">Check symmetry when it helps: even symmetry if <span class="process-math">\(f(-x)=f(x)\text{,}\)</span> odd symmetry if <span class="process-math">\(f(-x)=-f(x)\text{,}\)</span> and periodicity if <span class="process-math">\(f(x+c)=f(x)\)</span> for some constant <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 7"><a href="#strat-curve-sketching-detailed-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+<li id="strat-curve-sketching-2-7">
+<div class="para" id="p-derived-strat-curve-sketching-2-7">Describe end behavior as <span class="process-math">\(x\to\pm\infty\)</span> using our horizontal asymptote techniques.</div>
+<div class="autopermalink" data-description="Item 7"><a href="#strat-curve-sketching-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
 </li>
-<li id="strat-curve-sketching-detailed-2-8">
-<div class="para" id="strat-curve-sketching-detailed-2-8-1">Combine the information into a clear sketch. Mark intercepts, extrema, inflection points, and asymptotes.<div class="autopermalink" data-description="Paragraph"><a href="#strat-curve-sketching-detailed-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="strat-curve-sketching-2-8">
+<div class="para" id="p-derived-strat-curve-sketching-2-8">Check for even/odd symmetry, <span class="process-math">\(f(-x)=f(x)\)</span> or <span class="process-math">\(f(-x)=-f(x)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 8"><a href="#strat-curve-sketching-detailed-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+<div class="autopermalink" data-description="Item 8"><a href="#strat-curve-sketching-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="strat-curve-sketching-2-9">
+<div class="para" id="p-derived-strat-curve-sketching-2-9">Combine these features into a clear sketch.</div>
+<div class="autopermalink" data-description="Item 9"><a href="#strat-curve-sketching-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Strategy 3.7.4: Method for Graphing (Detailed)"><a href="#strat-curve-sketching-detailed" title="Copy heading and permalink for Strategy 3.7.4: Method for Graphing (Detailed)" aria-label="Copy heading and permalink for Strategy 3.7.4: Method for Graphing (Detailed)">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Curve Sketching Checklist"><a href="#ssec-curve-sketching-method-detailed" title="Copy heading and permalink for Subsection: Curve Sketching Checklist" aria-label="Copy heading and permalink for Subsection: Curve Sketching Checklist">🔗</a></div></section><section class="subsection" id="additional-worked-examples-curve2"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Strategy 3.7.8: Curve Sketching Checklist"><a href="#strat-curve-sketching" title="Copy heading and permalink for Strategy 3.7.8: Curve Sketching Checklist" aria-label="Copy heading and permalink for Strategy 3.7.8: Curve Sketching Checklist">🔗</a></div></article><article class="example example-like" id="ex-curve-trig"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-curve-trig-1-1">Consider the function <span class="process-math">\(s(x)=x-2\sin(x)\)</span> on the interval <span class="process-math">\([-2\pi,2\pi]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-curve-trig-1-2">(a) Identify vertical and horizontal asymptotes, and symmetry if they exist.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-curve-trig-1-3">(b) Find critical points and regions of increase and decrease.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-curve-trig-1-4">(c) Find inflection points and intervals of concavity.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-curve-trig-1-5">(d) Combine parts (a)-(c) to sketch the graph of <span class="process-math">\(s\text{.}\)</span> Plot all critical points and inflection points.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-curve-trig-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video Solution</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-curve-trig-2-2">Here is a video solution to this problem.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-2-3">
+<div class="video-box" style="width: 90%;padding-top: 50.625%; margin-left: 5%; margin-right: 5%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/eYcCeFBrLqc?&amp;modestbranding=1&amp;rel=0" id="ex-curve-trig-2-3-1"></iframe></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.9.1: Video Solution"><a href="#ex-curve-trig-2" title="Copy heading and permalink for Solution 3.7.9.1: Video Solution" aria-label="Copy heading and permalink for Solution 3.7.9.1: Video Solution">🔗</a></div>
+</div></details><details id="ex-curve-trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Written Solution</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-curve-trig-3-2">(a) There are no vertical asymptotes since the domain is all real numbers. There are no horizontal asymptotes since the function grows without bound as <span class="process-math">\(x\to\pm\infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-curve-trig-3-3">
+<div class="para">The function is odd since,</div>
+<div class="displaymath process-math" id="ex-curve-trig-3-3-1">
+\begin{equation*}
+\begin{array}{rcl}
+s(-x) \amp =\amp -x-2\sin(-x)\\
+\amp =\amp -x+2\sin(x)\\
+\amp =\amp -(x-2\sin(x))=-s(x)
+\end{array}
+\end{equation*}
+</div>
+<div class="para">so it has 180-degree rotational symmetry about the origin.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-curve-trig-3-4">
+<div class="para">(b) The derivative is <span class="process-math">\(s'(x)=1-2\cos(x)\text{.}\)</span> This is always defined, so there are no critical points from undefined derivatives. So we only need to solve <span class="process-math">\(s'(x)=0\)</span> to find critical points.</div>
+<div class="displaymath process-math" id="ex-curve-trig-3-4-3">
+\begin{equation*}
+\begin{array}{rcl}
+0 \amp =\amp  1-2\cos(x)  \\
+\cos(x)\amp = \amp \tfrac12 \\
+x \amp= \amp\tfrac{-5\pi}{3}, \tfrac{-\pi}{3}, \tfrac{\pi}{3}, \tfrac{5\pi}{3}
+\end{array} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-5">Note that the symmetry of the function means that the critical points are symmetric about the origin, and the behavior on <span class="process-math">\([-2\pi,0]\)</span> is a mirror image of the behavior on <span class="process-math">\([0,2\pi]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-6">Choosing test points in each interval determined by the critical points gives the following sign chart for <span class="process-math">\(s'(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-curve-trig-3-7">
+\begin{equation*}
+\begin{array}{c|c|c}
+x \amp \text{Sign of } s'(x) \amp \text{Behavior of } s(x) \\
+\hline
+-2\pi \amp (-) \amp \text{decreasing} \\
+-\tfrac{5\pi}{3} \amp 0 \amp  \\
+-\pi \amp (+) \amp \text{increasing} \\
+-\tfrac{\pi}{3} \amp 0 \amp  \\
+0 \amp (-) \amp \text{decreasing} \\
+\tfrac{\pi}{3} \amp 0 \amp  \\
+\pi \amp (+) \amp \text{increasing} \\
+\tfrac{5\pi}{3} \amp 0 \amp  \\
+2\pi \amp (-) \amp \text{decreasing}
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="ex-curve-trig-3-8">So the function is decreasing on <span class="process-math">\([-2\pi,-\tfrac{5\pi}{3}) \cup (-\tfrac{\pi}{3},\tfrac{\pi}{3}) \cup (\tfrac{5\pi}{3},2\pi]\text{,}\)</span> and increasing on <span class="process-math">\((-\tfrac{5\pi}{3},-\tfrac{\pi}{3}) \cup (\tfrac{\pi}{3},\tfrac{5\pi}{3})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-9">Again we could have used the symmetry of the function to reduce our work. For instance, we could have just analyzed the behavior on <span class="process-math">\([0,2\pi]\)</span> and then used symmetry to get the rest of our conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-10">(c) The second derivative is <span class="process-math">\(s''(x)=2\sin(x)\text{,}\)</span> which is defined everywhere, so there are no inflection points from undefined derivatives. To find inflection points, we solve <span class="process-math">\(s''(x)=0\text{,}\)</span> which gives <span class="process-math">\(\sin(x)=0\text{.}\)</span> This happens at <span class="process-math">\(x= -2\pi, -\pi, 0, \pi, 2\pi\text{.}\)</span> Because <span class="process-math">\(x=-2\pi\)</span> and <span class="process-math">\(x=2\pi\)</span> are endpoints of the interval, they cannot be inflection points, so the only possible inflection points are at <span class="process-math">\(x=-\pi,0,\pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-11">To determine intervals of concavity, we can use test points in each interval determined by the possible inflection points. This gives the following sign chart for <span class="process-math">\(s''(x)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-curve-trig-3-12">
+\begin{equation*}
+\begin{array}{c|c|c}
+x \amp \text{Sign of } s''(x) \amp \text{Concavity of } s(x) \\
+\hline
+-2\pi \amp 0 \amp  \\
+-\tfrac{3\pi}{2} \amp (+) \amp \text{concave up} \\
+-\pi \amp 0 \amp  \\
+-\tfrac{\pi}{2} \amp (-) \amp \text{concave down} \\
+0 \amp 0 \amp  \\
+\tfrac{\pi}{2} \amp (+) \amp \text{concave up} \\
+\pi \amp 0 \amp   \\
+\tfrac{3\pi}{2} \amp (-) \amp \text{concave down} \\
+2\pi \amp 0 \amp  
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="ex-curve-trig-3-13">So the function is concave up on <span class="process-math">\((-2\pi,-\pi) \cup (0,\pi)\)</span> and concave down on <span class="process-math">\((-\pi,0) \cup (\pi,2\pi)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-14">Because the function changes concavity at <span class="process-math">\(x=-\pi,0,\pi\text{,}\)</span> these points are indeed inflection points.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-15">(d) Combining all of this information, we can sketch the graph of <span class="process-math">\(s\text{.}\)</span> We know there are no asymptotes, and the function is odd, so we can focus on sketching the portion of the graph on <span class="process-math">\([0,2\pi]\)</span> and then use symmetry to get the rest of the graph.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-trig-3-16">Since we will need to plot all critical points and inflection points, we should compute the function values at these points.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-curve-trig-3-17">
+\begin{equation*}
+\begin{array}{c|c|c}
+x \amp s(x) \amp \text{Type of Point} \\
+\hline
+0 \amp 0 \amp \text{inflection point} \\
+\tfrac{\pi}{3} \amp \tfrac{\pi}{3}-\sqrt{3}\approx -0.7  \amp \text{critical point} \\
+\pi \amp \pi \amp \text{inflection point} \\
+\tfrac{5\pi}{3} \amp \tfrac{5\pi}{3}+\sqrt{3}\approx 6.7 \amp \text{critical point} \\
+\end{array}
+\end{equation*}
+</div>
+<div class="para" id="ex-curve-trig-3-18">Plotting these points and using the behavior determined in parts (b) and (c) gives the following sketch of the graph of <span class="process-math">\(s\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<a class="external" href="https://www.desmos.com/calculator/zbckzhisjd" target="_blank"><figure class="figure figure-like" id="ex-curve-trig-3-19-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/curveSketch10.gif" class="contained" alt="Animated graph of s of x equals x minus 2 sine x. The curve has a local minimum near x equals pi over 3 and a local maximum near x equals 5 pi over 3. There are inflection points at x equals 0 and x equals pi. The graph decreases to the minimum, then increases to the maximum, and changes concavity at the inflection points. The graph is odd, so the portion on the left side of the y-axis is a rotationally symmetric image of the portion on the right side, reflected across the origin."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A GIF showing the graph of <span class="process-math">\(s(x)=x-2\sin(x)\)</span> first on the interval <span class="process-math">\([0,2\pi]\)</span> then using symmetry to complete the graph.<div class="autopermalink" data-description="Figure 3.7.10"><a href="#ex-curve-trig-3-19-1" title="Copy heading and permalink for Figure 3.7.10" aria-label="Copy heading and permalink for Figure 3.7.10">🔗</a></div></figcaption></figure></a><article class="remark remark-like" id="ex-curve-trig-3-20"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="ex-curve-trig-3-20-1-1">Note that this problem was designed to be completed in a reasonable amount of time on a quiz or exam, so it is not meant to be an exhaustive analysis of the function. For example it did not ask for intercepts, so we did not compute them. It also did not ask us to classify critical points as local maxima or minima, so we just identified them as critical points and used the sign of the derivative to determine where the function increases or decreases.<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-trig-3-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.7.11"><a href="#ex-curve-trig-3-20" title="Copy heading and permalink for Remark 3.7.11" aria-label="Copy heading and permalink for Remark 3.7.11">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.7.9.2: Written Solution"><a href="#ex-curve-trig-3" title="Copy heading and permalink for Solution 3.7.9.2: Written Solution" aria-label="Copy heading and permalink for Solution 3.7.9.2: Written Solution">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.9"><a href="#ex-curve-trig" title="Copy heading and permalink for Example 3.7.9" aria-label="Copy heading and permalink for Example 3.7.9">🔗</a></div></article><article class="example example-like" id="subsec-allTogether-7"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="subsec-allTogether-7-1-1">
+<div class="para">Consider the function <span class="process-math">\(f(x) = \dfrac{1}{1+e^{-x}}\)</span> with derivatives</div>
+<div class="displaymath process-math" id="subsec-allTogether-7-1-1-2">
+\begin{equation*}
+f'(x)=\dfrac{e^{-x}}{(1+e^{-x})^2} \quad \text{ and } \quad f''(x)=\dfrac{e^{-x}(e^{-x}-1)}{(1+e^{-x})^3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="subsec-allTogether-7-1-2">(a) Identify vertical and horizontal asymptotes, intercepts and symmetry.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="subsec-allTogether-7-1-3">(b) Find critical points and regions of increase and decrease. Classify critical points as local maxima, local minima, or neither.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="subsec-allTogether-7-1-4">(c) Find intervals of concavity and inflection points.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="subsec-allTogether-7-1-5">(d) Combine parts (a)-(c) to sketch the graph of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="subsec-allTogether-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Video Solution</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-allTogether-7-2-2">Here is a video solution to this problem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-7-2-3">
+<div class="video-box" style="width: 90%;padding-top: 50.625%; margin-left: 5%; margin-right: 5%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/eYcCeFBrLqc?&amp;modestbranding=1&amp;rel=0" id="subsec-allTogether-7-2-3-1"></iframe></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.12.1: Video Solution"><a href="#subsec-allTogether-7-2" title="Copy heading and permalink for Solution 3.7.12.1: Video Solution" aria-label="Copy heading and permalink for Solution 3.7.12.1: Video Solution">🔗</a></div>
+</div></details><details id="subsec-allTogether-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Written Answers</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="subsec-allTogether-7-3-2">Here are the answers to this problem to help you check your work. More detailed explanations are available in the video solution.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-7-3-3">(a) There are no vertical asymptotes, and there is a horizontal asymptotes at <span class="process-math">\(y=1\)</span> and <span class="process-math">\(y=0\text{.}\)</span> The y-intercept is at <span class="process-math">\((0,\tfrac{1}{2})\text{,}\)</span> and there are no x-intercepts. The function is neither even nor odd, so there is no symmetry.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-7-3-4">(b) The derivative is <span class="process-math">\(f'(x)=\dfrac{e^{-x}}{(1+e^{-x})^2}\text{,}\)</span> which is defined everywhere, so there are no critical points from undefined derivatives. Setting the derivative equal to zero gives <span class="process-math">\(e^{-x}=0\text{,}\)</span> which has no solutions, so there are no critical points from <span class="process-math">\(f'(x)=0\)</span> either. So there are no critical points. Choosing any test point in <span class="process-math">\((-\infty,\infty)\text{,}\)</span> we see that <span class="process-math">\(f'(x)&gt;0\)</span> for all <span class="process-math">\(x\text{,}\)</span> so the function is increasing everywhere.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-7-3-5">(c) The second derivative is <span class="process-math">\(f''(x)=\dfrac{e^{-x}(e^{-x}-1)}{(1+e^{-x})^3}\text{,}\)</span> which is defined everywhere, so there are no inflection points from undefined derivatives. Setting the second derivative equal to zero gives <span class="process-math">\(e^{-x}(e^{-x}-1)=0\text{,}\)</span> which has a solution at <span class="process-math">\(x=0\text{.}\)</span> Choosing test points in <span class="process-math">\((-\infty,0)\)</span> and <span class="process-math">\((0,\infty)\)</span> shows that the function is concave up on <span class="process-math">\((-\infty,0)\)</span> and concave down on <span class="process-math">\((0,\infty)\text{,}\)</span> so there is an inflection point at <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-allTogether-7-3-6">(d) Plotting the intercept and inflection point, and using the behavior determined in parts (a)-(c) gives the following sketch of the graph of <span class="process-math">\(f\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-allTogether-7-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/subsec-allTogether-7-3-7.svg" role="img" class="contained" alt="Graph of the reciprocal of 1 plus the exponential of negative x. The function is increasing everywhere and has horizontal asymptotes at y equals 1 and y equals 0. There is an inflection point at x equals 0, where the graph changes from concave up to concave down. The graph approaches y equals 0 as x goes to negative infinity and approaches y equals 1 as x goes to positive infinity."></div>
+<div class="autopermalink" data-description="Solution 3.7.12.2: Written Answers"><a href="#subsec-allTogether-7-3" title="Copy heading and permalink for Solution 3.7.12.2: Written Answers" aria-label="Copy heading and permalink for Solution 3.7.12.2: Written Answers">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 3.7.12"><a href="#subsec-allTogether-7" title="Copy heading and permalink for Example 3.7.12" aria-label="Copy heading and permalink for Example 3.7.12">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Putting It All Together"><a href="#subsec-allTogether" title="Copy heading and permalink for Subsection: Putting It All Together" aria-label="Copy heading and permalink for Subsection: Putting It All Together">🔗</a></div></section><section class="subsection" id="additional-worked-examples-curve2"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Worked-Out Examples</span>
 </h3>
 <div class="para" id="additional-worked-examples-curve2-2">To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in: <em class="alert"><a href="sec-derivApp-ww.html#subsec-derivApp-curve2" class="internal" title="Subsection: Section 3.7 Curve Sketching Part 2">Additional Examples for Curve Sketching Part 2 </a></em><div class="autopermalink" data-description="Paragraph"><a href="#additional-worked-examples-curve2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -766,76 +966,146 @@ x=\tfrac{5\pi}{3}+2\pi n
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Practice / Study Problems</span>
 </h3>
 <div class="exercisegroup" id="exercises-curve-sketching-2-2">
-<h4 class="heading"><span class="title">Conceptual Questions.</span></h4>
+<h4 class="heading"><span class="title">Some True/False Problems.</span></h4>
+<div class="introduction" id="exercises-curve-sketching-2-2-2"><div class="para" id="exercises-curve-sketching-2-2-2-1">Determine whether each statement is true or false and briefly justify your reasoning.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-curve-sketching-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="tf-cs2-01"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="tf-cs2-01-1-1">True or False: A calculator graph can hide important features if the viewing window is not chosen carefully.<div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-01-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="exercise exercise-like" id="tf-curve2-01"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-01-1-1">If <span class="process-math">\(f'(1)=0\)</span> and <span class="process-math">\(f''(1)&gt;0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a local minimum at <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-01-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="tf-cs2-01-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="tf-cs2-01-2-1">True. A window can miss a vertical asymptote, a local extremum, or a change in concavity.<div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-01-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-01-2-1">
+<em class="emphasis">True.</em> This is exactly the conclusion of the Second Derivative Test.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 1.1"><a href="#tf-cs2-01-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#tf-curve2-01-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Exercise 1"><a href="#tf-cs2-01" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="tf-cs2-02"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="tf-cs2-02-1-1">True or False: If <span class="process-math">\(f(x)\approx cx^p\)</span> for large <span class="process-math">\(|x|\text{,}\)</span> then this approximation can help predict the end behavior of the graph.<div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-02-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#tf-curve2-01" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-02"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-02-1-1">If <span class="process-math">\(f'(5)=0\)</span> and <span class="process-math">\(f''(5)=0\text{,}\)</span> then <span class="process-math">\(f\)</span> has neither a local minimum nor a local maximum at <span class="process-math">\(x=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-02-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="tf-cs2-02-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="tf-cs2-02-2-1">True. The dominant term controls the long-range trend.<div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-02-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-02-2-1">
+<em class="emphasis">False.</em> If <span class="process-math">\(f''(5)=0\text{,}\)</span> the Second Derivative Test is inconclusive, so we cannot conclude anything about local minima or maxima at <span class="process-math">\(x=5\text{.}\)</span> For instance, the function <span class="process-math">\(f(x)=(x-5)^4\)</span> has <span class="process-math">\(f'(5)=0\)</span> and <span class="process-math">\(f''(5)=0\text{,}\)</span> but it has a local minimum at <span class="process-math">\(x=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 2.1"><a href="#tf-cs2-02-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#tf-curve2-02-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Exercise 2"><a href="#tf-cs2-02" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="tf-cs2-03"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="tf-cs2-03-1-1">True or False: If <span class="process-math">\(f\)</span> is odd, then its graph has 180-degree rotational symmetry about the origin.<div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-03-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#tf-curve2-02" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-03"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-03-1-1">If <span class="process-math">\(f''(c)&lt;0\text{,}\)</span> then <span class="process-math">\(f\)</span> must be decreasing at <span class="process-math">\(x=c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-03-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="tf-cs2-03-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="tf-cs2-03-2-1">True. This follows from <span class="process-math">\(f(-x)=-f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-cs2-03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-03-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-03-2-1">
+<em class="emphasis">False.</em> If <span class="process-math">\(f''(c)&lt;0\text{,}\)</span> then the function is concave down at <span class="process-math">\(x=c\text{,}\)</span> but it could be increasing, decreasing, or constant at that point. For instance, the function <span class="process-math">\(f(x)=-x^2\)</span> has <span class="process-math">\(f''(0)=-2&lt;0\text{,}\)</span> but it is increasing at <span class="process-math">\(x=-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 3.1"><a href="#tf-cs2-03-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#tf-curve2-03-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Exercise 3"><a href="#tf-cs2-03" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article>
+<div class="autopermalink" data-description="Exercise 3"><a href="#tf-curve2-03" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-05"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-05-1-1">If <span class="process-math">\(f\)</span> is an odd function with a local maximum at <span class="process-math">\(x=2\text{,}\)</span> then there is a local minimum at <span class="process-math">\(x=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-05-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise Group 1–3: Conceptual Questions"><a href="#exercises-curve-sketching-2-2" title="Copy heading and permalink for Exercise Group 1–3: Conceptual Questions" aria-label="Copy heading and permalink for Exercise Group 1–3: Conceptual Questions">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-05-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-05-2-1">
+<em class="emphasis">True.</em> If <span class="process-math">\(f\)</span> is odd, then <span class="process-math">\(f(-2)=-f(2)\text{.}\)</span> So if there is a local maximum at <span class="process-math">\(x=2\text{,}\)</span> then there is a local minimum at <span class="process-math">\(x=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="exercisegroup" id="exercises-curve-sketching-2-3">
-<h4 class="heading"><span class="title">Algebraic Practice.</span></h4>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="prob-cs2-rational-sketch"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="prob-cs2-rational-sketch-1-1">Analyze <span class="process-math">\(\displaystyle f(x)=\frac{(x-2)(x+1)}{x(x-3)}\text{.}\)</span> Identify the domain, intercepts, vertical asymptotes, end behavior, and intervals of increase/decrease. Then sketch a graph.<div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-rational-sketch-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#tf-curve2-05-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#tf-curve2-05" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-06"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-06-1-1">If <span class="process-math">\(f\)</span> is an even function with a local maximum at <span class="process-math">\(x=2\text{,}\)</span> then there is a local minimum at <span class="process-math">\(x=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-06-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 4"><a href="#prob-cs2-rational-sketch" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="prob-cs2-leading-terms"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="prob-cs2-leading-terms-1-1">Use leading-term comparisons to describe the end behavior of:<div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-leading-terms-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="lower-alpha lower-alpha-level-1" id="prob-cs2-leading-terms-1-2">
-<li id="prob-cs2-leading-terms-1-2-1">
-<div class="para" id="prob-cs2-leading-terms-1-2-1-1">
-<span class="process-math">\(\displaystyle \displaystyle f(x)=\frac{5x^3-2x+7}{x^2+1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-leading-terms-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-06-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-06-2-1">
+<em class="emphasis">False.</em> If <span class="process-math">\(f\)</span> is even, then <span class="process-math">\(f(-2)=f(2)\text{.}\)</span> So if there is a local maximum at <span class="process-math">\(x=2\text{,}\)</span> then there is also a local maximum at <span class="process-math">\(x=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-06-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 5.a"><a href="#prob-cs2-leading-terms-1-2-1" title="Copy heading and permalink for Item 5.a" aria-label="Copy heading and permalink for Item 5.a">🔗</a></div>
-</li>
-<li id="prob-cs2-leading-terms-1-2-2">
-<div class="para" id="prob-cs2-leading-terms-1-2-2-1">
-<span class="process-math">\(\displaystyle \displaystyle g(x)=\frac{3x^2-10}{2x^4+1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-leading-terms-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#tf-curve2-06-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#tf-curve2-06" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-07"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-07-1-1">If <span class="process-math">\(f\)</span> has symmetry (either even or odd) and has an inflection point at <span class="process-math">\(x=3\text{,}\)</span> then there is also an inflection point at <span class="process-math">\(x=-3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-07-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 5.b"><a href="#prob-cs2-leading-terms-1-2-2" title="Copy heading and permalink for Item 5.b" aria-label="Copy heading and permalink for Item 5.b">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Exercise 5"><a href="#prob-cs2-leading-terms" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article>
+<div class="solutions"><details id="tf-curve2-07-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-07-2-1">
+<em class="emphasis">True.</em> If <span class="process-math">\(f\)</span> is even, then <span class="process-math">\(f''(-3)=f''(3)=0\)</span> and the concavity changes at <span class="process-math">\(x=3\text{,}\)</span> so there is an inflection point at <span class="process-math">\(x=-3\text{.}\)</span> If <span class="process-math">\(f\)</span> is odd, then <span class="process-math">\(f''(-3)=-f''(3)=0\)</span> and the concavity changes at <span class="process-math">\(x=3\text{,}\)</span> so there is also an inflection point at <span class="process-math">\(x=-3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-07-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise Group 4–5: Algebraic Practice"><a href="#exercises-curve-sketching-2-3" title="Copy heading and permalink for Exercise Group 4–5: Algebraic Practice" aria-label="Copy heading and permalink for Exercise Group 4–5: Algebraic Practice">🔗</a></div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#tf-curve2-07-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#tf-curve2-07" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-11"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-11-1-1">If <span class="process-math">\(f\)</span> is even, then <span class="process-math">\(f'(x)\)</span> is odd (whenever <span class="process-math">\(f'\)</span> exists).<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="exercisegroup" id="exercises-curve-sketching-2-4">
-<h4 class="heading"><span class="title">Trigonometric and Interpretation Problems.</span></h4>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="prob-cs2-trig"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="prob-cs2-trig-1-1">Let <span class="process-math">\(g(x)=x+\sin(x)\text{.}\)</span> Find <span class="process-math">\(g'(x)\)</span> and <span class="process-math">\(g''(x)\text{,}\)</span> describe where the graph is concave up or concave down, and determine whether the function is even, odd, or neither.<div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-trig-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="tf-curve2-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-11-2-1">
+<em class="emphasis">True.</em> If <span class="process-math">\(f\)</span> is even, then <span class="process-math">\(f(-x)=f(x)\text{.}\)</span> Differentiating both sides gives <span class="process-math">\(-f'(-x)=f'(x)\text{,}\)</span> so <span class="process-math">\(f'(-x)=-f'(x)\text{,}\)</span> which means that <span class="process-math">\(f'\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 6"><a href="#prob-cs2-trig" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="prob-cs2-window"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="para" id="prob-cs2-window-1-1">Give an example of a function whose graph has a vertical asymptote at <span class="process-math">\(x=1\text{.}\)</span> Explain how a poorly chosen viewing window could make it look like the function is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#prob-cs2-window-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#tf-curve2-11-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#tf-curve2-11" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-15"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-15-1-1">The function <span class="process-math">\(p(x)=x^5-2x^3+1\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 7"><a href="#prob-cs2-window" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article>
+<div class="solutions"><details id="tf-curve2-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="tf-curve2-15-2-1">
+<div class="para">
+<em class="emphasis">False.</em> We have</div>
+<div class="displaymath process-math" id="tf-curve2-15-2-1-2">
+\begin{equation*}
+p(-x)=(-x)^5-2(-x)^3+1=-x^5+2x^3+1\neq -(x^5-2x^3+1)=-p(x).
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Exercise Group 6–7: Trigonometric and Interpretation Problems"><a href="#exercises-curve-sketching-2-4" title="Copy heading and permalink for Exercise Group 6–7: Trigonometric and Interpretation Problems" aria-label="Copy heading and permalink for Exercise Group 6–7: Trigonometric and Interpretation Problems">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercises: Practice / Study Problems"><a href="#exercises-curve-sketching-2" title="Copy heading and permalink for Exercises: Practice / Study Problems" aria-label="Copy heading and permalink for Exercises: Practice / Study Problems">🔗</a></div></section><div class="autopermalink" data-description="Section 3.7: Curve Sketching Part 2"><a href="#sec-derivApp-curve2" title="Copy heading and permalink for Section 3.7: Curve Sketching Part 2" aria-label="Copy heading and permalink for Section 3.7: Curve Sketching Part 2">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#tf-curve2-15-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#tf-curve2-15" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-16"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-16-1-1">The function <span class="process-math">\(q(x)=\dfrac{\sin(x)}{x^3+x}\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="tf-curve2-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="tf-curve2-16-2-1">
+<div class="para">
+<em class="emphasis">True.</em> We have</div>
+<div class="displaymath process-math" id="tf-curve2-16-2-1-2">
+\begin{equation*}
+q(-x)=\frac{\sin(-x)}{(-x)^3+(-x)}=\frac{-\sin(x)}{-x^3-x}=\frac{\sin(x)}{x^3+x}=q(x),
+\end{equation*}
+</div>
+<div class="para">so the function is even.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#tf-curve2-16-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9"><a href="#tf-curve2-16" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-18"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-18-1-1">The function <span class="process-math">\(f(x)=\dfrac{\ln x}{x} \)</span> is decreasing on <span class="process-math">\((4,6)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="tf-curve2-18-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-18-2-1">
+<em class="emphasis">True.</em> The derivative is <span class="process-math">\(f'(x)=\dfrac{1-\ln x}{x^2}\text{.}\)</span> For <span class="process-math">\(x\in(4,6)\text{,}\)</span> we have <span class="process-math">\(\ln x&gt;1\text{,}\)</span> so <span class="process-math">\(f'(x)&lt;0\text{,}\)</span> so the function is decreasing on <span class="process-math">\((4,6)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-18-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#tf-curve2-18-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10"><a href="#tf-curve2-18" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-21"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-21-1-1">The function <span class="process-math">\(f(x)=\dfrac{\ln x}{x} \)</span> has exactly one critical point.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="tf-curve2-21-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-21-2-1">
+<em class="emphasis">True.</em> The derivative is <span class="process-math">\(f'(x)=\dfrac{1-\ln x}{x^2}\text{,}\)</span> which is defined everywhere on the domain of <span class="process-math">\(f\text{,}\)</span> so there are no critical points from undefined derivatives. Setting the derivative equal to zero gives <span class="process-math">\(1-\ln x=0\text{,}\)</span> which has a solution at <span class="process-math">\(x=e\text{.}\)</span> So there is exactly one critical point from <span class="process-math">\(f'(x)=0\text{,}\)</span> and there are no critical points from undefined derivatives, so there is exactly one critical point in total.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-21-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#tf-curve2-21-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 11"><a href="#tf-curve2-21" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div></article><article class="exercise exercise-like" id="tf-curve2-19"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="tf-curve2-19-1-1">The function <span class="process-math">\(f(x)=\dfrac{\ln x}{x} \)</span> has exactly one inflection point.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="tf-curve2-19-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="tf-curve2-19-2-1">
+<em class="emphasis">True.</em> The second derivative is <span class="process-math">\(f''(x)=\dfrac{2\ln x-3}{x^3}\text{,}\)</span> which is defined everywhere on the domain of <span class="process-math">\(f\text{,}\)</span> so there are no inflection points from undefined derivatives. Setting the second derivative equal to zero gives <span class="process-math">\(2\ln x-3=0\text{,}\)</span> which has a solution at <span class="process-math">\(x=e^{3/2}\text{.}\)</span> We can check by testing the sign of <span class="process-math">\(f''(x)\)</span> on either side of <span class="process-math">\(x=e^{3/2}\)</span> that it does change signs. For example, <span class="process-math">\(f''(1)=\dfrac{2\ln 1-3}{1^3}=-3&lt;0\)</span> and <span class="process-math">\(f''(e^2)=\dfrac{2\ln e^2-3}{(e^2)^3}=\dfrac{4-3}{e^6}=\dfrac{1}{e^6}&gt;0\text{.}\)</span> So there is exactly one inflection point from <span class="process-math">\(f''(x)=0\text{,}\)</span> and there are no inflection points from undefined derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#tf-curve2-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#tf-curve2-19-2" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 12"><a href="#tf-curve2-19" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1–12: Some True/False Problems"><a href="#exercises-curve-sketching-2-2" title="Copy heading and permalink for Exercise Group 1–12: Some True/False Problems" aria-label="Copy heading and permalink for Exercise Group 1–12: Some True/False Problems">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises: Practice / Study Problems"><a href="#exercises-curve-sketching-2" title="Copy heading and permalink for Exercises: Practice / Study Problems" aria-label="Copy heading and permalink for Exercises: Practice / Study Problems">🔗</a></div></section><article class="remark remark-like" id="sec-derivApp-curve2-10"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-derivApp-curve2-10-1">While these True / False problems are good for quickly testing your understanding of the concepts, you should also practice applying these ideas to more complicated and complete problems (like those that appear on WeBWork) and can possibly appear on quizzes and exams.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-derivApp-curve2-10-2">
+<em class="alert">Reminder:</em> There are more fully worked-out examples available in <a href="sec-derivApp-ww.html#subsec-derivApp-curve2" class="internal" title="Subsection: Section 3.7 Curve Sketching Part 2">Additional Examples for Curve Sketching Part 2 </a> that you can use to practice with and to check your work against.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-curve2-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.7.13"><a href="#sec-derivApp-curve2-10" title="Copy heading and permalink for Remark 3.7.13" aria-label="Copy heading and permalink for Remark 3.7.13">🔗</a></div></article><div class="autopermalink" data-description="Section 3.7: Curve Sketching Part 2"><a href="#sec-derivApp-curve2" title="Copy heading and permalink for Section 3.7: Curve Sketching Part 2" aria-label="Copy heading and permalink for Section 3.7: Curve Sketching Part 2">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-derivApp-curve1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-derivApp-opt.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

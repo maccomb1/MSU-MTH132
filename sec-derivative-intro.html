@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -627,7 +624,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="def-average-velocity-1-1">Let <span class="process-math">\(f(t)\)</span> denote the position of an object at time <span class="process-math">\(t\text{.}\)</span> The <dfn class="terminology">average velocity</dfn> of the object on the time interval <span class="process-math">\([a,b]\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#def-average-velocity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-average-velocity-1-2">
 \begin{equation*}
 \displaystyle v_{\mathrm{avg}}=\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
@@ -644,7 +641,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="def-instantaneous-velocity-1-1">Let <span class="process-math">\(f(t)\)</span> denote the position of an object at time <span class="process-math">\(t\text{.}\)</span> The <dfn class="terminology">instantaneous velocity</dfn> at time <span class="process-math">\(t=a\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#def-instantaneous-velocity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-instantaneous-velocity-1-2">
 \begin{equation*}
 \displaystyle v=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h},
 \end{equation*}
@@ -667,7 +664,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="ex-falling-stone-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-falling-stone-2-2-1">Using <a href="sec-derivative-intro.html#def-average-velocity" class="xref" data-knowl="./knowl/xref/def-average-velocity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.1">Definition 2.1.1</a> with <span class="process-math">\(a=3\)</span> and <span class="process-math">\(b=4\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-falling-stone-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-average-velocity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-average-velocity.html" id="ex-falling-stone-2-2-2">
 \begin{equation*}
 \displaystyle
 \begin{array}{rcl}
@@ -689,7 +686,7 @@ v_{\mathrm{avg}}
 <div class="autopermalink" data-description="Task 2.1.5.a"><a href="#ex-falling-stone-2" title="Copy heading and permalink for Task 2.1.5.a" aria-label="Copy heading and permalink for Task 2.1.5.a">🔗</a></div></article><article class="task exercise-like" id="ex-falling-stone-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="ex-falling-stone-3-1-1">Use the table of velocities below to estimate the instantaneous velocity at <span class="process-math">\(t=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-falling-stone-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-falling-stone-3-1-2">
 \begin{equation*}
 \displaystyle
 \begin{array}{c|ccccc}
@@ -720,14 +717,14 @@ v_{\mathrm{avg}}
 <div class="solutions"><details id="ex-falling-stone-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-falling-stone-4-2-1">By <a href="sec-derivative-intro.html#def-instantaneous-velocity" class="xref" data-knowl="./knowl/xref/def-instantaneous-velocity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a>, the instantaneous velocity at <span class="process-math">\(t=3\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#ex-falling-stone-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-instantaneous-velocity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-instantaneous-velocity.html" id="ex-falling-stone-4-2-2">
 \begin{equation*}
 v = \displaystyle\lim_{h\to 0}\frac{f(3+h)-f(3)}{h}.
 \end{equation*}
 </div>
 <div class="para" id="ex-falling-stone-4-2-3">Since <span class="process-math">\(f(t)=16t^2\text{,}\)</span> we compute<div class="autopermalink" data-description="Paragraph"><a href="#ex-falling-stone-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-instantaneous-velocity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-instantaneous-velocity.html" id="ex-falling-stone-4-2-4">
 \begin{equation*}
 \displaystyle
 \begin{array}{rcl}
@@ -757,13 +754,14 @@ v
 </div>
 <div class="para" id="secant-and-tangent-3">A <dfn class="terminology">secant line</dfn> is a line that passes through two distinct points on the graph. It cuts across the curve and represents how the function changes between two different input values. When these two points are far apart, the secant line gives a coarse description of the function’s behavior over an interval.<div class="autopermalink" data-description="Paragraph"><a href="#secant-and-tangent-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="secant-line"><img src="external/images/secant01.png" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A secant line connecting the points <span class="process-math">\((1,f(1))\)</span> and <span class="process-math">\((7,f(7))\text{,}\)</span> representing the average rate of change of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([1,7]\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.6"><a href="#secant-line" title="Copy heading and permalink for Figure 2.1.6" aria-label="Copy heading and permalink for Figure 2.1.6">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="secant-line"><div class="image-box"><img src="external/images/secant01.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A secant line connecting the points <span class="process-math">\((1,f(1))\)</span> and <span class="process-math">\((7,f(7))\text{,}\)</span> representing the average rate of change of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([1,7]\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.6"><a href="#secant-line" title="Copy heading and permalink for Figure 2.1.6" aria-label="Copy heading and permalink for Figure 2.1.6">🔗</a></div></figcaption></figure></div></div></div>
 <article class="definition definition-like" id="def-secant-slope"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="def-secant-slope-1-1">Let <span class="process-math">\(f\)</span> be a function and let <span class="process-math">\(a \neq b\text{.}\)</span> The <dfn class="terminology">slope of the secant line</dfn> to <span class="process-math">\(f\)</span> between <span class="process-math">\(x=a\)</span> and <span class="process-math">\(x=b\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#def-secant-slope-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-secant-slope-1-2">
 \begin{equation*}
 \displaystyle m_{\mathrm{sec}}=\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
@@ -775,22 +773,24 @@ v
 </div>
 <div class="autopermalink" data-description="Remark 2.1.8"><a href="#rem-secant-interpretation" title="Copy heading and permalink for Remark 2.1.8" aria-label="Copy heading and permalink for Remark 2.1.8">🔗</a></div></article><div class="para" id="secant-and-tangent-7">A <dfn class="terminology">tangent line</dfn>, on the other hand, touches the graph at a single point and matches the direction of the curve at that point. The tangent line represents the best linear approximation to the function near a specific point.<div class="autopermalink" data-description="Paragraph"><a href="#secant-and-tangent-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="tangent-line"><img src="external/images/tangent01.png" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A tangent line through the point <span class="process-math">\((1,f(1))\text{,}\)</span> representing the instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.9"><a href="#tangent-line" title="Copy heading and permalink for Figure 2.1.9" aria-label="Copy heading and permalink for Figure 2.1.9">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="tangent-line"><div class="image-box"><img src="external/images/tangent01.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A tangent line through the point <span class="process-math">\((1,f(1))\text{,}\)</span> representing the instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.9"><a href="#tangent-line" title="Copy heading and permalink for Figure 2.1.9" aria-label="Copy heading and permalink for Figure 2.1.9">🔗</a></div></figcaption></figure></div></div></div>
 <div class="para" id="secant-and-tangent-9">As the second point used to define a secant line moves closer and closer to the first, the secant line approaches the tangent line. This idea leads directly to the following definitions.<div class="autopermalink" data-description="Paragraph"><a href="#secant-and-tangent-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<a class="external" href="https://www.desmos.com/calculator/sw9jjcgdeh" target="_blank"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="secant-and-tangent-10-1-1"><img src="external/images/tangentSecant.gif" class="contained" alt="Animated graph of a smooth curve with two points marked on it. A secant line passes through the two points. As the points move closer together along the curve, the secant line rotates and converges to the tangent line at that point, illustrating how the tangent line arises as a limit of secant lines."><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>As two points on the curve move closer together, the secant line determined by those points approaches the tangent line at a single point.<div class="autopermalink" data-description="Figure 2.1.10"><a href="#secant-and-tangent-10-1-1" title="Copy heading and permalink for Figure 2.1.10" aria-label="Copy heading and permalink for Figure 2.1.10">🔗</a></div></figcaption></figure></div></div></div></a><article class="definition definition-like" id="def-tangent-slope"><h4 class="heading">
+<a class="external" href="https://www.desmos.com/calculator/sw9jjcgdeh" target="_blank"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="secant-and-tangent-10-1-1"><div class="image-box"><img src="external/images/tangentSecant.gif" class="contained" alt="Animated graph of a smooth curve with two points marked on it. A secant line passes through the two points. As the points move closer together along the curve, the secant line rotates and converges to the tangent line at that point, illustrating how the tangent line arises as a limit of secant lines."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>As two points on the curve move closer together, the secant line determined by those points approaches the tangent line at a single point.<div class="autopermalink" data-description="Figure 2.1.10"><a href="#secant-and-tangent-10-1-1" title="Copy heading and permalink for Figure 2.1.10" aria-label="Copy heading and permalink for Figure 2.1.10">🔗</a></div></figcaption></figure></div></div></div></a><article class="definition definition-like" id="def-tangent-slope"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="def-tangent-slope-1-1">Let <span class="process-math">\(f\)</span> be a function and let <span class="process-math">\(a\)</span> be a point in its domain. The <dfn class="terminology">slope of the tangent line</dfn> to <span class="process-math">\(f\)</span> at <span class="process-math">\(x = a\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#def-tangent-slope-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-tangent-slope-1-2">
 \begin{equation*}
 \displaystyle m = \lim_{x \to a} \frac{f(x) - f(a)}{x - a},
 \end{equation*}
 </div>
 <div class="para" id="def-tangent-slope-1-3">provided this limit exists. Equivalently, the slope of the tangent line can be written as<div class="autopermalink" data-description="Paragraph"><a href="#def-tangent-slope-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-tangent-slope-1-4">
 \begin{equation*}
 \displaystyle m = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h},
 \end{equation*}
@@ -814,7 +814,7 @@ v
 </h4>
 <div class="para" id="ex-temperature-average-rates-2-1">We model average daily temperature through the year by the sinusoidal function:<div class="autopermalink" data-description="Paragraph"><a href="#ex-temperature-average-rates-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-temperature-average-rates-2-2">
 \begin{equation*}
 \displaystyle
 T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
@@ -823,7 +823,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="ex-temperature-average-rates-2-3">Using this model we found that<div class="autopermalink" data-description="Paragraph"><a href="#ex-temperature-average-rates-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-temperature-average-rates-2-4">
 \begin{equation*}
 \begin{array}{c|c|c}
 \text{Day} &amp; x &amp; T(x) \\ \hline
@@ -840,7 +840,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="ex-temperature-average-rates-3-2">First, compute the average rate of change from <span class="process-math">\(x = 90\)</span> to <span class="process-math">\(x = 100\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-temperature-average-rates-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-temperature-average-rates-3-3">
 \begin{equation*}
 \begin{array}{rcl}
 \dfrac{T(100) - T(90)}{100 - 90}
@@ -855,7 +855,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="ex-temperature-average-rates-3-4">Next, compute the average rate of change from <span class="process-math">\(x = 100\)</span> to <span class="process-math">\(x = 110\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-temperature-average-rates-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-temperature-average-rates-3-5">
 \begin{equation*}
 \begin{array}{rcl}
 \dfrac{T(110) - T(100)}{110 - 100}
@@ -870,7 +870,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="ex-temperature-average-rates-3-6">These two values represent average rates of change on either side of <span class="process-math">\(x = 100\text{.}\)</span> Since they are close in value, we use their average to estimate the instantaneous rate of change at <span class="process-math">\(x = 100\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-temperature-average-rates-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-temperature-average-rates-3-7">
 \begin{equation*}
 \begin{array}{rcl}
 \text{Estimated rate at } x = 100
@@ -907,7 +907,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-01-2-1">
 <em class="emphasis">True.</em> The average rate of change on <span class="process-math">\([2,5]\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-01-2-2">
 \begin{equation*}
 \displaystyle \frac{f(5)-f(2)}{5-2}
 =
@@ -925,7 +925,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-02-2-1">
 <em class="emphasis">True.</em> On <span class="process-math">\([a,b]\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-02-2-2">
 \begin{equation*}
 \displaystyle \frac{f(b)-f(a)}{b-a}
 =
@@ -945,7 +945,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-04-2-1">
 <em class="emphasis">True</em> (for <span class="process-math">\(h\neq 0\)</span>). Compute<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-04-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-04-2-2">
 \begin{equation*}
 \displaystyle \frac{f(a+h)-f(a)}{(a+h)-a}
 =
@@ -954,7 +954,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="tf-deriv-intro-04-2-3">Expand and simplify:<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-04-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-04-2-4">
 \begin{equation*}
 \displaystyle \frac{(a^2+2ah+h^2)-a^2}{h}
 =
@@ -972,7 +972,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-05-2-1">
 <em class="emphasis">True.</em> By the definition of the slope of the tangent line,<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-05-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-05-2-2">
 \begin{equation*}
 \displaystyle m=\lim_{h\to 0}\frac{f(3+h)-f(3)}{h}
 =
@@ -981,7 +981,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="tf-deriv-intro-05-2-3">Expand and simplify:<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-05-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-05-2-4">
 \begin{equation*}
 \displaystyle \lim_{h\to 0}\frac{9+6h+h^2-9}{h}
 =
@@ -1001,7 +1001,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-07-2-1">
 <em class="emphasis">True.</em> Using the definition,<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-07-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-07-2-2">
 \begin{equation*}
 \displaystyle m=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}
 =
@@ -1023,7 +1023,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-08-2-1">
 <em class="emphasis">True.</em> Instantaneous velocity at <span class="process-math">\(t=2\)</span> is defined by<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-08-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-08-2-2">
 \begin{equation*}
 \displaystyle v=\lim_{h\to 0}\frac{f(2+h)-f(2)}{h}
 =
@@ -1032,7 +1032,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="tf-deriv-intro-08-2-3">Expand <span class="process-math">\((2+h)^3=8+12h+6h^2+h^3\text{.}\)</span> Then<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-08-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-08-2-4">
 \begin{equation*}
 \displaystyle v
 =
@@ -1043,7 +1043,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="tf-deriv-intro-08-2-5">Simplify and evaluate:<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-08-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-08-2-6">
 \begin{equation*}
 \displaystyle v
 =
@@ -1061,14 +1061,14 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 <div class="para" id="tf-deriv-intro-09-2-1">
 <em class="emphasis">False.</em> Compute<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-09-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-09-2-2">
 \begin{equation*}
 \displaystyle \lim_{h\to 0}\frac{\sqrt{4+h}-2}{h}.
 \end{equation*}
 </div>
 <div class="para" id="tf-deriv-intro-09-2-3">Multiply numerator and denominator by the conjugate <span class="process-math">\(\sqrt{4+h}+2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-09-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-09-2-4">
 \begin{equation*}
 \displaystyle \lim_{h\to 0}\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}
 =
@@ -1077,7 +1077,7 @@ T(x)=55-40\cos\!\left(\frac{2\pi}{365}x\right),
 </div>
 <div class="para" id="tf-deriv-intro-09-2-5">Simplify and evaluate:<div class="autopermalink" data-description="Paragraph"><a href="#tf-deriv-intro-09-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-deriv-intro-09-2-6">
 \begin{equation*}
 \displaystyle \lim_{h\to 0}\frac{h}{h(\sqrt{4+h}+2)}
 =

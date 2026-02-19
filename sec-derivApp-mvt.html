@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -647,7 +644,7 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="ex-rolles01-1-1">Consider the function<div class="autopermalink" data-description="Paragraph"><a href="#ex-rolles01-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-rolles01-1-2">
 \begin{equation*}
 f(x)=x^2 -4x+3
 \end{equation*}
@@ -671,7 +668,7 @@ f(x)=x^2 -4x+3
 </h4>
 <div class="para" id="thm-mvt-2-1">Let <span class="process-math">\(f\)</span> be continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Then there exists a number <span class="process-math">\(c\)</span> in <span class="process-math">\((a,b)\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#thm-mvt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-mvt-2-2">
 \begin{equation*}
 f'(c)=\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
@@ -681,14 +678,14 @@ f'(c)=\frac{f(b)-f(a)}{b-a}.
 </div>
 <div class="para" id="pf-mvt-2">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Define a new function<div class="autopermalink" data-description="Paragraph"><a href="#pf-mvt-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="pf-mvt-3">
 \begin{equation*}
 g(x)=f(x)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\right).
 \end{equation*}
 </div>
 <div class="para" id="pf-mvt-4">The function <span class="process-math">\(g\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{,}\)</span> since it is built from <span class="process-math">\(f\)</span> and linear functions. Also,<div class="autopermalink" data-description="Paragraph"><a href="#pf-mvt-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="pf-mvt-5">
 \begin{equation*}
 g(a)=f(a)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(a-a)\right)=0,
 \end{equation*}
@@ -697,21 +694,21 @@ g(a)=f(a)-\left(f(a)+\frac{f(b)-f(a)}{b-a}(a-a)\right)=0,
 </div>
 <div class="para" id="pf-mvt-7">Differentiate <span class="process-math">\(g\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#pf-mvt-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="pf-mvt-8">
 \begin{equation*}
 g'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
 </div>
 <div class="para" id="pf-mvt-9">Substituting <span class="process-math">\(x=c\)</span> and using <span class="process-math">\(g'(c)=0\)</span> gives<div class="autopermalink" data-description="Paragraph"><a href="#pf-mvt-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="pf-mvt-10">
 \begin{equation*}
 0=f'(c)-\frac{f(b)-f(a)}{b-a},
 \end{equation*}
 </div>
 <div class="para" id="pf-mvt-11">which is equivalent to<div class="autopermalink" data-description="Paragraph"><a href="#pf-mvt-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="pf-mvt-12">
 \begin{equation*}
 f'(c)=\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
@@ -734,35 +731,35 @@ f'(c)=\frac{f(b)-f(a)}{b-a}.
 <div class="solutions"><details id="ex-mvt-sqrt-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-mvt-sqrt-2-1">The function <span class="process-math">\(\sqrt{x}\)</span> is continuous for <span class="process-math">\(x\ge 0\text{,}\)</span> so <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([0,4]\text{.}\)</span> Differentiating (for <span class="process-math">\(x\gt 0\)</span>),<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-2">
 \begin{equation*}
 f'(x)=\left(5x^{1/2}-x^{3/2}\right)'=\frac{5}{2}x^{-1/2}-\frac{3}{2}x^{1/2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-mvt-sqrt-2-3">This derivative exists for every <span class="process-math">\(x\)</span> in <span class="process-math">\((0,4)\text{,}\)</span> so the Mean Value Theorem applies. Compute the average rate of change:<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-4">
 \begin{equation*}
 \frac{f(4)-f(0)}{4-0}=\frac{\left(5\cdot 2-4\cdot 2\right)-0}{4}=\frac{2}{4}=\frac{1}{2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-mvt-sqrt-2-5">We solve <span class="process-math">\(f'(c)=\frac{1}{2}\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-6">
 \begin{equation*}
 \frac{5}{2}c^{-1/2}-\frac{3}{2}c^{1/2}=\frac{1}{2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-mvt-sqrt-2-7">Multiply both sides by <span class="process-math">\(2\sqrt{c}\)</span> (valid since <span class="process-math">\(c&gt;0\)</span>):<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-8">
 \begin{equation*}
 5-3c=\sqrt{c}.
 \end{equation*}
 </div>
 <div class="para" id="ex-mvt-sqrt-2-9">Let <span class="process-math">\(u=\sqrt{c}\text{,}\)</span> so <span class="process-math">\(c=u^2\text{.}\)</span> Then the equation becomes<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-10">
 \begin{equation*}
 5-3u^2=u
 \quad\Longleftrightarrow\quad
@@ -771,14 +768,14 @@ f'(x)=\left(5x^{1/2}-x^{3/2}\right)'=\frac{5}{2}x^{-1/2}-\frac{3}{2}x^{1/2}.
 </div>
 <div class="para" id="ex-mvt-sqrt-2-11">Using the quadratic formula,<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-12">
 \begin{equation*}
 u=\frac{-1\pm\sqrt{1+60}}{6}=\frac{-1\pm\sqrt{61}}{6}.
 \end{equation*}
 </div>
 <div class="para" id="ex-mvt-sqrt-2-13">Since <span class="process-math">\(u=\sqrt{c}&gt;0\text{,}\)</span> we take the positive root: <span class="process-math">\(u=\frac{\sqrt{61}-1}{6}\text{.}\)</span> Therefore<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-sqrt-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-mvt-sqrt-2-14">
 \begin{equation*}
 c=u^2=\left(\frac{\sqrt{61}-1}{6}\right)^2\approx 1.29.
 \end{equation*}
@@ -798,7 +795,7 @@ c=u^2=\left(\frac{\sqrt{61}-1}{6}\right)^2\approx 1.29.
 </div>
 <div class="autopermalink" data-description="Theorem 3.5.13: Positive Derivative Implies Increasing"><a href="#thm-positive-derivative-increasing" title="Copy heading and permalink for Theorem 3.5.13: Positive Derivative Implies Increasing" aria-label="Copy heading and permalink for Theorem 3.5.13: Positive Derivative Implies Increasing">🔗</a></div></article><details id="thm-positive-derivative-increasing-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-positive-derivative-increasing-3-1">Let <span class="process-math">\(a \lt b\)</span> be any two points in <span class="process-math">\(I\text{.}\)</span> By the Mean Value Theorem, there exists <span class="process-math">\(c\in(a,b)\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#thm-positive-derivative-increasing-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-positive-derivative-increasing-3-2">
 \begin{equation*}
 f'(c)=\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
@@ -884,7 +881,7 @@ f'(c)=\frac{f(b)-f(a)}{b-a}.
 <div class="para" id="exercises-mvt-2-9-2-1">
 <em class="emphasis">True.</em> The function <span class="process-math">\(f\)</span> is a polynomial, so it is continuous on <span class="process-math">\([1,3]\)</span> and differentiable on <span class="process-math">\((1,3)\text{.}\)</span> Compute the average rate of change:<div class="autopermalink" data-description="Paragraph"><a href="#exercises-mvt-2-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-mvt-2-9-2-2">
 \begin{equation*}
 \frac{f(3)-f(1)}{3-1}=\frac{9-1}{2}=4.
 \end{equation*}
@@ -933,7 +930,7 @@ f'(c)=\frac{f(b)-f(a)}{b-a}.
 <div class="solutions"><details id="prob-mvt-find-c-poly-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="prob-mvt-find-c-poly-2-1">Compute the secant slope:<div class="autopermalink" data-description="Paragraph"><a href="#prob-mvt-find-c-poly-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prob-mvt-find-c-poly-2-2">
 \begin{equation*}
 \frac{f(3)-f(0)}{3-0}=\frac{(10)-(1)}{3}=3.
 \end{equation*}
@@ -954,7 +951,7 @@ f'(c)=\frac{f(b)-f(a)}{b-a}.
 </div>
 <div class="para" id="prob-rolles-check-2-2">Differentiate:<div class="autopermalink" data-description="Paragraph"><a href="#prob-rolles-check-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prob-rolles-check-2-3">
 \begin{equation*}
 f(x)=(x-1)^2(x-3)
 \quad\Longrightarrow\quad
@@ -963,7 +960,7 @@ f'(x)=2(x-1)(x-3)+(x-1)^2.
 </div>
 <div class="para" id="prob-rolles-check-2-4">Factor:<div class="autopermalink" data-description="Paragraph"><a href="#prob-rolles-check-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prob-rolles-check-2-5">
 \begin{equation*}
 f'(x)=(x-1)\bigl(2(x-3)+(x-1)\bigr)=(x-1)(3x-7).
 \end{equation*}

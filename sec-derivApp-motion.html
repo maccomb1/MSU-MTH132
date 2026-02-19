@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -647,7 +644,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li id="sec-derivApp-motion-6-3">
 <div class="para" id="p-derived-sec-derivApp-motion-6-3">
-<em class="emphasis">Numerical:</em> we approximate the derivative using a difference quotient<div class="displaymath process-math">
+<em class="emphasis">Numerical:</em> we approximate the derivative using a difference quotient<div class="displaymath process-math" id="sec-derivApp-motion-6-3-2">
 \begin{equation*}
 f'(a)\cong \frac{\Delta f}{\Delta x}=\frac{f(a+h)-f(a)}{h},
 \end{equation*}
@@ -656,7 +653,7 @@ f'(a)\cong \frac{\Delta f}{\Delta x}=\frac{f(a+h)-f(a)}{h},
 </li>
 <li id="sec-derivApp-motion-6-4">
 <div class="para" id="p-derived-sec-derivApp-motion-6-4">
-<em class="emphasis">Algebraic:</em> we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition<div class="displaymath process-math">
+<em class="emphasis">Algebraic:</em> we compute derivatives from formulas using derivative rules and known basic derivatives. Occasionally we return to the definition<div class="displaymath process-math" id="sec-derivApp-motion-6-4-2">
 \begin{equation*}
 f'(a)=\displaystyle \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
 \end{equation*}
@@ -702,7 +699,7 @@ f'(a)=\displaystyle \lim_{h\to 0}\frac{f(a+h)-f(a)}{h}.
 </h4>
 <div class="introduction" id="ex-ball-motion-derivatives-1"><div class="para logical" id="ex-ball-motion-derivatives-1-1">
 <div class="para">A ball is thrown straight up from a height of 6 feet with an initial velocity of 64 ft/sec. Its vertical position (height) at time <span class="process-math">\(t\)</span> seconds is modeled by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-1-1-2">
 \begin{equation*}
 s(t)=-16t^2+64t+6\text{.}
 \end{equation*}
@@ -715,13 +712,13 @@ s(t)=-16t^2+64t+6\text{.}
 <div class="solutions"><details id="ex-ball-motion-derivatives-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-ball-motion-derivatives-2-2-1">
 <div class="para">Differentiating gives</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-2-2-1-1">
 \begin{equation*}
 \displaystyle v(t) = s'(t) = -32t + 64 \text{ ft/sec,}
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-2-2-1-2">
 \begin{equation*}
 \displaystyle a(t) = v'(t) = s''(t) = -32 \text{ ft/sec}^2.
 \end{equation*}
@@ -736,7 +733,7 @@ s(t)=-16t^2+64t+6\text{.}
 <div class="solutions"><details id="ex-ball-motion-derivatives-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-ball-motion-derivatives-3-2-1">
 <div class="para">The ball has zero velocity when</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-3-2-1-1">
 \begin{equation*}
 \displaystyle 0 = v(t) = -32t + 64.
 \end{equation*}
@@ -753,19 +750,19 @@ s(t)=-16t^2+64t+6\text{.}
 <div class="para logical" id="ex-ball-motion-derivatives-4-2-1">
 <div class="para">The ball hits the ground when <span class="process-math">\(s(t)=0\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-4-2-1-2">
 \begin{equation*}
 \displaystyle 0 = -16t^2 + 64t + 6.
 \end{equation*}
 </div>
 <div class="para">Or equivalently,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-4-2-1-3">
 \begin{equation*}
 \displaystyle 8t^2 - 32t - 3 = 0.
 \end{equation*}
 </div>
 <div class="para">Solving this quadratic equation (using the quadratic formula) gives</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-4-2-1-4">
 \begin{equation*}
 t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac{\sqrt{70}}{4}.
 \end{equation*}
@@ -775,7 +772,7 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 </div>
 <div class="para logical" id="ex-ball-motion-derivatives-4-2-2">
 <div class="para">The velocity just before impact is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-4-2-2-1">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle v\left(2 + \frac{\sqrt{70}}{4}\right) \amp =\amp -32\left(2 + \frac{\sqrt{70}}{4}\right) + 64\\
@@ -788,7 +785,7 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 </div>
 <div class="para logical" id="ex-ball-motion-derivatives-4-2-3">
 <div class="para">The acceleration is constant:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-ball-motion-derivatives-4-2-3-1">
 \begin{equation*}
 \displaystyle a(t) = -32 \text{ ft/sec}^2
 \end{equation*}
@@ -835,7 +832,7 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="solutions"><details id="ex-velocity-particle-graph-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-velocity-particle-graph-4-2-1">
 <div class="para">The acceleration at time <span class="process-math">\(t=1\)</span> is the slope of the velocity graph at that time. From the graph, we see that from <span class="process-math">\(t=0\)</span> to <span class="process-math">\(t=2\text{,}\)</span> the velocity decreases linearly from 4 to 1. The slope of this line segment is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-velocity-particle-graph-4-2-1-4">
 \begin{equation*}
 \displaystyle \frac{1-4}{2-0} = \frac{-3}{2} = -1.5.
 \end{equation*}
@@ -926,7 +923,7 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="solutions"><details id="ex-speeding-up-slowing-down2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-speeding-up-slowing-down2-2-1">
 <div class="para">First let’s find the sign of the velocity. We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ssec-ineq-overview.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ssec-ineq-overview.html" id="ex-speeding-up-slowing-down2-2-1-1">
 \begin{equation*}
 \displaystyle v(t) = t^2 - 4t = t(t-4).
 \end{equation*}
@@ -949,12 +946,13 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-speeding-up-slowing-down2-2-2">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down01"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down01-2.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the velocity function <span class="process-math">\(v(t)=t^2 - 4t\)</span> on the number line.<div class="autopermalink" data-description="Figure 3.1.11"><a href="#fig-tikz-speeding-up-slowing-down01" title="Copy heading and permalink for Figure 3.1.11" aria-label="Copy heading and permalink for Figure 3.1.11">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down01"><div class="image-box"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down01-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the velocity function <span class="process-math">\(v(t)=t^2 - 4t\)</span> on the number line.<div class="autopermalink" data-description="Figure 3.1.11"><a href="#fig-tikz-speeding-up-slowing-down01" title="Copy heading and permalink for Figure 3.1.11" aria-label="Copy heading and permalink for Figure 3.1.11">🔗</a></div></figcaption></figure></div></div></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-speeding-up-slowing-down2-2-3">
 <div class="para">Next, we find the acceleration by differentiating the velocity:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-speeding-up-slowing-down2-2-3-1">
 \begin{equation*}
 \displaystyle a(t) = v'(t) = 2t - 4.
 \end{equation*}
@@ -973,13 +971,15 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-speeding-up-slowing-down2-2-4">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down02"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down02-2.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the acceleration function <span class="process-math">\(a(t)=2t - 4\)</span> on the number line.<div class="autopermalink" data-description="Figure 3.1.12"><a href="#fig-tikz-speeding-up-slowing-down02" title="Copy heading and permalink for Figure 3.1.12" aria-label="Copy heading and permalink for Figure 3.1.12">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down02"><div class="image-box"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down02-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the acceleration function <span class="process-math">\(a(t)=2t - 4\)</span> on the number line.<div class="autopermalink" data-description="Figure 3.1.12"><a href="#fig-tikz-speeding-up-slowing-down02" title="Copy heading and permalink for Figure 3.1.12" aria-label="Copy heading and permalink for Figure 3.1.12">🔗</a></div></figcaption></figure></div></div></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-speeding-up-slowing-down2-2-5">Now we can determine when the object is speeding up and when it is slowing down by comparing the signs of velocity and acceleration:<div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-speeding-up-slowing-down2-2-6">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down03"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down03-2.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the velocity function and the acceleration function together on one number line.<div class="autopermalink" data-description="Figure 3.1.13"><a href="#fig-tikz-speeding-up-slowing-down03" title="Copy heading and permalink for Figure 3.1.13" aria-label="Copy heading and permalink for Figure 3.1.13">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-tikz-speeding-up-slowing-down03"><div class="image-box"><img src="generated/latex-image/fig-tikz-speeding-up-slowing-down03-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure showing the sign of the velocity function and the acceleration function together on one number line.<div class="autopermalink" data-description="Figure 3.1.13"><a href="#fig-tikz-speeding-up-slowing-down03" title="Copy heading and permalink for Figure 3.1.13" aria-label="Copy heading and permalink for Figure 3.1.13">🔗</a></div></figcaption></figure></div></div></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-speeding-up-slowing-down2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-speeding-up-slowing-down2-2-7">
@@ -1036,7 +1036,7 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="para logical" id="ex-derivApp-motion-tf-14-2-1">
 <div class="para">
 <em class="emphasis">False.</em> The velocity function is <span class="process-math">\(v(t)=s'(t)=-10t+15\text{.}\)</span> Setting <span class="process-math">\(v(t)=0\text{,}\)</span> we solve:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivApp-motion-tf-14-2-1-4">
 \begin{equation*}
 0 = -10t + 15 \Rightarrow t = 1.5.
 \end{equation*}
@@ -1089,24 +1089,24 @@ t = \frac{32 \pm \sqrt{(-32)^2 - 4 \cdot 8 \cdot (-3)}}{2 \cdot 8} = 2 \pm \frac
 <div class="para logical" id="ex-derivApp-motion-tf-102-2-1">
 <div class="para">
 <em class="emphasis">False.</em> First, we find the velocity and acceleration functions:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivApp-motion-tf-102-2-1-2">
 \begin{equation*}
 v(t) = s'(t) = 3t^2 - 12t + 9,
 \end{equation*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivApp-motion-tf-102-2-1-3">
 \begin{equation*}
 a(t) = v'(t) = 6t - 12.
 \end{equation*}
 </div>
 <div class="para">Next, we determine the signs of velocity and acceleration on the interval <span class="process-math">\((0,3)\text{.}\)</span> Setting <span class="process-math">\(v(t)=0\text{,}\)</span> we solve:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivApp-motion-tf-102-2-1-6">
 \begin{equation*}
 0 = 3t^2 - 12t + 9 \Rightarrow t^2 - 4t + 3 = 0 \Rightarrow (t-1)(t-3) = 0 \Rightarrow t = 1, 3.
 \end{equation*}
 </div>
 <div class="para">Thus, on the interval <span class="process-math">\((0,3)\text{,}\)</span> the velocity is positive on <span class="process-math">\((0,1)\)</span> and negative on <span class="process-math">\((1,3)\text{.}\)</span> Setting <span class="process-math">\(a(t)=0\text{,}\)</span> we solve:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivApp-motion-tf-102-2-1-11">
 \begin{equation*}
 0 = 6t - 12 \Rightarrow t = 2.
 \end{equation*}

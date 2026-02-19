@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -621,7 +618,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="thm-IVT-2-1">If <span class="process-math">\(f(x)\)</span> is continuous for <span class="process-math">\(x\)</span> in the interval <span class="process-math">\([a,b]\text{,}\)</span> and <span class="process-math">\(r\)</span> is between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> meaning either <span class="process-math">\(f(a) &lt; r &lt; f(b)\)</span> or <span class="process-math">\(f(a) &gt; r &gt; f(b)\text{,}\)</span> then there is at least one (but possibly more) value of <span class="process-math">\(c \in (a,b)\)</span><details class="ptx-footnote" aria-live="polite" id="thm-IVT-2-1-10"><summary class="ptx-footnote__number" title="Footnote 1.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="thm-IVT-2-1-10">Here <span class="process-math">\(c\)</span> lies in the open interval <span class="process-math">\((a,b)\text{,}\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> but excluding both endpoints: <span class="process-math">\(a&lt;c&lt;b\text{.}\)</span>
 </div></details> such that <span class="process-math">\(f(c)=r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-IVT-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-ivt-illustration"><img src="generated/latex-image/ivt-ill.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Illustration of the Intermediate Value Theorem: a continuous function on <span class="process-math">\([a,b]\text{,}\)</span> a value <span class="process-math">\(r\)</span> between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> and at least one point <span class="process-math">\(c\)</span> with <span class="process-math">\(f(c)=r\text{.}\)</span><div class="autopermalink" data-description="Figure 1.5.2"><a href="#fig-ivt-illustration" title="Copy heading and permalink for Figure 1.5.2" aria-label="Copy heading and permalink for Figure 1.5.2">🔗</a></div></figcaption></figure></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-ivt-illustration"><div class="image-box"><img src="generated/latex-image/ivt-ill.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Illustration of the Intermediate Value Theorem: a continuous function on <span class="process-math">\([a,b]\text{,}\)</span> a value <span class="process-math">\(r\)</span> between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> and at least one point <span class="process-math">\(c\)</span> with <span class="process-math">\(f(c)=r\text{.}\)</span><div class="autopermalink" data-description="Figure 1.5.2"><a href="#fig-ivt-illustration" title="Copy heading and permalink for Figure 1.5.2" aria-label="Copy heading and permalink for Figure 1.5.2">🔗</a></div></figcaption></figure></div></div></div>
 <div class="autopermalink" data-description="Theorem 1.5.1: Intermediate Value Theorem (IVT)"><a href="#thm-IVT" title="Copy heading and permalink for Theorem 1.5.1: Intermediate Value Theorem (IVT)" aria-label="Copy heading and permalink for Theorem 1.5.1: Intermediate Value Theorem (IVT)">🔗</a></div></article><article class="remark remark-like" id="sec-limit-ivt-5"><h3 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
@@ -696,7 +694,7 @@ x \amp = 9.
 <div class="solutions"><details id="sec-limit-ivt-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="sec-limit-ivt-11-2-1">There is no simple algebraic way to solve <span class="process-math">\(\cos(x)=x\)</span> directly. Instead, define a new function<div class="autopermalink" data-description="Paragraph"><a href="#sec-limit-ivt-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-limit-ivt-11-2-2">
 \begin{equation*}
 f(x) = \cos(x) - x.
 \end{equation*}
@@ -752,7 +750,7 @@ f(x) = \cos(x) - x.
 <div class="autopermalink" data-description="Exercise 1"><a href="#exercises-ivt-2-3" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ivt-table-tf"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="ivt-table-tf-1-1">A function <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\([1,5]\text{.}\)</span> Values of <span class="process-math">\(f(x)\)</span> are given in the table below:<div class="autopermalink" data-description="Paragraph"><a href="#ivt-table-tf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ivt-table-tf-1-2">
 \begin{equation*}
 \begin{array}{|c|c|}
 \hline

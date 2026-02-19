@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -630,14 +627,14 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="def-riemann-integral-2-1">Let <span class="process-math">\(f\)</span> be a function and let <span class="process-math">\(a\le b\text{.}\)</span> For each positive integer <span class="process-math">\(n\text{,}\)</span> divide the interval <span class="process-math">\([a,b]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal width <span class="process-math">\(\Delta x=\dfrac{b-a}{n}\text{,}\)</span> with division points<div class="autopermalink" data-description="Paragraph"><a href="#def-riemann-integral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-riemann-integral-2-2">
 \begin{equation*}
 a &lt; a+\Delta x &lt; a+2\Delta x &lt; \cdots &lt; a+n\Delta x=b.
 \end{equation*}
 </div>
 <div class="para" id="def-riemann-integral-2-3">Choose sample points <span class="process-math">\(x_1,\ldots,x_n\)</span> with <span class="process-math">\(x_i\)</span> anywhere in the <span class="process-math">\(i\)</span>th subinterval: <span class="process-math">\(a+(i-1)\Delta x \le x_i \le a+i\Delta x\text{.}\)</span> If the limit exists, we define<div class="autopermalink" data-description="Paragraph"><a href="#def-riemann-integral-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-riemann-integral-2-4">
 \begin{equation*}
 \int_a^b f(x)\,dx
 \stackrel{\text{def}}=
@@ -657,7 +654,7 @@ a &lt; a+\Delta x &lt; a+2\Delta x &lt; \cdots &lt; a+n\Delta x=b.
 </div>
 <div class="para" id="ssec-defint-integrable-functions-3">To see what can go wrong, consider <span class="process-math">\(f(x)=\dfrac{1}{x^2}\)</span> on <span class="process-math">\([0,1]\text{.}\)</span> The function has a vertical asymptote at <span class="process-math">\(x=0\text{,}\)</span> so the area under the curve is not finite. If we try a Riemann sum with <span class="process-math">\(\Delta x=\dfrac{1}{n}\)</span> and sample points <span class="process-math">\(x_i=\dfrac{i}{n}\text{,}\)</span> we get<div class="autopermalink" data-description="Paragraph"><a href="#ssec-defint-integrable-functions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ssec-defint-integrable-functions-4">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle \sum_{i=1}^n \frac{1}{x_i^2}\,\Delta x
@@ -681,7 +678,7 @@ n.
 </h3>
 <div class="para" id="ssec-defint-negative-integrand-2">So far we have emphasized integrals with <span class="process-math">\(f(x)\ge 0\text{,}\)</span> where the integral is positive and equals an area. The definition still works when <span class="process-math">\(f(x)\le 0\text{,}\)</span> but the value becomes negative. For example, if <span class="process-math">\(f(x)=-1\text{,}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#ssec-defint-negative-integrand-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ssec-defint-negative-integrand-3">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle \int_1^3 (-1)\,dx
@@ -708,7 +705,7 @@ n.
 <div class="solutions"><details id="ex-signed-area-line-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-signed-area-line-2-1">The line <span class="process-math">\(y=2-x\)</span> crosses the <span class="process-math">\(x\)</span>-axis at <span class="process-math">\(x=2\text{.}\)</span> It is above the axis on <span class="process-math">\([0,2]\)</span> and below the axis on <span class="process-math">\([2,3]\text{.}\)</span> So the integral is (area of a triangle above) minus (area of a triangle below):<div class="autopermalink" data-description="Paragraph"><a href="#ex-signed-area-line-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-signed-area-line-2-2">
 \begin{equation*}
 \int_0^3 (2-x)\,dx
 \ =\
@@ -777,7 +774,7 @@ n.
 </h3>
 <div class="para" id="ssec-defint-basic-integrals-2">Here are three basic definite integrals that we can justify directly from Riemann sums:<div class="autopermalink" data-description="Paragraph"><a href="#ssec-defint-basic-integrals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ssec-defint-basic-integrals-3">
 \begin{equation*}
 \int_a^b 1\,dx = b-a,
 \qquad
@@ -799,7 +796,7 @@ n.
 <div class="solutions"><details id="ex-defint-expand-square-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-defint-expand-square-2-1">Since <span class="process-math">\(\int (f(t))^2\,dt\)</span> is not equal to <span class="process-math">\(\left(\int f(t)\,dt\right)^2\text{,}\)</span> we expand the integrand and use the rules:<div class="autopermalink" data-description="Paragraph"><a href="#ex-defint-expand-square-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-defint-expand-square-2-2">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle \int_{-2}^{7} (3t-5)^2\,dt
@@ -833,7 +830,7 @@ n.
 <div class="solutions"><details id="ex-defint-upper-bound-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-defint-upper-bound-2-1">Since <span class="process-math">\(-1\le \cos(x^2)\le 1\text{,}\)</span> we have <span class="process-math">\(1+\cos(x^2)\le 2\text{.}\)</span> By domination,<div class="autopermalink" data-description="Paragraph"><a href="#ex-defint-upper-bound-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-defint-upper-bound-2-2">
 \begin{equation*}
 \begin{array}{rcl}
 \displaystyle \int_{-2}^{7} (3x-5)^2(1+\cos(x^2))\,dx

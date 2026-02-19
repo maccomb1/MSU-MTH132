@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -617,63 +614,111 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Objective"><a href="#sec-derivApp-opt-2-1-5" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Objectives 3.8"><a href="#sec-derivApp-opt-2" title="Copy heading and permalink for Objectives 3.8" aria-label="Copy heading and permalink for Objectives 3.8">🔗</a></div></article><div class="para" id="sec-derivApp-opt-3">In many applications, we are not just interested in computing derivatives. Instead, we use derivatives as a tool to make the best possible choice: the largest area, the smallest cost, the least time, or the greatest profit. Problems of this type are called <dfn class="terminology">optimization problems</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-opt-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Objectives 3.8"><a href="#sec-derivApp-opt-2" title="Copy heading and permalink for Objectives 3.8" aria-label="Copy heading and permalink for Objectives 3.8">🔗</a></div></article><div class="para" id="sec-derivApp-opt-3">In many applications, we are not just interested in computing derivatives. Instead, we use derivatives as a tool to make the best possible choice: the largest area, the smallest cost, the least time, or the greatest profit. These sorts of real-world problems are called <dfn class="terminology">optimization problems</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-derivApp-opt-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<section class="subsection" id="ssec-opt-rectangle"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing Area with a Fixed Perimeter</span>
+<section class="subsection" id="ssec-opt-motivating-example"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Motivating Example and Overall Technique</span>
 </h3>
-<div class="para" id="ssec-opt-rectangle-2">Suppose we have 40 meters of fencing to build a rectangular corral. What dimensions produce the largest possible enclosed area?<div class="autopermalink" data-description="Paragraph"><a href="#ssec-opt-rectangle-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
 <article class="example example-like" id="ex-opt-rectangle"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ex-opt-rectangle-1-1">A rectangle has perimeter <span class="process-math">\(40\)</span> meters. Find the length <span class="process-math">\(\ell\)</span> and width <span class="process-math">\(w\)</span> that maximize its area.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-1-1">Suppose we have <span class="process-math">\(40\)</span> meters of fencing to enclose a rectangular area. What dimensions maximize the area?<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-1" id="ex-opt-rectangle-1-2">
+<li id="ex-opt-rectangle-1-2-1">
+<div class="para" id="ex-opt-rectangle-1-2-1-1">Click the Desmos model below to experiment with different rectangles and get a sense of the problem and for what the answer should be.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<a class="external" href="https://www.desmos.com/calculator/6o2oojvp14" target="_blank"><figure class="figure figure-like" id="ex-opt-rectangle-1-2-1-2-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/Optimization01.gif" class="contained" alt="Animated graph showing rectangles with a perimeter of 40 meters. As the length and width of the rectangle change, the area is calculated and displayed. The animation helps visualize how the area changes for different dimensions, guiding us towards understanding which dimensions maximize the area. It appears that the area is maximized when the rectangle is a square, with both length and width equal to 10 meters."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A GIF showing various rectangles with a perimeter of 40 meters. As the dimensions of the rectangle change, the area is calculated and displayed. The animation illustrates how the area changes for different length and width combinations, helping to visualize the optimization problem and understand which dimensions yield the maximum area.<div class="autopermalink" data-description="Figure 3.8.2"><a href="#ex-opt-rectangle-1-2-1-2-1" title="Copy heading and permalink for Figure 3.8.2" aria-label="Copy heading and permalink for Figure 3.8.2">🔗</a></div></figcaption></figure></a><div class="autopermalink" data-description="Item a"><a href="#ex-opt-rectangle-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-opt-rectangle-1-2-2">
+<div class="para" id="ex-opt-rectangle-1-2-2-1">Use calculus techniques to find the dimensions of the rectangle of greatest area.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#ex-opt-rectangle-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
 <div class="solutions"><details id="ex-opt-rectangle-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-opt-rectangle-2-1">The constraint comes from the perimeter:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-2-1">(a) Experimenting with the Desmos model suggests that the rectangle of greatest area is a square with side length 10 meters. We will confirm this using calculus in part (b).<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="para" id="ex-opt-rectangle-2-2">(b) To solve this problem, we first identify the controlling variables, constraints, and target quantity.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-opt-rectangle-2-3">Our target quantity that we are trying to maximize is the area of the rectangle (<span class="process-math">\(A=\ell w\)</span>). The controlling variables are the length <span class="process-math">\(\ell\)</span> and width <span class="process-math">\(w\)</span> of the rectangle. The constraint is that the perimeter must be 40 meters.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-opt-rectangle-2-4">Using the constraint, we can express one variable in terms of the other and write the area as a single-variable function.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-opt-rectangle-2-5">
 \begin{equation*}
-2\ell+2w=40.
+\begin{array}{rcl}
+2\ell+2w \amp = \amp 40 \\
+\ell+w \amp = \amp 20 \\
+w \amp = \amp 20-\ell
+\end{array}
 \end{equation*}
 </div>
-<div class="para" id="ex-opt-rectangle-2-3">Solve for one variable in terms of the other. For example,<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-2-6">Using this we can express the area as a function of <span class="process-math">\(\ell\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
-\begin{equation*}
-w=20-\ell.
-\end{equation*}
-</div>
-<div class="para" id="ex-opt-rectangle-2-5">The area is the target quantity:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-rectangle-2-7">
 \begin{equation*}
 A=\ell w=\ell(20-\ell)=20\ell-\ell^2.
 \end{equation*}
 </div>
-<div class="para" id="ex-opt-rectangle-2-7">The physical domain requires <span class="process-math">\(\ell\ge 0\)</span> and <span class="process-math">\(w\ge 0\text{,}\)</span> so <span class="process-math">\(\ell\in[0,20]\text{.}\)</span> Now we find the absolute maximum of <span class="process-math">\(A(\ell)\)</span> on <span class="process-math">\([0,20]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-2-8">The physical domain requires <span class="process-math">\(\ell\ge 0\)</span> and <span class="process-math">\(w\ge 0\text{,}\)</span> so <span class="process-math">\(\ell\in[0,20]\text{.}\)</span> Now we find the absolute maximum of <span class="process-math">\(A(\ell)\)</span> on <span class="process-math">\([0,20]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-rectangle-2-9">
 \begin{equation*}
 A'(\ell)=20-2\ell.
 \end{equation*}
 </div>
-<div class="para" id="ex-opt-rectangle-2-9">The critical point satisfies <span class="process-math">\(A'(\ell)=0\text{,}\)</span> so <span class="process-math">\(\ell=10\text{.}\)</span> Evaluate the candidates:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-2-10">The critical point satisfies <span class="process-math">\(A'(\ell)=0\text{,}\)</span> so <span class="process-math">\(\ell=10\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="para" id="ex-opt-rectangle-2-11">Since the domain is a closed interval, we can use the Closed Interval Method to check the endpoints and the critical point:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-opt-rectangle-2-12">
 \begin{equation*}
 A(0)=0,\qquad A(10)=100,\qquad A(20)=0.
 \end{equation*}
 </div>
-<div class="para" id="ex-opt-rectangle-2-11">The largest value occurs at <span class="process-math">\(\ell=10\text{.}\)</span> Therefore <span class="process-math">\(w=20-\ell=10\text{.}\)</span> The rectangle of greatest area is a square.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-rectangle-2-13">So the largest Area value occurs at <span class="process-math">\(\ell=10\)</span> meters. Therefore <span class="process-math">\(w=20-\ell=10\)</span> meters. And so we can see from this example that the rectangle of greatest area is a square with side length 10 meters, confirming our initial guess from the Desmos model.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-rectangle-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 3.8.1.1"><a href="#ex-opt-rectangle-2" title="Copy heading and permalink for Solution 3.8.1.1" aria-label="Copy heading and permalink for Solution 3.8.1.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.8.1"><a href="#ex-opt-rectangle" title="Copy heading and permalink for Example 3.8.1" aria-label="Copy heading and permalink for Example 3.8.1">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Maximizing Area with a Fixed Perimeter"><a href="#ssec-opt-rectangle" title="Copy heading and permalink for Subsection: Maximizing Area with a Fixed Perimeter" aria-label="Copy heading and permalink for Subsection: Maximizing Area with a Fixed Perimeter">🔗</a></div></section><section class="subsection" id="ssec-opt-method"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Reusable Method for Optimization</span>
-</h3>
+<div class="autopermalink" data-description="Example 3.8.1"><a href="#ex-opt-rectangle" title="Copy heading and permalink for Example 3.8.1" aria-label="Copy heading and permalink for Example 3.8.1">🔗</a></div></article><div class="para" id="ssec-opt-motivating-example-3">Since we are interested in finding absolute extrema, it is helpful that we already have a method for functions defined on a closed interval, as in the previous example. However, what happens when the domain is open or unbounded? Up to this point, our techniques in those settings allow us to find only <em class="alert">local extrema</em>. For that reason, the following two results will be especially useful.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-opt-motivating-example-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-abs-ext-first-deriv-test"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">First Derivative Test for Absolute Extrema.</span>
+</h4>
+<div class="para" id="thm-abs-ext-first-deriv-test-2-1">Suppose that <span class="process-math">\(c\)</span> is the only critical point of a function <span class="process-math">\(f\)</span> on an interval <span class="process-math">\(I\text{,}\)</span> then the following hold:<div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-first-deriv-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-abs-ext-first-deriv-test-2-2">
+<li id="thm-abs-ext-first-deriv-test-2-2-1">
+<div class="para" id="thm-abs-ext-first-deriv-test-2-2-1-1">If <span class="process-math">\(f'(x)\gt 0\)</span>  for all <span class="process-math">\(x\lt c\)</span> and <span class="process-math">\(f'(x)\lt 0\)</span> for all <span class="process-math">\(x\gt c\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is an absolute maximum of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-first-deriv-test-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-abs-ext-first-deriv-test-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-abs-ext-first-deriv-test-2-2-2">
+<div class="para" id="thm-abs-ext-first-deriv-test-2-2-2-1">If <span class="process-math">\(f'(x)\lt 0\)</span>  for all <span class="process-math">\(x\lt c\)</span> and <span class="process-math">\(f'(x)\gt 0\)</span> for all <span class="process-math">\(x\gt c\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is an absolute minimum of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-first-deriv-test-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-abs-ext-first-deriv-test-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Theorem 3.8.3: First Derivative Test for Absolute Extrema"><a href="#thm-abs-ext-first-deriv-test" title="Copy heading and permalink for Theorem 3.8.3: First Derivative Test for Absolute Extrema" aria-label="Copy heading and permalink for Theorem 3.8.3: First Derivative Test for Absolute Extrema">🔗</a></div></article><article class="theorem theorem-like" id="thm-abs-ext-second-deriv-test"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Second Derivative Test for Absolute Extrema.</span>
+</h4>
+<div class="para" id="thm-abs-ext-second-deriv-test-2-1">Suppose that <span class="process-math">\(c\)</span> is the only critical point of a function <span class="process-math">\(f\)</span> on an interval <span class="process-math">\(I\)</span> such that <span class="process-math">\(f'(c)=0\)</span> , then the following hold:<div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-second-deriv-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-abs-ext-second-deriv-test-2-2">
+<li id="thm-abs-ext-second-deriv-test-2-2-1">
+<div class="para" id="thm-abs-ext-second-deriv-test-2-2-1-1">If <span class="process-math">\(f''(c)\lt 0\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is an absolute maximum of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-second-deriv-test-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-abs-ext-second-deriv-test-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-abs-ext-second-deriv-test-2-2-2">
+<div class="para" id="thm-abs-ext-second-deriv-test-2-2-2-1">If <span class="process-math">\(f''(c)\gt 0\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is an absolute minimum of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-abs-ext-second-deriv-test-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-abs-ext-second-deriv-test-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Theorem 3.8.4: Second Derivative Test for Absolute Extrema"><a href="#thm-abs-ext-second-deriv-test" title="Copy heading and permalink for Theorem 3.8.4: Second Derivative Test for Absolute Extrema" aria-label="Copy heading and permalink for Theorem 3.8.4: Second Derivative Test for Absolute Extrema">🔗</a></div></article><div class="para" id="ssec-opt-motivating-example-6">Now let’s summarize the overall technique for solving optimization problems.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-opt-motivating-example-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="algorithm theorem-like" id="strat-optimization-method"><h4 class="heading">
-<span class="type">Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Technique for Optimization.</span>
+<span class="type">Strategy</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Technique for Optimization.</span>
 </h4>
 <div class="para" id="strat-optimization-method-2">Most optimization problems follow the same workflow:<div class="autopermalink" data-description="Paragraph"><a href="#strat-optimization-method-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -687,12 +732,32 @@ A(0)=0,\qquad A(10)=100,\qquad A(20)=0.
 <div class="autopermalink" data-description="Item 2"><a href="#strat-optimization-method-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 <li id="strat-optimization-method-3-3">
-<div class="para" id="p-derived-strat-optimization-method-3-3">Choose one controlling variable as the independent variable and rewrite the target quantity as a single-variable function <span class="process-math">\(T(x)\text{.}\)</span> Determine the domain of <span class="process-math">\(x\text{.}\)</span>
+<div class="para" id="p-derived-strat-optimization-method-3-3">Choose one controlling variable as the independent variable and rewrite the target quantity as a single-variable function <span class="process-math">\(T(x)\)</span> (in our previous example our target quantity was area). Determine the domain of <span class="process-math">\(x\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Item 3"><a href="#strat-optimization-method-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 <li id="strat-optimization-method-3-4">
-<div class="para" id="p-derived-strat-optimization-method-3-4">Find absolute extrema of <span class="process-math">\(T(x)\)</span> on its domain by checking critical points and endpoints (or by using limits when the domain is open or unbounded).</div>
+<div class="para logical" id="strat-optimization-method-3-4-1">
+<div class="para">Find the desired absolute extrema of <span class="process-math">\(T(x)\)</span> on its domain by one of</div>
+<ul class="disc" id="strat-optimization-method-3-4-1-2">
+<li id="strat-optimization-method-3-4-1-2-1">
+<div class="para" id="strat-optimization-method-3-4-1-2-1-1">The <a href="sec-derivApp-extrema.html#strat-extrema" class="xref" data-knowl="./knowl/xref/strat-extrema.html" data-reveal-label="Reveal" data-close-label="Close" title="Strategy 3.4.17: Closed Interval Method for Finding Absolute Maxima and Minima">Closed Interval Method 3.4.17</a> if the domain is a closed interval.<div class="autopermalink" data-description="Paragraph"><a href="#strat-optimization-method-3-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#strat-optimization-method-3-4-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="strat-optimization-method-3-4-1-2-2">
+<div class="para" id="strat-optimization-method-3-4-1-2-2-1">The <a href="sec-derivApp-opt.html#thm-abs-ext-first-deriv-test" class="xref" data-knowl="./knowl/xref/thm-abs-ext-first-deriv-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8.3: First Derivative Test for Absolute Extrema">First Derivative Test for Absolute Extrema 3.8.3</a> if the domain is open or unbounded and the critical point is the only candidate.<div class="autopermalink" data-description="Paragraph"><a href="#strat-optimization-method-3-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#strat-optimization-method-3-4-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="strat-optimization-method-3-4-1-2-3">
+<div class="para" id="strat-optimization-method-3-4-1-2-3-1">The <a href="sec-derivApp-opt.html#thm-abs-ext-second-deriv-test" class="xref" data-knowl="./knowl/xref/thm-abs-ext-second-deriv-test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8.4: Second Derivative Test for Absolute Extrema">Second Derivative Test for Absolute Extrema 3.8.4</a> if the domain is open or unbounded and the critical point is the only candidate (and it is difficult to analyze the sign of the first derivative).<div class="autopermalink" data-description="Paragraph"><a href="#strat-optimization-method-3-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#strat-optimization-method-3-4-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#strat-optimization-method-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Item 4"><a href="#strat-optimization-method-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 <li id="strat-optimization-method-3-5">
@@ -700,39 +765,55 @@ A(0)=0,\qquad A(10)=100,\qquad A(20)=0.
 <div class="autopermalink" data-description="Item 5"><a href="#strat-optimization-method-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Strategy 3.8.2: Technique for Optimization"><a href="#strat-optimization-method" title="Copy heading and permalink for Strategy 3.8.2: Technique for Optimization" aria-label="Copy heading and permalink for Strategy 3.8.2: Technique for Optimization">🔗</a></div></article><div class="autopermalink" data-description="Subsection: A Reusable Method for Optimization"><a href="#ssec-opt-method" title="Copy heading and permalink for Subsection: A Reusable Method for Optimization" aria-label="Copy heading and permalink for Subsection: A Reusable Method for Optimization">🔗</a></div></section><section class="subsection" id="ssec-opt-cylinder"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Minimizing Material for a Cylindrical Bucket</span>
+<div class="autopermalink" data-description="Strategy 3.8.5: Technique for Optimization"><a href="#strat-optimization-method" title="Copy heading and permalink for Strategy 3.8.5: Technique for Optimization" aria-label="Copy heading and permalink for Strategy 3.8.5: Technique for Optimization">🔗</a></div></article><div class="para" id="ssec-opt-motivating-example-8">And with that we are ready to solve optimization problems! Similar to related rates problems, the key is to practice the technique on a variety of examples so that you can recognize the pattern and apply it efficiently.<div class="autopermalink" data-description="Paragraph"><a href="#ssec-opt-motivating-example-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Motivating Example and Overall Technique"><a href="#ssec-opt-motivating-example" title="Copy heading and permalink for Subsection: Motivating Example and Overall Technique" aria-label="Copy heading and permalink for Subsection: Motivating Example and Overall Technique">🔗</a></div></section><section class="subsection" id="ssec-opt-examples"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Examples</span>
 </h3>
 <article class="example example-like" id="ex-opt-bucket"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ex-opt-bucket-1-1">A 10-quart bucket has cylindrical sides and a circular bottom (no top). What radius <span class="process-math">\(r\)</span> and height <span class="process-math">\(h\)</span> minimize the surface area of the sides and bottom?<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-opt-bucket-1-1">A 10-quart bucket has cylindrical sides and a circular bottom (no top). What is the minimum surface area for such a bucket?<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-opt-bucket-1-2">
+<em class="emphasis">Hint:</em> 10 quarts is <span class="process-math">\(\tfrac{1155}{2}\)</span> cubic inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-1" id="ex-opt-bucket-1-3">
+<li id="ex-opt-bucket-1-3-1">
+<div class="para" id="ex-opt-bucket-1-3-1-1">Use the Desmos graphing tool to visualize the situation, the surface area function, and approximate the optimal dimensions.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<a class="external" href="https://www.desmos.com/calculator/dqkdsx9x3c" target="_blank"><figure class="figure figure-like" id="ex-opt-bucket-1-3-1-2-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/Optimization02.gif" class="contained" alt="A GIF showing various cylinders with a fixed volume of 10 quarts. As the radius and height of the cylinder change, the surface area is calculated and displayed. The animation helps visualize how the surface area changes for different dimensions, guiding us towards understanding which dimensions minimize the surface area. It appears that the surface area is minimized when the radius is about 5.5 inches. At this point the Surface Area is around 300 square inches."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A GIF showing various cylinders with a fixed volume of 10 quarts. As the radius and height of the cylinder change, the surface area is calculated and displayed. The animation helps visualize how the surface area changes for different dimensions, guiding us towards understanding which dimensions minimize the surface area.<div class="autopermalink" data-description="Figure 3.8.7"><a href="#ex-opt-bucket-1-3-1-2-1" title="Copy heading and permalink for Figure 3.8.7" aria-label="Copy heading and permalink for Figure 3.8.7">🔗</a></div></figcaption></figure></a><div class="autopermalink" data-description="Item a"><a href="#ex-opt-bucket-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-opt-bucket-1-3-2">
+<div class="para" id="ex-opt-bucket-1-3-2-1">Find the minimum surface area. What are the dimensions that minimize surface area? Confirm that they minimize surface area.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#ex-opt-bucket-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
 <div class="solutions"><details id="ex-opt-bucket-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-opt-bucket-2-1">The target quantity is the surface area<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-2">
 \begin{equation*}
 S=\pi r^2+2\pi rh.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-bucket-2-3">The constraint is the volume. Converting 10 quarts to cubic inches gives <span class="process-math">\(V=577.5\)</span> in3, so<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-4">
 \begin{equation*}
 V=\pi r^2h=577.5.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-bucket-2-5">Use the constraint to write <span class="process-math">\(h\)</span> in terms of <span class="process-math">\(r\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-6">
 \begin{equation*}
 h=\frac{577.5}{\pi r^2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-bucket-2-7">Substitute into <span class="process-math">\(S\)</span> to obtain a single-variable function:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-8">
 \begin{equation*}
 S(r)=\pi r^2+2\pi r\left(\frac{577.5}{\pi r^2}\right)
 =\pi r^2+\frac{1155}{r}.
@@ -740,14 +821,14 @@ S(r)=\pi r^2+2\pi r\left(\frac{577.5}{\pi r^2}\right)
 </div>
 <div class="para" id="ex-opt-bucket-2-9">The domain is <span class="process-math">\(r&gt;0\text{.}\)</span> Differentiate:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-10">
 \begin{equation*}
 S'(r)=2\pi r-\frac{1155}{r^2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-bucket-2-11">Set <span class="process-math">\(S'(r)=0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-12">
 \begin{equation*}
 2\pi r=\frac{1155}{r^2}
 \quad\Longrightarrow\quad
@@ -758,7 +839,7 @@ r=\sqrt[3]{\frac{1155}{2\pi}}.
 </div>
 <div class="para" id="ex-opt-bucket-2-13">This is the only critical point. To confirm it is an absolute minimum, note that<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-14">
 \begin{equation*}
 \displaystyle\lim_{r\to 0^+} S(r)=\infty,
 \qquad
@@ -769,7 +850,7 @@ r=\sqrt[3]{\frac{1155}{2\pi}}.
 </div>
 <div class="para" id="ex-opt-bucket-2-16">Now compute the corresponding height:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-bucket-2-17">
 \begin{equation*}
 h=\frac{577.5}{\pi r^2}
 =\frac{577.5}{\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2}.
@@ -778,17 +859,14 @@ h=\frac{577.5}{\pi r^2}
 <div class="para" id="ex-opt-bucket-2-18">In fact, simplifying shows <span class="process-math">\(h=r\text{,}\)</span> so the optimal bucket is as tall as its radius. This yields a bucket that is twice as wide as it is tall.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="remark remark-like" id="ex-opt-bucket-2-19"><h5 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="ex-opt-bucket-2-19-1">Real buckets are often designed with other priorities besides minimizing material, such as stability, ease of carrying, stackability, and manufacturing constraints. Optimization models are most useful when we clearly state what is being optimized and what is being ignored.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-bucket-2-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.8.4"><a href="#ex-opt-bucket-2-19" title="Copy heading and permalink for Remark 3.8.4" aria-label="Copy heading and permalink for Remark 3.8.4">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.8.3.1"><a href="#ex-opt-bucket-2" title="Copy heading and permalink for Solution 3.8.3.1" aria-label="Copy heading and permalink for Solution 3.8.3.1">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.8.8"><a href="#ex-opt-bucket-2-19" title="Copy heading and permalink for Remark 3.8.8" aria-label="Copy heading and permalink for Remark 3.8.8">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.8.6.1"><a href="#ex-opt-bucket-2" title="Copy heading and permalink for Solution 3.8.6.1" aria-label="Copy heading and permalink for Solution 3.8.6.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.8.3"><a href="#ex-opt-bucket" title="Copy heading and permalink for Example 3.8.3" aria-label="Copy heading and permalink for Example 3.8.3">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Minimizing Material for a Cylindrical Bucket"><a href="#ssec-opt-cylinder" title="Copy heading and permalink for Subsection: Minimizing Material for a Cylindrical Bucket" aria-label="Copy heading and permalink for Subsection: Minimizing Material for a Cylindrical Bucket">🔗</a></div></section><section class="subsection" id="ssec-opt-ants"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choosing a Path to Minimize Time</span>
-</h3>
-<article class="example example-like" id="ex-opt-ants"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 3.8.6"><a href="#ex-opt-bucket" title="Copy heading and permalink for Example 3.8.6" aria-label="Copy heading and permalink for Example 3.8.6">🔗</a></div></article><article class="example example-like" id="ex-opt-ants"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-opt-ants-1-1">A line of ants travels from the lower-left corner to the upper-right corner of a <span class="process-math">\(10\)</span> cm by <span class="process-math">\(10\)</span> cm square of carpet. They may travel along the left or bottom edge at speed <span class="process-math">\(1\)</span> cm/sec, and then cut across the carpet at speed <span class="process-math">\(\tfrac12\)</span> cm/sec.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-opt-ants-1-2">Let <span class="process-math">\(e\)</span> be the distance traveled along an edge before entering the carpet. Find the value of <span class="process-math">\(e\)</span> that minimizes: (a) the total distance traveled, and (b) the total travel time.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -796,28 +874,28 @@ h=\frac{577.5}{\pi r^2}
 <div class="solutions"><details id="ex-opt-ants-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-opt-ants-2-1">The diagonal segment across the carpet has length <span class="process-math">\(c\text{.}\)</span> From the right triangle,<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-2">
 \begin{equation*}
 c^2=10^2+(10-e)^2.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-ants-2-3">Therefore<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-4">
 \begin{equation*}
 c=\sqrt{200-20e+e^2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-ants-2-5">The domain is <span class="process-math">\(e\in[0,10]\text{.}\)</span> The total distance is<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-6">
 \begin{equation*}
 L(e)=e+c=e+\sqrt{200-20e+e^2}.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-ants-2-7">The total time is distance divided by speed. Along the edge the speed is <span class="process-math">\(1\text{,}\)</span> so time is <span class="process-math">\(e\text{.}\)</span> Across the carpet the speed is <span class="process-math">\(\tfrac12\text{,}\)</span> so time is <span class="process-math">\(\frac{c}{1/2}=2c\text{.}\)</span> Thus<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-8">
 \begin{equation*}
 T(e)=e+2\sqrt{200-20e+e^2}.
 \end{equation*}
@@ -825,7 +903,7 @@ T(e)=e+2\sqrt{200-20e+e^2}.
 <div class="para" id="ex-opt-ants-2-9">
 <em class="alert">(a) Minimize distance.</em> Differentiate:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-10">
 \begin{equation*}
 L'(e)=1+\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
 =1-\frac{10-e}{\sqrt{200-20e+e^2}}.
@@ -833,7 +911,7 @@ L'(e)=1+\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
 </div>
 <div class="para" id="ex-opt-ants-2-11">Solving <span class="process-math">\(L'(e)=0\)</span> would require <span class="process-math">\(\sqrt{200-20e+e^2}=10-e\text{.}\)</span> Squaring both sides gives <span class="process-math">\(200-20e+e^2=(10-e)^2=100-20e+e^2\text{,}\)</span> which reduces to <span class="process-math">\(200=100\text{,}\)</span> an impossibility. Therefore there are no critical points in <span class="process-math">\((0,10)\text{,}\)</span> so the minimum occurs at an endpoint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-12">
 \begin{equation*}
 L(0)=10\sqrt{2},\qquad L(10)=20.
 \end{equation*}
@@ -843,7 +921,7 @@ L(0)=10\sqrt{2},\qquad L(10)=20.
 <div class="para" id="ex-opt-ants-2-14">
 <em class="alert">(b) Minimize time.</em> Differentiate:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-15">
 \begin{equation*}
 T'(e)=1+(2)\cdot\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
 =1-\frac{2(10-e)}{\sqrt{200-20e+e^2}}.
@@ -851,14 +929,14 @@ T'(e)=1+(2)\cdot\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
 </div>
 <div class="para" id="ex-opt-ants-2-16">Set <span class="process-math">\(T'(e)=0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-17">
 \begin{equation*}
 \sqrt{200-20e+e^2}=20-2e.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-ants-2-18">Square both sides and simplify:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-19">
 \begin{equation*}
 200-20e+e^2=(20-2e)^2
 \quad\Longrightarrow\quad
@@ -867,7 +945,7 @@ T'(e)=1+(2)\cdot\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
 </div>
 <div class="para" id="ex-opt-ants-2-20">Apply the quadratic formula:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-21">
 \begin{equation*}
 e=\frac{60\pm\sqrt{60^2-4(3)(200)}}{2(3)}
 =10\pm\frac{10}{3}\sqrt{3}.
@@ -875,7 +953,7 @@ e=\frac{60\pm\sqrt{60^2-4(3)(200)}}{2(3)}
 </div>
 <div class="para" id="ex-opt-ants-2-22">Only <span class="process-math">\(e=10-\frac{10}{3}\sqrt{3}\)</span> lies in <span class="process-math">\([0,10]\text{,}\)</span> so it is our only critical point. Compare to the endpoints:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-ants-2-23">
 \begin{equation*}
 T(0)=20\sqrt2,\qquad T(10)=30,\qquad
 T\!\left(10-\frac{10}{3}\sqrt3\right)=10+10\sqrt3.
@@ -884,17 +962,14 @@ T\!\left(10-\frac{10}{3}\sqrt3\right)=10+10\sqrt3.
 <div class="para" id="ex-opt-ants-2-24">Since <span class="process-math">\(10+10\sqrt3\)</span> is the smallest of these values, the minimum time occurs at <span class="process-math">\(\displaystyle e=10-\frac{10}{3}\sqrt3\approx 4.2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="remark remark-like" id="ex-opt-ants-2-25"><h5 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h5>
 <div class="para" id="ex-opt-ants-2-25-1">Minimizing distance and minimizing time are different problems because the speed changes. The ants save time by traveling partway along the faster edge and then cutting across the slower carpet.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-ants-2-25-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.8.6"><a href="#ex-opt-ants-2-25" title="Copy heading and permalink for Remark 3.8.6" aria-label="Copy heading and permalink for Remark 3.8.6">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.8.5.1"><a href="#ex-opt-ants-2" title="Copy heading and permalink for Solution 3.8.5.1" aria-label="Copy heading and permalink for Solution 3.8.5.1">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.8.10"><a href="#ex-opt-ants-2-25" title="Copy heading and permalink for Remark 3.8.10" aria-label="Copy heading and permalink for Remark 3.8.10">🔗</a></div></article><div class="autopermalink" data-description="Solution 3.8.9.1"><a href="#ex-opt-ants-2" title="Copy heading and permalink for Solution 3.8.9.1" aria-label="Copy heading and permalink for Solution 3.8.9.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.8.5"><a href="#ex-opt-ants" title="Copy heading and permalink for Example 3.8.5" aria-label="Copy heading and permalink for Example 3.8.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Choosing a Path to Minimize Time"><a href="#ssec-opt-ants" title="Copy heading and permalink for Subsection: Choosing a Path to Minimize Time" aria-label="Copy heading and permalink for Subsection: Choosing a Path to Minimize Time">🔗</a></div></section><section class="subsection" id="ssec-opt-profit"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximizing Profit</span>
-</h3>
-<article class="example example-like" id="ex-opt-profit"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 3.8.9"><a href="#ex-opt-ants" title="Copy heading and permalink for Example 3.8.9" aria-label="Copy heading and permalink for Example 3.8.9">🔗</a></div></article><article class="example example-like" id="ex-opt-profit"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-opt-profit-1-1">A company produces a product for <span class="process-math">\(\$10\)</span> per item and sells it for <span class="process-math">\(s\)</span> dollars per item. Market demand is modeled by <span class="process-math">\(m(s)=100-s\text{,}\)</span> meaning that when the price is <span class="process-math">\(s\text{,}\)</span> the number of items sold is <span class="process-math">\(100-s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-opt-profit-1-2">What price <span class="process-math">\(s\)</span> maximizes total profit?<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -902,7 +977,7 @@ T\!\left(10-\frac{10}{3}\sqrt3\right)=10+10\sqrt3.
 <div class="solutions"><details id="ex-opt-profit-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-opt-profit-2-1">The profit per item is <span class="process-math">\(s-10\text{,}\)</span> and the number sold is <span class="process-math">\(100-s\text{.}\)</span> Therefore total profit is<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-profit-2-2">
 \begin{equation*}
 P(s)=(100-s)(s-10)=-1000+110s-s^2.
 \end{equation*}
@@ -911,23 +986,23 @@ P(s)=(100-s)(s-10)=-1000+110s-s^2.
 </div>
 <div class="para" id="ex-opt-profit-2-4">Differentiate:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-profit-2-5">
 \begin{equation*}
 P'(s)=110-2s.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-profit-2-6">The critical point satisfies <span class="process-math">\(P'(s)=0\text{,}\)</span> so <span class="process-math">\(s=55\text{.}\)</span> Check the endpoints:<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-opt-profit-2-7">
 \begin{equation*}
 P(10)=0,\qquad P(55)=2025,\qquad P(100)=0.
 \end{equation*}
 </div>
 <div class="para" id="ex-opt-profit-2-8">The maximum profit occurs at <span class="process-math">\(s=55\text{.}\)</span> The most profitable selling price is <span class="process-math">\(\$55\)</span> per item.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-profit-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 3.8.7.1"><a href="#ex-opt-profit-2" title="Copy heading and permalink for Solution 3.8.7.1" aria-label="Copy heading and permalink for Solution 3.8.7.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 3.8.11.1"><a href="#ex-opt-profit-2" title="Copy heading and permalink for Solution 3.8.11.1" aria-label="Copy heading and permalink for Solution 3.8.11.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 3.8.7"><a href="#ex-opt-profit" title="Copy heading and permalink for Example 3.8.7" aria-label="Copy heading and permalink for Example 3.8.7">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Maximizing Profit"><a href="#ssec-opt-profit" title="Copy heading and permalink for Subsection: Maximizing Profit" aria-label="Copy heading and permalink for Subsection: Maximizing Profit">🔗</a></div></section><section class="subsection" id="additional-worked-examples-opt"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Example 3.8.11"><a href="#ex-opt-profit" title="Copy heading and permalink for Example 3.8.11" aria-label="Copy heading and permalink for Example 3.8.11">🔗</a></div></article><div class="autopermalink" data-description="Subsection: More Examples"><a href="#ssec-opt-examples" title="Copy heading and permalink for Subsection: More Examples" aria-label="Copy heading and permalink for Subsection: More Examples">🔗</a></div></section><section class="subsection" id="additional-worked-examples-opt"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Worked-Out Examples</span>
 </h3>
 <div class="para" id="additional-worked-examples-opt-2">To keep this section at a reasonable length, we include only a few representative examples directly in the text. If you find yourself stuck on a homework problem, or if you are studying before a quiz or exam, additional fully worked-out examples are available in: <em class="alert"><a href="sec-derivApp-ww.html#subsec-derivApp-opt" class="internal" title="Subsection: Section 3.8 Optimization Problems">Additional Examples for Optimization Problems </a></em><div class="autopermalink" data-description="Paragraph"><a href="#additional-worked-examples-opt-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -937,7 +1012,7 @@ P(10)=0,\qquad P(55)=2025,\qquad P(100)=0.
 </h3>
 <div class="exercisegroup" id="exercises-optimization-2">
 <h4 class="heading"><span class="title">Some True/False Problems.</span></h4>
-<div class="introduction" id="exercises-optimization-2-2"><div class="para" id="exercises-optimization-2-2-1">Determine whether each statement is true or false and explain your reasoning.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-optimization-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="exercises-optimization-2-2"><div class="para" id="exercises-optimization-2-2-1">Determine whether each statement is true or false and briefly justify your reasoning.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-optimization-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="tf-opt-01"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>

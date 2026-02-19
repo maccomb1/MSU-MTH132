@@ -63,7 +63,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="og:type" content="book">
 <meta property="book:title" content="Calculus 1">
 <meta property="book:author" content="Ryan Maccombs">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -459,9 +459,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-curve2.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Curve Sketching Part 2</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-rational-example" class="internal"><span class="title">A Rational Function Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-trig-example" class="internal"><span class="title">A Trigonometric Example</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-curve-sketching-method-detailed" class="internal"><span class="title">Curve Sketching Checklist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-second-derivative-test" class="internal"><span class="title">The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#ssec-symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#subsec-allTogether" class="internal"><span class="title">Putting It All Together</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#additional-worked-examples-curve2" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-curve2.html#exercises-curve-sketching-2" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -469,11 +469,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-derivApp-opt.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Optimization Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-rectangle" class="internal"><span class="title">Maximizing Area with a Fixed Perimeter</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-method" class="internal"><span class="title">A Reusable Method for Optimization</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-cylinder" class="internal"><span class="title">Minimizing Material for a Cylindrical Bucket</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-ants" class="internal"><span class="title">Choosing a Path to Minimize Time</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-profit" class="internal"><span class="title">Maximizing Profit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-motivating-example" class="internal"><span class="title">Motivating Example and Overall Technique</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#ssec-opt-examples" class="internal"><span class="title">More Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-derivApp-opt.html#additional-worked-examples-opt" class="internal"><span class="title">Additional Worked-Out Examples</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-derivApp-opt.html#exercises-optimization" class="internal"><span class="title">Practice / Study Problems</span></a></div></li>
 </ul>
@@ -641,7 +638,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="theorem theorem-like" id="thm-derivatives-exp"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of the Natural Exponential Function.</span>
 </h4>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivatives-exp-2-1">
 \begin{equation*}
 \dfrac{d}{dx}(e^x) = e^x.
 \end{equation*}
@@ -666,7 +663,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions"><details id="ex-exp-log-basic-combined-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-exp-log-basic-combined-2-2-1">For <span class="process-math">\(f(x)\text{,}\)</span> use the power rule and the fact that <span class="process-math">\((e^x)'=e^x\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-exp-log-basic-combined-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-exp-log-basic-combined-2-2-2">
 \begin{equation*}
 f'(x) = e x^{e-1} + e^x.
 \end{equation*}
@@ -680,7 +677,7 @@ f'(x) = e x^{e-1} + e^x.
 <div class="solutions"><details id="ex-exp-log-basic-combined-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-exp-log-basic-combined-3-2-1">Rewrite <span class="process-math">\(\sqrt{x}=x^{1/2}\)</span> and apply the Product Rule.<div class="autopermalink" data-description="Paragraph"><a href="#ex-exp-log-basic-combined-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-exp-log-basic-combined-3-2-2">
 \begin{equation*}
 \begin{array}{rcl}
 \dfrac{d}{dx}\!\left(x^{1/2}e^x\right)
@@ -700,21 +697,21 @@ f'(x) = e x^{e-1} + e^x.
 <div class="solutions"><details id="ex-expChain-basic-02-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-expChain-basic-02-2-1">Compute the derivative:<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-basic-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-basic-02-2-2">
 \begin{equation*}
 y' = 2e^x + 3 + 15x^2.
 \end{equation*}
 </div>
 <div class="para" id="ex-expChain-basic-02-2-3">To find a point where the slope is 2, we solve<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-basic-02-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-basic-02-2-4">
 \begin{equation*}
 2e^x + 3 + 15x^2 = 2.
 \end{equation*}
 </div>
 <div class="para" id="ex-expChain-basic-02-2-5">Rearranging gives<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-basic-02-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-basic-02-2-6">
 \begin{equation*}
 2e^x + 15x^2 + 1 = 0.
 \end{equation*}
@@ -733,14 +730,14 @@ y' = 2e^x + 3 + 15x^2.
 </h4>
 <div class="para" id="thm-chain-rule-2-1">If <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable functions, then their composition <span class="process-math">\(f(g(x))\)</span> is differentiable and<div class="autopermalink" data-description="Paragraph"><a href="#thm-chain-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-chain-rule-2-2">
 \begin{equation*}
 (f(g(x)))' = f'(g(x)) \cdot g'(x).
 \end{equation*}
 </div>
 <div class="para" id="thm-chain-rule-2-3">In Leibniz notation, if we let <span class="process-math">\(u=g(x)\text{,}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#thm-chain-rule-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-chain-rule-2-4">
 \begin{equation*}
 \frac{df}{dx}
 =
@@ -769,7 +766,7 @@ y' = 2e^x + 3 + 15x^2.
 <div class="solutions"><details id="ex-expChain-basic-01-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-expChain-basic-01-2-1">
 <div class="para">Apply the Chain Rule and Quotient rule. Let <span class="process-math">\(u=\dfrac{e^x}{1+e^x}\text{,}\)</span> then <span class="process-math">\(f(u)=\sin(u)\)</span> and <span class="process-math">\(f'(u)=\cos(u)\)</span> so:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-basic-01-2-1-4">
 \begin{equation*}
 u' = \dfrac{e^x(1+e^x) - e^x(e^x)}{(1+e^x)^2} = \dfrac{e^x}{(1+e^x)^2}
 \end{equation*}
@@ -786,7 +783,7 @@ u' = \dfrac{e^x(1+e^x) - e^x(e^x)}{(1+e^x)^2} = \dfrac{e^x}{(1+e^x)^2}
 <div class="introduction" id="ex-expChain-table-1">
 <div class="para" id="ex-expChain-table-1-1">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be differentiable functions with the values shown below.<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-table-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-table-1-2">
 \begin{equation*}
 \begin{array}{|c|c|c|c|c|}
 \hline
@@ -810,14 +807,14 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
 <div class="solutions"><details id="ex-expChain-table-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-expChain-table-2-2-1">Using the Chain Rule,<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-table-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-table-2-2-2">
 \begin{equation*}
 \dfrac{d}{dx}(f(g(x))) = f'(g(x))\, g'(x).
 \end{equation*}
 </div>
 <div class="para" id="ex-expChain-table-2-2-3">At <span class="process-math">\(x=1\text{,}\)</span> we have <span class="process-math">\(g(1)=2\)</span> and <span class="process-math">\(g'(1)=-1\text{,}\)</span> and the table gives <span class="process-math">\(f'(2)=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-table-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-table-2-2-4">
 \begin{equation*}
 \dfrac{d}{dx}(f(g(x)))\big|_{x=1} = (-2)(-1) = 2.
 \end{equation*}
@@ -830,14 +827,14 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
 <div class="solutions"><details id="ex-expChain-table-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-expChain-table-3-2-1">Again apply the Chain Rule:<div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-table-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-table-3-2-2">
 \begin{equation*}
 \dfrac{d}{dx}(g(f(x))) = g'(f(x))\, f'(x).
 \end{equation*}
 </div>
 <div class="para" id="ex-expChain-table-3-2-3">At <span class="process-math">\(x=2\text{,}\)</span> the table shows <span class="process-math">\(f(2)=3\text{,}\)</span> so <span class="process-math">\(g'(3)=7\text{,}\)</span> and <span class="process-math">\(f'(2)=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-expChain-table-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-expChain-table-3-2-4">
 \begin{equation*}
 \dfrac{d}{dx}(g(f(x)))\big|_{x=2} = 7\cdot(-2) = -14.
 \end{equation*}
@@ -851,28 +848,28 @@ x &amp; f(x) &amp; f'(x) &amp; g(x) &amp; g'(x) \\
 </h4>
 <div class="para" id="thm-derivative-a-to-x-2-1">For any positive constant <span class="process-math">\(a \ne 1\text{,}\)</span> the derivative of <span class="process-math">\(a^x\)</span> is<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-2-2">
 \begin{equation*}
 (a^x)' = a^x \ln(a).
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Theorem 2.5.9: Derivative of the General Exponential Functions"><a href="#thm-derivative-a-to-x" title="Copy heading and permalink for Theorem 2.5.9: Derivative of the General Exponential Functions" aria-label="Copy heading and permalink for Theorem 2.5.9: Derivative of the General Exponential Functions">🔗</a></div></article><details id="thm-derivative-a-to-x-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-derivative-a-to-x-3-1">To compute the derivative of <span class="process-math">\(a^x\)</span> for a positive constant <span class="process-math">\(a\ne 1\text{,}\)</span> we rewrite <span class="process-math">\(a^x\)</span> in terms of the natural exponential function. Recall that by using the power rule for logarithms and the inverse identity we can write:<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-3-2">
 \begin{equation*}
 a^x = e^{x \ln(a)}.
 \end{equation*}
 </div>
 <div class="para" id="thm-derivative-a-to-x-3-3">We now differentiate <span class="process-math">\(e^{x\ln(a)}\)</span> using the Chain Rule. Let<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-3-4">
 \begin{equation*}
 u(x) = x\ln(a).
 \end{equation*}
 </div>
 <div class="para" id="thm-derivative-a-to-x-3-5">Then <span class="process-math">\(a^x = e^{u(x)}\text{,}\)</span> and by the Chain Rule,<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-3-6">
 \begin{equation*}
 \dfrac{d}{dx}\!\left(e^{u(x)}\right)
 = e^{u(x)} \cdot u'(x).
@@ -880,7 +877,7 @@ u(x) = x\ln(a).
 </div>
 <div class="para" id="thm-derivative-a-to-x-3-7">Since <span class="process-math">\(u(x)=x\ln(a)\text{,}\)</span> we have <span class="process-math">\(u'(x)=\ln(a)\text{.}\)</span> Substituting back:<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-3-8">
 \begin{equation*}
 \dfrac{d}{dx}\!\left(a^x\right)
 = e^{x\ln(a)} \cdot \ln(a).
@@ -888,7 +885,7 @@ u(x) = x\ln(a).
 </div>
 <div class="para" id="thm-derivative-a-to-x-3-9">Using <span class="process-math">\(e^{x\ln(a)} = a^x\)</span> once more, we obtain the final formula:<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-a-to-x-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-derivative-a-to-x-3-10">
 \begin{equation*}
 (a^x)' = a^x \ln(a).
 \end{equation*}
@@ -903,7 +900,7 @@ u(x) = x\ln(a).
 <div class="solutions"><details id="ex-derivative-2-to-x-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="ex-derivative-2-to-x-2-1">Apply the exponential derivative formula <span class="process-math">\((a^x)' = a^x \ln(a)\)</span> with <span class="process-math">\(a=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-2-to-x-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-derivative-2-to-x-2-2">
 \begin{equation*}
 \dfrac{d}{dx}\!\left(2^x\right) =  2^x \ln(2).
 \end{equation*}
@@ -988,28 +985,29 @@ u(x) = x\ln(a).
 </div></details></div>
 <div class="autopermalink" data-description="Exercise 7"><a href="#tf-expChain-ap-10" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="tf-expChain-ap-12"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="tf-expChain-ap-12-1-1">Consider the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> below. Since <span class="process-math">\(f(x)\)</span> is not differentiable at <span class="process-math">\(x=1\)</span> we know that <span class="process-math">\(f(g(x))\)</span> is not is not differentiable at <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-expChain-ap-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-chain-rule-graphs"><img src="external/images/chainRuleGraphs01.png" class="contained" alt="A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x)."><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of two functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{.}\)</span><div class="autopermalink" data-description="Figure 2.5.11"><a href="#fig-chain-rule-graphs" title="Copy heading and permalink for Figure 2.5.11" aria-label="Copy heading and permalink for Figure 2.5.11">🔗</a></div></figcaption></figure></div></div></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-chain-rule-graphs"><div class="image-box"><img src="external/images/chainRuleGraphs01.png" class="contained" alt="A coordinate plane showing two piecewise linear functions. The graph of g(x) is a straight line increasing from the point (0, 1.5) to (3, 3). The graph of f(x) consists of two line segments: one increasing from (0, 0) to (1, 1.5), followed by a decreasing segment from (1, 1.5) to (3, 1). The functions are labeled directly on the graph as f(x) and g(x)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of two functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\text{.}\)</span><div class="autopermalink" data-description="Figure 2.5.11"><a href="#fig-chain-rule-graphs" title="Copy heading and permalink for Figure 2.5.11" aria-label="Copy heading and permalink for Figure 2.5.11">🔗</a></div></figcaption></figure></div></div></div>
 <div class="solutions"><details id="tf-expChain-ap-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="tf-expChain-ap-12-2-1">
 <em class="emphasis">False.</em> The fact that <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(x=1\)</span> does not automatically mean that the composite <span class="process-math">\(f(g(x))\)</span> is not differentiable at <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#tf-expChain-ap-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="tf-expChain-ap-12-2-2">In fact, we can compute the derivative using the Chain Rule. The slope of <span class="process-math">\(g\)</span> is constant:<div class="autopermalink" data-description="Paragraph"><a href="#tf-expChain-ap-12-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-expChain-ap-12-2-3">
 \begin{equation*}
 g'(x)=\frac{3-1.5}{3-0}=\frac{1.5}{3}=\frac12.
 \end{equation*}
 </div>
 <div class="para" id="tf-expChain-ap-12-2-4">For <span class="process-math">\(x&gt;1\text{,}\)</span> the graph of <span class="process-math">\(f\)</span> is the line segment from <span class="process-math">\((1,1.5)\)</span> to <span class="process-math">\((3,1)\text{,}\)</span> so its slope is<div class="autopermalink" data-description="Paragraph"><a href="#tf-expChain-ap-12-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-expChain-ap-12-2-5">
 \begin{equation*}
 f'(x)=\frac{1-1.5}{3-1}=\frac{-0.5}{2}=-\frac14
 \end{equation*}
 </div>
 <div class="para" id="tf-expChain-ap-12-2-6">on that segment, including at <span class="process-math">\(x=2\text{.}\)</span> Therefore,<div class="autopermalink" data-description="Paragraph"><a href="#tf-expChain-ap-12-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="tf-expChain-ap-12-2-7">
 \begin{equation*}
 (f(g(x)))'\big|_{x=1}=f'(g(1))\,g'(1)=f'(2)\cdot\frac12=\left(-\frac14\right)\left(\frac12\right)=-\frac18.
 \end{equation*}
