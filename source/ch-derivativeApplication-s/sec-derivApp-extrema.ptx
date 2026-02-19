@@ -399,7 +399,7 @@ and they can provide valuable information about the behavior of a function even 
     </p> 
 
     <algorithm xml:id="strat-extrema">
-      <title>Finding Absolute Maxima and Minima</title>
+      <title>Closed Interval Method for Finding Absolute Maxima and Minima</title>
       <p>
         To find the absolute maximum and minimum of a function <m>f</m> on a closed interval <m>[a,b]</m>:
       </p>

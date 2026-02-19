@@ -2,14 +2,33 @@
 
 <section xml:id="sec-derivApp-curve2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curve Sketching Part 2</title>
-   <objectives>
-    <ul>
-      <li>Explain why qualitative graphing is useful even when graphing technology is available.</li>
-      <li>Use end behavior ideas (limits and leading-term comparisons) to understand how a graph behaves for large <m>|x|</m>.</li>
-      <li>Use derivative sign charts to classify behavior near critical points and vertical asymptotes.</li>
-      <li>Recognize and use symmetry (even, odd, periodic, and other transformations) to streamline a sketch.</li>
-    </ul>
-  </objectives>
+<objectives>
+  <ul>
+    <li>
+      Apply the Second Derivative Test to classify critical points as local maxima, local minima, or inconclusive.
+    </li>
+   <li>
+      Determine if a function has even and odd symmetry and use symmetry to reduce the amount of work required in a sketch.
+    </li>
+    <li> <p> 
+      Use the full curve sketching method to analyze and sketch a variety of functions including: 
+      <ul>
+        <li> 
+          Identifying domain, asymptotes, intercepts, and symmetry.
+        </li>
+        <li>
+            Find and classify critical points and determine where the function increases or decreases using <m>f'(x)</m>.
+        </li>
+        <li> 
+          Find inflection points and determine intervals of concavity using <m>f''(x)</m>.
+        </li>
+        <li>
+          Combine all information to produce a clear sketch of the graph of the function.
+        </li>
+      </ul> </p> 
+          </li> 
+  </ul>
+</objectives>
 
   <p>
     At this point, you may be asking, "<em>Why do I need to learn to sketch graphs by hand 
@@ -313,8 +332,11 @@ Problems are designed so that the requested steps can reasonably be completed wi
         </p>
         <p>  
           The function is odd since, 
-          <me> 
-s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>          
+          <me> \begin{array}{rcl}
+s(-x) \amp =\amp -x-2\sin(-x)\\
+\amp =\amp -x+2\sin(x)\\
+\amp =\amp -(x-2\sin(x))=-s(x)
+\end{array}</me>          
           so it has 180-degree rotational symmetry about the origin.
           </p>
         
@@ -374,6 +396,7 @@ s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>
   \end{array}
 </me>
 <p> So the function is concave up on <m>(-2\pi,-\pi) \cup (0,\pi)</m> and concave down on <m>(-\pi,0) \cup (\pi,2\pi)</m>. </p>
+<p> Because the function changes concavity at <m>x=-\pi,0,\pi</m>, these points are indeed inflection points. </p>
     
 <p>(d) Combining all of this information, we can sketch the graph of <m>s</m>.
   We know there are no asymptotes, and the function is odd, so we can focus on sketching the portion of the graph on <m>[0,2\pi]</m> 
@@ -391,7 +414,35 @@ s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>
 </me>
   
 
+<p>Plotting these points and using the behavior determined in parts (b) and (c) gives the following sketch of the graph of <m>s</m>:</p> 
 
+   <url href="https://www.desmos.com/calculator/zbckzhisjd">
+      <figure>
+<caption>
+  A GIF showing the graph of <m>s(x)=x-2\sin(x)</m> first on the interval <m>[0,2\pi]</m> then using symmetry to complete the graph.
+</caption>
+        <image width="100%" source="images/curveSketch10.gif">
+<shortdescription>
+Animated graph of s of x equals x minus 2 sine x. 
+The curve has a local minimum near x equals pi over 3 and a local maximum near x equals 5 pi over 3. 
+There are inflection points at x equals 0 and x equals pi. 
+The graph decreases to the minimum, then increases to the maximum, and changes concavity at the inflection points. The graph is odd, so the 
+portion on the left side of the y-axis is a rotationally symmetric image of the portion on the right side, reflected across the origin.
+</shortdescription>
+        </image>
+      </figure>
+  </url>
+
+  <remark>
+    <statement>
+      <p>
+        Note that this problem was designed to be completed in a reasonable amount of time on a quiz or exam, 
+        so it is not meant to be an exhaustive analysis of the function. For example it did not ask for intercepts, so we did not compute them.
+        It also did not ask us to classify critical points as local maxima or minima, so we just identified them as critical points and used 
+        the sign of the derivative to determine where the function increases or decreases.
+      </p>
+    </statement>
+  </remark>
 
 
 
@@ -399,70 +450,94 @@ s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>
 
       </solution>
     </example>
+
+
+<example>
+    <statement>
+        <p>
+          Consider the function <m>f(x) = \dfrac{1}{1+e^{-x}}</m>
+        with derivatives 
+        <me>f'(x)=\dfrac{e^{-x}}{(1+e^{-x})^2} \quad \text{ and } \quad f''(x)=\dfrac{e^{-x}(e^{-x}-1)}{(1+e^{-x})^3}</me>
+        </p> 
+        <p>
+          (a) Identify vertical and horizontal asymptotes, intercepts and symmetry.
+        </p>
+        <p>
+          (b) Find critical points and regions of increase and decrease. Classify critical points as local maxima, local minima, or neither.
+        </p>
+        <p>
+          (c) Find intervals of concavity and inflection points.
+        </p>
+        <p>
+          (d) Combine parts (a)-(c) to sketch the graph of <m>f</m>.  
+        </p>
+      </statement>
+      <solution>
+        <title>Video Solution</title>
+      
+      
+        <p>
+          Here is a video solution to this problem.
+        </p>
+
+          <p>
+              <video youtube="eYcCeFBrLqc" width="90%">
+              </video>
+          </p>
+      </solution>
+      <solution><title>Written Answers</title>
+      
+      
+        <p>
+          Here are the answers to this problem to help you check your work. More detailed explanations are available in the video solution.
+        </p>
+        <p>
+          (a) There are no vertical asymptotes, and there is a horizontal asymptotes at <m>y=1</m> and <m>y=0</m>. 
+          The y-intercept is at <m>(0,\tfrac{1}{2})</m>, and there are no x-intercepts. 
+          The function is neither even nor odd, so there is no symmetry.</p> 
+
+          <p>(b) The derivative is <m>f'(x)=\dfrac{e^{-x}}{(1+e^{-x})^2}</m>, which is defined everywhere, so there are no critical points from undefined derivatives.
+          Setting the derivative equal to zero gives <m>e^{-x}=0</m>, which has no solutions, so there are no critical points from <m>f'(x)=0</m> either. 
+          So there are no critical points. Choosing any test point in <m>(-\infty,\infty)</m>, we see that <m>f'(x)>0</m> for all <m>x</m>, 
+          so the function is increasing everywhere.</p>
+
+          <p>(c) The second derivative is <m>f''(x)=\dfrac{e^{-x}(e^{-x}-1)}{(1+e^{-x})^3}</m>, which is defined everywhere, 
+            so there are no inflection points from undefined derivatives. Setting the second derivative equal to zero gives <m>e^{-x}(e^{-x}-1)=0</m>, 
+            which has a solution at <m>x=0</m>. Choosing test points in <m>(-\infty,0)</m> and <m>(0,\infty)</m> shows that the function is concave up on 
+            <m>(-\infty,0)</m> and concave down on <m>(0,\infty)</m>, so there is an inflection point at <m>x=0</m>.</p>
+            
+          <p>(d) Plotting the intercept and inflection point, and using the behavior determined in parts (a)-(c) gives the following sketch of the graph of <m>f</m>:</p>
+
+                    <image>
+  <shortdescription>
+    Graph of the reciprocal of 1 plus the exponential of negative x. 
+    The function is increasing everywhere and has horizontal asymptotes at y equals 1 and y equals 0. 
+    There is an inflection point at x equals 0, where the graph changes from concave up to concave down. 
+     The graph approaches y equals 0 as x goes to negative infinity and approaches y equals 1 as x goes to positive infinity.
+  </shortdescription>
+    <latex-image><![CDATA[
+\begin{tikzpicture}
+	\clip (-3.5,-3.5) rectangle (3.5,3.5);
+	\draw[->, thick] (-3.5,0) -- (3.5,0);
+	\draw[->, thick] (0,-.5) -- (0,2.5);
+	\draw[blue] plot[domain=-3.5:3.5, smooth, samples=100] (\x, {1/(1+exp(-1*\x))});
+	\draw (-1.3,1.6) node {$y= \dfrac{1}{1+e^{-x}}$};
+	\draw[dashed, red] (-3.5, {1} ) --(3.5, 1 ) node [above left, font=\small] {$y=1$};
+	\draw[blue] (0,.5) node{$\bullet$};
+\end{tikzpicture}
+ ]]>
+    </latex-image>
+  </image>
+
+
+      </solution>
+</example>
+
+
+
   </subsection>
 
-  <subsection xml:id="ssec-curve-sketching-method-detailed">
-    <title>Curve Sketching Checklist</title>
-
-    <algorithm xml:id="strat-curve-sketching-detailed">
-      <title>Method for Graphing (Detailed)</title>
-
-      <ol>
-        <li>
-          <p>
-            Compute <m>f'(x)</m> and <m>f''(x)</m>. Determine the domain of <m>f</m>.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Find critical points by solving <m>f'(x)=0</m> and locating where <m>f'(x)</m> is undefined.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Make a sign table for <m>f'(x)</m> to determine intervals of increase and decrease and to classify each critical point.
-            Critical points can correspond to local maxima, local minima, stationary points, cusps, corners, or vertical asymptotes.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Find possible inflection points by solving <m>f''(x)=0</m> and locating where <m>f''(x)</m> is undefined.
-            Confirm an inflection point by a sign change in <m>f''(x)</m> (and typically requiring <m>f'(x)</m> to exist at the point).
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Find intercepts: solve <m>f(x)=0</m> for <m>x</m>-intercepts and compute <m>f(0)</m> if <m>x=0</m> is in the domain.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Describe end behavior as <m>x\to\pm\infty</m>. When possible, use limit language.
-            For polynomials and many rational functions, comparing leading terms gives a useful approximation of the long-range trend.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Check symmetry when it helps:
-            even symmetry if <m>f(-x)=f(x)</m>, odd symmetry if <m>f(-x)=-f(x)</m>,
-            and periodicity if <m>f(x+c)=f(x)</m> for some constant <m>c</m>.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Combine the information into a clear sketch. Mark intercepts, extrema, inflection points, and asymptotes.
-          </p>
-        </li>
-      </ol>
-    </algorithm>
-  </subsection>
+  
 
   <subsection xml:id="additional-worked-examples-curve2">
     <title>Additional Worked-Out Examples</title>
@@ -483,97 +558,221 @@ s(-x)=-x-2\sin(-x)=-x+2\sin(x)=-(x-2\sin(x))=-s(x).</me>
   <exercises xml:id="exercises-curve-sketching-2">
     <title>Practice / Study Problems</title>
 
-    <exercisegroup>
-      <title>Conceptual Questions</title>
+    
 
-      <exercise xml:id="tf-cs2-01">
-        <statement>
-          <p>
-            True or False: A calculator graph can hide important features if the viewing window is not chosen carefully.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> A window can miss a vertical asymptote, a local extremum, or a change in concavity.
-          </p>
-        </solution>
-      </exercise>
+  <exercisegroup>
+    <title>Some True/False Problems</title>
 
-      <exercise xml:id="tf-cs2-02">
-        <statement>
-          <p>
-            True or False: If <m>f(x)\approx cx^p</m> for large <m>|x|</m>, then this approximation can help predict the end behavior of the graph.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> The dominant term controls the long-range trend.
-          </p>
-        </solution>
-      </exercise>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and briefly justify your reasoning.
+      </p>
+    </introduction>
 
-      <exercise xml:id="tf-cs2-03">
-        <statement>
-          <p>
-            True or False: If <m>f</m> is odd, then its graph has 180-degree rotational symmetry about the origin.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> This follows from <m>f(-x)=-f(x)</m>.
-          </p>
-        </solution>
-      </exercise>
+
+<exercise xml:id="tf-curve2-01">
+    <statement>
+      <p>
+        If <m>f'(1)=0</m> and <m>f''(1)&gt;0</m>, then <m>f</m> has a local minimum at <m>x=1</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> This is exactly the conclusion of the Second Derivative Test.
+      </p>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="tf-curve2-02">
+    <statement>
+      <p>
+        If <m>f'(5)=0</m> and <m>f''(5)=0</m>, then <m>f</m> has neither a local minimum nor a local maximum at <m>x=5</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> If <m>f''(5)=0</m>, the Second Derivative Test is inconclusive, so we cannot conclude anything about local minima or maxima at <m>x=5</m>. 
+        For instance, the function <m>f(x)=(x-5)^4</m> has <m>f'(5)=0</m> and <m>f''(5)=0</m>, but it has a local minimum at <m>x=5</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
+  
+
+
+  <exercise xml:id="tf-curve2-03">
+    <statement>
+      <p>
+        If <m>f''(c)&lt;0</m>, then <m>f</m> must be decreasing at <m>x=c</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> If <m>f''(c)&lt;0</m>, then the function is concave down at <m>x=c</m>, but it could be increasing, decreasing, or constant at that point. 
+        For instance, the function <m>f(x)=-x^2</m> has <m>f''(0)=-2&lt;0</m>, but it is increasing at <m>x=-1</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="tf-curve2-05">
+    <statement>
+      <p>
+        If <m>f</m> is an odd function with a local maximum at <m>x=2</m>, then there is a local minimum at <m>x=-2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> If <m>f</m> is odd, then <m>f(-2)=-f(2)</m>. So if there is a local maximum at <m>x=2</m>, then there is a local minimum at <m>x=-2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+<exercise xml:id="tf-curve2-06">
+    <statement>
+      <p>
+        If <m>f</m> is an even function with a local maximum at <m>x=2</m>, then there is a local minimum at <m>x=-2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> If <m>f</m> is even, then <m>f(-2)=f(2)</m>. So if there is a local maximum at <m>x=2</m>, then there is also a local maximum at <m>x=-2</m>.
+      </p>
+    </solution>
+  </exercise>
+
+<exercise xml:id="tf-curve2-07">
+    <statement>
+      <p>
+        If <m>f</m> has symmetry (either even or odd) and has an inflection point at <m>x=3</m>, then there is also an inflection point at <m>x=-3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> If <m>f</m> is even, then <m>f''(-3)=f''(3)=0</m> and the concavity changes at <m>x=3</m>, so there is an inflection point at <m>x=-3</m>. 
+        If <m>f</m> is odd, then <m>f''(-3)=-f''(3)=0</m> and the concavity changes at <m>x=3</m>, so there is also an inflection point at <m>x=-3</m>. 
+      </p>
+    </solution>
+  </exercise>
+
+
+
+
+  
+  <exercise xml:id="tf-curve2-11">
+    <statement>
+      <p>
+        If <m>f</m> is even, then <m>f'(x)</m> is odd (whenever <m>f'</m> exists).
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> If <m>f</m> is even, then <m>f(-x)=f(x)</m>. Differentiating both sides gives <m>-f'(-x)=f'(x)</m>, so <m>f'(-x)=-f'(x)</m>, which means that <m>f'</m> is odd.
+      </p>
+    </solution>
+  </exercise>
+
+  
+  <exercise xml:id="tf-curve2-15">
+    <statement>
+      <p>
+        The function <m>p(x)=x^5-2x^3+1</m> is odd.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>False.</em> We have
+        <me>
+          p(-x)=(-x)^5-2(-x)^3+1=-x^5+2x^3+1\neq -(x^5-2x^3+1)=-p(x).
+        </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="tf-curve2-16">
+    <statement>
+      <p>
+        The function <m>q(x)=\dfrac{\sin(x)}{x^3+x}</m> is even.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> We have
+        <me>
+          q(-x)=\frac{\sin(-x)}{(-x)^3+(-x)}=\frac{-\sin(x)}{-x^3-x}=\frac{\sin(x)}{x^3+x}=q(x),
+        </me>
+        so the function is even.
+      </p>
+    </solution>
+  </exercise>
+
+  
+  <exercise xml:id="tf-curve2-18">
+    <statement>
+      <p>
+        The function <m>f(x)=\dfrac{\ln x}{x} </m> is decreasing on <m>(4,6)</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> The derivative is <m>f'(x)=\dfrac{1-\ln x}{x^2}</m>. For <m>x\in(4,6)</m>, we have <m>\ln x&gt;1</m>, so <m>f'(x)&lt;0</m>, 
+        so the function is decreasing on <m>(4,6)</m>.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="tf-curve2-21">
+    <statement>
+      <p>
+        The function <m>f(x)=\dfrac{\ln x}{x} </m> has exactly one critical point.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> The derivative is <m>f'(x)=\dfrac{1-\ln x}{x^2}</m>, which is defined everywhere on the domain of <m>f</m>, 
+        so there are no critical points from undefined derivatives. 
+        Setting the derivative equal to zero gives <m>1-\ln x=0</m>, which has a solution at <m>x=e</m>. 
+        So there is exactly one critical point from <m>f'(x)=0</m>, and there are no critical points from undefined derivatives, 
+        so there is exactly one critical point in total.
+      </p>
+    </solution>
+  </exercise>
+
+    <exercise xml:id="tf-curve2-19">
+    <statement>
+      <p>
+        The function <m>f(x)=\dfrac{\ln x}{x} </m> has exactly one inflection point.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <em>True.</em> The second derivative is <m>f''(x)=\dfrac{2\ln x-3}{x^3}</m>, which is defined everywhere on the domain of <m>f</m>, 
+        so there are no inflection points from undefined derivatives. 
+        Setting the second derivative equal to zero gives <m>2\ln x-3=0</m>, which has a solution at <m>x=e^{3/2}</m>. We can check by 
+        testing the sign of <m>f''(x)</m> on either side of <m>x=e^{3/2}</m> that it does change signs. 
+        For example, <m>f''(1)=\dfrac{2\ln 1-3}{1^3}=-3&lt;0</m> and <m>f''(e^2)=\dfrac{2\ln e^2-3}{(e^2)^3}=\dfrac{4-3}{e^6}=\dfrac{1}{e^6}&gt;0</m>.        
+        So there is exactly one inflection point from <m>f''(x)=0</m>, and there are no inflection points from undefined derivatives.
+      </p>
+    </solution>
+  </exercise>
+
+
     </exercisegroup>
 
-    <exercisegroup>
-      <title>Algebraic Practice</title>
-
-      <exercise xml:id="prob-cs2-rational-sketch">
-        <statement>
-          <p>
-            Analyze <m>\displaystyle f(x)=\frac{(x-2)(x+1)}{x(x-3)}</m>.
-            Identify the domain, intercepts, vertical asymptotes, end behavior, and intervals of increase/decrease.
-            Then sketch a graph.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="prob-cs2-leading-terms">
-        <statement>
-          <p>
-            Use leading-term comparisons to describe the end behavior of:
-          </p>
-          <ol>
-            <li><p><m>\displaystyle f(x)=\frac{5x^3-2x+7}{x^2+1}</m></p></li>
-            <li><p><m>\displaystyle g(x)=\frac{3x^2-10}{2x^4+1}</m></p></li>
-          </ol>
-        </statement>
-      </exercise>
-    </exercisegroup>
-
-    <exercisegroup>
-      <title>Trigonometric and Interpretation Problems</title>
-
-      <exercise xml:id="prob-cs2-trig">
-        <statement>
-          <p>
-            Let <m>g(x)=x+\sin(x)</m>.
-            Find <m>g'(x)</m> and <m>g''(x)</m>, describe where the graph is concave up or concave down,
-            and determine whether the function is even, odd, or neither.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="prob-cs2-window">
-        <statement>
-          <p>
-            Give an example of a function whose graph has a vertical asymptote at <m>x=1</m>.
-            Explain how a poorly chosen viewing window could make it look like the function is continuous.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+    
   </exercises>
+
+  <remark>
+      <p>While these True / False problems are good for quickly testing your understanding of the concepts, 
+    you should also practice applying these ideas to more complicated and complete problems (like those that appear on WeBWork) 
+    and can possibly appear on quizzes and exams. 
+  </p><p> 
+    <alert>Reminder:</alert> There are more fully worked-out examples available in
+    <xref ref="subsec-derivApp-curve2">Additional Examples for Curve Sketching Part 2</xref> 
+    that you can use to practice with and to check your work against.
+  </p>
+
+  </remark>
 
 </section>

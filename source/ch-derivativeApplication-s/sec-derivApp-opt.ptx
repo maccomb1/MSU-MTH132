@@ -17,22 +17,18 @@
     In many applications, we are not just interested in computing derivatives.
     Instead, we use derivatives as a tool to make the best possible choice:
     the largest area, the smallest cost, the least time, or the greatest profit.
-    Problems of this type are called <term>optimization problems</term>.
+    These sorts of real-world problems are called <term>optimization problems</term>.
   </p>
 
-  <subsection xml:id="ssec-opt-rectangle">
-    <title>Maximizing Area with a Fixed Perimeter</title>
+  <subsection xml:id="ssec-opt-motivating-example">
+    <title>Motivating Example and Overall Technique</title>
 
-    <p>
-      Suppose we have 40 meters of fencing to build a rectangular corral.
-      What dimensions produce the largest possible enclosed area?
-    </p>
 
     <example xml:id="ex-opt-rectangle">
       <statement>
         <p>
-          A rectangle has perimeter <m>40</m> meters.
-          Find the length <m>\ell</m> and width <m>w</m> that maximize its area.
+          Suppose we have <m>40</m> meters of fencing to enclose a rectangular area.
+           What dimensions maximize the area?
         </p>
       </statement>
 
@@ -84,10 +80,60 @@
         </p>
       </solution>
     </example>
-  </subsection>
 
-  <subsection xml:id="ssec-opt-method">
-    <title>A Reusable Method for Optimization</title>
+    
+ <p>Since we will be looking for absolute extrema, it is great that we have a technique already for when the domain is a closed interval (like in our last example).
+      But what if the domain is open or unbounded? For such cases, it is useful to have the following two results.
+    </p> 
+
+
+
+    <theorem xml:id="thm-abs-ext-first-deriv-test">
+      <title>First Derivative Test for Absolute Extrema</title>
+      <statement>
+        <p>
+          Suppose that <m>c</m> is the only critical point of a function <m>f</m> on an interval <m>I</m>, then the following hold:
+        </p> 
+          <ul>
+            <li>
+              <p>
+                If <m>f'(x)\gt 0</m>  for all <m>x\lt c</m> and <m>f'(x)\lt 0</m> for all <m>x\gt c</m>, then <m>f(c)</m> is an absolute maximum of <m>f</m> on <m>I</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>f'(x)\lt 0</m>  for all <m>x\lt c</m> and <m>f'(x)\gt 0</m> for all <m>x\gt c</m>, then <m>f(c)</m> is an absolute minimum of <m>f</m> on <m>I</m>.
+              </p>
+            </li> 
+          </ul> 
+      </statement>
+    </theorem>
+
+    <theorem xml:id="thm-abs-ext-second-deriv-test">
+      <title>Second Derivative Test for Absolute Extrema</title>
+      <statement>
+        <p>
+          Suppose that <m>c</m> is the only critical point of a function <m>f</m> on an interval <m>I</m> such that <m>f'(c)=0</m> , then the following hold:
+        </p>
+          <ul>
+            <li>
+              <p>
+                If <m>f''(c)\lt 0</m>, then <m>f(c)</m> is an absolute maximum of <m>f</m> on <m>I</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>f''(c)\gt 0</m>, then <m>f(c)</m> is an absolute minimum of <m>f</m> on <m>I</m>.
+              </p>
+            </li> 
+          </ul> 
+      </statement>
+    </theorem>
+
+    
+    <p>Now let's summarize the overall technique for solving optimization problems.</p>
+
+
 
     <algorithm xml:id="strat-optimization-method">
       <title>Technique for Optimization</title>
@@ -105,21 +151,50 @@
         </li>
         <li>
           Choose one controlling variable as the independent variable and rewrite the target quantity
-          as a single-variable function <m>T(x)</m>. Determine the domain of <m>x</m>.
+          as a single-variable function <m>T(x)</m> (in our previous example our target quantity was area). Determine the domain of <m>x</m>.
         </li>
-        <li>
-          Find absolute extrema of <m>T(x)</m> on its domain by checking critical points and endpoints
-          (or by using limits when the domain is open or unbounded).
+        <li> <p> 
+          Find the desired absolute extrema of <m>T(x)</m> on its domain by one of 
+          <ul>
+            <li>
+              <p>
+                The <xref ref="strat-extrema">Closed Interval Method</xref> if the domain is a closed interval.  
+              </p>
+            </li>
+            <li>
+              <p>
+                The <xref ref="thm-abs-ext-first-deriv-test">First Derivative Test for Absolute Extrema</xref> 
+                if the domain is open or unbounded and the critical point is the only candidate.
+              </p>
+            </li>
+            <li>
+              <p>
+                The <xref ref="thm-abs-ext-second-deriv-test">Second Derivative Test for Absolute Extrema</xref> 
+                if the domain is open or unbounded and the critical point is the only candidate (and it is difficult to analyze the sign of the first derivative).
+              </p>
+            </li>
+          </ul>
+          
+        </p> 
         </li>
         <li>
           Interpret your answer in context and check that it makes sense.
         </li>
       </ol>
     </algorithm>
+
+      
+<p>And with that we are ready to solve optimization problems! Similar to related rates problems, 
+  the key is to practice the technique on a variety of examples so that you can recognize the pattern and apply it efficiently.
+</p> 
+
   </subsection>
 
-  <subsection xml:id="ssec-opt-cylinder">
-    <title>Minimizing Material for a Cylindrical Bucket</title>
+
+
+
+  <subsection xml:id="ssec-opt-examples">
+    <title>More Examples</title>
 
     <example xml:id="ex-opt-bucket">
       <statement>
@@ -224,10 +299,7 @@
         </remark>
       </solution>
     </example>
-  </subsection>
 
-  <subsection xml:id="ssec-opt-ants">
-    <title>Choosing a Path to Minimize Time</title>
 
     <example xml:id="ex-opt-ants">
       <statement>
@@ -371,10 +443,8 @@
         </remark>
       </solution>
     </example>
-  </subsection>
 
-  <subsection xml:id="ssec-opt-profit">
-    <title>Maximizing Profit</title>
+    
 
     <example xml:id="ex-opt-profit">
       <statement>
@@ -448,11 +518,11 @@
 
     <exercisegroup>
       <title>Some True/False Problems</title>
-      <introduction>
-        <p>
-          Determine whether each statement is true or false and explain your reasoning.
-        </p>
-      </introduction>
+    <introduction>
+      <p>
+        Determine whether each statement is true or false and briefly justify your reasoning.
+      </p>
+    </introduction>
 
       <exercise xml:id="tf-opt-01">
         <statement>
