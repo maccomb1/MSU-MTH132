@@ -1,7 +1,6 @@
 <!-- GIF INSIDE OF URL
  
    <url href="https://www.desmos.com/calculator/42zkvlqlkt">
-    <sidebyside width="100%">
       <figure>
 <caption>
   Slopes of tangent lines to <m>f(x)=\sqrt[3]{x}</m> at many values of <m>x</m>,
@@ -15,7 +14,6 @@
 </shortdescription>
         </image>
       </figure>
-    </sidebyside>
   </url>
 
 

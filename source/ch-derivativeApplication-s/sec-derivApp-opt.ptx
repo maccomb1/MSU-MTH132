@@ -30,26 +30,56 @@
           Suppose we have <m>40</m> meters of fencing to enclose a rectangular area.
            What dimensions maximize the area?
         </p>
+
+        <ol marker="(a)">
+          <li>
+            <p>
+              Click the Desmos model below to experiment with different rectangles and get a sense of the problem and for what the answer should be. 
+            </p>
+               <url href="https://www.desmos.com/calculator/6o2oojvp14">
+      <figure>
+<caption>
+  A GIF showing various rectangles with a perimeter of 40 meters. As the dimensions of the rectangle change, the area is calculated and displayed. 
+  The animation illustrates how the area changes for different length and width combinations, 
+  helping to visualize the optimization problem and understand which dimensions yield the maximum area.
+</caption>
+        <image width="100%" source="images/Optimization01.gif">
+<shortdescription>
+  Animated graph showing rectangles with a perimeter of 40 meters. As the length and width of the rectangle change, the area is calculated and displayed. 
+  The animation helps visualize how the area changes for different dimensions, guiding us towards understanding which dimensions maximize the area. 
+  It appears that the area is maximized when the rectangle is a square, with both length and width equal to 10 meters.
+</shortdescription>
+        </image>
+      </figure>
+  </url>
+
+          </li>
+          <li>
+            <p>
+              Use calculus techniques to find the dimensions of the rectangle of greatest area.
+            </p>
+          </li>
+        </ol> 
       </statement>
 
       <solution>
-        <p>
-          The constraint comes from the perimeter:
+        <p> (a) Experimenting with the Desmos model suggests that the rectangle of greatest area is a square with side length 10 meters. 
+          We will confirm this using calculus in part (b).</p>
+        
+        <p> (b) To solve this problem, we first identify the controlling variables, constraints, and target quantity.</p>
+          <p> Our target quantity that we are trying to maximize is the area of the rectangle (<m>A=\ell w</m>). 
+            The controlling variables are the length <m>\ell</m> and width <m>w</m> of the rectangle. 
+            The constraint is that the perimeter must be 40 meters.</p>
+            <p> Using the constraint, we can express one variable in terms of the other and write the area as a single-variable function.
         </p>
-        <me>
-          2\ell+2w=40.
+        <me>\begin{array}{rcl}
+          2\ell+2w \amp = \amp 40 \\
+          \ell+w \amp = \amp 20 \\
+          w \amp = \amp 20-\ell
+        \end{array}
         </me>
-
-        <p>
-          Solve for one variable in terms of the other. For example,
-        </p>
-        <me>
-          w=20-\ell.
-        </me>
-
-        <p>
-          The area is the target quantity:
-        </p>
+  <p>         Using this we can express the area as a function of <m>\ell</m>:
+  </p> 
         <me>
           A=\ell w=\ell(20-\ell)=20\ell-\ell^2.
         </me>
@@ -66,33 +96,34 @@
 
         <p>
           The critical point satisfies <m>A'(\ell)=0</m>, so <m>\ell=10</m>.
-          Evaluate the candidates:
         </p>
+        <p>Since the domain is a closed interval, we can use the Closed Interval Method to check the endpoints and the critical point:</p>
 
         <me>
           A(0)=0,\qquad A(10)=100,\qquad A(20)=0.
         </me>
 
         <p>
-          The largest value occurs at <m>\ell=10</m>.
-          Therefore <m>w=20-\ell=10</m>.
-          The rectangle of greatest area is a square.
+          So the largest Area value occurs at <m>\ell=10</m> meters.
+          Therefore <m>w=20-\ell=10</m> meters. And so we can see from this example that the rectangle of greatest area is a square with side length 10 meters, 
+          confirming our initial guess from the Desmos model.
         </p>
       </solution>
     </example>
 
     
- <p>Since we will be looking for absolute extrema, it is great that we have a technique already for when the domain is a closed interval (like in our last example).
-      But what if the domain is open or unbounded? For such cases, it is useful to have the following two results.
-    </p> 
-
+<p>
+  Since we are interested in finding absolute extrema, it is helpful that we already have a method for functions defined on a closed interval, as in the previous example.
+  However, what happens when the domain is open or unbounded? Up to this point, our techniques in those settings allow us to find only <alert>local extrema</alert>.
+  For that reason, the following two results will be especially useful.
+</p>
 
 
     <theorem xml:id="thm-abs-ext-first-deriv-test">
       <title>First Derivative Test for Absolute Extrema</title>
       <statement>
         <p>
-          Suppose that <m>c</m> is the only critical point of a function <m>f</m> on an interval <m>I</m>, then the following hold:
+          Suppose that <m>c</m> is the only critical point of a continuous function <m>f</m> on an interval <m>I</m>, then the following hold:
         </p> 
           <ul>
             <li>
@@ -113,7 +144,7 @@
       <title>Second Derivative Test for Absolute Extrema</title>
       <statement>
         <p>
-          Suppose that <m>c</m> is the only critical point of a function <m>f</m> on an interval <m>I</m> such that <m>f'(c)=0</m> , then the following hold:
+          Suppose that <m>c</m> is the only critical point of a continuous function <m>f</m> on an interval <m>I</m> such that <m>f'(c)=0</m> , then the following hold:
         </p>
           <ul>
             <li>
@@ -200,8 +231,40 @@
       <statement>
         <p>
           A 10-quart bucket has cylindrical sides and a circular bottom (no top).
-          What radius <m>r</m> and height <m>h</m> minimize the surface area of the sides and bottom?
+          What is the minimum surface area for such a bucket?
         </p>
+
+        <p><em>Hint:</em> 10 quarts is <m>\tfrac{1155}{2}</m> cubic inches.</p>
+
+        <ol marker="(a)">
+          <li>
+            <p>
+              Use the Desmos graphing tool to visualize the situation, the surface area function, and approximate the optimal dimensions.
+            </p>
+               <url href="https://www.desmos.com/calculator/dqkdsx9x3c">
+      <figure>
+<caption>
+  A GIF showing various cylinders with a fixed volume of 10 quarts. As the radius and height of the cylinder change, the surface area is calculated and displayed.
+  The animation helps visualize how the surface area changes for different dimensions, guiding us towards understanding which dimensions minimize the surface area. 
+</caption>
+        <image width="100%" source="images/Optimization02.gif">
+  <shortdescription>
+  A GIF showing various cylinders with a fixed volume of 10 quarts. As the radius and height of the cylinder change, the surface area is calculated and displayed.
+  The animation helps visualize how the surface area changes for different dimensions, guiding us towards understanding which dimensions minimize the surface area.
+  It appears that the surface area is minimized when the radius is about 5.5 inches. At this point the Surface Area is around 300 square inches.
+</shortdescription>
+        </image>
+      </figure>
+  </url>
+          </li>
+          <li>
+            <p>
+              Find the minimum surface area. What are the dimensions that minimize surface area? Confirm that they minimize surface area.
+            </p>
+          </li>
+        </ol>
+
+
       </statement>
 
       <solution>
@@ -209,17 +272,19 @@
           The target quantity is the surface area
         </p>
 
-        <me>
-          S=\pi r^2+2\pi rh.
-        </me>
+        <me> \begin{array}{rcl}
+           S \amp = \amp \text{area of bottom} + \text{area of sides} \\
+           S \amp = \amp \pi r^2 + 2\pi rh
+           \end{array}
+          </me>
 
         <p>
           The constraint is the volume. Converting 10 quarts to cubic inches gives
-          <m>V=577.5</m> in<superscript>3</superscript>, so
+          <m>V=\tfrac{1155}{2} \text{in}^3</m>, so
         </p>
 
         <me>
-          V=\pi r^2h=577.5.
+          V=\pi r^2h=\frac{1155}{2}.
         </me>
 
         <p>
@@ -227,7 +292,7 @@
         </p>
 
         <me>
-          h=\frac{577.5}{\pi r^2}.
+          h=\frac{1155}{2\pi r^2}.
         </me>
 
         <p>
@@ -235,7 +300,7 @@
         </p>
 
         <me>
-          S(r)=\pi r^2+2\pi r\left(\frac{577.5}{\pi r^2}\right)
+          S(r)=\pi r^2+2\pi r\left(\frac{1155}{2\pi r^2}\right)
           =\pi r^2+\frac{1155}{r}.
         </me>
 
@@ -251,45 +316,62 @@
           Set <m>S'(r)=0</m>:
         </p>
 
-        <me>
-          2\pi r=\frac{1155}{r^2}
-          \quad\Longrightarrow\quad
-          r^3=\frac{1155}{2\pi}
-          \quad\Longrightarrow\quad
-          r=\sqrt[3]{\frac{1155}{2\pi}}.
-        </me>
+        <me> \begin{array}{rcl}
+           2\pi r \amp = \amp \frac{1155}{r^2} \\
+           r^3 \amp = \amp \frac{1155}{2\pi} \\
+           r \amp = \amp \sqrt[3]{\frac{1155}{2\pi}} \approx 5.69 \text{ in}.
+           \end{array}
+          </me>
+
+          <remark>
+            <p>
+              Admittedly a calculator was used to get the 5.69 approximation above. However even without a calculator we can quickly and confidently 
+              say this value is between 5 and 6 inches.
+            </p>
+          </remark>
 
         <p>
-          This is the only critical point. To confirm it is an absolute minimum,
-          note that
+          The second derivative is
         </p>
 
         <me>
-          \displaystyle\lim_{r\to 0^+} S(r)=\infty,
-          \qquad
-          \displaystyle\lim_{r\to\infty} S(r)=\infty.
+          S''(r)=2\pi+\frac{2310}{r^3}.
         </me>
 
         <p>
-          Since the surface area grows without bound at both ends, the single critical point must give
-          the absolute minimum.
+          Since <m>S''(r)&gt;0</m> for all <m>r&gt;0</m>, the critical point is indeed a minimum by the 
+          <xref ref="thm-abs-ext-second-deriv-test">Second Derivative Test for Absolute Extrema</xref>.
         </p>
+
+
+
+
 
         <p>
-          Now compute the corresponding height:
+          Now we can compute the corresponding height:
         </p>
 
-        <me>
-          h=\frac{577.5}{\pi r^2}
-          =\frac{577.5}{\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2}.
+        <me>\begin{array}{rcl}
+          h \amp =\amp \frac{1155}{2\pi r^2}\\
+          \amp =\amp \frac{1155}{2\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2} \\
+          \amp =\amp \frac{1155}{2\pi\left(\frac{1155}{2\pi}\right)^{2/3}} \\
+          \amp =\amp \frac{1155}{2\pi}\cdot\left(\frac{2\pi}{1155}\right)^{2/3} \\
+          \amp =\amp \sqrt[3]{\frac{1155}{2\pi}} \\
         </me>
 
         <p>
-          In fact, simplifying shows <m>h=r</m>, so the optimal bucket is as tall as its radius.
+          Since this is the same value as <m>r</m>, we have <m>h=r</m>.
           This yields a bucket that is twice as wide as it is tall.
         </p>
 
-        <remark>
+        <p> Now to get the minimum surface area, we can substitute the values of <m>r</m> and <m>h</m> into the surface area function:</p>
+        <me>
+          \begin{array}{rcl}
+          S_{min} \amp = \amp \pi r^2 + 2\pi rh\\
+          \amp = \amp \pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2 + 2\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)\left(\sqrt[3]{\frac{1155}{2\pi}}\right) \\
+          \amp = \amp 3\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2 \\
+          \amp = \amp 3\pi\left(\frac{1155}{2\pi}\right)^{2/3} \approx 300.1
+          <remark>
           <p>
             Real buckets are often designed with other priorities besides minimizing material,
             such as stability, ease of carrying, stackability, and manufacturing constraints.
