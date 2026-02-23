@@ -3,15 +3,22 @@
 <section xml:id="sec-derivApp-opt" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Optimization Problems</title>
 
-  <objectives>
-    <ul>
-      <li>Translate a word problem into a function to be maximized or minimized.</li>
-      <li>Identify controlling variables, constraints, and the target quantity in an optimization setting.</li>
-      <li>Determine a relevant domain based on physical or geometric restrictions.</li>
-      <li>Find absolute maxima and minima using critical points and endpoint checks.</li>
-      <li>Interpret an optimal solution in context and check that it is physically reasonable.</li>
-    </ul>
-  </objectives>
+<objectives>
+  <ul>
+    <li>
+      Identify and clearly describe the target quantity, controlling variable(s), and constraint(s) in an optimization problem.
+    </li>
+    <li>
+      Translate a real-world situation into equations and reduce the problem to a single-variable function with an appropriate domain.
+    </li>
+    <li>
+      Use derivatives to locate and justify absolute maxima and minima on closed, open, or unbounded intervals.
+    </li>
+    <li>
+      Interpret solutions in context, including units, feasibility, and practical meaning.
+    </li>
+  </ul>
+</objectives>
 
   <p>
     In many applications, we are not just interested in computing derivatives.
@@ -34,7 +41,8 @@
         <ol marker="(a)">
           <li>
             <p>
-              Click the Desmos model below to experiment with different rectangles and get a sense of the problem and for what the answer should be. 
+              Click on the Desmos model below to explore different rectangles, 
+              build intuition about the problem, and develop a sense of what the final answer should look like.
             </p>
                <url href="https://www.desmos.com/calculator/6o2oojvp14">
       <figure>
@@ -227,7 +235,7 @@
   <subsection xml:id="ssec-opt-examples">
     <title>More Examples</title>
 
-    <example xml:id="ex-opt-bucket">
+    <example xml:id="ex-opt-bucket"> 
       <statement>
         <p>
           A 10-quart bucket has cylindrical sides and a circular bottom (no top).
@@ -239,7 +247,8 @@
         <ol marker="(a)">
           <li>
             <p>
-              Use the Desmos graphing tool to visualize the situation, the surface area function, and approximate the optimal dimensions.
+              Use the Desmos graphing tool to visualize the situation, the surface area function, 
+              and approximate the optimal dimensions.
             </p>
                <url href="https://www.desmos.com/calculator/dqkdsx9x3c">
       <figure>
@@ -356,7 +365,8 @@
           \amp =\amp \frac{1155}{2\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2} \\
           \amp =\amp \frac{1155}{2\pi\left(\frac{1155}{2\pi}\right)^{2/3}} \\
           \amp =\amp \frac{1155}{2\pi}\cdot\left(\frac{2\pi}{1155}\right)^{2/3} \\
-          \amp =\amp \sqrt[3]{\frac{1155}{2\pi}} \\
+          \amp =\amp \sqrt[3]{\frac{1155}{2\pi}} 
+          \end{array}
         </me>
 
         <p>
@@ -370,7 +380,10 @@
           S_{min} \amp = \amp \pi r^2 + 2\pi rh\\
           \amp = \amp \pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2 + 2\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)\left(\sqrt[3]{\frac{1155}{2\pi}}\right) \\
           \amp = \amp 3\pi\left(\sqrt[3]{\frac{1155}{2\pi}}\right)^2 \\
-          \amp = \amp 3\pi\left(\frac{1155}{2\pi}\right)^{2/3} \approx 300.1
+          \amp = \amp 3\pi\left(\frac{1155}{2\pi}\right)^{2/3} \approx 304.7 \text{ in}^2.
+          \end{array}
+        </me>
+          
           <remark>
           <p>
             Real buckets are often designed with other priorities besides minimizing material,
@@ -383,31 +396,156 @@
     </example>
 
 
-    <example xml:id="ex-opt-ants">
+
+
+    <example xml:id="ex-opt-profit">
       <statement>
         <p>
-          A line of ants travels from the lower-left corner to the upper-right corner
-          of a <m>10</m> cm by <m>10</m> cm square of carpet.
-          They may travel along the left or bottom edge at speed <m>1</m> cm/sec,
-          and then cut across the carpet at speed <m>\tfrac12</m> cm/sec.
+          A company can produce phone chargers for <m>\$4</m> each and plans to sell them at an upcoming event for <m>x</m> dollars each.
+          They have found that market demand is modeled well by <m>m(x)=100-2x</m>, meaning that when the price is <m>x</m>,
+          the number of items sold at the event is <m>100-2x</m>.
         </p>
-
         <p>
-          Let <m>e</m> be the distance traveled along an edge before entering the carpet.
-          Find the value of <m>e</m> that minimizes:
-          (a) the total distance traveled, and
-          (b) the total travel time.
+          What price <m>x</m> maximizes total profit for this event?
         </p>
       </statement>
 
       <solution>
         <p>
-          The diagonal segment across the carpet has length <m>c</m>.
-          From the right triangle,
+          The profit per phone charger is <m>x-4</m>, and the number sold is <m>100-2x</m>.
+          Therefore total profit is
+        </p>
+
+        <me> 
+          \begin{array}{rcl}
+            P(x) \amp = \amp \text{(profit per item)}\cdot\text{(number of items)} \\
+            \amp = \amp (x-4)(100-2x) \\
+            \amp = \amp -2x^2+108x-400.
+          \end{array}
+        </me>
+
+        <p>
+          The relevant domain is <m>x\in[4,50]</m>, since selling below cost is not sensible here,
+          and demand reaches zero at <m>x=50</m>.
+        </p>
+
+        <p>
+          Differentiate:
         </p>
 
         <me>
-          c^2=10^2+(10-e)^2.
+          P'(x)=108-4x.
+        </me>
+
+        <p>
+          The derivative is always defined, so there are no critical points from the derivative being undefined. 
+          Therefore the only critical points come from setting the derivative equal to zero.
+        </p>           
+
+          <me>
+            \begin{array}{rcl}
+              0\amp = \amp 108-4x  \\
+              4x \amp = \amp 108 \\
+              x \amp = \amp 27
+            \end{array}
+          </me>
+
+          <p> Because the domain is a closed interval, we can use the Closed Interval Method to find the absolute maximum by checking the endpoints and the critical point:</p>
+
+        <me>
+          P(4)=0,\qquad P(27)=1058,\qquad P(50)=0.
+        </me>
+
+        <p>
+          The maximum profit occurs at <m>x=27</m>.
+          The most profitable selling price is <m>\$27</m> per phone charger.
+        </p>
+      </solution>
+    </example>
+
+
+
+
+    <example xml:id="ex-opt-ants">
+      <statement>
+<p>
+  A small insect starts at the lower-left corner of a <m>10</m> cm by <m>10</m> cm square of carpet
+  and wants to reach the upper-right corner.
+  It first travels along the bottom edge for <m>a</m> centimeters.
+  From that point, it moves in a straight line directly to the upper-right corner.
+</p>
+
+        <image width="60%">
+  <shortdescription>
+    A diagram of a 10 cm by 10 cm square representing a carpet. 
+    An insect starts at the lower-left corner and travels along the bottom edge for a distance of 
+    a centimeters. From that point, it moves in a straight line directly to the upper-right corner of the square.
+  </shortdescription>
+    <latex-image><![CDATA[
+\begin{tikzpicture}[scale=.5]
+	\draw[fill=gray!20] (0,0) node {$\bullet$} -- (10,0) 
+	-- (10,10) node {$\bullet$} 
+	-- (0,10) node[pos=.5, above] {10 cm}
+	-- (0,0) node[pos=.5, left] {10 cm};
+	\draw[very thick] (0,0) -- (6,0) node {$\bullet$} -- (10,10);
+	\draw[dashed] (0,-4pt) -- (6,-4pt)  node[pos=.5, below] {$a$};
+
+\end{tikzpicture}
+ ]]>
+    </latex-image>
+  </image>
+
+
+
+<p>
+  The insect moves at a speed of <m>1</m> cm/sec while traveling along the bottom edge,
+  and at a slower speed of <m>\tfrac12</m> cm/sec once it begins crossing the carpet.
+</p>
+
+<p>
+  (a) Find the value of <m>a</m> that minimizes the total distance traveled.
+</p>
+<p>
+  (b) Find the value of <m>a</m> that minimizes the total travel time.
+</p>
+
+      </statement>
+
+      <solution>
+        <p>First it will help us to add a few labels to the diagram:</p>
+
+        <image width="60%">
+<shortdescription>
+A 10 cm by 10 cm square. The insect starts at the lower-left corner and travels along the 
+bottom edge a distance labeled a to a point on the bottom side. From that point, a straight line 
+segment labeled b goes to the upper-right corner. The remaining portion of the bottom edge is labeled 10 minus a. 
+The right side and top side of the square are labeled 10 cm.
+</shortdescription>
+
+    <latex-image><![CDATA[
+\begin{tikzpicture}[scale=.5]
+	\draw[fill=gray!20] (0,0) node {$\bullet$} -- (10,0) 
+	-- (10,10) node {$\bullet$} 
+	-- (0,10) node[pos=.5, above] {10 cm}
+	-- (0,0) node[pos=.5, left] {10 cm};
+	\draw[very thick] (0,0) -- (6,0) node {$\bullet$} -- (10,10);
+	\draw[dashed] (0,-4pt) -- (6,-4pt)  node[pos=.5, below] {$a$};
+	\draw[dashed] (10,-4pt) -- (6,-4pt)  node[pos=.5, below] {$10-a$};
+	\draw[dashed] (10.1,0) -- (10.1,10)  node[pos=.5, right] {$10$};
+	\draw (9.5,0) rectangle (10,.5);
+	\draw[dashed] (10,10) -- (6,0)  node[pos=.5, above left] {$b$};
+\end{tikzpicture}
+ ]]>
+    </latex-image>
+  </image>
+
+        <p> (a) The total distance traveled is the sum of the distance along the edge and the distance across the carpet.
+          The diagonal segment across the carpet has length <m>b</m>.
+          From the right triangle using the Pythagorean Theorem, we have
+        </p>
+
+        <me>
+          b^2=10^2+(10-a)^2.
         </me>
 
         <p>
@@ -415,169 +553,146 @@
         </p>
 
         <me>
-          c=\sqrt{200-20e+e^2}.
+          b=\sqrt{200-20a+a^2}.
         </me>
 
         <p>
-          The domain is <m>e\in[0,10]</m>.
+          The domain is <m>a\in[0,10]</m>.
           The total distance is
         </p>
 
         <me>
-          L(e)=e+c=e+\sqrt{200-20e+e^2}.
+          L(a)=a+b=a+\sqrt{200-20a+a^2}.
         </me>
 
         <p>
-          The total time is distance divided by speed.
-          Along the edge the speed is <m>1</m>, so time is <m>e</m>.
-          Across the carpet the speed is <m>\tfrac12</m>, so time is <m>\frac{c}{1/2}=2c</m>.
-          Thus
+          Differentiate: 
         </p>
 
-        <me>
-          T(e)=e+2\sqrt{200-20e+e^2}.
+        <me> \begin{array}{rcl}
+           L'(a) \amp = \amp 1 + \frac{1}{2}(200-20a+a^2)^{-1/2}(2a-20) \\
+           \amp = \amp 1 - \frac{10-a}{\sqrt{200-20a+a^2}}.
+           \end{array}
         </me>
 
         <p>
-          <alert>(a) Minimize distance.</alert>
-          Differentiate:
+          Set <m>L'(a)=0</m>:
         </p>
 
-        <me>
-          L'(e)=1+\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
-          =1-\frac{10-e}{\sqrt{200-20e+e^2}}.
-        </me>
+        <me>\begin{array}{rcl}
+           0 \amp = \amp 1 - \frac{10-a}{\sqrt{200-20a+a^2}} \\
+           \frac{10-a}{\sqrt{200-20a+a^2}} \amp = \amp 1 \\
+          10-a\amp =\amp \sqrt{200-20a+a^2}\\
+          (10-a)^2 \amp = \amp 200-20a+a^2 \\
+          100-20a+a^2 \amp = \amp 200-20a+a^2 \\
+          100 \amp = \amp 200 
+          \end{array}
+        </me> 
 
         <p>
-          Solving <m>L'(e)=0</m> would require
-          <m>\sqrt{200-20e+e^2}=10-e</m>. Squaring both sides gives
-          <m>200-20e+e^2=(10-e)^2=100-20e+e^2</m>, which reduces to <m>200=100</m>,
-          an impossibility. Therefore there are no critical points in <m>(0,10)</m>,
-          so the minimum occurs at an endpoint.
-        </p>
+          So there are no critical points from setting the derivative equal to zero. To make the derivative undefined, 
+          we would need <m>200-20a+a^2=0</m>, which would require <m>(10-a)^2=-100</m> which is not possible since squares are nonnegative.
+        </p> 
 
+        <p> Therefore we have no critical points in the interior of the domain. Since our function is continuous on a closed interval, 
+          we can use the Closed Interval Method and so we only need to check the endpoints:</p>
+          
         <me>
           L(0)=10\sqrt{2},\qquad L(10)=20.
         </me>
 
         <p>
-          Since <m>10\sqrt2&lt;20</m>, the minimum distance occurs at <m>e=0</m>.
-          In other words, the straight diagonal is the shortest path.
+          Since <m>10\sqrt2&lt;20</m>, the minimum distance occurs at <m>a=0</m> cm.
+          In other words, the straight diagonal is the shortest path (unsurprisingly).
         </p>
 
-        <p>
-          <alert>(b) Minimize time.</alert>
-          Differentiate:
+
+        <p>(b) Using (distance) = (speed) x (time), we can write time as distance divided by speed. 
+          The distance along the edge is <m>a</m> and the distance across the carpet is <m>b</m>. 
+          The speed along the edge is <m>1</m> cm/sec and the speed across the carpet is <m>\tfrac12</m> cm/sec.
         </p>
 
-        <me>
-          T'(e)=1+(2)\cdot\frac{1}{2}(200-20e+e^2)^{-1/2}(2e-20)
-          =1-\frac{2(10-e)}{\sqrt{200-20e+e^2}}.
+        <me> 
+          \begin{array}{rcl}
+            T(a) \amp = \amp \text{time along edge} + \text{time across carpet} \\
+            \amp = \amp \frac{a}{1} + \frac{b}{1/2} \\
+            \amp = \amp a + 2b\\
+            \amp = \amp a + 2\sqrt{200-20a+a^2}
+          \end{array}
         </me>
 
-        <p>
-          Set <m>T'(e)=0</m>:
-        </p>
+        <p> The domain is still <m>a\in[0,10]</m>. And the value for <m>b</m> is still <m>\sqrt{200-20a+a^2}</m> just like the first part. 
+          Differentiate to get:</p>
 
-        <me>
-          \sqrt{200-20e+e^2}=20-2e.
+        <me> \begin{array}{rcl}
+           T'(a) \amp = \amp 1 + 2\cdot\frac{1}{2}(200-20a+a^2)^{-1/2}(2a-20) \\
+           \amp = \amp 1 - \frac{2(10-a)}{\sqrt{200-20a+a^2}}.
+           \end{array}
         </me>
 
-        <p>
-          Square both sides and simplify:
-        </p>
+        <p>Similar to the first part, there are no critical points from when the derivative is undefined (when the denominator is zero), 
+          however we will see this time that there are critical points from setting the derivative equal to zero.</p>
+ 
+          <me> 
+            \begin{array}{rcl}
+              0\amp = \amp 1 - \frac{2(10-a)}{\sqrt{200-20a+a^2}} \\
+              \frac{2(10-a)}{\sqrt{200-20a+a^2}} \amp = \amp 1 \\
+              2(10-a) \amp =\amp \sqrt{200-20a+a^2}\\
+              4(10-a)^2 \amp = \amp 200-20a+a^2 \\
+              400-80a+4a^2 \amp = \amp 200-20a+a^2 \\
+              3a^2 -60a +200 \amp = \amp 0
+            \end{array}
+          </me>
 
-        <me>
-          200-20e+e^2=(20-2e)^2
-          \quad\Longrightarrow\quad
-          3e^2-60e+200=0.
-        </me>
+          <p>Struggling to factor the left-hand side, we can use the quadratic formula to find the critical points.</p>
 
-        <p>
-          Apply the quadratic formula:
-        </p>
+          <me> 
+            \begin{array}{rcl}
+              a \amp = \amp \frac{60\pm\sqrt{60^2-4(3)(200)}}{2(3)} \\
+              \amp = \amp 10\pm\frac{10}{3}\sqrt{3}.
+            \end{array}
+          </me>
 
-        <me>
-          e=\frac{60\pm\sqrt{60^2-4(3)(200)}}{2(3)}
-          =10\pm\frac{10}{3}\sqrt{3}.
-        </me>
+          <p>Only the negative root lies in the interval <m>[0,10]</m>, so we have one critical point:</p>
+          <me>
+            a=10-\frac{10}{3}\sqrt{3}.
+          </me>
 
-        <p>
-          Only <m>e=10-\frac{10}{3}\sqrt{3}</m> lies in <m>[0,10]</m>, so it is our only critical point.
-          Compare to the endpoints:
-        </p>
+           <p>Since the domain is a closed interval, we could the Closed Interval Method to find the absolute minimum 
+            but without a calculator it may be difficult to compare the values. So instead we'll try the First Derivative Test for Absolute Extrema. 
+            We can analyze the sign of the derivative on either side of the critical point.</p>
 
-        <me>
-          T(0)=20\sqrt2,\qquad T(10)=30,\qquad
-          T\!\left(10-\frac{10}{3}\sqrt3\right)=10+10\sqrt3.
-        </me>
+            <me> 
+              \begin{array}{rcl}
+              T'(0) \amp = \amp 1 - \frac{2(10-0)}{\sqrt{200-20\cdot 0+0^2}} \\
+              \amp = \amp 1 - \frac{20}{\sqrt{200}} \\
+              \amp = \amp 1 - \frac{20}{10\sqrt{2}} \\
+              \amp = \amp 1 - \frac{2}{\sqrt{2}} \\
+              \amp = \amp 1 - \sqrt{2} \lt 0 \\
+              T'(10) \amp = \amp 1 - \frac{2(10-10)}{\sqrt{200-20\cdot 10+10^2}} \\
+              \amp = \amp 1 - 0 \\
+              \amp = \amp 1 \gt 0
+            \end{array}
+          </me>
 
-        <p>
-          Since <m>10+10\sqrt3</m> is the smallest of these values, the minimum time occurs at
-          <m>\displaystyle e=10-\frac{10}{3}\sqrt3\approx 4.2</m>.
-        </p>
+          <p>  Since the derivative changes from negative to positive at the critical point, the critical point is an 
+            absolute minimum by the 
+            <xref ref="thm-abs-ext-first-deriv-test">First Derivative Test for Absolute Extrema</xref>.
+            Therefore the minimum time occurs at <m>a=10-\frac{10}{3}\sqrt{3} </m> cm.</p> 
 
+            <p> For those who are curious, this is about 4.2 cm, so the insect travels about 4.2 cm along the 
+              edge and then cuts across the carpet for the rest of the journey.</p>
+            
         <remark>
           <p>
             Minimizing distance and minimizing time are different problems because the speed changes.
-            The ants save time by traveling partway along the faster edge and then cutting across the slower carpet.
+            The insect save time by traveling partway along the faster edge and then cutting across the slower carpet.
           </p>
         </remark>
       </solution>
     </example>
 
     
-
-    <example xml:id="ex-opt-profit">
-      <statement>
-        <p>
-          A company produces a product for <m>\$10</m> per item and sells it for <m>s</m> dollars per item.
-          Market demand is modeled by <m>m(s)=100-s</m>, meaning that when the price is <m>s</m>,
-          the number of items sold is <m>100-s</m>.
-        </p>
-        <p>
-          What price <m>s</m> maximizes total profit?
-        </p>
-      </statement>
-
-      <solution>
-        <p>
-          The profit per item is <m>s-10</m>, and the number sold is <m>100-s</m>.
-          Therefore total profit is
-        </p>
-
-        <me>
-          P(s)=(100-s)(s-10)=-1000+110s-s^2.
-        </me>
-
-        <p>
-          The relevant domain is <m>s\in[10,100]</m>, since selling below cost is not sensible here,
-          and demand reaches zero at <m>s=100</m>.
-        </p>
-
-        <p>
-          Differentiate:
-        </p>
-
-        <me>
-          P'(s)=110-2s.
-        </me>
-
-        <p>
-          The critical point satisfies <m>P'(s)=0</m>, so <m>s=55</m>.
-          Check the endpoints:
-        </p>
-
-        <me>
-          P(10)=0,\qquad P(55)=2025,\qquad P(100)=0.
-        </me>
-
-        <p>
-          The maximum profit occurs at <m>s=55</m>.
-          The most profitable selling price is <m>\$55</m> per item.
-        </p>
-      </solution>
-    </example>
   </subsection>
 
   <subsection xml:id="additional-worked-examples-opt">
@@ -598,40 +713,53 @@
   <exercises xml:id="exercises-optimization">
     <title>Practice / Study Problems</title>
 
-    <exercisegroup>
-      <title>Some True/False Problems</title>
+
+
+  <exercisegroup>
+    <title>Some True/False Problems</title>
+
     <introduction>
       <p>
         Determine whether each statement is true or false and briefly justify your reasoning.
       </p>
     </introduction>
 
-      <exercise xml:id="tf-opt-01">
-        <statement>
-          <p>
-            If <m>T'(c)=0</m>, then <m>x=c</m> must give an absolute maximum or minimum of <m>T</m>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>False.</emph> A critical point is only a candidate. The absolute extremum could occur at an endpoint,
-            and some critical points are neither maxima nor minima.
-          </p>
-        </solution>
-      </exercise>
 
-      <exercise xml:id="tf-opt-02">
-        <statement>
-          <p>
-            In an optimization problem on a closed interval, it is always necessary to check endpoints.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <emph>True.</emph> Absolute maxima and minima can occur at endpoints, so they must be included as candidates.
-          </p>
-        </solution>
-      </exercise>
+<exercise xml:id="tf-opt-17">
+  <statement>
+    <p>
+      In an optimization problem, units of the final answer are irrelevant as long as the numerical value is correct.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> Units are essential for interpreting the answer correctly.
+    </p>
+  </solution>
+</exercise>
+
+
+    <exercise xml:id="tf-opt-00">
+      <statement>
+        <p>
+        In previous semesters, students who identified a critical point and immediately claimed it was an 
+        absolute maximum or minimum without checking could lose up to <m>50\%</m> of the points on quizzes / exams.
+        </p>
+      </statement>
+<solution>
+  <p>
+    <em>True.</em> A critical point is only a candidate for an absolute extremum.
+    Absolute extrema may also occur at endpoints, and some critical points are neither maxima nor minima.
+  </p>
+  <p>
+    For this reason, it is extremely  important to justify why a critical point gives an absolute maximum or minimum
+    by applying one of the appropriate tests. Clear justification ensures full credit on quizzes and exams.
+  </p>
+</solution>
+    </exercise>
+
+
+
 
       <exercise xml:id="tf-opt-03">
         <statement>
@@ -641,55 +769,195 @@
         </statement>
         <solution>
           <p>
-            <emph>False.</emph> An absolute minimum may exist on an open or unbounded domain,
-            but we must justify it by analyzing critical points and limits at the boundaries.
+            <em>False.</em> An absolute minimum may exist on an open or unbounded domain,
+            but we must justify it by analyzing critical points and either the First or Second Derivative Test for Absolute Extrema.
           </p>
         </solution>
       </exercise>
+
+
+
+      <exercise>
+        <statement>
+          <p>
+            Suppose that <m>x=1</m> is the only critical point for a function <m>f</m> on the domain <m>(-1,\infty)</m>. 
+            If <m>f''(1)&gt;0</m>, then <m>f(1)</m> is an absolute minimum of <m>f</m> on <m>(-1,\infty)</m>. 
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <em>False.</em> In order to conclude that <m>f(1)</m> is an absolute minimum 
+            (and apply the Second Derivative Test for Absolute Extrema), 
+            we would need to know that <m>f</m> is continuous on <m>(-1,\infty)</m>. 
+            For example here is <url href="https://www.desmos.com/calculator/bfpwnzaqir">a Desmos graph of a counterexample</url>.
+          </p>
+          </solution>
+      </exercise>
+
+<exercise xml:id="tf-opt-04">
+  <statement>
+    <p>
+      If <m>T'(c)=0</m>, then <m>x=c</m> must give either a maximum or a minimum value of <m>T</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> A critical point is only a candidate. It may correspond to a maximum, a minimum, or neither.
+    </p>
+  </solution>
+</exercise>
+
+
+
+<exercise xml:id="tf-opt-10">
+  <statement>
+    <p>
+      If a cost function is increasing for all <m>x</m> in its domain, then the minimum cost occurs at the left endpoint.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>True.</em> If the function is increasing everywhere, the smallest value occurs at the smallest allowable <m>x</m>.
+    </p>
+  </solution>
+</exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+      Suppose that two positive numbers <m>a</m> and <m>b</m> sum to <m>10</m>. 
+      Then the maximum value of their product <m>ab</m> is <m>100</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <em>False.</em> Since the numbers sum to <m>10</m>, we know that</p> 
+      <me> 
+        \begin{array}{rcl}
+          a+ b \amp = \amp 10 \\
+          b \amp = \amp 10-a \\
+        \end{array}
+      </me> 
+      <p> Therefore,
+      the product is <m>ab=a(10-a)=10a-a^2</m>. In order for both <m>a</m> and <m>b</m> to be positive, 
+      we must have <m>a\in (0,10)</m>. So <m>f(a)=10a-a^2</m> yields the derivative <m>f'(a)=10-2a</m>, which is never undefined 
+      and is zero at <m>a=5</m>. So the only critical point is at <m>a=5</m>. Since the domain is an open interval, 
+      we can use the First Derivative Test for Absolute Extrema.</p> 
+      <me> 
+        \begin{array}{rcl}
+          f'(1) \amp = \amp 10-2\cdot 1 \\
+          \amp = \amp 8 \gt 0 \\
+          f'(9) \amp = \amp 10-2\cdot 9 \\
+          \amp = \amp -8 \lt 0
+        \end{array}
+      </me>
+      <p>  So the derivative changes from positive to negative at the critical point, so the critical 
+        point is an absolute maximum by the 
+      <xref ref="thm-abs-ext-first-deriv-test">First Derivative Test for Absolute Extrema</xref>. 
+      Therefore the maximum value of the product is <m>f(5)=10(5)-5^2=50-25=25</m> (not 100).
+    </p>
+    </solution>
+</exercise>
+
+
+<exercise>
+  <statement>
+    <p>
+      Suppose that two positive numbers <m>a</m> and <m>b</m> have a product of <m>10</m>. 
+      Then the minimum value of their sum <m>a+b</m> is <m>7</m>.
+    </p>
+  </statement>
+  <solution><p> 
+      <em>False.</em> Since the product is <m>10</m>, we know that </p>
+      <me> 
+        \begin{array}{rcl}
+          ab \amp = \amp 10 \\
+          b \amp = \amp \frac{10}{a} \\
+        \end{array}
+      </me>
+      <p> Therefore, the sum is <m>a+b=a+\frac{10}{a}</m>. In order for both <m>a</m> and <m>b</m> to be positive, we must have <m>a\in (0,\infty)</m>. 
+        So <m>f(a)=a+\frac{10}{a}</m> yields the derivative <m>f'(a)=1-\frac{10}{a^2}</m>. 
+        The derivative is undefined at <m>a=0</m>, but that is not in the domain. 
+        Setting the derivative equal to zero gives <m>1=\frac{10}{a^2}</m>, so <m>a^2=10</m> and <m>a=\pm\sqrt{10}</m>. 
+        Since we require <m>a\gt 0</m>, we have <m>a=\sqrt{10}</m> as the only critical point in the domain. 
+      </p><p>
+        The second derivative is <m>f''(a)=\frac{20}{a^3}</m>, so <m>f''(\sqrt{10})=\frac{20}{(\sqrt{10})^3}=\frac{2}{\sqrt{10}}\gt 0</m>, 
+        so the critical point yields the absolute minimum.</p>
+        <p> 
+        The minimum value of the sum is <m>f(\sqrt{10})=\sqrt{10}+\frac{10}{\sqrt{10}}=\sqrt{10}+\sqrt{10}=2\sqrt{10} \approx 6.32</m>.
+        </p> 
+    </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          The closest distance from the point <m>(2,0)</m> to the curve <m>y=\sqrt{x}</m> is <m>\sqrt{7}/2</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>True.</em> The distance from the point <m>(2,0)</m> to a point <m>(x,y)</m> on the curve is given by</p> 
+          
+          <me>
+            \begin{array}{rcl}
+             D \amp = \amp \sqrt{(x-2)^2+(y-0)^2} \\
+             \amp = \amp \sqrt{(x-2)^2+y^2}\\
+              \amp = \amp \sqrt{(x-2)^2+(\sqrt{x})^2} \\
+              \amp = \amp \sqrt{(x-2)^2+x} \\
+              \amp = \amp \sqrt{x^2-3x+4}
+            \end{array}
+          </me> 
+          
+          <p>
+          The domain is <m>[0,\infty)</m>. The derivative is <m>D'(x)=\frac{1}{2}(x^2-3x+4)^{-1/2}(2x-3)</m>, 
+          which is never undefined but is zero at <m>x=\frac{3}{2}</m>. Since we have only one critical point and the function is continuous, 
+          we can apply the First Derivative Test for Absolute Extrema.
+        </p> 
+        <me>
+          \begin{array}{rcl}
+            D'(1) \amp = \amp \frac{1}{2}(1^2-3\cdot 1+4)^{-1/2}(2\cdot 1-3) \\
+            \amp = \amp \frac{1}{2}(2)^{-1/2}(-1) \lt 0 \\
+            D'(2) \amp = \amp \frac{1}{2}(4-6+4)^{-1/2}(4-3) \\
+            \amp = \amp \frac{1}{2}(2)^{-1/2}(1) \gt 0
+          \end{array}
+        </me>
+        <p> Therefore the critical point is an absolute minimum, and the closest distance is </p> 
+          <me> 
+            \begin{array}{rcl}
+            D\left(\frac{3}{2}\right) \amp =\amp  \sqrt{\left(\frac{3}{2}\right)^2-3\cdot \frac{3}{2}+4}\\
+            \amp = \amp \sqrt{\frac{9}{4}-\frac{9}{2}+4} \\
+            \amp = \amp \sqrt{\frac{9}{4}-\frac{18}{4}+\frac{16}{4}} \\
+            \amp = \amp \sqrt{\frac{7}{4}} \\
+            \amp = \amp \frac{\sqrt{7}}{2}
+            \end{array}
+          </me> 
+<p> as claimed. 
+        </p>
+      </solution>
+    </exercise>
+
     </exercisegroup>
 
-    <exercisegroup>
-      <title>Algebraic and Applied Problems</title>
-
-      <exercise xml:id="prob-opt-rect-48">
-        <statement>
-          <p>
-            You have 48 meters of fencing to enclose a rectangle.
-            What dimensions maximize area, and what is the maximum area?
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="prob-opt-open-top-box">
-        <statement>
-          <p>
-            An open-top box is made by cutting equal squares of side length <m>x</m> from the corners of a
-            <m>20</m> by <m>30</m> rectangle and folding up the sides.
-            Write the volume as a function of <m>x</m> and determine the value of <m>x</m> that maximizes the volume.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="prob-opt-profit-new">
-        <statement>
-          <p>
-            A company has cost <m>\$12</m> per item and demand <m>m(s)=160-2s</m>.
-            Write a profit function <m>P(s)</m> and determine the price <m>s</m> that maximizes profit.
-          </p>
-        </statement>
-      </exercise>
-
-      <exercise xml:id="prob-opt-time-speed-change">
-        <statement>
-          <p>
-            A person walks along a sidewalk at <m>4</m> m/s and then crosses a field at <m>2</m> m/s.
-            Sketch a diagram and set up a time function similar to the ants problem.
-            Explain what your independent variable is and what domain it must satisfy.
-          </p>
-        </statement>
-      </exercise>
-
-    </exercisegroup>
   </exercises>
+
+
+  <remark>
+<p>
+  There are relatively few True/False questions that effectively assess understanding of optimization.
+  Because optimization problems typically require several steps and careful reasoning,
+  they have historically appeared as standard response questions on quizzes and exams.
+</p>
+<p>
+  For that reason, we strongly encourage you to complete your WeBWorK assignments
+  and to practice with the additional fully worked-out examples available in
+  <xref ref="subsec-derivApp-opt">Additional Examples for Optimization</xref>.
+  These provide opportunities to strengthen your technique and check your work against complete solutions.
+</p>
+  </remark>
+
+
+
 
 </section>
